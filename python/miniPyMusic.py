@@ -5,7 +5,23 @@
 # Run me in the directory of your MP3/OGG files
 # and point your browser at me.
 # Great for a simple LAN music server.
+'''
+Explanations
 
+The ThreadingTCPServer listens on the given port (8099). Each time a client connects, it spawns a new thread and instanciates a miniMusicServer object which will handle the HTTP request (do_GET()). Therefore each client has its miniMusicServer objet working for him in a separate thread.
+
+buildm3u() simply walks the subdirectories, collecting all .mp3/.ogg files and builds a .m3u file.
+m3u files are simple text files containing the URLs of each music file (http://...). Most browsers are configured to open m3u files in media players.
+We add EXTINF informations so that the names show up more nicely in audio players. 
+We use some quote/replace/encode so that special characters in filenames are not mangled by browsers or mediaplayers.
+
+if self.path == u"/" : The m3u playlist will be served as the default page of our server, otherwise the else will serve the mp3/ogg file itself (with the correct MIME Type: "audio/mpeg" for .mp3 filers, "audio/ogg" for .ogg files.)
+If the file does not exist, we let the base class SimpleHTTPServer display the 404 error page.
+
+replace(u"..",u".") is a simple trick to prevent the webserver from serving files outside your music folder.
+
+This server is by no mean secure. Do not run it over the internet or over hostile networks. You are warned.
+'''
 import os,os.path,BaseHTTPServer,SimpleHTTPServer,SocketServer,socket,mimetypes,urllib
 
 PORT = 8099
