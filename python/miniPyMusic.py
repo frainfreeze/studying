@@ -1,6 +1,14 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-1 -*-
+#---License---
+#This is free and unencumbered software released into the public domain.
 
+#Anyone is free to copy, modify, publish, use, compile, sell, or
+#distribute this software, either in source code form or as a compiled
+#binary, for any purpose, commercial or non-commercial, and by any
+#means.
+
+#---Description---
 # miniPyMusic - a minimalist music server
 # Run me in the directory of your MP3/OGG files
 # and point your browser at me.
@@ -22,6 +30,8 @@ replace(u"..",u".") is a simple trick to prevent the webserver from serving file
 
 This server is by no mean secure. Do not run it over the internet or over hostile networks. You are warned.
 '''
+
+#---Code---
 import os,os.path,BaseHTTPServer,SimpleHTTPServer,SocketServer,socket,mimetypes,urllib
 
 PORT = 8099
