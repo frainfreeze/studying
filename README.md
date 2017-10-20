@@ -6,10 +6,11 @@ I'll be storing various school and private excercises & projects, some stuff fro
 I'll also add stuff I did at home and stuff that has nothing to do with the school (self education ftw) as well, but this is mostly so that I don't have to use a gazillion different repos, and still utilize VCS, over the course of my studies.
 
 
-
+[TOC levels=1-3]: # "#### Table of Contents"
+#### Table of Contents
 Repository is divided in three main parts,  
 
-- /[university](#/university) - stuff done at uni and uni related 
+- [/university](#-university) - stuff done at uni and uni related 
 - /shared - subjects/fields of study that I do at uni but I also want to research further at home
 - /home - stuff I learn and do in my free time that's unrelated to uni.
 
