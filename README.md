@@ -1,4 +1,6 @@
-# studying
+# 
+
+![keep learning](https://i.imgur.com/kQPd0a9.jpg)
 
 I'm currently studying Software Engineering (B.Comp.Eng) at Algebra university.
 I'll be storing various school and private excercises & projects, some stuff from labs and such here at GitHub.
@@ -31,6 +33,23 @@ Supplementary literature:
 2. S. Prata, C Primer Plus, 4th edition, SAMS, 2002.
 3. Robert Sedgewick, Algorithms in C, Parts 1-4: Fundamentals, Data Structures, Sorting, Searching (3rd Edition), 1997.
 
+
+
+
+
+
+## > 10005 - Introduction to Computer Networks 
+
+Literature:
+
+1. Course handbook prepared and printed by Algebra University College
+2. Tanenbaum: Computer Networks, Prentice Hall, 2002.
+3. W.Stallings: Data and Computer Communications, Prentice Hall, 1997.
+
+Supplementary literature
+
+1. Curt White: Data Communications and Computer Networks: A Business Users Approach, Course Technology, 2006.
+2. CCNA Exploration: Network Fundamentals, CCNA Exploration Companion Guide, 2007.
 
 
 
@@ -80,6 +99,8 @@ Literature:
 Other:
 
 > [Clojure-Resources](https://github.com/matthiasn/Clojure-Resources)
+>
+> http://clojure-doc.org/
 
 
 
