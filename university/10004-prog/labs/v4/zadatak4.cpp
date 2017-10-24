@@ -7,7 +7,7 @@ int main() {
 
 	for (int i = 0; i < 10; i++)
 	{
-		cout << "Unesite broj: " << endl;
+		cout << "Unesite " << i+1 << ". broj: " << endl;
 		cin >> brojevi[i];
 	}
 
@@ -15,11 +15,11 @@ int main() {
 
 	for (int i = ((sizeof(brojevi) / sizeof(brojevi[0])) - 1); i >= 0; i--) {
 		if (i == 0) {
-			cout << brojevi[i] << ".";
+			cout << "Broj " << i + 1 << ". je: " << brojevi[i] << ".";
 			break;
 		}
 
-		cout << brojevi[i] << ", ";
+		cout << "Broj " << i + 1 << ". je: " << brojevi[i] << ", " << endl;
 
 	}
 
