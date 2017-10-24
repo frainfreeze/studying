@@ -1,8 +1,10 @@
 #include <iostream>
 using namespace std;
 
-/* naka korisnik unese 5 brojeva koji ce se spremiti u niz i neka unese jos jedan cijeli broj. 
-program treba ispisati rezultat djeljenja svih brojeva niza tim brojem*/
+/*
+Napisite program koji s tipkovnice ucitava 5 cijelih brojeva u polje, jos jedan cijeli broj, te
+ispisuje ostatke svakog broja iz polja pri dijeljenju s njim
+*/
 
 int main() {
 
@@ -22,12 +24,14 @@ int main() {
 	cout << endl;
 
 	for (int i = 0; i < (sizeof(brojevi) / sizeof(brojevi[0])); i++) {
+		int ostatak = brojevi[i] % broj;
+
 		if (i == (sizeof(brojevi) / sizeof(brojevi[0])) - 1) {
-			cout << brojevi[i]/broj << ".";
+			cout << brojevi[i] << " % " << broj << " = " << ostatak << ".";
 			break;
 		}
 
-		cout << brojevi[i]/broj << ", ";
+		cout << brojevi[i] << " % " << broj << " = " << ostatak << ", " << endl;
 
 	}
 
