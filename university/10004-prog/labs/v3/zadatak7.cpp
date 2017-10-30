@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//Napišite program koji ispisuje ASCII tablicu od 32 do 128.
+//Napisite program koji ispisuje ASCII tablicu od 32 do 128.
 
 //todo- ispisati u vise redova
 int main() {
