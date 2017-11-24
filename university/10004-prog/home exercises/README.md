@@ -283,3 +283,73 @@ Zadatak 5. Napišite funkciju koja ispituje je li neki broj prost. Neka program 
 Zadatak 6. Napišite funkciju koja kao parametar uzima parni cijeli broj n, te ispisuje kvadrat koji ima n redaka i stupaca od kojih je prvih pola redaka sastavljeno od znaka '*', a drugih pola od znaka '#'.
 
 Neka program učita broj od korisnika i pozove funkciju sa tim brojem. Napomena: main mora osigurati da je unešeni broj paran (hint: do while petlja)
+
+
+
+
+
+## > Priprema za ispit
+
+Stringovi
+
+1.  Učitaj jedan znak, te ispiši dali se radi o „veliko slovo“ ili „malo slovo“
+
+  2.Učitajte niz znakova (rečenica) i ispišite ima li više velikih ili malih slova a. HINT: Uzmite code iz zadatka broj 2 i napravi funkciju
+
+  3.Unesi rečenicu i ispiši koliko ima riječi u rečenici
+
+  •Unesite rečenicu i ispišite koliko slova „nj“ i „lj“ ima
+
+  4.Unesite rečenicu i ispišite samo prvu riječ
+
+  5.Unesite rečenicu i ispišite samo zadnju riječ
+
+  6.Unesite rečenicu koja sadrži znak ; ispiši na kojem mjestu se nalazi taj znak
+
+  •Unesi rečenicu, ako rečenica ima neparno riječi, ispiši srednju riječ, ako ima paran broj riječi ispiši prvu i zadnju rečenicu, npr:
+
+o „Kuca na kraju sela“ ispisuje „Kuca sela“ o „Lijepa kuca na kraju sela“ ispisuje „na“
+
+Polja i vektori
+
+1.  Učitavaj polje sve dok se ne upiše negativni broj, zatim ispiši najveći broj.
+
+  •Učitavaj polje sve dok se ne upiše negativni broj, zatim ispiši 2 najveća broja.
+
+  2.Učitaj u polje 10 brojeva, prvo ispiši sve parne, te u drugom redu sve neparne
+
+  3.Učitavaj brojeve sve dok korisnik ne upiše broj veći od 10000, u 2 odvojena vektora razdijeliti negativne i pozitivne brojeve
+
+  4.Upiši 7 brojeva u polje i ispiši koliko ima brojeva djeljivih sa 3 u polju
+
+  5.Upisuj brojeve sve dok korisnik upisuje parne brojeve, ispiši aritmetičku sredinu brojeva
+
+  6.Učitaj broj i provjeri dali taj broj sadrži brojku 5 u sebi
+
+  7.Ispiši brojeve od 1 do 200, no svaki put kada je broj djeljiv sa 3 ili sadrži broj 3 napiši riječ „štumplec“.
+
+  8.Učitaj 6 brojeva u jedno polje, te 6 brojeva u drugo polje, naizmjence ispisuj, recimo u jednom polju su sve 4, u drugom polju su sve 7, ispisuje se: 4 7 4 7 4 7 4 7 4 7 4 7
+
+Funkcije
+
+1.  Napiši funkciju koja kao parametar prima jedan broj, i ispisuje ga
+
+  2.Napiši funkciju koja kao parametar prima dva broj i ispisuje njihov zbroj
+
+  3.Napiši funkciju koja prima 2 broja i vraća veći od ta dva broja
+
+  4.Napiši funkciju koja kao parametar prima polje[10] brojeva i vraća najveći
+
+  5.Napiši funkciju koja kao parametar prima vektor<double> i vraća najmanji
+
+  6.Napiši funkciju koja prima jedno polje i jedan vektor te vraća JEDAN najveći broj, ne znamo dali je taj broj u vektoru ili polju
+
+  7.Napiši funkciju koja prihvaća vektor<int> kao parametar i vraća aritmetičku sredinu.
+
+  •Napiši program koji učitava brojeve sve dok se ne upiše negativan broj, program treba ispisati broj koji je najbliži aritmetičkoj sredini.
+
+o  Primjer: 1 2 3 3 3 4 5, ispisuje broj 3, jer je aritmetička sredina 3, najbliži je 3
+
+o  Primjer: 1 1 3 3 3, ispisuje 3, jer je aritmetička sredina 2,2 što je bliže 3, nego 1
+
+o  Primjer: 30 6 5 40 7, ispisuje 7 jer je aritmetička sredina 17,8 što je bliže 7 nego 40
