@@ -353,3 +353,5 @@ o  Primjer: 1 2 3 3 3 4 5, ispisuje broj 3, jer je aritmetička sredina 3, najbl
 o  Primjer: 1 1 3 3 3, ispisuje 3, jer je aritmetička sredina 2,2 što je bliže 3, nego 1
 
 o  Primjer: 30 6 5 40 7, ispisuje 7 jer je aritmetička sredina 17,8 što je bliže 7 nego 40
+
+![cLOC]()
