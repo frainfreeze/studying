@@ -94,6 +94,11 @@ Literature:
 1. C++ Primer (5th Edition), Lippman
 2. Introduction to Algorithms, 3rd Edition
 3. Beginning C++ Through Game Programming, Dawson
+#### [C++ primer](home/C++/c++primer/README.md)
+- open for more details
+
+#### [Beginning C++ Through Game Programming](home/C++/beginnigC++TGP/README.md)
+- open for more details
 
 
 ### > Lua
