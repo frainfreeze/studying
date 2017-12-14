@@ -48,7 +48,7 @@ Supplementary literature:
 1. Curt White: Data Communications and Computer Networks: A Business Users Approach, Course Technology, 2006.
 2. CCNA Exploration: Network Fundamentals, CCNA Exploration Companion Guide, 2007.
 
-#### > 10006 - Digital Electronics 
+### > 10006 - Digital Electronics 
 University provided literature:
 > Course handbook prepared and printed by Algebra University College 
 
@@ -78,6 +78,7 @@ My literature:
 University provided literature:				
 
 > English for Telecoms and Information Technology, Oxford Business English 
+
 > Boeckner, K., Brown, P.C.: Oxford English for Computing, Oxford University Press
 <br>
 
