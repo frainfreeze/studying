@@ -7,6 +7,39 @@ Zadatak 3. Napišite aplikaciju za praćenje posudbi filmova u videoteci. Član 
 
 Zadatak 4. Napišite definiciju strukture Osoba koja pamti ime prezime i godinu rođenja osobe. Definirajte polje od 4 osobe, unesite podatke, te ispišite podatke unesenih osoba.
 
+Zadatak 5. Napišite definiciju strukture Racun koja sadrži broj računa, iznos računa, te PDV. Korisnik unosi račune dok god to želi. Nakon unosa aplikacija prikazuje sve unesene račune, ukupan iznos svih računa i ukupan iznos PDV-a.
+
+
+
+## > Vježbe 10
+Zadatak 1. Napravite aplikaciju za unos proizvoda. Proizvod definira naziv, količina na skladištu i cijena. Korisnik može unijeti neograničen broj proizvoda. Nakon unosa treba ispisati podatke najjeftinijeg i najskupljeg proizvoda.
+
+Zadatak 2. Napravite aplikaciju za unos podataka o automobilu i motociklu. Podaci koji definiraju automobil i motocikl su marka i performanse (broj kubika, snaga). Nakon unosa ispišite podatke automobila i motocikla.
+
+Zadatak 3. Napravite aplikaciju za čuvanje podataka o trgovinama. Trgovinu definira naziv, broj poslovnica i adresa. Adresa se sastoji od ulice, kućnog broja i grada. Korisnik može unijeti neograničen broj trgovina. Nakon unosa ispišite podatke o trgovinama.
+
+Zadatak 4. Napravite aplikaciju za kreiranje pravokutnika. Pravokutnik se definira navođenjem točaka gornjeg lijevog i donjeg desnog kuta pravokutnika. Aplikacija treba vratiti točku koja predstavlja središte pravokutnika. Koordinate točke središta se definiraju prema:
+
+X	= (x1 + x2) / 2
+
+Y	= (y1 + y2) / 2
+
+Zadatak 5. Napravite aplikaciju koja čuva podatke 3 osobe (ime, prezime i OIB). Nakon unosa ispišite podatke osoba. Kreiranje osobe riješite kroz funkciju.
+
+Zadatak 6. Napravite aplikaciju koja definira strukturu za čuvanje podataka o pravokutniku. Napravite funkciju koja ispisuje opseg proslijeđenog pravokutnika.
+
+Zadatak 7. Napravite aplikaciju koja za prvih 1000 brojeva čuva informaciju da li je broj prost. Ponudite
+
+korisniku odabir ispisa:
+
+1.Prosti brojevi
+
+2.Brojevi koji nisu prosti
+
+Zadatak 8. Napravite aplikaciju koja čuva podatke o studentima (ime, prezime i JMBAG). Direktno u aplikaciji kreirajte 5 studenata. Aplikacija omogućava pretraživanje studenata prema JMBAG-u. Ukoliko korisnik upiše JMBAG koji ne postoji treba ga o tome obavijestiti.
+
+
+
 
 
 ## > Dodatna nastava: Ishod 4
