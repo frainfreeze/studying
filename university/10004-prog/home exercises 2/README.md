@@ -38,7 +38,18 @@ korisniku odabir ispisa:
 
 Zadatak 8. Napravite aplikaciju koja čuva podatke o studentima (ime, prezime i JMBAG). Direktno u aplikaciji kreirajte 5 studenata. Aplikacija omogućava pretraživanje studenata prema JMBAG-u. Ukoliko korisnik upiše JMBAG koji ne postoji treba ga o tome obavijestiti.
 
+## > Vježbe 11
+Zadatak 1. Napišite program koji deklarira dvije varijable: broj1 tipa int i broj2 tipa double, te dvije pokazivačke varijable koje pokazuju na njih. Pridružite vrijednosti varijablama broj1 i broj2 kroz pokazivače te na kraju ispišite vrijednosti u njima bez korištenja pokazivača.
 
+Zadatak 2. Napišite program koji učitava 3 cijela broja u polje, te ispisuje polje u
+obrnutom redoslijedu korištenjem pokazivača.
+
+Zadatak 3. Napišite program koji učitava 5 riječi u polje, te korištenjem pokazivača ispisuje prvu, treću i petu riječ iz polja.
+
+Zadatak 4. Napišite funkciju koja kao parametar uzima polje realnih brojeva i broj
+elemenata u polju te ispisuje sve elemente polja.
+
+Zadatak 5. Napišite funkciju koja prihvaća dva polja cijelih brojeva: u prvo su upisani brojevi, a drugo je prazno. Funkcija treba iz prvog polja prepisati sve elemente u drugo u obrnutom redoslijedu.
 
 
 
