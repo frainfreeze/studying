@@ -36,7 +36,8 @@ tabulatori
 
 stilovi
 ![stilovi](https://i.imgur.com/vBN3gRS.gif)
-[dva reda teksta sa poravnanjem lijevo i desno + tab (tab napraviti preko Tabs a ne kao ja ovdje)
+
+dva reda teksta sa poravnanjem lijevo i desno + tab (tab napraviti preko Tabs a ne kao ja ovdje)
 ![dva reda teksta sa poravnanjem lijevo i desno + tab (tab napraviti preko Tabs a ne kao ja ovdje)](https://i.imgur.com/lhfvOjr.gif)
 
 #### Excel:

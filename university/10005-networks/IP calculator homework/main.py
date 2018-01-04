@@ -65,7 +65,7 @@ def program(n):
 
 def zadaca():
     orig_stdout = sys.stdout
-    f = open('zadaca.txt', 'w')
+    f = open('zadaca.md', 'w')
     sys.stdout = f
 
     i = datetime.now()
