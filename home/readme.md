@@ -23,7 +23,8 @@ Literature:
 <br>
 
 ### > DS&A
-Introduction to Algorithms, 3rd Edition
+Literature:
+1. Introduction to Algorithms, 3rd Edition
 
 
 <br>
@@ -51,5 +52,4 @@ Other:
 
 ### > Lua
 Literature:
-
 1.

@@ -21,7 +21,6 @@ My literature:
 ### > 10001 - English
 University provided literature:				
 > English for Telecoms and Information Technology, Oxford Business English 
-
 > Boeckner, K., Brown, P.C.: Oxford English for Computing, Oxford University Press
 
 

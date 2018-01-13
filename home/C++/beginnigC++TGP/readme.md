@@ -1,5 +1,4 @@
 ##  Beginning C++ Through Game Programming
-### by Michael Dawson 
 
 ### Contents
 
