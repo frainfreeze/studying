@@ -8,6 +8,7 @@ The course aims:
 
 
 <br>
+
 ### > 10005 - Introduction to Computer Networks 
 
 University provided literature:
@@ -22,6 +23,7 @@ Supplementary literature:
 2. CCNA Exploration: Network Fundamentals, CCNA Exploration Companion Guide, 2007.
 
 <br>
+
 ### > 10006 - Digital Electronics 
 University provided literature:
 > Course handbook prepared and printed by Algebra University College 
