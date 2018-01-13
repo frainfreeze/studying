@@ -11,6 +11,6 @@ I'll also add stuff I did at home and stuff that has nothing to do with the scho
 
 Repository is divided in three main parts,  
 
-- [/university](#university) - stuff done at uni and uni related 
-- [/shared](#shared) - subjects/fields of study that I do at uni but I also want to research further at home (not directly related to CS)
-- [/home](#home) - stuff I learn and do in my free time that's unrelated to uni.
+- [/university](university) - stuff done at uni and uni related 
+- [/shared](shared) - subjects/fields of study that I do at uni but I also want to research further at home (not directly related to CS)
+- [/home](home) - stuff I learn and do in my free time that's unrelated to uni.
