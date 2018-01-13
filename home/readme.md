@@ -11,13 +11,13 @@ Literature:
 2. Beginning C++ Through Game Programming, Dawson 
 3. C++ Primer (5th Edition), Lippman
  
-#### [C++ primer](principles-and-practice-using-c++)
+#### [C++ primer](C++/principles-and-practice-using-c++)
 - open for more details
 
-#### [C++ primer](c++primer)
+#### [C++ primer](C++/c++primer)
 - open for more details
 
-#### [Beginning C++ Through Game Programming](beginnigC++TGP)
+#### [Beginning C++ Through Game Programming](C++/beginnigC++TGP)
 - open for more details
 
 <br>
