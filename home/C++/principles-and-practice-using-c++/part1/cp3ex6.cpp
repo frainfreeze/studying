@@ -1,5 +1,4 @@
 #include "../std_lib_facilities.h"
-using namespace std;
 /*
 Write a program that prompts the user to enter three integer values, and 
 then outputs the values in numerical sequence separated by commas. So, 
