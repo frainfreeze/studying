@@ -20,6 +20,8 @@ Literature:
 #### [Beginning C++ Through Game Programming](C++/beginnigC++TGP)
 
 
+#### [Online courses](C++/online-courses)
+
 <br>
 
 ### > DS&A
