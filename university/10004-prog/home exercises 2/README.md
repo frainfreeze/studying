@@ -88,3 +88,30 @@ Tema: struktura kao dio strukture
 Zadatak 6. Napišite definiciju strukture za Kolegij. Kolegij ima osnovne karakteristike naziv,
 
 ects_bodovi i obavezan. Nadalje, sadrži i strukturu Profesor. Profesor ima samo ime i prezime kao karakteristike. Napravite instancu strukture, dodijelite joj vrijednosti te ih ispišite.
+
+
+## > Dodatna nastava: Ishod 6
+
+Tema: Pokazivači i reference, sintaksa
+
+Zadatak 1. Napišite program koji deklarira varijablu broj tipa int i inicijalizira ju. Potom deklarirajte pokazivač na tu varijablu te novu referencu na istu varijablu. Ispišite vrijednost varijable broj koristeći samu varijablu, koristeći dereferenciranje pokazivača na tu varijablu te koristeći referencu. Ispišite i adresu varijable. Izmijenite vrijednost varijable broj korištenjem pokazivača. Ponovite isti ispis. Izmijenite vrijednost varijable broj korištenjem reference. Ponovite isti ispis.
+
+Tema: Prijenos varijable u funkciju po vrijednosti, po referenci i po pokazivaču
+
+Zadatak 2. Napišite program koji deklarira varijablu broj tipa int i inicijalizira ju. Napišite funkciju
+
+primi_vrijednost koja prima varijablu tipa int, uvećava ju za 1 i ispisuje njenu vrijednost. U mainu ispišite vrijednost varijable broj, pozovite funkciju s tim brojem, te ponovno u mainu ispišite vrijednost varijable broj da vidite. Da li je varijabla u mainu promijenjena? Zašto.
+
+Ponovite postupak s funkcijom koja prima pokazivač i s funkcijom koja prima referencu. Objasnite.
+
+Tema: Stog i hrpa. Primitivi, polja, strukture
+
+Zadatak 3. Napravite dvije int varijable na stogu i jednu na hrpi,dodijelite im vrijednost i ispišite ih. Ispišite i adrese na kojoj se varijable nalaze. Napravite polje na stogu i polje na hrpi. Ispišite vrijednosti njihovih adresa. Ispišite vrijednosti nultog elementa u polju koristeći operator [] i putem pokazivača. Počistiti za sobom! Napravite strukturu Auto (naziv i godina). Koristeći pointere inicijalizirajte strukturu Auto i ispišite njegove vrijednosti (operator ->). Ispišite adresu structure Auto. Živi li na hrpi ili stogu?
+
+Tema: Kretanje po polju uz pomoć pokazivača
+
+Zadatak 4. Napišite program koji učitava 3 realna broja u polje, te ispisuje polje u obrnutom redoslijedu korištenjem [] operatora i pokazivača.
+
+Tema: Slanje polja u funkciju
+
+Zadatak 5. Napišite funkciju koja kao parametar uzima polje cijelih brojeva i broj elemenata u polju te ispisuje sve elemente polja koristeći [] operator, i drugu identičnu funkciju koja koristi pokazivače.
