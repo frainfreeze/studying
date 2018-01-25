@@ -124,7 +124,7 @@ Zadatak 5. Napišite program koji iz tekstualne datoteke učitava brojeve, pohra
 Zadatak 6. Učitavati brojeve od korisnika te neparne brojeve upisati u datoteku Neparni.txt. Unos traje sve dok korisnik ne unese nulu. Nakon unosa ispišite brojeve iz datoteke Neparni.txt
 
 Zadatak 7. Definirati strukturu Knjiga (Naziv, Autor, Kolicina). Iz datoteke PodacioKnjigama.txt kroz funkcije učitajte knjige u polje. Iz polja upišite knjige u datoteku Knjige.txt kao što je prikazano na slici. Ispišite knjige iz polja na ekran.
-!(slika)[https://i.imgur.com/oyaNjOs.png]
+![slika](https://i.imgur.com/oyaNjOs.png)
 
 <br>
 ## > Dodatna nastava: Ishod 4
