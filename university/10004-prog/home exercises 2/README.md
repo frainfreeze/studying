@@ -73,6 +73,59 @@ Napišite i funkcije koje vraćaju broj neparnih brojeva te broj prostih brojeva
 Zadatak 4. Napišite funkciju za ispisivanje sadržaja polja: prihvaća kao parametar polje i broj elemenata, te ih ispisuje na
 konzolu. Napravite verzije za sve primitivne tipove podataka. (int, double, float, char, string)
 
+
+
+<br>
+## > Vježbe 13
+Zadatak 1. Učitajte od korisnika željenu veličinu polja, kroz funkcije učitajte brojeve od korisnika, te ispišite polje na ekran.
+
+Zadatak 2. Napišite funkciju koja kao parametar uzima polje prirodnih brojeva i stvara novo
+polje koje se sastoji samo od parnih elemenata.
+
+Zadatak 3. Napišite funkciju koja iz zadanog polja kreira novo polje koje se sastoji samo od različitih elemenata prvog polja.
+
+Zadatak 4. Učitati prirodni broj n od korisnika. Stvoriti polje prostih brojeva od 1 do n.
+Izračunati sumu tih prostih brojeva. Ispišite te proste brojeve na ekran.
+
+Zadatak 5. Pitajte korisnika koliko imena želi učitati te ih nakon toga učitajte. Nakon toga ispišite sva učitana imena tako da svako ime funkcijom ispišete od kraja prema početku.
+
+Zadatak 6. Pitajte korisnika koliko brojeva želi učitati te ih nakon toga učitajte. Nakon toga ispišite jesu li uneseni brojevi rastući (da je svaki sljedeći veći ili jednak prethodnom).
+
+Zadatak 7. Učitajte od korisnika 5 brojeva u obično polje. Nakon toga prebrojite koliko je parnih brojeva uneseno. Nakon toga od tih parnih brojeva napravite novo dinamičko polje i zatim ispišite njegov sadržaj.
+
+Zadatak 8. Pitajte korisnika koliko slova želi učitati pa ih učitajte. Ispravna slova su "a", "b" i "c", a ako korisnik unese neko drugo slovo, treba ponoviti unos. Nakon toga ispišite koliko je učitano pojedinih slova, primjerice:
+
+Slovo a: 3 Slovo b: 0 Slovo c: 6
+
+Zadatak 9. Pitajte korisnika koliko stringova želi učitati pa ih učitajte. Nakon toga ispišite sve stringove koji u sebi sadrže slovo "a". Provjeru sadrži li string slovo "a" radite u funkciji.
+
+Zadatak 10. Napravite strukturu za čuvanje podataka o pravokutnicima (a, b). Pitajte korisnika koliko pravokutnika želi učitati pa ih učitajte. Na kraju ispišite najmanju i najveću površinu pravokutnika.
+
+
+<br>
+## > Vježbe 14
+Zadatak 1. Napišite program koji iz tekstualne datoteke Brojevi.txt učitava cijele brojeve te ispisuje samo
+
+parne.
+
+Zadatak 2. Napišite program koji iz tekstualne datoteke Brojevi.txt učitava sve brojeve te na ekranu ispiše njihovu aritmetičku sredinu.
+
+Zadatak 3. Napišite program koji iz datoteke Brojevi.txt čita cijele brojeve te parne brojeve upisuje u datoteku ParniBrojevi.txt, a neparne u datoteku NeparniBrojevi.txt. Pročitajte parne i neparne brojeve iz datoteka i ispišite ih na ekran.
+
+Zadatak 4. Napišite program koji od korisnika učitava nazive dviju tekstualnih datoteka te kopira prvu u drugu (prva mora postojati, druga se prepisuje ukoliko postoji, inače se kreira nova).
+
+Zadatak 5. Napišite program koji iz tekstualne datoteke učitava brojeve, pohrani ih u vektor, te napravi sljedeće:
+ 
+
+1. ispiše učitane brojeve u obrnutom redoslijedu,
+2. ispiše aritmetičku sredinu
+3.	ispiše najmanji i najveći broj
+
+Zadatak 6. Učitavati brojeve od korisnika te neparne brojeve upisati u datoteku Neparni.txt. Unos traje sve dok korisnik ne unese nulu. Nakon unosa ispišite brojeve iz datoteke Neparni.txt
+
+Zadatak 7. Definirati strukturu Knjiga (Naziv, Autor, Kolicina). Iz datoteke PodacioKnjigama.txt kroz funkcije učitajte knjige u polje. Iz polja upišite knjige u datoteku Knjige.txt kao što je prikazano na slici. Ispišite knjige iz polja na ekran.
+!(slika)[https://i.imgur.com/oyaNjOs.png]
+
 <br>
 ## > Dodatna nastava: Ishod 4
 Tema: struktura kao pojam (kako se deklarira, inicijalizira i ispisuje)
