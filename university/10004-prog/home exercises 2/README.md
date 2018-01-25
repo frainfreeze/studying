@@ -10,7 +10,7 @@ Zadatak 4. Napišite definiciju strukture Osoba koja pamti ime prezime i godinu 
 Zadatak 5. Napišite definiciju strukture Racun koja sadrži broj računa, iznos računa, te PDV. Korisnik unosi račune dok god to želi. Nakon unosa aplikacija prikazuje sve unesene račune, ukupan iznos svih računa i ukupan iznos PDV-a.
 
 
-
+<br>
 ## > Vježbe 10
 Zadatak 1. Napravite aplikaciju za unos proizvoda. Proizvod definira naziv, količina na skladištu i cijena. Korisnik može unijeti neograničen broj proizvoda. Nakon unosa treba ispisati podatke najjeftinijeg i najskupljeg proizvoda.
 
@@ -38,6 +38,7 @@ korisniku odabir ispisa:
 
 Zadatak 8. Napravite aplikaciju koja čuva podatke o studentima (ime, prezime i JMBAG). Direktno u aplikaciji kreirajte 5 studenata. Aplikacija omogućava pretraživanje studenata prema JMBAG-u. Ukoliko korisnik upiše JMBAG koji ne postoji treba ga o tome obavijestiti.
 
+<br>
 ## > Vježbe 11
 Zadatak 1. Napišite program koji deklarira dvije varijable: broj1 tipa int i broj2 tipa double, te dvije pokazivačke varijable koje pokazuju na njih. Pridružite vrijednosti varijablama broj1 i broj2 kroz pokazivače te na kraju ispišite vrijednosti u njima bez korištenja pokazivača.
 
@@ -51,11 +52,29 @@ elemenata u polju te ispisuje sve elemente polja.
 
 Zadatak 5. Napišite funkciju koja prihvaća dva polja cijelih brojeva: u prvo su upisani brojevi, a drugo je prazno. Funkcija treba iz prvog polja prepisati sve elemente u drugo u obrnutom redoslijedu.
 
+<br>
+## > Vježbe 12
+Zadatak 1. Napišite program koji definira polje od 5 elemenata, te sljedeće funkcije:
 
+a)	prihvaća polje cijelih brojeva i broj elemenata, te popunjava polje brojevima učitanim od korisnika
+b)	prihvaća polje cijelih brojeva i broj elemenata, te ispisuje polje normalnim i obrnutim redoslijedom
+b) prihvaća polje cijelih brojeva i broj elemenata polja, te vraća sumu brojeva u polju c) vraća aritmetičku sredinu polja
+d) traži najveći i najmanji element u polju (ispis odradite u main dijelu programa)
 
+Zadatak 2. Definirajte strukturu knjiga koja sadrži elemente autor, naslov i broj stranica. Definirajte polje od 4 knjige, te kroz funkcije:
+
+a)	popunite polje podacima koje učitavate od korisnika
+b)	ispišite polje knjiga
+c)	pronađite najdeblju i najtanju knjigu te ispišite njihove naslove i brojeve stranica. Najdeblju i najtanju knjigu definirajte u main funkciji.
+
+Zadatak 3. Napišite funkciju koja prihvaća polje prirodnih brojeva i vraća koliko u njemu ima parnih brojeva.
+Napišite i funkcije koje vraćaju broj neparnih brojeva te broj prostih brojeva.
+
+Zadatak 4. Napišite funkciju za ispisivanje sadržaja polja: prihvaća kao parametar polje i broj elemenata, te ih ispisuje na
+konzolu. Napravite verzije za sve primitivne tipove podataka. (int, double, float, char, string)
+
+<br>
 ## > Dodatna nastava: Ishod 4
-
-
 Tema: struktura kao pojam (kako se deklarira, inicijalizira i ispisuje)
 
 Zadatak 1. Napišite definiciju strukture za čuvanje podataka o Automobilu. Automobil ima osnovne karakteristike naziv (string), tip (string), broj_vrata (int), obiteljski (bool) te potrosnja (double). Napravite instancu strukture, dodijelite joj vrijednosti te ih ispišite.
@@ -89,9 +108,8 @@ Zadatak 6. Napišite definiciju strukture za Kolegij. Kolegij ima osnovne karakt
 
 ects_bodovi i obavezan. Nadalje, sadrži i strukturu Profesor. Profesor ima samo ime i prezime kao karakteristike. Napravite instancu strukture, dodijelite joj vrijednosti te ih ispišite.
 
-
+<br>
 ## > Dodatna nastava: Ishod 6
-
 Tema: Pokazivači i reference, sintaksa
 
 Zadatak 1. Napišite program koji deklarira varijablu broj tipa int i inicijalizira ju. Potom deklarirajte pokazivač na tu varijablu te novu referencu na istu varijablu. Ispišite vrijednost varijable broj koristeći samu varijablu, koristeći dereferenciranje pokazivača na tu varijablu te koristeći referencu. Ispišite i adresu varijable. Izmijenite vrijednost varijable broj korištenjem pokazivača. Ponovite isti ispis. Izmijenite vrijednost varijable broj korištenjem reference. Ponovite isti ispis.
