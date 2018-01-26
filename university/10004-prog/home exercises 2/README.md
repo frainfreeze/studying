@@ -11,6 +11,7 @@ Zadatak 5. Napišite definiciju strukture Racun koja sadrži broj računa, iznos
 
 
 <br>
+
 ## > Vježbe 10
 Zadatak 1. Napravite aplikaciju za unos proizvoda. Proizvod definira naziv, količina na skladištu i cijena. Korisnik može unijeti neograničen broj proizvoda. Nakon unosa treba ispisati podatke najjeftinijeg i najskupljeg proizvoda.
 
@@ -39,6 +40,7 @@ korisniku odabir ispisa:
 Zadatak 8. Napravite aplikaciju koja čuva podatke o studentima (ime, prezime i JMBAG). Direktno u aplikaciji kreirajte 5 studenata. Aplikacija omogućava pretraživanje studenata prema JMBAG-u. Ukoliko korisnik upiše JMBAG koji ne postoji treba ga o tome obavijestiti.
 
 <br>
+
 ## > Vježbe 11
 Zadatak 1. Napišite program koji deklarira dvije varijable: broj1 tipa int i broj2 tipa double, te dvije pokazivačke varijable koje pokazuju na njih. Pridružite vrijednosti varijablama broj1 i broj2 kroz pokazivače te na kraju ispišite vrijednosti u njima bez korištenja pokazivača.
 
@@ -53,6 +55,7 @@ elemenata u polju te ispisuje sve elemente polja.
 Zadatak 5. Napišite funkciju koja prihvaća dva polja cijelih brojeva: u prvo su upisani brojevi, a drugo je prazno. Funkcija treba iz prvog polja prepisati sve elemente u drugo u obrnutom redoslijedu.
 
 <br>
+
 ## > Vježbe 12
 Zadatak 1. Napišite program koji definira polje od 5 elemenata, te sljedeće funkcije:
 
@@ -76,6 +79,7 @@ konzolu. Napravite verzije za sve primitivne tipove podataka. (int, double, floa
 
 
 <br>
+
 ## > Vježbe 13
 Zadatak 1. Učitajte od korisnika željenu veličinu polja, kroz funkcije učitajte brojeve od korisnika, te ispišite polje na ekran.
 
@@ -103,6 +107,7 @@ Zadatak 10. Napravite strukturu za čuvanje podataka o pravokutnicima (a, b). Pi
 
 
 <br>
+
 ## > Vježbe 14
 Zadatak 1. Napišite program koji iz tekstualne datoteke Brojevi.txt učitava cijele brojeve te ispisuje samo
 
@@ -127,6 +132,7 @@ Zadatak 7. Definirati strukturu Knjiga (Naziv, Autor, Kolicina). Iz datoteke Pod
 ![slika](https://i.imgur.com/oyaNjOs.png)
 
 <br>
+
 ## > Dodatna nastava: Ishod 4
 Tema: struktura kao pojam (kako se deklarira, inicijalizira i ispisuje)
 
@@ -162,6 +168,7 @@ Zadatak 6. Napišite definiciju strukture za Kolegij. Kolegij ima osnovne karakt
 ects_bodovi i obavezan. Nadalje, sadrži i strukturu Profesor. Profesor ima samo ime i prezime kao karakteristike. Napravite instancu strukture, dodijelite joj vrijednosti te ih ispišite.
 
 <br>
+
 ## > Dodatna nastava: Ishod 6
 Tema: Pokazivači i reference, sintaksa
 
