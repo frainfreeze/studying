@@ -1,3 +1,5 @@
+[summaries](https://github.com/frainfreeze/studying/blob/master/university/skripte.md)
+
 # Semester 1
 ### > 10004 - Programming 
 University provided literature :
@@ -6,7 +8,10 @@ University provided literature :
 The course aims:
 > Students become familiar with ways to solve simple programming problems and designing computer algorithms using structured and procedural programming language.
 
-
+Home exercises: [pt1](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/home%20exercises%201) | [pt2](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/home%20exercises%202)
+   <|>   Homeworks: [DZ1](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/homeworks/DZ1) | [DZ2](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/homeworks/DZ2) 
+   <|>   [Labs(fragments)](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/labs)
+   
 <br>
 
 ### > 10005 - Introduction to Computer Networks 
