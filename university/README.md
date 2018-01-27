@@ -27,6 +27,8 @@ Supplementary literature:
 1. Curt White: Data Communications and Computer Networks: A Business Users Approach, Course Technology, 2006.
 2. CCNA Exploration: Network Fundamentals, CCNA Exploration Companion Guide, 2007.
 
+IP calc and homework generator: [source](https://github.com/frainfreeze/studying/tree/master/university/10005-networks/IP%20calculator%20homework/source)
+
 <br>
 
 ### > 10006 - Digital Electronics 
