@@ -27,7 +27,7 @@ Supplementary literature:
 1. Curt White: Data Communications and Computer Networks: A Business Users Approach, Course Technology, 2006.
 2. CCNA Exploration: Network Fundamentals, CCNA Exploration Companion Guide, 2007.
 
-IP calc and homework generator: [source](https://github.com/frainfreeze/studying/tree/master/university/10005-networks/IP%20calculator%20homework/source)
+IP calc and homework generator: [source](https://github.com/frainfreeze/studying/tree/master/university/10005-networks/IP%20calculator%20homework/source)   <|>   Docs: [Analysing network trafic using wireshark](https://github.com/frainfreeze/studying/blob/master/university/skripte/tkucar-Analiza_komunikacije_izmedu_dva_racunala_koristenjem_Wiresharka.pdf)
 
 <br>
 
