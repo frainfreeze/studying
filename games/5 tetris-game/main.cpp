@@ -4,28 +4,41 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
+#include <algorithm>
 using namespace std;
 
-struct Elements{
-    string name;
-    int posX;
-    int posY;
+struct onscreen{
+    int x;
+    int y;
 };
 
-vector <Elements> shapes;
-int ticker = 0;
+vector<onscreen> elements;
+
+vector<int> used {18};
+
+int ticker = 0; // for shape falling speed
 int shapePosX = 10;
 int shapePosY = 0;
-int score;
+
+bool can_fit;
 bool game_over;
 
-inline void clearScreen() {system("cls");} //inline for small performance boost
+inline void clearScreen() {system("cls");}
 
 void init_game(){
     game_over = false;
-    score = 0;
+    can_fit = true;
 }
 
+bool isUsed(int posY){
+    for(int i = 0; i<used.size(); i++){
+        if(posY == used[i]){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
 void screen(){
     string line(25,220);
     cout << "       T E T R I S\n";
@@ -40,25 +53,35 @@ void screen(){
         }
         cout << endl;
     }
+    
     if(shapePosY!=18 && (ticker%5==0)) shapePosY++;
+    if(isUsed(shapePosY)){
+        can_fit = false;   
+        used.push_back(shapePosY+1);
+        onscreen temp;
+        temp.x = shapePosX;
+        temp.y = shapePosY;
+        elements.push_back(temp);
+    }
+    
     ticker++;
-    Sleep(60); // smanjuje flicker, valjda jer pogodi screen refresh rate?
+    Sleep(60);
 }
 
 int main() {
     init_game();
-
+    cin.get();
     while(!game_over){
         clearScreen();
         screen();
 
-        if (GetAsyncKeyState (VK_LEFT) && shapePosX>1 && shapePosX <=23) {
+        if (GetAsyncKeyState (VK_LEFT) && shapePosX>1 && shapePosX <=23 && (can_fit) ) {
             shapePosX--;
         }
-        if (GetAsyncKeyState (VK_RIGHT) && (shapePosX>=1 && shapePosX <23)) {
+        if (GetAsyncKeyState (VK_RIGHT) && (shapePosX>=1 && shapePosX <23) && (can_fit) ) {
             shapePosX++;
         }
-        if (GetAsyncKeyState (VK_DOWN) && (shapePosY!=18)) {
+        if (GetAsyncKeyState (VK_DOWN) && (can_fit)) {
             shapePosY++;
         }
     }
