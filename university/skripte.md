@@ -3,7 +3,7 @@
 [I1](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/home%20exercises%201)
 | [I2](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/home%20exercises%202)
  | [Zadaca 1](https://github.com/frainfreeze/studying/blob/master/university/skripte/PROG_I1.pdf)
-
+ | [Zadaca 2](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/homeworks/DZ2)
 
 
 #
