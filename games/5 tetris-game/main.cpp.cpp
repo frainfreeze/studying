@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstdlib>
 #include <iostream>
+#include <conio.h>
 #include <windows.h>
 using namespace std;
 
@@ -12,9 +13,9 @@ struct Elements{
 };
 
 vector <Elements> shapes;
-
-int shapePosX;
-int shapePosY;
+int ticker = 0;
+int shapePosX = 10;
+int shapePosY = 0;
 int score;
 bool game_over;
 
@@ -33,12 +34,14 @@ void screen(){
         for(int j = 0; j<25; j++){
             if(j==0 || j == 25-1 || i == 20-1){
                 cout << char(219);
-            } else {
-                cout << " ";
-            }
+            } else if(j == shapePosX && i==shapePosY){
+                cout << char(219);
+            } else cout << " ";
         }
         cout << endl;
     }
+    if(shapePosY!=18 && (ticker%5==0)) shapePosY++;
+    ticker++;
     Sleep(60); // smanjuje flicker, valjda jer pogodi screen refresh rate?
 }
 
@@ -48,6 +51,16 @@ int main() {
     while(!game_over){
         clearScreen();
         screen();
+
+        if (GetAsyncKeyState (VK_LEFT) && shapePosX>1 && shapePosX <=23) {
+            shapePosX--;
+        }
+        if (GetAsyncKeyState (VK_RIGHT) && (shapePosX>=1 && shapePosX <23)) {
+            shapePosX++;
+        }
+        if (GetAsyncKeyState (VK_DOWN) && (shapePosY!=18)) {
+            shapePosY++;
+        }
     }
 
     return 0;
