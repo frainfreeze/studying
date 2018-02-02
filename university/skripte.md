@@ -17,7 +17,7 @@
 #
 ### Engleski
 [I1](https://github.com/frainfreeze/studying/blob/master/university/skripte/ENG_I1.pdf)
- | [I2](https://github.com/frainfreeze/studying/blob/master/university/skripte/ENG_I2.pdf)
+ | [I2](https://github.com/frainfreeze/studying/blob/master/university/skripte/ENG-VOCABULARY.pdf)
  | [Poslovno pismo](https://github.com/frainfreeze/studying/blob/master/university/skripte/tkucar-letter.pdf)
 
 
