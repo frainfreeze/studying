@@ -38,8 +38,7 @@ def program(n):
     tempIP = str(n)
     tempIP = tempIP[:-3]
     print '\nIP: ' + tempIP
-    print str('.'.join([bin(int(x) + 256)[3:] for x in tempIP.split('.'
-              )]))
+    print str('.'.join([bin(int(x) + 256)[3:] for x in tempIP.split('.')]))
 
     # subnet
     tempSub = str(n)
@@ -83,8 +82,7 @@ def zad1():
         n = get_network(tempNetwork)
         print n.netmask()
         rawBinarySubnet = '1' * foo + '0' * (32 - foo)
-        print str('.'.join([rawBinarySubnet[i:i + 8] for i in range(0,
-                  len(rawBinarySubnet), 8)]))
+        print str('.'.join([rawBinarySubnet[i:i + 8] for i in range(0,len(rawBinarySubnet), 8)]))
         foo += 1
 
 def zad2():
@@ -437,20 +435,3 @@ def zad4():
     j = j + '0' * (32-len(j)) #patch the length jer baaca error inace
     print str('.'.join([j[i:i + 8] for i in range(0,len(j), 8)])) # rascupaj u 8 komada
     print '.'.join(str(int(j[i:i+8], 2)) for i in range(0, 32, 8)) + '/' + tmpSubLen
-
-def first_working_version():
-    n = get_network("10.11.12.0/26")
-    tempIP = str(n)
-    tempIP = tempIP[:-3]
-    print '\nIP: ' + tempIP
-    z = str('.'.join([bin(int(x) + 256)[3:] for x in tempIP.split('.')]))
-
-    m = get_network("10.11.12.96/27")
-    tempIPm = str(m)
-    tempIPm = tempIPm[:-3]
-    print '\nIP: ' + tempIPm
-    w = str('.'.join([bin(int(x) + 256)[3:] for x in tempIPm.split('.')]))
-    print z+'\n'+w
-
-    j = str(os.path.commonprefix([z, w])).replace(".", "")
-    print '.'.join(str(int(j[i:i+8], 2)) for i in range(0, 32, 8)) + '/' + str ( len(j) )
