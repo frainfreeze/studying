@@ -23,7 +23,7 @@
 #
 ### Ode
 [I1](https://github.com/frainfreeze/studying/blob/master/university/skripte/ODE.pdf)
-[I2 One Note](https://github.com/frainfreeze/studying/raw/master/university/skripte/ode%20skripta%20pt%202.onepkg)
+ | [I2 One Note](https://github.com/frainfreeze/studying/raw/master/university/skripte/ode%20skripta%20pt%202.onepkg)
  | [I2 PDF export](https://github.com/frainfreeze/studying/blob/master/university/skripte/ode%20skripta%20pt%202.pdf)
  
 #
