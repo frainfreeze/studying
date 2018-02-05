@@ -21,9 +21,10 @@
  | [Poslovno pismo](https://github.com/frainfreeze/studying/blob/master/university/skripte/tkucar-letter.pdf)
 
 #
-### Ode 2
-[One Note](https://github.com/frainfreeze/studying/raw/master/university/skripte/ode%20skripta%20pt%202.onepkg)
- | [PDF export](https://github.com/frainfreeze/studying/blob/master/university/skripte/ode%20skripta%20pt%202.pdf)
+### Ode
+[I1](https://github.com/frainfreeze/studying/blob/master/university/skripte/ODE.pdf)
+[I2 One Note](https://github.com/frainfreeze/studying/raw/master/university/skripte/ode%20skripta%20pt%202.onepkg)
+ | [I2 PDF export](https://github.com/frainfreeze/studying/blob/master/university/skripte/ode%20skripta%20pt%202.pdf)
  
 #
 ### RPUP
