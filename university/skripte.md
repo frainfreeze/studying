@@ -20,7 +20,11 @@
  | [I2](https://github.com/frainfreeze/studying/blob/master/university/skripte/ENG-VOCABULARY.pdf)
  | [Poslovno pismo](https://github.com/frainfreeze/studying/blob/master/university/skripte/tkucar-letter.pdf)
 
-
+#
+### Ode
+[One Note](https://github.com/frainfreeze/studying/raw/master/university/skripte/ode%20skripta%20pt%202.onepkg)
+ | [PDF export](https://github.com/frainfreeze/studying/blob/master/university/skripte/ode%20skripta%20pt%202.pdf)
+ 
 #
 ### RPUP
 [clanak](https://github.com/frainfreeze/studying/blob/master/university/skripte/tkucar-Kriptovalute-novac_buducnosti.pdf)
