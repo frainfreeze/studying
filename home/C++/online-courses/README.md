@@ -1,5 +1,5 @@
 ## edX: Microsoft: DEV210x - Introduction to C++
-Finished 100%, no code here.
+Finished. 100%. No code for this one.
 
 - Module 1 Introducing C++
 - Module 2 Data Types in C++
@@ -16,9 +16,24 @@ todo.
 
 ## Udemy C++ Tutorial for Complete Beginners
 
-- Basic syntax
-- Functions and classes
-- Pointers
-- OOP
-- Inheritance
-- SDL library
+- Basic syntax (user input, types, conditions, loops, arrays...)
+- Functions (headers and prototypes, return values and parameters...)
+- Object oriented coding (classes, data members, constructors, getters...)
+- Pointers and memory (pointers and arrays, references, constants, allocating memory...)
+- Inheritance (encapsulation, constructor inheritance)
+- Twos complement and static keyword
+- Developing a program: particle fire simulation (using SDL library)
+- Bonus (OOP design considerations, postfix & prefix, polymorphism, creating static libs)
+
+## Udemy C++ Tutorial for Complete Beginners
+
+- exceptions (standard, custom...)
+- files (w/r/parse, structs and padding, binary files)
+- STL (vectors, 2d arrays, lsits, maps and multimaps, sets, stacks, queues...)
+- operator overloading
+- template classes and functions
+- passing functions to functions
+- C++11 features (many)
+- GUI programming
+- A project: drawing fractal images (bitmaps, histograms, rgb classes...)
+- Bonus (multiple inheritance)
