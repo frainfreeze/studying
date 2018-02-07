@@ -25,7 +25,7 @@ todo.
 - Developing a program: particle fire simulation (using SDL library)
 - Bonus (OOP design considerations, postfix & prefix, polymorphism, creating static libs)
 
-## Udemy C++ Tutorial for Complete Beginners
+## Udemy Advanced C++ Programming
 
 - exceptions (standard, custom...)
 - files (w/r/parse, structs and padding, binary files)
