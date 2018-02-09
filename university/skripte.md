@@ -126,3 +126,8 @@ koje će na temelju datuma kredite ispisati pripadajuće podatke.
 <br><br>
 
 ![dsf](https://i.imgur.com/vjMFv0v.png)
+
+<br><br>
+
+![dsf](https://i.imgur.com/UdyFCSe.png)
+![dsf](https://i.imgur.com/e2M117q.png)
