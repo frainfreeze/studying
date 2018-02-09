@@ -46,4 +46,32 @@ dva reda teksta sa poravnanjem lijevo i desno + tab (tab napraviti preko Tabs a 
 ![dva reda teksta sa poravnanjem lijevo i desno + tab (tab napraviti preko Tabs a ne kao ja ovdje)](https://i.imgur.com/lhfvOjr.gif)
 
 #### Excel:
+Na radnom listu Tablica množenja upišite formulu samo u ćeliju B3 koja će pomnožiti 
+vrijednosti u ćelijama 82 i A3 te koja će biti prilagodena za kopiranje na cijelu tablicu. 
+Kopirajte upisanu formulu u sve ćelije do K 12. 
+![a](https://i.imgur.com/NfMja5x.png)
 
+<br>
+
+Na radnom listu Krediti izračunajte ukupni broj i ukupni iznos svih izdanih kredita, 
+zatim prebrojite sve kredite po vrsti, zbrojite iznose svih kredita koje je podigla 
+odredena tvrtka i kredita pojedine vrste po tvrtkama. Na kraju popunite tablicu na dnu 
+tako da upišete funkciju za prebrojavanje kredita po vrstama i po tvrtkama u ćeliju 840, 
+prilagodite ju za kopiranje i kopirate ju u sve ćelije do G48. 
+![b](https://i.imgur.com/OfXUHUK.png)
+
+<br>
+
+Na radnom listu Kolegiji upišite proizvoljnu šifru kolegija u ćeliju A20, a zatim upišite 
+funkcije u ćelije 820 i C20 koje će kao rezultat ispisati naziv kolegija i pripadajuće ECDL 
+bodove iz tablice kolegija koji pripadaju šifri koju ste upisali. 
+![c](https://i.imgur.com/mhwMZ29.png)
+
+<br>
+
+Na radnom listu Narudžbenica upišite funkcije koje će kao rezultat ispisati naziv 
+proizvoda i neto cijenu svakog pojedinog proizvoda na temelju upisane šifre i tablice 
+na radnom listu Skladište. Na temelju neto cijene i tražene količine, izračunajte PDV i 
+ukupni iznos za svaki proizvod i zatim sveukupni iznos za plaćanje. 
+![d](https://i.imgur.com/q9lbXqj.png)
+![d](https://i.imgur.com/s1w8gxa.png)
