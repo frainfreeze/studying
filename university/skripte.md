@@ -105,3 +105,11 @@ Na radnom listu Info o kreditima upišite samo jednu funkciju u ćeliju 83 koja 
 kopirajte tu funkciju u sve ćelije do El 161. U stupcima Godina i Mjesec upišite funkcije 
 koje će na temelju datuma kredite ispisati pripadajuće podatke. 
 ![h](https://i.imgur.com/19yVCv6.png)
+
+<br>
+
+![g](https://i.imgur.com/a573F1U.png)
+![ds](https://i.imgur.com/OMf06yW.png)
+=IFNA(IF(VLOOKUP(D3;$A$3:$B$95;2;FALSE)="Sway";"Prezi";"Sway");IF(RANDBETWEEN(1;2)=1;"Sway";"Prezi"))
+
+<br>
