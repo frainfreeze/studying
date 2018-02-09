@@ -75,3 +75,33 @@ na radnom listu Skladište. Na temelju neto cijene i tražene količine, izraču
 ukupni iznos za svaki proizvod i zatim sveukupni iznos za plaćanje. 
 ![d](https://i.imgur.com/q9lbXqj.png)
 ![d](https://i.imgur.com/s1w8gxa.png)
+
+<br>
+
+Na radnom listu Kamate za štednju svakog klijenta izračunajte kamatnu stopu koja će 
+biti primijenjena, na temelju iznosa štednje i prikazane tablice kamatnih stopa. 
+![e](https://i.imgur.com/0YtYlZa.png)
+
+<br>
+
+Na radnom listu Rezultati ispita izračunajte ukupne bodove svakog studenta na ispitu 
+i zatim svakom studentu dodijelite ocjenu na temelju bodovne tablice koja se nalazi 
+desno. Ako student nije pisao ispit (nema upisane bodove po ishodima) neka se u 
+stupcu Ocjena ispiše tekst Nije pisao, a ako je student prepisivao (ili prepisivala) barem 
+jedan ishod, neka se ispiše Prepisivanje. Nakon toga, izračunajte koliko je studenata 
+dobili koju ocjenu u tablici desno i dodatno to izrazite i u obliku postotka svih studenata 
+koji su prijavili ispit. 
+![f](https://i.imgur.com/L5XLUMM.png)
+
+<br>
+
+Na radnom listu Studenti prebrojite studente po godinama i po studijima. 
+![g](https://i.imgur.com/h9ih3y0.png)
+
+<br>
+
+Na radnom listu Info o kreditima upišite samo jednu funkciju u ćeliju 83 koja će iz 
+šifrarnika desno prikazati traženi podatak te koja će biti prilagodena za kopiranje. Zatim 
+kopirajte tu funkciju u sve ćelije do El 161. U stupcima Godina i Mjesec upišite funkcije 
+koje će na temelju datuma kredite ispisati pripadajuće podatke. 
+![h](https://i.imgur.com/19yVCv6.png)
