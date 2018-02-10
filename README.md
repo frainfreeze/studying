@@ -23,38 +23,38 @@ Quick navigation:
 - [Greedy](#greedy)
 - [Puzzles](#puzzles)
 
-# [array](array)
+# [array](src/array)
 
-# backtracking
+# [backtracking](src/backtracking)
 
-# binary
+# [binary](src/binary)
 
-# binary tree
+# [binary tree](src/binarytree)
 
-# Binary Search Tree
+# [Binary Search Tree](src/bst)
 
-# Divide & Conquer
+# [Divide & Conquer](src/DivideConquer)
 
-# Dynamic Programming
+# [Dynamic Programming](src/DynamicProgramming)
 
-# Graphs
+# [Graphs](src/Graphs)
 
-# Heaps
+# [Heaps](src/Heaps)
 
-# Linked Lists
+# [Linked Lists](src/LinkedLists)
 
-# Matrix
+# [Matrix](src/Matrix)
 
-# Queue
+# [Queue](src/Queue)
 
-# Sorting
+# [Sorting](src/Sorting)
 
-# Stack
+# [Stack](src/Stack)
 
-# String
+# [String](src/String)
 
-# Trie
+# [Trie](src/Trie)
 
-# Greedy
+# [Greedy](src/Greedy)
 
-# Puzzles
+# [Puzzles](src/Puzzles)
