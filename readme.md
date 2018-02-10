@@ -16,18 +16,18 @@ Quick navigation:
 sort me: by '# lang' -> ' - proj name -> technology'
 -->
 
-```Counter: 12 projects || problems```
+```Counter: 20 projects || problems```
 
 <br>
 
-# C++
+# C++ (8)
 - [Project Euler](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/ProjectEuler#desc)
 - [Small console games](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/games#desc)
 - [Other](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/other#desc)
 
 <br>
 
-# python
+# python (12)
 - [codingbat](https://github.com/frainfreeze/DailyProgrammer/tree/master/python/codingbat#desc)
 
 <!-- # Lua

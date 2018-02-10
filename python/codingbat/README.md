@@ -1,6 +1,26 @@
 # desc
 <br>
 
+### [012 Warmup-1 > front_back ](012.py)
+Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+```
+front3('Java') → 'JavJavJav'
+front3('Chocolate') → 'ChoChoCho'
+front3('abc') → 'abcabcabc'
+```
+
+<br>
+
+### [011 Warmup-1 > front_back ](011.py)
+Given a string, return a new string where the first and last chars have been exchanged.
+```
+front_back('code') → 'eodc'
+front_back('a') → 'a'
+front_back('ab') → 'ba'
+```
+
+<br>
+
 ### [010 Warmup-1 > missing_char ](010.py)
 Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
 ```
@@ -97,3 +117,6 @@ sleep_in(False, False) → True
 sleep_in(True, False) → False
 sleep_in(False, True) → True
 ```
+
+
+### [Done page](http://codingbat.com/done?user=kucar.tomislav@gmail.com&tag=5250057629)
