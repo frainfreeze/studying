@@ -1,5 +1,8 @@
 # [r/dailyprogramer](https://www.reddit.com/r/dailyprogrammer)
 
+Evergrowing collection of programming projects and problems. 
+
+Quick navigation:
 
 sort me: by '# lang' -> ' - proj name -> technology'
 
@@ -28,3 +31,5 @@ sort me: by '# lang' -> ' - proj name -> technology'
 - http://nifty.stanford.edu/
 - http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/
 - https://github.com/collections
+
+Data Structures and Algorithms practice problems and their solutions see [this repo](https://github.com/frainfreeze/DSA-pps).
