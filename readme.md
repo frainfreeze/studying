@@ -16,7 +16,7 @@ Quick navigation:
 sort me: by '# lang' -> ' - proj name -> technology'
 -->
 
-```Counter: 7 projects || problems```
+```Counter: 12 projects || problems```
 
 <br>
 
