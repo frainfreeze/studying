@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <unordered_map>
 
 /*
 Find Pair with given Sum in the Array
@@ -49,14 +50,48 @@ void sorting_find_pair(int field[], int fieldSize, int sum){
     int low = 0;
     int high = fieldSize-1;
 
-
+    // reduce search space arr[low..high] at each iteration of the loop
+    // loop till low is less than high
+    while (low < high){
+        if (field[low] + field[high] == sum){  // sum found
+            std::cout << "Pair found at index " << low << " and " << high << " ("
+                     << field[low] << " + " << field[high] << ").\n";
+            return;
+        }
+        // increment low index if total is less than the desired sum
+        // decrement high index is total is more than the sum
+        (field[low] + field[high] < sum)? low++: high--;
+    }
+    // No pair with given sum exists in the array
+    std::cout << "Pair not found\n";
 }
 
 void hashing_find_pair(int field[], int fieldSize, int sum){
     /*
-    ""[1]
+    "3. O(n) solution using Hashing -
+    We can use map to easily solve this problem in linear time. The idea is to insert
+    each element of the array field[i] in a map. We also checks if difference (field[i],
+    sum field[i]) already exists in the map or not. If the difference is seen before, we
+    print the pair and return."[1]
     */
-    std::cout << "\nHashing pair search:\n";
+    std::cout << "\n\nHashing pair search:\n";
+
+    // create an empty map
+    std::unordered_map<int, int> map;
+
+    // do for each element
+    for (int i = 0; i < fieldSize; i++){
+        // check if pair (field[i], sum-field[i]) exists
+        // if difference is seen before, print the pair
+        if (map.find(sum - field[i]) != map.end()){
+            std::cout << "Pair found at index " << map[sum - field[i]] << " and " << i;
+            return;
+        }
+        // store index of current element in the map
+        map[field[i]] = i;
+    }
+    // we reach here if pair is not found
+    std::cout << "Pair not found\n";
 }
 
 int main() {
