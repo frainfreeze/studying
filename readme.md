@@ -5,6 +5,7 @@ Evergrowing collection of programming projects and problems.
 Quick navigation:
 - [Python](#python)
 - [C++](#c++)
+- [Sites](#sites)
 <!-- [Lua](#lua)
 - [Clojure](#Clojure)
 - [Java](#Java)
@@ -14,12 +15,12 @@ Quick navigation:
 - [javascript](#Javascript) 
 sort me: by '# lang' -> ' - proj name -> technology'
 -->
-- [Sites](#sites)
-
-# python
 
 # C++
+- [Project Euler](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/ProjectEuler)
+- [Small console games](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/games)
 
+# python
 
 <!-- # Lua
 # Clojure
