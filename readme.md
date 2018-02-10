@@ -19,8 +19,8 @@ sort me: by '# lang' -> ' - proj name -> technology'
 <br>
 
 # C++
-- [Project Euler](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/ProjectEuler)
-- [Small console games](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/games)
+- [Project Euler](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/ProjectEuler#desc)
+- [Small console games](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/games#desc)
 
 <br>
 
