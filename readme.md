@@ -1,4 +1,4 @@
-# [r/dailyprogramer](https://www.reddit.com/r/dailyprogrammer)
+# dailyprogramer
 
 Evergrowing collection of programming projects and problems. 
 
