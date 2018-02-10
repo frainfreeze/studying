@@ -16,11 +16,14 @@ Quick navigation:
 sort me: by '# lang' -> ' - proj name -> technology'
 -->
 
+```Counter: 7 projects || problems```
+
 <br>
 
 # C++
 - [Project Euler](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/ProjectEuler#desc)
 - [Small console games](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/games#desc)
+- [Other](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/other#desc)
 
 <br>
 
