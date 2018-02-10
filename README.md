@@ -7,13 +7,13 @@ Quick navigation:
 - [array](#array)
 - [backtracking](#backtracking)
 - [binary](#binary)
-- [binary tree](# binary-tree)
-- [Binary Search Tree (BST)](#binary-Search-Tree)
-- [Divide & Conquer](#divide-Conquer)
+- [binary tree](#binary-tree)
+- [Binary Search Tree (BST)](#binary-search-tree)
+- [Divide & Conquer](#divide-&-Conquer)
 - [Dynamic Programming](#dynamic-programming)
 - [Graphs](#graphs)
 - [Heaps](#heaps)
-- [Linked Lists](#linked-Lists)
+- [Linked Lists](#linked-lists)
 - [Matrix](#matrix)
 - [Queue](#queue)
 - [Sorting](#sorting)
@@ -23,7 +23,7 @@ Quick navigation:
 - [Greedy](#greedy)
 - [Puzzles](#puzzles)
 
-# array
+# [array](array)
 
 # backtracking
 
