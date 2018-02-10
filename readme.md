@@ -2,6 +2,8 @@
 
 Evergrowing collection of programming projects and problems. 
 
+``` counter: 20 projects/problems ```
+
 Quick navigation:
 - [Python](#python)
 - [C++](#c++)
@@ -15,8 +17,6 @@ Quick navigation:
 - [javascript](#Javascript) 
 sort me: by '# lang' -> ' - proj name -> technology'
 -->
-
-```Counter: 20 projects || problems```
 
 <br>
 
