@@ -131,3 +131,24 @@ koje će na temelju datuma kredite ispisati pripadajuće podatke.
 
 ![dsf](https://i.imgur.com/UdyFCSe.png)
 ![dsf](https://i.imgur.com/e2M117q.png)
+
+<br><br>
+
+Osigurajte da se sadržaj radnog lista Prodaja ukupno uvijek ispisuje na sredini stranice papira i po visini i po širini.
+![dsf](https://i.imgur.com/FjL4GRP.png)
+
+<br><br>
+
+![f](https://i.imgur.com/3NtwzdZ.png)
+![f](https://i.imgur.com/mPoFrkZ.png)
+
+<br><br>
+
+![f](https://i.imgur.com/kPfiHKM.png)
+![f](https://i.imgur.com/V1PEQMA.png)
+
+
+<br><br>
+
+![f](https://i.imgur.com/mfMZIl4.png)
+![f](https://i.imgur.com/roaUnXR.png)
