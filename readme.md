@@ -3,11 +3,31 @@
 Evergrowing collection of programming projects and problems. 
 
 Quick navigation:
-
+- [Python](#python)
+- [C++](#c++)
+<!-- [Lua](#lua)
+- [Clojure](#Clojure)
+- [Java](#Java)
+- [C#](#C)
+- [haskel](#Haskel)
+- [php](#PHP)
+- [javascript](#Javascript) 
 sort me: by '# lang' -> ' - proj name -> technology'
+-->
+- [Sites](#sites)
 
 # python
 
+# C++
+
+
+<!-- # Lua
+# Clojure
+# Java
+# C#
+# haskel
+# php
+# javascript -->
 
 # sites: 
 ### python:
@@ -32,4 +52,4 @@ sort me: by '# lang' -> ' - proj name -> technology'
 - http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/
 - https://github.com/collections
 
-Data Structures and Algorithms practice problems and their solutions see [this repo](https://github.com/frainfreeze/DSA-pps).
+For Data Structures and Algorithms practice problems and their solutions see [this repo](https://github.com/frainfreeze/DSA-pps).
