@@ -87,12 +87,8 @@ def zad1():
 
 def zad2():
     KlasaA = [9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30] # 10.0.0.0/8  
-    KlasaB = [113,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30] # 172.16.0.0/12
+    KlasaB = [13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30] # 172.16.0.0/12
     KlasaC = [17,18,19,20,21,22,23,24,25,26,27,28,29,30] # 192.168.0.0/16
-
-    text = '''Za 10.0.0.0 /14 broj podmreža koje možemo dobiti od KlaseA privatnih adresa
-            koristeći subnet masku /14 iznosi 2^(14-8)=2^6=64
-            A svaka od tih podmreža sastoji se od 2^(32-14)-2 = 2^18-2=262144-2=262142 računala'''
 
     print "\nKlasa A"
     for IPadresa in KlasaA:

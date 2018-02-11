@@ -1,5 +1,5 @@
 Domaca zadaca URM - subnetiranje
-Tomislav Kucar 2018/01/27 02:58:15
+Tomislav Kucar 2018/02/11 16:12:16
 
 Zadatak 1
 ----------
@@ -202,9 +202,9 @@ Za 10.0.0.0 /30 broj podmreža koje možemo dobiti od Klase A privatnih adresa
 
 
 Klasa B
-Za 172.16.0.0 /113 broj podmreža koje možemo dobiti od Klase B privatnih adresa
-    koristeći subnet masku /113 iznosi 2^(113-12) = 2535301200456458802993406410752
-    A svaka od tih podmreža sastoji se od 2^(32-113)-2 = -2.0 računala
+Za 172.16.0.0 /13 broj podmreža koje možemo dobiti od Klase B privatnih adresa
+    koristeći subnet masku /13 iznosi 2^(13-12) = 2
+    A svaka od tih podmreža sastoji se od 2^(32-13)-2 = 524286 računala
 ----------------------------------
 Za 172.16.0.0 /14 broj podmreža koje možemo dobiti od Klase B privatnih adresa
     koristeći subnet masku /14 iznosi 2^(14-12) = 4
@@ -278,9 +278,9 @@ Za 172.16.0.0 /30 broj podmreža koje možemo dobiti od Klase B privatnih adresa
 
 
 Klasa C
-Za 192.168.0.0 /113 broj podmreža koje možemo dobiti od Klase C privatnih adresa
-    koristeći subnet masku /113 iznosi 2^(113-16) = 158456325028528675187087900672
-    A svaka od tih podmreža sastoji se od 2^(32-113)-2 = -2.0 računala
+Za 192.168.0.0 /13 broj podmreža koje možemo dobiti od Klase C privatnih adresa
+    koristeći subnet masku /13 iznosi 2^(13-16) = 0.125
+    A svaka od tih podmreža sastoji se od 2^(32-13)-2 = 524286 računala
 ----------------------------------
 Za 192.168.0.0 /14 broj podmreža koje možemo dobiti od Klase C privatnih adresa
     koristeći subnet masku /14 iznosi 2^(14-16) = 0.25
