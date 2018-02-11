@@ -10,3 +10,8 @@ def sleep_in_1(weekday, vacation):
     return False
   else:
     return True
+
+
+sleep_in(False, False) #True
+sleep_in(True, False) #False
+sleep_in(False, True) #True

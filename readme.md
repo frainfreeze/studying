@@ -2,7 +2,7 @@
 
 Evergrowing collection of programming projects and problems. 
 
-``` counter: 20 projects/problems ```
+``` counter: 21 projects/problems ```
 
 Quick navigation:
 - [Python](#python)
@@ -20,10 +20,11 @@ sort me: by '# lang' -> ' - proj name -> technology'
 
 <br>
 
-# C++ (8)
+# C++ (9)
 - [Project Euler](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/ProjectEuler#desc)
 - [Small console games](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/games#desc)
 - [Other](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/other#desc)
+- [codingbat](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/codingbat#desc)
 
 <br>
 
