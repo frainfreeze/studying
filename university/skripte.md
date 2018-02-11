@@ -9,7 +9,8 @@
 #
 ### URM
 [I1](https://github.com/frainfreeze/studying/blob/master/university/skripte/URM_I1.pdf)
- | [I2](https://github.com/frainfreeze/studying/blob/master/university/skripte/URM_I2.pdf) 
+ | [I2](https://github.com/frainfreeze/studying/blob/master/university/skripte/URM_I2.pdf)
+ | [I2 zadatci](https://github.com/frainfreeze/studying/blob/master/university/skripte/URM_I2_zad.txt) 
  | [Zadaca 1](https://github.com/frainfreeze/studying/tree/master/university/10005-networks/IP%20calculator%20homework)
 
 
