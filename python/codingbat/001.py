@@ -12,6 +12,6 @@ def sleep_in_1(weekday, vacation):
     return True
 
 
-sleep_in(False, False) #True
-sleep_in(True, False) #False
-sleep_in(False, True) #True
+print sleep_in(False, False) #True
+print sleep_in(True, False) #False
+print sleep_in(False, True) #True

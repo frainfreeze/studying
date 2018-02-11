@@ -1,8 +1,8 @@
 # dailyprogramer
 
-Evergrowing collection of programming projects and problems. 
+Evergrowing collection of programming projects and problems. There are probably better solutions, comments are welcome. Also, nobody likes a cheater and not only you will eventually get caught, but you won't learn anything by just copying so use this for reference only and make sure you at least understand what is being done.
 
-``` counter: 21 projects/problems ```
+``` counter: 25 projects/problems ```
 
 Quick navigation:
 - [Python](#python)
@@ -28,7 +28,7 @@ sort me: by '# lang' -> ' - proj name -> technology'
 
 <br>
 
-# python (12)
+# python (16)
 - [codingbat](https://github.com/frainfreeze/DailyProgrammer/tree/master/python/codingbat#desc)
 
 <!-- # Lua

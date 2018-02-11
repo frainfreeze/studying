@@ -1,4 +1,44 @@
 # desc
+couter: 16
+
+### [016 Warmup-2 > string_splosion ](016.py)
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+```
+string_splosion('Code') → 'CCoCodCode'
+string_splosion('abc') → 'aababc'
+string_splosion('ab') → 'aab'
+```
+
+<br>
+
+### [015 Warmup-2 > string_bits ](015.py)
+Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+```
+string_bits('Hello') → 'Hlo'
+string_bits('Hi') → 'H'
+string_bits('Heeololeo') → 'Hello'
+```
+
+<br>
+
+### [014 Warmup-2 > string_times ](014.py)
+Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front;
+```
+front_times('Chocolate', 2) → 'ChoCho'
+front_times('Chocolate', 3) → 'ChoChoCho'
+front_times('Abc', 3) → 'AbcAbcAbc'
+```
+
+<br>
+
+### [013 Warmup-2 > string_times ](013.py)
+Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+```
+string_times('Hi', 2) → 'HiHi'
+string_times('Hi', 3) → 'HiHiHi'
+string_times('Hi', 1) → 'Hi'
+```
+
 <br>
 
 ### [012 Warmup-1 > front_back ](012.py)
