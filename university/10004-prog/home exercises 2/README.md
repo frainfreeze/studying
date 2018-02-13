@@ -94,7 +94,8 @@ konzolu. Napravite verzije za sve primitivne tipove podataka. (int, double, floa
 <br>
 
 ## > Vježbe 13
-
+![](https://i.imgur.com/AvcHN2h.png)
+![](https://i.imgur.com/yeceNoj.png)
 
 Zadatak 1. Učitajte od korisnika željenu veličinu polja, kroz funkcije učitajte brojeve od korisnika, te ispišite polje na ekran.
 
@@ -124,6 +125,11 @@ Zadatak 10. Napravite strukturu za čuvanje podataka o pravokutnicima (a, b). Pi
 <br>
 
 ## > Vježbe 14
+![](https://i.imgur.com/pBWF4BM.png)
+![](https://i.imgur.com/j7VUkMr.png)
+![](https://i.imgur.com/rxQ8m0e.png)
+![](https://i.imgur.com/AGNAvrd.png)
+
 Zadatak 1. Napišite program koji iz tekstualne datoteke Brojevi.txt učitava cijele brojeve te ispisuje samo
 
 parne.
@@ -185,6 +191,8 @@ ects_bodovi i obavezan. Nadalje, sadrži i strukturu Profesor. Profesor ima samo
 <br>
 
 ## > Dodatna nastava: Ishod 6
+![slika](https://i.imgur.com/izuIz1H.png)
+![slika](https://i.imgur.com/HHx2EZ1.png)
 Tema: Pokazivači i reference, sintaksa
 
 Zadatak 1. Napišite program koji deklarira varijablu broj tipa int i inicijalizira ju. Potom deklarirajte pokazivač na tu varijablu te novu referencu na istu varijablu. Ispišite vrijednost varijable broj koristeći samu varijablu, koristeći dereferenciranje pokazivača na tu varijablu te koristeći referencu. Ispišite i adresu varijable. Izmijenite vrijednost varijable broj korištenjem pokazivača. Ponovite isti ispis. Izmijenite vrijednost varijable broj korištenjem reference. Ponovite isti ispis.
