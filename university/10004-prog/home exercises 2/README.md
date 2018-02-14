@@ -1,4 +1,7 @@
 ## > Vježbe 9
+![](https://i.imgur.com/pzFDzXv.png)
+![](https://i.imgur.com/Z6isON9.png)
+
 Zadatak 1. Napišite definiciju strukture za opis kvadra i implementirajte funkcije koje računaju njegov volumen, oplošje i duljinu prostorne dijagonale.
 
 Zadatak 2. Napišite definicije strukture za opis kolegija na nekom fakultetu. Kolegij ima naziv, broj sati predavanja, broj sati vježbi, pridruženog profesora i asistenta. Napišite program koji učitava nekoliko kolegija te ispisuje njihove detalje na ekran.
@@ -13,6 +16,11 @@ Zadatak 5. Napišite definiciju strukture Racun koja sadrži broj računa, iznos
 <br>
 
 ## > Vježbe 10
+![](https://i.imgur.com/FqzCEHb.png)
+![](https://i.imgur.com/pLsvH6x.png)
+![](https://i.imgur.com/ZRQGeYv.png)
+![](https://i.imgur.com/HOPswBY.png)
+
 Zadatak 1. Napravite aplikaciju za unos proizvoda. Proizvod definira naziv, količina na skladištu i cijena. Korisnik može unijeti neograničen broj proizvoda. Nakon unosa treba ispisati podatke najjeftinijeg i najskupljeg proizvoda.
 
 Zadatak 2. Napravite aplikaciju za unos podataka o automobilu i motociklu. Podaci koji definiraju automobil i motocikl su marka i performanse (broj kubika, snaga). Nakon unosa ispišite podatke automobila i motocikla.
@@ -42,6 +50,10 @@ Zadatak 8. Napravite aplikaciju koja čuva podatke o studentima (ime, prezime i 
 <br>
 
 ## > Vježbe 11
+![](https://i.imgur.com/BQrnmAq.png)
+![](https://i.imgur.com/A9l8VeH.png)
+![](https://i.imgur.com/gFB9LtT.png)
+
 Zadatak 1. Napišite program koji deklarira dvije varijable: broj1 tipa int i broj2 tipa double, te dvije pokazivačke varijable koje pokazuju na njih. Pridružite vrijednosti varijablama broj1 i broj2 kroz pokazivače te na kraju ispišite vrijednosti u njima bez korištenja pokazivača.
 
 Zadatak 2. Napišite program koji učitava 3 cijela broja u polje, te ispisuje polje u
@@ -57,6 +69,7 @@ Zadatak 5. Napišite funkciju koja prihvaća dva polja cijelih brojeva: u prvo s
 <br>
 
 ## > Vježbe 12
+![](https://i.imgur.com/zfj5tEL.png)
 Zadatak 1. Napišite program koji definira polje od 5 elemenata, te sljedeće funkcije:
 
 a)	prihvaća polje cijelih brojeva i broj elemenata, te popunjava polje brojevima učitanim od korisnika
@@ -81,6 +94,8 @@ konzolu. Napravite verzije za sve primitivne tipove podataka. (int, double, floa
 <br>
 
 ## > Vježbe 13
+
+
 Zadatak 1. Učitajte od korisnika željenu veličinu polja, kroz funkcije učitajte brojeve od korisnika, te ispišite polje na ekran.
 
 Zadatak 2. Napišite funkciju koja kao parametar uzima polje prirodnih brojeva i stvara novo
