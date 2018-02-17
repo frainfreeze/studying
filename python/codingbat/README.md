@@ -1,5 +1,13 @@
 # desc
-couter: 16
+counter: 17
+
+### [017 Warmup-2 > last2](017.py)
+Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+```
+last2('hixxhi') → 1
+last2('xaxxaxaxx') → 1
+last2('axxxaaxx') → 2
+```
 
 ### [016 Warmup-2 > string_splosion ](016.py)
 Given a non-empty string like "Code" return a string like "CCoCodCode".
