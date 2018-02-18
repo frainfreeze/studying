@@ -1,0 +1,60 @@
+# learn python the hard way
+
+- [ ] Preface
+- [ ] Introduction: The Hard Way Is Easier
+- [ ] [Exercise 0:](ex00) The Setup
+- [ ] [Exercise 1:](ex01) A Good First Program
+- [ ] [Exercise 2:](ex02) Comments And Pound Characters
+- [ ] [Exercise 3:](ex03) Numbers And Math
+- [ ] [Exercise 4:](ex04) Variables And Names
+- [ ] [Exercise 5:](ex05) More Variables And Printing
+- [ ] [Exercise 6:](ex06) Strings And Text
+- [ ] [Exercise 7:](ex07) More Printing
+- [ ] [Exercise 8:](ex08) Printing, Printing
+- [ ] [Exercise 9:](ex09) Printing, Printing, Printing
+- [ ] [Exercise 10:](ex) What Was That?
+- [ ] [Exercise 11:](ex) Asking Questions
+- [ ] [Exercise 12:](ex) Prompting People
+- [ ] [Exercise 13:](ex) Parameters, Unpacking, Variables
+- [ ] [Exercise 14:](ex) Prompting And Passing
+- [ ] [Exercise 15:](ex) Reading Files
+- [ ] [Exercise 16:](ex) Reading And Writing Files
+- [ ] [Exercise 17:](ex) More Files
+- [ ] [Exercise 18:](ex) Names, Variables, Code, Functions
+- [ ] [Exercise 19:](ex) Functions And Variables
+- [ ] [Exercise 20:](ex) Functions And Files
+- [ ] [Exercise 21:](ex) Functions Can Return Something
+- [ ] [Exercise 22:](ex) What Do You Know So Far?
+- [ ] [Exercise 23:](ex) Read Some Code
+- [ ] [Exercise 24:](ex) More Practice
+- [ ] [Exercise 25:](ex) Even More Practice
+- [ ] [Exercise 26:](ex) Congratulations, Take A Test!
+- [ ] [Exercise 27:](ex) Memorizing Logic
+- [ ] [Exercise 28:](ex) Boolean Practice
+- [ ] [Exercise 29:](ex) What If
+- [ ] [Exercise 30:](ex) Else And If
+- [ ] [Exercise 31:](ex) Making Decisions
+- [ ] [Exercise 32:](ex) Loops And Lists
+- [ ] [Exercise 33:](ex) While Loops
+- [ ] [Exercise 34:](ex) Accessing Elements Of Lists
+- [ ] [Exercise 35:](ex) Branches and Functions
+- [ ] [Exercise 36:](ex) Designing and Debugging
+- [ ] [Exercise 37:](ex) Symbol Review
+- [ ] [Exercise 38:](ex) Doing Things To Lists
+- [ ] [Exercise 39:](ex) Dictionaries, Oh Lovely Dictionaries
+- [ ] [Exercise 40:](ex) Modules, Classes, And Objects
+- [ ] [Exercise 41:](ex) Learning To Speak Object Oriented
+- [ ] [Exercise 42:](ex) Is-A, Has-A, Objects, and Classes
+- [ ] [Exercise 43:](ex) Gothons From Planet Percal #25
+- [ ] [Exercise 44:](ex) Inheritance Vs. Composition
+- [ ] [Exercise 45:](ex) You Make A Game
+- [ ] [Exercise 46:](ex) A Project Skeleton
+- [ ] [Exercise 47:](ex) Automated Testing
+- [ ] [Exercise 48:](ex) Advanced User Input
+- [ ] [Exercise 49:](ex) Making Sentences
+- [ ] [Exercise 50:](ex) Your First Website
+- [ ] [Exercise 51:](ex) Getting Input From A Browser
+- [ ] [Exercise 52:](ex52) The Start Of Your Web Game
+    Advice From An Old Programmer
+    Next Steps
+    Appendix A: Command Line Crash Course
