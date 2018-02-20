@@ -1,5 +1,5 @@
 ## Python masterclass
-- [ ] 01 Introduction
+- [x] 01 Introduction
 - [ ] 02 The basics
 - [ ] 03 Control structures
 - [ ] 04 Functions and modules

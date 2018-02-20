@@ -5,13 +5,13 @@ This academic year I'm primarily focused on learning C++ and python in more dept
 
 ### > C++
 
-#### [Beginning C++ Through Game Programming](C++/beginnigC++TGP)
+#### [Beginning C++ Through Game Programming](C++/beginnigC++TGP#beginning-c-through-game-programming)
 
-#### [C++ primer](C++/c++primer)
+#### [C++ primer](C++/c++primer#c-primer-5-c1114)
 
-#### [Online courses](C++/online-courses)
+#### [Online courses](C++/online-courses#edx-microsoft-dev210x---introduction-to-c)
 
-#### [Principles and Practice Using C++](C++/principles-and-practice-using-c++)
+#### [Principles and Practice Using C++](C++/principles-and-practice-using-c++#programming----principles-and-practice-using-c)
 
 <br>
 
@@ -34,6 +34,7 @@ Literature:
 
 <br>
 
+<!-- 
 ### > clojure
 Literature:
 
@@ -49,4 +50,5 @@ Other:
 <br>
 
 ### > Lua
-Literature:
+Literature: 
+-->
