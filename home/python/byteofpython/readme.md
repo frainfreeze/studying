@@ -1,0 +1,24 @@
+## A Byte of Python
+- [ ] Introduction
+- [ ] Dedication
+- [ ] Preface
+- [ ] About Python
+- [ ] Installation
+- [ ] First Steps
+- [ ] Basics
+- [ ] Operators and Expressions
+- [ ] Control flow
+- [ ] Functions
+- [ ] Modules
+- [ ] Data Structures
+- [ ] Problem Solving
+- [ ] Object Oriented Programming
+- [ ] Input and Output
+- [ ] Exceptions
+- [ ] Standard Library
+- [ ] More
+- [ ] What Next
+- [ ] Appendix: FLOSS
+- [ ] Appendix: About
+- [ ] Appendix: Revision History
+- [ ] Appendix: Translations

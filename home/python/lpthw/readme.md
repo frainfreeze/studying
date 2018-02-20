@@ -55,6 +55,6 @@
 - [ ] [Exercise 50:](ex) Your First Website
 - [ ] [Exercise 51:](ex) Getting Input From A Browser
 - [ ] [Exercise 52:](ex52) The Start Of Your Web Game
-    Advice From An Old Programmer
-    Next Steps
-    Appendix A: Command Line Crash Course
+- Advice From An Old Programmer
+- Next Steps
+- Appendix A: Command Line Crash Course
