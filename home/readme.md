@@ -17,13 +17,13 @@ This academic year I'm primarily focused on learning C++ and python in more dept
 
 ### > Python
 
-#### [The Byte of Python](python/byteofpython#A-Byte-of-Python)
+#### [The Byte of Python](python/byteofpython#a-byte-of-python)
 
-#### [](python/)
+#### [Learn python the hard way](python/lpthw#learn-python-the-hard-way)
 
-#### [](python/)
+#### [Automate the Boring Stuff with Python](python/pythonautomating#automate-the-boring-stuff-with-python)
 
-#### [](python/)
+#### [Python masterclass](python/pythonmasterclass#python-masterclass)
 
 <br>
 
