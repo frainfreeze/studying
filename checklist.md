@@ -3,66 +3,66 @@ https://frainfreeze.github.io/other/matrix/
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Computer Science                                     	
 |-----|-----|-----|-----|------------------------------------------------------	
-| [ ] | [ ] | [ ] | [ ] | data structures                                      	
-| [ ] | [ ] | [ ] | [ ] | algorithms                                           	
-| [ ] | [ ] | [ ] | [ ] | systems programming                                  	
+| [x] | [x] | [ ] | [ ] | data structures                                      	
+| [x] | [x] | [ ] | [ ] | algorithms                                           	
+| [x] | [x] | [ ] | [ ] | systems programming                                  	
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Software Engineering                                 	
 |-----|-----|-----|-----|------------------------------------------------------	
-| [ ] | [ ] | [ ] | [ ] | source code version control                          	
-| [ ] | [ ] | [ ] | [ ] | build automation                                     	
-| [ ] | [ ] | [ ] | [ ] | automated testing                                    	
+| [x] | [x] | [x] | [x] | source code version control                          	
+| [x] | [x] | [x] | [x] | build automation                                     	
+| [x] | [x] | [ ] | [ ] | automated testing                                    	
 
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Programming                                  
 |-----|-----|-----|-----|------------------------------------------------------
-| [ ] | [ ] | [ ] | [ ] | problem decomposition              
-| [ ] | [ ] | [ ] | [ ] | systems decomposition              
-| [ ] | [ ] | [ ] | [ ] | communication                      
-| [ ] | [ ] | [ ] | [ ] | code organization within a file    
-| [ ] | [ ] | [ ] | [ ] | code organization across files     
-| [ ] | [ ] | [ ] | [ ] | source tree organization           
-| [ ] | [ ] | [ ] | [ ] | code readability                   
-| [ ] | [ ] | [ ] | [ ] | defensive coding                   
-| [ ] | [ ] | [ ] | [ ] | error handling                     
-| [ ] | [ ] | [ ] | [ ] | IDE                                
-| [ ] | [ ] | [ ] | [ ] | API                                
-| [ ] | [ ] | [ ] | [ ] | frameworks                         
-| [ ] | [ ] | [ ] | [ ] | requirements                       
-| [ ] | [ ] | [ ] | [ ] | scripting                          
-| [ ] | [ ] | [ ] | [ ] | database                           
+| [x] | [x] | [x] | [x] | problem decomposition              
+| [x] | [x] | [x] | [ ] | systems decomposition              
+| [x] | [x] | [x] | [x] | communication                      
+| [x] | [x] | [x] | [x] | code organization within a file    
+| [x] | [x] | [x] | [ ] | code organization across files     
+| [x] | [x] | [x] | [ ] | source tree organization           
+| [x] | [x] | [x] | [ ] | code readability                   
+| [x] | [x] | [x] | [ ] | defensive coding                   
+| [x] | [x] | [ ] | [ ] | error handling                     
+| [x] | [x] | [x] | [ ] | IDE                                
+| [x] | [x] | [ ] | [ ] | API                                
+| [x] | [x] | [x] | [ ] | frameworks                         
+| [x] | [x] | [x] | [x] | requirements                       
+| [x] | [x] | [x] | [x] | scripting                          
+| [x] | [x] | [ ] | [ ] | database                           
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Knowledge                                     
 |-----|-----|-----|-----|-------------------------------------------------------
-| [ ] | [ ] | [ ] | [ ] | tool knowledge
-| [ ] | [ ] | [ ] | [ ] | languages exposed to
-| [ ] | [ ] | [ ] | [ ] | codebase knowledge
-| [ ] | [ ] | [ ] | [ ] | knowledge of upcoming technologies
-| [ ] | [ ] | [ ] | [ ] | platform internals
-| [ ] | [ ] | [ ] | [ ] | books
-| [ ] | [ ] | [ ] | [ ] | blogs
+| [x] | [x] | [x] | [x] | tool knowledge
+| [x] | [x] | [ ] | [ ] | languages exposed to
+| [x] | [x] | [x] | [ ] | codebase knowledge
+| [x] | [x] | [x] | [ ] | knowledge of upcoming technologies
+| [x] | [x] | [x] | [ ] | platform internals
+| [x] | [ ] | [ ] | [ ] | books
+| [x] | [x] | [x] | [ ] | blogs
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Experience                                    
 |-----|-----|-----|-----|-------------------------------------------------------
-| [ ] | [ ] | [ ] | [ ] | languages with professional experience
-| [ ] | [ ] | [ ] | [ ] | platforms with professional experience
-| [ ] | [ ] | [ ] | [ ] | years of professional experience
-| [ ] | [ ] | [ ] | [ ] | domain knowledge
+| [x] | [x] | [ ] | [ ] | languages with professional experience
+| [x] | [x] | [ ] | [ ] | platforms with professional experience
+| [x] | [x] | [ ] | [ ] | years of professional experience
+| [x] | [x] | [x] | [ ] | domain knowledge
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Other                                         
 |-----|-----|-----|-----|-------------------------------------------------------
-| [ ] | [ ] | [ ] | [ ] | Tools (version control, continuous integration etc.)
-| [ ] | [ ] | [ ] | [ ] | Pair programming
-| [ ] | [ ] | [ ] | [ ] | TDD
-| [ ] | [ ] | [ ] | [ ] | Higher-level software testing
-| [ ] | [ ] | [ ] | [ ] | Software architecture
-| [ ] | [ ] | [ ] | [ ] | Documentation
-| [ ] | [ ] | [ ] | [ ] | Learning
-| [ ] | [ ] | [ ] | [ ] | Sharing knowledge
-| [ ] | [ ] | [ ] | [ ] | Critical Analysis
-| [ ] | [ ] | [ ] | [ ] | Choice of technology
-| [ ] | [ ] | [ ] | [ ] | Communication
-| [ ] | [ ] | [ ] | [ ] | Requirements Analysis
-| [ ] | [ ] | [ ] | [ ] | Teamwork
-| [ ] | [ ] | [ ] | [ ] | Business sense
-| [ ] | [ ] | [ ] | [ ] | Professional ethics
+| [x] | [x] | [x] | [x] | Tools (version control, continuous integration etc.)
+| [x] | [x] | [x] | [x] | Pair programming
+| [x] | [x] | [ ] | [ ] | TDD
+| [x] | [x] | [ ] | [ ] | Higher-level software testing
+| [x] | [x] | [ ] | [ ] | Software architecture
+| [x] | [x] | [x] | [x] | Documentation
+| [x] | [x] | [x] | [x] | Learning
+| [x] | [x] | [x] | [x] | Sharing knowledge
+| [x] | [x] | [x] | [x] | Critical Analysis
+| [x] | [x] | [x] | [x] | Choice of technology
+| [x] | [x] | [x] | [x] | Communication
+| [x] | [x] | [ ] | [ ] | Requirements Analysis
+| [x] | [x] | [x] | [x] | Teamwork
+| [x] | [x] | [x] | [x] | Business sense
+| [x] | [x] | [x] | [ ] | Professional ethics
