@@ -1,3 +1,6 @@
+## Programmer Competency Matrix extended
+https://frainfreeze.github.io/other/matrix/
+
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Computer Science                                     	
 |-----|-----|-----|-----|------------------------------------------------------	
 | [ ] | [ ] | [ ] | [ ] | data structures                                      	
@@ -29,13 +32,6 @@
 | [ ] | [ ] | [ ] | [ ] | scripting                          
 | [ ] | [ ] | [ ] | [ ] | database                           
 
-| Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Experience                                    
-|-----|-----|-----|-----|-------------------------------------------------------
-| [ ] | [ ] | [ ] | [ ] | languages with professional experience
-| [ ] | [ ] | [ ] | [ ] | platforms with professional experience
-| [ ] | [ ] | [ ] | [ ] | years of professional experience
-| [ ] | [ ] | [ ] | [ ] | domain knowledge
-
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Knowledge                                     
 |-----|-----|-----|-----|-------------------------------------------------------
 | [ ] | [ ] | [ ] | [ ] | tool knowledge
@@ -45,6 +41,13 @@
 | [ ] | [ ] | [ ] | [ ] | platform internals
 | [ ] | [ ] | [ ] | [ ] | books
 | [ ] | [ ] | [ ] | [ ] | blogs
+
+| Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Experience                                    
+|-----|-----|-----|-----|-------------------------------------------------------
+| [ ] | [ ] | [ ] | [ ] | languages with professional experience
+| [ ] | [ ] | [ ] | [ ] | platforms with professional experience
+| [ ] | [ ] | [ ] | [ ] | years of professional experience
+| [ ] | [ ] | [ ] | [ ] | domain knowledge
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Other                                         
 |-----|-----|-----|-----|-------------------------------------------------------
