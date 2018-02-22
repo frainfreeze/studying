@@ -25,6 +25,7 @@ This academic year I'm primarily focused on learning C++ and python in more dept
 
 #### [Python masterclass](python/pythonmasterclass#python-masterclass)
 
+#### [Think Python: How to Think Like a Computer Scientist](python/thinksCSpython)
 <br>
 
 ### > DS&A
