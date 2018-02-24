@@ -1,10 +1,44 @@
 #########  roadmap  #########
-basic stuff CPP
+basic CPP
 --------------------------------
-0. beggining c++ tgp - chapter 1,2,3,4,5 (osnove) 
-1. Udemy sections 1,2,3 (osnove)
-2. udacity - all
-3. beggining c++ tgp - chapter 6, 7 (reference, pointeri)
-4. edX - microsoft pt2 module 1 i 4 (pointeri)
-5. udemy - 5 (pointeri)
-6. udemy advanced - 3 (files)
+0. beggining c++ tgp  1-7 ( includes 7 )
+1. Udemy sections 1,2,3,5
+2. Udacity  1-7, 13-15 ( 8-12  no )
+3. edX - microsoft pt2 module 1 i 4
+
+basic stuff Python
+--------------------------------
+7. python master class 01-06
+8. byte of python (skip OOP)
+9. Automate the Boring Stuff with Python (part 1, cp 0-10)
+10. python the hard way (up to exercise 40)
+11. Automate the Boring Stuff with Python (part 2, 11-18)
+(pdf, excel, word, json, xml, web scraping, 
+web automation, dealing with files, regular expressions)
+
+harder stuff Python (OOP)
+--------------------------------
+12. python masterclass 07-09
+13. byte of python oop na dalje
+14. py the hardway do kraja (40->)
+
+harder stuff CPP (Objektno)
+--------------------------------
+15. Udemy - section 4 (OOP)
+15.a udacity
+16. beggining c++ tgp - chapter 8, 9 (classes)
+17. edX - microsoft pt2 module two & three (Classes, OOP)
+18. udemy section 6 (inheritance)
+19. beggining c++ tgp - chapter 10 (inheritance & polymorphism)
+20. Udemy - 7 do 11
+21. udemy advances - rest
+
+
+advanced stuff CPP
+--------------------------------
+concurrency, threading, metaprogramming, 
+machine learning, quantum programming etc
+
+advanced stuff pitone
+--------------------------------
+https://stackoverflow.com/a/2576240
