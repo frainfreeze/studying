@@ -1,5 +1,3 @@
-# 
-
 ![keep learning](https://i.imgur.com/kQPd0a9.jpg)
 
 I'm currently studying Applied Software Engineering (B.Comp.Eng) at Algebra university.
