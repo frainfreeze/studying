@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Pointers</title>
+
+    <!--Load CSS-->
+    <link rel="stylesheet" type="text/css" href="./src/x.css" media="all">
+
+    <!--Load Javascript-->
+    <script type="text/javascript" src="./src/x.js"></script>
+
+    <!-- expander script-->
+    <script type="text/javascript">
+        function toggle_expando(elem) { 
+            var examples = $(elem).siblings(".rule-examples"); 
+            var toggle = $(elem).find(".toggle"); 
+            if (examples.is(":visible")) { 
+                toggle.text("[+]"); 
+                examples.slideUp(); 
+            } else {
+                 toggle.text("[\u2013]"); 
+                 examples.slideDown(); 
+            } 
+        }
+    </script>
+
+    <!-- code snippets style -->
+    <style>
+    code { 
+        font-family: monospace;
+        font-size: 11;
+    }
+    </style>
+</head>
+
+<body>
+<div class="rulespage">
+    <!--Title-->
+    <h1>pointers and references practice</h1>
+
+    <!--text udner title-->
+    <p class="info">desc</p>
+    <p class="info"><b>This page was last updated 24-2-2018</b></p>
+
+    <!-- section -->
+    <ol class="rule-list">
+        <p class="info">Pointers</p>
+        <li id="tutorial" class="first-rule">
+            <!--challenges-->
+            <div class="examples">
+                <p>Test parent adsfasdfasd fasd fadsf asdf asd fad faf das df</p>
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show solution</p>
+                <div class="rule-examples" style="display: none;">
+                    <ul>
+                        <li class="example good-example">test</li>
+                        <li class="example bad-example">test</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="examples">
+                <p>Test parent adsfasdfasd fasd fadsf asdf asd fad faf das df</p>
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show solution</p>
+                <div class="rule-examples" style="display: none;">
+                    <ul>
+                        <li class="example good-example">test</li>
+                        <li class="example bad-example">test</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end challenges -->
+        </li>
+    </ol>
+    <!-- end section-->
+    
+    <!-- section -->
+    <ol class="rule-list">
+        <p class="info">References</p>
+        <li id="tutorial" class="first-rule">
+            <!--challenges-->
+            <div class="examples">
+                <p>Test parent adsfasdfasd fasd fadsf asdf asd fad faf das df</p>
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show solution</p>
+                <div class="rule-examples" style="display: none;">
+                    <ul>
+                        <li class="example good-example">good example</li>
+                        <li class="example bad-example">bad example</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="examples">
+                <p>Test parent adsfasdfasd fasd fadsf asdf asd fad faf das df</p>
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show solution</p>
+                <div class="rule-examples" style="display: none;">
+                    <ul>
+                        <li class="example bad-example">
+                            <p>math example</p><br>
+                            <math>
+                                    H(s) = ∫<sub>0</sub><sup>∞</sup> e<sup>-st</sup> h(t) dt
+                            </math>
+                        </li>
+                        <li class="example good-example">                  
+                            <pre>
+                                <code>
+                                    int main(){
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end challenges -->
+        </li> 
+    </ol>
+    <!-- end section-->
+
+</div>
+</body>
+
+<!-- separator line <li id="goodboy">-->
+</html>

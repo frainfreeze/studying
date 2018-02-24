@@ -1,44 +1,43 @@
 #########  roadmap  #########
 basic CPP
 --------------------------------
-0. beggining c++ tgp  1-7 ( includes 7 )
-1. Udemy sections 1,2,3,5
-2. Udacity  1-7, 13
-3. edX - microsoft pt2 module 1 i 4
+0. [x] - beggining c++ tgp  1-7 ( includes 7 )
+1. [x] - Udemy sections 1,2,3,5
+2. [x] - Udacity  1-7, 13
+3. [ ] - edX - microsoft pt2 module 1 i 4
 
-basic stuff Python
+basic stuff Python  (draft)
 --------------------------------
-7. python master class 01-06
-8. byte of python (skip OOP)
-9. Automate the Boring Stuff with Python (part 1, cp 0-10)
-10. python the hard way (up to exercise 40)
-11. Automate the Boring Stuff with Python (part 2, 11-18)
+7. [ ] - python master class 01-06
+8. [ ] - byte of python (skip OOP)
+9. [ ] - Automate the Boring Stuff with Python (part 1, cp 0-10)
+10. [ ] - python the hard way (up to exercise 40)
+11. [ ] - Automate the Boring Stuff with Python (part 2, 11-18)
 (pdf, excel, word, json, xml, web scraping, 
 web automation, dealing with files, regular expressions)
 
-harder stuff Python (OOP)
+harder stuff Python (OOP) (draft)
 --------------------------------
-12. python masterclass 07-09
-13. byte of python oop na dalje
-14. py the hardway do kraja (40->)
+12. [ ] - python masterclass 07-09
+13. [ ] - byte of python oop na dalje
+14. [ ] - py the hardway do kraja (40->)
 
-harder stuff CPP (Objektno)
+harder stuff CPP (OOP) (draft)
 --------------------------------
-15. Udemy - section 4 (OOP)
-15.a udacity
-16. beggining c++ tgp - chapter 8, 9 (classes)
-17. edX - microsoft pt2 module two & three (Classes, OOP)
-18. udemy section 6 (inheritance)
-19. beggining c++ tgp - chapter 10 (inheritance & polymorphism)
-20. Udemy - 7 do 11
-21. udemy advances - rest
+15. [ ] - Udemy - section 4, section 5 lectures 46,47,48,49,50,52
+16. [ ] - Udacity - 8,9,10,11,12,14,15
+17. [ ] - beggining c++ tgp - chapter 8, 9 (classes)
+18. [ ] - edX - microsoft pt2 module two & three (Classes, OOP)
+19. [ ] - udemy section 6 (inheritance)
+20. [ ] - beggining c++ tgp - chapter 10 (inheritance & polymorphism)
+21. [ ] - Udemy - 7 do 11
+22. [ ] - udemy advances - rest
 
-
-advanced stuff CPP
+advanced stuff CPP (draft)
 --------------------------------
 concurrency, threading, metaprogramming, 
 machine learning, quantum programming etc
 
-advanced stuff pitone
+advanced stuff pitone (draft)
 --------------------------------
 https://stackoverflow.com/a/2576240
