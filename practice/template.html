@@ -30,7 +30,7 @@
 <body onload="PR.prettyPrint()">
 <div class="rulespage">
     <!--Title-->
-    <h1>pointers and references practice</h1>
+    <h1>Template</h1>
 
     <!--text udner title-->
     <p class="info">desc</p>
@@ -38,56 +38,25 @@
 
     <!-- section -->
     <ol class="zol rule-list">
-        <p class="info">Pointers</p>
+        <p class="info">Example 1</p>
         <li id="tutorial" class="first-rule">
             <!--challenges-->
             <div class="examples">
-                <p>1. What does following code output?</p>
-<pre  class="prettyprint">
-<code class="language-cpp">
-void coutA(int*a){
-    cout << a << " | " << *a << " | in pointer func" << endl;
-}
-void coutA(int&a){
-    cout << &a << " | " << a << " | in reference func" << endl;
-}
-                    
-int main() {
-    int a = 42;
-    int *pA = &a;
-    int **pA2 = &pA;
+                    <pre  class="prettyprint">
+                        <code class="language-python">
+def hi():
+    print("Hello, world!")
 
-    coutA(a);
-    coutA(&a);
-    coutA(pA);
-    coutA(*pA);
-    coutA(*pA2);
-    coutA(**pA2);
-
-    cout << endl;
-    cout << &a << endl;
-    cout << &pA << endl;
-    cout << &pA2 << endl;
-</code>
-</pre>
+hi()
+                        </code>
+                    </pre>
 
 
-                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show solution</p>
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show ouput</p>
                 <div class="rule-examples" style="display: none;">
-<pre>
-                        0x28ff28 | 42            | in reference func
-                        0x28ff10 | 0x28ff28 | 42 | in pointer func
-                        0x28ff10 | 0x28ff28 | 42 | in pointer func
-                        0x28ff28 | 42            | in reference func
-                        0x28ff10 | 0x28ff28 | 42 | in pointer func
-                        0x28ff28 | 42            | in reference func
-                                                        
-                        42
-                        0x28ff28
-                        0x28ff28
-                        0x28ff24
-                        0x28ff20
-</pre>
+                    <pre>
+                        >>> Hello, world!
+                    </pre>
 
                 </div>
             </div>
@@ -98,12 +67,12 @@ int main() {
 
     <!-- section -->
     <ol class="rule-list">
-        <p class="info">References</p>
+        <p class="info">Example 2</p>
         <li id="tutorial" class="first-rule">
             <!--challenges-->
             <div class="examples">
-                <p>Test parent adsfasdfasd fasd fadsf asdf asd fad faf das df</p>
-                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show solution</p>
+                <p>lists example</p>
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show</p>
                 <div class="rule-examples" style="display: none;">
                     <ul>
                         <li class="example good-example">good example</li>
@@ -113,8 +82,8 @@ int main() {
             </div>
     
             <div class="examples">
-                <p>Test parent adsfasdfasd fasd fadsf asdf asd fad faf das df</p>
-                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show solution</p>
+                <p>lists with math formatting example</p>
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show</p>
                 <div class="rule-examples" style="display: none;">
                     <ul>
                         <li class="example bad-example">
