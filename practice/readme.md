@@ -1,4 +1,5 @@
-[pointers and references](https://frainfreeze.github.io/studying/practice/pointers.html)
+## C++
+- [pointers and references](https://frainfreeze.github.io/studying/practice/pointers.html)
 
 
 --------
