@@ -41,7 +41,7 @@
     <ol class="rule-list">
         <li id="tutorial" class="first-rule">
             <div class="examples">
-                <p>Pointer is a variable that can contain a memory address.</p>
+                <p>Pointer<b></b> is a variable that can contain a memory address.</p>
                 <br>
                 <p>Recommended reading: The C Programming Language", 2nd edition, Kernighan and Ritchie; Chapter 5</p>
                 <br>
@@ -52,11 +52,16 @@
                     <a href="https://gist.github.com/ericandrewlewis/720c374c29bbafadedc9" target="_blank" >random pointer tutorial</a>, 
                     <a href="http://pweb.netcom.com/~tjensen/ptr/pointers.htm" target="_blank" >and more pointers</a>.
                 </p>
-
+                <br>
                 <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show example code</p>
                 <div class="rule-examples" style="display: none;">
 <pre  class="prettyprint">
 <code class="language-cpp">
+    string* ptrToElement(vector<string>* const pVec, int i){
+        //returns address of the string in position
+        // i of vector that pVec points to
+        return &((*pVec)[i]);
+    }
     // declaring some varibles
     int zz = 1;
     int zz2 = 343;
@@ -124,6 +129,51 @@
 </code></pre>
 
                 </div>
+
+                <br><br>
+                <p><b>A reference</b> is a simple reference datatype that is less powerful but safer than the pointer type inherited from C.</p>
+                <br>
+                <p>
+                    Useful links: <a href="http://en.cppreference.com/book/intro/reference" target="_blank" >cppreference.com</a>,
+                    <a href="https://isocpp.org/wiki/faq/references" target="_blank" >isocpp.org</a>.
+                </p>
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show example code</p>
+                <div class="rule-examples" style="display: none;">
+<pre  class="prettyprint">
+<code class="language-cpp">
+    string& ref2element(vector<string>& barVec, int i){
+            return barVec[i]; // returns reference
+        }
+
+    void swapNums(int& a, int& b){
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+    int intD = 10;
+
+    // if we want to prevent reference modifying we use const
+    const int& rIntD = intD;
+
+    cout << rIntD << endl;
+
+    int intE = 2; int intF = 3;
+    swapNums(intE, intF);
+    cout << intE << " " << intF << endl; // 3 2
+
+    // small example of reference to reference
+    vector<string> barVec;
+    barVec.push_back("foo");
+    barVec.push_back("bar");
+
+    // assignees returned reference to reference
+    string& rStr = ref2element(barVec,1);
+    cout << rStr << endl; // bar
+    rStr = "spaz"; // rStr == barVec[1]
+    cout << barVec[1] << endl; // spaz
+</code></pre>
+
             </div>
 
             <br><br>
