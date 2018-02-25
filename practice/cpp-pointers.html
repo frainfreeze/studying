@@ -40,6 +40,93 @@
     <!-- section -->
     <ol class="rule-list">
         <li id="tutorial" class="first-rule">
+            <div class="examples">
+                <p>Pointer is a variable that can contain a memory address.</p>
+                <br>
+                <p>Recommended reading: The C Programming Language", 2nd edition, Kernighan and Ritchie; Chapter 5</p>
+                <br>
+                <p>
+                    Useful links: <a href="http://en.cppreference.com/book/pointers" target="_blank" >cppreference.com</a>, 
+                    <a href="http://www.cplusplus.com/doc/tutorial/pointers/" target="_blank" >cplusplus.com</a>, 
+                    <a href="http://cslibrary.stanford.edu/106/" target="_blank" >Stanford 106</a>, 
+                    <a href="https://gist.github.com/ericandrewlewis/720c374c29bbafadedc9" target="_blank" >random pointer tutorial</a>, 
+                    <a href="http://pweb.netcom.com/~tjensen/ptr/pointers.htm" target="_blank" >and more pointers</a>.
+                </p>
+
+                <p class="expander" onclick="return toggle_expando(this);"><em class="toggle">[+]</em>&nbsp;Show example code</p>
+                <div class="rule-examples" style="display: none;">
+<pre  class="prettyprint">
+<code class="language-cpp">
+    // declaring some varibles
+    int zz = 1;
+    int zz2 = 343;
+    string szz;
+
+    //declare a pointer
+    int* pAPointer;
+
+    //declare and initialize a pointer
+    string * pTestpointer = nullptr;
+
+    // assign address of variable/object to the pointer
+    pAPointer = &zz;
+    pTestpointer = &szz;
+
+    // reassign pointer to new pointee
+    pAPointer = &zz2;
+
+    // modify object pointer points too (pointee) by deferencing
+    *pTestpointer = "test string\n";
+
+    // print pointer address then object it references
+    cout << pAPointer << " | " << *pAPointer << endl;
+    cout << pTestpointer << " | " << *pTestpointer;
+
+    /* constant pointers can only point to objects
+    they were initialized to point to. like all constants
+    they have to be initialized on declaration */
+    int* const pConstatnPointer = &zz;
+
+    // pointers to a constant cant be used to change
+    // value they point to.
+    const int* pZz;
+
+    /* constant pointer to a constant combines the
+    restrictions of a constant pointer and a pointer
+    to a constant. This means that a constant pointer
+    to a constant can only point to the object that it
+    was initialized to point to. In addition, it can’t
+    be used to change the value of the object to which
+    it points*/
+    const int* const pCPC = &zz2;
+
+    // when passing pointers to function
+    // we have to use address of object
+    pointerExample(&zz);
+
+    // ...which is same as using pointer
+    pointerExample(pCPC);
+
+    // returning pointers
+    vector<string> tempVec(10,"spam");
+    cout << *( ptrToElement(&tempVec, 3) ) << endl;
+
+    // Assigning a Returned Pointer to a Pointer
+    string* pMagic = ptrToElement(&tempVec, 3);
+    *pMagic = "magic";
+    cout << tempVec[3] << endl;
+
+    // an array name is a constant pointer to
+    // the first element of the array
+    string tempArray[3] = {"foo", "bar", "spam"};
+    *tempArray="hehexd";
+    cout << tempArray[0] << endl;
+</code></pre>
+
+                </div>
+            </div>
+
+            <br><br>
             <!--challenges-->
             <div class="examples">
                 <p>1. What does following code output?</p>
@@ -95,7 +182,7 @@ int main() {
         </li>
     </ol>
     <!-- end section-->
-    <p>© 2018 Tomislav (fraifnreeze) Kucar.</p>
+    <p>© 2018 Tomislav (fraifnreeze) Kucar.</p><br><br>
 </div>
 </body>
 
