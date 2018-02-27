@@ -5,6 +5,6 @@ def front_back(str):
 
 # str[1:len(str)-1] can be written as str[1:-1]
 
-print front_back('code') #'eodc'
-print front_back('a') #'a'
-print front_back('ab') #'ba'
+print(front_back('code')) #'eodc'
+print(front_back('a')) #'a'
+print(front_back('ab')) #'ba'
