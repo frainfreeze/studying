@@ -1,5 +1,11 @@
 # desc
-counter: 17
+### [20 Warmup-2 > array123](020.py)
+
+### [19 Warmup-2 > array_front9](019.py)
+Given an array of ints, return True if one of the first 4 elements in the array is a 9. The array length may be less than 4.
+
+### [018 Warmup-2 > array_count 9](018.py)
+Given an array of ints, return the number of 9's in the array.
 
 ### [017 Warmup-2 > last2](017.py)
 Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
