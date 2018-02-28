@@ -30,23 +30,23 @@ def zadaca():
     sys.stdout = f
 
     i = datetime.now()
-    print('Domaca zadaca URM - subnetiranje\nTomislav Kucar ' \
-        + i.strftime('%Y/%m/%d %H:%M:%S'))
+    print 'Domaca zadaca URM - subnetiranje\nTomislav Kucar ' \
+        + i.strftime('%Y/%m/%d %H:%M:%S')
 
-    print('\nZadatak 1')
-    print('-' * 10)
+    print '\nZadatak 1'
+    print '-' * 10
     zadatak.zad1()
 
-    print("\n\n\n\nZadatak 2")
-    print('-' * 10)
+    print "\n\n\n\nZadatak 2"
+    print '-' * 10
     zadatak.zad2()
 
-    print("\n\n\n\nZadatak 3")
-    print('-' * 10)
+    print "\n\n\n\nZadatak 3"
+    print '-' * 10
     zadatak.zad3()
 
-    print("\n\n\n\nZadatak 4")
-    print('-' * 10)
+    print "\n\n\n\nZadatak 4"
+    print '-' * 10
     zadatak.zad4()
 
     sys.stdout = orig_stdout
@@ -57,8 +57,8 @@ def run():
     if sys.argv[1] == 'zadaca':
         zadaca()
     elif sys.argv[1] == 'kalkulator':
-        print('Unesite ip i subnet u formatu 10.10.10.10/10: ')
-        tempN = input()
+        print 'Unesite ip i subnet u formatu 10.10.10.10/10: '
+        tempN = raw_input()
         n = zadatak.get_network(tempN)
         zadatak.program(n)
     else:
