@@ -1,0 +1,35 @@
+On: which lisp to learn
+Surely this depends on WHY you want to learn Lisp.
+
+If you have an interest in academic computer science or want to get 
+boned up on programming in general, learning Scheme and running through 
+Structure and Interpretation of Computer Programs is probably the way to go. 
+Scheme is a relatlvely small and clean Lisp, and SICP was the much-loved 
+introduction to programming for completely new MIT freshmen until recently, 
+running through a broad range of concepts beginning with recursion and 
+ending up with compilation.
+
+If you want a trusted, stable, language for writing native applications in,
+then Common Lisp would likely be the one to pick. It's got a standard, 
+it's been around forever, it's designed for real-world use (whereas Scheme 
+has a more academic bent). Common Lisp is likely the mainstream choice. 
+If people use the term 'Lisp' without qualifiers, chances are they mean 
+Common Lisp. Also, if you want a comparative exercise focusing on the 
+things Lisp does differently from other languages, I'd guess that Common 
+Lisp has the largest library of books concentrating on specific Lispisms 
+like macros and lisp methods of object orientation and whatnot.
+
+If you want to be one of the cool kids and indulge in buzzword-compliant 
+concurrent and/or functional-programming for web 3.0 frameworks or big data 
+or whathaveyou, then Clojure is probably the lisp you want on your resumé. 
+As an added bonus, the main language targets the JVM as a platform (though 
+there are others - Clojurescript is a popular variant that compiles to 
+Javascript and runs in the browser) so you get Java libraries for free; 
+if you have a Java background you might have a bit of a head start with 
+learning it, at the cost of a few platform-specific warts here and there.
+
+There are other lisps around - Racket is some flavour of Scheme that has 
+a bit of a community out there, Guile and Emacs Lisp are common embedded 
+Lisps in certain applications, and then there's Arc, formerly the saviour 
+of Lisp, but nowadays the language-that-ycombinator's-site-is-wrote-in and 
+not much else...
