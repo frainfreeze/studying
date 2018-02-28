@@ -1,5 +1,8 @@
 # desc
+### [21 Warmup-2 > array123](021.py)
+
 ### [20 Warmup-2 > array123](020.py)
+Given an array of ints, return True if the sequence of numbers 1, 2, 3 appears in the array somewhere.
 
 ### [19 Warmup-2 > array_front9](019.py)
 Given an array of ints, return True if one of the first 4 elements in the array is a 9. The array length may be less than 4.
