@@ -1,2 +1,0 @@
-main kalkulator
-PAUSE
