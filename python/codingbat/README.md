@@ -1,5 +1,6 @@
 # desc
 ### [21 Warmup-2 > array123](021.py)
+Given an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.
 
 ### [20 Warmup-2 > array123](020.py)
 Given an array of ints, return True if the sequence of numbers 1, 2, 3 appears in the array somewhere.
