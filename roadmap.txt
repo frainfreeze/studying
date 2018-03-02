@@ -1,0 +1,242 @@
+General roadmap:
+
+stage 1 (software engineering and CS)
+-----------------------------------------------------
+lvl 0 - entry+basics
+Desc:
+    You should be comfortable with all the things we use 
+    on a daily basis when programming. In particular:
+        - Know the basic syntax of the language: statements and expressions, comments, etc.
+        - Know what variables are and what it means when you assign to a variable
+        - Be familiar with basic data types like integers, floating points, and strings, and the operations you can use to manipulate them
+        - Know and be able to use the basic control structures: conditionals and loops
+        - Be able to decompose your code into functions (or methods or procedures, depending on the language) and understand why it is a good idea to do so
+        - Be able to use some basic data structures 
+        - an array or list type (e.g. arrays in C or Java; lists in Python)
+        - an associative array (e.g. HashTables in Java; dictionaries in Python; objects in JavaScript)
+        - a record data structure (e.g. structs in C; classes in Java and Python; objects in JavaScript)
+        - Know the language's common idioms for iterating over arrays and associative arrays
+        - Know the language's paradigms for reading and writing from files
+        - Be able to use a debugger
+        - Know the basic guidelines of good coding style
+
+    Additionaly you will learn:
+        - imperative programming, procedural programming, object oriented programming
+        - manual memory management, basic data structures and algorithms
+        - Python, C++, SQL, basic HTML, CSS, JavaScript
+
+Stuff:
+    - python
+        - byte of python
+        - automate boring stuff with python
+        - python the hard way 1 & 2
+        - thinkcspython3
+        - the art and craft of programming python
+        - edx Introduction to Computer Science and Programming using Python
+        - docs.python.org/3/howto/functional.html ?
+        - diveintopython.net/functional_programming/index.html ?
+        - learning python
+        - google style guide/pep8?
+        - fullstackpython.com ?
+        - learnpython.org ?
+
+    - c++
+        - beginning c++ through game programming
+        - Udemy c++ tutorial for beginners
+        - Udacity c++ for programmers
+        - cpp think like computer scientist
+        - Programming - Principles and Practice Using C++
+        - google style guide
+        - mit notes? (some basics)
+
+    - DS&A 
+        - Grokking Algorithms
+        - Data Structures and Algorithms in Python
+        - Introduction to algorithms
+        - https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
+        - Data Structures and Algorithms in C++ (very hard if no previous ds&a knowledge)
+    
+    - other
+        - The Self-taught Programmer by Cory Althoff
+        - Computer Science Distilled: Learn the Art of Solving Computational Problems
+        - The Mythical Man-Month
+        - Joel on Software: And on Diverse and Occasionally...
+        - Programming Pearls
+        - Code: The Hidden Language of Computer Hardware and Software
+        - https://github.com/ossu/computer-science#introduction-to-computer-science
+
+NOTE: start with machine learning etc
+
+lvl 1 - advanced (pausing year perhaps?)
+    - python
+        - hitch hikers guide to python
+        - how to make mistakes in python
+        - fluent python
+        - effective python
+        - programming python
+        - python cookbook
+        - stackoverflow.com/questions/2573135
+        - reddit.com/r/Python/comments/1knw7z
+        - reddit.com/r/Python/comments/7cs8dq
+        - stackoverflow.com/questions/101268/hidden-features-of-python
+    
+    - c++
+        - udemy advanced c++ course ? ()
+        - c++ primer ? (covers just about everything in the language)
+        - a tour of c++ ? ( tutorial overview of all of standard C++)
+        - accelerated c++? (covers tour on 1/4 of space)
+        - the c++ programing lang ? (more of a all level reference)
+        - Object-Oriented Programming in C++ ? (three months)
+        - thinking in c++ v1 & v2? (6-10 months)
+    
+    - java/c#
+    
+    - machine learning and AI 
+        - https://metacademy.org/roadmaps/
+        - https://github.com/prakhar1989/awesome-courses
+
+    - hm
+        - cs part: https://github.com/prakhar1989/awesome-courses
+        - https://github.com/ossu/computer-science#core-cs
+        - https://github.com/ossu/computer-science#core-math
+        - https://github.com/ossu/computer-science#core-systems
+        - https://github.com/ossu/computer-science#core-theory
+        - https://github.com/ossu/computer-science#core-applications
+
+    - other
+        - https://sourcemaking.com/design_patterns
+        - Head First Design Patterns by Eric Freeman (1-2 weeks)
+        - User Interface Design for Programmers by Joel Spolsky (three days)
+        - Debugging: The 9 Indispensable Rules ... (2 weeks)
+        - Code Reading: The Open Source Perspective (2 months for whole)
+        - TCP/IP Sockets in C (about week)
+
+lvl 2 - polishing
+    - c
+        - cs 50
+        - hacking art of exploitation
+        - effective modern c++?
+
+    - hm
+        - https://github.com/ossu/computer-science#advanced-cs
+        - https://github.com/ossu/computer-science#pro-cs
+
+    - other
+        - Code Complete: A Practical Handbook of Software Construction
+        - Clean Code: A Handbook of Agile Software Craftsmanship
+        - The Clean Coder: A Code of Conduct for Professional Programmers
+        - Design Patterns: Elements of Reusable Object-Oriented Software
+        - The Pragmatic Programmer: From Journeyman to Master
+
+lvl 3 - senior
+    - lisp
+        - Structure and Interpretation of Computer Programs
+        
+    - other    
+        - Refactoring: Improving the Design of Existing Code
+        - Working Effectively with Legacy Code
+        - Head First Software Development by Dan Pilone (days to weeks)
+        - The Practice of Programming by Brian W. Kernighan (quick read)
+        - Agile Software Development, ... by Robert C. Martin (read carefully, its important)
+        - Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin (companion to previos one)
+    
+    - senior++
+        - Patterns of Enterprise Application Architecture
+        - Peopleware: Productive Projects and Teams
+
+
+stage 2 (domain specific knowledge)
+-----------------------------------------------------
+https://metacademy.org/roadmaps/
+http://hubel.med.harvard.edu/index.html
+https://en.wikipedia.org/wiki/Cyberware
+
+stage 3 (proto-science and research)
+-----------------------------------------------------
+- google patents
+- research papers (sci hub)
+
+additional resources
+-----------------------------------------------------
+- https://github.com/prakhar1989/awesome-courses
+- cheatsheets
+    - devhints.io
+    - learnxinyminutes
+
+
+Detailed roadmap:
+###################################
+lvl 0 timeline: (draft)
+[ ] - Python and C++ I 
+[ ] - Python and C++ II
+[ ] - Other I, DS&A I 
+[ ] - Python III and DS&A II
+[ ] - DS&A III, Other II
+###################################
+
+Python I
+-----------------------------------
+[ ] - byte of python
+[ ] - python the hard way
+[ ] - Automate the Boring Stuff with Python
+
+
+Python II (draft)
+-----------------------------------
+[ ] - docs.python.org/3/howto/functional.html ?
+[ ] - diveintopython.net/functional_programming/index.html ?
+[ ] - the art and craft of programming python
+ | (1. rest of byte, rest of Automate, rest of hardway, then this)
+[ ] - thinkcspython3
+[ ] - edx Introduction to Computer Science and Programming using Python
+
+
+Python III (draft)
+-----------------------------------
+[ ] - py the hardway 2 (maybe pair with learning python book)
+[ ] - learning python
+
+[ ] - google style guide/pep8?
+[ ] - fullstackpython.com ?
+[ ] - learnpython.org ?
+
+
+Cplusplus I
+-----------------------------------
+[ ] - beggining c++ tgp
+[ ] - Udemy c++ tutorial for beginners
+[ ] - Udacity c++ for programmers
+
+Cplusplus II (draft)
+-----------------------------------
+[ ] - udemy advanced c++
+[ ] - Programming - Principles and Practice Using C++
+[ ] - cpp-think like computer scientist ?
+[ ] - mit notes? (some basics) ?
+[ ] - google style guide ?
+
+
+DS&A I (draft)
+-----------------------------------
+[ ] - Grokking Algorithms
+[ ] - Data Structures and Algorithms in Python
+
+DS&A II (draft)
+-----------------------------------
+github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms ?
+
+DS&A III (draft)
+-----------------------------------
+[ ] - Introduction to algorithms
+[ ] - Data Structures and Algorithms in C++
+
+
+Other I (draft)
+[ ] - Code: The Hidden Language of Computer Hardware and Software
+[ ] - The Self-taught Programmer by Cory Althoff
+[ ] - Computer Science Distilled: Learn the Art of Solving Computational Problems
+
+Other II (draft)
+[ ] - Programming Pearls
+[ ] - Joel on Software: And on Diverse and Occasionally...
+[ ] - The Mythical Man-Month
