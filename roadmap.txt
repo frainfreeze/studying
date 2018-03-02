@@ -1,41 +1,40 @@
 General roadmap:
+(I am adding and removing stuff daily, so to leave only essential and most helpfull things.
+I am definetly not sorry for "wasting" my time on "bad" courses and books tho.  )
+todo: generate stage 1 from detailed roadmap since its more up to date.
 
 stage 1 (software engineering and CS)
 -----------------------------------------------------
 lvl 0 - entry+basics
 Desc:
-    You should be comfortable with all the things we use 
-    on a daily basis when programming. In particular:
-        - Know the basic syntax of the language: statements and expressions, comments, etc.
-        - Know what variables are and what it means when you assign to a variable
-        - Be familiar with basic data types like integers, floating points, and strings, and the operations you can use to manipulate them
-        - Know and be able to use the basic control structures: conditionals and loops
-        - Be able to decompose your code into functions (or methods or procedures, depending on the language) and understand why it is a good idea to do so
-        - Be able to use some basic data structures 
-        - an array or list type (e.g. arrays in C or Java; lists in Python)
-        - an associative array (e.g. HashTables in Java; dictionaries in Python; objects in JavaScript)
-        - a record data structure (e.g. structs in C; classes in Java and Python; objects in JavaScript)
-        - Know the language's common idioms for iterating over arrays and associative arrays
-        - Know the language's paradigms for reading and writing from files
-        - Be able to use a debugger
+    You should be comfortable with all the things programmers use on a daily basis. In particular:
+        - basic syntax: statements and expressions, comments, variables,  data types, control structures
+        - Be able to decompose your code into functions  and understand why it is a good idea to do so
+        - data structures and algorithms
+        - Know the language's common idioms and paradigms
         - Know the basic guidelines of good coding style
+        - Be able to use a debugger
 
     Additionaly you will learn:
-        - imperative programming, procedural programming, object oriented programming
+        - imperative, procedural, functional and object oriented programming
         - manual memory management, basic data structures and algorithms
-        - Python, C++, SQL, basic HTML, CSS, JavaScript
+        - Python, C++, SQL, basic HTML, CSS, JavaScript, powershell and bash
+        - how to use linux and setup and automate your development enviroment
+        - and many more!
 
 Stuff:
     - python
-        - byte of python
         - automate boring stuff with python
+        - byte of python
         - python the hard way 1 & 2
         - thinkcspython3
         - the art and craft of programming python
         - edx Introduction to Computer Science and Programming using Python
+        - learning python
+        - how to make mistakes in python
+
         - docs.python.org/3/howto/functional.html ?
         - diveintopython.net/functional_programming/index.html ?
-        - learning python
         - google style guide/pep8?
         - fullstackpython.com ?
         - learnpython.org ?
@@ -43,17 +42,24 @@ Stuff:
     - c++
         - beginning c++ through game programming
         - Udemy c++ tutorial for beginners
+        - Udemy advanced c++ tutorial
         - Udacity c++ for programmers
         - cpp think like computer scientist
         - Programming - Principles and Practice Using C++
-        - google style guide
-        - mit notes? (some basics)
+        - mit introduction to c++
+
+        - isocpp guideline ?
+        - iso cpp standard ?
+        - google style guide ?
+
 
     - DS&A 
         - Grokking Algorithms
         - Data Structures and Algorithms in Python
         - Introduction to algorithms
-        - https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
+
+        (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
+        
         - Data Structures and Algorithms in C++ (very hard if no previous ds&a knowledge)
     
     - other
@@ -183,18 +189,20 @@ Python I
 
 Python II (draft)
 -----------------------------------
-[ ] - docs.python.org/3/howto/functional.html ?
-[ ] - diveintopython.net/functional_programming/index.html ?
 [ ] - the art and craft of programming python
- | (1. rest of byte, rest of Automate, rest of hardway, then this)
 [ ] - thinkcspython3
 [ ] - edx Introduction to Computer Science and Programming using Python
+
+[ ] - docs.python.org/3/howto/functional.html ?
+[ ] - diveintopython.net/functional_programming/index.html ?
+
 
 
 Python III (draft)
 -----------------------------------
-[ ] - py the hardway 2 (maybe pair with learning python book)
-[ ] - learning python
+[ ] - Learn More Python 3 the Hard Way (maybe pair with learning python book)
+[ ] - Learning Python 5th Edition
+[ ] - how to make mistakes in python
 
 [ ] - google style guide/pep8?
 [ ] - fullstackpython.com ?
@@ -209,11 +217,14 @@ Cplusplus I
 
 Cplusplus II (draft)
 -----------------------------------
+[ ] - mit introduction to c++
+[ ] - think like computer scientist cpp
 [ ] - udemy advanced c++
 [ ] - Programming - Principles and Practice Using C++
-[ ] - cpp-think like computer scientist ?
-[ ] - mit notes? (some basics) ?
+
 [ ] - google style guide ?
+[ ] - isocppguideline ?
+[ ] - isocpp standard or something ?
 
 
 DS&A I (draft)
