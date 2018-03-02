@@ -18,6 +18,7 @@
 - https://nedbatchelder.com/code/utilities/
 - https://github.com/tuvtran/project-based-learning#python
 - https://checkio.org/
+- http://wiki.openhatch.org/Intermediate_Python_Workshop/Projects
 
 ### lua
 - http://www.codebymath.com/index.php/welcome/challenges
