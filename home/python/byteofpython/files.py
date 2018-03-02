@@ -3,29 +3,27 @@ import this
 poem = "".join([this.d.get(c, c) for c in this.s])
 
 # Open for 'w'riting
-f = open('this.txt', 'w')
+with open('this.txt', 'w') as f: #alternative to ty/finally block below
+    f.write(poem)
+    f.close()
 
-# Write text to file
-f.write(poem)
+try:
+    # If no mode is specified,
+    # 'r'ead mode is assumed by default
+    f = open('this.txt')
 
-# Close the file
-f.close()
+    while True:
+        line = f.readline()
 
-# If no mode is specified,
-# 'r'ead mode is assumed by default
-f = open('poem.txt')
+        # Zero length indicates EOF
+        if len(line) == 0:
+            break
 
-while True:
-    line = f.readline()
-
-    # Zero length indicates EOF
-    if len(line) == 0:
-        break
-
-    # The `line` already has a newline
-    # at the end of each line
-    # since it is reading from a file.
-    print(line, end='')
-
-# close the file
-f.close()
+        # The `line` already has a newline
+        # at the end of each line
+        # since it is reading from a file.
+        print(line, end='')
+        
+finally:
+    # close the file
+    f.close()

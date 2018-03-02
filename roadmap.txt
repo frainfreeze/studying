@@ -71,6 +71,14 @@ Stuff:
         - Code: The Hidden Language of Computer Hardware and Software
         - https://github.com/ossu/computer-science#introduction-to-computer-science
 
+    - misc (build me)
+        - imperative, procedural, functional and object oriented programming
+        - manual memory management, basic data structures and algorithms
+        - Python, C++, SQL, basic HTML, CSS, JavaScript, powershell and bash
+        - how to use linux and setup and automate your development enviroment
+        - Know the basic guidelines of good coding style
+        - Be able to use a debugger
+
 NOTE: start with machine learning etc
 
 lvl 1 - advanced (pausing year perhaps?)
@@ -162,13 +170,16 @@ stage 3 (proto-science and research)
 - google patents
 - research papers (sci hub)
 
-additional resources
 -----------------------------------------------------
+additional resources
 - https://github.com/prakhar1989/awesome-courses
 - cheatsheets
     - devhints.io
     - learnxinyminutes
-
+- blogs
+    - nedbatchelder.com
+- riptutorial/stackoverflow docs
+-----------------------------------------------------
 
 Detailed roadmap:
 ###################################
@@ -176,8 +187,8 @@ lvl 0 timeline: (draft)
 [ ] - Python and C++ I 
 [ ] - Python and C++ II
 [ ] - Other I, DS&A I 
-[ ] - Python III and DS&A II
-[ ] - DS&A III, Other II
+[ ] - Python III and DS&A II, Misc I
+[ ] - DS&A III, Other II, Misc II
 ###################################
 
 Python I
@@ -251,3 +262,12 @@ Other II (draft)
 [ ] - Programming Pearls
 [ ] - Joel on Software: And on Diverse and Occasionally...
 [ ] - The Mythical Man-Month
+
+Misc I (draft, building)
+    - Know the basic guidelines of good coding style
+    - Be able to use a debugger
+    - imperative, procedural, functional and object oriented programming
+
+Misc II (draft, building)
+    - basic HTML, CSS, JavaScript, powershell and bash
+    - how to use linux and setup and automate your development enviroment
