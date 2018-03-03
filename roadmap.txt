@@ -108,6 +108,11 @@ lvl 1 - advanced (pausing year perhaps?)
     - machine learning and AI 
         - https://metacademy.org/roadmaps/
         - https://github.com/prakhar1989/awesome-courses
+        - https://medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
+        - https://machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning/
+        - https://www.analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017/
+        - https://viblo.asia/p/beginning-machine-learning-series-roadmap-bJzKmWVXl9N
+        - https://www.technologyreview.com/s/604037/meet-the-guys-who-sold-neuralink-to-elon-musk-without-even-realizing-it/
 
     - hm
         - cs part: https://github.com/prakhar1989/awesome-courses
