@@ -2,9 +2,11 @@
 ### c++
 - http://www.programmr.com/zone/cpp
 - https://github.com/kamyu104/LeetCode
+- http://www.cppforschool.com/projects.html
 
 ### python:
 - http://codingbat.com/python
+- https://github.com/kamyu104/LeetCode
 - https://github.com/gregmalcolm/python_koans
 - http://rosalind.info/problems/locations/
 - http://pythonpracticeprojects.com/
@@ -24,6 +26,7 @@
 - http://www.codebymath.com/index.php/welcome/challenges
 
 ### other / lang independent / unsorted
+- https://codefights.com/challenges
 - https://projecteuler.net/archives
 - https://github.com/karan/Projects
 - http://aosabook.org/en/index.html
