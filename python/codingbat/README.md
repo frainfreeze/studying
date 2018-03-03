@@ -1,4 +1,22 @@
 # desc
+### [List-2 > big_diff](027.py)
+Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array. Note: the built-in min(v1, v2) and max(v1, v2) functions return the smaller or larger of two values.
+
+### [List-2 > count_evens](026.py)
+Return the number of even ints in the given array. Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1.
+
+### [List-1 > make_pi](025.py)
+Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
+
+### [List-1 > has23](024.py)
+Given an int array length 2, return True if it contains a 2 or a 3.
+
+### [List-1 > make_ends](023.py)
+Given an array of ints, return a new array length 2 containing the first and last elements from the original array. The original array will be length 1 or more.
+
+### [22 List-1 > middle_way](022.py)
+Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+
 ### [21 Warmup-2 > array123](021.py)
 Given an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.
 
