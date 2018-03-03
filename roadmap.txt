@@ -33,6 +33,7 @@ Stuff:
         - learning python
         - how to make mistakes in python
 
+        - https://docs.python.org/3.6/tutorial/index.html ?
         - docs.python.org/3/howto/functional.html ?
         - diveintopython.net/functional_programming/index.html ?
         - google style guide/pep8?
@@ -201,7 +202,8 @@ Python I
 [ ] - byte of python
 [ ] - python the hard way
 [ ] - Automate the Boring Stuff with Python
-
+[ ] - docs.python.org/3/howto/functional.html ?
+[ ] - diveintopython.net/functional_programming/index.html ?
 
 Python II (draft)
 -----------------------------------
@@ -209,8 +211,8 @@ Python II (draft)
 [ ] - thinkcspython3
 [ ] - edx Introduction to Computer Science and Programming using Python
 
-[ ] - docs.python.org/3/howto/functional.html ?
-[ ] - diveintopython.net/functional_programming/index.html ?
+[ ] - https://docs.python.org/3.6/tutorial/index.html ?
+
 
 
 
