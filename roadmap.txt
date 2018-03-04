@@ -85,7 +85,6 @@ NOTE: start with machine learning etc
 lvl 1 - advanced (pausing year perhaps?)
     - python
         - hitch hikers guide to python
-        - how to make mistakes in python
         - fluent python
         - effective python
         - programming python
