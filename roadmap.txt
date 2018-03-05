@@ -30,7 +30,7 @@ Stuff:
         - thinkcspython3
         - the art and craft of programming python
         - edx Introduction to Computer Science and Programming using Python
-        - learning python
+        - learning python (The classic, comprehensive introduction to Python.)
         - how to make mistakes in python
 
         - https://docs.python.org/3.6/tutorial/index.html ?
@@ -85,8 +85,8 @@ NOTE: start with machine learning etc
 lvl 1 - advanced (pausing year perhaps?)
     - python
         - hitch hikers guide to python
-        - fluent python
-        - effective python
+        - fluent python ( A great intermediate Python book for those looking for the next step.)
+        - effective python ( Also a great intermediate Python book for those looking for the next step.)
         - programming python
         - python cookbook
         - stackoverflow.com/questions/2573135
