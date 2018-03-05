@@ -1,13 +1,11 @@
-import time, random
+import random
 
 words = ("menza", "meth", "pancakes")
 word = random.choice(words)
-
 guesses = ''
 turns = 10
 
 while turns > 0:         
-
     failed = 0             
 
     for char in word:      
@@ -16,7 +14,6 @@ while turns > 0:
         else:
             print("_", end='')
             failed += 1    
-
 
     if failed == 0:        
         print("You won")
