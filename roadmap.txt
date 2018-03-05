@@ -181,6 +181,7 @@ additional resources
 - cheatsheets
     - devhints.io
     - learnxinyminutes
+    - https://www.rstudio.com/resources/cheatsheets/
 - blogs
     - nedbatchelder.com
 - riptutorial/stackoverflow docs
