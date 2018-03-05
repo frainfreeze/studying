@@ -1,12 +1,12 @@
 ## Automate the Boring Stuff with Python
 
-- [ ] Chapter 0 – Introduction
-- [ ] Chapter 1 – Python Basics
-- [ ] Chapter 2 – Flow Control
-- [ ] Chapter 3 – Functions
-- [ ] Chapter 4 – Lists
-- [ ] Chapter 5 – Dictionaries and Structuring Data
-- [ ] Chapter 6 – Manipulating Strings
+- [x] Chapter 0 – Introduction
+- [x] Chapter 1 – Python Basics
+- [x] Chapter 2 – Flow Control
+- [x] Chapter 3 – Functions
+- [x] Chapter 4 – Lists
+- [x] Chapter 5 – Dictionaries and Structuring Data
+- [x] Chapter 6 – Manipulating Strings
 - [ ] Chapter 7 – Pattern Matching with Regular Expressions
 - [ ] Chapter 8 – Reading and Writing Files
 - [ ] Chapter 9 – Organizing Files
