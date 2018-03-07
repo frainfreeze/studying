@@ -5,6 +5,13 @@
 - http://www.cppforschool.com/projects.html
 
 ### python:
+#### flask
+- http://charlesleifer.com/blog/dont-sweat-small-stuff-use-flask-blueprints/
+- https://github.com/Jahaja/psdash
+- https://gist.github.com/coleifer/632d3c9aa6b2ea519384
+
+#### other
+- http://mattscodecave.com/posts/simple-python-framework-from-scratch.html
 - http://codingbat.com/python
 - https://github.com/kamyu104/LeetCode
 - https://github.com/gregmalcolm/python_koans
