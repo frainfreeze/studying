@@ -1,0 +1,130 @@
+--------------------------------------------------------------------------
+detail a 
+--------------------------------------------------------------------------
+
+Stuff:
+    - python
+        Python Ia (basics)
+        -----------------------------------
+        [ ] - byte of python
+        [ ] - Automate the Boring Stuff with Python
+        [ ] - python the hard way
+
+        Python Ib (basics)
+        -----------------------------------
+        [ ] - dive in python (partialy)
+        [ ] - the art and craft of programming python
+        [ ] - https://www.cs.hmc.edu/csforall/#indices-and-tables
+        [ ] - edx Introduction to Computer Science and Programming using Python       
+        
+        Python II (medium)
+        -----------------------------------
+        [ ] - thinkcspython3
+        [ ] - how to make mistakes in python
+
+        Python III (medium)
+        -----------------------------------
+        [ ] - Learning Python 5th Edition (A comprehensive language foundations tutorial 1640 pages, [3.3, 2.7])
+        [ ] - Learn More Python 3 the Hard Way (pair with learning python book)
+        [ ] - how to make mistakes in python
+
+        - docs.python.org/3/howto/functional.html ?
+        - diveintopython.net/functional_programming/index.html ?
+        - https://www.fullstackpython.com/table-of-contents.html ?
+        - google style guide/pep8?
+        - learnpython.org ?
+
+    - c++
+        Cplusplus I (basics)
+        -----------------------------------
+        [ ] - beggining c++ tgp
+        [ ] - Udemy c++ tutorial for beginners
+        [ ] - Udacity c++ for programmers
+
+        Cplusplus II (medium)
+        -----------------------------------
+        [ ] - mit introduction to c++
+        [ ] - think like computer scientist cpp
+        [ ] - udemy advanced c++
+        [ ] - Programming - Principles and Practice Using C++
+
+        - isocpp guideline ?
+        - iso cpp standard ?
+        - google style guide ?
+
+    - DS&A 
+        - Grokking Algorithms
+        - Data Structures and Algorithms in Python
+        - Introduction to algorithms
+
+        (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
+        
+        - Data Structures and Algorithms in C++ (very hard if no previous ds&a knowledge)
+    
+    - other
+        - The Self-taught Programmer by Cory Althoff
+        - Computer Science Distilled: Learn the Art of Solving Computational Problems
+        - The Mythical Man-Month
+        - Joel on Software: And on Diverse and Occasionally...
+        - Programming Pearls
+        - Code: The Hidden Language of Computer Hardware and Software
+        - https://github.com/ossu/computer-science#introduction-to-computer-science
+
+    - Misc
+        - hmmhmh
+--------------------------------------------------------------------------
+detail a end
+--------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+detail b
+--------------------------------------------------------------------------
+Detailed roadmap:
+###################################
+lvl 0 timeline: (draft)
+[ ] - Python Ia
+[ ] - Python Ib, C++ I (12.3.)
+[ ] - Python II, C++ II
+[ ] - Other I, DS&A I 
+[ ] - Python III and DS&A II, Misc I
+[ ] - DS&A III, Other II, Misc II
+###################################
+
+
+DS&A I (draft)
+-----------------------------------
+[ ] - Grokking Algorithms
+[ ] - Data Structures and Algorithms in Python
+
+DS&A II (draft)
+-----------------------------------
+github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms ?
+
+DS&A III (draft)
+-----------------------------------
+[ ] - Introduction to algorithms
+[ ] - Data Structures and Algorithms in C++
+
+
+Other I (draft)
+[ ] - Code: The Hidden Language of Computer Hardware and Software
+[ ] - The Self-taught Programmer by Cory Althoff
+[ ] - Computer Science Distilled: Learn the Art of Solving Computational Problems
+
+Other II (draft)
+[ ] - Programming Pearls
+[ ] - Joel on Software: And on Diverse and Occasionally...
+[ ] - The Mythical Man-Month
+
+Misc I (draft, building)
+    - Know the basic guidelines of good coding style
+    - Be able to use a debugger
+    - imperative, procedural, functional and object oriented programming
+
+Misc II (draft, building)
+    - basic HTML, CSS, JavaScript, powershell and bash
+    - how to use linux and setup and automate your development enviroment
+--------------------------------------------------------------------------
+detail b end
+--------------------------------------------------------------------------

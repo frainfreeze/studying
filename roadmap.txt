@@ -22,77 +22,27 @@ Desc:
         - how to use linux and setup and automate your development enviroment
         - and many more!
 
-Stuff:
-    - python
-        - automate boring stuff with python
-        - byte of python
-        - python the hard way 1 & 2
-        - thinkcspython3
-        - the art and craft of programming python
-        - edx Introduction to Computer Science and Programming using Python
-        - learning python (The classic, comprehensive introduction to Python.)
-        - how to make mistakes in python
+--------------------------------------------------------------------------
+detail a 
+--------------------------------------------------------------------------
 
-        - https://docs.python.org/3.6/tutorial/index.html ?
-        - docs.python.org/3/howto/functional.html ?
-        - diveintopython.net/functional_programming/index.html ?
-        - google style guide/pep8?
-        - fullstackpython.com ?
-        - learnpython.org ?
-
-    - c++
-        - beginning c++ through game programming
-        - Udemy c++ tutorial for beginners
-        - Udemy advanced c++ tutorial
-        - Udacity c++ for programmers
-        - cpp think like computer scientist
-        - Programming - Principles and Practice Using C++
-        - mit introduction to c++
-
-        - isocpp guideline ?
-        - iso cpp standard ?
-        - google style guide ?
-
-
-    - DS&A 
-        - Grokking Algorithms
-        - Data Structures and Algorithms in Python
-        - Introduction to algorithms
-
-        (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
-        
-        - Data Structures and Algorithms in C++ (very hard if no previous ds&a knowledge)
-    
-    - other
-        - The Self-taught Programmer by Cory Althoff
-        - Computer Science Distilled: Learn the Art of Solving Computational Problems
-        - The Mythical Man-Month
-        - Joel on Software: And on Diverse and Occasionally...
-        - Programming Pearls
-        - Code: The Hidden Language of Computer Hardware and Software
-        - https://github.com/ossu/computer-science#introduction-to-computer-science
-
-    - misc (build me)
-        - imperative, procedural, functional and object oriented programming
-        - manual memory management, basic data structures and algorithms
-        - Python, C++, SQL, basic HTML, CSS, JavaScript, powershell and bash
-        - how to use linux and setup and automate your development enviroment
-        - Know the basic guidelines of good coding style
-        - Be able to use a debugger
 
 NOTE: start with machine learning etc
 
-lvl 1 - advanced (pausing year perhaps?)
+lvl 1 - advanced (draft) (pausing year perhaps?)
     - python
         - hitch hikers guide to python
+        - https://docs.python.org/3.6/tutorial/index.html ?
+        - programming python (hard, A full-scale applications programming tutorial 1630 pages [3.2])
         - fluent python ( A great intermediate Python book for those looking for the next step.)
         - effective python ( Also a great intermediate Python book for those looking for the next step.)
-        - programming python
         - python cookbook
-        - stackoverflow.com/questions/2573135
-        - reddit.com/r/Python/comments/1knw7z
-        - reddit.com/r/Python/comments/7cs8dq
-        - stackoverflow.com/questions/101268/hidden-features-of-python
+        - Python Pocket Reference, 5th Edition (A reference supplement to the learning&programming python, 260 pages (January 2014) [3.4, 2.7])
+
+        - stackoverflow.com/questions/2573135 ?
+        - reddit.com/r/Python/comments/1knw7z ?
+        - reddit.com/r/Python/comments/7cs8dq ?
+        - stackoverflow.com/questions/101268/hidden-features-of-python ?
     
     - c++
         - udemy advanced c++ course ? ()
@@ -174,6 +124,10 @@ stage 3 (proto-science and research)
 -----------------------------------------------------
 - google patents
 - research papers (sci hub)
+- research gate 
+- google schoolar
+
+
 
 -----------------------------------------------------
 additional resources
@@ -187,96 +141,11 @@ additional resources
 - blogs
     - nedbatchelder.com
 - riptutorial/stackoverflow docs
+- https://techdevguide.withgoogle.com/
 -----------------------------------------------------
 
-Detailed roadmap:
-###################################
-lvl 0 timeline: (draft)
-[ ] - Python and C++ I 
-[ ] - Python and C++ II
-[ ] - Other I, DS&A I 
-[ ] - Python III and DS&A II, Misc I
-[ ] - DS&A III, Other II, Misc II
-###################################
-
-Python I
------------------------------------
-[ ] - byte of python
-[ ] - python the hard way
-[ ] - Automate the Boring Stuff with Python
-[ ] - docs.python.org/3/howto/functional.html ?
-[ ] - diveintopython.net/functional_programming/index.html ?
-
-Python II (draft)
------------------------------------
-[ ] - the art and craft of programming python
-[ ] - thinkcspython3
-[ ] - edx Introduction to Computer Science and Programming using Python
-
-[ ] - https://docs.python.org/3.6/tutorial/index.html ?
 
 
-
-
-Python III (draft)
------------------------------------
-[ ] - Learn More Python 3 the Hard Way (maybe pair with learning python book)
-[ ] - Learning Python 5th Edition
-[ ] - how to make mistakes in python
-
-[ ] - google style guide/pep8?
-[ ] - fullstackpython.com ?
-[ ] - learnpython.org ?
-
-
-Cplusplus I
------------------------------------
-[ ] - beggining c++ tgp
-[ ] - Udemy c++ tutorial for beginners
-[ ] - Udacity c++ for programmers
-
-Cplusplus II (draft)
------------------------------------
-[ ] - mit introduction to c++
-[ ] - think like computer scientist cpp
-[ ] - udemy advanced c++
-[ ] - Programming - Principles and Practice Using C++
-
-[ ] - google style guide ?
-[ ] - isocppguideline ?
-[ ] - isocpp standard or something ?
-
-
-DS&A I (draft)
------------------------------------
-[ ] - Grokking Algorithms
-[ ] - Data Structures and Algorithms in Python
-
-DS&A II (draft)
------------------------------------
-github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms ?
-
-DS&A III (draft)
------------------------------------
-[ ] - Introduction to algorithms
-[ ] - Data Structures and Algorithms in C++
-
-
-Other I (draft)
-[ ] - Code: The Hidden Language of Computer Hardware and Software
-[ ] - The Self-taught Programmer by Cory Althoff
-[ ] - Computer Science Distilled: Learn the Art of Solving Computational Problems
-
-Other II (draft)
-[ ] - Programming Pearls
-[ ] - Joel on Software: And on Diverse and Occasionally...
-[ ] - The Mythical Man-Month
-
-Misc I (draft, building)
-    - Know the basic guidelines of good coding style
-    - Be able to use a debugger
-    - imperative, procedural, functional and object oriented programming
-
-Misc II (draft, building)
-    - basic HTML, CSS, JavaScript, powershell and bash
-    - how to use linux and setup and automate your development enviroment
+--------------------------------------------------------------------------
+detail b
+--------------------------------------------------------------------------
