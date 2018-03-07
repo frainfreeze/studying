@@ -98,6 +98,7 @@ Stuff:
     - Misc II (summer)
         - how to use linux and bash
         - how to setup and automate your development enviroment
+        - ? xlearning.com/skils/5545 (zsh, tmux, vim)
 --------------------------------------------------------------------------
 detail a end
 --------------------------------------------------------------------------
