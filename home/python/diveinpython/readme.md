@@ -1,0 +1,24 @@
+# Dive into python
+awesome book, I love it.
+- [x] What’s New in “Dive Into Python 3”
+- [x] Installing Python
+- [x] Your First Python Program
+- [x] Native Datatypes
+- [ ] Comprehensions
+- [ ] Strings
+- [ ] Regular Expressions
+- [ ] Closures & Generators
+- [ ] Classes & Iterators
+- [ ] Advanced Iterators
+- [ ] Unit Testing
+- [ ] Refactoring
+- [ ] Files
+- [ ] XML
+- [ ] Serializing Python Objects
+- [ ] HTTP Web Services
+- [ ] Case Study: Porting chardet to Python 3
+- [ ] Packaging Python Libraries
+- [x] [Porting Code to Python 3 with 2to3](http://www.diveintopython3.net/porting-code-to-python-3-with-2to3.html)
+- [ ] [Special Method Names](http://www.diveintopython3.net/special-method-names.html)
+- [x] [Where to Go From Here](http://www.diveintopython3.net/where-to-go-from-here.html)
+- [x] [Troubleshooting](http://www.diveintopython3.net/troubleshooting.html)
