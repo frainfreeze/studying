@@ -1,6 +1,9 @@
 General roadmap:
-(I am adding and removing stuff daily, so to leave only essential and most helpfull things.
-I am definetly not sorry for "wasting" my time on "bad" courses and books tho.  )
+I am adding and removing stuff daily, so to leave only 
+"essential" and most helpfull things. I am definetly not 
+sorry for "wasting" my time on "bad" courses and books, 
+but I wont list any of them here.
+
 todo: generate stage 1 from detailed roadmap since its more up to date.
 
 stage 1 (software engineering and CS)
@@ -46,7 +49,6 @@ lvl 1 - advanced (draft) (pausing year perhaps?)
     
     - c++
         - udemy advanced c++ course ? ()
-        - c++ primer ? (covers just about everything in the language)
         - a tour of c++ ? ( tutorial overview of all of standard C++)
         - accelerated c++? (covers tour on 1/4 of space)
         - the c++ programing lang ? (more of a all level reference)
