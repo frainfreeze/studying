@@ -83,46 +83,46 @@ detail b
 Detailed roadmap:
 ###################################
 lvl 0 timeline: (draft)
-[ ] - Python Ia
-[ ] - Python Ib, C++ I (12.3.)
-[ ] - Python II, C++ II
-[ ] - Other I, DS&A I 
-[ ] - Python III and DS&A II, Misc I
-[ ] - DS&A III, Other II, Misc II
+[ ] - Python Ia 
+[ ] - Python Ib, C++ I (start 12.3.)
+[ ] - Python II, C++ II (prvi dio semestra)
+[ ] - Other I, DS&A I,C++ II (prvi dio semestra)
+[ ] - Python III and DS&A II, C++ II, Misc I (drugi dio semestra)
+[ ] - DS&A III, Other II, Misc II (ljeto)
 ###################################
 
 
-DS&A I (draft)
+DS&A I (draft)(prvi dio semestra)
 -----------------------------------
 [ ] - Grokking Algorithms
 [ ] - Data Structures and Algorithms in Python
 
-DS&A II (draft)
+DS&A II (draft)(drugi dio semestra)
 -----------------------------------
 github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms ?
 
-DS&A III (draft)
+DS&A III (draft) (ljeto)
 -----------------------------------
 [ ] - Introduction to algorithms
 [ ] - Data Structures and Algorithms in C++
 
 
-Other I (draft)
+Other I (draft)(prvi dio semestra)
 [ ] - Code: The Hidden Language of Computer Hardware and Software
 [ ] - The Self-taught Programmer by Cory Althoff
 [ ] - Computer Science Distilled: Learn the Art of Solving Computational Problems
 
-Other II (draft)
+Other II (draft)(drugi dio semestra)
 [ ] - Programming Pearls
 [ ] - Joel on Software: And on Diverse and Occasionally...
 [ ] - The Mythical Man-Month
 
-Misc I (draft, building)
+Misc I (draft, building)(ovaj semestar)
     - Know the basic guidelines of good coding style
     - Be able to use a debugger
     - imperative, procedural, functional and object oriented programming
 
-Misc II (draft, building)
+Misc II (draft, building)(ljeto)
     - basic HTML, CSS, JavaScript, powershell and bash
     - how to use linux and setup and automate your development enviroment
 --------------------------------------------------------------------------
