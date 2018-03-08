@@ -1,6 +1,26 @@
-[summaries](https://github.com/frainfreeze/studying/blob/master/university/skripte.md)
+# Semester 2
+
+[summaries](https://github.com/frainfreeze/studying/blob/master/university/skripte.md#semestar-2)
+
+### > 10012 - DS&A
+University provided literature:
+> Miroslav Slamić, Tomislav Hoško: Strukture podataka i algoritmi, Algebra, Zagreb, 2009
+
+Supplementary literature:
+> Sedgewick: Algorithms in C, Addison-Wesley, 2001
+
+The course aims:
+> Learn basic characteristics of standard data structures (list, stack, queue, binary tree) and learn algorithms used by those data structures in modern programming language C++.
+
+Home exercises: [pt1](https://github.com/frainfreeze/studying/tree/master/university/10012-DS&A/home-exercises) | pt2
+   <|>   [Homeworks](https://github.com/frainfreeze/studying/tree/master/university/10012-DS&A/homeworks)
+
+<br>
 
 # Semester 1
+
+[summaries](https://github.com/frainfreeze/studying/blob/master/university/skripte.md#semestar-1)
+
 ### > 10004 - Programming 
 University provided literature :
 >    Course handbook prepared and printed by Algebra University College
