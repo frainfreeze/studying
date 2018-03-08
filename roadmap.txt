@@ -48,8 +48,9 @@ Python
     -----------------------------------
     [ ] - dive in python (partialy)
     [ ] - the art and craft of programming python
+    [ ] - PEP 8
     [ ] - thinkcspython3
-    [ ] - how to make mistakes in python
+    [ ] - Google Python Style Guide
 
     Python III (29.7.)
     -----------------------------------
@@ -57,13 +58,7 @@ Python
                     foundations tutorial 1640 pages, [3.3, 2.7])
     [ ] - Learn More Python 3 the Hard Way (pair with learning python book)
     [ ] - how to make mistakes in python
-
-    ------------------------------------------------------------
-    - docs.python.org/3/howto/functional.html ?
-    - https://www.fullstackpython.com/table-of-contents.html ?
-    - google style guide/pep8?
-    - learnpython.org ?
-    -------------------------------------------------------------
+    [ ] - tutorial and other https://docs.python.org/3/index.html
 
 C++
     Cplusplus I (do 31.3.)
@@ -71,20 +66,16 @@ C++
     [ ] - beggining c++ tgp
     [ ] - Udemy c++ tutorial for beginners
     [ ] - Udacity c++ for programmers
+    [ ] - https://google.github.io/styleguide/cppguide.html
 
     Cplusplus II (do 29.7.)
     -----------------------------------
     [ ] - mit introduction to c++
     [ ] - think like computer scientist cpp
+    [ ] - http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
     [ ] - udemy advanced c++
     [ ] - Programming - Principles and Practice Using C++
     [ ] - c++ primer (covers just about everything in the language)
-    
-    ------------------------------------------------------------
-    - isocpp guideline ?
-    - iso cpp standard ?
-    - google style guide ?
-    ------------------------------------------------------------
     
 Other
     Other I (do 31.3..)
@@ -139,6 +130,7 @@ lvl 1 - advanced (draft) (1.1.'20-22?)
         - stackoverflow.com/questions/101268/hidden-features-of-python ?
     
     - c++
+        - http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3242.pdf
         - udemy advanced c++ course ? ()
         - a tour of c++ ? ( tutorial overview of all of standard C++)
         - accelerated c++? (covers tour on 1/4 of space)
@@ -241,5 +233,6 @@ _____________________________________________________
     - nedbatchelder.com
 - riptutorial/stackoverflow docs
 - https://techdevguide.withgoogle.com/
+https://www.fullstackpython.com/table-of-contents.html
 _____________________________________________________
 

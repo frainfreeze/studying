@@ -21,7 +21,7 @@ Srednja:
 	- proći kroz udžebenike uz koje koristiti '24 lekcije'
 	- zadatci iz mape i '24 lekcije' ispiti
 	- videa ako zapne:
-		- http://www.mim-sraga.com/Matematika.htm
+		- http://www.mim-sraga.com/Matematika.html
 		- toni
 
 --------------------------------------------------
