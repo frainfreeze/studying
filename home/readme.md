@@ -1,5 +1,5 @@
 # home
-This academic year I'm primarily focused on learning C++ and python in more depth and basics of DS&A. Lua and clojure are waiting for summer holidays/next year/after uni(?). I prefer books over video lectures but it's nice to suplement my studies (at least at basic level) with few online courses.
+Considering programing languages this academic year I'm primarily focused on learning C++ and expanding my previous python knowledge in more depth. I am also going to learn basics of DS&A and implement them in both c++ and python. I prefer books over video lectures but it's nice to suplement my studies (at least at basic level) with few online courses. My detailed and more up to date learning roadmap can be found at the root of this [repository](https://github.com/frainfreeze/studying/blob/master/roadmap.txt).
 
 <br>
 
@@ -19,13 +19,16 @@ This academic year I'm primarily focused on learning C++ and python in more dept
 
 #### [The Byte of Python](python/byteofpython#a-byte-of-python)
 
+#### [Dive in python 3](python/diveinpython#dive-into-python)
+
 #### [Learn python the hard way](python/lpthw#learn-python-the-hard-way)
 
 #### [Automate the Boring Stuff with Python](python/pythonautomating#automate-the-boring-stuff-with-python)
 
-#### [Python masterclass](python/pythonmasterclass#python-masterclass)
-
 #### [Think Python: How to Think Like a Computer Scientist](python/thinksCSpython)
+
+<!-- 
+
 <br>
 
 ### > DS&A
@@ -35,7 +38,7 @@ Literature:
 
 <br>
 
-<!-- 
+
 ### > clojure
 Literature:
 
