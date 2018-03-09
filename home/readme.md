@@ -21,8 +21,6 @@ Considering programing languages this academic year I'm primarily focused on lea
 
 #### [Dive in python 3](python/diveinpython#dive-into-python)
 
-#### [Learn python the hard way](python/lpthw#learn-python-the-hard-way)
-
 #### [Automate the Boring Stuff with Python](python/pythonautomating#automate-the-boring-stuff-with-python)
 
 #### [Think Python: How to Think Like a Computer Scientist](python/thinksCSpython)

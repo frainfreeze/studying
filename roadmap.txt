@@ -42,12 +42,11 @@ Python
     -----------------------------------
     [ ] - byte of python
     [ ] - Automate the Boring Stuff with Python
-    [ ] - python the hard way
+    [ ] - the art and craft of programming python
         
     Python II (29.4.)
     -----------------------------------
     [ ] - dive in python (partialy)
-    [ ] - the art and craft of programming python
     [ ] - PEP 8
     [ ] - thinkcspython3
     [ ] - Google Python Style Guide
