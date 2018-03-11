@@ -204,7 +204,6 @@ lvl 3 - senior (draft) (1.1.'25-'27?)
 
 stage 2 (domain specific knowledge)
 -----------------------------------------------------
-https://metacademy.org/roadmaps/
 http://hubel.med.harvard.edu/index.html
 https://en.wikipedia.org/wiki/Cyberware
 
@@ -214,9 +213,6 @@ stage 3 (proto-science and research)
 - research papers (sci hub)
 - research gate 
 - google schoolar
-
-
-
 
 _____________________________________________________
 ----------------additional resources-----------------
@@ -233,5 +229,8 @@ _____________________________________________________
 - riptutorial/stackoverflow docs
 - https://techdevguide.withgoogle.com/
 https://www.fullstackpython.com/table-of-contents.html
+
+https://software-carpentry.org/lessons/
+https://metacademy.org/roadmaps/
 _____________________________________________________
 
