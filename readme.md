@@ -29,8 +29,9 @@ sort me: by '# lang' -> ' - proj name -> technology'
 
 # python
 - [codingbat](https://github.com/frainfreeze/DailyProgrammer/tree/master/python/codingbat#desc) (27)
-- [My projects/Other](https://github.com/frainfreeze/DailyProgrammer/tree/master/python/other#desc) (0)
 - [hacklanje](https://github.com/frainfreeze/DailyProgrammer/tree/master/python/hacklanje) (4)
+- [My projects/Other](https://github.com/frainfreeze/DailyProgrammer/tree/master/python/other#desc) (0)
+- [Small panda3d games](https://github.com/frainfreeze/DailyProgrammer/tree/master/python/panda3d#desc) (0)
 
 <!-- # Lua
 # Clojure
