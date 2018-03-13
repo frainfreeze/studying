@@ -63,13 +63,13 @@ C++
     Cplusplus I (do 31.3.)
     -----------------------------------
     [ ] - beggining c++ tgp
+    [ ] - mit introduction to c++
     [ ] - Udemy c++ tutorial for beginners
     [ ] - Udacity c++ for programmers
     [ ] - https://google.github.io/styleguide/cppguide.html
 
     Cplusplus II (do 29.7.)
     -----------------------------------
-    [ ] - mit introduction to c++
     [ ] - think like computer scientist cpp
     [ ] - http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
     [ ] - udemy advanced c++
