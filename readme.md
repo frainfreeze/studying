@@ -2,7 +2,7 @@
 
 Evergrowing collection of programming projects and problems. There are probably better solutions, comments are welcome. Also, nobody likes a cheater and not only you will eventually get caught, but you won't learn anything by just copying so use this for reference only and make sure you at least understand what is being done.
 
-``` counter: 40 projects/problems ```
+``` counter: 41 projects/problems ```
 
 Quick navigation:
 - [Python](#python)
@@ -22,7 +22,7 @@ sort me: by '# lang' -> ' - proj name -> technology'
 
 # C++
 - [Project Euler](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/ProjectEuler#desc) (2)
-- [My projects/Other](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/other#desc) (6)
+- [My projects/Other](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/other#desc) (7)
 - [codingbat](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/codingbat#desc) (1)
 
 <br>
