@@ -1,0 +1,4 @@
+-> https://www.sfml-dev.org/tutorials/2.4/
+-> https://www.sfml-dev.org/documentation/2.4.2/
+-> SFML Essentials ISBN 978-1-78439-732-6
+-> SFML Blueprints ISBN 978-1-78439-847-7
