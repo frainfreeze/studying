@@ -13,11 +13,13 @@
 	<SFML/Graphics.hpp>
 	<QuadStruct.h>
 
-1521259964 source:h:\ide\codeblocks\vparser\main.cpp
+1521261260 source:h:\ide\codeblocks\vparser\main.cpp
 	<iostream>
 	<fstream>
 	<SFML/Graphics.hpp>
+	<QuadStruct.h>
 	"VertParse.h"
+	"VertQuad.h"
 
 1521066116 c:\sfml-2.4.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -423,4 +425,11 @@
 	<algorithm>
 	<SFML/Graphics.hpp>
 	<QuadStruct.h>
+
+1521261413 h:\ide\codeblocks\vparser\include\vertquad.h
+	<SFML/Graphics.hpp>
+	<QuadStruct.h>
+
+1521261390 source:h:\ide\codeblocks\vparser\src\vertquad.cpp
+	"VertQuad.h"
 
