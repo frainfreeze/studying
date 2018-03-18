@@ -1,13 +1,7 @@
 #include <SFML/Graphics.hpp>
+
 #include <iostream>
 #include "Cvijet.h"
-
-//#define DEBUG
-
-//helper function to figure out where to paint the flower
-void pprint(sf::Vector2i localPosition) { 
-	std::cout << localPosition.x << ", " << localPosition.y << std::endl; 
-}
 
 int main(){
 	// make window and set framerate
@@ -92,12 +86,6 @@ int main(){
 		shader.setUniform("distortionFactor", distortionFactor);
 		shader.setUniform("riseFactor", riseFactor);
 
-		//mouse coords
-		#ifdef DEBUG
-			sf::Vector2i localPosition = sf::Mouse::getPosition(window);
-			pprint(localPosition);
-		#endif
-
 		//acumulate time with each frame
 		elapsedTime += deltaTime;
 		float timeAsSeconds = elapsedTime.asSeconds();
@@ -111,24 +99,26 @@ int main(){
 		window.clear();
 
 		window.draw(background);
+
 		// using heatwave shader to simulate wind
 		window.draw(backgroundTree, &shader);
-		cvijet.draw();
 
 		// render animation frame depending on frame
 		// this is the worst thing i have ever done.
 		switch (animFrame){
-		case 1: cloak.setTexture(cloak1Tex); break;
-		case 2: cloak.setTexture(cloak2Tex); break;
-		case 3: cloak.setTexture(cloak3Tex); break;
-		case 4: cloak.setTexture(cloak4Tex); break;
-		case 5: cloak.setTexture(cloak5Tex); break;
-		case 6: cloak.setTexture(cloak4Tex); break;
-		case 7: cloak.setTexture(cloak3Tex); break;
-		case 8: cloak.setTexture(cloak2Tex); break;
-		default: break;
+			case 1: cloak.setTexture(cloak1Tex); break;
+			case 2: cloak.setTexture(cloak2Tex); break;
+			case 3: cloak.setTexture(cloak3Tex); break;
+			case 4: cloak.setTexture(cloak4Tex); break;
+			case 5: cloak.setTexture(cloak5Tex); break;
+			case 6: cloak.setTexture(cloak4Tex); break;
+			case 7: cloak.setTexture(cloak3Tex); break;
+			case 8: cloak.setTexture(cloak2Tex); break;
+			default: break;
 		}
 		window.draw(cloak);
+
+		cvijet.draw();
 
 		window.display();
 		///////////////////////////////////////////////////
