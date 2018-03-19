@@ -11,7 +11,6 @@ bool VertParser::loadVert(std::string filename) {
 
 	m_buffer << inFile.rdbuf();
 
-	// https://stackoverflow.com/questions/3106110/what-are-move-semantics
 	// Save the filename for the reload
 	m_VertFilename = std::move(filename);
 
@@ -29,7 +28,6 @@ void VertParser::Parse() {
 	std::istringstream s(m_buffer.str());
 
 	while (std::getline(s, line)) {
-
 		// Ignore empty and comment lines
 		if (line.empty() || line[0] == '#')
 			continue;
@@ -72,10 +70,10 @@ void VertParser::Parse() {
 			}
 		}
 		if (quadCounter >= 8) {
-			quadCotainer.quads.push_back(foo);
+			quads.push_back(foo);
 			quadCounter = 0;
 		}
 	}
 }
 
-QuadContainer VertParser::get_container() { return quadCotainer; }
+std::vector<QuadStruct> VertParser::get_container() { return quads; }

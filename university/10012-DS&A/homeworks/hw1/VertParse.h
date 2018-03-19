@@ -1,5 +1,5 @@
-#ifndef VERTPARSER_H
-#define VERTPARSER_H
+#ifndef VERTPARSE_H_
+#define VERTPARSE_H_
 #include <vector>
 #include <string>
 #include <fstream>
@@ -10,6 +10,7 @@
 
 #include "QuadStruct.h"
 
+
 ///////////////////////////////////////////
 // returns just the QuadContainer (for now)
 ///////////////////////////////////////////
@@ -17,12 +18,12 @@ class VertParser {
 public:
 	bool loadVert(std::string filename);
 	void Parse();
-	QuadContainer get_container();
+	std::vector<QuadStruct> get_container();
 
 private:
 	std::string m_VertFilename;
 	std::stringstream m_buffer;
-	QuadContainer quadCotainer;
+	std::vector<QuadStruct> quads;
 };
 
-#endif // VERTPARSER_H
+#endif // VERTPARSE_H_

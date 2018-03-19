@@ -1,9 +1,10 @@
 // rewrite me!
-#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <sstream>
 #include <fstream>
 #include <vector>
+
+#include <SFML/Graphics.hpp>
 
 #include "QuadStruct.h"
 #include "VertParse.h"
@@ -11,22 +12,16 @@
 
 std::string modelFile = "data\\models\\simple-cvijet.vert";
 
-struct ClickType {
-	sf::Vector2i position;
-	std::string type;
-};
-
-void inputHandler(ClickType& click, sf::RenderWindow& window);
+void inputHandler(sf::Vector2i& click, sf::RenderWindow& window);
 static void appendLineToFile(std::string filepath, std::string line);
 
 // global clock for input handler
 sf::Clock gClock;
 
-std::vector<ClickType> tempVec;
-std::vector<ClickType> tempVec2;
+std::vector<sf::Vector2i> tempVec;
+std::vector<sf::Vector2i> tempVec2;
 
-// create QuadContainer to test parser, make VerParser instance and load model
-QuadContainer bar;
+std::vector<QuadStruct> bar;
 VertParser spaz;
 VertQuad test;
 
@@ -36,7 +31,7 @@ int main() {
 
 	sf::RenderWindow window(sf::VideoMode(1024, 548), "Painter.cpp", sf::Style::Default, settings);
 
-	ClickType click;
+	sf::Vector2i click;
 
 	sf::CircleShape crl1(2); crl1.setFillColor(sf::Color(0, 255, 255)); crl1.setPosition(-5, -5);
 	sf::CircleShape crl2(2); crl2.setFillColor(sf::Color(0, 255, 255)); crl2.setPosition(-5, -5);
@@ -87,12 +82,12 @@ int main() {
 		// position dots, this monstrosity is so undo/redo can work
 		crl1.setPosition(-5, -5); crl2.setPosition(-5, -5); crl3.setPosition(-5, -5);
 		switch (tempVec.size()) {
-		case 1: crl1.setPosition(tempVec[0].position.x, tempVec[0].position.y); break;
-		case 2: crl1.setPosition(tempVec[0].position.x, tempVec[0].position.y);
-			crl2.setPosition(tempVec[1].position.x, tempVec[1].position.y); break;
-		case 3: crl1.setPosition(tempVec[0].position.x, tempVec[0].position.y);
-			crl2.setPosition(tempVec[1].position.x, tempVec[1].position.y);
-			crl3.setPosition(tempVec[2].position.x, tempVec[2].position.y); break;
+		case 1: crl1.setPosition(tempVec[0].x, tempVec[0].y); break;
+		case 2: crl1.setPosition(tempVec[0].x, tempVec[0].y);
+			crl2.setPosition(tempVec[1].x, tempVec[1].y); break;
+		case 3: crl1.setPosition(tempVec[0].x, tempVec[0].y);
+			crl2.setPosition(tempVec[1].x, tempVec[1].y);
+			crl3.setPosition(tempVec[2].x, tempVec[2].y); break;
 		default: break;
 		}
 
@@ -106,14 +101,14 @@ int main() {
 			std::stringstream ss;
 			for (unsigned int i = 0; i < tempVec.size(); i++) {
 				switch (i) {
-				case 0: ss << "\nquad.a.x = " << tempVec[i].position.x
-					<< "\nquad.a.y = " << tempVec[i].position.y; break;
-				case 1: ss << "\nquad.b.x = " << tempVec[i].position.x
-					<< "\nquad.b.y = " << tempVec[i].position.y; break;
-				case 2: ss << "\nquad.c.x = " << tempVec[i].position.x
-					<< "\nquad.c.y = " << tempVec[i].position.y; break;
-				case 3: ss << "\nquad.d.x = " << tempVec[i].position.x
-					<< "\nquad.d.y = " << tempVec[i].position.y; break;
+				case 0: ss << "\nquad.a.x = " << tempVec[i].x
+					<< "\nquad.a.y = " << tempVec[i].y; break;
+				case 1: ss << "\nquad.b.x = " << tempVec[i].x
+					<< "\nquad.b.y = " << tempVec[i].y; break;
+				case 2: ss << "\nquad.c.x = " << tempVec[i].x
+					<< "\nquad.c.y = " << tempVec[i].y; break;
+				case 3: ss << "\nquad.d.x = " << tempVec[i].x
+					<< "\nquad.d.y = " << tempVec[i].y; break;
 				default: break;
 				}
 			}
@@ -141,7 +136,7 @@ static void appendLineToFile(std::string filepath, std::string line) {
 	file << line << std::endl;
 }
 
-void inputHandler(ClickType& click, sf::RenderWindow& window) {
+void inputHandler(sf::Vector2i& click, sf::RenderWindow& window) {
 	static bool pressed = false;
 	while (true) {
 		// this is used to refresh window every ~second
@@ -149,18 +144,15 @@ void inputHandler(ClickType& click, sf::RenderWindow& window) {
 		sf::Time elapsed1 = gClock.getElapsedTime();
 		if (elapsed1.asSeconds()>1) {
 			gClock.restart();
-			click.type = "";
 			return;
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
 			if (!pressed) {
-				click.position = sf::Mouse::getPosition(window);
-				click.type = "Ctrl-Z";
+				click = sf::Mouse::getPosition(window);
 				pressed = true;
-
+				sf::Vector2i temp;
 				//oh my...
 				if (tempVec.size() > 0) {
-					ClickType temp;
 					temp = tempVec[tempVec.size() - 1];
 					tempVec2.push_back(temp);
 					tempVec.pop_back();
@@ -170,13 +162,11 @@ void inputHandler(ClickType& click, sf::RenderWindow& window) {
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::Y)) {
 			if (!pressed) {
-				click.position = sf::Mouse::getPosition(window);
-				click.type = "Ctrl-Y";
+				click = sf::Mouse::getPosition(window);
 				pressed = true;
-
+				sf::Vector2i temp;
 				//oh my...
 				if (tempVec2.size()>0) {
-					ClickType temp;
 					temp = tempVec2[tempVec2.size() - 1];
 					tempVec.push_back(temp);
 					tempVec2.pop_back();
@@ -186,8 +176,7 @@ void inputHandler(ClickType& click, sf::RenderWindow& window) {
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
 			if (!pressed) {
-				click.position = sf::Mouse::getPosition(window);
-				click.type = "Ctrl-P";
+				click = sf::Mouse::getPosition(window);
 				pressed = true;
 
 				std::ofstream myfile;
@@ -200,8 +189,7 @@ void inputHandler(ClickType& click, sf::RenderWindow& window) {
 		}
 		else if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 			if (!pressed) {
-				click.position = sf::Mouse::getPosition(window);
-				click.type = "Left Click";
+				click = sf::Mouse::getPosition(window);
 				tempVec.push_back(click);
 				pressed = true;
 				break;
