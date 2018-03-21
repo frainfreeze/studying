@@ -29,6 +29,14 @@ Considering programing languages this academic year I'm primarily focused on lea
 
 #### [Think Python: How to Think Like a Computer Scientist](python/thinksCSpython)
 
+<br>
+
+### > From Nand To Tetris
+bLearning how to build a general-purpose computer system from the ground up.
+
+#### [The Elements of Computing Systems: Building a Modern Computer from First Principles]()
+
+#### [Nand2Tetris]()
 <!-- 
 
 <br>
