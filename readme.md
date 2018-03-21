@@ -37,7 +37,7 @@ Projects and problems focused on learning the Python language better.
 
 # Multi 
 Big / sets of projects that are not oriented on language per se but rather a particular concept.
-- [Virtual Machines and emulators](https://github.com/frainfreeze/DailyProgrammer/tree/master/vm)
+- [Virtual Machines and emulators](https://github.com/frainfreeze/DailyProgrammer/tree/master/multi/vm)
 
 <!-- # Lua
 # Clojure
