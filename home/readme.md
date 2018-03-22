@@ -13,9 +13,6 @@ Considering programing languages this academic year I'm primarily focused on lea
 
 #### [Principles and Practice Using C++](C++/principles-and-practice-using-c++#programming----principles-and-practice-using-c)
 
-#### [SFML](C++/sfml)
-
-
 
 <br>
 
@@ -31,12 +28,22 @@ Considering programing languages this academic year I'm primarily focused on lea
 
 <br>
 
+### > 6502
+- [wikibooks 6502 assembly](https://en.wikibooks.org/wiki/6502_Assembly)
+- [Easy 6502](https://skilldrick.github.io/easy6502/)
+
 ### > From Nand To Tetris
 bLearning how to build a general-purpose computer system from the ground up.
 
 #### [The Elements of Computing Systems: Building a Modern Computer from First Principles]()
 
 #### [Nand2Tetris]()
+
+<br>
+
+### Frameworks/libraries
+
+#### [C++/SFML](C++/sfml)
 <!-- 
 
 <br>
