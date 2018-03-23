@@ -25,6 +25,9 @@
 - [http://6502.org/](http://6502.org/)
 - [Wikipedia: MOS Technology 6502](https://en.wikipedia.org/wiki/MOS_Technology_6502)
 - [6502 assembly tutorial](https://skilldrick.github.io/easy6502/)
+- [NMOS 6502 Opcodes](http://www.6502.org/tutorials/6502opcodes.html)
+- [6502 Instruction reference](http://www.obelisk.me.uk/6502/reference.html)
+- [Instruction set](http://www.masswerk.at/6502/6502_instruction_set.html)
 
 ### atari 2600
 - [Wikipedia: atari 2600](https://en.wikipedia.org/wiki/Atari_2600)
