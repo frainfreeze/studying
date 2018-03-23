@@ -15,7 +15,6 @@ void hex2dec()
     std::string s;
     std::cout << "Enter hexadecimal number: ";
     getline(std::cin, s);
-
     unsigned int x = std::stoul(s, nullptr, 16);
     std::cout << x << '\n' ;
 }
@@ -24,7 +23,7 @@ int main()
 {
     for(;;){
         int input ;
-        std::cout << "1. Hex to dec, 2. Dec to hex, 3. exit: ";
+        std::cout << "1. Dec to hex 2. Hex to dec, 3. exit: ";
         std::cin >> input;
         std::cin.ignore();
         switch (input){

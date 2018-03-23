@@ -28,6 +28,7 @@
 - [NMOS 6502 Opcodes](http://www.6502.org/tutorials/6502opcodes.html)
 - [6502 Instruction reference](http://www.obelisk.me.uk/6502/reference.html)
 - [Instruction set](http://www.masswerk.at/6502/6502_instruction_set.html)
+- [Visual Transistor-level Simulation of the 6502 CPU](http://visual6502.org/)
 
 ### atari 2600
 - [Wikipedia: atari 2600](https://en.wikipedia.org/wiki/Atari_2600)
