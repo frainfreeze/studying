@@ -3,6 +3,8 @@ Considering programing languages this academic year I'm primarily focused on lea
 
 <br>
 
+## Programming languages
+
 ### > C++
 
 #### [Beginning C++ Through Game Programming](C++/beginnigC++TGP#beginning-c-through-game-programming)
@@ -32,19 +34,24 @@ Considering programing languages this academic year I'm primarily focused on lea
 - [wikibooks 6502 assembly](https://en.wikibooks.org/wiki/6502_Assembly)
 - [Easy 6502](https://skilldrick.github.io/easy6502/)
 
-### > From Nand To Tetris
-bLearning how to build a general-purpose computer system from the ground up.
+
+## Digital Systems Construction
+Integrating key  topics  from  algorithms, computer 
+architecture, operating  systems, compilers,  and  
+software  engineering, in one unified framework.    
+This will be done constructively, by building a 
+general-purpose computer system from the ground up. 
 
 #### [The Elements of Computing Systems: Building a Modern Computer from First Principles]()
 
-#### [Nand2Tetris]()
+#### [Nand2Tetris](http://www.nand2tetris.org/)
 
 <br>
 
 ### Frameworks/libraries
 
 #### [C++/SFML](C++/sfml)
-<!-- 
+
 
 <br>
 
@@ -52,7 +59,7 @@ bLearning how to build a general-purpose computer system from the ground up.
 Literature:
 1. Introduction to Algorithms, 3rd Edition
 
-
+<!-- 
 <br>
 
 
