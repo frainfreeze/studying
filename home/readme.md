@@ -3,36 +3,30 @@ Considering programing languages this academic year I'm primarily focused on lea
 
 <br>
 
+Links bellow lead to READMEs in their respective folders.
+
+<br>
+
 ## Programming languages
 
 ### > C++
-
-#### [Beginning C++ Through Game Programming](C++/beginnigC++TGP#beginning-c-through-game-programming)
-
-#### [C++ primer](C++/c++primer#c-primer-5-c1114)
-
-#### [Online courses](C++/online-courses#edx-microsoft-dev210x---introduction-to-c)
-
-#### [Principles and Practice Using C++](C++/principles-and-practice-using-c++#programming----principles-and-practice-using-c)
-
+- [Beginning C++ Through Game Programming](C++/beginnigC++TGP#beginning-c-through-game-programming)
+- [C++ primer](C++/c++primer#c-primer-5-c1114)
+- [Online courses](C++/online-courses#edx-microsoft-dev210x---introduction-to-c)
+- [Principles and Practice Using C++](C++/principles-and-practice-using-c++#programming----principles-and-practice-using-c)
 
 <br>
 
 ### > Python
-
-#### [The Byte of Python](python/byteofpython#a-byte-of-python)
-
-#### [Dive in python 3](python/diveinpython#dive-into-python)
-
-#### [Automate the Boring Stuff with Python](python/pythonautomating#automate-the-boring-stuff-with-python)
-
-#### [Think Python: How to Think Like a Computer Scientist](python/thinksCSpython)
+- [The Byte of Python](python/byteofpython#a-byte-of-python)
+- [Dive in python 3](python/diveinpython#dive-into-python)
+- [Automate the Boring Stuff with Python](python/pythonautomating#automate-the-boring-stuff-with-python)
+- [Think Python: How to Think Like a Computer Scientist](python/thinksCSpython)
 
 <br>
 
 ### > 6502
-- [wikibooks 6502 assembly](https://en.wikibooks.org/wiki/6502_Assembly)
-- [Easy 6502](https://skilldrick.github.io/easy6502/)
+- [Easy 6502](6502)
 
 
 ## Digital Systems Construction
@@ -42,31 +36,29 @@ software  engineering, in one unified framework.
 This will be done constructively, by building a 
 general-purpose computer system from the ground up. 
 
-#### [The Elements of Computing Systems: Building a Modern Computer from First Principles](fromNand2tetris/TEOCS)
-
-#### [From Nand to Tetris](fromNand2tetris/nand2tetris)
-
-#### [But how Do it Know? The Basic Principles of Computers for Everyone]()
-
-#### [Code: The Hidden Language of Computer Hardware and Software]()
+- [The Elements of Computing Systems: Building a Modern Computer from First Principles](fromNand2tetris/TEOCS)
+- [From Nand to Tetris](fromNand2tetris/nand2tetris)
+- [But how Do it Know? The Basic Principles of Computers for Everyone]()
+- [Code: The Hidden Language of Computer Hardware and Software]()
 
 <br>
 
-### Frameworks/libraries
+## Frameworks/libraries
 
 #### [C++/SFML](C++/sfml)
 
 
 <br>
 
-### > DS&A
-Literature:
-1. Introduction to Algorithms, 3rd Edition
+# Other
+## > DS&A
+- [Grokking algorithms]()
+
+## General
+- [progrmaing pearls]
 
 <!-- 
 <br>
-
-
 ### > clojure
 Literature:
 
@@ -83,4 +75,7 @@ Other:
 
 ### > Lua
 Literature: 
+
+### scheeme
+little scheemer
 -->
