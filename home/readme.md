@@ -42,9 +42,13 @@ software  engineering, in one unified framework.
 This will be done constructively, by building a 
 general-purpose computer system from the ground up. 
 
-#### [The Elements of Computing Systems: Building a Modern Computer from First Principles]()
+#### [The Elements of Computing Systems: Building a Modern Computer from First Principles](fromNand2tetris/TEOCS)
 
-#### [Nand2Tetris](http://www.nand2tetris.org/)
+#### [From Nand to Tetris](fromNand2tetris/nand2tetris)
+
+#### [But how Do it Know? The Basic Principles of Computers for Everyone]()
+
+#### [Code: The Hidden Language of Computer Hardware and Software]()
 
 <br>
 
