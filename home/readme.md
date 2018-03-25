@@ -25,7 +25,7 @@ Links bellow lead to READMEs in their respective folders.
 
 <br>
 
-### > 6502
+### > 6502 asm
 - [Easy 6502](6502)
 
 
@@ -36,10 +36,10 @@ software  engineering, in one unified framework.
 This will be done constructively, by building a 
 general-purpose computer system from the ground up. 
 
-- [The Elements of Computing Systems: Building a Modern Computer from First Principles](fromNand2tetris/TEOCS)
-- [From Nand to Tetris](fromNand2tetris/nand2tetris)
 - [But how Do it Know? The Basic Principles of Computers for Everyone]()
 - [Code: The Hidden Language of Computer Hardware and Software]()
+- [The Elements of Computing Systems: Building a Modern Computer from First Principles](fromNand2tetris/TEOCS)
+- [From Nand to Tetris](fromNand2tetris/nand2tetris)
 
 <br>
 
