@@ -15,7 +15,13 @@ The course aims:
 Home exercises: [pt1](https://github.com/frainfreeze/studying/tree/master/university/10012-DS&A/home-exercises) | pt2
    <|>   [Homeworks](https://github.com/frainfreeze/studying/tree/master/university/10012-DS&A/homeworks)
 
-<br>
+### > 10011 - Computer Architecture
+todo.
+
+### > 10009 - Operating systems
+todo.
+
+<br><br>
 
 # Semester 1
 
