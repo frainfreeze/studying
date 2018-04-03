@@ -104,6 +104,7 @@ DS&A
         
 Misc I (summer)
     - basic HTML, CSS, JavaScript, powershell
+        https://nodeschool.io/, fcc, top
     
 Misc II (summer)
     - how to use linux and bash
