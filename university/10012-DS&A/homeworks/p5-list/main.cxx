@@ -61,7 +61,7 @@ int main()
         numbers.push_back(i+1);
     }
 
-    std::cout << "\t    list: ";
+    std::cout << "        list: ";
 
     node *temp;
     temp = numbers.begin();
