@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
-/*	implementacija dvostruko povezane liste, podrzava:
-		o Izradu prazne liste
-		o Ubacivanje na kraj liste*/
+/*	double linked list (of ints), allows you to
+		o make empty list
+		o add element on the end
+*/
 
 struct node {
     int data;
@@ -26,7 +27,8 @@ list::list()
     tail = nullptr;
 }
 
-void list::push_back(int num) {
+void list::push_back(int num)
+{
     node * tmp;
     tmp = new node;
     tmp->data = num;
@@ -42,21 +44,24 @@ void list::push_back(int num) {
     }
 }
 
-node *list::begin() {
+node *list::begin()
+{
     return head;
 }
 
-node *list::end() {
+node *list::end()
+{
     return tail;
 }
 
-int main() {
+int main()
+{
     list numbers;
     for (int i = 0; i < 10; ++i) {
         numbers.push_back(i+1);
     }
 
-    std::cout << "list: ";
+    std::cout << "\t    list: ";
 
     node *temp;
     temp = numbers.begin();
