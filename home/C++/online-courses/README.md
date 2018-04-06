@@ -15,7 +15,6 @@ Fnished. 50%. Not a good course.
 todo.
 
 ## Udemy C++ Tutorial for Complete Beginners
-
 - Basic syntax (user input, types, conditions, loops, arrays...)
 - Functions (headers and prototypes, return values and parameters...)
 - Object oriented coding (classes, data members, constructors, getters...)
@@ -26,7 +25,6 @@ todo.
 - Bonus (OOP design considerations, postfix & prefix, polymorphism, creating static libs)
 
 ## Udemy Advanced C++ Programming
-
 - exceptions (standard, custom...)
 - files (w/r/parse, structs and padding, binary files)
 - STL (vectors, 2d arrays, lsits, maps and multimaps, sets, stacks, queues...)
