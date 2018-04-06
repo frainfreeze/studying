@@ -9,7 +9,7 @@ Finished. 100%. No code for this one.
 ![pic](https://i.imgur.com/LHUlM6L.png)
 
 ## edX: Microsoft DEV210.2x - Intermediate C++
-todo.
+Fnished. 50%. Not a good course.
 
 ## Udacity C++ For Programmers (ft. Bjarne Stroustrup)
 todo.
