@@ -1,6 +1,6 @@
 General roadmap:
 I am adding and removing stuff __daily__, so to leave only 
-"essential" and most helpfull things. Consider this file 
+"essential" and most helpful things. Consider this file 
 draft. Wile I am not sorry for "wasting" my time on "bad" 
 courses and books, I wont list any of them here. 
 
@@ -20,7 +20,7 @@ Desc:
         - Know the basic guidelines of good coding style
         - Be able to use a debugger
 
-    Additionaly you will learn:
+    Additionally you will learn:
         - imperative, procedural, functional and object oriented programming
         - manual memory management, basic data structures and algorithms
         - Python, C++, SQL, basic HTML, CSS, JavaScript, powershell and bash
@@ -46,7 +46,7 @@ Python
         
     Python II (29.4.)
     -----------------------------------
-    [ ] - dive in python (partialy)
+    [ ] - dive in python (partially)
     [ ] - PEP 8
     [ ] - thinkcspython3
     [ ] - Google Python Style Guide
@@ -62,7 +62,7 @@ Python
 C++
     Cplusplus I (do 31.3.)
     -----------------------------------
-    [ ] - beggining c++ tgp
+    [ ] - beginning c++ tgp
     [ ] - mit introduction to c++
     [ ] - Udemy c++ tutorial for beginners
     [ ] - Udacity c++ for programmers
