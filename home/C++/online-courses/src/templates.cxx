@@ -11,6 +11,11 @@ T findSmaller(T input1, T input2)
         return input2;
 }
 
+template <class myType>
+myType findGreater (myType a, myType b) {
+ return (a>b?a:b);
+}
+
 //tells the compiler that this is a function-template
 template<class TYPE> 
 // TYPE is template type parameter
@@ -39,6 +44,9 @@ int main()
     PrintTwice(124);
     PrintTwice(3.25);
     
+    cout << "\n";
+    cout << findGreater(11.2,3.2);
+
     cout << "\n";
     return 0;
 }
