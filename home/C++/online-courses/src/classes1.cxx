@@ -4,20 +4,20 @@
 using namespace std;
 
 
-class Student
-{
-        string name;
-        int id;
-        int gradDate;
+class Student{
+private:
+    string name;
+    int id;
+    int gradDate;
 
-    public:
-        void setName(string nameIn);
-        void setId(int idIn);
-        void setGradDate(int dateIn);
-        string getName();
-        int getId();
-        int getGradDate();
-        void print();
+public:
+    void setName(string nameIn);
+    void setId(int idIn);
+    void setGradDate(int dateIn);
+    string getName();
+    int getId();
+    int getGradDate();
+    void print();
 };
 
 void Student::setName(string nameIn)
