@@ -5,10 +5,10 @@
 		o add element on the end
         o remove last element
 */
-template <typename T> 
+template <typename T>
 struct node {
     T data;
-    node<T> *next, *prev;
+    node<T> *next = nullptr, *prev = nullptr;
 };
 
 template <class T>
@@ -65,25 +65,25 @@ void list<T>::push_back(T num)
 template <class T>
 void list<T>::pop_back()
 {
-	node<T>* tmp;
+    node<T>* tmp;
     tmp = tail->prev;
-	if (head->next != nullptr){
-		delete tail;
-		tmp->next = nullptr;
-		tail = tmp;
-	} else {
-		delete head;
-		tail = nullptr;
-		head = nullptr;
-	}
+    if (head->next != nullptr){
+        delete tail;
+        tmp->next = nullptr;
+        tail = tmp;
+    } else {
+        delete head;
+        tail = nullptr;
+        head = nullptr;
+    }
 }
 
 template <class T>
 list<T>::~list()
 {
-	while (tail!=nullptr) {
-		pop_back();
-	}
+    while (tail!=nullptr) {
+        pop_back();
+    }
 }
 
 int main()
@@ -109,12 +109,12 @@ int main()
         std::cout << temp->data << " ";
         temp = temp->prev;
     }
-	std::cout << std::endl << std::endl;
+    std::cout << std::endl << std::endl;
 
     // floats test
     list<float> numbersf;
     for (int i = 0; i < 10; ++i) {
-        numbersf.push_back(i+1.1);
+        numbersf.push_back(static_cast<float>(i + 1.1));
     }
 
     for(int i = 0; i<5; ++i)
@@ -124,14 +124,14 @@ int main()
 
     node<float> *tempf;
     tempf = numbersf.begin();
-    while(tempf!= nullptr) {
+    while(nullptr != tempf) {
         std::cout << tempf->data << " ";
         tempf = tempf->next;
     }
 
     std::cout << "\nreverse list: ";
     tempf = numbersf.end();
-    while(tempf!=nullptr) {
+    while(nullptr != tempf) {
         std::cout << tempf->data << " ";
         tempf = tempf->prev;
     }
@@ -151,17 +151,17 @@ int main()
 
     node<std::string> *temps;
     temps = str.begin();
-    while(temps!= nullptr) {
+    while(nullptr != temps) {
         std::cout << temps->data << " ";
         temps = temps->next;
     }
 
     std::cout << "\nreverse list: ";
     temps = str.end();
-    while(temps!=nullptr) {
+    while(nullptr != temps) {
         std::cout << temps->data << " ";
         temps = temps->prev;
     }
     std::cout << std::endl;
-	return 0;
+    return 0;
 }
