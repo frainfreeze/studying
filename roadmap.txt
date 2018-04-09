@@ -234,4 +234,5 @@ https://www.fullstackpython.com/table-of-contents.html
 
 https://software-carpentry.org/lessons/
 https://metacademy.org/roadmaps/
+https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=computerscience&spec=programminglanguages
 _____________________________________________________

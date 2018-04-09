@@ -1,18 +1,18 @@
 ## edX: Microsoft: DEV210x - Introduction to C++
 Finished. 100%. No code for this one.
-
-- Module 1 Introducing C++
-- Module 2 Data Types in C++
-- Module 3 Control Statements
-- Module 4 Functions and Objects
-
 ![pic](https://i.imgur.com/LHUlM6L.png)
 
 ## edX: Microsoft DEV210.2x - Intermediate C++
-Fnished. 50%. Not a good course.
+Finished. 50%. Not a good course.
 
 ## Udacity C++ For Programmers (ft. Bjarne Stroustrup)
-todo.
+Finished.
+
+## MIT 6.096 Introduction to C++ (January IAP 2011)
+## MIT 6.S096 Introduction to C and C++ (January IAP 2013)
+## MIT 6.S096 Effective Programming in C and C++ (January IAP 2014)
+
+
 
 ## Udemy C++ Tutorial for Complete Beginners
 - Basic syntax (user input, types, conditions, loops, arrays...)
