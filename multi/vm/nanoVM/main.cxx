@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <iostream>
+#include <iomanip>
 
 #define NUM_REGS 4
+
 unsigned regs[NUM_REGS];
 
 unsigned program[] = { 0x1064, 
@@ -22,66 +25,79 @@ int reg3     = 0;
 int imm      = 0;
 
 
+int hex2dec(int x)
+{
+    int y;
+    std::stringstream ss;
+    ss << x;
+    ss >> std::hex >> y;
+    return y;
+}
+
 //fetch the next word from the program
 int fetch()
 {
-  return program[pc++];
+    return program[pc++];
 }
 
 //decode a word
 void decode( int instr )
 {
-  instrNum = (instr & 0xF000) >> 12;
-  reg1     = (instr & 0xF00 ) >>  8;
-  reg2     = (instr & 0xF0  ) >>  4;
-  reg3     = (instr & 0xF   );
-  imm      = (instr & 0xFF  );
+    instrNum = (instr & 0xF000) >> 12;
+    reg1     = (instr & 0xF00 ) >>  8;
+    reg2     = (instr & 0xF0  ) >>  4;
+    reg3     = (instr & 0xF   );
+    imm      = (instr & 0xFF  );
 }
 
 //evaluate the last decoded instruction
 void eval()
 {
-  switch( instrNum )
-  {
+    switch( instrNum ) {
     case 0: //halt
-      printf( "halt\n" );
-      running = 0;
-      break;
+        std::cout << "halt\n";
+        running = 0;
+        break;
+    
     case 1: //loadi
-      printf( "loadi r%d #%d\n", reg1, imm );
-      regs[ reg1 ] = imm;
-      break;
+        printf( "loadi r%d #%d\n", reg1, imm );
+        regs[reg1] = imm;
+        break;
+
     case 2: //add
-      printf( "add r%d r%d r%d\n", reg1, reg2, reg3 );
-      regs[ reg1 ] = regs[ reg2 ] + regs[ reg3 ];
-      break;
-  }
+        printf( "add r%d r%d r%d\n", reg1, reg2, reg3 );
+        regs[reg1] = regs[reg2] + regs[reg3];
+        break;
+    }
 }
 
 /* display all registers as 4-digit hexadecimal words */
 void showRegs()
 {
-  int i;
-  printf( "regs = " );
-  for( i=0; i<NUM_REGS; i++ )
-    printf( "%04X ", regs[ i ] );
-  printf( "\n" );
+    std::cout << "regs = ";
+
+    for(int i = 0; i < NUM_REGS; i++)
+        printf( "%04X ", regs[i]);
+  
+  std::cout << "\n";
 }
 
 //fetch, then decode, then execute
 void run()
 {
-  while(running) {
+    while(running) {
+        showRegs();
+        int instr = fetch();
+        decode(instr);
+        eval();
+    }
     showRegs();
-    int instr = fetch();
-    decode(instr);
-    eval();
-  }
-  showRegs();
+    std::cout << "100 + 200 = " << regs[2] << "\n";
 }
+
 
 int main()
 {
-  run();
-  return 0;
+    run();
+    return 0;
 }
