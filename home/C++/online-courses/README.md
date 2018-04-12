@@ -11,7 +11,8 @@ Finished. Heh.
 ## MIT 6.096 Introduction to C++ (January IAP 2011)
 Finished. Cool course.
 
-
+## cplusplus.com tutorial
+Finished.
 
 ## Udemy C++ Tutorial for Complete Beginners
 - Basic syntax (user input, types, conditions, loops, arrays...)
