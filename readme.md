@@ -40,7 +40,7 @@ Big / sets of projects that are not oriented on language per se but rather a par
 - [Virtual Machines and emulators](https://github.com/frainfreeze/DailyProgrammer/tree/master/multi/vm)
 
 <!-- # Lua
-# Clojure
+# Clojure http://clojurekoans.com/
 # Java
 # C#
 # haskel
