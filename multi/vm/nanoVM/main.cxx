@@ -41,9 +41,11 @@ int fetch()
 }
 
 //decode a word
+//( extracting individual bytes from a larger word )
+// so/10493411
 void decode( int instr )
 {
-    instrNum = (instr & 0xF000) >> 12;
+    instrNum = (instr & 0xF000) >> 12; //mask followed by a shift
     reg1     = (instr & 0xF00 ) >>  8;
     reg2     = (instr & 0xF0  ) >>  4;
     reg3     = (instr & 0xF   );
