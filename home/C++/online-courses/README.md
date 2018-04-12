@@ -6,11 +6,10 @@ Finished. 100%. No code for this one.
 Finished. 50%. Not a good course.
 
 ## Udacity C++ For Programmers (ft. Bjarne Stroustrup)
-Finished.
+Finished. Heh.
 
 ## MIT 6.096 Introduction to C++ (January IAP 2011)
-## MIT 6.S096 Introduction to C and C++ (January IAP 2013)
-## MIT 6.S096 Effective Programming in C and C++ (January IAP 2014)
+Finished. Cool course.
 
 
 
