@@ -14,6 +14,7 @@ Links bellow lead to READMEs in their respective folders.
 - [C++ primer](C++/c++primer#c-primer-5-c1114)
 - [Online courses](C++/online-courses#edx-microsoft-dev210x---introduction-to-c)
 - [Principles and Practice Using C++](C++/principles-and-practice-using-c++#programming----principles-and-practice-using-c)
+- [How to think like computer scientist, C++ version](C++/thinkcscpp)
 
 <br>
 
