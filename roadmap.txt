@@ -41,7 +41,7 @@ Python
     Python I (do 25.3.)
     -----------------------------------
     [x] - byte of python
-    [ ] - Automate the Boring Stuff with Python
+    [x] - Automate the Boring Stuff with Python
     [ ] - the art and craft of programming python
         
     Python II (29.4.)
