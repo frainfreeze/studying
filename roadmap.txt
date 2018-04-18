@@ -44,13 +44,13 @@ Python
     [x] - Automate the Boring Stuff with Python
     [x] - the art and craft of programming python
         
-    Python II (29.4.)
+    Python II (29.4.) (after the exams)
     -----------------------------------
     [ ] - dive in python (partially)
     [ ] - thinkcspython3
     [ ] - PEP 8
 
-    Python III (29.7.)
+    Python III (29.7.) (summer, PBL)
     -----------------------------------
     [ ] - Learning Python 5th Edition (A comprehensive language 
                     foundations tutorial 1640 pages, [3.3, 2.7])
@@ -69,7 +69,7 @@ C++
     [x] - Udacity c++ for programmers
     [ ] - https://google.github.io/styleguide/cppguide.html
 
-    Cplusplus II (do 29.7.)
+    Cplusplus II (do 29.7.) (after exams)
     -----------------------------------
     [ ] - think like computer scientist cpp
     [ ] - http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
@@ -78,20 +78,18 @@ C++
     [ ] - c++ primer (covers just about everything in the language)
     
 Other
-    Other I (do 31.3..)
+    Other I (do 31.3..) (after exams)
+    [x] - Code: The Hidden Language of Computer Hardware and Software
     [ ] - https://www.cs.hmc.edu/csforall/#indices-and-tables
     [ ] - edx Introduction to Computer Science and Programming using Python       
+    [ ] - Computer Science Distilled: Learn the Art...
     [ ] - The Self-taught Programmer by Cory Althoff
 
-    Other II (do 29.4.)
-    [ ] - Computer Science Distilled: Learn the Art...
-    [ ] - Code: The Hidden Language of Computer Hardware and Software
-    ? - https://github.com/ossu/computer-science#introduction-to-computer-science
-    
-    Other III (do 1.10.)
+    Other III (do 1.10.) (after the summer)
     [ ] - Joel on Software: And on Diverse and Occasionally...
     [ ] - The Mythical Man-Month
     [ ] - Programming Pearls
+    ? - https://github.com/ossu/computer-science#introduction-to-computer-science
 
 
 DS&A 
