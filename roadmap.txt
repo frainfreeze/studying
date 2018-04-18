@@ -42,28 +42,29 @@ Python
     -----------------------------------
     [x] - byte of python
     [x] - Automate the Boring Stuff with Python
-    [ ] - the art and craft of programming python
+    [x] - the art and craft of programming python
         
     Python II (29.4.)
     -----------------------------------
     [ ] - dive in python (partially)
-    [ ] - PEP 8
     [ ] - thinkcspython3
-    [ ] - Google Python Style Guide
+    [ ] - PEP 8
 
     Python III (29.7.)
     -----------------------------------
     [ ] - Learning Python 5th Edition (A comprehensive language 
                     foundations tutorial 1640 pages, [3.3, 2.7])
     [ ] - Learn More Python 3 the Hard Way (pair with learning python book)
+
     [ ] - how to make mistakes in python
     [ ] - tutorial and other https://docs.python.org/3/index.html
+    [ ] - Google Python Style Guide
 
 C++
     Cplusplus I (do 31.3.)
     -----------------------------------
     [ ] - beginning c++ tgp
-    [ ] - mit introduction to c++
+    [x] - mit introduction to c++
     [ ] - Udemy c++ tutorial for beginners
     [x] - Udacity c++ for programmers
     [ ] - https://google.github.io/styleguide/cppguide.html
