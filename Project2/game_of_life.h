@@ -8,12 +8,9 @@
 class game_of_life {
 private:
 	std::bitset<800> field; //40x20
-	
 public:
 	game_of_life();
-	void randomizeField();
 	void calculate();
 	void draw();
 };
-
 #endif

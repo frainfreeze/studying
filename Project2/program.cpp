@@ -9,11 +9,8 @@ int main() {
 	do {
 		the_game.draw();
 		the_game.calculate();
-
-		std::cout << "\n\tQuit/Next/Reset (0/1/2): ";		
+		std::cout << "\n\tQuit/Next (0/1): ";		
 		std::cin >> nxt;
-		
-		if (nxt == 2) the_game.randomizeField();
 	} while (nxt);
 
 	return 0;
