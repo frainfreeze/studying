@@ -2,7 +2,7 @@
 
 game_of_life::game_of_life()
 {
-	for (unsigned int i = 0; i < 800; ++i) {
+	for (unsigned int i = 0; i < field.size(); ++i) {
 		if (!(rand() % 4)) field[i] = true;
 	}
 }
@@ -10,22 +10,19 @@ game_of_life::game_of_life()
 void game_of_life::calculate()
 {
 	std::bitset<800> nxtField;
-	for (unsigned int i = 0; i < 800; ++i) {
+	for (unsigned int i = 0; i < field.size(); ++i) {
 		int neighbours = 0;
-		if (i > 40) if (field[i - 41] == true) neighbours++;
-		if (i > 39) if (field[i - 40] == true) neighbours++;
-		if (i > 38) if (field[i - 39] == true) neighbours++;
-
-		if (i > 0) if (field[i - 1] == true) neighbours++;
-		if (i < 799) if (field[i + 1] == true) neighbours++;
-
-		if (i < 761) if (field[i + 39] == true) neighbours++;
-		if (i < 760) if (field[i + 40] == true) neighbours++;
-		if (i < 759) if (field[i + 41] == true) neighbours++;
+		neighbours += (i > 40 && field[i - 41]);
+		neighbours += (i > 39 && field[i - 40]);
+		neighbours += (i > 38 && field[i - 39]);
+		neighbours += (i > 0 && field[i - 1]);
+		neighbours += (i < 799 && field[i + 1]);
+		neighbours += (i < 761 && field[i + 39]);
+		neighbours += (i < 760 && field[i + 40]);
+		neighbours += (i < 759 && field[i + 41]);
 
 		if (neighbours < 2 || neighbours > 3) nxtField[i] = false;
-		if (neighbours == 3) nxtField[i] = true;
-		if (field[i] == 1 && neighbours == 2) nxtField[i] = true;
+		if ((neighbours == 3) || (field[i] == 1 && neighbours == 2)) nxtField[i] = true;
 	}
 	field = nxtField;
 }
@@ -33,11 +30,8 @@ void game_of_life::calculate()
 void game_of_life::draw()
 {
 	system("cls");
-	for (unsigned int i = 0; i < 800; ++i) {
-		if (i % 40 == 0) {
-			std::cout << "\n";
-			continue;
-		}
-		field[i] ? std::cout << "#" : std::cout << " ";
+	for (unsigned int i = 0; i < field.size(); ++i) {
+		if (i % 40 == 0) std::cout << "\n";
+		else field[i] ? std::cout << "#" : std::cout << " ";
 	}
 }
