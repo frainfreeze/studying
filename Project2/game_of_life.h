@@ -7,7 +7,7 @@
 
 class game_of_life {
 private:
-	std::bitset<800> field; //40x20
+	std::bitset<800> f; //40x20
 public:
 	game_of_life();
 	void calculate();
