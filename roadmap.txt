@@ -85,7 +85,7 @@ Other
     [ ] - Computer Science Distilled: Learn the Art...
     [ ] - The Self-taught Programmer by Cory Althoff
 
-    Other III (do 1.10.) (after the summer)
+    Other II (do 1.10.) (after the summer)
     [ ] - Joel on Software: And on Diverse and Occasionally...
     [ ] - The Mythical Man-Month
     [ ] - Programming Pearls
