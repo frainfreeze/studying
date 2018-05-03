@@ -1,0 +1,354 @@
+Predavanja i tematske cjeline
+ mi1
+ - Uvodna razmatranja i osnovni pojmovi (1)
+ - Tržište država i moderna ekonomija (2)
+ - Osnovni elementi ponude i potražnje (3)
+ - Primjena ponude i potražnje (4A)
+ - Potražnja i ponašanje potrošača (5)
+ - Analiza troškova (7A + 7C)
+ - Ponuda i alokacija na konkurencijskim tržištima (8A, 8B + 8D)
+ - Nesavršena konkurencija i problem monopola (9)
+ - Oligopol i monopolistička konkurencija (10A + 10B)
+
+ mi2 
+ - Najamnine i tržište rada (13)
+ - Pregled makroekonomike (20A)
+ - Računi nacionalnog dohotka (21)
+ - Potrošnja i investicije (22)
+ - Strategije ekonomskog razvoja (28)
+ - Upravljanje globalnom ekonomijom (30 + predavanja)
+
+                 ==== MI1 ====
+Ekonomiju možemo proučavati kao znanost i vještinu. 
+Ekonomija kao znanost je protekla iz ekonomske 
+prakse a proučava i objašnjava veliko područje 
+društvenih znanosti od kojih su neke: proizvodnja,
+ponuda, raspodjela i razmjena... Ključni elementi 
+definicije su oskudni resursi, potrebe, razmjena 
+za druga dobra.
+
+Ekonomsko istraživanje
+- metode: niz postupaka koji se koriste u 
+  istraživanju ekonomske stvarnosti istraživanjem 
+  ponašanja skupa ekonomskih varijabli
+- model: pojednostavljena i idealizirana slika 
+  stvarnosti koja se fokusira samo na bitna obilježja 
+  pojave
+- kod ekonomskih znanosti nema eksperimentiranja jer 
+  se ne mogu izdvojiti međuodnosi i utjecaji ekonomskih 
+  varijabli
+
+Ekonomske discipline se dijele na temeljne: 
+politička ekonomija, emonomika, ekonomska politika te 
+specijalističke: marketing, računovodstvo, vanjska trgovina
+
+Ekonomika je grana ekonomije koja razmatra alternativne 
+uporabe rijetkih resursa radi efikasno proizvodnje 
+ekonomskih dobara unutar određenog ekonomskog i političkog 
+sustava. Djeli se na mikro i makroekonomiku
+
+Kada se govori o ekonomiji kao znanosti govorimo o teorijskoj
+ekonomiji, a kada govorimo o ekonomiji kao vještini govorimo o 
+primijenjenoj ekonomiji.
+
+Teorijska ekonomija djeli se na pozitivnu ekonomiju 
+(istražuje odnose između ekonomskih varijabli bez 
+vrijednosnih sudova o njima. Proučava ekonomske pojave 
+onakvima kakve jesu. Naziva se još i ekonomska analiza) 
+I normativnu (sadrži naputke te viziju, prosudbe i ocjenjuje 
+ekonomsku stvarnost.)
+
+Dobro - sredstvo koje je sposobno zadovoljiti neku potrebu
+
+Oskudnost je temeljni ekonomski problem  – povezivanje 
+postojanja ograničenih resursa i neograničenih želja
+
+apsolutna ogranicenost - sva dobra su ogranicena, relativna 
+ogranicenost - ogranicenost dobara u usporedbi s ljudskim potrebama
+
+Zakon oskudnosti kaže da kada dobra ne bi bila oskudna tada 
+bi se sve želje i potrebe čovjeka mogle zadovoljiti i resursi 
+se ne bi trebali racionirati budući da bi se moglo proizvoditi
+doslovno sve -tada ne bi postojali osnovni problemi u ekonomiji 
+sadržani u pitanjima što, kako i za koga proizvoditi.
+
+Ekonomska dobra mogu biti materijalna (sirovine, poluproizvodi
+i finalni proizvodi) te nematerijalna (proizvodne i ne proizvodne
+usluge)
+
+Slobodna dobra su dobra koja su s ljudskog stajalista relativno
+neogranicena poput vjetra, sunca, morske vode...
+
+Potreba = zahtjev pojedinca za dobrima i uslugama radi otklanjanja 
+nezadovoljenosti i postizanja odgovarajućih blagostanja.
+
+Cilj ekonomske znanosti je povećati standard života
+
+Tri ekonomska problema (temelji problemi ekonomske organizacije):
+ – Što proizvoditi?
+ – Kako proizvoditi?
+ – Za koga proizvoditi?
+
+Sustavi gospodarstva
+ • Tržišno gospodarstvo - Pojedinci i privatna poduzeća donose 
+   glavne odluke o proizvodnji i potrošnji
+ • Naredbodavno gospodarstvo – Država donosi sve važne odluke 
+   o proizvodnji i potrošnji
+ • Mješovito gospodarstvo – Ima elemente tržišnog i naredbodavnog
+sva drustva su mjesovita gospodarstva.
+
+Proizvodni resursi su inputi činitelja proizvodnje koji se 
+koriste u proizvodnji dobara i usluga. Ekonomisti proizvodne 
+resurse dijele u tri temeljne kategorije: Zemlja, Rad, Kapital
+
+Rad su sve ljudske fizičke i umne sposobnosti koje se mogu 
+upotrijebiti u proizvodnji dobara i usluga
+
+Prednosti slobodnog tržišta: Omogućava 
+formalno - pravnu slobodu i jednakost građana kao poduzetnika i 
+potrošača, Potiče inicijativu, produktivnost i poduzetništvo,
+U danim okolnostima je efikasan mehanizam alokacije i korištenja 
+rijetkih resursa i dobara
+
+Nedostaci slobodnog tržišta: Pojava monopola koji smanjuju 
+proizvodnju i povećavaju cijenu, Pojava masovne nezaposlenosti,
+Zagađivanje okoliša i drugi negativni eksterni efekti, Nejednakost
+u raspodjeli dohotka i potrošnje, Cikličko kretanje privrede
+(recesija – ekspanzija), Nedostatak brige za razvoj javnih dobara
+
+ekonomski model je pojednostavljeni prikaz ekonomske realnosti
+Ekonomski modeli najčešće su dijagrami i jednadžbe
+Ekonomski modeli omogućavaju nam da lakše razumijemo stvarnost i 
+međuodnose različitih elemenata koji djeluju na cijeli ekonomski 
+sustav. mi cemo obraditi jedan: Kružni tok privrede
+
+Gospodarstvo se sastoji do milijuna sudionika od kojih se svaki bavi
+ekonomskim aktivnostima – proizvodi, prodaje, kupuje, zapošljava... 
+Kružni tok privrede pojednostavljuje razmišljanje o svim 
+aktivnostima svih sudionika kružnog toka. Prikazuje kako je 
+gospodarstvo organizirano i kako sudionici gospodarstva međusobno  djeluju
+
+Kruzni tok privrede promatra dva donosioca odluka: domacinstvo i 
+poduzeca, koji su nositelji ponude i potraznje
+
+Poduzeća proizvode dobra i usluge. Koriste faktore proizvodnje: 
+zemlja, rad, kapital. Kućanstva su vlasnici faktora proizvodnje,
+potrošači dobara i usluga koja poduzeća proizvode
+
+Faktori proizvodnje (utrosak/input): zemlja, radna snaga, kapital
+
+U kruznom toku privrede kucanstva i poduzeca medusobno djeluju kao
+dva tipa trzista: trziste roba i usluga na kojem su domacinstva
+kupci a poduzeca prodavaci, te trziste faktora proizvodnje
+na kojem su domacinstva prodavaci, poduzeca kupci.
+
+Trziste je mehanizam razmjene roba, odnosno kao skup 
+veza i odnosa između subjekata ponude i subjekata potražnje. 
+Trziste je mjesto na kkojem se susrecu ponuda i potraznja.
+Mikroekonomika razmatra ona tržišta koja procesiraju razmjenu 
+između potencijalnih potrošača i proizvođača posredstvom zakonom 
+utvrđenih kanala proizvodni modeli ekonomski model
+
+Država je instutucija koja se bavi  političkom organizacijom 
+ruštva i rješavanjem kolektivnih i političkih problema neke 
+društvene zajednice, a ima  monopol uporabe sile i regulacije 
+velikih društvenih sustava
+
+zadatci drzave su briga o javnim dobrima, odrzavanje opce ekonomske
+ravnoteze, korekcija raspodjele dobrima, otklanjanje trž. nedostataka
+
+Nedostaci državne regulacije su nedostatak znanja i moralne
+odgovornosti nositelja vlasti te spora procedura donosenja odluka
+
+Tržišta funkcioniraju prema zakonu ponude i potražnje. 
+Ponuda je količina dobara i usluga koju su ekonomski subjekti 
+spremni iznijeti na tržište pri određenoj cijeni.
+Između ponuđene količine (Qs) i tržišne cijene (P) postoji odnos 
+koji se naziva funkcijom ponude. Qs=f(p)
+
+Odrednice ponude su cijene dobara ili usluge, cijena inputa, 
+broj ponudaca, drzavna porezna politika, tehnicki napredak...
+
+Supstitut je dobro koje može uspješno zamijeniti drugo. (bus/vlak)
+Komplementi su dobra koja se u korištenju međusobno 
+nadopunjuju. (gorivo, automobil)
+
+Poveća li se cijena jednog supstituta porast će potražnja za 
+drugim supstitutom i obrnuto. Smanji li se cijena komplemenata to 
+će izazvati porast potražnje obaju proizvoda i obrnuto.
+
+Faktori koji mogu utjecati na povećanje ponuđene količine su
+inovacije u proizvodnji, pad cjena faktora proizvodnje (inputa),
+pad potražnje za supstitutima i obratno za smanjenje ponudene kolicine.
+
+Potražnja je količina dobara i usluga koju su kupci spremni  
+platiti po određenoj cijeni. Funkcija potražnje pokazuje odnos 
+između tražene količine (Qd) i tržišne cijene (P). Qd=f(p)
+
+Temeljni elementi potraznje su cjena dobra, dohodak, ocekivano
+kretanje cjena, a sekundarni elementi su demografski, zemljopisni,
+drustveni, porezni i politicki faktori.
+
+Zakon opadajuće potražnje: potrosaci kupuju vise nekog dobra kad
+je cije tog dobra niza ako su ostali trzisni uvjeti ostali 
+nepromjenjeni, odnosno kupuju manje nekog dobra kada je cjena visa.
+
+Smanjenje potražnje zbog porasta cijena je posljedica djelovanja 
+efekta supstitucije i efekta dohotka
+
+Efekt supstitucije se ocituje u preusmjeravanju potraznje na
+srodno ili slicno dobro ako dode do porasta cjena pri danom dohotku.
+Efekt dohotka se ocituje u samnjenju trazene kolicine uslijed pada
+kupovne moci izazvane smanjenjem dohotka.
+
+Čimbenici koji utječu na potražnju su cjena dobra, cjene supstituta
+i komplemenata, velicina trzista, prosjecan dohodak...
+
+Elastičnost daje informaciju o tome koliko je neka 
+ekonomska veličina osjetljiva na promjenu neke druge 
+ekonomske veličine s kojom se nalazi u zavisnom odnosu.
+Mjeri se koeficijentom elastičnosti, koji općenito izražava 
+odnos između postotne promjene zavisne ekonomske veličine i 
+postotne promjene nezavisne ekonomske veličine.
+Elastičnost potražnje nam daje informaciju za koliko 
+će potražnja pasti, ako se cijena poveća.
+
+Cjenovna elastičnost potražnje mjeri kako, odnosno 
+koliko tražena količina reagira na promjenu cijene.
+Cjenovna elastičnost potražnje je svojstvo 
+potražnje da se mijenja pod utjecajem promjene 
+cijena uz pretpostavku ceteris paribus. 
+Ed = %tna promjena trazene kolicine/ %tna promjena cjene
+
+Ceteris paribus (hrvatski: "ako je sve ostalo isto, ako se ništa ne mijenja").
+
+ako je koeficijent cjenovne elasticnosti potraznje veci od 1 
+govorimo o elasticnoj potraznji, ako je jedna 1 radi se o jedinicno 
+elasticnoj potraznji i ako je manji od jedan o neelasticnoj 
+potraznji. takoder postoje slucajevi savrsno elasticne i savrseno 
+ne elasticne potraznje.
+
+Neelastična potražnja: manja cijena = manji prihod, Elastična 
+potražnja: manja cijena = veći prihod, Jedinično elastična 
+potražnja: manja cijena = isti prihod Ukupan prihod = cijena * količina
+
+Odrednice elastičnosti potražnje su intenzitet potreba, supstituti,
+duljina vremena reakcije potrosaca te relativni udio dobra u izdacima potrosaca
+
+Što je veći stupanj nužnosti dobra, manja je elastičnost potražnje 
+za njim, za razliku od luksuznih dobara.
+
+Ako neko dobro ima lako dostupne supstitute njegova potražnja je 
+elastična (neelasticna ako nema lako dostupne supstitute)
+
+Elastičnost potražnje veća je u dugom roku nego u kratkom roku, jer 
+potrošači imaju više vremena za prilagođavanje promjenama. 
+
+Elastičnost ponude je njeno svojstvo  da se različitim intenzitetom 
+mijenja na promjenu cijena. Izražava se kao odnos između 
+postotne promjene nuđene količine i postotne promjene cijena
+Es = %tna promjena ponudene kolicine / %tna promjena cjene
+
+Elastičnost se ponude mjeri koeficijentom elastičnosti ponude. 
+on moze biti Veći od 1 (elastična ponuda), Jednak 1 i (jedinično 
+elastična ponuda), Manji od 1 (neelastična ponuda). takoder postoje
+ekstremni slucajevi savrseno neelasticne i savrseno elasticne ponude
+
+Odrednice elastičnosti ponude su raspoloživost proizvodnih 
+kapaciteta, mobilnost proizvodnih faktora, stanje zaliha, vrijeme,
+duljina proizvodnog procesa.
+
+Teorija potrošačeva izbora objašnjava čime se ljudi rukovode u svom 
+odabiru dobara i usluga odnosno zašto neka dobra preferiraju više, 
+a druga manje. korisnost = zadovoljstvo
+
+Pod pojmom korisnosti podrazumijeva se subjektivni užitak, odnosno 
+zadovoljstvo što ga potrošač osjeća trošeći neko dobro- razlikuje 
+se od potrošača do potrošača ovisno o njegovim potrebama
+
+Objektivne teorije vrijedno
+1. Radna teorija vrijednosti (dobro vrijedi onoliko koliko je rada u njega utrošeno)
+2. Teorija troškova proizvodnje (dobro vrijedi onoliko koliki je njegov trošak proizvodnje)
+
+Subjektivne 
+teorije vrijednosti
+1. Teorije granične korisnosti (kardinalna teorija)
+2. Teorija indiferencije(ordinalna teorija)
+3. Teorija otkrivene preferencije
+
+Pod pretpostavkom da svotu korisnosti koju potrošač ima od uporabe 
+pojedinih jedinica nekog dobra možemo kvantitativno izraziti, 
+razlikujemo: Graničnu korisnost (GK) i Ukupnu korisnost (UK)
+
+Ukupna korisnost je korisnost cjelokupne količine nekog 
+dobra ili usluge koja se dobiva  zbrajanjem graničnih korisnosti 
+svakog trošenog dobra.
+
+Krivulja ukupne korisnosti je pozitivnog nagiba i pokazuje kako se 
+povećanjem potrošnje ukupna korisnost povećava ali po sve nižoj 
+stopi. krivuda doseze max kada je granicna vrijednost 0
+
+Granična korisnost = dodatna korisnost koja se dobiva od korištenja 
+dodatne jedinice neke robe. Izračunava se kao odnos  između 
+promjene ukupne korisnosti i promjene količine GK = ΔUK / ΔQ
+
+Zakon opadajuće granične korisnosti = kada količina utrošenog dobra 
+raste, granična korisnost tog dobra ima tendenciju smanjenja
+Granična korisnost je korisnost dodatne jedinice nekog dobra.
+
+Izraz “granični” ključni je ekonomski pojam i uvijek označava “dodatni” ili “ekstra"
+
+Temeljni je uvjet maksimalnog zadovoljstva ili korisnosti načelo 
+jednakograničnosti. Ono kaže da će potrošač s fiksnim dohotkom koji 
+je suočen s danim tržišnim cijenama postići maksimum zadovoljstva 
+ili korisnosti kada je granična korisnost posljednjeg dolara 
+utrošenog za svako dobro jednaka graničnoj korisnosti posljednjeg 
+dolara utrošenog za bilo koje drugo dobro.
+
+Opća granična korisnost po dolaru za sva dobra pri potrošačevoj 
+ravnoteži naziva se granična korisnost dohotka.
+
+Potrošačev višak predstavlja razliku između veće vrijednosti nekog 
+dobra i njegove manje cijene
+
+Proizvodnja je transformacija proizvodnih faktora (inputa) u neke 
+proizvode ili usluge (outpute). Funkcija proizvodnje pokazuje 
+odnos  između maksimalnog rezultata proizvodnje (outputa) i 
+proizvodnih inputa. U njoj su proizvodni inputi neovisna varijabla 
+a output zavisna. Q = f(L,K,N) (Q veličina outputa, L kolicina
+rada, K količina kapitala i N količina prirodnih resursa)
+
+Tehnološka analiza proizvodnje promatra samo količinske promjene u 
+inputima i outputima. Ekonomska analiza proizvodnje promatra i 
+količinske, ali i vrijednosne promjene u inputima i outputima
+
+Odluka o inputima ovisi o usporedbi koristi i troškova. Jedan od
+pristupa je usporediti granične veličine koristi i troškova, tj. 
+dodatnu proizvodnju koja nastaje dodatnim povećavanjem inputa
+
+Savrsena konkurencija je oblik tržišne strukture na kojoj postoji
+veliki broj prodavača, ali i kupaca istog homogenog proizvoda
+
+Prosječni prihod (AR)– koliko prihoda poduzeće ostvari za tipičnu jedinicu proizvoda 
+Granični prihod (MR)–koliki se prihod ostvaruje prodajom dodatne jedinice proizvoda
+Poduzeće maksimizira dobit kada je P= MR=MC (mc - granicni trosak)
+
+Ako neko poduzeće može znatno utjecati na tržišnu cijenu svog 
+proizvoda, tada se to poduzeće klasificira kao “sudionik nepotpune 
+klasificira kao “sudionik nepotpune konkurencije”. Posljedice 
+nepotpune konkurencije su previsoke cjene, manja potrosnja i visoki troskovi.
+
+monopol je oblik nepotpune konkurencije gdje cjelokupnu ponudu 
+kontrolira samo jedno poduzeće.
+
+Oligopol je tržišna struktura u kojoj dominira više velikih 
+proizvođača homogenih (čelik, bakar, cement) ili diferenciranih 
+proizvoda (automobili, elektronika, kućanski aparati). Postoje 
+barijere ulasku na tržište
+
+Duopol je oblik nesavrsene konkurencije i najednostavniji oblik
+oligopola gdje cjeloukupnu ponudu kontroliraju dva poduzeca. mogu
+biti sudionicki i nesudionicki.
+
+Kruzni tok privrede:
+
