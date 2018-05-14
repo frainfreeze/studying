@@ -24,7 +24,7 @@ Desc:
         - imperative, procedural, functional and object oriented programming
         - manual memory management, basic data structures and algorithms
         - Python, C++, SQL, basic HTML, CSS, JavaScript, powershell and bash
-        - how to use linux and setup and automate your development enviroment
+        - how to use linux and setup and automate your development environment
         - and many more!
 ___________________________________
 lvl 0 timeline:
@@ -46,9 +46,9 @@ Python
         
     Python II (29.4.) (after the exams)
     -----------------------------------
-    [ ] - dive in python (partially)
+    [x] - dive in python (partially)
     [ ] - thinkcspython3
-    [ ] - PEP 8
+    [x] - PEP 8
 
     Python III (29.7.) (summer, PBL)
     -----------------------------------
@@ -63,11 +63,11 @@ Python
 C++
     Cplusplus I (do 31.3.)
     -----------------------------------
-    [ ] - beginning c++ tgp
+    [x] - beginning c++ tgp
     [x] - mit introduction to c++
     [ ] - Udemy c++ tutorial for beginners
     [x] - Udacity c++ for programmers
-    [ ] - https://google.github.io/styleguide/cppguide.html
+    [x] - https://google.github.io/styleguide/cppguide.html
 
     Cplusplus II (do 29.7.) (after exams)
     -----------------------------------
@@ -97,6 +97,8 @@ DS&A
     - Grokking Algorithms
     - Data Structures and Algorithms in Python
     - Introduction to algorithms
+    https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/index.htm
+    https://www.coursera.org/specializations/algorithms
     - Data Structures and Algorithms in C++ 
         (very hard book if no previous ds&a knowledge)
     (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
