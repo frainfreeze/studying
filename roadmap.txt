@@ -1,4 +1,4 @@
-                        General roadmap:
+                            General roadmap:
         I am adding and removing stuff __daily__, so to leave only 
         "essential" and most helpful things. Consider this file 
         draft. While I am not sorry for "wasting" my time on "bad" 
@@ -7,49 +7,56 @@
 -----------------Stage 1 (software engineering and CS)--------------------
 --------------------------------------------------------------------------
 Python (draft)
+    Meta
+    - Hitch hikers guide to python
+    - Python Pocket Reference, 5th Edition (A reference supplement to the learning & programming 
+        python, 260 pages (January 2014) [3.4, 2.7])
+    
     Python I (draft)
     ----------------------------------------------------------------------
+    Intro
     [x] - byte of python
-    [x] - Automate the Boring Stuff with Python
-    [x] - the art and craft of programming python
     [x] - dive in python (partially)
-    [ ] - thinkcspython3
-    [ ] - Learning Python 5th Edition (A comprehensive language 
-                    foundations tutorial 1640 pages, [3.3, 2.7])
-    [ ] - Learn More Python 3 the Hard Way (pair with learning python book)
-    [ ] - how to make mistakes in python
-    [ ] - tutorial and other https://docs.python.org/3/index.html
     [x] - PEP 8
     [ ] - Google Python Style Guide
+    [ ] - thinkcspython3
+    
+    Medium
+    [ ] - Learning Python 5th Edition (A comprehensive language foundations tutorial 1640pg, [3.3, 2.7])
+    [ ] - Learn More Python 3 the Hard Way (pair with learning python book)
+    [ ] - How to make mistakes in python
     
     Python II (draft)
     ----------------------------------------------------------------------
-    [ ] - hitch hikers guide to python
-    [ ] - https://docs.python.org/3.6/tutorial/index.html ?
+    Advanced
     [ ] - programming python (hard, A full-scale applications programming tutorial 1630 pages [3.2])
-    [ ] - fluent python ( A great intermediate Python book for those looking for the next step.)
-    [ ] - effective python ( Also a great intermediate Python book for those looking for the next step.)
-    [ ] - python cookbook
-    [ ] - Python Pocket Reference, 5th Edition (A reference supplement to the learning&programming 
-    [ ]         python, 260 pages (January 2014) [3.4, 2.7])
-    [ ] - stackoverflow.com/questions/2573135 ?
-    [ ] - reddit.com/r/Python/comments/1knw7z ?
-    [ ] - reddit.com/r/Python/comments/7cs8dq ?
-    [ ] - stackoverflow.com/questions/101268/hidden-features-of-python ?
+    [ ] - python cookbook (for experienced Python programmers who want to focus on modern tools and idioms)    
+    [ ] - fluent python (A great intermediate Python book for those looking for the next step.)
+    [ ] - effective python (Also a great intermediate Python book for those looking for the next step.)
+    
+    Misc
+    [ ] - tutorial and other https://docs.python.org/3/index.html
+    [ ] - stackoverflow.com/questions/2573135 (Python progression path - From apprentice to guru)
+    [ ] - reddit.com/r/Python/comments/1knw7z (Python interview questions)
+    [ ] - reddit.com/r/Python/comments/7cs8dq (Senior Python Programmer tricks)
+    [ ] - stackoverflow.com/questions/101268  (Hidden features of Python)
 
 
 C plus plus (draft)
     Reference Style - All Levels
-    - the c++ programing lang ? (more of a all level reference)
+    - the c++ programing lang (all level reference)
     - C++ Standard Library Tutorial and Reference (Nicolai Josuttis)
 
     Cpp I (reviewed, finalised)
     ----------------------------------------------------------------------
+    Intro
     [x] - beginning c++ tgp
     [x] - mit introduction to c++
     [ ] - Udemy c++ tutorial for beginners
     [x] - Udacity c++ for programmers  
     [ ] - think like computer scientist cpp
+    
+    Medium
     [ ] - udemy advanced c++
     [ ] - Programming - Principles and Practice Using C++
     [ ] - c++ primer (covers just about everything in the language)
@@ -58,19 +65,22 @@ C plus plus (draft)
 
     Cpp II (reviewed)
     ----------------------------------------------------------------------
-    //Introductory, with previous programming experience
+    Introductory, with previous programming experience
     [ ] - a tour of c++  ( tutorial overview of all of standard C++)
     [ ] - accelerated c++ (covers tour on 1/4 of space)
-    //Best practices
+    
+    Best practices
     [ ] - Effective Modern C++ (Scott Meyers) 
     [ ] - Effective STL (Scott Meyers) 
-    //Intermediate
+    
+    Intermediate
     [ ] - More Effective C++ (Scott Meyers) 
     [ ] - Exceptional C++ (Herb Sutter) 
     [ ] - More Exceptional C++ (Herb Sutter) 
     [ ] - Exceptional C++ Style (Herb Sutter)
     [ ] - C++ Coding Standards (Herb Sutter and Andrei Alexandrescu) 
-    //Advanced
+    
+    Advanced
     [ ] - Modern C++ Design (Andrei Alexandrescu) 
     [ ] - C++ Concurrency In Action (Anthony Williams)
 
@@ -79,33 +89,46 @@ C plus plus (draft)
     - Object-Oriented Programming in C++ ? (three months)
     - http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3242.pdf
 
-C (draft)
+
+Web development (draft)
+    HTML, CSS, JavaScript
+        - https://nodeschool.io/
+        - fcc
+        - top
+
+
+C (reviewed, finalised)
     [ ] - K&R C
     [ ] - Expert C Programming: Deep C Secrets
     [ ] - hacking art of exploitation
-    
-    - ? cs 50
+
+
+Lua (reviewed, finalised)
+    [ ] - Programming In Lua
+     - that's it, just read lots of source code now.
 
 
 Lisp(es) (draft)
     [ ] - The Little Schemer - Introduction to Scheme and functional programming in general
-    [ ] - The Seasoned Schemer - Followup to Little Schemer.
     [ ] - Structure and Interpretation of Computer Programs ( The definitive book on Lisp )
     
-    - ? Practical Common Lisp - A good introduction to Lisp with several examples of practical use.
-    - ? On Lisp - Advanced Topics in Lisp
-    - ? How to Design Programs - An Introduction to Computing and Programming
-    - ? Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp - an approach to high quality Lisp programming
+    Other (for review)
+    [ ] - The Seasoned Schemer - Followup to Little Schemer.
+    - Practical Common Lisp - A good introduction to Lisp with several examples of practical use.
+    - On Lisp - Advanced Topics in Lisp
+    - How to Design Programs - An Introduction to Computing and Programming
+    - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp - an approach to high quality Lisp programming
 
 
-DS&A (draft)
-    [ ] - Grokking Algorithms
-    [ ] - Data Structures and Algorithms in Python
-    [ ] - Introduction to algorithms
-    ? - https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/index.htm
-    ? - https://www.coursera.org/specializations/algorithms
-    ? - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
-    ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
+Clojure (draft)
+    Meta
+    - https://github.com/matthiasn/Clojure-Resources
+
+    [ ] - Clojure for the Brave and True
+    [ ] - Clojure in Action, Amit Rathore, 2011.
+    [ ] - Practical Clojure, L. VanderHart, S. Sierra, 2010.
+    [ ] - http://clojure-doc.org/
+
 
 
 General CS books (draft)
@@ -137,6 +160,15 @@ General CS books (draft)
 
 
 Drafts
+    DS&A (draft)
+        [ ] - Grokking Algorithms
+        [ ] - Data Structures and Algorithms in Python
+        [ ] - Introduction to algorithms
+        ? - https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/index.htm
+        ? - https://www.coursera.org/specializations/algorithms
+        ? - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
+        ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
+        
     Java (draft)
         ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
         ? - Effective Java - Recommended by pek as a great intermediate text.
@@ -145,7 +177,7 @@ Drafts
         
     C# (draft)
         ? - the yellow book
-        
+
     Big data, machine learning and data mining
         ? - https://metacademy.org/roadmaps/
         ? - https://github.com/prakhar1989/awesome-courses
@@ -179,12 +211,24 @@ Drafts
         ? - https://github.com/ossu/computer-science#pro-cs
 
     Misc (summer)
-        - basic HTML, CSS, JavaScript, powershell
-            https://nodeschool.io/, fcc, top
-        - how to use linux and bash
-        - how to setup and automate your development enviroment
-        - ? xlearning.com/skils/5545 (zsh, tmux, vim)
-        - ? nand2tetris***
+        - shell ? https://swcarpentry.github.io/shell-novice/
+        - git ? https://swcarpentry.github.io/git-novice/
+        - hg ? https://swcarpentry.github.io/hg-novice/
+        - how to setup and automate your development enviroment ? xlearning.com/skils/5545 (zsh, tmux, vim)
+        - ??? nand2tetris
+
+Rough deadlines
+1.9.  C++ II
+1.10. Web Dev I, Misc I
+1.11. Python I
+
+Uni 2 s3: Web Dev II, Python II, C++ II
+Uni 2 s4: Java, C#, start big data, ML, DS&A
+
+Pause year: C, lisp, lua, clojure, big data, ML
+or:
+Uni 3 s5: C, lisp, big data, ML
+Uni 3 s6: lua, clojure, big data, ML
 
 
 
@@ -199,6 +243,8 @@ https://en.wikipedia.org/wiki/Category:Education
 https://en.wikipedia.org/wiki/Category:Behavior_modification
 https://en.wikipedia.org/wiki/Category:Cognition
 https://en.wikipedia.org/wiki/Category:Memory
+
+
 
 
 -------------------stage 3 (proto-science and research)-------------------
@@ -226,7 +272,6 @@ _____________________________________________________
 - riptutorial/stackoverflow docs
 - https://techdevguide.withgoogle.com/
 - https://www.fullstackpython.com/table-of-contents.html
-- https://software-carpentry.org/lessons/
-- https://metacademy.org/roadmaps/
+
 - https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=computerscience&spec=programminglanguages
 _____________________________________________________
