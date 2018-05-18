@@ -214,16 +214,17 @@ Drafts
         - shell ? https://swcarpentry.github.io/shell-novice/
         - git ? https://swcarpentry.github.io/git-novice/
         - hg ? https://swcarpentry.github.io/hg-novice/
+        - byte of vim?
         - how to setup and automate your development enviroment ? xlearning.com/skils/5545 (zsh, tmux, vim)
         - ??? nand2tetris
 
 Rough deadlines
-1.9.  C++ II
+1.9.  C++ I
 1.10. Web Dev I, Misc I
 1.11. Python I
 
-Uni 2 s3: Web Dev II, Python II, C++ II
-Uni 2 s4: Java, C#, start big data, ML, DS&A
+Uni 2 s3: Python II, C++ II, Java
+Uni 2 s4: C#, start big data, ML, DS&A
 
 Pause year: C, lisp, lua, clojure, big data, ML
 or:
@@ -272,6 +273,6 @@ _____________________________________________________
 - riptutorial/stackoverflow docs
 - https://techdevguide.withgoogle.com/
 - https://www.fullstackpython.com/table-of-contents.html
-
+- exercism.io
 - https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=computerscience&spec=programminglanguages
 _____________________________________________________
