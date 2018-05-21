@@ -15,7 +15,7 @@ Python (draft)
     Python I (draft)
     ----------------------------------------------------------------------
     Intro
-    [x] - byte of python
+    [x] - byte of python*
     [x] - dive in python (partially)
     [x] - PEP 8
     [ ] - Google Python Style Guide
@@ -50,7 +50,7 @@ C plus plus (draft)
     Cpp I (reviewed, finalised)
     ----------------------------------------------------------------------
     Intro
-    [x] - beginning c++ tgp
+    [x] - beginning c++ tgp*
     [x] - mit introduction to c++
     [ ] - Udemy c++ tutorial for beginners
     [x] - Udacity c++ for programmers  
@@ -59,7 +59,7 @@ C plus plus (draft)
     Medium
     [ ] - udemy advanced c++
     [ ] - Programming - Principles and Practice Using C++
-    [ ] - c++ primer (covers just about everything in the language)
+    [ ] - c++ primer* (covers just about everything in the language)
     [ ] - http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
     [x] - https://google.github.io/styleguide/cppguide.html
 
