@@ -16,10 +16,10 @@ Python (draft)
     ----------------------------------------------------------------------
     Intro
     [x] - byte of python*
-    [x] - dive in python (partially)
-    [x] - PEP 8
+    [x] - thinkcspython3
+    [ ] - dive in python (partially)
+    [ ] - PEP 8
     [ ] - Google Python Style Guide
-    [ ] - thinkcspython3
     
     Medium
     [ ] - Learning Python 5th Edition (A comprehensive language foundations tutorial 1640pg, [3.3, 2.7])
@@ -54,7 +54,6 @@ C plus plus (draft)
     [x] - mit introduction to c++
     [ ] - Udemy c++ tutorial for beginners
     [x] - Udacity c++ for programmers  
-    [ ] - think like computer scientist cpp
     
     Medium
     [ ] - udemy advanced c++
