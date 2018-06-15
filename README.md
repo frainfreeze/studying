@@ -1,1 +1,1 @@
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://raw.githubusercontent.com/frainfreeze/DS-A-homework-2/master/zadatak2.gif)
