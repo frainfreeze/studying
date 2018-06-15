@@ -10,7 +10,7 @@ struct point { int x = 0, y = 0; } start, dest, current, goal;
 int main() { //sramim se.
 	int q, e, r, t;
 	std::cout << "Unesite a.x, a.y, b.x, b.y s razmacima izmedu brojeva (a 0-19, b 0-39): ";
-	std::cin >> q >> e >> r >> t; //sanatize input??
+	std::cin >> q >> e >> r >> t; //sanitize input??
 	start = { q,e };
 	dest = { r,t };
 	current = start;
@@ -40,8 +40,7 @@ int main() { //sramim se.
 		}
 
 		for (int i = 0; i < 20; ++i) {
-			for (int j = 0; j < 40; ++j) 
-				std::cout << field[i][j];
+			for (int j = 0; j < 40; ++j) std::cout << field[i][j];
 			std::cout << "\n";
 		}
 	}
