@@ -14,23 +14,19 @@ int main() { //sramim se.
 	start = { q,e };
 	dest = { r,t };
 	current = start;
-
 	field[5][1] = '*'; field[5][2] = '*'; field[5][3] = '*'; field[5][4] = '*';
 
 	while (!end) {
 		std::this_thread::sleep_for(std::chrono::milliseconds(100));
 		system("CLS");
-		if (current.x == goal.x && current.y == goal.y) {
-			end = true;
-		}
+		if (current.x == goal.x && current.y == goal.y) end = true;
 		else { // path finding
 			if (current.x != goal.x && field[current.x + 1][current.y] != '*')  current.x++;
 			else if (current.y != goal.y && field[current.x][current.y + 1] != '*') current.y++;
 			steps++;
 		}
 
-		//fill array
-		for (int i = 0; i < 20; ++i) {
+		for (int i = 0; i < 20; ++i) {//fill array
 			for (int j = 0; j < 40; ++j) {
 				if (field[i][j] == 'B') goal = { i,j };
 				if (i == start.x && j == start.y)                 field[i][j] = 'A';
@@ -44,9 +40,8 @@ int main() { //sramim se.
 		}
 
 		for (int i = 0; i < 20; ++i) {
-			for (int j = 0; j < 40; ++j) {
+			for (int j = 0; j < 40; ++j) 
 				std::cout << field[i][j];
-			}
 			std::cout << "\n";
 		}
 	}
