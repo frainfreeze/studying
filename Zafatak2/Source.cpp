@@ -17,7 +17,6 @@ int main() { //sramim se.
     for(;;) {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         system("CLS");
-        if (current.x == goal.x && current.y == goal.y) break;
         if (current.x != goal.x && field[current.x + 1][current.y] != '*')      current.x++;
         else if (current.y != goal.y && field[current.x][current.y + 1] != '*') current.y++;
         steps++;
@@ -38,6 +37,7 @@ int main() { //sramim se.
             for (int j = 0; j < 40; ++j) std::cout << field[i][j];
             std::cout << "\n";
         }
+    if (current.x == goal.x && current.y == goal.y) break;
     }
     std::cout << "done in: " << steps << " steps." << "\n";
     return 0;
