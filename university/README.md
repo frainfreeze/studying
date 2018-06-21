@@ -1,7 +1,7 @@
 # Semester 2
 
 [p](https://github.com/frainfreeze/studying/blob/master/university/skripte/Kucar_atari2600.pdf)
-[p](https://github.com/frainfreeze/studying/tree/master/university/10012-DS&A/home-exercises)
+[p](https://github.com/frainfreeze/studying/blob/master/university/skripte/KaT%20OS.pdf)
 
 [summaries](https://github.com/frainfreeze/studying/blob/master/university/skripte.md#semestar-2)
 
