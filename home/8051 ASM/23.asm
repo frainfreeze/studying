@@ -5,26 +5,26 @@ MOV R0, #30h
 MOV R1, #40h
 MOV R2, #16
 
-LOOP:
+petlja:
 	MOV A, @R0
 	MOV B, #2
 	DIV AB	
 	MOV A, B
-	JZ EVEN
+	JZ paran
 
-	ODD: 
+	neparan: 
 		INC R0
-		DJNZ R2, LOOP
-		JMP DONE
+		DJNZ R2, petlja
+		JMP kraj
 	
-	EVEN:
+	paran:
 		MOV A, @R0
 		MOV @R1, A
 		INC R0
 		INC R1
-		DJNZ R2, LOOP
+		DJNZ R2, petlja
 
-DONE:
+kraj:
 
 END
 

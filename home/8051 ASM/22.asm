@@ -9,15 +9,14 @@ MOV B, #2
 MOV A, 25h
 DIV AB
 MOV A, B
-JZ EVEN
+JZ paran
 
-ODD:
+neparan:
 	MOV 27h, #1
-	JMP DONE
+	JMP kraj
 
-EVEN:
+paran:
 	MOV 26h, #1
 
-DONE:
-
+kraj:
 END 

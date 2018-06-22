@@ -6,21 +6,21 @@ MOV 2Bh, #20h
 
 MOV A, 2Ah
 MOV B, 2Bh
-CJNE A, B, DIF
+CJNE A, B, drukciji
 
-SAME:
+isti:
 	MOV 2Ch, #0FFh
-	JMP DONE
+	JMP kraj
 
-DIF:
+drukciji:
 	SUBB A, B
 	JC BGRT
 	MOV 2Ch, #2Ah
-	JMP DONE
+	JMP kraj
 
 BGRT:
 	MOV 2Ch, #2Bh
 
-DONE:
+kraj:
 
 END

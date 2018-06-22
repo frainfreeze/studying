@@ -6,17 +6,17 @@ MOV R0, #10h
 MOV R1, #70h
 MOV R2, #8h
 
-CHECK:
+cc:
 	MOV A, @R0
-	JZ ISZERO
+	JZ jenula
 	INC R0
-	JMP CHECK
+	JMP cc
 
-ISZERO:
+jenula:
 	MOV A, R0
 	MOV @R1, A
 	INC R1
 	INC R0
-	DJNZ R2, CHECK
+	DJNZ R2, cc
 	
 END
