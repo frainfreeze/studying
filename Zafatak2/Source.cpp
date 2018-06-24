@@ -15,13 +15,13 @@ int main() { //sramim se.
 
     while (!(atm.x == goal.x && atm.y == goal.y)) {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
-if((atm.x != goal.x && field[atm.x + 1][atm.y] != '*') && (atm.x+1 != last.x))  {
+        if((atm.x != goal.x && field[atm.x + 1][atm.y] != '*') && (atm.x+1 != last.x))  {
             last.x = atm.x;
             atm.x++;
         } else if ((atm.y != goal.y && field[atm.x][atm.y + 1] != '*') && (atm.y+1 != last.y )){
             last.y = atm.y; last.x = atm.x;
             atm.y++;
-        } else if ((field[atm.x - 1][atm.y] != '*') && (atm.x-1 != last.x))  {// ne radi ako se doda atm goal??? ((atm.x != goal.x && field[atm.x - 1][atm.y] != '*') && (atm.x-1 != last.x))  {
+        } else if ((field[atm.x - 1][atm.y] != '*') && (atm.x-1 != last.x))  {
             last.x = atm.x;
             atm.x--;
         } else if ((atm.y != goal.y && field[atm.x][atm.y - 1] != '*') && (atm.y-1 != last.y )){
