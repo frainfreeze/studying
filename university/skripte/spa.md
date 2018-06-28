@@ -3,7 +3,8 @@
 1., 2. Napravite 2 vektora od 10 slučajnih brojeva između 1 i 100 i onda:
 - Ispišite sve brojeve iz prvog vektora.
 - Uredite vektor tako da ima svojstva hrpe (funkcija make_heap) pa ispišite sve brojeve.
-- Uklonite sve brojeve iz hrpe koristeći funkciju pop_heap (i ostalo što vam treba). Nakon svakog uklonjenog broja ispišite sadržaj hrpe
+- Uklonite sve brojeve iz hrpe koristeći funkciju pop_heap (i ostalo što vam treba). 
+Nakon svakog uklonjenog broja ispišite sadržaj hrpe
 
 - Napravite prioritetni red i u njega ubacite sve brojeve iz drugog vektora.
 - Učitavajte od korisnika brojeve dok on to želi i dodajte ih u prioritetni red.
@@ -115,7 +116,9 @@ int main()
 }
 ```
 ```
-5. Napravite program koji koristi prioritetni red za obradu zaprimljenih poruka prema prioritetima (1 = minimalni, 2 = normalni, 3 = visoki prioritet). Zaprimite nekoliko poruka pa ih obradite ispisivanjem na ekran.
+5. Napravite program koji koristi prioritetni red za obradu zaprimljenih poruka 
+prema prioritetima (1 = minimalni, 2 = normalni, 3 = visoki prioritet). Zaprimite 
+nekoliko poruka pa ih obradite ispisivanjem na ekran.
 ```
 
 ```cpp
@@ -154,6 +157,7 @@ int main(){
 }
 ```
 
+## V10
 
 ```
 
