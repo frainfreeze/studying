@@ -1,5 +1,10 @@
 ## V9
-- [V9Z1-2](v9z1-2)
+
+- [V9 Z1-2](#v9z1-2)
+- [V9 Z3-4](#v9z3-4)
+- [V9 Z5](#v9z5)
+- [V9 Z](#)
+
 ```
 1., 2. Napravite 2 vektora od 10 slučajnih brojeva između 1 i 100 i onda:
 - Ispišite sve brojeve iz prvog vektora.
@@ -12,7 +17,9 @@ Nakon svakog uklonjenog broja ispišite sadržaj hrpe
 - Ispišite sve brojeve iz prioritetnog reda.
 ```
 
-### V9Z1-2
+v9z1-2
+--------------
+
 ```cpp
 
 #include <iostream>
