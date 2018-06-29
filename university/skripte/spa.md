@@ -24,9 +24,10 @@ Nakon svakog uklonjenog broja ispišite sadržaj hrpe
 prema prioritetima (1 = minimalni, 2 = normalni, 3 = visoki prioritet). Zaprimite 
 nekoliko poruka pa ih obradite ispisivanjem na ekran.
 ```
-- [V9 Z](#)
+- [V9 Z7](#v9z7)
 ```
-a
+program koji koristi prioritetni red ili hrpu i ispisuje sve osobe iz item csv 
+od visih idneksa tjelesne mase prema manje. prva i zadnja dva stupca su useless
 ```
 
 ## V11
@@ -208,10 +209,71 @@ int main(){
 }
 ```
 
-vz
+v9z7
 --------------
 ```cpp
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cmath>
+#include <queue>
+using namespace std;
+template <typename T> T convert(string &s) { stringstream c(s); T t; c >> t; return t;}
 
+/*itemcsv
+,sex,weight,height,repwt,repht
+1,M,77,182,77,180
+2,F,58,161,51,159
+3,F,53,161,54,158 */
+
+class Person{
+	std::string gender;
+	int weight, height;
+public:
+	Person(std::string gender, int weight, int height):gender(gender),weight(weight),height(height){};
+	std::string to_string() const{
+		std::stringstream ss;
+		ss << "ibm: " << ibm() << ", gender: " << gender << ", weight: " << weight << ", height: " << height;
+		return ss.str();
+	}
+	double ibm() const{
+		return weight / pow(height/100.0, 2);
+	}
+};
+
+struct person_ibmcomparer_desc{
+	bool operator() (const Person &p1, const Person &p2) const{
+		return p1.ibm() < p2.ibm();
+	}
+};
+
+void load(ifstream &in, priority_queue<Person, vector<Person>, person_ibmcomparer_desc> &pq){
+	string line; getline(in, line); //skip header
+	while (getline(in, line)){
+		stringstream ss(line);
+		string temp; getline(ss, temp, ','); //skip column;
+		string gender; getline(ss, gender, ',');
+		getline(ss, temp, ',');
+		int weight = convert<int>(temp);
+		getline(ss, temp, ',');
+		int height = convert<int>(temp);
+		pq.emplace(gender, weight, height);
+	}
+}
+int main(){
+	ifstream in("itm.csv");
+	if (!in) return 1;
+
+	priority_queue<Person, vector<Person>, person_ibmcomparer_desc> pq;
+	load(in, pq);
+	in.close();
+
+	while (!pq.empty()){
+		cout << pq.top().to_string() << endl;
+		pq.pop();
+	}
+}
 ```
 
 vz
