@@ -31,13 +31,19 @@ od visih idneksa tjelesne mase prema manje. prva i zadnja dva stupca su useless
 ```
 
 ## V11
-- [V11 Z](#v11z)
-- [V11 Z](#v11z)
-- [V11 Z](#v11z)
-- [V11 Z](#v11z)
+- [V11 Z1](#v11z1)
+```
+Implementirajte varijantu bogosorta kojom rastuće sortiranje radite tako da prolazite sve permutacije.
+```
+- [V11 Z2](#v11z2)
+```
+Učitajte prvih 20.000 slučajnih brojeva iz datoteke puno_brojeva1.txt u program. Primijenite bubble, insertion, selection, shell i merge iz priloga na brojeve iz datoteke i ispišite za svaki koliko je trajao.
+```
+- [V11 Z5](#v11z5)
+```
+Promijenite selectionsorttako da sortira pravokutnike (širina, visina) prema površini. Učitajte svih 1000 pravokutnika iz pravokutnici.txt (u svakom retku su širina i visina jednog pravokutnika odvojeni razmakom) i prepišite ih u drugu datoteku, ali sortirano.
+```
 
-```
-```
 
 ## V12
 - [V12 Z](#v12z)
@@ -276,22 +282,153 @@ int main(){
 }
 ```
 
-vz
+v11z1
 --------------
 ```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
+bool is_sorted_ascending(vector<int>& v){
+	for (unsigned i = 0; i < v.size() - 1; i++) 
+		if (v[i] > v[i + 1]) return false;
+	return true;
+}
+
+void print(vector<int> &v){for (int n : v) cout << n << " "; cout << endl;}
+
+int main(){
+	vector<int> v{ 9, 8, 1, 3, 6, 2, 4, 10, 5, 7};
+
+	//1. nacin - vlastita funkcija za provjeru je li vektor sortiran rastuce
+	//while (!is_sorted_ascending(v)) {next_permutation(v.begin(), v.end());}
+
+	//2. nacin - ugradjena funkcija za provjeru je li vektor sortiran rastuce
+	//while (!is_sorted(v.begin(), v.end())) {next_permutation(v.begin(), v.end());}
+
+	//3.nacin - next_permutation:
+	// - vraca true ako moze presloziti elemente u vecu leksikografsku permutaciju (desc)
+	// - vraca false ako trenutna permutacija nije veca od prethodne, vec je namanja moguca (asc)
+	//funkciju za provjeru niti ne trebamo	
+	while (next_permutation(v.begin(), v.end()));
+	print(v);
+
+	//dodatak - prev_permutation - inverzna logika
+	while (prev_permutation(v.begin(), v.end()));
+	print(v);
+}
 ```
 
-vz
+v11z2
 --------------
 ```cpp
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <chrono>
+#include <functional>
+#include "bubble_sort.h"
+#include "selection_sort.h"
+#include "insertion_sort.h"
+#include "shell_sort.h"
+#include "merge_sort.h"
+using namespace std;
 
+void load(ifstream &in, int *originalni_brojevi, int *radno_polje, const int BROJ_ELEMENATA){
+	for (int i = 0; i < BROJ_ELEMENATA; i++){
+		in >> originalni_brojevi[i];
+		radno_polje[i] = originalni_brojevi[i];
+	}
+}
+
+void copy_array(int* originalni_brojevi, int* radno_polje, const int BROJ_ELEMENATA)
+	for (int i = 0; i < BROJ_ELEMENATA; i++) radno_polje[i] = originalni_brojevi[i];
+}
+
+void sort(int *radno_polje, const int BROJ_ELEMENATA, string tekst, function<void(int*, int)> funkcija){
+	auto begin = chrono::high_resolution_clock::now();
+	funkcija(radno_polje, BROJ_ELEMENATA);
+	auto end = chrono::high_resolution_clock::now();
+	cout << tekst << chrono::duration_cast<chrono::milliseconds>(end - begin).count() << " ms" << endl;
+}
+
+int main(){
+	ifstream in("puno_brojeva3.txt"); if (!in) return 1;
+
+	const int BROJ_ELEMENATA = 20000;
+	int* originalni_brojevi = new int[BROJ_ELEMENATA];
+	int* radno_polje = new  int[BROJ_ELEMENATA];
+
+	load(in, originalni_brojevi, radno_polje, BROJ_ELEMENATA);
+	in.close();
+
+	// Bubble sort.
+	sort(radno_polje, BROJ_ELEMENATA, "Bubble sort:", bubble_sort);
+
+	// Selection sort.
+	copy_array(originalni_brojevi, radno_polje, BROJ_ELEMENATA);
+	sort(radno_polje, BROJ_ELEMENATA, "Selection sort:", selection_sort);
+
+	// Insertion sort.
+	copy_array(originalni_brojevi, radno_polje, BROJ_ELEMENATA);
+	sort(radno_polje, BROJ_ELEMENATA, "Insertion sort:", insertion_sort);
+
+	// Shell sort.
+	copy_array(originalni_brojevi, radno_polje, BROJ_ELEMENATA);
+	sort(radno_polje, BROJ_ELEMENATA, "Shell sort:", shell_sort);
+
+	//Merge sort.
+	copy_array(originalni_brojevi, radno_polje, BROJ_ELEMENATA);
+	sort(radno_polje, BROJ_ELEMENATA, "Merge sort:", merge_sort);
+
+	delete[] originalni_brojevi;
+	delete[] radno_polje;
+}
 ```
 
-vz
+v11z5
 --------------
 ```cpp
+#include <iostream>
+#include <fstream>
+using namespace std;
 
+struct pravokutnik { int a,b;};
+
+void selection_sort(pravokutnik data[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int min_index = i;
+		for (int j = i + 1; j < n; j++)
+			if (data[j].a * data[j].b < data[min_index].a * data[min_index].b)
+				min_index = j;
+		swap(data[min_index], data[i]);
+	}
+}
+
+void load(ifstream &in, pravokutnik *pravokutnici, const int BROJ_ELEMENATA) {
+	for (int i = 0; i < BROJ_ELEMENATA; i++) {
+		in >> pravokutnici[i].a; in >> pravokutnici[i].b;
+	}
+}
+
+int main() {
+	ifstream in("pravokutnici.txt");
+	ofstream out("pravokutnici_sortirano.txt");
+	if (!in || !out) return 1;
+	const int BROJ_ELEMENATA = 1000;
+
+	pravokutnik* pravokutnici = new pravokutnik[BROJ_ELEMENATA];
+	load(in, pravokutnici, BROJ_ELEMENATA);
+	in.close();
+
+	selection_sort(pravokutnici, BROJ_ELEMENATA);
+	for (int i = 0; i < BROJ_ELEMENATA; i++) 
+		out << pravokutnici[i].a << " " << pravokutnici[i].b << endl;
+
+	out.close();
+	delete[] pravokutnici;
+}
 ```
 
 vz
