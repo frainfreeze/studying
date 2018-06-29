@@ -1,5 +1,4 @@
 ## V9
-
 - [V9 Z1-2](#v9z1-2)
 - [V9 Z3-4](#v9z3-4)
 - [V9 Z5](#v9z5)
@@ -15,7 +14,21 @@ Nakon svakog uklonjenog broja ispišite sadržaj hrpe
 - Napravite prioritetni red i u njega ubacite sve brojeve iz drugog vektora.
 - Učitavajte od korisnika brojeve dok on to želi i dodajte ih u prioritetni red.
 - Ispišite sve brojeve iz prioritetnog reda.
+
+3., 4. vektora od 10 slučajnih brojeva između 1 i 100
+- ispisite brojeve iz pqa od manjih prema vecima(minheap) ugradenim komparatorom
+- ispisite brojeve iz pqa od manjih prema vecima vlastitim komparatorom
+
+5. Napravite program koji koristi prioritetni red za obradu zaprimljenih poruka 
+prema prioritetima (1 = minimalni, 2 = normalni, 3 = visoki prioritet). Zaprimite 
+nekoliko poruka pa ih obradite ispisivanjem na ekran.
 ```
+
+## V11
+- [V11 Z1-2](#v11z)
+- [V11 Z3-4](#v11z)
+- [V11 Z5](#v11z)
+- [V11 Z](#11z)
 
 v9z1-2
 --------------
@@ -83,12 +96,8 @@ int main(){
 
 
 
-```
-3., 4. vektora od 10 slučajnih brojeva između 1 i 100
-- ispisite brojeve iz pqa od manjih prema vecima(minheap) ugradenim komparatorom
-- ispisite brojeve iz pqa od manjih prema vecima vlastitim komparatorom
-```
-
+v9z3-4
+--------------
 ```cpp
 #include <iostream>
 #include <ctime>
@@ -124,12 +133,9 @@ int main()
     }
 }
 ```
-```
-5. Napravite program koji koristi prioritetni red za obradu zaprimljenih poruka 
-prema prioritetima (1 = minimalni, 2 = normalni, 3 = visoki prioritet). Zaprimite 
-nekoliko poruka pa ih obradite ispisivanjem na ekran.
-```
 
+v9z5
+--------------
 ```cpp
 #include <iostream>
 #include <ctime>
@@ -166,7 +172,6 @@ int main(){
 }
 ```
 
-## V10
 
 ```
 
