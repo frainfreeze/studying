@@ -37,11 +37,15 @@ Implementirajte varijantu bogosorta kojom rastuće sortiranje radite tako da pro
 ```
 - [V11 Z2](#v11z2)
 ```
-Učitajte prvih 20.000 slučajnih brojeva iz datoteke puno_brojeva1.txt u program. Primijenite bubble, insertion, selection, shell i merge iz priloga na brojeve iz datoteke i ispišite za svaki koliko je trajao.
+Učitajte prvih 20.000 slučajnih brojeva iz datoteke puno_brojeva1.txt u program. 
+Primijenite bubble, insertion, selection, shell i merge iz priloga na brojeve iz 
+datoteke i ispišite za svaki koliko je trajao.
 ```
 - [V11 Z5](#v11z5)
 ```
-Promijenite selectionsorttako da sortira pravokutnike (širina, visina) prema površini. Učitajte svih 1000 pravokutnika iz pravokutnici.txt (u svakom retku su širina i visina jednog pravokutnika odvojeni razmakom) i prepišite ih u drugu datoteku, ali sortirano.
+Promijenite selectionsorttako da sortira pravokutnike (širina, visina) prema površini. 
+Učitajte svih 1000 pravokutnika iz pravokutnici.txt (u svakom retku su širina i visina 
+jednog pravokutnika odvojeni razmakom) i prepišite ih u drugu datoteku, ali sortirano.
 ```
 
 
