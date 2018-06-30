@@ -105,20 +105,51 @@ koliko treba vremena za pronalazak
 
 
 ## V14
-- [V14 Z](#v14z)
+- [V14 Z1](#v14z1)
 ```
+a.Napravite unordered_maps cjelobrojnim ključem koja može čuvati stringove.
+b.Ubacite proizvoljne vrijednosti za ključeve 1, 2, 3, 4 i 5.
+c.Učitajte od korisnika ključ pa ili ispišite vrijednost pod tim ključem 
+     ili napišite da ključ ne postoji.
+d.Prepišite sve neparne ključeve i injihove vrijednosti u unordered_multimap.
+e.Ispišite sve iz multimape.
+f.Prepišite sve vrijednosti s više od 3 znaka u unordered_set.
+g.Uklonite prvu vrijednost iz seta.
+h.Prepišite sve vrijednosti u unordered_multisetiispišiteih
+i.Pobrišite sve iz multiseta.
+```
+- [V14 Z3](#v14z3)
+```
+Napišite program koji kreira unordered_setcijelih brojeva. 
+Sve dok korisnik to želi, ubacujte u set 20 brojeva, počevši od 1. 
+Nakon svakog ubacivanja ispišite sve bucketei pokraj svakog u 
+zagradi broj elemenata hashiranihu  njega.
 
 ```
-- [V14 Z](#v14z)
+- [V14 Z4](#v14z4)
+```
+Napišite program koji u unordered_setubacuje 1000 slučajnih 
+stringova duljine 5 znakova i sastavljenih od slova ‘a’, ‘b’, ‘c’, ‘d’ i ‘e’. 
+Ispišite svaki put kad se ubacivanje ne napravi jer vrijednost već postoji.
+```
+- [V14 Z5](#v14z5)
+```
+Uzmite sve brojeve od 1 do milijun, promiješajte ih i smjestite u 
+set i unordered_set. Ispišite koliko je trajalo umetanje u svaki kontejner. 
+Nakon toga pitajte korisnika koji broj traži pa ispišite trajanje 
+traženja u svakom od kontejnera.
 ```
 
+- [V14 Z6](#v14z6)
 ```
-- [V14 Z](#v14z)
+Koristeći prikladnu hashtablicu, ispišite u novu datoteku koliko je kojeg 
+imena ukupno bilo u 1901. i 2001. Primjer ispisa: Mary, 18936
 ```
 
+- [V14 Z7](#v14z7)
 ```
-- [V14 Z](#v14z)
-```
+Koristeći prikladnu hashtablicu, ispišite sva imena iz 1901. kojih nije 
+više bilo 2001.
 
 ```
 
@@ -829,44 +860,216 @@ int n;cout << "Upisite broj: ";cin >> n;
 search(table, n);
 ```
 
-vz
+v14z1
 --------------
 ```cpp
+#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
 
+using namespace std;
+
+void fill_map(unordered_map<int, string> &m) {
+	m.insert(pair<int, string>(1, "Zec"));
+	m.insert({ 2, "Zaba" });
+	m.insert({ { 3, "Tramvaj" }, { 4, "Slon" }, { 5, "Avion" } });
+}
+
+void search_map(unordered_map<int, string> &m){
+	int key; cout << "Unesite kljuc:"; cin >> key;
+	auto it = m.find(key);
+	(it != m.end()) ? cout << "Nadjen je kljuc:"  << it->first << ": " << it->second << endl : cout << "Nema trazenog kljuca" << endl;
+}
+
+void fill_multimap(unordered_map<int, string> &m, unordered_multimap<int, string> &mm){
+	for (auto it = m.begin(); it != m.end(); ++it)
+		if (it->first % 2 != 0)
+			mm.insert(*it);//mm.insert({ it->first, it->second });
+}
+
+void print_multimap(unordered_multimap<int, string> &mm){
+	cout << "multimap:" << endl;
+	for (auto it = mm.begin(); it != mm.end(); ++it)
+		cout << it->first << ": " << it->second << endl;
+}
+
+void fill_set(unordered_multimap<int, string> &mm, unordered_set<string> &s){
+	for (auto it = mm.begin(); it != mm.end(); ++it)
+		if (it->second.length() > 3) s.insert(it->second);
+}
+
+void fill_multiset(unordered_set<string> &s, unordered_multiset<string> &ms){
+	//for (auto it = s.begin(); it != s.end(); ++it) ms.insert(*it);
+	ms.insert(s.begin(), s.end());
+}
+
+void print_multiset(unordered_multiset<string> &ms){
+	cout << "multiset:" << endl;
+	for (auto it = ms.begin(); it != ms.end(); ++it) cout << *it << endl;
+}
+
+int main() {
+	unordered_map<int, string> m;//a.
+	fill_map(m);  //b.
+	search_map(m);//c.
+	unordered_multimap<int, string> mm; //d.
+	fill_multimap(m, mm);
+	print_multimap(mm);//e.
+	unordered_set<string> s;//f.
+	fill_set(mm, s);
+	s.erase(s.begin());//g.
+	unordered_multiset<string> ms;//h.
+	fill_multiset(s, ms);
+	print_multiset(ms);
+	ms.clear();//i.
+}
 ```
 
-vz
+v14z3
 --------------
 ```cpp
+#include <iostream>
+#include <unordered_set>
+using namespace std;
 
+int main(){
+	unordered_set<int> set;
+	int current = 1, limit = 20; bool dalje;
+	do{
+		while (current <= limit) set.insert(current++);
+		limit += 20;
+		for (unsigned i = 0; i < set.bucket_count(); i++)
+			cout << "Bucket: " << i << ": " << set.bucket_size(i) << " elemenata" << endl;
+
+		cout << "Dalje (1=da, 0=ne): ";cin >> dalje;system("cls");
+	} while (dalje);
+}
 ```
 
-vz
+v14z4
 --------------
 ```cpp
-
+	srand(time(nullptr));
+	unordered_set<string> set;
+	string s = "abcde";
+	int coll = 0;
+	for (int i = 0; i < 1000; i++){
+		random_shuffle(s.begin(), s.end());
+		//pair<unordered_set<string>::iterator, bool> retval = set.insert(s);
+		auto retval = set.insert(s);
+		if (!retval.second)
+			cout << "iteracija: "<< i << ",  broj kolizija: " << ++coll << endl;
+	}
 ```
 
-vz
+v14z5
 --------------
 ```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <set>
+#include <unordered_set>
+#include <chrono>
+#include <ctime>
+using namespace std; using namespace std::chrono;
 
+void prepare_vector(vector<int> &v, const int N) {
+	for (int i = 0; i < N; i++) v.push_back(i);
+}
+
+template<typename T>
+void measure_insert(vector<int> &v, T t) {
+	auto begin = high_resolution_clock::now();
+	for (int n : v) t.insert(n);
+	auto end = high_resolution_clock::now();
+	cout << "Vrijeme: " << duration_cast<chrono::milliseconds>(end - begin).count() << " ms" << endl;
+}
+
+template<typename T>
+void measure_search(T t, int query){
+	auto begin = high_resolution_clock::now();
+	t.find(query);
+	auto end = high_resolution_clock::now();
+	cout << "Vrijeme: " << duration_cast<chrono::microseconds>(end - begin).count() << " us" << endl;
+}
+
+int main(){
+	srand(time(nullptr));
+	const int N = 1000000;
+	vector<int> v;
+	prepare_vector(v, N);
+
+	set<int> set; cout << "Umetanje u set:" << endl; measure_insert(v, set);
+	unordered_set<int> uset; cout << "Umetanje u unordered set:" << endl; measure_insert(v, uset);
+
+	int query; cout << "Koji broj zelite pronaci: "; cin >> query;
+	cout << "Pretraga u setu:" << endl; measure_search(set, query);
+	cout << "Pretraga u unordered setu:" << endl; measure_search(uset, query);
+}
 ```
 
-vz
+v14z6
 --------------
 ```cpp
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <unordered_map>
+using namespace std;
+template<typename T>T convert(string &s){stringstream c(s);T t;c >> t;return t;}
 
+void load(ifstream &in, unordered_map<string, int> &m){
+	string line;
+	while (getline(in, line)) {
+		stringstream ss(line); string key; getline(ss, key, ',');
+
+		string temp;getline(ss, temp, ',');
+
+		getline(ss, temp);
+		int value = convert<int>(temp);
+		m[key] += value;
+	}
+}
+
+void write(ofstream &out, unordered_map<string, int> &m){
+	for (auto it = m.begin(); it != m.end(); ++it) out << it->first << ", " << it->second << endl;
+}
+
+
+int main()
+{
+	ifstream in1("yob1901.txt");ifstream in2("yob2001.txt");
+	ofstream out("yobSuma.txt");
+	if (!in1 || !in2 || !out) cout << "Nije moguce pristupiti datotekama" << endl;
+
+	unordered_map<string, int> m;
+	load(in1, m);load(in2, m);
+	in1.close();in2.close();
+
+	write(out, m);out.close();
+}
 ```
 
-vz
+v14z7
 --------------
 ```cpp
-
-```
-
-vz
---------------
-```cpp
-
+void print_nonexistent(ifstream &in, unordered_set<string> &s){
+	int n = 1;
+	string line;
+	while (getline(in, line)){
+		stringstream ss(line);
+		string key;
+		getline(ss, key, ',');
+		if (s.find(key) == s.end()) cout << n++ << ": " << key << endl;
+	}
+}
+int main(){
+	...
+	unordered_set<string> s;
+	load(in1, s); in1.close();
+	print_nonexistent(in2, s);
+	in2.close();
 ```
