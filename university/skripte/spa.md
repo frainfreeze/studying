@@ -78,23 +78,51 @@ nema. Optimizirajte rješenje u svrhu pretraživanja.
 ```
 
 ## V13
-- [V13 Z](#v13z)
-- [V13 Z](#v13z)
-- [V13 Z](#v13z)
-- [V13 Z](#v13z)
+- [V13 Z1](#v13z1)
+```
+Uzmite sve brojeve od 1 do milijun, promiješajte ih i smjestite u vlastitu minimalnu 
+implementaciju tablice s direktnim adresiranjem. Ključ neka bude broj, a vrijednost njegov 
+kvadrat. Omogućite korisniku da upiše broj pa izračunajte i ispišite koliko treba vremena za 
+pronalazak.
+```
+- [V13 Z](#v13z3)
+```
+Promijenite prethodni zadatak tako da koristite hashfunkciju h(key) = key mod 100003 (prosti 
+broj otprilike 10 puta manji od broja ključeva) i optimizirate veličinu polja. Konflikte 
+nemojte razrješavati već samo pregazite staru vrijednost. Na kraju ispišite koliko konflikata 
+se dogodilo.
+```
+- [V13 Z](#v13z4)
+```
+Promijenite prethodni zadatak tako da konflikte razrješavate ulančavanjem. Ispišite u posebnu
+datoteku stanje hashtablice (redni broj bucketate broj ključeva koji se nalaze u njemu).
+```
+- [V13 Z](#v13z5)
+```
+za predhodni zadatak omogućite korisniku da upiše broj pa izračunajte i ispišite 
+koliko treba vremena za pronalazak
+```
 
-```
-```
 
 ## V14
 - [V14 Z](#v14z)
-- [V14 Z](#v14z)
-- [V14 Z](#v14z)
-- [V14 Z](#v14z)
-
-```
 ```
 
+```
+- [V14 Z](#v14z)
+```
+
+```
+- [V14 Z](#v14z)
+```
+
+```
+- [V14 Z](#v14z)
+```
+
+```
+
+------------------------
 
 v9z1-2
 --------------
@@ -621,28 +649,184 @@ int main() {
 }
 ```
 
-vz
+v13z1
 --------------
 ```cpp
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <ctime>
+#include <algorithm>
+#include <chrono>
+using namespace std;
 
+class direct_addressing_table {
+unsigned long long* array;
+public:
+	direct_addressing_table(unsigned n) {array = new unsigned long long[n];}
+	void insert(int key, unsigned long long value) {array[key] = value;}
+	unsigned long long search(int key) {return array[key];}
+	~direct_addressing_table() {delete[] array;}
+};
+
+void prepare_vector(vector<int> &v, int n){
+	for (int i = 1; i <= n; i++)v.push_back(i);
+	random_shuffle(v.begin(), v.end());
+}
+
+void load_table(direct_addressing_table &table, int n, vector<int> &v){
+	for (int i = 0; i < n; i++) table.insert(v[i], v[i] * v[i]);
+}
+
+void search(direct_addressing_table &table, int n){
+	auto begin = chrono::high_resolution_clock::now();
+	unsigned long long rez = table.search(n);
+	auto end = chrono::high_resolution_clock::now();
+	cout << rez << endl;
+	cout << "Vrijeme: " << chrono::duration_cast<chrono::nanoseconds>(end - begin).count() << " ns" << endl;
+}
+
+int main() {
+	srand(unsigned(time(nullptr)));
+	vector<int> v;
+	const unsigned BROJ_ELEMENATA = 1000000;
+	prepare_vector(v, BROJ_ELEMENATA);	
+
+	direct_addressing_table table(BROJ_ELEMENATA + 1);
+	load_table(table, BROJ_ELEMENATA, v);
+
+	int n; cout << "Upisite broj: "; cin >> n;
+	search(table, n);
+}
 ```
 
-vz
+v13z3
 --------------
 ```cpp
+class hash_table {
+private:
+	const int M = 100003;
+	unsigned long long* array;
+	int h(int key);
+	int nr_conflicts = 0;
+public:
+	hash_table();
+	void insert(int key, unsigned long long value);
+	unsigned long long search(int key);
+	int get_nr_conflicts();
+	~hash_table();
+};
 
+int hash_table::h(int key) {
+	return key % M;
+}
+
+hash_table::hash_table() {
+	array = new unsigned long long[M] {0};
+}
+
+void hash_table::insert(int key, unsigned long long value) {
+	int slot = h(key);
+	if (array[slot] != 0) nr_conflicts++;
+	array[slot] = value;
+}
+
+unsigned long long hash_table::search(int key) {
+	return array[h(key)];
+}
+
+int hash_table::get_nr_conflicts() {
+	return nr_conflicts;
+}
+
+hash_table::~hash_table() {
+	delete[] array;
+}
 ```
 
-vz
+v13z4
 --------------
 ```cpp
+#include <list>
+using namespace std;
 
+struct entry 
+{
+	int key;
+	unsigned long long value;
+	entry(int key, unsigned long long value) 
+	{
+		this->key = key;
+		this->value = value;
+	}
+};
+
+class hash_table 
+{
+private:
+	const int M = 100003;
+	list<entry>* array;
+	int h(int key);
+public:
+	hash_table();
+	void insert(int key, unsigned long long value);
+	unsigned long long search(int key);
+	int get_buckets();
+	int get_elements_in_bucket(int n);
+	~hash_table();
+};
+
+int hash_table::h(int key) {
+	return key % M;
+}
+
+hash_table::hash_table() {
+	array = new list<entry>[M];
+}
+
+void hash_table::insert(int key, unsigned long long value) {
+	int slot = h(key);
+	array[slot].push_back(entry(key, value));
+}
+
+unsigned long long hash_table::search(int key) {
+	int slot = h(key);
+	for (auto it = array[slot].begin(); it != array[slot].end(); ++it) 
+		if (it->key == key) return it->value;
+	return 0;
+}
+
+int hash_table::get_buckets() {
+	return M;
+}
+
+int hash_table::get_elements_in_bucket(int n) {
+	return array[n].size();
+}
+
+hash_table::~hash_table() {
+	delete[] array;
+}
+//main
+void write(ofstream &out, hash_table &table){
+	for (int i = 0; i < table.get_buckets(); i++) 
+		out << "Bucket " << i << ": " << table.get_elements_in_bucket(i) << " elements" << endl;
+}
 ```
 
-vz
+v13z5
 --------------
 ```cpp
-
+#include <chrono>
+void search(hash_table &table, int n){
+	auto start = chrono::high_resolution_clock::now();
+	unsigned long long rez = table.search(n);
+	auto end = chrono::high_resolution_clock::now();
+	cout << rez << endl;
+	cout << "Vrijeme: "<< chrono::duration_cast<chrono::nanoseconds>(end - start).count()<< " ns" << endl;
+}
+int n;cout << "Upisite broj: ";cin >> n;
+search(table, n);
 ```
 
 vz
