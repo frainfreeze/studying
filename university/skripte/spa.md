@@ -50,12 +50,31 @@ jednog pravokutnika odvojeni razmakom) i prepišite ih u drugu datoteku, ali sor
 
 
 ## V12
-- [V12 Z](#v12z)
-- [V12 Z](#v12z)
-- [V12 Z](#v12z)
-- [V12 Z](#v12z)
-
+- [V12 Z2](#v12z2)
 ```
+Generirajte vektor od razbacanih brojeva od 1 do 100. Sortirajte ga na tri načina te 
+rezultate sortiranja zapišite u datoteke:
+a)Rastuće
+b)Padajuće
+c)Tako da prvo dođu parni onda neparni (rjeseno sortiranjem trebalo bi particioniranjem)
+```
+- [V12 Z3](#v12z3)
+```
+program koji sortira riječi iz datoteke osobe.txt na način da prvo dođu kraće, a onda 
+dulje riječi. Riječi jednake duljine ostavite u jednakom redoslijed u kakvom su u zadanoj
+datoteci.
+```
+- [V12 Z](#v12z4)
+```
+Napišite program koji ispisuje sva svemirska tijela iz datoteke SolarSystem.csv tako da 
+za svako od njih ispiše naziv, tip te koliko zemaljskih godina treba dok obiđe oko sunca.
+Planete ispišite redoslijedom od najbliže Suncu do najudaljenije.
+```
+- [V12 Z10](#v12z10)
+```
+Napišite program koji omogućuje pretraživanje datoteke puno_malih_brojeva1.txt na način 
+da pitate korisnika koji broj želi tražiti, a onda mu vi ispišete ima li tog broja ili 
+nema. Optimizirajte rješenje u svrhu pretraživanja.
 ```
 
 ## V13
@@ -435,28 +454,171 @@ int main() {
 }
 ```
 
-vz
+v12z2
 --------------
 ```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <ctime>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
+void prepare_vector(vector<int> &v, int n) {
+	for (int i = 1; i <= n; i++) v.push_back(i);
+	random_shuffle(v.begin(), v.end());
+}
+
+void write(ofstream &out, vector<int> v) {
+	for (int n : v) out << n << endl;
+}
+
+bool sort_desc(int a, int b) {
+	return a > b;
+}
+
+bool sort_even_first(int a, int b) {
+	return a % 2 == 0 && b % 2 == 1;
+}
+
+int main() {
+	ofstream out1("rastuci.txt");
+	ofstream out2("padajuci.txt");
+	ofstream out3("parni_neparni.txt");
+	if (!out1 || !out2 || !out3) return 1;
+
+	srand(unsigned(time(nullptr)));
+	vector<int> original;
+	prepare_vector(original, 100);
+
+	// a)
+	vector<int> v(original);
+	sort(v.begin(), v.end());
+	write(out1, v);
+
+	// b)
+	v.assign(original.begin(), original.end());
+	sort(v.begin(), v.end(), sort_desc);
+	write(out2, v);
+
+	// c) primjer sa stable sortom - ostaviti sortirani vektor padajuce	
+	stable_sort(v.begin(), v.end(), sort_even_first);
+	write(out3, v);
+
+	out1.close();out2.close();out3.close();return 0;
+}
 ```
 
-vz
+v12z3
 --------------
 ```cpp
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <fstream>
+using namespace std;
 
+void load(ifstream &in, vector<string> &v) {
+	string ime;
+	while (getline(in, ime)) v.push_back(ime);
+}
+
+void print(vector<string> &v) {for (string s : v)cout << s << endl;}
+
+bool sort_by_length(string a, string b) {return a.length() < b.length();}
+
+int main() {	
+	ifstream in("osobe.txt"); if (!in) return -1;
+
+	vector<string> osobe; load(in, osobe); in.close();
+	stable_sort(osobe.begin(), osobe.end(), sort_by_length);
+	print(osobe);
+}
 ```
 
-vz
+v12z4
 --------------
 ```cpp
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
+struct celestial_body {
+	string name,type;
+	double mean_distance_from_sun_au,orbital_period_years,rotation_period_days,mean_temperature_c;
+};
+
+template<typename T> T convert(string &s) {
+	stringstream c(s);T t;c >> t;return t;
+}
+
+void load(ifstream &in, vector<celestial_body> &v){
+    //parsing
+	v.push_back(body);
+}
+
+void print(celestial_body &body){
+	cout << "(d=" << body.mean_distance_from_sun_au << ") " << body.name << ", " << body.type << ", godina traje: " << body.orbital_period_years << endl;
+}
+
+bool sort_by_distance(celestial_body &a, celestial_body &b) {
+	return a.mean_distance_from_sun_au < b.mean_distance_from_sun_au;
+}
+
+int main() {
+	ifstream in("Solar System.csv");
+	if (!in) return -1;
+
+	vector<celestial_body> bodies;
+	load(in, bodies);in.close();
+
+	sort(bodies.begin(), bodies.end(), sort_by_distance);
+	for_each(bodies.begin(), bodies.end(), print);
+}
 ```
 
-vz
+v12z10
 --------------
 ```cpp
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
+void load(ifstream& in, vector<int> &v){int n; while (in >> n) v.push_back(n);}
+
+void search(vector<int> &v){
+	bool dalje; int upit;
+	do {
+		cout << "Upisite broj koji zelite traziti: ";
+		cin >> upit;
+
+		if (binary_search(v.begin(), v.end(), upit)) 
+			cout << "Broj " << upit << " postoji" << endl;
+		else 
+			cout << "Broj " << upit << " ne postoji" << endl;
+		
+		cout << "Dalje (1=da, 0=ne): ";
+		cin >> dalje;
+	} while (dalje);
+}
+
+int main() {
+	ifstream in("puno_malih_brojeva1.txt"); if (!in) return 1;
+	vector<int> brojevi;
+
+	load(in, brojevi);in.close();
+
+	sort(brojevi.begin(), brojevi.end());
+	search(brojevi);
+}
 ```
 
 vz
