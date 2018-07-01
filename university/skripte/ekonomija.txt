@@ -19,16 +19,28 @@ Predavanja i tematske cjeline
  - Upravljanje globalnom ekonomijom (30 + predavanja)
 
                  ==== MI1 ====
-                 
+   
 Ishod ucenja 1
 ==============
-Ekonomiju možemo proučavati kao znanost i vještinu. 
-Ekonomija kao znanost je protekla iz ekonomske 
-prakse a proučava i objašnjava veliko područje 
-društvenih znanosti od kojih su neke: proizvodnja,
-ponuda, raspodjela i razmjena... Ključni elementi 
-definicije su oskudni resursi, potrebe, razmjena 
-za druga dobra.
+Mikroekonomika i makroekonomika nisu međusobno razdvojene
+ekonomske discpline. One se međusobno nadopunjavaju jer se
+djelovanje mikroekonomskih subjekata događa u makroekonomskom 
+okruženju. Mikroekonomika pretpostavlja makroekonomiku 
+kao i obrnuto.
+
+Ekonomiju možemo proučavati kao znanost i kao vještinu.
+
+Do pojave kapitalizma u 17.st ekonomi se izucava u sklopu
+filozofije, a od 17st zbog naglog ravoja gospodarstva
+ekonomija se izdvaja kao posebna znanost.
+
+Za pocetak izucavanja ekonomije se uzima 1776.g kada je 
+objavnjeno A.Smithovo djelo Bogastvo naroda
+
+Ekonomija kao znanost proucava veliko podrucje drustvenih 
+znanosti u kojem se proucava i objasnjava proizvodnja i
+ponuda, raspodjela i razmjenja, razmjena dobara i usluga u
+odredenom vremenu, prostoru i drustvu
 
 Ekonomsko istraživanje
 - metode: niz postupaka koji se koriste u 
@@ -41,8 +53,15 @@ Ekonomsko istraživanje
   se ne mogu izdvojiti međuodnosi i utjecaji ekonomskih 
   varijabli
 
+Ekonomska znanost je potekla iz ekonomske prakse i odraz je
+prilika u drustvu i privredi. 
+
+Rjec ekonomija dolazi iz grckog i znaci upravljanje kucom, 
+vodenje kucanstva, u sirem smislu vodenje ekonomije 
+poduzeca, grada, drzave...
+  
 Ekonomske discipline se dijele na temeljne: 
-politička ekonomija, emonomika, ekonomska politika te 
+politička ekonomija, emonomika, ekonomska politika, te 
 specijalističke: marketing, računovodstvo, vanjska trgovina
 
 Ekonomika je grana ekonomije koja razmatra alternativne 
@@ -61,10 +80,26 @@ onakvima kakve jesu. Naziva se još i ekonomska analiza)
 I normativnu (sadrži naputke te viziju, prosudbe i ocjenjuje 
 ekonomsku stvarnost.)
 
-Dobro - sredstvo koje je sposobno zadovoljiti neku potrebu
+Definicija ekonomije: ekonomija je izucavanje kako drustva
+koriste oskudne resurse da bi proizvela vrijedna dobra i
+raspodijelila ih razlicitim ljudima.
+
+Ključni elementi definicije su oskudni resursi, potrebe, 
+razmjena za druga dobra.
 
 Oskudnost je temeljni ekonomski problem  – povezivanje 
 postojanja ograničenih resursa i neograničenih želja
+
+Privređivanje = svjesna ljudska djelatnost kojom se nastoji 
+smanjiti ograničenost sredstava, odnosno dobara, kojima se 
+zadovoljavaju ljudske potrebe
+
+Dobro - sredstvo koje je sposobno zadovoljiti neku potrebu
+
+Postoje ogranicena dobra (relativno su rijetka, predmet su
+privrijedivanja = ekonomska dobra) i neogranicena dobra (
+zadovoljavaju potrebe u neogrannicenim kolicinama, tkz.
+slobodna dobra, npr zrak)
 
 apsolutna ogranicenost - sva dobra su ogranicena, relativna 
 ogranicenost - ogranicenost dobara u usporedbi s ljudskim potrebama
@@ -92,20 +127,18 @@ Tri ekonomska problema (temelji problemi ekonomske organizacije):
  – Kako proizvoditi?
  – Za koga proizvoditi?
 
+Kako triziste rjesava ekonomske probleme:
+ – Što proizvoditi: potrosaci kupnjom ukazuju na potrebne proizvode
+ – Kako proizvoditi: traze se mehanizmi za smanjivanje troskova
+ – Za koga proizvoditi: iz dohotka se formira potraznja
+ 
 Sustavi gospodarstva
  • Tržišno gospodarstvo - Pojedinci i privatna poduzeća donose 
    glavne odluke o proizvodnji i potrošnji
  • Naredbodavno gospodarstvo – Država donosi sve važne odluke 
    o proizvodnji i potrošnji
  • Mješovito gospodarstvo – Ima elemente tržišnog i naredbodavnog
-sva drustva su mjesovita gospodarstva.
-
-Proizvodni resursi su inputi činitelja proizvodnje koji se 
-koriste u proizvodnji dobara i usluga. Ekonomisti proizvodne 
-resurse dijele u tri temeljne kategorije: Zemlja, Rad, Kapital
-
-Rad su sve ljudske fizičke i umne sposobnosti koje se mogu 
-upotrijebiti u proizvodnji dobara i usluga
+   sva drustva su mjesovita gospodarstva.
 
 Prednosti slobodnog tržišta: Omogućava 
 formalno - pravnu slobodu i jednakost građana kao poduzetnika i 
@@ -118,6 +151,20 @@ proizvodnju i povećavaju cijenu, Pojava masovne nezaposlenosti,
 Zagađivanje okoliša i drugi negativni eksterni efekti, Nejednakost
 u raspodjeli dohotka i potrošnje, Cikličko kretanje privrede
 (recesija – ekspanzija), Nedostatak brige za razvoj javnih dobara
+
+Ljudske potrebe se ne mogu potpuno zadovoljiti jer su proizvodni 
+resursi ograničeni
+
+Proizvodni resursi su inputi činitelja proizvodnje koji se 
+koriste u proizvodnji dobara i usluga. Ekonomisti proizvodne 
+resurse dijele u tri temeljne kategorije: Zemlja, Rad, Kapital
+
+Zemlja je tlo, površina i sve sirovine koje se mogu dobiti u prirodi
+Kapital je ekonomska vrijednost koja se ulaže u proizvodnju ili neku 
+drugu ekonomsku djelatnost s osnovnom svrhom ostvarenja dobiti.
+
+Rad su sve ljudske fizičke i umne sposobnosti koje se mogu 
+upotrijebiti u proizvodnji dobara i usluga
 
 
 Ishod ucenja 2
