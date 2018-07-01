@@ -19,6 +19,9 @@ Predavanja i tematske cjeline
  - Upravljanje globalnom ekonomijom (30 + predavanja)
 
                  ==== MI1 ====
+                 
+Ishod ucenja 1
+==============
 Ekonomiju možemo proučavati kao znanost i vještinu. 
 Ekonomija kao znanost je protekla iz ekonomske 
 prakse a proučava i objašnjava veliko područje 
@@ -116,6 +119,9 @@ Zagađivanje okoliša i drugi negativni eksterni efekti, Nejednakost
 u raspodjeli dohotka i potrošnje, Cikličko kretanje privrede
 (recesija – ekspanzija), Nedostatak brige za razvoj javnih dobara
 
+
+Ishod ucenja 2
+==============
 ekonomski model je pojednostavljeni prikaz ekonomske realnosti
 Ekonomski modeli najčešće su dijagrami i jednadžbe
 Ekonomski modeli omogućavaju nam da lakše razumijemo stvarnost i 
@@ -311,6 +317,9 @@ ravnoteži naziva se granična korisnost dohotka.
 Potrošačev višak predstavlja razliku između veće vrijednosti nekog 
 dobra i njegove manje cijene
 
+
+Ishod ucenja 3
+==============
 Proizvodnja je transformacija proizvodnih faktora (inputa) u neke 
 proizvode ili usluge (outpute). Funkcija proizvodnje pokazuje 
 odnos  između maksimalnog rezultata proizvodnje (outputa) i 
