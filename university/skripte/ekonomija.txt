@@ -350,5 +350,489 @@ Duopol je oblik nesavrsene konkurencije i najednostavniji oblik
 oligopola gdje cjeloukupnu ponudu kontroliraju dva poduzeca. mogu
 biti sudionicki i nesudionicki.
 
-Kruzni tok privrede:
+Kruzni tok privrede:...
+
+
+                 ==== MI2 ====
+
+Najamnine i tržište rada
+Ishod učenja 4
+==============================
+
+Dohodak
+-------------------------------
+Dohodak čine sva novčana primanja što ga neka osoba ili 
+domaćinstvo ostvaruje tijekom danog vremenskog razdoblja 
+
+Dohodak se sastoji od nadnica/najamnina, rente, kamata, 
+dividendi i transfernih plaćanja
+
+
+Faktor rad i sustav proizvodnje
+-------------------------------
+Neposredna pretpostavka proizvodnje bogatstva je čovjek i 
+njegov rad, pa je zato čovjek i temeljno sredstvo za 
+proizvodnju bogatstva
+
+Jedino se ljudskim radom može stvoriti više dobara nego 
+što je uloženo u proizvodnju
+
+Niti jedna proizvodnja nije moguća bez rada
+
+Za rad možemo reći da je to privređivanje čovjeka u 
+proizvodnom procesu u namjeri da poveća korisnost ili 
+uporabnu vrijednost materije koju mu je darovala priroda
+
+
+Faktor radni resurs
+-------------------------------
+ekonomski faktor u privređivanju: radni resurs, trziste radne snage
+
+Prinos: NAJAMNINA ili NADNICA = Vrijednost radne snage
+
+
+Definicija nadnice / najamnine
+(kolokvijalno: plaća)
+-------------------------------
+Nadnice su dohodak od rada koji se međusobno razlikuje 
+po vrstama posla, po ekonomskim granama, po spolu i po zemljama.
+
+Vrste nadnica
+-------------------------------
+Nominalne nadnice su one koje su izražene u novčanim jedinicama.
+Npr. Nominalna nadnica u Hrvatskoj iznosi 4500 kn mjesečno.
+
+Realne nadnice su one koje izražavaju kupovnu moć nominalnih nadnica.
+
+Za razliku od nominalnih nadnica koje se izražavaju u novcu, realne 
+nadnice se izražavaju u količini roba koje se kupuju, odnosno koje se 
+mogu kupiti, za nominalne nadnice. Ovise o visini dohotka, 
+tj. nominalnim nadnicama i visini cijena.
+
+
+Porast realnih nadnica
+-------------------------------
+Realne nadnice rastu ako se pri danim cijenama povećava dohodak.
+Cijene na tržištu se ne mijenjaju, a plaća raste.
+
+Realne nadnice rastu ako se pri danom dohotku smanjuju cijene.
+Plaće se ne mijenjaju, a cijene na tržištu padaju.
+
+Realne nadnice rastu ako se cijene smanjuju brže od pada dohotka.
+Npr. plaće rastu 10%, a cijene na tržištu rastu 5%.
+
+
+Smanjenje realnih nadnica
+-------------------------------
+Realne nadnice padaju ako se pri danim cijenama smanjuje dohodak.
+Cijene na tržištu ostaju iste, a plaće se smanjuju.
+
+Realne nadnice padaju ako se pri danom dohotku cijene povećavaju.
+Plaće se ne mijenjaju, a cijene na tržištu rastu.
+
+Realne nadnice padaju ako cijene rastu brže od dohotka.
+Npr. cijene na tržištu rastu 5%, a prosječna plaća 2%.
+
+
+Tržište rada
+-------------------------------
+Može biti:
+a) savršeno konkurentno
+ - Postojanje velikog broja radnika koji traže posao i 
+   postojanje velikog broja poslodavaca pri čemu nijedan 
+   od njih ne može diktirati nadnice.
+ - Rad je homogen – svi su radnici jednako vješti i produktivni
+ - Radnici su savršeno pokretljivi.
+ - Radnici su potpuno informirani o promjenama na tržištu rada.
+
+b) nesavršeno konkurentno
+ - Bitno obilježje ovog tipa tržišta je postojanje monopola 
+   ponude odnosno potražnje rada.
+ - Monopol ponude rada javlja se u vidu radničkih sindikata dok 
+   se monopol potražnje rada javlja u vidu udruga poslodavaca.
+ - Sindikata i udruga poslodavaca nema na savršeno konkurentnom tržištu rada.
+
+
+Razlike u visini nadnice
+-------------------------------
+Razlike u visini najamnine objašnjavaju se
+a) naknadnim ili kompenzacijskim razlikama: npr. privlačnost posla, 
+   rizik za zdravlje, rad u smjenama
+b) razlikama u kvaliteti rada: npr. obrazovanje, razvoj, stručno 
+   usavršavanje; općenito ulaganje u ljudski kapital
+c) razlikama u specifičnim sposobnostima pojedinaca: posebni talenti
+d) segmentacijom tržišta rada: specijalizacija za određene poslove i 
+   postojanje nekonkurentnih segmenata
+e) diskriminacijom po različitim osnovama: rasna, etnička, spolna i 
+   vjerska diskriminacija
+
+
+Razlike u kvaliteti rada
+-------------------------------
+Značaj razlika u kvaliteti rada i po osnovi diskriminacije 
+proučavao je Nobelovac Gary Becker
+
+On je prvi u teoriji ljudskog kapitala dokazivao da osobe ulažu u 
+svoje obrazovanje isto tako kao što poduzeće investira u novi 
+fiksni kapital. On je logiku ekonomskog zaključivanja primijenio 
+na društvena pitanja
+
+
+Ponuda rada
+-------------------------------
+Izražava se brojem radnih sati koje je stanovništvo spremno 
+odraditi na poslovima koji donose nadnicu.
+
+Ovisi o:
+ - broju radnih sati,
+ - participaciji radne snage,
+ - useljavanju.
+
+
+Efekti
+-------------------------------
+Efekt supstitucije:
+Radnik želi raditi više sati, jer je svaki sat rada više plaćen 
+(tj. svaki sat dokolice postaje skuplji, pa se dodatnim radom 
+zamjenjuje dokolica)
+
+Efekt dohotka:
+Djeluje suprotno od efekta supstitucije, Kad se nadnica povećava 
+(ceteris paribus), dohodak je sve veći, pojedinac može kupiti sve 
+više dobara i usluga, ali želi i sve više vremena za dokolicu
+
+
+
+
+Makroekonomija
+Ishod učenja 5
+==============================
+Makroekonomika je grana ekonomike koja proučava ponašanje i 
+funkcioniranje privrede kao cjeline.
+
+Osnivač makroekonomike je John Maynard Keynes koji je 1936. objavio 
+djelo “Opća teorija zaposlenosti, kamate i novca” gdje su dani 
+temelji makroekonomike.
+
+Za razliku od mikroekonomike koja se zasniva na djelovanju tržišta 
+makroekonomika se zasniva na državnoj regulativi privrede.
+
+Temeljna pitanja: 
+Izbor i funkcioniranje ekonomskog sustava, ukupna proizvodnja i zaposlenost,
+nacionalni dohodak, opća ekonomska ravnoteža, opća razina cijena, inflacija...
+
+
+Kako se javila makroekonomija?
+-------------------------------
+S pojavom Velike depresije počela su se sve češće
+
+postavljati pitanja o tome kako riješiti gospodarske krize. J.M. Keynes 
+prvi je osmislio teoriju koja je objasnila elemente koji vode do 
+ekonomskih kolebanja. Predložio je i način kako da vlada utječe i 
+nadzire ekstremne faze ekonomskog ciklusa. Istovremeno, drugi su se 
+ekonomisti bavili mehanizmima dugoročnog ekonomskog rasta...
+
+
+Nastanak makroekonomije
+-------------------------------
+Makroekonomika je nastala 1936. pojavom djela J.M. Keynesa “Opća teorija 
+zaposlenosti, kamate i novca” (skraćeno “Opća teorija”)
+
+Do pojave Keynesove knjige ekonomika se pretežno bavila mikroekonomskim 
+problemima.
+
+Keynesovo djelo izvršilo je pravi prevrat u ekonomskoj teoriji pa se veoma 
+često govori o “Keynesijanskoj revoluciji”.
+
+
+Keynes
+-------------------------------
+Engleski ekonomist (1883-1946)
+
+Poznavatelj područja matematike, filozofije, književnosti, ekonomije
+Vodio je veliku osiguravajuću tvrtku, bio je savjetnik britanskog
+
+Ministarstva financija, radio je jedno vrijeme na Cambridgeu, pomagao 
+je voditi Bank of England, uređivao je časopis Economic Journal, sakupljač 
+umjetničkih djela i rijetkih knjiga, osnivač kazališta, suprug ruske 
+balerine i špekulant
+
+Jedan od rijetkih ekonomista koji se obogatio burzovnim špekulacijama
+
+Najveći doprinos: novi pogled na makroekonomiju i makroekonomsku politiku
+
+Prije Keynesa ciklusi prosperiteta i recesije smatrali su se neizbježnima
+
+Keynes je tvrdio da vlada fiskalnom i monetarnom politikom može utjecati 
+na proizvodnju te tako smanjiti nezaposlenost i skratiti razdoblja ekonomskog pada
+
+
+Keynes i suvremenici
+-------------------------------
+Keynesovi suvremenici su smatrali da su vrhovi i dna privrednih 
+ciklusa neizbježni i da nema efikasne ekonomske politike u borbi 
+protiv njih
+
+Smatrali su da tržišni mehanizam automatski rješava sve probleme
+
+Keynes je odbacio ta razmišljanja i rekao da se uz pomoć države 
+može smanjiti nezaposlenost i povećati proizvodnja
+
+Mjere keynesijanske makroekonomske politike primjenjivale su se 
+u svim kapitalističkim zemljama svijeta, osobito tijekom 50-tih 
+i 60-tih godina XX. stoljeća – tada je keynesijanstvo smatrano 
+univerzalnom ekonomskom doktrinom
+
+Puno priznanje je dobilo 1946. kada je američki Kongres donio 
+“Employment Act” – taj se čin smatra “rođenjem makroekonomije”
+
+
+Employment Act
+-------------------------------
+Kongres po prvi puta potvrđuje ulogu vlade (države) u promicanju 
+rasta proizvodnje, osiguravanju zaposlenosti i održavanju 
+stabilnosti cijena
+
+"Kongres ovim objavljuje da je trajna politika i odgovornost savezne 
+vlade da iskoristi sva raspoloživa sredstva u skladu sa svojim 
+potrebama i obvezama... radi promicanja maksimalne zaposlenosti, 
+proizvodnje i kupovne moći."
+
+
+Kriza keynesijanstva i Milton Friedman
+-------------------------------
+Početkom 70-tih godina (Vijetnamski rat)
+
+Stagflacija (stagnacija + inflacija) – pojava istovremenog 
+rasta cijena i nezaposlenosti
+
+Stagflacija se nije mogla riješiti mjerama keynesijanske 
+ekonomske politike i dolazi do krize Keynesovog koncepta
+
+
+
+Milton Friedman, nobelovac iz 1976. godine, njegov je najveći 
+protivnik i zagovaratelj liberalizma
+
+Država se ne treba miješati u ekonomiju, posao treba prepustiti 
+slobodnom tržištu
+
+Veliku gospodarsku krizu nije izazvalo tržište, nego nekompetentost 
+vlade, osobito američke Središnje banke
+
+Jedino ekonomsko sredstvo utjecaja je kontrola ponude 
+novca – monetaristički nazor
+
+
+Jedinstvo mikro- i makroekonomike
+-------------------------------
+Mikroekonomika i makroekonomika nisu međusobno razdvojene 
+ekonomske discpline. One se međusobno nadopunjavaju jer se 
+djelovanje mikroekonomskih subjekata događa u makroekonomskom 
+okruženju.
+
+Mikroekonomika pretpostavlja makroekonomiku kao i obrnuto
+
+
+Predmeti proučavanja makro- i
+mikroekonomije
+-------------------------------
+Makroekonomija i mikroekonomika imaju različite predmete proučavanja.
+
+Makroekonomija se bavi proučavanjem i analizom nacionalne proizvodnje, 
+zaposlenosti, opće razine cijena i vanjske trgovine.
+
+Mikroekonomija se bavi analizom cijena i troškova, ponudom i potražnjom 
+na parcijalnim tržištima kao i dohocima proizvodnih faktora.
+
+
+Što je makroekonomija?
+-------------------------------
+Znanost koja proučava ponašanje gospodarstva kao
+cjeline.
+
+
+Makroekonomija
+-------------------------------
+Znanost koja proučava ponašanje gospodarstva kao cjeline
+
+Obrađuje dvije osnovne teme:
+ - Kratkotrajna kolebanja proizvodnje, zaposlenosti i cijena – poslovne cikluse
+ - Dugoročnije trendove u proizvodnji i životnom standardu – gospodarski rast
+
+
+Središnja makroekonomska pitanja
+-------------------------------
+Zašto proizvodnja i zaposlenost ponekad padnu i kako se može smanjiti nezaposlenost?
+
+Koji su izvori inflacije cijena i kako ju zadržati pod nadzorom?
+
+Kako država može povećati svoju stopu gospodarskog rasta?
+
+
+Ciljevi i instrumenti makroekonomije
+-------------------------------
+Ciljevi:
+ - Proizvodnja
+ - Visoka razina i brzi rast proizvodnje
+ - Zaposlenost
+ - Visoka razina zaposlenosti s malo nedobrovoljne nezaposlenosti
+ - Stabilnost cijena
+
+Instrumenti:
+ - Monetarna politika – Kontroliranje ponude novca, kako bi se odredile kamatne stope
+ - Fiskalna politika – Državna potrošnja i oporezivanje
+
+
+Proizvodnja
+-------------------------------
+Krajnji cilj ekonomske aktivnosti: osigurati dobra i usluge koje tržište treba i želi
+
+Proizvodnja stvara dodanu vrijednost
+
+Najobuhvatnija mjera je bruto domaći proizvod(BDP)
+
+Mjera tržišne vrijednosti svih finalnih roba i usluga proizvedenih u zemlji u godinu dana
+
+Nominalni BDP – mjeri se stvarnim tržišnim cijenama
+
+Realni BDP – računa se pomoću konstantnih ili nepromjenjivih cijena
+
+
+Bruto domaći proizvod (BDP)
+-------------------------------
+Realni BDP
+ - Mjera koja se sustavno prati
+ - Pokazuje “zdravlje” i realni gospodarski rast
+ - Sklon je velikim promjenama u gospodarskom ciklusu
+
+Potencijalni BDP
+ - Maksimalna održiva razina proizvodnje koju neko gospodarstvo može proizvesti
+ - Visoka razina iskoristivosti potencijala
+ - Određuje se prema kapacitetu proizvodnje gospodarstva, 
+   koje ovisi o raspoloživim inputima i tehničkog učinkovitosti gospodarstva
+ - Za razliku od realnog BDP-a, nije sklon velikim promjenama u poslovnom ciklusu
+
+
+Izračun BDP-a
+-------------------------------
+Obuhvaća vrijednost sve robe koja je u nekom vremenskom periodu u 
+zemlji proizvedene, te uz to i vrijednost svih usluga
+
+Najvažniji element za izračunavanje BDP-a je osobna potrošnja
+
+U računicu ulaze i investicije poduzetnika u kupnju strojeva ili 
+izgradnju novih proizvodnih pogona, te razlika u iznosu zarade od 
+izvoza te troškova uvoza
+
+
+Recesija, depresija
+-------------------------------
+Recesija
+– Razdoblje znatnog pada ukupne proizvodnje, dohotka i zaposlenosti
+– Obično traje 6-12 mjeseci
+– Opće krize u raznim ekonomskim sektorima
+
+Depresija
+– Ozbiljan i dugotrajan pad gospodarske aktivnosti
+
+
+Stopa (ne)zaposlenosti
+-------------------------------
+Kada se govori o zaposlenosti kao o makroekonomskom cilju, 
+govori se o punoj zaposlenosti svih proizvodnih faktora – zemlje, 
+rada i kapitala
+
+To znači da je želja da budu zaposleni, tj. angažirani, svi 
+proizvodni kapaciteti (npr. da tvornice rade i proizvode), da 
+je obrađena sva zemlja (da se na njoj nešto radi) i da su svi 
+radno sposobni stanovnici zaposleni!
+
+Stopa nezaposlenosti radnog resursa osjeća se najizravnije
+
+Država ima za cilj ostvariti visoku zaposlenost, odnosno nisku nezaposlenost
+
+Radnu snagu predstavljaju zaposleni i nezaposleni koji traže 
+posao – Nezaposleni koji ne traže posao ne predstavljaju radnu snagu
+
+Stopa nezaposlenosti posljedica je poslovnog ciklusa
+
+
+Radna snaga
+-------------------------------
+Radna snaga je jednaka zbroju statistički evidentiranih 
+zaposlenih i nezaposlenih osoba
+
+Treba ju razlikovati od aktivnog i radno-sposobnog stanovništva:
+– Aktivno stanovništvo je ono koje ostvaruje dohodak po bilo 
+  kojem osnovu neovisno da li ih statistika obuhvaća ili ne
+– Radno sposobno stanovništvo obuhvaća sve osobe u dobnom rasponu 
+  od 15 do 65 godina koji su fizički i mentalno sposobni za rad
+
+
+Stabilnost cijena
+-------------------------------
+Održavanje nepromjenjive razine cijena ili vrlo spori rast cijena
+
+Indeks cijena pokazuje kakvo je stanje
+
+Indeks potrošačkih cijena – mjeri prosječnu cijenu roba i usluga 
+koje kupuju potrošači
+
+Stabilnost cijena mjeri se stopom inflacije - Postotak promjene 
+opće razine cijena u roku od godine dana
+
+Deflacija – suprotno od inflacije – pad cijena
+
+Hiperinflacija – značajan porast razine cijena (npr.1000%)
+
+
+Potrošačka košarica
+-------------------------------
+potrošačka košarica, mjesečni troškovi prosječnoga (ob. četveročlanoga) 
+domaćinstva za hranu i kućne potrepštine; pokazatelj je prosječnih 
+životnih troškova.
+
+
+Indeks potrošačkih cijena
+-------------------------------
+Indeks potrosackih cjena odrazava promjene u razini dobara i usluga 
+koje u tijeku vremena nabavlja, koristi se njima ili placa privatno 
+kucanstvo radi potrosnje.
+
+
+Zbog čega je važna stabilnost
+cijena?
+-------------------------------
+Izbacuje uhodani tržišni sustav iz ravnoteže
+Rastu troškovi
+Porezi su podložni promjenama
+Narušena je stvarna vrijednost plaća i mirovina
+
+
+Kako nastaje inflacija?
+-------------------------------
+Posljedica je neravnoteže ponude i potražnje… razlozi:
+ - količina ukupnog novca u državi brže raste od količine 
+proizvedene robe ili usluga, kako je potražnja veća od ponude, 
+roba i usluge se mogu prodavati po višoj cijeni
+
+ - nestašica sirovina, rast troškova proizvodnje ili porasta 
+plaća (kod nestašice značajno raste potražnja, jer potrošači 
+zbog straha da će nešto nestati kupuju zalihe, što dodatno 
+povećava potražnju i cijene
+
+ - loša ekonomska politika, uglavnom u području monetarne 
+politike (povećanje količine novca)
+
+
+Ostvarenje makroekonomskih ciljeva
+-------------------------------
+Nije moguće istovremeno ostvarenje svih željenih makroekonomskih 
+ciljeva, npr. cjenovnu stabilnost i visoku stopu zaposlenosti
+
+Zato nositelji ekonomske politike moraju napraviti izbor (trade off) 
+među ekonomskim ciljevima pri čemu je njihova odluka određena političkim 
+i društvenim činiteljima
+
 
