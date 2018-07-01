@@ -1157,6 +1157,220 @@ BDP se sastoji od:
 BDP = C + I + G + X
 
 
+Potrošnja (C – Consumption)
+-------------------------------
+Najveća sastavnica BDP-a:
+• Trajna dobra
+• Netrajna dobra
+• Usluge
+
+
+Ulaganja i akumulacija kapitala (I = Investment)
+-------------------------------
+• Kapital – trajno dobro koje povećava buduću proizvodnju
+• Zahtijeva žrtvovanje sadašnje potrošnje kako bi se povećala buduća potrošnja
+• Zgrade, oprema, računalni programi, inventar
+• Izostavlja se neopipljiv kapital, kao što su troškovi istraživanja i razvoja
+
+
+Država (G = Government)
+-------------------------------
+Državna potrošnja i državna ulaganja
+
+Uključuju se državni izdaci za potrošnju i bruto ulaganja:
+• Izdaci za plaće javnih dužnosnika
+• Troškovi proizvoda i usluga koji se kupuju od privatnog sektora
+
+Isključena su transferna plaćanja
+• Socijalna davanja
+
+
+Neto izvoz (X = Export/Import)
+-------------------------------
+Razlika između izvoza i uvoza roba i usluga
+
+
+Primjer
+-------------------------------
+Ako je osobna potrošnja 650, investicije 100, državna potrošnja 400, 
+a neto izvoz -50, koliki je BDP?
+• BDP = 650 + 100 + 400 – 50 = 1100
+
+
+Dohodovni pristup
+-------------------------------
+Troškovi poslovanja različitih poduzeća (nadnice za rad, najamnine za 
+zemlju, dobit za kapital, itd.) predstavljaju istovremeno i zarade kućanstava
+
+Mjerenje godišnjeg tijeka tih zarada dobiti će se BDP
+
+Suma zarada proizvodnih faktora, odnosno troškova:
+• Najamnina/plaća (w – wage)
+• Kamata (i – interest)
+• Renta (R – rent)
+• Profita (pf – profit)
+• Amortizacije (Dp – depreciation)
+• Neizravnih poreza (T – indirect taxes)
+
+BDP = w + i + R + pf + Dp + T
+
+
+
+
+
+Sastavnice BDP-a Potrošnja, investicije,
+državna potrošnja i netoizvoz
+
+Raspoloživi dohodak (DI)
+-------------------------------
+Dohodak koji ostaje za potrošnju (C) i štednju (S)
+
+GDP = C + S
+
+Najznačajniji dio dohotka (po svojoj veličini) čini potrošnja
+Svaki dohodak i proizvod može se upotrijebiti na dva načina:
+• Da se potroši u osobnoj ili nekoj drugoj finalnoj potrošnji (ne u proizvodnji) ili
+• Da se ne potroši, znači da se uštedi
+
+
+Gospodarski rezultati zemlje
+-------------------------------
+Potrošnja je jedan od temeljnih elemenata gospodarskog rezultata
+Štednja i ulaganja jednako su važni
+Štednja omogućava ulaganja u razvoj, a razvoj povećanje proizvodnosti i nadnica
+
+
+Potrošnja, štednja i investicije
+-------------------------------
+Potrošnja i štednja su dva namjenska dijela BDP-a, a povećanje jednog vodi do smanjenja drugog
+
+Sve što se od proizvoda nekog razdoblja ne potroši, neizbježno se uštedi
+
+Ako proizvod u određenom razdoblju nije potrošen, na kraju razdoblja negdje 
+se nalazi, negdje je investiran, što znači da su investicije dio proizvoda
+određenog razdoblja koji u tom razdoblju nije potrošen, pa se njime povećala 
+imovina kojom se raspolaže
+
+Investicije su jednake štednji!
+
+
+Štednja
+-------------------------------
+• Snažno je vezana za rast dohotka
+• Predstavlja najveći luksuz
+• Mjeri se stopom osobne štednje – osobna štednja iskazana kao postotak raspoloživog dohotka
+
+
+Činitelji potrošnje
+-------------------------------
+Faktori koji utječu na izdatke za potrošnju:
+• Tekući raspoloživi dohodak
+  - Rast dohotka povećava potrošnju
+  - Kratkoročno promatranje dohotka
+
+• Trajni dohodak i model potrošnje životnog ciklusa
+  - Na potrošnju utječu i tekući dohodak i dugoročni dohodovni
+    izgledi – na tome se temelji teorija trajnog dohotka
+  - Trajni dohodak je razina dohodovnog trenda – dohodak nakon
+    što uklonimo privremene i kratkotrajne utjecaje vremenskih
+    prilika ili neočekivanih dobitaka ili gubitaka
+  - Hipotezna životnog ciklusa – ljudi štede kako bi ujednačili
+    potrošnju tijekom životnog vijeka
+
+• Bogatstvo i ostali utjecaji
+
+
+Ulaganja / investicije
+-------------------------------
+Uloga ulaganja u makroekonomiji:
+• Investicije utječu na poslovni ciklus
+• Dovode do akumuliranja kapitala, što povećava potencijalnu
+  proizvodnju i vodi do gospodarskog rasta
+
+Ulaganje predstavlja dodatak zalihama proizvodne imovine
+(novo skladište, novi stroj...) ili kapitalne robe (kupnja opreme, vozila...)
+
+Ulaganje ne podrazumijeva kupnju vlasničkog prava (dionice, zemljišta...) – tu 
+nema proizvodnje realnog kapitala
+
+Investicije u kratkom roku utječu na proizvodnju preko učinka na agregatnu
+potražnju, a u dugom roku na agregatnu ponudu preko učinka na povećanje
+kapitala i potencijalnog proizvoda.
+
+
+Investicije
+-------------------------------
+Odnose se na bruto domaća ulaganja
+• Pored njih analiziraju se i strana ulaganja, državna ulaganja 
+  i neopipljiva ulaganja (ljudski i intelektualni kapital)
+
+Glavne vrste bruto domaćih ulaganja:
+• Izgradnja stambenih objekata
+• Ulaganje u fiksnu poslovnu opremu
+• Ulaganje u računalne programe
+• Ulaganje u opremu
+• Dodaci zalihama
+
+
+Bruto i neto investicije
+-------------------------------
+Bruto investicije su one koje su namijenjene zamjeni postojećeg 
+izrabaćenog kapitala i stvaranju novog, a financiraju se iz amortizacije 
+i akumulacije (tj. neraspodijeljene dobiti)
+
+Neto investicije su namijenjene proširenju postojećeg kapitala, 
+a financiraju se iz akumulacije (tj. neraspodijeljene dobiti)
+ - Jednake su razlici između bruto investicija i amortizacije
+
+
+Činitelji utjecaja na investicije
+-------------------------------
+Zašto ulažemo?
+ • Očekuje se da će ulaganja donijeti dobit – prihode veće od troškova ulaganja
+
+Ulaganje se temelji na:
+• Veličinom prihoda (prinosa) od investicije (e)
+• Veličinom troškova investiranja među kojima su najznačajniji kamate (i) i porezi (T)
+• Očekivanjima i predviđanjima budućih događaja (E)
+
+I = f(e,i,T,E)
+
+
+Nacionalni računi izvedeni iz računa poduzeća
+-------------------------------
+Izvodi se iz različitih izvora:
+• Ankete
+• Povrat poreza na dohodak
+• Maloprodajne statistike
+• Podaci o zaposlenosti
+• PDV
+• Računi dobiti gubitka
+• Bilance poduzeća
+
+
+Mjerenje BDP-a i “Dvostruko obračunavanje”
+-------------------------------
+Neovisno o tome koji se pristup primjenjuje, uvijek se dobiva isti rezultat
+
+Uračunava se samo finalni proizvod, a ne i sirovina (posredni proizvodi), 
+radi izbjegavanja dvostrukog obračunavanja istih proizvoda – jednom kao 
+outputa, drugi puta kao inputa
+• Tako se izbjegava umjetno povećanje BDP-a
+
+Uključuje se samo “dodana vrijednost” – razlika između vrijednosti dobara i 
+troškova materijala koji su se upotrijebili za tu vrstu proizvoda
+• Troškovi nastali poslovanjem s drugim poduzećima nisu uključeni 
+  u dodanu vrijednost i u izračun BDP-a
+
+
+Gospodarski rast i razvoj
+ishod ucenja 6
+===============================
+
+Značajke zemalja u razvoju
+-------------------------------
+13_2018_ope_makroekonomija, page 32
+14_2018_ope_rast i razvoj
 
 -------------------------------
 
@@ -1167,4 +1381,97 @@ BDP = C + I + G + X
 -------------------------------
 
 
+
 -------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+
+-------------------------------
+
+
