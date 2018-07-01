@@ -160,6 +160,7 @@ koriste u proizvodnji dobara i usluga. Ekonomisti proizvodne
 resurse dijele u tri temeljne kategorije: Zemlja, Rad, Kapital
 
 Zemlja je tlo, površina i sve sirovine koje se mogu dobiti u prirodi
+
 Kapital je ekonomska vrijednost koja se ulaže u proizvodnju ili neku 
 drugu ekonomsku djelatnost s osnovnom svrhom ostvarenja dobiti.
 
@@ -729,10 +730,8 @@ Kako država može povećati svoju stopu gospodarskog rasta?
 Ciljevi i instrumenti makroekonomije
 -------------------------------
 Ciljevi:
- - Proizvodnja
- - Visoka razina i brzi rast proizvodnje
- - Zaposlenost
- - Visoka razina zaposlenosti s malo nedobrovoljne nezaposlenosti
+ - Proizvodnja: Visoka razina i brzi rast proizvodnje
+ - Zaposlenost: Visoka razina zaposlenosti s malo nedobrovoljne nezaposlenosti
  - Stabilnost cijena
 
 Instrumenti:
@@ -892,3 +891,280 @@ među ekonomskim ciljevima pri čemu je njihova odluka određena političkim
 i društvenim činiteljima
 
 
+Ekonomska politika
+-------------------------------
+Ekonomskom se politikom svjesno usmjeravaju, odnosno reguliraju ekonomski 
+tijekovi u nekom društvu
+
+Razlikuje se više područja suvremene ekonomske politike:
+ - Fiskalna politika
+ - Monetarno-kreditna politika
+ - Politika cijena
+ - Vanjskotrgovinska politika
+ - Politika dohotka
+
+
+Instrumenti makroekonomske politike
+-------------------------------
+Instrument politike je ekonomska varijabla koju nadzire vlada, a može 
+utjecati na jedan ili više makroekonomskih ciljeva
+
+Promjenama monetarne ili fiskalne politike mogu se izbjeći ili ublažiti 
+ispadi poslovnih ciklusa ili povećati stope rasta
+
+
+Fiskalna politika
+-------------------------------
+Područje javnih financija
+
+Uporabom fiskalnih instrumenata (instrumenti javnih prihoda i rashoda) 
+utječe se na ostvarenje ciljeva ekonomske politike (npr. zaposlenost,
+inflacija i sl.)
+
+Može se analizirati s različitih gledišta:
+• Prema instrumentima: politika opće potrošnje i porezna politika
+• Prema načinu provođenja: diskrecijska (ili tekuća) fiskalna politika i 
+  fiskalna politika ugrađenih automatskih stabilizatora
+
+
+Fiskalna politika – prema načinu provođenja
+-------------------------------
+Diskrecijska ili tekuća fiskalna politika:
+Svjesno državno reguliranje svoje potrošnje i poreznih
+aktivnosti radi otklanjanja gospodarskih poremećaja te
+osiguranja maksimalne zaposlenosti uz što je moguće
+manju inflaciju
+
+Ugrađeni ili automatski stabilizatori:
+Elementi koji automatski, bez čovjekove intervencije,
+djeluju u smjeru stabiliziranja gospodarstva
+npr. kompenzacije za nezaposlenost, socijalna pomoc itd.
+
+
+Fiskalna politika – prema instrumentima
+-------------------------------
+Oporezivanje (prihodi) i državni izdaci (rashodi)
+
+Porezi utječu na dohotke građana
+• Veličina dohotka utječe na potrošnju i štednju
+• Potrošnja i štednja utječu na investicije i proizvodnju
+
+Porezi utječu na cijene roba i čimbenike proizvodnje
+• Mogu se formirati tako da potiču ili sprječavaju određena ponašanja
+• Utječu na ekonomsku aktivnost
+
+Smanjenje poreza vodi povećanju raspoloživog dohotka, što
+utječe na povećanje osobne potrošnje (ovisno o sklonosti
+potrošnji), a time se povećavaju i investicije, pa posljedično 
+i zaposlenost
+
+Državni izdaci:
+• Državne kupnje – potrošnja na robe i usluge
+• Transferna plaćanja – mirovine, naknade za nezaposlene
+
+Državna potrošnja određuje relativnu veličinu javnog i privatnog sektora
+
+Važno! – državni izdaci utječu i na opću razinu potrošnje u gospodarstvu, 
+pa time na razinu BDP-a
+
+Često se upotrebljava u svrhu eliminiranja recesije... uglavnom obuhvaća 
+javne radove (objekti od zajedničkog interesa, infrastruktura i sl.)
+
+
+Porezna politika
+-------------------------------
+smanjenje poreza ima manji utjecaj na rast gospodarske aktivnosti od 
+povećanja javnih rashoda. 
+
+Razlog: iznos koji ostaje na raspolaganju kao višak dohotka se jednim 
+dijelom potroši, a jednim dijelom raspodijeli u štednju; pozitivan učinak 
+na gospodarstvo u cjelini ima samo onaj dio koji se usmjeri u potrošnju
+
+Kod javnih rashoda, cijeli iznos se usmjerava u potrošnju
+
+
+Monetarna politika
+-------------------------------
+Upravljanje državnim novcem, kreditnim i bankarskim sustavom
+
+Uglavnom se temelji na tretiranju kamate kao važnog instrumenta 
+ekonomske politike
+
+Monetarnu politiku provodi Centralna banka čija je temeljna funkcija 
+da nadzire ponudu novca i kredita u zemlji
+
+Centralna banka može regulirati količinu novca dostupnu gospodarstvu
+• To utječe na kamatne stope, devizne tečajeve, itd.
+
+
+Cilj HNB-a
+-------------------------------
+Cilj Hrvatske narodne banke jest održavanje stabilnosti cijena. Ne 
+dovodeći u pitanje ostvarivanje svojega osnovnog cilja, Hrvatska
+narodna banka podupire gospodarsku politiku Republike Hrvatske i 
+pritom djeluje u skladu s načelima otvorenoga tržišnog gospodarstva i
+slobodne konkurencije.
+
+
+Zadaci HNB-a
+-------------------------------
+• utvrđivanje i provođenje monetarne i devizne politike,
+• držanje i upravljanje međunarodnim pričuvama Republike Hrvatske,
+• izdavanje novčanica i kovanog novca,
+• uređivanje i unapređivanje sustava platnog prometa,
+• obavljanje zakonom utvrđenih poslova za Republiku Hrvatsku,
+• donošenje podzakonskih propisa u poslovima iz svoje nadležnosti itd
+
+
+Princip monetarne politike
+-------------------------------
+Kada gospodarska aktivnost opada, potrebno je povećati ponudu 
+novca i kredite a kada rast ukupne potrošnje počne izazivati inflaciju, 
+treba smanjiti ponudu novca i kredita
+
+Instrumenti monetarne politike:
+• Politika otvorenog tržišta
+• Politika diskontne stope
+• Politika obveznih rezervi
+
+
+Reguliranje ponude novca
+-------------------------------
+Ograničavanjem ponude novca povećavaju se kamatne stope i smanjuju se 
+investicije, što dovodi do pada BDP-a i niže inflacije.
+
+Povećanje ponude novca i smanjivanje kamatnih stopa potiče gospodarsku aktivnost.
+
+
+Politika otvorenog tržišta
+-------------------------------
+Operacije na otvorenom tržištu koje provodi središnja banka kupujući ili 
+prodajući vrijednosne papire poslovnim bankama (ili drugim kupcima)
+
+Tako može proširiti ili suziti kreditni potencijal poslovnih banaka
+• Svaka kupnja znači povećanje ponude novca
+• Svaka prodaja smanjuje ponudu novca
+
+
+Politika diskontne stope
+-------------------------------
+Diskontna stopa = kamatna stopa prema kojoj središnja banka reeskontira 
+(„otkupljuje”) vrijednosne papire poslovnih banaka ili naplaćuje
+kamate na odobrene kredite poslovnim bankama
+
+Promjene u visini diskontne stope djeluju na promjenu kamatnih stopa na 
+kreditnom tržištu i na potražnju za kreditima
+
+Za vrijeme recesije diskontna stopa se smanjuje, kako bi se stvorili lakši 
+kreditni uvjeti, dok je u vrijeme inflacije situacija obrnuta
+
+
+Politika obveznih rezervi
+-------------------------------
+Središnja banka donosi odluku o stopi obveznih rezervi – tako regulira ponudu kredita
+
+Povećanje rezervi smanjuje masu novca, banke mogu plasirati manje kredita, 
+pa se kamatna stopa povećava – to dovodi do pada ukupnih investicija
+
+
+Mjerenje gospodarske aktivnosti
+-------------------------------
+Glavni pokazatelji gospodarske aktivnosti:
+• Bruto domaći proizvod – BDP (Gross Domestic Product – GDP)
+• Bruto nacionalni proizvod – BNP (Gross National Product – GNP)
+
+
+BDP
+-------------------------------
+Bruto domaći proizvod je ukupna tržišna vrijednost finalnih roba i 
+usluga proizvedenih u državi u danoj godini.
+
+Jednak je ukupnoj proizvodnji potrošačkih i investicijskih dobara,
+državnoj potrošnji i neto izvozu u ostale zemlje
+
+Najsveobuhvatnija mjera ukupne proizvodnje roba i usluga neke države.
+
+
+Bruto nacionalni proizvod
+-------------------------------
+BNP (bruto nacionalni proizvod) – vezan je za vlasništvo sredstava za rad
+
+• BDP – vrijednost proizvodnje koja je rezultat rada i kapitala
+  smještenih unutar granica neke države
+• BNP – vrijednost proizvodnje koja je rezultat rada i kapitala u
+  vlasništvu građana neke države, bez obzira da li se nalazi u
+  zemlji ili u inozemstvu
+
+• Npr. ako neka američka kompanija sagradi nekretninu u Hrvatskoj,
+  ta vrijednost se uključuje u američki BNP, ali ne i u BDP
+• Japanski proizvođači automobila koji posluju u SAD-u rezultate
+  pribrajaju američkom BDP-u, ali ne i američkom BNP-u
+
+Razlika između BDP-a i BNP-a naziva se neto inozemno
+faktorsko plaćanje (NFP – net factor payment from abroad)  
+
+
+Neto ekonomsko blagostanje
+-------------------------------
+Neto ekonomsko blagostanje (NEW – net economic welfare) uključuje i kvalitetu življenja
+Porast BDP-a ne mora značiti i poboljšanje kvalitete življenja
+(zagađenje, smanjenje slobodnog vremena i sl.)
+
+NEW uključuje:
+• Vrijednost slobodnog vremena
+• Učinke neregistrirane (sive) ekonomije (samostalni rad)
+NEW isključuje:
+• Šteta nastala zagađivanjem prirode i okoliša
+
+
+Pristupi mjerenju
+-------------------------------
+Proizvodni pristup:
+• Ekonomska aktivnost je zbroj tržišnih vrijednosti svih
+  konačnih proizvoda i usluga koji više ne ulaze u proces
+  proizvodnje, već služe finalnoj potrošnji, a koji su proizvedeni
+  u određenom razdoblju (uobičajeno u godini dana)
+Potrošni pristup:
+• Zbroj iznosa koje su krajnji potrošači potrošili na kupnju proizvoda i usluga
+Dohodovni pristup:
+• Zbroj dohodaka primljenih od proizvođača, ali i dohodaka
+  proizvođača (profit nakon odbitka poreza) i države (porezi)
+
+Sva tri pristupa daju jednak rezultat!
+ukupna proizvodnja = ukupno trošenje = ukupan dohodak
+
+
+Potrošna i dohodovna strana
+bruto domaćeg proizvoda
+-------------------------------
+Potrošni pristup mjeri BDP kao ukupno trošenje na finalna
+dobra i usluge proizvedene u gospodarstvu u određenom razdoblju
+
+Prate se samo finalna dobra – dobra potrošnje
+
+BDP je jednak zbroju dolara potrošenih na ta finalna dobra
+(cijena proizvoda ili usluge x broj proizvoda ili usluge)
+
+Koriste se tržišne cijene – odražavaju relativnu ekonomsku
+vrijednost različitih proizvoda i usluga
+
+BDP se sastoji od:
+• Potrošnje pojedinaca i kućanstava (C)
+• Bruto ulaganja (investicije), odnosno potrošnje poduzeća (I)
+• Državnih izdataka za robe i usluge, odnosno državne potrošnje (G)
+• Neto izvoza (X)
+
+BDP = C + I + G + X
+
+
+
+-------------------------------
+
+
+
+
+
+-------------------------------
+
+
+-------------------------------
