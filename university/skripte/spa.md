@@ -1,3 +1,11 @@
+## ogledni 
+- [I3 b](#i3b)
+```
+(Bodova: 7) Kreirajte kontejner od 10 slučajnih brojeva između 1 i 100. 
+Pitajte korisnika da odabere smjer kojim želi ispisati brojeve (ASC ili DESC). 
+Koristeći hrpu ili prioritetni red (prema želji), ispišite brojeve u zadanom smjeru.
+```
+
 ## V9
 - [V9 Z1-2](#v9z1-2)
 ```
@@ -154,6 +162,52 @@ više bilo 2001.
 ```
 
 ------------------------
+
+i3b
+-----
+```cpp
+#include <iostream>
+#include <ctime>
+#include <queue>
+using namespace std;
+
+int main(){
+	srand(time(nullptr));
+    priority_queue<int, vector<int>, greater<int>> pqAsc;
+    priority_queue<int> pqDesc;
+    
+	char choice; cout << "smjer (a/d)? "; cin>>choice;
+	switch (choice){
+	case 'a':
+		for (unsigned i = 0; i<10; ++i) pqAsc.push((rand()%100)+1);
+        while(!pqAsc.empty()){
+            std::cout << pqAsc.top() << " ";
+            pqAsc.pop();
+		}
+		break;
+	case 'd':
+		for (unsigned i = 0; i<10; ++i) pqDesc.push((rand()%100)+1);
+        while(!pqDesc.empty()){
+            std::cout << pqDesc.top() << " ";
+            pqDesc.pop();
+		}
+		break;
+	default:
+		cout << "bad choice";
+		break;
+	}
+}
+```
+
+i4
+-----
+```cpp
+```
+
+i5
+-----
+```cpp
+```
 
 v9z1-2
 --------------
