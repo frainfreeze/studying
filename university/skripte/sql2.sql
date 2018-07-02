@@ -286,3 +286,58 @@ select top 5 pk.Naziv as Kategorija,(
 ) as UkupanIznosProdaje
 from Potkategorija as pk
 order by 2 desc
+
+--ISHOD 7
+--Zad11: ispisite za sve komercijaliste ime prezime i
+--datum zadnjeg pripadajuceg racuna
+select k.Ime, k.Prezime,(
+    select MAX(r.DatumIzdavanja) 
+    from Racun as r 
+    where r.KomercijalistID=k.IDKomercijalist
+) 
+from Komercijalist as k
+
+--Zad12: ispisite nazive gradova kupaca kojima je prodaje
+--realizirao komercijalist mirko miric
+select * from Grad
+select g.Naziv from Grad as g
+where g.IDGrad in (
+    select k.GradID 
+    from Kupac as k 
+    where k.IDKupac in (
+        select r.KupacID 
+        from Racun as r
+        where r.KomercijalistID=268
+    )
+)
+
+--Zad13: ispisite rang listu koja prikazuje popis prozivoda
+--bez ponavljanja i kolicinu u kojoj je pojedini proizvod 
+--prodan a da nije palcen kreditnom karticom.
+--sortiraj padajuci po kolicini prodanih proizvoda
+select distinct p.Naziv,(
+    select COUNT(s.Kolicina) 
+    from Stavka as s 
+    where s.ProizvodID=p.IDProizvod and (
+        select r.KreditnaKarticaID 
+        from Racun as r 
+        where s.RacunID=r.IDRacun) is null
+    ) 
+as Kolicina 
+from Proizvod as p
+order by Kolicina desc
+
+--Zad14: ispisite 5 naziva gradova koji imaju najveci broj
+--racuna(kolicinu ne BrojRacuna) placenih kreditnim karticama.
+--u istom upitu prikazite i najnoviji datum izdavanja racuna
+--u pripadajucem gradu (o polju FarumIzavanja u tablici racun)
+select g.Naziv,(
+    select COUNT(*) from Racun as r 
+    where r.KreditnaKarticaID is not null and r.KupacID in (
+        select k.IDKupac from Kupac as k 
+        where k.GradID=g.IDGrad)) as BrojRacuna
+,    (select MAX(r.DatumIzdavanja) from Racun as r 
+     where r.KupacID in (
+        select k.IDKupac from Kupac as k 
+        where k.GradID=g.IDGrad)) as ZadnjiRacunuGradu
+from Grad as g
