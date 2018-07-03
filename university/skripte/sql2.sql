@@ -73,7 +73,27 @@ where g.Naziv = 'osijek' and (km.Prezime = 'Pasic' or r.KomercijalistID is null)
 order by km.Prezime asc
 
 -- Ishod 5.
---?
+--tablica je 1NF ako ima primarni kljuc, ne sadrzi ponavljajuce 
+--grupe stupaca, ni jedan stupac ne sadrzava skupove poidataka,
+--tablica je 2NF ako je 1NF + svaki nekljucan stupac ovisi o
+--cijelom primarnom kljucu a ne samo o djelu
+--tablica je 3NF ako svaki nekljucni stupac ovisi samo o kljucu
+--tj ako ne pripada nekom drugom entitetu
+-----------------------
+--p1: IDStudent, IDKolegij, Datum, Ocjena, NastavnikID
+--(primarni ključ čine stupci IDStudent i IDKolegij)? 3NF
+-----
+--p2: IDStudent, IDKolegij, Datum, Ocjena, ImeNastavnika, PrezimeNastavnika 
+--(primarni ključ čine stupci IDStudent i IDKolegij)? 2NF
+-----
+--p3: IDStudent, IDKolegij, Datum, Ocjena, NastavnikID, ECTSBodova 
+--(primarni ključ čine stupci IDStudent i IDKolegij)? 1NF
+-----
+--p4: IDStudent, IDKolegij, Datum, Ocjena, BodovaI1, BodovaI2, BodovaI3, 
+--BodovaI4 (primarni ključ čine stupci IDStudent i IDKolegij)? 1NF
+-----
+--p5: IDKolegij, Naziv, BrojEctsBodova (primarni ključ je stupac IDKolegij)? 3NF
+
 
 -- Ishod 6
 -- Zadatak 1: ispiste imena i prezimena kupaca i u trecem stupcu kombinirani prikaz
