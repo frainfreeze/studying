@@ -1364,114 +1364,285 @@ troškova materijala koji su se upotrijebili za tu vrstu proizvoda
 
 
 Gospodarski rast i razvoj
-ishod ucenja 6
+Ishod ucenja 6
 ===============================
 
 Značajke zemalja u razvoju
 -------------------------------
-13_2018_ope_makroekonomija, page 32
-14_2018_ope_rast i razvoj
+Nizak dohodak po glavi stanovnika
 
+Socijalne posljedice: loše zdravlje, niska razina
+pismenosti, neuhranjenost, nedostatak kapitala
+
+Zarađuju oko 1/12 onoga što zarađuju ljudi u zemljama visokog dohotka
+
+
+PPP – Purchasing power parity
 -------------------------------
+Paritet kupovne moći
+• Odnos općih indeksa cijena među državama koji služe 
+  za korekciju službenih tečajeva.
+• Količina valute potrebna da bi se kupilo određeno dobro ili
+  košarica dobara, a određuje se u svakoj zemlji temeljem
+relativnih troškova života i stopa inflacije.
+
+Pretpostavka: postojanje Zakona jedne cijene – LOP (eng. Law of One Price)
+
+LOP kaže da na konkurentnim tržištima bez utjecaja transportnih troškova i 
+drugih barijera slobodnoj trgovini (carine) identična dobra u različitim 
+zemljama moraju imati identičnu cijenu izraženu pomoću deviznog tečaja.
 
 
-
-
-
+Big Mac indeks
 -------------------------------
+Index koji objavljuje The Economist
+
+Neformalan način mjerenja kupovne moći različitih valuta, odražava 
+paritet kupovne moći
+• Npr. ako se u Londonu hamburger prodaje za 2£, a u New Yorku za 4$, 
+  to implicira da je prema PPP 1£ ekvivalentna 2$
+• No, što ako u je hamburger u New Yorku skuplji od hamburgera u Austinu?
+• U McD je ista cijena u cijeloj zemlji...
 
 
-
+Kako ocijeniti razvoj neke zemlje?
 -------------------------------
+Gospodarski rast = ekspanzija realnog BDP-a
+
+Gospodarski razvoj = ekspanzija potencijalnog BDP-a ili 
+proizvodnje neke zemlje:
+• Pomak granice proizvodne mogućnosti prema van
+• Dugoročni rast potencijalne proizvodnje
+• Ne samo kroz ekonomske pokazatelje
+• Zdravlje, očekivano trajanje života
 
 
-
-
-
+Četiri razvojna elementa
 -------------------------------
+• Ljudski resursi
+• Prirodni resursi
+• Akumulacija kapitala
+• Tehnološka promjena i inovacije
 
 
-
+Ljudski resursi
 -------------------------------
+Malthusov “Zakon stanovništva”:
+• Stanovništvo se razmnožava brže (geometrijska stopa) nego
+  što raste proizvodnja hrane (aritmetička stopa)
+• Svaki član rastućeg stanovništva imao bi sve manje i manje zemlje i 
+  prirodnih proizvodnih faktora s kojima bi mogao raditi.
+• Zbog opadajućih prinosa dohodak bi mogao rasti u najboljem
+  slučaju po aritmetičkoj stopi.
+• Proizvodnja po osobi imala bi tendenciju pada tako nisko dok se bi 
+  stabilizirala na razini preživljavanja stanovništva sličnoj gladovanju.
+• Malthusa i njegove sljedbenike kritizirali su za neuvažavanje mogućnosti 
+  tehnološkog napretka i za previd značaja kontrole rađanja u snižavanju 
+  rasta stanovništva.
 
 
+Siromašne zemlje teško mogu prevladati siromaštvo tako visokim stopama 
+rasta stanovništva
+Dio njih pokušava kontrolirati stopu rađanja – pr. Kina
+S druge strane neke zemlje se suočavaju s niskom stopom nataliteta
 
 
-
+Ljudski kapital
 -------------------------------
+Kvaliteta ljudskih resursa
+• Kontrola bolesti i poboljšanje zdravlja i prehrane
+• Poboljšanje obrazovanja, smanjivanje nepismenosti, obučavanje radnika
+• Prihvatiti važnost ljudskih resursa (potencijala)
 
 
-
+Važnost
 -------------------------------
+Ljudi, njihove vještine i znanja, kreativne i druge sposobnosti, specifični 
+odnosi i klima jedinstveni su za svako poduzeće i ne mogu se kopirati
+
+Objektivna znanja mogu biti vrlo slična, ali način njihovog korištenja i 
+primjene, te mogućnosti koje se na njima temelje posebne su u svakoj organizaciji
+
+Kvaliteta obavljanja posla ovisi isključivo o kvaliteti ljudi koji u tvrtki rade
+
+Ljudi su jedini resurs koji ima neograničenu mogućnost razvoja, a upotrebom se 
+ne smanjuje, nego raste
+
+Nesrazmjer ulaganja i efekta kaže da sa malim ulaganjima možemo ostvariti 
+znatno veće pozitivne efekte.
 
 
-
-
-
+Prirodni resursi
 -------------------------------
+obradivo tlo, nafta, ruda
 
 
-
+Akumulacija kapitala
 -------------------------------
+Prvobitna akumulacija kapitala
+Odustajanje od tekuće potrošnje radi ulaganja u proizvodnju
+Siromašne zemlje nemaju mogućnost smanjenja tekuće potrošnje
+Države s najvećim rastom ulažu oko 20% proizvodnje u akumulaciju kapitala
+Najsiromašnije 5% i manje
+Ovisnost ulaganja i štednje – niska razina štednje = niska razina ulaganja
+Uloga države kroz ulaganje u infrastrukturu
 
 
-
-
-
+Problemi akumulacije
 -------------------------------
+Preniska štednja (točka pokrića) koja rezultira premalim ulaganjima u
+proizvodni kapital koji je nužan za gospodarski napredak
 
 
-
+Tehnološka promjena i inovacije
 -------------------------------
+Oponašanje tehnologije
+
+Poduzetništvo i inovacija
+• Ovisi o prirodnim bogatstvima i ljudskom kapitalu
+• Poduzetnici – pokretač ekonomskog razvoja
 
 
-
-
-
+Začarani krug siromaštva
 -------------------------------
+-->niska stednja i ulaganja--->spora akumulacija kapitala-->niska
+produktivnost--->niski prosjecni dohodci--
 
 
-
+Neka razmišljanja o ekonomskom razvoju
 -------------------------------
+Mogućnost pokretanja razvoja:
+• Hipoteza zaostalosti
+• Industrijalizacija u odnosu na poljoprivredu
+• Država u odnosu na tržište
+• Rast i vanjska orijentacija
 
 
-
-
-
+Hipoteza zaostalosti
 -------------------------------
+Relativno zaostajanje
+Zemlje koje su u razvoju sada mogu koristiti već postojeće tehnologije (ne moraju ih razvijati)
+Mogu brže napredovati
+Konvergencija prema tehnološkoj granici – brži rast (ali mala baza)
 
 
-
+Industrijalizacija u odnosu na poljoprivredu
 -------------------------------
+U većini zemalja dohoci u gradovima (industrija i usluge) veći su od onih u poljoprivredi
+Često – razvoj industrijalizacije na štetu poljoprivrede
+• Kapitalno intenzivna
+• U gradove privlači radnike
+• Visoka nezaposlenost
+
+Podizanje produktivnosti u poljoprivredi može zahtijevati manje kapitala, a zaposliti više radnika
 
 
-
-
-
+Država u odnosu na tržište
 -------------------------------
+Tržište je najučinkovitiji mehanizam
+Bitni elementi:
+• Prevladava privatno vlasništvo
+• Vanjska orijentacija u trgovinskoj politici
+• Niske carine i mala količinska ograničenja
+• Promicanje malog poduzetništva
+• Jačanje konkurencije
+
+Tržišta najbolje funkcioniraju u stabilnom makroekonomskom okruženju
+• Predvidljivi porezi
+• Niska inflacija
 
 
-
+Rast i vanjska orijentacija
 -------------------------------
+Međunarodna trgovina
+
+Strategija zamjene uvoza:
+• Samodostatnost zemlje (proizvodnje)
+• Zamjena uvoza domaćim proizvodima
+
+Strategija vanjske orijentacije (otvorenosti)
+• Plaćanje potrebnog uvoza unapređujući učinkovitost i konkurentnost
+• Osvajanje inozemnih tržiša
+• Niske trgovinske prepreke
 
 
-
-
-
+Temeljne postavke
 -------------------------------
+Strategija privrednog razvoja Hrvatske treba osigurati njezin stabilan i održiv 
+dugoročan razvoj, kako bi u što kraćem roku dostigla prosječni stupanj razvoja EU
 
+Ne postoji opća formula za dobro vođenje procesa privrednog razvoja svih zemalja, 
+no postoje ekonomska načela na kojima se svaki taj program mora temeljiti
 
+Ciljevi se ostvaruju ekonomskom politikom, pa strategiju razvoja čini skup svih 
+vrsta ekonomske politike usmjerenih na postizanje unaprijed postavljenih konzistentnih i
+ostvarivih ciljeva
 
--------------------------------
+Ekonomski program svake zemlje ima za zadaću ostvariti određene ekonomske ciljeve – oni 
+se izvode iz političkih ciljeva; politička i ekonomska sloboda su međuzavisne
 
+Nužni uvjet: tržišna privreda
 
+Tržišna privreda nije i dovoljan uvjet za političku demokraciju – u
+tržišnoj privredi nepotpune konkurencije monopoli (oligopoli)
+narušavaju ekonomsku slobodu, a narušena ekonomska sloboda
+narušava i političku slobodu i ekonomsku efikasnost
 
+Maksimiziranje ekonomskog blagostanja stanovništva neke zemlje
+znači maksimalan stupanj zadovoljenja potreba njezina
+stanovništva, koje se ostvaruje potrošnjom; za to je nužna i
+odgovarajuća ponuda
 
+Maksimalno zadovoljenje potreba ukupnog stanovništva znači ne samo 
+maksimalnu ponudu, nego i njihovu optimalnu razdiobu među pojedincima; 
+visoki per capita dohodak uz nepravednu raspodjelu ne znači maksimalno 
+blagostanje nekog društva
 
--------------------------------
+Maksimalna ponuda ekonomskih dobara znači maksimalnu domaću proizvodnju i 
+uvoz – no u dugom roku uvoz se treba platiti izvozom
 
+Nužan uvjet maksimiziranja proizvodnje je puna zaposlenost
+proizvodnih faktora (prije svega rada), pa je zato postizanje pune
+zaposlenosti svih proizvodnih faktora temeljni cilj svake
+ekonomske politike
 
+Količina proizvodnje ovisi o količini i kvaliteti proizvodnih faktora
+kojima ta zemlja raspolaže i o njihovoj efikasnoj uporabi
 
--------------------------------
+Maksimalna se proizvodnja ostvaruje samo optimalnom
+alokacijom proizvodnih faktora – organizacija proizvodnje mora
+imati za cilj optimalnost ulaganja proizvodnih faktora radi
+postizanja maksimalne količine proizvodnje
 
+Nužan uvjet za postizanje tog cilja je postojanje tržišta potpune konkurencije
 
+Budući da je proizvodnja namijenjena zadovoljenju materijalnih i duhovnih potreba 
+pojedinaca, potrošača, proizvodnja mora polaziti od njihovih potreba
+
+Potrebe su izražene preferencijama potrošača na koje utječe mnoštvo faktora
+
+Uz dane cijene proizvoda, iz danog dohotka potrošač će maksimizirati
+svoje zadovoljstvo tako da u svaka novčana jedinica uložena u kupnju
+pojedinih proizvoda donosi isto zadovoljstvo
+
+Povećanje realnog dohotka povećava mogućnost zadovoljenja potreba,
+dakle mogućnost povećanja blagostanja
+
+Povećanje dohotka u zemlji može se postići povećanjem zapošljavanja 
+proizvodnih faktora i/ili povećanjem njihove produktivnosti
+
+Prema tome – da bi se maksimiziralo zadovoljstvo cjelokupnog
+stanovništva, proizvodnju treba orijentirati prema potrebama potrošača,
+a organizirati je tako da se ostvari optimalno ulaganje proizvodnih
+faktora, koje će rezultirati maksimalnom proizvodnjom iz danog utroška
+proizvodnih faktora
+
+Efikasnost ekonomskog sustava ovisi o tome u kojoj je mjeri uspio angažirati 
+znanje raspršeno među mnoštvom pojedinaca u društvu
+
+To se postiže dobrom ekonomskom i političkom organizacijom
+
+Efikasno upravljanje je ključ ekonomskog rasta i razvoja
+
+Ono podrazumijeva dobro predviđanje, planiranje, organiziranje, izvršenje i 
+kontrolu ekonomskih aktivnosti

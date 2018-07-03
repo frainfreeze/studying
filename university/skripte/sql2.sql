@@ -216,7 +216,6 @@ where (
             where pk.KategorijaID=k.IDKategorija
         )
     )
-)
 
 -- Ishod 7 - rjesiti podupitima bez spajanja
 -- Zadatak 1: ispisite imena komercijalista koji nemaju svojih racuna
