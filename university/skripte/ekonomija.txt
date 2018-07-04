@@ -167,6 +167,24 @@ drugu ekonomsku djelatnost s osnovnom svrhom ostvarenja dobiti.
 Rad su sve ljudske fizičke i umne sposobnosti koje se mogu 
 upotrijebiti u proizvodnji dobara i usluga
 
+Nevidljiva ruka – djelovanje slobodnog tržišta,
+gdje ako proizvođača pustimo da donosi svoje
+odluke (bez uplitanja države) on će proizvesti
+točno ono što kupcu treba i po cijeni koju je
+kupac spreman platiti
+
+Osoba koja maksimizira svoj vlastiti
+interes će ne znajući maksimizirati
+interes zajednice zato što da bi zaradila
+na slobodnom tržištu mora proizvesti
+proizvod ili uslugu koju drugi žele kupiti.
+
+Homo oeconomicus
+Savršeno racionalni čovjek – nema emocija
+Teži maksimizirati isključivo vlastiti interes i profit
+Ima savršeno dostupnu informaciju u svako vrijeme
+
+
 
 Ishod ucenja 2
 ==============
@@ -275,6 +293,7 @@ cijena uz pretpostavku ceteris paribus.
 Ed = %tna promjena trazene kolicine/ %tna promjena cjene
 
 Ceteris paribus (hrvatski: "ako je sve ostalo isto, ako se ništa ne mijenja").
+uz ostale uvijete ne promjenjene
 
 ako je koeficijent cjenovne elasticnosti potraznje veci od 1 
 govorimo o elasticnoj potraznji, ako je jedna 1 radi se o jedinicno 
@@ -665,8 +684,6 @@ rasta cijena i nezaposlenosti
 
 Stagflacija se nije mogla riješiti mjerama keynesijanske 
 ekonomske politike i dolazi do krize Keynesovog koncepta
-
-
 
 Milton Friedman, nobelovac iz 1976. godine, njegov je najveći 
 protivnik i zagovaratelj liberalizma
@@ -1646,3 +1663,122 @@ Efikasno upravljanje je ključ ekonomskog rasta i razvoja
 
 Ono podrazumijeva dobro predviđanje, planiranje, organiziranje, izvršenje i 
 kontrolu ekonomskih aktivnosti
+
+
+
+Vjezbe: MI2
+============
+vjezbe5
+
+Bruto društveni proizvod
+------------------------
+Tržišna vrijednost svih finalnih dobara i usluga proizvedenih u 
+zemlji u danom vremenskom periodu (obično godina dana).
+
+Daje opću sliku stanja gospodarstva i predstavlja sveobuhvatnu mjeru
+ukupne proizvodnje roba i usluga neke države
+
+
+Načini računanja BDP-a
+------------------------
+PROIZVODNI PRISTUP - BDP je jednak zbroju bruto dodanih vrijednosti 
+(ukupna proizvodnja – međufazna potrošnja) svih rezidentnih
+institucionalnih jedinica uključenih u proizvodnju
+(plus svi porezi minus sve subvencije)
+
+RASHODOVNI PRISTUP – BDP je jednak zbroju svih kategorija finalne 
+potrošnje: (1) osobne potrošnje (C); (2) državne potrošnje (G); 
+(3) bruto-investicija (I); (5) neto-izvoza - izvoz dobara i usluga 
+umanjen za uvoz (X). Dakle, BDP prema rashodovnom
+pristupu se računa kao C+G+I+X.
+
+DOHODOVNI PRISTUP – BDP je zbroj svih dohodaka koji su sastavnice 
+bruto dodane vrijednosti (nadnice, kamate, profiti, rente, porezi...
+
+
+BDP per capita
+--------------
+BDP per capita približno prikazuje vrijednost dobara proizvedenih po
+glavi stanovnika u nekoj zemlji. Jednak je i BDP-u podijeljenom sa
+ukupnim brojem stanovnika. Predstavlja prosječan standard
+stanovništva i omogućava međunarodne usporedbe.
+
+
+Nedostaci mjerenja BDP-a
+------------------------
+Ne govori nam o netržišnim prihodima
+Ne govori o utjecaju proizvodnih/potrošnih djelatnosti na okoliš
+Ne govori kako je dohodak u državi raspodijeljen
+Ne govori nam o kvaliteti života u zemlji
+Ne govori nam o učešću nelegalnih aktivnosti
+
+
+Ekonomski rast i ekonomski razvoj
+---------------------------------
+Ekonomski rast – povećanje vrijednost proizvodnje u zemlji u danom 
+periodu mjereno porastom BDP-a
+
+Ekonomski razvoj - kvalitativna dimenzija privrede i predstavlja 
+složen, višedimenzionalni pojam koji pored ekonomskog rasta obuhvaća 
+i strukturne promjene kao što su povećanje životnog standarda, 
+ravnomjernija raspodjela dohotka i zaštita okoliša. 
+(Veća očekivana životna starost, dostupnost pitke vode, niže stope
+smrtnosti novorođenčadi, poštivanje ljudskih prava.)
+
+
+Netržišni prihodi
+-----------------
+Naturalna poljoprivreda – poljoprivrednici proizvode
+hranu za vlastite potrebe, rade vlastite kuće i kupuju
+povremeno. Razmjena se vrši često putem bartera (roba za
+robu), za gotovinu (bez računa) ili putem paralelne monete.
+
+
+GPI - Genuine Progress Indicator
+--------------------------------
+GPI uzima u obzir besplatne usluge – volontiranje, brigu za djecu 
+i starije, vrijednost slobodnog vremena, rekreacije sa familijom 
+i prijateljima. Pošto se ne plaćaju, ne ulaze u BDP.
+
+GPI radi razliku između monetarnih transakcija koje
+doprinose boljitku i onih koji ga smanjuju.
+
+BDP uključuje troškove zagađenja kao dvostruki prihod – od proizvodnje 
+nafte i troškova čišćenja onečišćenja. GPI onečišćenje, i sl. izuzima iz računa.
+
+
+BDP i raspodjela dohotka – Gini koeficijent
+-------------------------------------------
+Gini koeficijent je mjera disperzije, koristi se kao mjera
+nejednakosti prihoda, nejednakost distribucije ili
+raspodjele bogatstva. Vrijednosti mu je između 0 i 1.
+Nizak Gini koeficijent sugerira jednakost raspodjele dohotka ili 
+bogatstva, visok Gini koeficijent sugerira nejednaku raspodjelu.
+
+
+
+vjezbe 6
+
+Tradicionalna ekonomija
+-----------------------
+Mjera individualnog zadovoljstva = raspoloživi dohodak; što je veći
+raspoloživi dohodak, više možemo kupiti i time smo zadovoljniji
+
+Mjera uspješnosti države = “ukupni” dohodak ili BDP, što je veći BDP per
+capita to je država prosperitetnija i stanovnici su zadovoljniji
+
+
+Easterlinov paradoks
+--------------------
+Kako zemlje postaju bogatije, iznad nivoa pokrivanja osnovnih potreba 
+(hrana i stanovanje), istraživanja pokazuju da ljudi nisu sretniji
+
+Ljudska sreća manje ovisi o njihovom apsolutnom bogatstvu a više o 
+usporedbi njihovog bogatstva sa drugim ljudima.
+
+
+
+
+
+
+
