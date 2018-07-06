@@ -1,0 +1,150 @@
+i1
+===================
+
+
+
+i4 trziste rada
+===============
+čovijek je temeljno sredstvo za proizvodnju bogastva
+Samo ljudskim radom se moze stvoriti vise dobara nego
+li je ulozeno u proizvodnju, a proizvodnja nije moguca
+bez rada.
+
+Rad mozemo opisati kao privrijedivanje covijeka s namjerom
+povecanja korisnosti resursa
+
+Nominalne nadnice su izrazene u novcanim jedinicama dok
+realne nadnice izrazavaju kupovnu moc nominalnih nadnica.
+Realne nadnice se izrazavaju u kolicini roba koje se mogu
+kupiti za nominalne nadnice.
+
+Razlike u visini nadnice se mogu objasniti:
+a)naknadnim ili kompenzacijskim razlikama (smjene, rizik za zdravlje)
+b)razlikama u kvaliteti rada (obrazovanje, strucno usavrsavanje)
+c)razlikama u specificnim sposobnostima pojednica (posebni talenti)
+d)segmentacijom trzista rada (specijalizacija za odredene poslove)
+e)diskriminacijom (rasna, eticna, spolna, vjerska)
+
+Efekt supstitucije: radnik zeli raditi vise sati jer je svaki sat 
+rada vise placen
+
+Efekt dohotka: djeluje suprotno od ef. supstitucije: kada se 
+nadnica poveca uz ceteris paribus dohodak je sve veci, pojedinac
+moze kupiti vise toga i zeli sve vise vremena za dokolicu
+
+
+i5 makroekonomija
+=================
+Employment Act: kongres po prvi puta potvrduje ulogu vlade(drzave) u
+promicanju rasta proizvodnje, osiguravanju zaposlenosti i odrzavanju
+stabilnosti cijena
+
+Makroekonomija je znanost koja proucava ponasanje gospodarstva kao 
+cjeline i obraduje dvije osnovne teme:
+a) poslovne cikluse koji predstvaljaju kratkotrajna kolebanja 
+   proizvodnje, zaposlenosti i cijena
+b) gospodarski rast koji predstavlja dugotrajne trendove u proizvodnji
+   i zivotnom standardu
+
+Sredisnja makroekonomska pitanja su:
+Zasto proizvodnja i zaposlenost ponekad padnu i kako se moze smanjiti nezaposlenost?
+Koji su izvori inflacije cijena i kako ju zadrzati pod nadzorom?
+kako drzava moze povecati stopu gospodarskog rasta?
+
+Ciljevi makroekonomije su:
+Proizvodnja - visoka razina i brz rast proizvodnje
+Zaposlenost - visoka razina zaposlenosti uz nisku nedobrovoljnu nezaposlenost
+Stabilnost cijena - nepromjenjiva razina cijena ili vrlo spori rast cijena
+
+Instrumenti makroekonomije su:
+Monetarna politika - kontroliranje ponude novca kako bi se odredile kamatne stope
+Fiskalna politika - drzavna potrosnja i oporezivanje
+
+Kranji cilj ekonomske aktivnosti je osigurati dobra i usluge koja trziste zeli
+
+Proizvodnja stvara dodatnu vrijednost
+
+BDP - bruto domaci proizvod je jera trzisne vrijednosti svih fianlnih
+roba i usluga proizvedenih u nekoj zemlji u godinu drzavna
+Nominalni bdp se mjeri stvarnim trzisnim cjenama
+Realni bdp se racuna pomocu konstantnih ili nepromjenjivih cijena
+
+Kada govorimo o zaposlenosti kao makroekonomskom cilju govorimo o 
+punoj zaposlenosti svih proizvodnih faktora - zemlje, rada i kapitala
+
+Indeks potrosackih cijena mjeri prosjecnu cijenu roba i usluga koje kupuju potrosaci 
+
+Stabilnost cijena mjeri se stopom inflacije 
+
+Inflacija je postotak promjene opce razine cijena u roku od godine drzavna
+
+Fiskalna politika je podrucje javnih financija
+
+Uporabom fiskalnih instrumenata (instrumenti javnih prihoda i rashoda)
+utjece se na ostvarenje ciljeva ekonomske politike
+
+Moze se analizirati:
+- prema instrumentima: politika opce potrosnje i porezna politika
+- prema nacinu provodenja: diskrecjska fis. pol. i fis. pol. ugradenih automatskih stabilizatora
+
+Diskrecijska ili tekuca fiskalna politika je svijesno drzavno
+reguliranje svoje potrosnje i poreznih aktivnosti radi otklanjanja
+gospodarskih poremecaja i osiguranja maksimalne zaposlenosti uz sto
+manju inflaciju
+
+Ugradeni ili automatski stabilizatori su elementi koji automatski
+bez covijekove intervencije djeluju u smjeru stabilizranja gospodarstva
+To su socjalna pomoc, kompenzacije za nezaposlenost i sl.
+
+Smanjenje poreza vodi povećanju raspoloživog dohotka, što utječe na 
+povećanje osobne potrošnje, a time se povećavaju i investicije, pa 
+posljedično i zaposlenost
+
+Monetarna politika se bavi upravljanjem drzavnim novcem, kreditnim i bankarskim sustavom
+Temelji se na tretiranju kamate kao vaznog instrumenta ekonomske politike
+
+Monetarnu politiku provodi centralna banka cija je temeljna funkcija
+nadzor ponude novca i kredita u zemlji cime utjece na kamatne stope, devizne tecajeve i sl
+
+Glavni pokazatelji gospodarske aktivnosti su BDP i BNP
+
+NEW - neto ekonomsko blagostanje ukljucuje i kvalitetu zivljenja odnosno
+vrijednost slobodnog vremena i ucinke sive ekonomije a iskljucuje stete 
+nastale zagadivanjem okolisa
+
+BDP se moze mjeriti proizvodnim, portosnim i dohodovnim pristupom
+i sva tri daju jednak rezultat (ukupna proizvodnja = ukupno trosenje = ukupan dohodak)
+
+Potrosni pristup mjeri BDP kao ukupno trosenje na finalna dobra i 
+usluge porizvedene u gospodarstvu u odredenom razdoblju
+
+BDP je jednak zbroju dobara potrosenih na finalna dobra
+(cijena proizvoda x broj proizvoda)
+
+BDP se sastoji od potrosnje pojedinaca i kucanstava (c),
+investicija tj potrosnje poduzeca (I),  drzavne potrosnje (G),
+neto izvoza (x)   BDP = c + i + g + x
+
+
+i6 Gospodarski rast i razvoj
+============================
+PPP - paritet kupovne moci je odnos opcih indeksa cijena medu drzavama
+koji sluze za korekciju sluzbenih tecajeva, tj. kolicina valute
+potrebna da vi se kupilo odredeno dobro a odreduje se u svakoj
+zemlji temeljem relativnih troskova zivota i stopa inflacije
+
+LOP - zakon jedne cijene kaze da na konkurentnim trzistima bez
+utjecaja transportnih troskova i drugih barijera slobodnoj trgovini(carine)
+identicna dobra u razlicitim zemljama moraju imati identicnu cijenu
+izrazenu pomocu deviznog tecaja
+
+Gospodarski rast = ekspanzija realnog BDP-a ili proizvodnje neke zemlje
+
+četiri razvojna elementa su ljudski resursi, prirodni resursi, 
+akumulacija kapitala, tehnoloska promjena i inovacije
+
+zacarani krug siromastva: niska stednja i ulaganja dovode do 
+spore akumulacije kapitala sto rezultira niskom produktivnostcu 
+sto za poslijedicu ima niske prosjecne dohotke koji vode do niske 
+stednje i ulaganja...
+
