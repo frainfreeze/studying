@@ -1,41 +1,4 @@
-# Semestar 2
-### SPA
-
-<br>
-
-# Semestar 1
-### Programiranje
-[I1](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/home%20exercises%201)
-| [I2](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/home%20exercises%202)
- | [Zadaca 1](https://github.com/frainfreeze/studying/blob/master/university/skripte/PROG_I1.pdf)
- | [Zadaca 2](https://github.com/frainfreeze/studying/tree/master/university/10004-prog/homeworks/DZ2)
-
-
-#
-### URM
-[I1](https://github.com/frainfreeze/studying/blob/master/university/skripte/URM_I1.pdf)
- | [I2](https://github.com/frainfreeze/studying/blob/master/university/skripte/urm%20pt22.pdf)
- | [I2 zadatci](https://github.com/frainfreeze/studying/blob/master/university/skripte/URM_I2_zad.txt) 
- | [Zadaca 1](https://github.com/frainfreeze/studying/tree/master/university/10005-networks/IP%20calculator%20homework)
-
-
-
-#
-### Engleski
-[I1](https://github.com/frainfreeze/studying/blob/master/university/skripte/ENG_I1.pdf)
- | [I2](https://github.com/frainfreeze/studying/blob/master/university/skripte/ENG-VOCABULARY.pdf)
- | [Poslovno pismo](https://github.com/frainfreeze/studying/blob/master/university/skripte/tkucar-letter.pdf)
-
-#
-### Ode
-[I1](https://github.com/frainfreeze/studying/blob/master/university/skripte/ODE.pdf)
- | [I2 One Note](https://github.com/frainfreeze/studying/raw/master/university/skripte/ode%20skripta%20pt%202.onepkg)
- | [I2 PDF export](https://github.com/frainfreeze/studying/blob/master/university/skripte/ode%20skripta%20pt%202.pdf)
- 
-#
 ### RPUP
-[clanak](https://github.com/frainfreeze/studying/blob/master/university/skripte/tkucar-Kriptovalute-novac_buducnosti.pdf)
-
 
 #### Word:
 tabulatori
