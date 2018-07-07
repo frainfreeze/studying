@@ -11,4 +11,4 @@ My literature:
 1. Richard Rusczyk, Introduction to Algebra: Art of Problem Solving, 2007.
 2. Consortium for Foundation Mathematics , Mathematics in Action: Prealgebra Problem Solving (3rd ed)
 3. A.S. Tussy, R.D. Gustafson, D. Koenig - Prealgebra (4th ed)
-4. [More...](https://raw.githubusercontent.com/frainfreeze/studying/master/shared/math/literature.md)
+...
