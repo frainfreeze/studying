@@ -1,5 +1,3 @@
-# shared
-
 ### > 10003 - Mathematics I, 10008 Mathematics II 
 
 University provided literature:				
@@ -14,13 +12,3 @@ My literature:
 2. Consortium for Foundation Mathematics , Mathematics in Action: Prealgebra Problem Solving (3rd ed)
 3. A.S. Tussy, R.D. Gustafson, D. Koenig - Prealgebra (4th ed)
 4. [More...](https://raw.githubusercontent.com/frainfreeze/studying/master/shared/math/literature.md)
-
-
-<br>
-
-### > 10001 - English
-University provided literature:				
-> English for Telecoms and Information Technology, Oxford Business English 
-> Boeckner, K., Brown, P.C.: Oxford English for Computing, Oxford University Press
-
-
