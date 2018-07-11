@@ -1734,6 +1734,8 @@ povremeno. Razmjena se vrši često putem bartera (roba za
 robu), za gotovinu (bez računa) ili putem paralelne monete.
 
 
+vjezbe 6
+
 GPI - Genuine Progress Indicator
 --------------------------------
 GPI uzima u obzir besplatne usluge – volontiranje, brigu za djecu 
@@ -1755,9 +1757,6 @@ raspodjele bogatstva. Vrijednosti mu je između 0 i 1.
 Nizak Gini koeficijent sugerira jednakost raspodjele dohotka ili 
 bogatstva, visok Gini koeficijent sugerira nejednaku raspodjelu.
 
-
-
-vjezbe 6
 
 Tradicionalna ekonomija
 -----------------------
