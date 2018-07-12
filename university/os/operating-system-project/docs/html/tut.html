@@ -1,0 +1,850 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction &#8212; KaTOS 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="KaTOS 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Notes" href="notes.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Developing OS is complex task that requires very specific development environment and
+set of tools. Theoretically one could write an OS in any language he wants, however assembly,
+C and C++ are de facto languages for this kind of job.</p>
+<p>Our compiler suite of choice is GCC, build system cmake, and scripting language Bash.
+Everything is build and assembled inside virtual machine built by vagrant. Vagrant
+enables us to automate complete complex process of building cross compiler, OS, linking
+and producing iso (even building documentation) into a single <code class="docutils literal"><span class="pre">vagrant</span> <span class="pre">up</span></code> command.</p>
+<p>All development and examples were ran on Debian 9. Feel free to work from vagrant machine
+if you don&#8217;t want to bother with setting up everything on your own host OS.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="development-environment">
+<h1>Development environment<a class="headerlink" href="#development-environment" title="Permalink to this headline">¶</a></h1>
+<p>Since we will be building and installing a lot of tools frequently many things could go wrong.
+To make our life easier we can use virtual machines, and to make everything even more hassle free,
+we can utilize virtual machine manager, such as vagrant.</p>
+<div class="section" id="preparing-the-box">
+<h2>Preparing the box<a class="headerlink" href="#preparing-the-box" title="Permalink to this headline">¶</a></h2>
+<p>Installing virtualbox and vagrant on Debian 9 is rather straightforward:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="c1"># add stretch-backports main and contrib to your apt sources</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">virtualbox</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">releases</span><span class="o">.</span><span class="n">hashicorp</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vagrant</span><span class="o">/</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">vagrant_2</span><span class="o">.</span><span class="mf">1.1</span><span class="n">_x86_64</span><span class="o">.</span><span class="n">deb</span>
+<span class="n">sudo</span> <span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="n">vagrant_2</span><span class="o">.</span><span class="mf">1.1</span><span class="n">_x86_64</span><span class="o">.</span><span class="n">deb</span>
+</pre></div>
+</div>
+<p>Once we have the software we can write small vagrant script:</p>
+<div class="code ruby highlight-default"><div class="highlight"><pre><span></span><span class="c1"># -*- mode: ruby -*-</span>
+<span class="c1"># vi: set ft=ruby :</span>
+<span class="n">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span> <span class="n">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="s2">&quot;generic/debian9&quot;</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box_check_update</span> <span class="o">=</span> <span class="n">false</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">synced_folder</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;/home/src&quot;</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="p">:</span><span class="n">shell</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="s2">&quot;bootstrap.sh&quot;</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+<p>Save it as Vagrantfile in the root of the project. This particular vagrant file downloads
+Debian 9 image, mounts its root directory under <code class="docutils literal"><span class="pre">/home/src</span></code> in the virtual machine and
+executes <code class="docutils literal"><span class="pre">bootstrap.sh</span></code>. Shell script then invokes <code class="docutils literal"><span class="pre">i686-elf-tools.sh</span></code> script that
+downloads necessary sources and compiles cross compiler. Once the compiler is built
+bootstrap script invokes cmake that builds the OS itself, bootable iso and
+documentation.</p>
+<p>Finally, starting whole building process is as simple as executing <code class="docutils literal"><span class="pre">vargant</span> <span class="pre">up</span></code> in the
+projects root directory.</p>
+</div>
+<div class="section" id="cross-compiler">
+<h2>Cross Compiler<a class="headerlink" href="#cross-compiler" title="Permalink to this headline">¶</a></h2>
+<p>An cross-compiler is a compiler that runs on platform A (the host), but generates executables for platform B (the target).
+These two platforms may (but do not need to) differ in CPU, operating system, and/or executable format. In our case,
+the host platform is our current operating system, and the target platform is the operating system we are building.</p>
+<img alt="_images/cross-compiler.png" src="_images/cross-compiler.png" />
+<p>GCC is great open source compiler and we will use it as cross compiler for our OS. The GNU Compiler Collection is an advanced piece of software with many dependencies. We will also need Binutils which are collection of binary tools, since we are also interested in linker and assembler.</p>
+<p>Cross compiler building process is rather complex and lengthy process. See i686-elf-tools.sh for details.</p>
+</div>
+<div class="section" id="first-steps">
+<h2>First steps<a class="headerlink" href="#first-steps" title="Permalink to this headline">¶</a></h2>
+<p>Small assembly code to demonstrate building bootable iso image.</p>
+<div class="highlight-nasm"><div class="highlight"><pre><span></span><span class="k">global</span> <span class="nv">loader</span>                   <span class="c1">; the entry symbol for ELF</span>
+
+<span class="no">MAGIC_NUMBER</span><span class="kd"> equ</span> <span class="mh">0x1BADB002</span>     <span class="c1">; define the magic number constant</span>
+<span class="no">FLAGS</span><span class="kd">        equ</span> <span class="mh">0x0</span>            <span class="c1">; multiboot flags</span>
+<span class="no">CHECKSUM</span><span class="kd">     equ</span> <span class="o">-</span><span class="nv">MAGIC_NUMBER</span>  <span class="c1">; calculate the checksum</span>
+                                <span class="c1">; (magic number + checksum + flags should equal 0)</span>
+
+<span class="k">section</span> <span class="nv">.text</span><span class="p">:</span>                  <span class="c1">; start of the text (code) section</span>
+<span class="k">align</span> <span class="mi">4</span>                         <span class="c1">; the code must be 4 byte aligned</span>
+    <span class="kd">dd</span> <span class="nv">MAGIC_NUMBER</span>             <span class="c1">; write the magic number to the machine code,</span>
+    <span class="kd">dd</span> <span class="nv">FLAGS</span>                    <span class="c1">; the flags,</span>
+    <span class="kd">dd</span> <span class="nb">CH</span><span class="nv">ECKSUM</span>                 <span class="c1">; and the checksum</span>
+
+<span class="nl">loader:</span>                         <span class="c1">; the loader label (defined as entry point in linker script)</span>
+    <span class="nf">mov</span> <span class="nb">eax</span><span class="p">,</span> <span class="mh">0xCAFEBABE</span>         <span class="c1">; place the number 0xCAFEBABE in the register eax</span>
+<span class="nl">.loop:</span>
+    <span class="nf">jmp</span> <span class="nv">.loop</span>                   <span class="c1">; loop forever</span>
+</pre></div>
+</div>
+<p>The file loader.s can be compiled into a 32 bits ELF [18] object file with the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nasm -f elf32 loader.s
+</pre></div>
+</div>
+<p>The code must now be linked to produce an executable file, which requires some extra thought
+compared to when linking most programs. We want GRUB to load the kernel at a memory address
+larger than or equal to 0x00100000 (1 megabyte (MB)), because addresses lower than 1 MB are
+used by GRUB itself, BIOS and memory-mapped I/O. Therefore, the following linker script is
+needed (written for GNU LD):</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">ENTRY</span><span class="p">(</span><span class="n">loader</span><span class="p">)</span>                <span class="o">/*</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">entry</span> <span class="n">label</span> <span class="o">*/</span>
+
+<span class="n">SECTIONS</span> <span class="p">{</span>
+    <span class="o">.</span> <span class="o">=</span> <span class="mh">0x00100000</span><span class="p">;</span>          <span class="o">/*</span> <span class="n">the</span> <span class="n">code</span> <span class="n">should</span> <span class="n">be</span> <span class="n">loaded</span> <span class="n">at</span> <span class="mi">1</span> <span class="n">MB</span> <span class="o">*/</span>
+
+    <span class="o">.</span><span class="n">text</span> <span class="n">ALIGN</span> <span class="p">(</span><span class="mh">0x1000</span><span class="p">)</span> <span class="p">:</span>   <span class="o">/*</span> <span class="n">align</span> <span class="n">at</span> <span class="mi">4</span> <span class="n">KB</span> <span class="o">*/</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="p">(</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>             <span class="o">/*</span> <span class="nb">all</span> <span class="n">text</span> <span class="n">sections</span> <span class="kn">from</span> <span class="nn">all</span> <span class="n">files</span> <span class="o">*/</span>
+    <span class="p">}</span>
+
+    <span class="o">.</span><span class="n">rodata</span> <span class="n">ALIGN</span> <span class="p">(</span><span class="mh">0x1000</span><span class="p">)</span> <span class="p">:</span> <span class="o">/*</span> <span class="n">align</span> <span class="n">at</span> <span class="mi">4</span> <span class="n">KB</span> <span class="o">*/</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="p">(</span><span class="o">.</span><span class="n">rodata</span><span class="o">*</span><span class="p">)</span>          <span class="o">/*</span> <span class="nb">all</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="n">data</span> <span class="n">sections</span> <span class="kn">from</span> <span class="nn">all</span> <span class="n">files</span> <span class="o">*/</span>
+    <span class="p">}</span>
+
+    <span class="o">.</span><span class="n">data</span> <span class="n">ALIGN</span> <span class="p">(</span><span class="mh">0x1000</span><span class="p">)</span> <span class="p">:</span>   <span class="o">/*</span> <span class="n">align</span> <span class="n">at</span> <span class="mi">4</span> <span class="n">KB</span> <span class="o">*/</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="p">(</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>             <span class="o">/*</span> <span class="nb">all</span> <span class="n">data</span> <span class="n">sections</span> <span class="kn">from</span> <span class="nn">all</span> <span class="n">files</span> <span class="o">*/</span>
+    <span class="p">}</span>
+
+    <span class="o">.</span><span class="n">bss</span> <span class="n">ALIGN</span> <span class="p">(</span><span class="mh">0x1000</span><span class="p">)</span> <span class="p">:</span>    <span class="o">/*</span> <span class="n">align</span> <span class="n">at</span> <span class="mi">4</span> <span class="n">KB</span> <span class="o">*/</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="p">(</span><span class="n">COMMON</span><span class="p">)</span>            <span class="o">/*</span> <span class="nb">all</span> <span class="n">COMMON</span> <span class="n">sections</span> <span class="kn">from</span> <span class="nn">all</span> <span class="n">files</span> <span class="o">*/</span>
+        <span class="o">*</span><span class="p">(</span><span class="o">.</span><span class="n">bss</span><span class="p">)</span>              <span class="o">/*</span> <span class="nb">all</span> <span class="n">bss</span> <span class="n">sections</span> <span class="kn">from</span> <span class="nn">all</span> <span class="n">files</span> <span class="o">*/</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Save the linker script into a file called link.ld. The executable can now be linked with
+the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ld -T link.ld -melf_i386 loader.o -o kernel.elf
+</pre></div>
+</div>
+<p>If you have GRUB installed, you can check whether a file has a valid Multiboot version 1 header,
+which is the case for our kernel. It&#8217;s important that the Multiboot header is within the first
+8 KiB of the actual program file at 4 byte alignment. This can potentially break later if you
+make a mistake in the boot assembly, the linker script, or anything else that might go wrong.
+If the header isn&#8217;t valid, GRUB will give an error that it can&#8217;t find a Multiboot header when
+you try to boot it. This code fragment will help you diagnose such cases:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">grub</span><span class="o">-</span><span class="n">file</span> <span class="o">--</span><span class="ow">is</span><span class="o">-</span><span class="n">x86</span><span class="o">-</span><span class="n">multiboot</span> <span class="n">kernel</span><span class="o">.</span><span class="n">elf</span>
+</pre></div>
+</div>
+<p>Grub-file is quiet but will exit 0 (successfully) if it is a valid multiboot kernel and exit 1
+(unsuccessfully) otherwise. You can type <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$?</span></code> in your shell immediately afterwards to see
+the exit status.</p>
+</div>
+<div class="section" id="building-iso">
+<h2>Building ISO<a class="headerlink" href="#building-iso" title="Permalink to this headline">¶</a></h2>
+<p>We will create the kernel ISO image with the program grub-mkrescue. A folder must first be created
+that contains the files that will be on the ISO image. The following commands create the folder and
+copy the files to their correct places:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">iso</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">grub</span>              <span class="c1"># create the folder structure</span>
+<span class="n">cp</span> <span class="n">kernel</span><span class="o">.</span><span class="n">bin</span> <span class="n">iso</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span>             <span class="c1"># copy the kernel</span>
+</pre></div>
+</div>
+<p>A <a class="reference external" href="https://www.gnu.org/software/grub/manual/legacy/Configuration.html#Configuration">configuration file</a> menu.cfg
+for GRUB must be created. This file tells GRUB where the kernel is located and configures some options:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span>
+<span class="nb">set</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">menuentry</span> <span class="s2">&quot;KaT OS&quot;</span> <span class="p">{</span>
+    <span class="n">multiboot</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span><span class="o">.</span><span class="n">bin</span>
+    <span class="n">boot</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Place the file in the folder iso/boot/grub/. The contents of the iso folder should now look like the
+following figure:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>iso
+└── boot
+    ├── grub
+    │   └── grub.cfg
+    └── kernel.bin
+</pre></div>
+</div>
+<p>Finally, make a ISO9660 image file by invoking:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">grub</span><span class="o">-</span><span class="n">mkrescue</span> <span class="o">-</span><span class="n">o</span> <span class="n">os</span><span class="o">.</span><span class="n">iso</span> <span class="n">iso</span>
+</pre></div>
+</div>
+<p>This produces a file named os.iso, which then can be burned into a CD (or a DVD) or loaded directly
+into virtual machine. The ISO image contains the kernel executable, the GRUB bootloader and the
+configuration file.</p>
+<p>To run the OS in QEMU emulator execute:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">qemu</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">i386</span> <span class="o">-</span><span class="n">cdrom</span> <span class="n">os</span><span class="o">.</span><span class="n">iso</span>
+</pre></div>
+</div>
+<img alt="_images/grub.png" src="_images/grub.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="kat-os-source-code">
+<h1>KaT OS Source Code<a class="headerlink" href="#kat-os-source-code" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">src</span>
+<span class="o">|-</span><span class="nb">bin</span>
+<span class="o">|-</span><span class="n">docs</span>
+<span class="o">|-</span><span class="n">libs</span>
+<span class="o">|-</span><span class="n">kernel</span>
+<span class="o">|</span>  <span class="o">|-</span><span class="n">devices</span>
+<span class="o">|</span>  <span class="o">|-</span><span class="n">filesys</span>
+<span class="o">|</span>  <span class="o">|-</span><span class="n">sys</span>
+<span class="o">|-</span><span class="n">userland</span>
+</pre></div>
+</div>
+<p>Bin contains built ISO image, docs documentation,
+libs contains libc and libcpp, userland contains
+user space aplications.</p>
+<p>Kernel directory in its root has main.cpp which
+is os entry point. Devices contain cpu, display,
+input and storage drivers. Sys contains memory,
+process and system drives, including cpp runtime.</p>
+<p>Src directory aditionaly contains make file, menu
+file for grub legacy, stage2_eltorito...</p>
+<img alt="_images/kernel.png" src="_images/kernel.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="operating-system-basics">
+<h1>Operating system basics<a class="headerlink" href="#operating-system-basics" title="Permalink to this headline">¶</a></h1>
+<p>The job of an operating system is to share a computer among multiple
+programs and to provide a more useful set of services than the hardware
+alone supports. The operating system manages and abstracts the low-level
+hardware, so that, for example, a word processor need not concern itself
+with which type of disk hardware is being used. It also shares the hardware
+among multiple programs so that they run (or appear to run) at the same
+time. Finally, operating systems provide controlled ways for programs to
+interact, so that they can share data or work together.</p>
+<p>x86 is a family of backward-compatible instruction set architectures based on
+the Intel 8086 CPU and its Intel 8088 variant. The 8086 was introduced in 1978
+as a fully 16-bit extension of Intel&#8217;s 8-bit-based 8080 microprocessor, with memory
+segmentation as a solution for addressing more memory than can be covered by a plain
+16-bit address. The term &#8220;x86&#8221; came into being because the names of several successors
+to Intel&#8217;s 8086 processor end in &#8220;86&#8221;, including the 80186, 80286, 80386 and 80486 processors. [1]</p>
+<div class="section" id="booting">
+<h2>Booting<a class="headerlink" href="#booting" title="Permalink to this headline">¶</a></h2>
+<p>When you turn on a computer, it loads the BIOS from some special flash
+memory. The BIOS runs self test and initialization routines of the hardware,
+then it looks for bootable devices. If it finds one, the control is
+transferred to its bootloader, which is a small portion of executable
+code stored at the device&#8217;s beginning. The bootloader has to determine
+the location of the kernel image on the device and load it into memory.
+It also needs to switch the CPU to the so-called protected mode because
+x86 CPUs start in the very limited real mode by default (to be backwards
+compatible).</p>
+<img alt="_images/boot-process.png" src="_images/boot-process.png" />
+<p>We won&#8217;t write a bootloader because that would be a complex project on its
+own. Fortunately there is a bootloader standard: the Multiboot Specification.
+Our kernel just needs to indicate that it supports Multiboot and every
+Multiboot-compliant bootloader can boot it. We will use the Multiboot 2
+specification  together with the well-known GRUB 2 bootloader.</p>
+<p>To indicate our Multiboot 2 support to the bootloader, our kernel must start
+with a Multiboot Header, which has the following format:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="24%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>magic number</td>
+<td>u32</td>
+<td>0xE85250D6</td>
+</tr>
+<tr class="row-odd"><td>architecture</td>
+<td>u32</td>
+<td>0 for i386, 4 for MIPS</td>
+</tr>
+<tr class="row-even"><td>header length</td>
+<td>u32</td>
+<td>total header size, including tags</td>
+</tr>
+<tr class="row-odd"><td>checksum</td>
+<td>u32</td>
+<td>-(magic + architecture + header_length)</td>
+</tr>
+<tr class="row-even"><td>tags</td>
+<td>variable</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>end tag</td>
+<td>(u16, u16, u32)</td>
+<td>(0, 0, 8)</td>
+</tr>
+</tbody>
+</table>
+<p>We can define the constants and header in assembly:</p>
+<div class="code gas highlight-default"><div class="highlight"><pre><span></span><span class="c1"># multiboot header constants</span>
+<span class="o">.</span><span class="n">set</span> <span class="n">ALIGN</span><span class="p">,</span>    <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">0</span>             <span class="c1"># align loaded modules on page boundaries</span>
+<span class="o">.</span><span class="n">set</span> <span class="n">MEMINFO</span><span class="p">,</span>  <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">1</span>             <span class="c1"># provide memory map</span>
+<span class="o">.</span><span class="n">set</span> <span class="n">FLAGS</span><span class="p">,</span>    <span class="n">ALIGN</span> <span class="o">|</span> <span class="n">MEMINFO</span>  <span class="c1"># this is the Multiboot &#39;flag&#39; field</span>
+<span class="o">.</span><span class="n">set</span> <span class="n">MAGIC</span><span class="p">,</span>    <span class="mh">0x1BADB002</span>       <span class="c1"># &#39;magic number&#39; lets bootloader find the header</span>
+<span class="o">.</span><span class="n">set</span> <span class="n">CHECKSUM</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">MAGIC</span> <span class="o">+</span> <span class="n">FLAGS</span><span class="p">)</span> <span class="c1"># checksum of above, to prove we are multiboot</span>
+
+<span class="c1"># Declare a header as in the Multiboot Standard.</span>
+<span class="o">.</span><span class="n">section</span> <span class="o">.</span><span class="n">multiboot</span>
+<span class="o">.</span><span class="n">align</span> <span class="mi">4</span>
+<span class="o">.</span><span class="n">long</span> <span class="n">MAGIC</span>
+<span class="o">.</span><span class="n">long</span> <span class="n">FLAGS</span>
+<span class="o">.</span><span class="n">long</span> <span class="n">CHECKSUM</span>
+</pre></div>
+</div>
+<p>We put header into special section so we can force it to
+be in the start of the final program. The bootloader will
+search for this magic sequence and recognize us as a multiboot kernel.</p>
+<p>Grub moves kernel into protected mode that allows system software to use
+features such as  virtual memory, paging and safe multi-tasking designed to
+increase an operating system&#8217;s control over application software.</p>
+</div>
+<div class="section" id="device-drivers">
+<h2>Device drivers<a class="headerlink" href="#device-drivers" title="Permalink to this headline">¶</a></h2>
+<p>A device driver is a specific type of computer software developed to allow interaction
+with hardware devices. Typically this constitutes an interface for communicating with
+the device, through the specific computer bus or communications subsystem that the
+hardware is connected to, providing commands to and/or receiving data from the device,
+and on the other end, the requisite interfaces to the operating system and software
+applications. It is a specialized hardware-dependent computer program which is also
+operating system specific that enables another program, typically an operating system or
+applications software package or computer program running under the operating system kernel,
+to interact transparently with a hardware device, and usually provides the requisite
+interrupt handling necessary for any necessary asynchronous time-dependent hardware
+interfacing needs.</p>
+<div class="section" id="the-screen">
+<h3>The screen<a class="headerlink" href="#the-screen" title="Permalink to this headline">¶</a></h3>
+<p>Our kernel gets booted by GRUB in text mode. That is, it has available to it a framebuffer
+(area of memory) that controls a screen of characters (not pixels) 80 wide by 25 high.
+The area of memory known as the framebuffer is accessible just like normal RAM, at address 0xB8000.
+It is important to note, however, that it is not actually normal RAM. It is part of the VGA
+controller&#8217;s dedicated video memory that has been memory-mapped via hardware into our linear
+address space. The framebuffer is just an array of 16-bit words, each 16-bit value representing
+the display of one character. Highest 8 bits are ASCII value of the character, bits 7-4 represent
+the background and bits 3-0 foreground color.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Bit</span><span class="p">:</span>     <span class="o">|</span><span class="mi">15</span> <span class="mi">14</span> <span class="mi">13</span> <span class="mi">12</span> <span class="mi">11</span> <span class="mi">10</span> <span class="mi">9</span> <span class="mi">8</span><span class="o">|</span><span class="mi">7</span> <span class="mi">6</span> <span class="mi">5</span> <span class="mi">4</span><span class="o">|</span><span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">0</span><span class="o">|</span>
+<span class="n">Content</span><span class="p">:</span> <span class="o">|</span> <span class="n">ASCII</span>               <span class="o">|</span> <span class="n">FG</span>    <span class="o">|</span> <span class="n">BG</span>    <span class="o">|</span>
+</pre></div>
+</div>
+<p>The offset from the start of the framebuffer of the word that specifies a character at position x, y
+is simply <code class="docutils literal"><span class="pre">(y</span> <span class="pre">*</span> <span class="pre">80</span> <span class="pre">+</span> <span class="pre">x)</span> <span class="pre">*</span> <span class="pre">2</span></code>.
+Say we want to write &#8216;A&#8217;(65,or 0x41) with green foreground and dark grey background(8) at place (0,0)
+we would write assembly code <code class="docutils literal"><span class="pre">mov</span> <span class="pre">[0x000B8000],</span> <span class="pre">0x4128</span></code> where <code class="docutils literal"><span class="pre">0x41</span></code> represents ASCII A, 2 is green
+and 8 is dark grey color. Second cell (0,1) would be 0x000B8000 + 16 = 0x000B8010.</p>
+<p>Reference table of available colors:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="16%" />
+<col width="10%" />
+<col width="17%" />
+<col width="10%" />
+<col width="20%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Color</th>
+<th class="head">Value</th>
+<th class="head">Color</th>
+<th class="head">Value</th>
+<th class="head">Color</th>
+<th class="head">Value</th>
+<th class="head">Color</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Black</td>
+<td>0</td>
+<td>Red</td>
+<td>4</td>
+<td>Dark grey</td>
+<td>8</td>
+<td>Light red</td>
+<td>12</td>
+</tr>
+<tr class="row-odd"><td>Blue</td>
+<td>1</td>
+<td>Magenta</td>
+<td>5</td>
+<td>Light blue</td>
+<td>9</td>
+<td>Light magenta</td>
+<td>13</td>
+</tr>
+<tr class="row-even"><td>Green</td>
+<td>2</td>
+<td>Brown</td>
+<td>6</td>
+<td>Light green</td>
+<td>10</td>
+<td>Light brown</td>
+<td>14</td>
+</tr>
+<tr class="row-odd"><td>Cyan</td>
+<td>3</td>
+<td>Light grey</td>
+<td>7</td>
+<td>Light cyan</td>
+<td>11</td>
+<td>White</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The VGA controller also has some ports on the main I/O bus, which we can use to send it specific instructions.
+(Among others) it has a control register at 0x3D4 and a data register at 0x3D5. We will use these to instruct
+the controller to update it&#8217;s cursor position.</p>
+</div>
+<div class="section" id="gdt">
+<h3>GDT<a class="headerlink" href="#gdt" title="Permalink to this headline">¶</a></h3>
+<p>The Global Descriptor Table (GDT) is a data structure used by
+Intel x86-family processors starting with the 80286 in order to
+define the characteristics of the various memory areas used
+during program execution, including the base address, the size,
+and access privileges like executability and writability. These
+memory areas are called segments in Intel terminology.</p>
+<p>The GDT can hold things other than segment descriptors as well.
+Every 8-byte entry in the GDT is a descriptor, but these can also
+be Task State Segment (TSS) descriptors, Local Descriptor Table
+(LDT) descriptors, or Call Gate descriptors.</p>
+<p>The x86 architecture has two methods of memory protection and of
+providing virtual memory - segmentation and paging.</p>
+<p>With segmentation, every memory access is evaluated with respect
+to a segment. That is, the memory address is added to the segment&#8217;s
+base address, and checked against the segment&#8217;s length. With paging,
+the address space is split into (usually 4KB, but this can change)
+blocks, called pages. Each page can be mapped into physical
+memory - mapped onto what is called a &#8216;frame&#8217;. Or, it can be unmapped.
+This way one can create virtual memory spaces.</p>
+<p>Both of these methods have their advantages, but paging is much better.
+Segmentation is, although still usable, fast becoming obsolete as a
+method of memory protection and virtual memory. In fact, the x86-64
+architecture requires a flat memory model (one segment with a
+base of 0 and a limit of 0xFFFFFFFF) for some of it&#8217;s instructions
+to operate properly.</p>
+<p>Segmentation is, however, completely in-built into the x86 architecture.
+Every memory access which a program can perform always goes through a segment.
+It&#8217;s impossible to get around it, therefore we need to setup Global Descriptor
+Table - a list of segment descriptors.</p>
+<p>While GRUB does setup GDT for us we don&#8217;t know where it is nor what is in it.
+In the x86, there are 6 segmentation registers. Each holds an offset into the GDT.
+They are cs (code segment), ds (data segment), es (extra segment), fs, gs, ss (stack segment).
+The code segment must reference a descriptor which is set as a &#8216;code segment&#8217;.
+There is a flag for this in the access byte. The rest should all reference a descriptor
+which is set as a &#8216;data segment&#8217;.</p>
+<p>To set up GDT we need to create GDT entry structure and a special pointer structure
+which we give to the processor so it can find the GDT.</p>
+</div>
+<div class="section" id="interrupts">
+<h3>Interrupts<a class="headerlink" href="#interrupts" title="Permalink to this headline">¶</a></h3>
+<p>In system programming, an interrupt is a signal to the processor emitted
+by hardware or software indicating an event that needs immediate attention.
+An interrupt alerts the processor to a high-priority condition requiring
+the interruption of the current code the processor is executing.
+The processor responds by suspending its current activities, saving its
+state, and executing a function called an interrupt handler (or an interrupt
+service routine, ISR) to deal with the event. This interruption is temporary,
+and, after the interrupt handler finishes, the processor resumes normal
+activities.</p>
+<p>There are 2 types of interrupts plus Exceptions:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Hardware interrupts: are sent to the processor from an external device (keyboard, mouse, hard disk, ...). Hardware interrupts were introduced as a way to reduce wasting the processor&#8217;s valuable time in polling loops, waiting for external events.</li>
+<li>Software interrupts: are initiated voluntarily by the software. It&#8217;s used to manage system calls.</li>
+<li>Exceptions are used for errors or events occurring during program execution that are exceptional enough that they cannot be handled within the program itself (division by zero, page fault, ...)</li>
+</ul>
+</div></blockquote>
+<p>The PIC (Programmable interrupt controller)is a device that is used to
+combine several sources of interrupt onto one or more CPU lines, while
+allowing priority levels to be assigned to its interrupt outputs. When the
+device has multiple interrupt outputs to assert, it asserts them in the
+order of their relative priority.</p>
+<p>The Interrupt Descriptor Table tells the processor where to find handlers
+for each interrupt. It is very similar to the GDT. It is just an array of
+entries, each one corresponding to an interrupt number. There are 256
+possible interrupt numbers, so 256 must be defined. If an interrupt occurs
+and there is no entry for it (even a NULL entry is fine), the processor
+will panic and reset. The processor will sometimes needs to signal the kernel.
+Something major may have happened, such as a divide-by-zero, or a page fault.
+To do this, it uses the first 32 interrupts. It is therefore doubly
+important that all of these are mapped and non-NULL - else the CPU will
+triple-fault and reset.</p>
+<p>Like the GDT, the IDT is loaded using the LIDTL assembly instruction.
+It expects the location of a IDT description structure (pointer).</p>
+<p>We define our IDT table and then load it using LIDTL. The IDT table can be
+stored wherever we want in memory, its address should just be signaled to
+the process using the IDTR registry. After intialization of our IDT, we
+can activate interrupts by configuring the PIC.</p>
+</div>
+<div class="section" id="ps-2-keyboard">
+<h3>PS/2 Keyboard<a class="headerlink" href="#ps-2-keyboard" title="Permalink to this headline">¶</a></h3>
+<p>The PS/2 Keyboard is a device that talks to a PS/2 controller using serial communication.
+Ideally, each different type of PS/2 controller driver should provide some sort of
+standard/simple &#8220;send byte/receive byte&#8221; interface, and the PS/2 Keyboard driver would
+use this interface without caring about lower level details (like what type of PS/2 controller
+the device is plugged into).</p>
+<p>The PS/2 Keyboard accepts commands and sends responses to those commands, and also sends scan
+codes indicating when a key was pressed or released. A command is one byte. Some commands have
+data byte/s which must be sent after the command byte. The keyboard typically responds to a
+command by sending either an &#8220;ACK&#8221; (to acknowledge the command) or a &#8220;Resend&#8221; (to say something
+was wrong with the previous command) back.</p>
+</div>
+</div>
+<div class="section" id="memory-management">
+<h2>Memory management<a class="headerlink" href="#memory-management" title="Permalink to this headline">¶</a></h2>
+<p>Virtual memory is an abstraction of physical memory.
+The purpose of virtual memory is generally to simplify application
+development and to let processes address more memory than what is
+actually physically present in the machine. We also don’t want
+applications messing with the kernel or other applications’ memory due
+to security.</p>
+<p>In the x86 architecture, virtual memory can be accomplished in two ways:
+segmentation and paging. Paging is by far the most common and versatile
+technique, and we’ll implement it the next chapter. Some use of segmentation
+is still necessary to allow for code to execute under different privilege
+levels.</p>
+<div class="section" id="segmentation">
+<h3>Segmentation<a class="headerlink" href="#segmentation" title="Permalink to this headline">¶</a></h3>
+<p>Segmentation in x86 means accessing the memory through segments.
+Segments are portions of the address space, possibly overlapping,
+specified by a base address and a limit. To address a byte in segmented
+memory you use a 48-bit logical address: 16 bits that specifies the
+segment and 32-bits that specifies what offset within that segment you want.
+The offset is added to the base address of the segment, and the resulting linear
+address is checked against the segment’s limit. If everything
+works out fine the result is a linear address.
+When paging is disabled, then the linear address space is mapped 1:1 onto the physical
+address space, and the physical memory can be accessed.
+We enable segmentation via GDT.</p>
+</div>
+<div class="section" id="paging">
+<h3>Paging<a class="headerlink" href="#paging" title="Permalink to this headline">¶</a></h3>
+<p>Segmentation translates a logical address into a linear address.
+Paging translates these linear addresses onto the physical address space,
+and determines access rights and how the memory should be cached.</p>
+<p>Paging in x86 consists of a page directory (PDT) that can contain
+references to 1024 page tables (PT), each of which can point to
+1024 sections of physical memory called page frames (PF). Each page
+frame is 4096 byte large. In a virtual (linear) address, the highest
+10 bits specifies the offset of a page directory entry (PDE) in the
+current PDT, the next 10 bits the offset of a page table entry (PTE)
+within the page table pointed to by that PDE. The lowest 12 bits in the
+address is the offset within the page frame to be addressed.</p>
+<p>All page directories, page tables and page frames need to be aligned
+on 4096 byte addresses. This makes it possible to address a PDT, PT or
+PF with just the highest 20 bits of a 32 bit address, since the lowest
+12 need to be zero.</p>
+<p>The PDE and PTE structure is very similar to each other: 32 bits (4 bytes),
+where the highest 20 bits points to a PTE or PF, and the lowest 12 bits
+control access rights and other configurations. 4 bytes times 1024 equals
+4096 bytes, so a page directory and page table both fit in a page frame
+themselves.</p>
+<p>The simplest kind of paging is when we map each virtual address onto the
+same physical address, called identity paging. This can be done at compile
+time by creating a page directory where each entry points to its
+corresponding 4 MB frame.</p>
+</div>
+<div class="section" id="page-frame-allocation">
+<h3>Page Frame Allocation<a class="headerlink" href="#page-frame-allocation" title="Permalink to this headline">¶</a></h3>
+<p>Role of page frame allocator is simply to tell the OS which parts of memory
+are free to use. We need to know how much memory is available on the
+computer the OS is running on. We can read it from the multiboot structure
+passed to us by GRUB. GRUB collects the information we need about the
+memory - what is reserved, I/O mapped, read-only etc.</p>
+</div>
+</div>
+<div class="section" id="processes">
+<h2>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">¶</a></h2>
+<p>Creating new processes is usually done with two different system calls:
+fork and exec. fork creates an exact copy of the currently running process,
+while exec replaces the current process with one that is specified by a path
+to the location of a program in the file system.</p>
+</div>
+<div class="section" id="system-calls">
+<h2>System calls<a class="headerlink" href="#system-calls" title="Permalink to this headline">¶</a></h2>
+<p>System calls is the way user-mode applications interact with the kernel -
+to ask for resources, request operations to be performed, etc.</p>
+<p>System calls are traditionally invoked with software interrupts. The
+user applications put the appropriate values in registers or on the stack
+and then initiates a pre-defined interrupt which transfers execution to the
+kernel.</p>
+<p>When system calls are executed, the current privilege level is typically
+changed from PL3 to PL0 (if the application is running in user mode).
+To allow this, the DPL of the entry in the IDT for the system call interrupt
+needs to allow PL3 access.</p>
+<p>To enable system calls we need to setup a TSS before entering user mode.</p>
+</div>
+<div class="section" id="file-system">
+<h2>File system<a class="headerlink" href="#file-system" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of file system is to organise and store data. File system
+typically supports sharing data among users and applications, as well as
+persistence so data is still available after reboot.</p>
+<p>The communication between computer and optical drive can be done by various
+types of controllers and cabling such as ATAPI, SATA, or USB. Many operating
+systems offer some kind of generic SCSI driver interface which abtracts the
+various transports to a single transaction API. These APIs are also available
+in userspace.</p>
+<p>KaT OS implements ISO 9660 file system and ATA/ATAPI drivers.</p>
+<div class="section" id="pci-ide-controller">
+<h3>PCI IDE Controller<a class="headerlink" href="#pci-ide-controller" title="Permalink to this headline">¶</a></h3>
+<p>DE is a keyword which refers to the electrical specification of the cables which
+connect ATA drives (like hard drives) to another device. The drives use the
+ATA (Advanced Technology Attachment) interface. An IDE cable also can terminate
+at an IDE card connected to PCI.</p>
+<p>Parallel ATA (PATA), originally AT Attachment, is an interface standard for
+the connection of storage devices such as hard disk drives, floppy disk drives,
+and optical disc drives in computers. It uses the underlying AT Attachment (ATA)
+and AT Attachment Packet Interface (ATAPI) standards.</p>
+<p>ATAPI is an extension to ATA (recently renamed to PATA) and Serial ATA, which adds
+support for the SCSI command set. With ATAPI a greater variety of devices can be
+connected to a computer than with ATA alone.</p>
+<p>ATAPI devices are also &#8220;speaking ATA&#8221; because the ATA physical interface and protocol
+are still being used to send the packets. On the other hand, ATA hard drives and solid
+state drives do not use ATAPI. ATAPI is basically a way to issue SCSI commands to a CD-ROM,
+CD-RW, DVD, or tape drive, attached to the ATA bus.</p>
+<p>ATAPI uses a very small number of ATA commands. The most important are the PACKET
+command (0xA0), and IDENTIFY PACKET DEVICE (0xA1).</p>
+<p>An IDE driver does not need to know whether a drive is parallel or serial, it only has
+to know whether it&#8217;s using ATA or ATAPI. IDE can connect up to 4 drives. Each drive can
+be one of the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ATA (Serial): Used for most modern hard drives.</li>
+<li>ATA (Parallel): Commonly used for hard drives.</li>
+<li>ATAPI (Serial): Used for most modern optical drives.</li>
+<li>ATAPI (Parallel): Commonly used for optical drives.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="iso-9660">
+<h3>ISO 9660<a class="headerlink" href="#iso-9660" title="Permalink to this headline">¶</a></h3>
+<p>ISO 9660 is the standard file system for CD-ROMs. It is also widely used
+on DVD and BD media and may as well be present on USB sticks or hard disks.
+Its specifications are available for free under the name ECMA-119.</p>
+<p>An ISO 9660 sector is normally 2 KiB long. Although the specification allows
+for alternative sector sizes, you will rarely find anything other than 2 KiB.
+ISO 9660 file systems can have up to 2 exp 32 blocks, i.e. 8 TiB.</p>
+<p>The following is the rough overall structure of the ISO 9660 file system:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">ISO 9660 File System</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>System Area</td>
+<td>Unused by ISO 9660</td>
+</tr>
+<tr class="row-odd"><td>Data Area</td>
+<td><p class="first">Volume Descriptor Set</p>
+<p class="last">Path tables, Directories and Files</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The ISO 9660 standard specifies three ways to encode 16 and 32-bit integers,
+using either little-endian (least-significant byte first), big-endian
+(most-significant byte first), or a combination of both (little-endian followed
+by big-endian). Both-endian (LSB-MSB) fields are therefore twice as wide.
+For this reason, 32-bit LBA&#8217;s often appear as 8 byte fields. Where a both-endian
+format is present, the x86 architecture makes use of the first little-endian
+sequence and ignores the big-endian sequence.</p>
+</div>
+<div class="section" id="the-virtual-filesystem">
+<h3>The virtual filesystem<a class="headerlink" href="#the-virtual-filesystem" title="Permalink to this headline">¶</a></h3>
+<p>A VFS is intended to abstract away details of the filesystem and location
+that files are stored, and to give access to them in a uniform manner.
+They are usually implemented as a graph of nodes; Each node representing
+either a file, directory, symbolic link, device, socket or pipe. Each node
+should know what filesystem it belongs to and have enough information such
+that the relevant open/close/etc functions in its driver can be found and
+executed. A common way to accomplish this is to have the node store function
+pointers which can be called by the kernel. We need a few function pointers:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Open - Called when a node is opened as a file descriptor.</li>
+<li>Close - Called when the node is closed.</li>
+<li>Read &amp; Write</li>
+<li>Readdir</li>
+<li>Finddir</li>
+</ul>
+</div></blockquote>
+<p>Mountpoints are the UNIX way of accessing different file systems.
+A filesystem is mounted on a directory - any subsequent access to that
+directory will actually access the root directory of the new filesystem.
+So essentially the directory is told that it is a mountpoint and given a
+pointer to the root node of the new filesystem.</p>
+<img alt="_images/vfs-mountpoint.png" src="_images/vfs-mountpoint.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p>Books:</p>
+<ol class="arabic simple">
+<li>xv6 book 10th ed, R. Cox, F. Kaashoek, R. Morris</li>
+<li>The little book about OS development, E. Helin, A. Renberg</li>
+<li>Operating systems: from 0 to 1, T.D. Hoang</li>
+<li>Writing a Simple Operating System, N. Blundell</li>
+<li>Operating System Concepts 10th ed., A. Silberschatz, G. Gagne, P.B. Galvin</li>
+<li>Operating systems design and implementation 3rd ed, A. Tanenbaum</li>
+<li>The Design of the UNIX Operating System, M.J. Bach</li>
+<li>The Design and Implementation of the FreeBSD Operating System</li>
+<li>Intel® 64 and IA-32 Architectures Software Developer’s Manual (Vol 3)</li>
+</ol>
+<p>Internet pages:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/X86">https://en.wikipedia.org/wiki/X86</a></li>
+<li><a class="reference external" href="https://www.gnu.org/software/grub/manual/legacy">https://www.gnu.org/software/grub/manual/legacy</a></li>
+<li><a class="reference external" href="https://linux.die.net/man/1/qemu-img">https://linux.die.net/man/1/qemu-img</a></li>
+<li><a class="reference external" href="https://wiki.osdev.org/C%2B%2B">https://wiki.osdev.org/C%2B%2B</a></li>
+<li><a class="reference external" href="https://wiki.osdev.org/Boot_Sequence">https://wiki.osdev.org/Boot_Sequence</a></li>
+<li><a class="reference external" href="https://manybutfinite.com/post/how-computers-boot-up">https://manybutfinite.com/post/how-computers-boot-up</a></li>
+<li><a class="reference external" href="https://wiki.osdev.org/GCC_Cross-Compiler">https://wiki.osdev.org/GCC_Cross-Compiler</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Booting#BOOT-LOADER">https://en.wikipedia.org/wiki/Booting#BOOT-LOADER</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/GNU_GRUB">https://en.wikipedia.org/wiki/GNU_GRUB</a></li>
+<li><a class="reference external" href="http://www.brokenthorn.com">http://www.brokenthorn.com</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Interrupt">https://en.wikipedia.org/wiki/Interrupt</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/File_system">https://en.wikipedia.org/wiki/File_system</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Parallel_ATA">https://en.wikipedia.org/wiki/Parallel_ATA</a></li>
+<li><a class="reference external" href="https://wiki.osdev.org/ATAPI">https://wiki.osdev.org/ATAPI</a></li>
+<li><a class="reference external" href="https://wiki.osdev.org/PCI_IDE_Controller">https://wiki.osdev.org/PCI_IDE_Controller</a></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.gif" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction</a></li>
+<li><a class="reference internal" href="#development-environment">Development environment</a><ul>
+<li><a class="reference internal" href="#preparing-the-box">Preparing the box</a></li>
+<li><a class="reference internal" href="#cross-compiler">Cross Compiler</a></li>
+<li><a class="reference internal" href="#first-steps">First steps</a></li>
+<li><a class="reference internal" href="#building-iso">Building ISO</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#kat-os-source-code">KaT OS Source Code</a></li>
+<li><a class="reference internal" href="#operating-system-basics">Operating system basics</a><ul>
+<li><a class="reference internal" href="#booting">Booting</a></li>
+<li><a class="reference internal" href="#device-drivers">Device drivers</a><ul>
+<li><a class="reference internal" href="#the-screen">The screen</a></li>
+<li><a class="reference internal" href="#gdt">GDT</a></li>
+<li><a class="reference internal" href="#interrupts">Interrupts</a></li>
+<li><a class="reference internal" href="#ps-2-keyboard">PS/2 Keyboard</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#memory-management">Memory management</a><ul>
+<li><a class="reference internal" href="#segmentation">Segmentation</a></li>
+<li><a class="reference internal" href="#paging">Paging</a></li>
+<li><a class="reference internal" href="#page-frame-allocation">Page Frame Allocation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#processes">Processes</a></li>
+<li><a class="reference internal" href="#system-calls">System calls</a></li>
+<li><a class="reference internal" href="#file-system">File system</a><ul>
+<li><a class="reference internal" href="#pci-ide-controller">PCI IDE Controller</a></li>
+<li><a class="reference internal" href="#iso-9660">ISO 9660</a></li>
+<li><a class="reference internal" href="#the-virtual-filesystem">The virtual filesystem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="notes.html" title="previous chapter">Notes</a></li>
+  </ul></li>
+</ul>
+</div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, frainfreeze, kegl.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
