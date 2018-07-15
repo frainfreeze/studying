@@ -1668,8 +1668,7 @@ kontrolu ekonomskih aktivnosti
 
 Vjezbe: MI2
 ============
-vjezbe5
-
+vjezbe5:
 Bruto društveni proizvod
 ------------------------
 Tržišna vrijednost svih finalnih dobara i usluga proizvedenih u 
@@ -1713,6 +1712,7 @@ Ne govori nam o kvaliteti života u zemlji
 Ne govori nam o učešću nelegalnih aktivnosti
 
 
+vjezbe 6:
 Ekonomski rast i ekonomski razvoj
 ---------------------------------
 Ekonomski rast – povećanje vrijednost proizvodnje u zemlji u danom 
@@ -1733,8 +1733,6 @@ hranu za vlastite potrebe, rade vlastite kuće i kupuju
 povremeno. Razmjena se vrši često putem bartera (roba za
 robu), za gotovinu (bez računa) ili putem paralelne monete.
 
-
-vjezbe 6
 
 GPI - Genuine Progress Indicator
 --------------------------------
@@ -1774,10 +1772,3 @@ Kako zemlje postaju bogatije, iznad nivoa pokrivanja osnovnih potreba
 
 Ljudska sreća manje ovisi o njihovom apsolutnom bogatstvu a više o 
 usporedbi njihovog bogatstva sa drugim ljudima.
-
-
-
-
-
-
-
