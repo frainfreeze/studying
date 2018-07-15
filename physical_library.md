@@ -18,7 +18,7 @@
 - [ ]  Patterns of Enterprise Application Architecture
 - [ ]  Peopleware: Productive Projects and Teams
 
-**Other: (read in parallel with different levels, just read the pdf perhaps?)**
+**Other**
 - [ ]  Programming Pearls
 - [ ]  Code: The Hidden Language of Computer Hardware and Software
 - [ ]  The Mythical Man-Month
