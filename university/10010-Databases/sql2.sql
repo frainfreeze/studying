@@ -96,6 +96,7 @@ order by km.Prezime asc
 
 
 -- Ishod 6
+-------------------------------kupci----------------------------
 -- Zadatak 1: ispiste imena i prezimena kupaca i u trecem stupcu kombinirani prikaz
 -- spojene preve polovice imena i druge prezumena. ako ima neparan broj slova pola
 -- se smatra nizi cjeli broj slova
@@ -103,26 +104,6 @@ select
     k.Ime , k.prezime , 
     LEFT (k.Ime, LEN(k.Ime) / 2) + RIGHT(k.Prezime, LEN(k.Prezime) / 2)
 from Kupac as k
-
--- Zadatak 2: ispisite IDRacuna, ID kreditne kartice i u trecem stupcu kombinirani
--- podatak koji bi prikazivao podatak idracun spojen sa kredkarticaid
-select r.IDRacun, r.KreditnaKarticaID, CAST(r.IDRacun as nvarchar) + '-' + CAST(r.KreditnaKarticaID as nvarchar)
-from Racun as r
-
--- Zadatak 3: ispisite rang listu tipova kreditnih kartica koje su se koristile
--- za placanje racuna u 1. tjednu ili 3. kvartalu bilo koje godine, rezultat treba
--- prikazivati tipove kreditnih kartica bez ponavljanja i sume iznosa svih racuna
--- placenih kreditnim karticama, rez treba sortirati desc po sumama iznosa i 
--- prikazati samo prve tri kartice s najvecim ostvarenim prometom
-select distinct top 3 kk.Tip, SUM(s.UkupnaCijena)
-from KreditnaKartica as kk
-    inner join Racun as r
-        on r.KreditnaKarticaID = kk.IDKreditnaKartica
-    inner join Stavka as s
-        on s.RacunID = r.IDRacun
-where DATEPART(week, r.DatumIzdavanja) = 1 or (DATEPART(month, r.DatumIzdavanja) IN (7, 8, 9))
-group by kk.Tip
-order by 2 desc
 
 -- Zadatak 4: napravite upit kojim cete ispisati samo brojku koliko ima
 -- jedinstvenih kupaca koji nikad nisu kupili ni jedan proizvod iz kat. carape
@@ -138,99 +119,17 @@ from Kupac as k
         on p.PotkategorijaID = pk.IDPotkategorija
 where pk.Naziv != 'carape'
 
---Zad5: ispisite koliko iz svake kategorije ima proizvoda koji nisu nikad prodani
-select k.Naziv,COUNT(pr.IDProizvod) as KolikoProizvoda 
-from Kategorija as k
-    inner join Potkategorija as pk 
-        on k.IDKategorija=pk.KategorijaID
-    inner join Proizvod as pr 
-        on pr.PotkategorijaID=pk.IDPotkategorija
-    left join Stavka as s 
-        on s.ProizvodID = pr.IDProizvod
-where s.IDStavka is NULL
-group by k.Naziv
-
---Zad2: ispisite ime prezime i inicijale svih komercijalista koji nisu
---stalno zaposleni. inicijale ispisite u jednom stupcu (npr A.H. za anu horvat)
-select k.Ime,k.Prezime, LEFT(k.Ime,1)+'.'+Left(k.Prezime,1) as Inicijali 
-from Komercijalist as k
-where StalniZaposlenik = 0
-
---Zad3: ispisite u prvom stupcu razliku u godinama od prvog izdanog racuna do
---danas te u drugom razliku u godinama od posljednjeg izdanog racuna do danas
-select 
-    DATEDIFF(YEAR,MIN(r.DatumIzdavanja),GETDATE()) as FirstBillTilltoday,
-    DATEDIFF(YEAR,MAX(r.DatumIzdavanja),GETDATE()) as LastBilltillToday 
-from Racun as r
-
---Zad4: ispisite koliko je izdanih racuna te koliki je pritom promet napravljen
---(suma ukupne cjene) prikazano po godinama, ali gledano samo po racunima 
---izdanima u prosincu
-select Year(r.datumIzdavanja), COUNT(r.IDRacun) as Howmany,SUM(s.UkupnaCijena) as UkupnaCijena 
-from Racun as r
-    Inner Join stavka as s 
-        on s.RacunID=r.IDRacun
-group by Year(r.datumIzdavanja) 
-
---Zad5: ispisite koliko iz svake kategorije ima proizvoda koji nisu nikad prodani
-select k.Naziv,COUNT(pr.IDProizvod) as KolikoProizvoda 
-from Kategorija as k
-    inner join Potkategorija as pk 
-        on k.IDKategorija=pk.KategorijaID
-    inner join Proizvod as pr 
-        on pr.PotkategorijaID=pk.IDPotkategorija
-    left join Stavka as s 
-        on s.ProizvodID = pr.IDProizvod
-where s.IDStavka is NULL
-group by k.Naziv
-
 --z2: kupcima cija prezimena sadrze y treba ispisati imena i odvojeno crticom sva 
 --slova prezimena koja se nalaze lijevo od y, npr za milton albury -  Milton Albur
 select k.Ime+'-'+Left(k.Prezime,CHARINDEX('y',k.Prezime)-1) as Inicijali 
 from Kupac as k
 where k.Prezime like '%y%'
 
---z3: ispisi IDracuna, brojracuna i datum izdavanja racuna. datum izdavanja treba 
---biti u obliku dan-mjesec-godina, a godina treba pisati sa dvije znamenke. u rjesenju
---ne smiju biti prikazane praznine. npr 2001-07-19 je 19-7-01 http://www.sql-server-helper.com/tips/date-formats.aspx
-select r.IDRacun, r.BrojRacuna, CONVERT(VARCHAR(8), r.DatumIzdavanja, 5) AS [Datum izdavanja]
-from Racun as r
-
---z4: ispisi imena i prez. komercijalista i pripadajuci broj izdanih racuna po
---pojedinom komercijalisti za one komercijaliste koji su napravili vise od 400 racuna.
--- sortirati po imenima komercijalista
-select kom.ime, kom.prezime, count(distinct r.IDRacun) as BrojIzdanihRacuna
-from racun as r
-inner join Komercijalist as kom
-on kom.IDKomercijalist=r.KomercijalistID
-inner join stavka as s 
-on s.RacunID=r.IDRacun
-group by kom.ime, kom.Prezime
-having count(distinct r.IDRacun) > 400
-order by kom.Ime
-
---z5: ispisi ID-eve i brojeve kreditnih kartica kojima je ukupni iznos izdanih
---racuna (suma ukupne cijene u stavkama) manji od 3kn
-select k.IDKreditnaKartica, k.Broj
-from racun as r
-inner join KreditnaKartica as k
-on k.IDKreditnaKartica=r.KreditnaKarticaID
-inner join stavka as s 
-on s.RacunID=r.IDRacun
-group by k.IDKreditnaKartica, k.Broj
-having sum(s.UkupnaCijena) < 3
-
 --z7: ispisi ime, prezime i inicijale svih kupaca kojima ime zavrsava na slovo a
 --inicijale ispisi u jednom stupcu, npr za Ana Horvat u jednom stupcu je A.H.
 select k.Ime,k.Prezime, LEFT(k.Ime,1)+'.'+Left(k.Prezime,1)+'.' as Inicijali 
 from Kupac as k
 where k.Ime like '%a'
-
---z8: ispisi u prvom stupcu razliku u mjesecima izmedu prvog i poslijednjeg datuma
---izdavanja racuna, u drugom stupcu koliko je god proslo od posljenje izdanog racuna
-select DATEDIFF(MONTH, MIN(r.DatumIzdavanja),MAX(r.DatumIzdavanja)) as mjeseci,
-       DATEDIFF(YEAR, MAX(r.DatumIzdavanja), GETDATE()) as godine
-from Racun as r
 
 --z9: ispisi IDeve kupaca, imena i prez. te broj pripadajucih racuna (kolicina racuna
 --pojedinog kupca), prikazano po kupcima koji su 2002g imali dvije ili vise kupnji (dva
@@ -255,6 +154,115 @@ inner join Drzava as d
 on g.DrzavaID=d.IDDrzava
 where k.IDKupac not in (select KupacID from Racun)
 group by d.Naziv
+
+
+----------------------------komercijalisti----------------------------
+--Zad2: ispisite ime prezime i inicijale svih komercijalista koji nisu
+--stalno zaposleni. inicijale ispisite u jednom stupcu (npr A.H. za anu horvat)
+select k.Ime,k.Prezime, LEFT(k.Ime,1)+'.'+Left(k.Prezime,1) as Inicijali 
+from Komercijalist as k
+where StalniZaposlenik = 0
+
+--z4: ispisi imena i prez. komercijalista i pripadajuci broj izdanih racuna po
+--pojedinom komercijalisti za one komercijaliste koji su napravili vise od 400 racuna.
+-- sortirati po imenima komercijalista
+select kom.ime, kom.prezime, count(distinct r.IDRacun) as BrojIzdanihRacuna
+from racun as r
+inner join Komercijalist as kom
+on kom.IDKomercijalist=r.KomercijalistID
+inner join stavka as s 
+on s.RacunID=r.IDRacun
+group by kom.ime, kom.Prezime
+having count(distinct r.IDRacun) > 400
+order by kom.Ime
+
+
+---------------------------kreditne kartice----------------------------
+-- Zadatak 2: ispisite IDRacuna, ID kreditne kartice i u trecem stupcu kombinirani
+-- podatak koji bi prikazivao podatak idracun spojen sa kredkarticaid
+select r.IDRacun, r.KreditnaKarticaID, CAST(r.IDRacun as nvarchar) + '-' + CAST(r.KreditnaKarticaID as nvarchar)
+from Racun as r
+
+-- Zadatak 3: ispisite rang listu tipova kreditnih kartica koje su se koristile
+-- za placanje racuna u 1. tjednu ili 3. kvartalu bilo koje godine, rezultat treba
+-- prikazivati tipove kreditnih kartica bez ponavljanja i sume iznosa svih racuna
+-- placenih kreditnim karticama, rez treba sortirati desc po sumama iznosa i 
+-- prikazati samo prve tri kartice s najvecim ostvarenim prometom
+select distinct top 3 kk.Tip, SUM(s.UkupnaCijena)
+from KreditnaKartica as kk
+    inner join Racun as r
+        on r.KreditnaKarticaID = kk.IDKreditnaKartica
+    inner join Stavka as s
+        on s.RacunID = r.IDRacun
+where DATEPART(week, r.DatumIzdavanja) = 1 or (DATEPART(month, r.DatumIzdavanja) IN (7, 8, 9))
+group by kk.Tip
+order by 2 desc
+
+--z5: ispisi ID-eve i brojeve kreditnih kartica kojima je ukupni iznos izdanih
+--racuna (suma ukupne cijene u stavkama) manji od 3kn
+select k.IDKreditnaKartica, k.Broj
+from racun as r
+inner join KreditnaKartica as k
+on k.IDKreditnaKartica=r.KreditnaKarticaID
+inner join stavka as s 
+on s.RacunID=r.IDRacun
+group by k.IDKreditnaKartica, k.Broj
+having sum(s.UkupnaCijena) < 3
+
+
+----------------------------racuni----------------------------
+--Zad3: ispisite u prvom stupcu razliku u godinama od prvog izdanog racuna do
+--danas te u drugom razliku u godinama od posljednjeg izdanog racuna do danas
+select 
+    DATEDIFF(YEAR,MIN(r.DatumIzdavanja),GETDATE()) as FirstBillTilltoday,
+    DATEDIFF(YEAR,MAX(r.DatumIzdavanja),GETDATE()) as LastBilltillToday 
+from Racun as r
+
+--Zad4: ispisite koliko je izdanih racuna te koliki je pritom promet napravljen
+--(suma ukupne cjene) prikazano po godinama, ali gledano samo po racunima 
+--izdanima u prosincu
+select Year(r.datumIzdavanja), COUNT(r.IDRacun) as Howmany,SUM(s.UkupnaCijena) as UkupnaCijena 
+from Racun as r
+    Inner Join stavka as s 
+        on s.RacunID=r.IDRacun
+group by Year(r.datumIzdavanja) 
+
+--z3: ispisi IDracuna, brojracuna i datum izdavanja racuna. datum izdavanja treba 
+--biti u obliku dan-mjesec-godina, a godina treba pisati sa dvije znamenke. u rjesenju
+--ne smiju biti prikazane praznine. npr 2001-07-19 je 19-7-01 http://www.sql-server-helper.com/tips/date-formats.aspx
+select r.IDRacun, r.BrojRacuna, CONVERT(VARCHAR(8), r.DatumIzdavanja, 5) AS [Datum izdavanja]
+from Racun as r
+
+--z8: ispisi u prvom stupcu razliku u mjesecima izmedu prvog i poslijednjeg datuma
+--izdavanja racuna, u drugom stupcu koliko je god proslo od posljenje izdanog racuna
+select DATEDIFF(MONTH, MIN(r.DatumIzdavanja),MAX(r.DatumIzdavanja)) as mjeseci,
+       DATEDIFF(YEAR, MAX(r.DatumIzdavanja), GETDATE()) as godine
+from Racun as r
+
+----------------------------proizvodi----------------------------
+--Zad5: ispisite koliko iz svake kategorije ima proizvoda koji nisu nikad prodani
+select k.Naziv,COUNT(pr.IDProizvod) as KolikoProizvoda 
+from Kategorija as k
+    inner join Potkategorija as pk 
+        on k.IDKategorija=pk.KategorijaID
+    inner join Proizvod as pr 
+        on pr.PotkategorijaID=pk.IDPotkategorija
+    left join Stavka as s 
+        on s.ProizvodID = pr.IDProizvod
+where s.IDStavka is NULL
+group by k.Naziv
+
+--Zad5: ispisite koliko iz svake kategorije ima proizvoda koji nisu nikad prodani
+select k.Naziv,COUNT(pr.IDProizvod) as KolikoProizvoda 
+from Kategorija as k
+    inner join Potkategorija as pk 
+        on k.IDKategorija=pk.KategorijaID
+    inner join Proizvod as pr 
+        on pr.PotkategorijaID=pk.IDPotkategorija
+    left join Stavka as s 
+        on s.ProizvodID = pr.IDProizvod
+where s.IDStavka is NULL
+group by k.Naziv
 
 
 --ISHOD 7
