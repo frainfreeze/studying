@@ -1,0 +1,60 @@
+kolega lalic, b grupa grada prvi medu ispit
+I1. 1) SIMD - nacrtati i objasniti
+2) intel 8[nešto] čipset - nacrtati i objasniti
+
+I2. 1) 8-bitni CISC, objasniti značenja skolopova
+2) objasniti akumulator(ACC), instrukcijski registar(IR), brojilo podataka(DC)
+
+I3. 1) stanja na sabirnicama, instrukcija lda $052Fh (u tom smislu)
+2) koje su faze izvođenja instrukcija, objasniti
+
+I4. 1) u lokaciju [lokacija] upisati broj [neki broj], u lokaciju [neka druga lokacija] upisati [neki drugi broj], pomnožiti brojeve i pohraniti u r3 i r4
+2) u lokaciju [lokacija] upisati broj [neki broj], u lokaciju [neka druga lokacija] upisati [neki drugi broj], napraviti logičko I i pohraniti na lokaciju [neka treca lokacija] preko indirektnog adresiranja
+3) zbrajanje različitim načinima adresiranja, objasniti
+
+I5. 1) ALU - sklop za pripremu operanda b, nacrtati i objasniti
+2) mikroprogramirana upravljačka jedinica, nacrtati i objasniti
+3) zbrojiti brojeve od Ah do Dh koristeći akumulator i adrese [adresa1] i [adresa2] te komplementirani rezultat pohraniti na adresu [adresa3], napisati stanja registara za svaku iteraciju petlje
+
+
+ishod ucenja 1:
+1(4). Nacrtajte Von Neumanov model racunala
+2(3). Nacrtajte osnovnu arhihekturu maticne ploce sa core 2 procesorom
+3(4). Flynova klasifikacija: na cemu se temelji, tipovi, nacrtati i opisati SISD
+4(3). Nacrtaj i objasni osnovnu strukturu maticne ploce. Koja je razlika izmedu sinkronih i asinkronih maticnih ploca
+
+ishod ucenja 5:
+1.(3): nacrtajte 4-bitno zbrajalo i ilustrirajte ga na primjeru zbroja operanda 0010 i 0011
+2.(3): nacrtajte i objasnite i-ti stupanj alu
+3.(2): mikroprogramski pristup upravljacke jedinice - nacrtati i opiati
+
+Poluzbrajalo - nacrtati na razini modula pomoci temeljnih log sklopova i tablica istinitosti
+Nacrtati i objasniti odnos pojmova makro i mikroinstrukcija
+
+ishod ucenja 6:
+1.(3): Virtualna memorija - adresni prostor - nabrojati i objasniti
+2.(2): Nacrtajte i objasnite simbolicki prikaz memorijske hijearhije u racunarskom sustavu
+3.(3): Osnovne organizacijske i tehnoloske znacajke memorijskog sustava - nabrojati i objasniti
+(stari test)
+2.(3): cetiri glavne hijearhijske razine memorije - nabrojati i nacrtati
+3.(2): mehanizam djelovanja prirucne memorije - prikazati u tablicnom obliku
+
+ishod ucenja 7:
+1.(3): objasniti programirani ulazno-izlazni prijenos podataka (tipovi, algoritmi, karakteristike)
+2.(3): Postupak prekidnog prijenosa - objasniti po koracima
+3.(2): zasto koristimo ulazno-izlazni upravljac
+
+ishod ucenja 8:
+1.(3): Dinamicki parametri diskovne jedinice - pobrojite i objasnite pristup zeljenom sektoru na stazi
+2.(2): Objasnite nacine koristenja lasera kod CR-RW opticke memorije
+3.(2): Polje diskova RAID - pojam, izvedbe i objasniti RAID 0
+
+ishod ucenja 9:
+1.(3): objasni i nacrtaj nacelnu organizaciju superskalarnog procesora
+2.(2): Koji su oblici i razine paralelizma? Objasni iskoristeni paralelizam po razinama
+3.(2): navedite osnovna obiljezja grafickih procesora
+
+drugo:
+popunjavanje memorije i asembler(i6), karakteristike viseprocesorskih sustava,
+geforce 8800 - osnovna obiljezja, razine [?] raspolozivog paralelizma,
+struktura RISC [?]
