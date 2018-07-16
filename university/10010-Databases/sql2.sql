@@ -150,7 +150,6 @@ from Kategorija as k
 where s.IDStavka is NULL
 group by k.Naziv
 
---ISHOD 6
 --Zad2: ispisite ime prezime i inicijale svih komercijalista koji nisu
 --stalno zaposleni. inicijale ispisite u jednom stupcu (npr A.H. za anu horvat)
 select k.Ime,k.Prezime, LEFT(k.Ime,1)+'.'+Left(k.Prezime,1) as Inicijali 
@@ -185,9 +184,81 @@ from Kategorija as k
 where s.IDStavka is NULL
 group by k.Naziv
 
+--z2: kupcima cija prezimena sadrze y treba ispisati imena i odvojeno crticom sva 
+--slova prezimena koja se nalaze lijevo od y, npr za milton albury -  Milton Albur
+select k.Ime+'-'+Left(k.Prezime,CHARINDEX('y',k.Prezime)-1) as Inicijali 
+from Kupac as k
+where k.Prezime like '%y%'
+
+--z3: ispisi IDracuna, brojracuna i datum izdavanja racuna. datum izdavanja treba 
+--biti u obliku dan-mjesec-godina, a godina treba pisati sa dvije znamenke. u rjesenju
+--ne smiju biti prikazane praznine. npr 2001-07-19 je 19-7-01 http://www.sql-server-helper.com/tips/date-formats.aspx
+select r.IDRacun, r.BrojRacuna, CONVERT(VARCHAR(8), r.DatumIzdavanja, 5) AS [Datum izdavanja]
+from Racun as r
+
+--z4: ispisi imena i prez. komercijalista i pripadajuci broj izdanih racuna po
+--pojedinom komercijalisti za one komercijaliste koji su napravili vise od 400 racuna.
+-- sortirati po imenima komercijalista
+select kom.ime, kom.prezime, count(distinct r.IDRacun) as BrojIzdanihRacuna
+from racun as r
+inner join Komercijalist as kom
+on kom.IDKomercijalist=r.KomercijalistID
+inner join stavka as s 
+on s.RacunID=r.IDRacun
+group by kom.ime, kom.Prezime
+having count(distinct r.IDRacun) > 400
+order by kom.Ime
+
+--z5: ispisi ID-eve i brojeve kreditnih kartica kojima je ukupni iznos izdanih
+--racuna (suma ukupne cijene u stavkama) manji od 3kn
+select k.IDKreditnaKartica, k.Broj
+from racun as r
+inner join KreditnaKartica as k
+on k.IDKreditnaKartica=r.KreditnaKarticaID
+inner join stavka as s 
+on s.RacunID=r.IDRacun
+group by k.IDKreditnaKartica, k.Broj
+having sum(s.UkupnaCijena) < 3
+
+--z7: ispisi ime, prezime i inicijale svih kupaca kojima ime zavrsava na slovo a
+--inicijale ispisi u jednom stupcu, npr za Ana Horvat u jednom stupcu je A.H.
+select k.Ime,k.Prezime, LEFT(k.Ime,1)+'.'+Left(k.Prezime,1)+'.' as Inicijali 
+from Kupac as k
+where k.Ime like '%a'
+
+--z8: ispisi u prvom stupcu razliku u mjesecima izmedu prvog i poslijednjeg datuma
+--izdavanja racuna, u drugom stupcu koliko je god proslo od posljenje izdanog racuna
+select DATEDIFF(MONTH, MIN(r.DatumIzdavanja),MAX(r.DatumIzdavanja)) as mjeseci,
+       DATEDIFF(YEAR, MAX(r.DatumIzdavanja), GETDATE()) as godine
+from Racun as r
+
+--z9: ispisi IDeve kupaca, imena i prez. te broj pripadajucih racuna (kolicina racuna
+--pojedinog kupca), prikazano po kupcima koji su 2002g imali dvije ili vise kupnji (dva
+--ili vise izdanih racuna). rezultat sortiraj padajuce po broju izdanih racuna
+select k.IDKupac, k.ime, k.Prezime, COUNT(distinct r.IDRacun) as BrojRacuna
+from kupac as k
+inner join grad as g
+on g.IDGrad=k.GradID
+inner join racun as r
+on r.KupacID=k.IDKupac
+where year(r.DatumIzdavanja)=2002
+group by k.IDKupac, k.Ime, k.Prezime
+having COUNT(distinct r.IDRacun) > 2
+order by BrojRacuna desc
+
+--z10: ispiste koliko iz svake drzave ima kupaca koji nikad nisu nista kupili
+select d.Naziv as Drzava, COUNT(distinct k.IDKupac) as BrojKupaca
+from kupac as k
+inner join grad as g
+on g.IDGrad=k.GradID
+inner join Drzava as d
+on g.DrzavaID=d.IDDrzava
+where k.IDKupac not in (select KupacID from Racun)
+group by d.Naziv
+
 
 --ISHOD 7
---Zad6: ispisite imena i prezimena kupaca koji nikad nosu nista kupili
+--Zad6: ispisite imena i prezimena kupaca koji nikad nisu nista kupili
 select k.Ime,k.Prezime 
 from Kupac as k
 where k.IDKupac not in (
