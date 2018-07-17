@@ -1,7 +1,7 @@
 zadatak1
-![alt text](https://raw.githubusercontent.com/frainfreeze/DS-A-homework-2/master/ezgif-3-f242348088.gif)
+![alt text](ezgif-3-f242348088.gif)
 
 zadatak 2
 ![alt text](https://i.imgur.com/3epI9Pe.png)
-![alt text](https://raw.githubusercontent.com/frainfreeze/DS-A-homework-2/master/zadatak2.gif)
+![alt text](zadatak2.gif)
 
