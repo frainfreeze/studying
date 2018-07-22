@@ -157,7 +157,13 @@ General CS books (draft)
     [ ] - Patterns of Enterprise Application Architecture
     [ ] - Peopleware: Productive Projects and Teams
 
-
+Vim (reviewed, finalised)
+    Cheatsheet- https://vim.rtorr.com/
+    [ ] - vimtutor
+    [ ] - http://moolenaar.net/habits.html
+    [ ] - https://yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d
+    [ ] - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+    
 Drafts
     DS&A (draft)
         [ ] - Grokking Algorithms
@@ -177,6 +183,9 @@ Drafts
         ? - the yellow book
 
     Big data, machine learning and data mining
+        ? - http://aima.cs.berkeley.edu/
+        ? - https://github.com/norvig/paip-lisp
+        
         ? - https://metacademy.org/roadmaps/
         ? - https://github.com/prakhar1989/awesome-courses
         ? - https://medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
@@ -191,6 +200,10 @@ Drafts
         ? - The Practice of Programming
         ? - Linux System Programming: Talking Directly to the Kernel and C Library
         ? - The Art of UNIX Programming
+        ? - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610
+        ? - New Turing Omnibus (New Turning Omnibus : 66 Excursions in Computer Science) 978-0716782711
+        ? - The Art of Computer Programming 0-201-03801-3
+        ? - Pragmatic Thinking and Learning 978-1-93435-605-0
 
     Courses *hit    
         ? - https://sourcemaking.com/design_patterns
@@ -213,9 +226,8 @@ Drafts
         - how to setup and automate your development enviroment ? xlearning.com/skils/5545 (zsh, tmux, vim)
 
 Rough deadlines
-1.9.  C++ I
 1.10. Web Dev I, Misc I
-1.11. Python I
+1.11. C++ I, Python I
 
 Uni 2 s3: Python II, C++ II, Java
 Uni 2 s4: C#, start big data, ML, DS&A
