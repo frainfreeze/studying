@@ -162,8 +162,7 @@ Drafts
     DS&A (draft)
         [ ] - Grokking Algorithms
         [ ] - Data Structures and Algorithms in Python
-        [ ] - Introduction to algorithms
-        ? - https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/index.htm
+        [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
         ? - https://www.coursera.org/specializations/algorithms
         ? - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
         ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
@@ -194,8 +193,6 @@ Drafts
         ? - The Art of UNIX Programming
 
     Courses *hit    
-        ? - Computer Science Distilled: Learn the Art...
-        ? - edx Introduction to Computer Science and Programming using Python
         ? - https://sourcemaking.com/design_patterns
         ? - https://www.cs.hmc.edu/csforall/#indices-and-tables
 
@@ -213,9 +210,7 @@ Drafts
         - shell ? https://swcarpentry.github.io/shell-novice/
         - git ? https://swcarpentry.github.io/git-novice/
         - hg ? https://swcarpentry.github.io/hg-novice/
-        - byte of vim?
         - how to setup and automate your development enviroment ? xlearning.com/skils/5545 (zsh, tmux, vim)
-        - ??? nand2tetris
 
 Rough deadlines
 1.9.  C++ I
