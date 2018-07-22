@@ -17,7 +17,7 @@ Python (draft)
     Intro
     [x] - byte of python*
     [x] - thinkcspython3
-    [ ] - dive in python (partially)
+    [x] - dive in python (partially)
     [ ] - PEP 8
     [ ] - Google Python Style Guide
     
