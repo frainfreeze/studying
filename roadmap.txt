@@ -128,7 +128,13 @@ Clojure (draft)
     [ ] - Practical Clojure, L. VanderHart, S. Sierra, 2010.
     [ ] - http://clojure-doc.org/
 
-
+DS&A (draft)
+        [ ] - Grokking Algorithms
+        [ ] - Data Structures and Algorithms in Python
+        [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
+        ? - https://www.coursera.org/specializations/algorithms
+        ? - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
+        ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
 
 General CS books (draft)
     [x] - Code: The Hidden Language of Computer Hardware and Software       
@@ -157,22 +163,30 @@ General CS books (draft)
     [ ] - Patterns of Enterprise Application Architecture
     [ ] - Peopleware: Productive Projects and Teams
 
-Vim (reviewed, finalised)
-    Cheatsheet- https://vim.rtorr.com/
-    [ ] - vimtutor
-    [ ] - http://moolenaar.net/habits.html
-    [ ] - https://yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d
-    [ ] - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+Unix etc
+    Vim (reviewed, finalised)
+        Cheatsheet- https://vim.rtorr.com/
+        [ ] - vimtutor
+        [ ] - http://moolenaar.net/habits.html
+        [ ] - https://yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d
+        [ ] - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+
+    Shell (draft)
+        [ ] - https://swcarpentry.github.io/shell-novice/
+        [ ] - https://swcarpentry.github.io/shell-extras/
+
+    Git (draft)
+        [ ] - https://git-scm.com/book/en/v2
+        [ ] - https://documentup.com/skwp/git-workflows-book
+        [ ] - https://swcarpentry.github.io/git-novice/
+        [ ] - https://maryrosecook.com/blog/post/git-from-the-inside-out        
     
+    Other:
+        ? - Linux System Programming: Talking Directly to the Kernel and C Library
+        ? - The Art of UNIX Programming
+        ? zsh, tmux
+
 Drafts
-    DS&A (draft)
-        [ ] - Grokking Algorithms
-        [ ] - Data Structures and Algorithms in Python
-        [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
-        ? - https://www.coursera.org/specializations/algorithms
-        ? - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
-        ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
-        
     Java (draft)
         ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
         ? - Effective Java - Recommended by pek as a great intermediate text.
@@ -185,7 +199,6 @@ Drafts
     Big data, machine learning and data mining
         ? - http://aima.cs.berkeley.edu/
         ? - https://github.com/norvig/paip-lisp
-        
         ? - https://metacademy.org/roadmaps/
         ? - https://github.com/prakhar1989/awesome-courses
         ? - https://medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
@@ -198,8 +211,6 @@ Drafts
         ? - The Self-taught Programmer by Cory Althoff
         ? - TCP/IP Sockets in C (about week)   
         ? - The Practice of Programming
-        ? - Linux System Programming: Talking Directly to the Kernel and C Library
-        ? - The Art of UNIX Programming
         ? - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610
         ? - New Turing Omnibus (New Turning Omnibus : 66 Excursions in Computer Science) 978-0716782711
         ? - The Art of Computer Programming 0-201-03801-3
@@ -208,22 +219,9 @@ Drafts
     Courses *hit    
         ? - https://sourcemaking.com/design_patterns
         ? - https://www.cs.hmc.edu/csforall/#indices-and-tables
-
         ? - cs part: https://github.com/prakhar1989/awesome-courses
-        ? - https://github.com/ossu/computer-science#introduction-to-computer-science
-        ? - https://github.com/ossu/computer-science#core-cs
-        ? - https://github.com/ossu/computer-science#core-math
-        ? - https://github.com/ossu/computer-science#core-systems
-        ? - https://github.com/ossu/computer-science#core-theory
-        ? - https://github.com/ossu/computer-science#core-applications
-        ? - https://github.com/ossu/computer-science#advanced-cs
-        ? - https://github.com/ossu/computer-science#pro-cs
+        ? - https://github.com/ossu/computer-science
 
-    Misc (summer)
-        - shell ? https://swcarpentry.github.io/shell-novice/
-        - git ? https://swcarpentry.github.io/git-novice/
-        - hg ? https://swcarpentry.github.io/hg-novice/
-        - how to setup and automate your development enviroment ? xlearning.com/skils/5545 (zsh, tmux, vim)
 
 Rough deadlines
 1.10. Web Dev I, Misc I
