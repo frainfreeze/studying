@@ -1,19 +1,8 @@
-import random
+def monkey_trouble(a_smile, b_smile):
+  if a_smile and b_smile or (not a_smile and not b_smile):
+    return True
+  return False
 
-def drawBoard(board):
-    # This function prints out the board that it was passed
-    # # "board" is a list of 10 strings representing the 
-    # board (ignore index 0)
-    print('   |   |')
-    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
-    print('   |   |')
-    print('-----------')
-    print('   |   |')
-    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
-    print('   |   |')
-    print('-----------')
-    print('   |   |')
-    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
-    print('   |   |')
-
-drawBoard(['','X','O','X','O','X','O','X','O','X'])
+print(monkey_trouble(True, True)) #True
+print(monkey_trouble(False, False)) #True
+print(monkey_trouble(True, False)) #False

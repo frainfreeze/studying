@@ -1,34 +1,17 @@
-import random
+def sleep_in(weekday, vacation):
+  if not weekday or vacation:
+    return True
+  return False
+  # This can be shortened to: return(not weekday or vacation)
 
-words = ("menza", "meth", "pancakes")
-word = random.choice(words)
-guesses = ''
-turns = 10
+### first solution
+def sleep_in_1(weekday, vacation):
+  if vacation == False and weekday == True:
+    return False
+  else:
+    return True
 
-while turns > 0:         
-    failed = 0             
 
-    for char in word:      
-        if char in guesses:    
-            print (char, end=' ')
-        else:
-            print("_", end='')
-            failed += 1    
-
-    if failed == 0:        
-        print("You won")
-        break              
-    
-    print
-    
-    guess = input("enter a character: ") 
-    guesses += guess                    
-
-    if guess not in word:  
-        turns -= 1        
-        print("Wrong")
-        print("You have", + turns, 'more guesses') 
- 
-        if turns == 0:           
-          print("game over.")
-          print("The word was: " + word)
+print (sleep_in(False, False)) #True
+print (sleep_in(True, False)) #False
+print (sleep_in(False, True)) #True

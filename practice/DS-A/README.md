@@ -1,8 +1,6 @@
 # DSA-pps
 Data Structures and Algorithms practice problems and their solutions
 
-``` counter: 1/1000 | start date: 10.2.2018 | end date: 2025?  ```
-
 Quick navigation:
 - [array](#array)
 - [backtracking](#backtracking)
