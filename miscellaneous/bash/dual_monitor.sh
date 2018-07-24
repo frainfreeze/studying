@@ -9,5 +9,4 @@
 
 #---Description---
 # sets my philips 273v 1920x1080 as left monitor and samsung syncmaster 152v as right one.  
-
 xrandr --output DVI-D-0 --off --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-1 --off --output DVI-I-0 --mode 1024x768 --pos 1920x0 --rotate normal --output DP-1 --off --output DP-0 --off

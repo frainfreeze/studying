@@ -1,8 +1,8 @@
 # dailyprogramer
 
-Evergrowing collection of programming projects and problems. There are probably better solutions, comments are welcome. Also, nobody likes a cheater and not only you will eventually get caught, but you won't learn anything by just copying so use this for reference only and make sure you at least understand what is being done.
+Evergrowing collection of programming projects and problem solutions. Comments, corrections and suggestions are more than welcome. 
 
-``` counter: 42 projects/problems ```
+For students and other people who found this repository by googling for answers: nobody likes a cheater and not only you will eventually get caught, but you won't learn anything by just copying so use my materials as reference only and make sure you at least understand what is being done.
 
 Quick navigation:
 - [Projects](#projects)
@@ -10,15 +10,17 @@ Quick navigation:
 - [Practice](#practice)
 - [Miscellaneous](#miscellaneous)
 
-<br>
 
-# Projects
+## Projects
 
-# Homeworks
+## Homeworks
+- [game of life] - ascii, terminal
+- [simple path finding] - ascii, terminal, unfinished
 
-# Practice
+## Practice
 
-# Miscellaneous
+## Miscellaneous
+Collection of scripts and code snippets. See folders readme for details.
 
 <!-- 
 # C++

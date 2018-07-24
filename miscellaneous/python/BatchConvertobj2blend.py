@@ -11,6 +11,7 @@
 #---Description---
 #batch converts .obj files to .blend
 #run using: blender.exe --background --python main.py
+
 #---aditional notes---
 #create two folders
 #./obj and ./blend
