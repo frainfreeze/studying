@@ -165,15 +165,16 @@ Unix etc
         [ ] - https://swcarpentry.github.io/shell-extras/
 
     Git (draft)
+        [ ] - https://swcarpentry.github.io/git-novice/
         [ ] - https://git-scm.com/book/en/v2
         [ ] - https://documentup.com/skwp/git-workflows-book
-        [ ] - https://swcarpentry.github.io/git-novice/
+        [ ] - http://eagain.net/articles/git-for-computer-scientists/
         [ ] - https://maryrosecook.com/blog/post/git-from-the-inside-out        
     
     Other:
         ? - Linux System Programming: Talking Directly to the Kernel and C Library
         ? - The Art of UNIX Programming
-        ? zsh, tmux
+        ? - zsh, tmux
 
 Drafts
     Java (draft)
