@@ -107,7 +107,8 @@ missing_char('kitten', 4) → 'kittn'
 
 <br>
 
-### [009 Warmup-1 > not_string ](009.py)
+### [009 Warmup-1 > not_string python](009.py)
+### [009 Warmup-1 > not_string cpp](009.cpp)
 Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged.
 ```
 not_string('candy') → 'not candy'

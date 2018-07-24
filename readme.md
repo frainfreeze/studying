@@ -5,21 +5,22 @@ Evergrowing collection of programming projects and problems. There are probably 
 ``` counter: 42 projects/problems ```
 
 Quick navigation:
-- [Python](#python)
-- [C++](#c++)
-- [Multi](#multi)
-<!-- [Lua](#lua)
-- [Clojure](#Clojure)
-- [Java](#Java)
-- [C#](#C)
-- [haskel](#Haskel)
-- [php](#PHP)
-- [javascript](#Javascript) 
-sort me: by '# lang' -> ' - proj name -> technology'
--->
+- [Projects](#projects)
+- [Homeworks](#homeworks)
+- [Practice](#practice)
+- [Miscellaneous](#miscellaneous)
 
 <br>
 
+# Projects
+
+# Homeworks
+
+# Practice
+
+# Miscellaneous
+
+<!-- 
 # C++
 Projects and problems focused on learning the C++ language better.
 - [Project Euler](https://github.com/frainfreeze/DailyProgrammer/tree/master/cpp/ProjectEuler#desc) (2)
@@ -39,15 +40,5 @@ Projects and problems focused on learning the Python language better.
 Big / sets of projects that are not oriented on language per se but rather a particular concept.
 - [Virtual Machines and emulators](https://github.com/frainfreeze/DailyProgrammer/tree/master/multi/vm)
 
-<!-- # Lua
-# Clojure http://clojurekoans.com/
-# Java
-# C#
-# haskel
-# php
-# javascript -->
-
-<br>
-
-
 For Data Structures and Algorithms practice problems and their solutions see [this repo](https://github.com/frainfreeze/DSA-pps).
+-->
