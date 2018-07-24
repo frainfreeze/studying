@@ -20,6 +20,7 @@ Quick navigation:
 + [Sandbox] - junkyard, unfinished projects. New projects reside here before maturing enough to go one dir up
 
 ## Homeworks
++ [graphical scene] - SFML library
 + [game of life] - ascii, terminal
 + [simple path finding] - ascii, terminal, unfinished
 

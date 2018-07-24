@@ -429,10 +429,7 @@ Quick navigation:
 <br>
 
 ## [Linked Lists](src/LinkedLists)
-- Introduction to Linked Lists
-- Linked List Implementation | Part 1
-- Linked List Implementation | Part 2
-- Static Linked List in C
+- [Generic Linked List](src/LinkedLists/001.cxx)
 - Clone given Linked List
 - Delete Linked List
 - Pop operation in linked list
