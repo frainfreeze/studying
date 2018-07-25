@@ -8,18 +8,18 @@
 --------------------------------------------------------------------------
 Python (draft)
     Meta
-    - pep8 and google style guide
+    - pep8, google style guide
     - Hitch hikers guide to python
-    - Python Pocket Reference, 5th Edition (A reference supplement to the learning & programming 
-        python, 260 pages (January 2014) [3.4, 2.7])
+    - Python Pocket Reference, 5th Edition
 
     Intro
-    [x] - Automate the Boring Stuff with Python
-    [x] - byte of python
-    [x] - thinkcspython3
+    [x] - Automate the Boring Stuff with Python (free)
+    [x] - byte of python (free)
+    [x] - How to Think Like a Computer Scientist: Learning with Python 3 (free)
+    [x] - The Self-taught Programmer by Cory Althoff
 
     Medium
-    [x] - dive in python (partially)
+    [x] - dive in python (partially) (free)
     [ ] - Learning Python 5th Edition (A comprehensive language foundations tutorial 1640pg, [3.3, 2.7])
     [ ] - How to make mistakes in python
 
@@ -30,7 +30,7 @@ Python (draft)
     [ ] - effective python (Also a great intermediate Python book for those looking for the next step.)
     
     Miscellaneous
-    [ ] - tutorial and other https://docs.python.org/3/index.html
+    [ ] - tutorial and other https://docs.python.org/3/index.html (free)
     [ ] - stackoverflow.com/questions/2573135 (Python progression path - From apprentice to guru)
     [ ] - reddit.com/r/Python/comments/1knw7z (Python interview questions)
     [ ] - reddit.com/r/Python/comments/7cs8dq (Senior Python Programmer tricks)
@@ -119,10 +119,11 @@ Clojure (draft)
 
 DS&A (draft)
         [ ] - Grokking Algorithms
+        [ ] - https://interactivepython.org/runestone/static/pythonds/index.html
         [ ] - Data Structures and Algorithms in Python
         [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
+        [ ] - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
         ? - https://www.coursera.org/specializations/algorithms
-        ? - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
         ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
 
 General CS books (draft)
@@ -198,7 +199,6 @@ Drafts
         ? - https://www.technologyreview.com/s/604037/meet-the-guys-who-sold-neuralink-to-elon-musk-without-even-realizing-it/
 
     Unsorted
-        ? - The Self-taught Programmer by Cory Althoff
         ? - TCP/IP Sockets in C (about week)   
         ? - The Practice of Programming
         ? - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610

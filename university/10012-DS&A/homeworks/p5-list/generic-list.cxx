@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
-/*	double linked list, allows you to
-		o make empty list
-		o add element on the end
-        o remove last element
+/*double linked list, allows you to
+  o make empty list
+  o add element on the end
+  o remove last element
 */
 template <typename T>
 struct node {
