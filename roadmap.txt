@@ -6,7 +6,7 @@
 
 -----------------Stage 1 (software engineering and CS)--------------------
 --------------------------------------------------------------------------
-Python (draft)
+Python
     Meta
     - pep8, google style guide
     - Hitch hikers guide to python
@@ -18,18 +18,18 @@ Python (draft)
     [x] - How to Think Like a Computer Scientist: Learning with Python 3 (free)
     [x] - The Self-taught Programmer by Cory Althoff
 
-    Medium
+    Medium (draft)
     [x] - dive in python (partially) (free)
     [ ] - Learning Python 5th Edition (A comprehensive language foundations tutorial 1640pg, [3.3, 2.7])
     [ ] - How to make mistakes in python
 
-    Advanced
+    Advanced (draft)
     [ ] - programming python (hard, A full-scale applications programming tutorial 1630 pages [3.2])
     [ ] - python cookbook (for experienced Python programmers who want to focus on modern tools and idioms)    
     [ ] - fluent python (A great intermediate Python book for those looking for the next step.)
     [ ] - effective python (Also a great intermediate Python book for those looking for the next step.)
     
-    Miscellaneous
+    Miscellaneous (draft)
     [ ] - tutorial and other https://docs.python.org/3/index.html (free)
     [ ] - stackoverflow.com/questions/2573135 (Python progression path - From apprentice to guru)
     [ ] - reddit.com/r/Python/comments/1knw7z (Python interview questions)
@@ -43,10 +43,10 @@ C plus plus (draft)
     - C++ Standard Library Tutorial and Reference (Nicolai Josuttis)
 
     Intro
-    [x] - beginning c++ tgp*
-    [x] - mit introduction to c++
-    [ ] - Udemy c++ tutorial for beginners
-    [x] - Udacity c++ for programmers  
+    [x] - beginning c++ tgp
+    [x] - mit introduction to c++ (free)
+    [ ] - Udemy c++ tutorial for beginners (free)
+    [x] - Udacity c++ for programmers (free)
     
     Medium
     [ ] - udemy advanced c++
@@ -79,19 +79,22 @@ C plus plus (draft)
 
 
 Web development (draft)
-    HTML, CSS, JavaScript
-        - https://nodeschool.io/
-        - fcc
-        - top
+    [ ] - roadmap https://github.com/kamranahmedse/developer-roadmap#-introduction
+    [ ] - html https://github.com/denysdovhan/learnyouhtml#readme
+    [ ] - web dev https://www.theodinproject.com/courses
+    [ ] - web dev https://learn.freecodecamp.org/
+    [ ] - javascript https://github.com/workshopper/javascripting#javascripting
+    [ ] - javascript https://eloquentjavascript.net/
+    [ ] - Beginning JavaScript 4th Edition 978-0470525937
 
 
-C (reviewed, finalised)
+C language
     [ ] - K&R C
     [ ] - Expert C Programming: Deep C Secrets
     [ ] - hacking art of exploitation
 
 
-Lua (reviewed, finalised)
+Lua
     [ ] - Programming In Lua
      - that's it, just read lots of source code now.
 
@@ -126,7 +129,7 @@ DS&A (draft)
         ? - https://www.coursera.org/specializations/algorithms
         ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
 
-General CS books (draft)
+General CS books
     [x] - Code: The Hidden Language of Computer Hardware and Software       
     [ ] - Joel on Software: And on Diverse and Occasionally...
     [ ] - The Mythical Man-Month
@@ -153,8 +156,8 @@ General CS books (draft)
     [ ] - Patterns of Enterprise Application Architecture
     [ ] - Peopleware: Productive Projects and Teams
 
-Unix etc
-    Vim (reviewed, finalised)
+Unix/Linux/tools etc
+    Vim
         Cheatsheet- https://vim.rtorr.com/
         [ ] - vimtutor
         [ ] - http://moolenaar.net/habits.html
@@ -171,21 +174,22 @@ Unix etc
         [ ] - https://documentup.com/skwp/git-workflows-book
         [ ] - http://eagain.net/articles/git-for-computer-scientists/
         [ ] - https://maryrosecook.com/blog/post/git-from-the-inside-out        
-    
-    Other:
-        ? - Linux System Programming: Talking Directly to the Kernel and C Library
-        ? - The Art of UNIX Programming
-        ? - zsh, tmux
 
-Drafts
-    Java (draft)
+scratchpad
+----------------------------------------------------------
+    Java
         ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
         ? - Effective Java - Recommended by pek as a great intermediate text.
         ? - Core Java Volume 1 and Core Java Volume 2 - Suggested by FreeMemory as some of the best java references available.
         ? - Java Concurrency in Practice - Recommended by MDC as great resource for concurrent programming in Java.
         
-    C# (draft)
+    C#
         ? - the yellow book
+
+    Unix/linux/tools
+        ? - Linux System Programming: Talking Directly to the Kernel and C Library
+        ? - The Art of UNIX Programming
+        ? - zsh, tmux
 
     Big data, machine learning and data mining
         ? - http://aima.cs.berkeley.edu/
@@ -199,7 +203,7 @@ Drafts
         ? - https://www.technologyreview.com/s/604037/meet-the-guys-who-sold-neuralink-to-elon-musk-without-even-realizing-it/
 
     Unsorted
-        ? - TCP/IP Sockets in C (about week)   
+        ? - TCP/IP Sockets in C (about week) (networking)
         ? - The Practice of Programming
         ? - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610
         ? - New Turing Omnibus (New Turning Omnibus : 66 Excursions in Computer Science) 978-0716782711
@@ -211,6 +215,7 @@ Drafts
         ? - https://www.cs.hmc.edu/csforall/#indices-and-tables
         ? - cs part: https://github.com/prakhar1989/awesome-courses
         ? - https://github.com/ossu/computer-science
+----------------------------------------------------------
 
 
 Rough deadlines
