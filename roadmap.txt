@@ -1,11 +1,11 @@
-                            General roadmap:
+---------------------Software Engineering Roadmap------------------------
+
         I am adding and removing stuff __daily__, so to leave only 
-        "essential" and most helpful things. Consider this file 
+        "essential" and most helpful things. Consider this file an
         draft. While I am not sorry for "wasting" my time on "bad" 
         courses and books, I wont list any of them here. 
 
------------------Stage 1 (software engineering and CS)--------------------
---------------------------------------------------------------------------
+-------------------------------------------------------------------------
 Python
     Meta
     - pep8, google style guide
@@ -39,6 +39,7 @@ Python
 
 C plus plus (draft)
     Reference Style - All Levels
+    - isocpp core guidelines
     - the c++ programing lang (all level reference)
     - C++ Standard Library Tutorial and Reference (Nicolai Josuttis)
 
@@ -56,6 +57,8 @@ C plus plus (draft)
     [ ] - accelerated c++ (covers tour on 1/4 of space)
     
     Intermediate
+    [ ] - Effective Modern C++ (Scott Meyers) (Best practices)
+    [ ] - Effective STL (Scott Meyers) (Best practices)
     [ ] - More Effective C++ (Scott Meyers) 
     [ ] - Exceptional C++ (Herb Sutter) 
     [ ] - More Exceptional C++ (Herb Sutter) 
@@ -66,16 +69,10 @@ C plus plus (draft)
     [ ] - Modern C++ Design (Andrei Alexandrescu) 
     [ ] - C++ Concurrency In Action (Anthony Williams)
 
-    Best practices
-    [ ] - Effective Modern C++ (Scott Meyers) 
-    [ ] - Effective STL (Scott Meyers) 
-    
     Other (for review)
     - thinking in c++ v1 & v2? (6-10 months)
     - Object-Oriented Programming in C++ ? (three months)
     - http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3242.pdf
-    [ ] - http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
-    [x] - https://google.github.io/styleguide/cppguide.html
 
 
 Web development (draft)
@@ -121,13 +118,13 @@ Clojure (draft)
     [ ] - http://clojure-doc.org/
 
 DS&A (draft)
-        [ ] - Grokking Algorithms
-        [ ] - https://interactivepython.org/runestone/static/pythonds/index.html
-        [ ] - Data Structures and Algorithms in Python
-        [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
-        [ ] - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
-        ? - https://www.coursera.org/specializations/algorithms
-        ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
+    [ ] - Grokking Algorithms
+    [ ] - https://interactivepython.org/runestone/static/pythonds/index.html
+    [ ] - Data Structures and Algorithms in Python
+    [ ] - https://www.coursera.org/specializations/algorithms
+    [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
+    [ ] - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
+    ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
 
 General CS books
     [x] - Code: The Hidden Language of Computer Hardware and Software       
@@ -156,7 +153,7 @@ General CS books
     [ ] - Patterns of Enterprise Application Architecture
     [ ] - Peopleware: Productive Projects and Teams
 
-Unix/Linux/tools etc
+Unix/Linux/tools/etc
     Vim
         Cheatsheet- https://vim.rtorr.com/
         [ ] - vimtutor
@@ -174,9 +171,12 @@ Unix/Linux/tools etc
         [ ] - https://documentup.com/skwp/git-workflows-book
         [ ] - http://eagain.net/articles/git-for-computer-scientists/
         [ ] - https://maryrosecook.com/blog/post/git-from-the-inside-out        
+    
+    Touch typing
+        [ ] - gnu typist
 
+        
 scratchpad
-----------------------------------------------------------
     Java
         ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
         ? - Effective Java - Recommended by pek as a great intermediate text.
@@ -215,8 +215,7 @@ scratchpad
         ? - https://www.cs.hmc.edu/csforall/#indices-and-tables
         ? - cs part: https://github.com/prakhar1989/awesome-courses
         ? - https://github.com/ossu/computer-science
-----------------------------------------------------------
-
+-------------------------------------------------------------------------
 
 Rough deadlines
 Summer1: 1.10. Web Dev I, Python medium, C++ intro
