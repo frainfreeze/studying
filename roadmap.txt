@@ -40,7 +40,7 @@ Python
 C plus plus (draft)
     Reference Style - All Levels
     - isocpp core guidelines
-    - the c++ programing lang (all level reference)
+    - The c++ programing lang (all level reference)
     - C++ Standard Library Tutorial and Reference (Nicolai Josuttis)
 
     Intro
@@ -52,13 +52,12 @@ C plus plus (draft)
     Medium
     [ ] - udemy advanced c++
     [ ] - Programming - Principles and Practice Using C++
-    [ ] - c++ primer* (covers just about everything in the language)
-    [ ] - a tour of c++  ( tutorial overview of all of standard C++)
-    [ ] - accelerated c++ (covers tour on 1/4 of space)
+    [ ] - c++ primer (covers just about everything in the language)
+    [ ] - a tour of c++  (tutorial overview of all of standard C++)
+    [ ] - Effective Modern C++ (Scott Meyers) (Best practices)
+    [ ] - Effective STL (Scott Meyers) (Best practices)   
     
     Intermediate
-    [ ] - Effective Modern C++ (Scott Meyers) (Best practices)
-    [ ] - Effective STL (Scott Meyers) (Best practices)
     [ ] - More Effective C++ (Scott Meyers) 
     [ ] - Exceptional C++ (Herb Sutter) 
     [ ] - More Exceptional C++ (Herb Sutter) 
@@ -186,10 +185,9 @@ scratchpad
     C#
         ? - the yellow book
 
-    Unix/linux/tools
+    Unix/linux
         ? - Linux System Programming: Talking Directly to the Kernel and C Library
         ? - The Art of UNIX Programming
-        ? - zsh, tmux
 
     Big data, machine learning and data mining
         ? - http://aima.cs.berkeley.edu/
