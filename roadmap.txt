@@ -7,7 +7,6 @@
 
 -------------------------------------------------------------------------
 Python
-    Meta
     - pep8, google style guide
     - Hitch hikers guide to python
     - Python Pocket Reference, 5th Edition
@@ -36,11 +35,9 @@ Python
     [ ] - reddit.com/r/Python/comments/7cs8dq (Senior Python Programmer tricks)
     [ ] - stackoverflow.com/questions/101268  (Hidden features of Python)
 
-
 C plus plus (draft)
-    Reference Style - All Levels
     - isocpp core guidelines
-    - The c++ programing lang (all level reference)
+    - The c++ programing language (all level reference)
     - C++ Standard Library Tutorial and Reference (Nicolai Josuttis)
 
     Intro
@@ -50,8 +47,8 @@ C plus plus (draft)
     [x] - Udacity c++ for programmers (free)
     
     Medium
-    [ ] - udemy advanced c++
     [ ] - Programming - Principles and Practice Using C++
+    [ ] - udemy advanced c++
     [ ] - c++ primer (covers just about everything in the language)
     [ ] - a tour of c++  (tutorial overview of all of standard C++)
     [ ] - Effective Modern C++ (Scott Meyers) (Best practices)
@@ -73,9 +70,8 @@ C plus plus (draft)
     - Object-Oriented Programming in C++ ? (three months)
     - http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3242.pdf
 
-
 Web development (draft)
-    [ ] - roadmap https://github.com/kamranahmedse/developer-roadmap#-introduction
+    - roadmap https://github.com/kamranahmedse/developer-roadmap#-introduction
     [ ] - html https://github.com/denysdovhan/learnyouhtml#readme
     [ ] - web dev https://www.theodinproject.com/courses
     [ ] - web dev https://learn.freecodecamp.org/
@@ -83,17 +79,15 @@ Web development (draft)
     [ ] - javascript https://eloquentjavascript.net/
     [ ] - Beginning JavaScript 4th Edition 978-0470525937
 
-
 C language
     [ ] - K&R C
     [ ] - Expert C Programming: Deep C Secrets
+    [ ] - TCP/IP Sockets in C
     [ ] - hacking art of exploitation
-
 
 Lua
     [ ] - Programming In Lua
      - that's it, just read lots of source code now.
-
 
 Lisp(es) (draft)
     [ ] - The Little Schemer - Introduction to Scheme and functional programming in general
@@ -106,9 +100,7 @@ Lisp(es) (draft)
     - How to Design Programs - An Introduction to Computing and Programming
     - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp - an approach to high quality Lisp programming
 
-
 Clojure (draft)
-    Meta
     - https://github.com/matthiasn/Clojure-Resources
 
     [ ] - Clojure for the Brave and True
@@ -123,6 +115,7 @@ DS&A (draft)
     [ ] - https://www.coursera.org/specializations/algorithms
     [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
     [ ] - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
+    [ ] - The Art of Computer Programming 0-201-03801-3
     ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
 
 General CS books
@@ -130,25 +123,22 @@ General CS books
     [ ] - Joel on Software: And on Diverse and Occasionally...
     [ ] - The Mythical Man-Month
     [ ] - Programming Pearls
-    
+    [ ] - Pragmatic Thinking and Learning    
     [ ] - Head First Design Patterns by Eric Freeman (1-2 weeks)
     [ ] - User Interface Design for Programmers by Joel Spolsky (three days)
     [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)
     [ ] - Code Reading: The Open Source Perspective (2 months for whole)
-
     [ ] - Code Complete: A Practical Handbook of Software Construction
     [ ] - Clean Code: A Handbook of Agile Software Craftsmanship
     [ ] - The Clean Coder: A Code of Conduct for Professional Programmers
     [ ] - Design Patterns: Elements of Reusable Object-Oriented Software
     [ ] - The Pragmatic Programmer: From Journeyman to Master
-
     [ ] - Refactoring: Improving the Design of Existing Code
     [ ] - Working Effectively with Legacy Code
     [ ] - Head First Software Development by Dan Pilone (days to weeks)
     [ ] - The Practice of Programming by Brian W. Kernighan (quick read)
     [ ] - Agile Software Development, ... by Robert C. Martin (read carefully, its important)
     [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
-
     [ ] - Patterns of Enterprise Application Architecture
     [ ] - Peopleware: Productive Projects and Teams
 
@@ -170,49 +160,42 @@ Unix/Linux/tools/etc
         [ ] - https://documentup.com/skwp/git-workflows-book
         [ ] - http://eagain.net/articles/git-for-computer-scientists/
         [ ] - https://maryrosecook.com/blog/post/git-from-the-inside-out        
+
+    Programming
+        [ ] - Linux System Programming: Talking Directly to the Kernel and C Library
+        [ ] - The Art of UNIX Programming        
     
     Touch typing
         [ ] - gnu typist
 
-        
-scratchpad
-    Java
-        ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
-        ? - Effective Java - Recommended by pek as a great intermediate text.
-        ? - Core Java Volume 1 and Core Java Volume 2 - Suggested by FreeMemory as some of the best java references available.
-        ? - Java Concurrency in Practice - Recommended by MDC as great resource for concurrent programming in Java.
-        
-    C#
-        ? - the yellow book
+-------------------------------scratchpad--------------------------------
+Design Patterns
+    ? - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610
+    ? - https://sourcemaking.com/design_patterns
 
-    Unix/linux
-        ? - Linux System Programming: Talking Directly to the Kernel and C Library
-        ? - The Art of UNIX Programming
+Java
+    ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
+    ? - Effective Java - Recommended by pek as a great intermediate text.
+    ? - Core Java Volume 1 and Core Java Volume 2 - Suggested by FreeMemory as some of the best java references available.
+    ? - Java Concurrency in Practice - Recommended by MDC as great resource for concurrent programming in Java.
+    
+C#
+    ? - the yellow book
 
-    Big data, machine learning and data mining
-        ? - http://aima.cs.berkeley.edu/
-        ? - https://github.com/norvig/paip-lisp
-        ? - https://metacademy.org/roadmaps/
-        ? - https://github.com/prakhar1989/awesome-courses
-        ? - https://medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
-        ? - https://machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning/
-        ? - https://www.analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017/
-        ? - https://viblo.asia/p/beginning-machine-learning-series-roadmap-bJzKmWVXl9N
-        ? - https://www.technologyreview.com/s/604037/meet-the-guys-who-sold-neuralink-to-elon-musk-without-even-realizing-it/
+Big data, machine learning and data mining
+    ? - http://aima.cs.berkeley.edu/
+    ? - https://github.com/norvig/paip-lisp
+    ? - https://metacademy.org/roadmaps/
+    ? - https://github.com/prakhar1989/awesome-courses
+    ? - https://medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
+    ? - https://machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning/
+    ? - https://www.analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017/
+    ? - https://viblo.asia/p/beginning-machine-learning-series-roadmap-bJzKmWVXl9N
 
-    Unsorted
-        ? - TCP/IP Sockets in C (about week) (networking)
-        ? - The Practice of Programming
-        ? - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610
-        ? - New Turing Omnibus (New Turning Omnibus : 66 Excursions in Computer Science) 978-0716782711
-        ? - The Art of Computer Programming 0-201-03801-3
-        ? - Pragmatic Thinking and Learning 978-1-93435-605-0
-
-    Courses *hit    
-        ? - https://sourcemaking.com/design_patterns
-        ? - https://www.cs.hmc.edu/csforall/#indices-and-tables
-        ? - cs part: https://github.com/prakhar1989/awesome-courses
-        ? - https://github.com/ossu/computer-science
+Courses *hit    
+    ? - https://www.cs.hmc.edu/csforall/#indices-and-tables
+    ? - https://github.com/prakhar1989/awesome-courses
+    ? - https://github.com/ossu/computer-science
 -------------------------------------------------------------------------
 
 Rough deadlines

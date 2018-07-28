@@ -1,20 +1,10 @@
-## C++ Primer 5 (C++11/14)
-
-### Compilers recommended
- * Windows: Visual Studio 2015+ 
- 
- * Linux: g++ 5.0+     
+## C++ Primer 5th Edition (C++ 11/14)
 ```bash
-g++ -std=c++14 some_ex.cpp -o some_ex
-```
- 
- * Mac: clang++ 3.7+
-```bash
-clang++ -std=c++1y some_ex.cpp -o some_ex
+g++ -Wall -Wextra -Weffc++ -Wshadow -ansi -pedantic -std=c++14 in.cpp -o outfile
+clang++ -std=c++1y in.cpp -o outfile
 ```
 
 ### Contents
-
 - [Chapter 1. Getting Started](ch01/)
 - Part I: The Basics
   - [Chapter 2. Variables and Basic Types](ch02/)
@@ -38,4 +28,3 @@ clang++ -std=c++1y some_ex.cpp -o some_ex
   - [Chapter 17. Specialized Library Facilities](ch17)
   - [Chapter 18. Tools for Large Programs](ch18)
   - [Chapter 19. Specialized Tools and Techniques](ch19)
-- Appendix A  The Library(appendix)
