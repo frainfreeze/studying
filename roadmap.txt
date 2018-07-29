@@ -10,6 +10,7 @@ Python
     - pep8, google style guide
     - Hitch hikers guide to python
     - Python Pocket Reference, 5th Edition
+    - docs.python.org/3/index.html
 
     Intro
     [x] - Automate the Boring Stuff with Python (free)
@@ -17,19 +18,18 @@ Python
     [x] - How to Think Like a Computer Scientist: Learning with Python 3 (free)
     [x] - The Self-taught Programmer by Cory Althoff
 
-    Medium (draft)
+    Medium
     [x] - dive in python (partially) (free)
     [ ] - Learning Python 5th Edition (A comprehensive language foundations tutorial 1640pg, [3.3, 2.7])
     [ ] - How to make mistakes in python
 
-    Advanced (draft)
+    Advanced
     [ ] - programming python (hard, A full-scale applications programming tutorial 1630 pages [3.2])
     [ ] - python cookbook (for experienced Python programmers who want to focus on modern tools and idioms)    
     [ ] - fluent python (A great intermediate Python book for those looking for the next step.)
     [ ] - effective python (Also a great intermediate Python book for those looking for the next step.)
     
     Miscellaneous (draft)
-    [ ] - tutorial and other https://docs.python.org/3/index.html (free)
     [ ] - stackoverflow.com/questions/2573135 (Python progression path - From apprentice to guru)
     [ ] - reddit.com/r/Python/comments/1knw7z (Python interview questions)
     [ ] - reddit.com/r/Python/comments/7cs8dq (Senior Python Programmer tricks)
@@ -65,18 +65,13 @@ C plus plus (draft)
     [ ] - Modern C++ Design (Andrei Alexandrescu) 
     [ ] - C++ Concurrency In Action (Anthony Williams)
 
-    Other (for review)
-    - thinking in c++ v1 & v2? (6-10 months)
-    - Object-Oriented Programming in C++ ? (three months)
-    - http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3242.pdf
-
 Web development (draft)
-    - roadmap https://github.com/kamranahmedse/developer-roadmap#-introduction
-    [ ] - html https://github.com/denysdovhan/learnyouhtml#readme
-    [ ] - web dev https://www.theodinproject.com/courses
-    [ ] - web dev https://learn.freecodecamp.org/
-    [ ] - javascript https://github.com/workshopper/javascripting#javascripting
-    [ ] - javascript https://eloquentjavascript.net/
+    - roadmap github.com/kamranahmedse/developer-roadmap#-introduction
+    [ ] - html github.com/denysdovhan/learnyouhtml#readme
+    [ ] - web dev theodinproject.com/courses
+    [ ] - web dev learn.freecodecamp.org/
+    [ ] - javascript github.com/workshopper/javascripting#javascripting
+    [ ] - javascript eloquentjavascript.net/
     [ ] - Beginning JavaScript 4th Edition 978-0470525937
 
 C language
@@ -101,15 +96,15 @@ Lisp(es) (draft)
     - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp - an approach to high quality Lisp programming
 
 Clojure (draft)
-    - https://github.com/matthiasn/Clojure-Resources
+    - github.com/matthiasn/Clojure-Resources
+    - clojure-doc.org/
     [ ] - Clojure for the Brave and True
     [ ] - Clojure in Action, Amit Rathore, 2011.
     [ ] - Practical Clojure, L. VanderHart, S. Sierra, 2010.
-    [ ] - http://clojure-doc.org/
 
 DS&A
     [ ] - Grokking Algorithms
-    [ ] - https://interactivepython.org/runestone/static/pythonds/index.html
+    [ ] - interactivepython.org/runestone/static/pythonds/index.html
     [ ] - Data Structures and Algorithms in Python
     [ ] - Data Structures and Algorithms in C++
     [ ] - The Algorithm Design Manual (job interview prep)
@@ -143,25 +138,25 @@ General CS books
 
 Unix/Linux/tools/etc
     Vim
-        Cheatsheet- https://vim.rtorr.com/
+        Cheatsheet- vim.rtorr.com/
         [ ] - vimtutor
-        [ ] - http://moolenaar.net/habits.html
-        [ ] - https://yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d
-        [ ] - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-        [ ] - http://learnvimscriptthehardway.stevelosh.com/
+        [ ] - moolenaar.net/habits.html
+        [ ] - yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d
+        [ ] - stevelosh.com/blog/2010/09/coming-home-to-vim/
+        [ ] - learnvimscriptthehardway.stevelosh.com/
 
     Shell
-        [ ] - https://swcarpentry.github.io/shell-novice/
-        [ ] - https://swcarpentry.github.io/shell-extras/
-        [ ] - https://www.tldp.org/LDP/abs/html/
-        ? - Unix Tools & Scripting http://www.cs.cornell.edu/courses/cs2043/2014sp/
+        [ ] - swcarpentry.github.io/shell-novice/
+        [ ] - swcarpentry.github.io/shell-extras/
+        [ ] - tldp.org/LDP/abs/html/
+        [ ] - Unix Tools & Scripting cs.cornell.edu/courses/cs2043/2014sp/
     
     Git
-        [ ] - https://swcarpentry.github.io/git-novice/
-        [ ] - https://git-scm.com/book/en/v2
-        [ ] - https://documentup.com/skwp/git-workflows-book
-        [ ] - http://eagain.net/articles/git-for-computer-scientists/
-        [ ] - https://maryrosecook.com/blog/post/git-from-the-inside-out        
+        [ ] - swcarpentry.github.io/git-novice/
+        [ ] - git-scm.com/book/en/v2
+        [ ] - documentup.com/skwp/git-workflows-book
+        [ ] - eagain.net/articles/git-for-computer-scientists/
+        [ ] - maryrosecook.com/blog/post/git-from-the-inside-out        
 
     Programming
         [ ] - Linux System Programming: Talking Directly to the Kernel and C Library
@@ -169,14 +164,14 @@ Unix/Linux/tools/etc
     
     Touch typing
         [ ] - gnu typist
-        [ ] - https://www.typingclub.com/
-        [ ] - https://typing.io/
-        [ ] - http://www.speedcoder.net/
+        [ ] - typingclub.com/
+        [ ] - typing.io/
+        [ ] - speedcoder.net/
 
 -------------------------------scratchpad--------------------------------
 Design Patterns
     ? - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610
-    ? - https://sourcemaking.com/design_patterns
+    ? - sourcemaking.com/design_patterns
 
 Java
     ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
@@ -188,23 +183,23 @@ C#
     ? - the yellow book
 
 Big data, machine learning and data mining
-    ? - http://aima.cs.berkeley.edu/
-    ? - https://github.com/norvig/paip-lisp
-    ? - https://metacademy.org/roadmaps/
-    ? - https://www.coursera.org/specializations/data-mining
-    ? - https://www.coursera.org/specializations/big-data
-    ? - https://medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
-    ? - https://machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning/
-    ? - https://www.analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017/
-    ? - https://viblo.asia/p/beginning-machine-learning-series-roadmap-bJzKmWVXl9N
+    ? - aima.cs.berkeley.edu/
+    ? - github.com/norvig/paip-lisp
+    ? - metacademy.org/roadmaps/
+    ? - coursera.org/specializations/data-mining
+    ? - coursera.org/specializations/big-data
+    ? - medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
+    ? - machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning/
+    ? - analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017/
+    ? - viblo.asia/p/beginning-machine-learning-series-roadmap-bJzKmWVXl9N
 
 Math
-    ? - https://github.com/ossu/computer-science#core-math
-    ? - https://github.com/ossu/computer-science#advanced-math
-    ? - https://teachyourselfcs.com/#math
+    ? - github.com/ossu/computer-science#core-math
+    ? - github.com/ossu/computer-science#advanced-math
+    ? - teachyourselfcs.com/#math
 
 Other   
-    ? - https://www.cs.hmc.edu/csforall/#indices-and-tables
+    ? - cs.hmc.edu/csforall/#indices-and-tables
 
 -------------------------------------------------------------------------
 
