@@ -102,21 +102,20 @@ Lisp(es) (draft)
 
 Clojure (draft)
     - https://github.com/matthiasn/Clojure-Resources
-
     [ ] - Clojure for the Brave and True
     [ ] - Clojure in Action, Amit Rathore, 2011.
     [ ] - Practical Clojure, L. VanderHart, S. Sierra, 2010.
     [ ] - http://clojure-doc.org/
 
-DS&A (draft)
+DS&A
     [ ] - Grokking Algorithms
     [ ] - https://interactivepython.org/runestone/static/pythonds/index.html
     [ ] - Data Structures and Algorithms in Python
-    [ ] - https://www.coursera.org/specializations/algorithms
+    [ ] - Data Structures and Algorithms in C++
+    [ ] - The Algorithm Design Manual (job interview prep)
+    [ ] - Sedgewick: Algorithms (4th Edition) (java) 
     [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
-    [ ] - Data Structures and Algorithms in C++ (very hard book if no previous ds&a knowledge)
     [ ] - The Art of Computer Programming 0-201-03801-3
-    ? (fill me in)https://github.com/prakhar1989/awesome-courses/blob/master/README.md#algorithms
 
 General CS books
     [x] - Code: The Hidden Language of Computer Hardware and Software       
@@ -149,12 +148,15 @@ Unix/Linux/tools/etc
         [ ] - http://moolenaar.net/habits.html
         [ ] - https://yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d
         [ ] - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+        [ ] - http://learnvimscriptthehardway.stevelosh.com/
 
-    Shell (draft)
+    Shell
         [ ] - https://swcarpentry.github.io/shell-novice/
         [ ] - https://swcarpentry.github.io/shell-extras/
-
-    Git (draft)
+        [ ] - https://www.tldp.org/LDP/abs/html/
+        ? - Unix Tools & Scripting http://www.cs.cornell.edu/courses/cs2043/2014sp/
+    
+    Git
         [ ] - https://swcarpentry.github.io/git-novice/
         [ ] - https://git-scm.com/book/en/v2
         [ ] - https://documentup.com/skwp/git-workflows-book
@@ -167,6 +169,9 @@ Unix/Linux/tools/etc
     
     Touch typing
         [ ] - gnu typist
+        [ ] - https://www.typingclub.com/
+        [ ] - https://typing.io/
+        [ ] - http://www.speedcoder.net/
 
 -------------------------------scratchpad--------------------------------
 Design Patterns
@@ -186,23 +191,30 @@ Big data, machine learning and data mining
     ? - http://aima.cs.berkeley.edu/
     ? - https://github.com/norvig/paip-lisp
     ? - https://metacademy.org/roadmaps/
-    ? - https://github.com/prakhar1989/awesome-courses
+    ? - https://www.coursera.org/specializations/data-mining
+    ? - https://www.coursera.org/specializations/big-data
     ? - https://medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
     ? - https://machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning/
     ? - https://www.analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017/
     ? - https://viblo.asia/p/beginning-machine-learning-series-roadmap-bJzKmWVXl9N
 
-Courses *hit    
+Math
+    ? - https://github.com/ossu/computer-science#core-math
+    ? - https://github.com/ossu/computer-science#advanced-math
+    ? - https://teachyourselfcs.com/#math
+
+Other   
     ? - https://www.cs.hmc.edu/csforall/#indices-and-tables
-    ? - https://github.com/prakhar1989/awesome-courses
-    ? - https://github.com/ossu/computer-science
+
 -------------------------------------------------------------------------
 
 Rough deadlines
-Summer1: 1.10. Web Dev I, Python medium, C++ intro
+Summer1: 1.10. Python medium, Web Dev, C++ intro, DS&A
 
-Uni 2 s3: Python advanced, C++ medium, Java
-Uni 2 s4: Python advanced, C#, start big data, ML, DS&A
+Uni 2 s3: Python advanced, Web Dev, C++ medium, Java, DS&A
+Uni 2 s4: Python advanced, C++ intermediate, C#, DS&A, ML/AI/Big data
 
-Uni 3 s5: C++ intermediate, C, lisp, big data, ML
-Uni 3 s6: C++ best practices, lua, clojure, big data, ML
+Summer2: General CS books, Design patters, DS&A, ML/AI/Big data
+
+Uni 3 s5: C++ intermediate, C, Lisp, ML/AI/Big data
+Uni 3 s6: C++ advanced, Lua, Clojure, Domain specific

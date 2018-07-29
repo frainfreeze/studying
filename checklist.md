@@ -3,7 +3,7 @@ https://frainfreeze.github.io/other/matrix/
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Computer Science                                     	
 |-----|-----|-----|-----|------------------------------------------------------	
-| [x] | [x] | [ ] | [ ] | data structures                                      	
+| [x] | [x] | [x] | [x] | data structures                                      	
 | [x] | [x] | [ ] | [ ] | algorithms                                           	
 | [x] | [x] | [ ] | [ ] | systems programming                                  	
 
@@ -24,9 +24,9 @@ https://frainfreeze.github.io/other/matrix/
 | [x] | [x] | [x] | [ ] | source tree organization           
 | [x] | [x] | [x] | [ ] | code readability                   
 | [x] | [x] | [x] | [ ] | defensive coding                   
-| [x] | [x] | [ ] | [ ] | error handling                     
-| [x] | [x] | [x] | [ ] | IDE                                
-| [x] | [x] | [ ] | [ ] | API                                
+| [x] | [x] | [x] | [ ] | error handling                     
+| [x] | [x] | [x] | [x] | IDE                                
+| [x] | [ ] | [ ] | [ ] | API                                
 | [x] | [x] | [x] | [ ] | frameworks                         
 | [x] | [x] | [x] | [x] | requirements                       
 | [x] | [x] | [x] | [x] | scripting                          
@@ -38,8 +38,8 @@ https://frainfreeze.github.io/other/matrix/
 | [x] | [x] | [ ] | [ ] | languages exposed to
 | [x] | [x] | [x] | [ ] | codebase knowledge
 | [x] | [x] | [x] | [ ] | knowledge of upcoming technologies
-| [x] | [x] | [x] | [ ] | platform internals
-| [x] | [ ] | [ ] | [ ] | books
+| [x] | [x] | [x] | [x] | platform internals
+| [x] | [x] | [ ] | [ ] | books
 | [x] | [x] | [x] | [ ] | blogs
 
 | Lvl 0 | Lvl 1 | Lvl 2 | Lvl 3 | Experience                                    
