@@ -1,10 +1,10 @@
 ---------------------Software Engineering Roadmap------------------------
 
-        I am adding and removing stuff __daily__, so to leave only 
+        I am adding and removing stuff __daily__, so to leave only
         "essential" and most helpful things. Consider this file an
-        draft. While I am not sorry for "wasting" my time on "bad" 
-        courses and books, I wont list any of them here. 
-
+        draft. While I am not sorry for "wasting" my time on "bad"
+        courses and books, I wont list any of them here.
+                  Resource hoarding is procrastination.
 -------------------------------------------------------------------------
 Python
     - pep8, google style guide
@@ -19,23 +19,23 @@ Python
     [x] - The Self-taught Programmer by Cory Althoff
 
     Medium
-    [x] - dive in python (partially) (free)
+    [x] - dive in python (free)
     [ ] - Learning Python 5th Edition (A comprehensive language foundations tutorial 1640pg, [3.3, 2.7])
-    [ ] - How to make mistakes in python
+    [x] - How to make mistakes in python
 
     Advanced
     [ ] - programming python (hard, A full-scale applications programming tutorial 1630 pages [3.2])
-    [ ] - python cookbook (for experienced Python programmers who want to focus on modern tools and idioms)    
+    [ ] - python cookbook (for experienced Python programmers who want to focus on modern tools and idioms)
     [ ] - fluent python (A great intermediate Python book for those looking for the next step.)
     [ ] - effective python (Also a great intermediate Python book for those looking for the next step.)
-    
-    Miscellaneous (draft)
+
+    Miscellaneous
     [ ] - stackoverflow.com/questions/2573135 (Python progression path - From apprentice to guru)
     [ ] - reddit.com/r/Python/comments/1knw7z (Python interview questions)
     [ ] - reddit.com/r/Python/comments/7cs8dq (Senior Python Programmer tricks)
     [ ] - stackoverflow.com/questions/101268  (Hidden features of Python)
 
-C plus plus (draft)
+C plus plus
     - isocpp core guidelines
     - The c++ programing language (all level reference)
     - C++ Standard Library Tutorial and Reference (Nicolai Josuttis)
@@ -45,27 +45,27 @@ C plus plus (draft)
     [x] - mit introduction to c++ (free)
     [ ] - Udemy c++ tutorial for beginners (free)
     [x] - Udacity c++ for programmers (free)
-    
+
     Medium
     [ ] - Programming - Principles and Practice Using C++
     [ ] - udemy advanced c++
     [ ] - c++ primer (covers just about everything in the language)
     [ ] - a tour of c++  (tutorial overview of all of standard C++)
     [ ] - Effective Modern C++ (Scott Meyers) (Best practices)
-    [ ] - Effective STL (Scott Meyers) (Best practices)   
-    
+    [ ] - Effective STL (Scott Meyers) (Best practices)
+
     Intermediate
-    [ ] - More Effective C++ (Scott Meyers) 
-    [ ] - Exceptional C++ (Herb Sutter) 
-    [ ] - More Exceptional C++ (Herb Sutter) 
+    [ ] - More Effective C++ (Scott Meyers)
+    [ ] - Exceptional C++ (Herb Sutter)
+    [ ] - More Exceptional C++ (Herb Sutter)
     [ ] - Exceptional C++ Style (Herb Sutter)
-    [ ] - C++ Coding Standards (Herb Sutter and Andrei Alexandrescu) 
-    
+    [ ] - C++ Coding Standards (Herb Sutter and Andrei Alexandrescu)
+
     Advanced
-    [ ] - Modern C++ Design (Andrei Alexandrescu) 
+    [ ] - Modern C++ Design (Andrei Alexandrescu)
     [ ] - C++ Concurrency In Action (Anthony Williams)
 
-Web development (draft)
+Web development
     - roadmap github.com/kamranahmedse/developer-roadmap#-introduction
     [ ] - html github.com/denysdovhan/learnyouhtml#readme
     [ ] - web dev theodinproject.com/courses
@@ -84,10 +84,10 @@ Lua
     [ ] - Programming In Lua
      - that's it, just read lots of source code now.
 
-Lisp(es) (draft)
+Lisp(es)
     [ ] - The Little Schemer - Introduction to Scheme and functional programming in general
     [ ] - Structure and Interpretation of Computer Programs ( The definitive book on Lisp )
-    
+
     Other (for review)
     [ ] - The Seasoned Schemer - Followup to Little Schemer.
     - Practical Common Lisp - A good introduction to Lisp with several examples of practical use.
@@ -95,7 +95,7 @@ Lisp(es) (draft)
     - How to Design Programs - An Introduction to Computing and Programming
     - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp - an approach to high quality Lisp programming
 
-Clojure (draft)
+Clojure
     - github.com/matthiasn/Clojure-Resources
     - clojure-doc.org/
     [ ] - Clojure for the Brave and True
@@ -108,16 +108,16 @@ DS&A
     [ ] - Data Structures and Algorithms in Python
     [ ] - Data Structures and Algorithms in C++
     [ ] - The Algorithm Design Manual (job interview prep)
-    [ ] - Sedgewick: Algorithms (4th Edition) (java) 
+    [ ] - Sedgewick: Algorithms (4th Edition) (java)
     [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
     [ ] - The Art of Computer Programming 0-201-03801-3
 
 General CS books
-    [x] - Code: The Hidden Language of Computer Hardware and Software       
+    [x] - Code: The Hidden Language of Computer Hardware and Software
     [ ] - Joel on Software: And on Diverse and Occasionally...
     [ ] - The Mythical Man-Month
     [ ] - Programming Pearls
-    [ ] - Pragmatic Thinking and Learning    
+    [ ] - Pragmatic Thinking and Learning
     [ ] - Head First Design Patterns by Eric Freeman (1-2 weeks)
     [ ] - User Interface Design for Programmers by Joel Spolsky (three days)
     [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)
@@ -150,18 +150,18 @@ Unix/Linux/tools/etc
         [ ] - swcarpentry.github.io/shell-extras/
         [ ] - tldp.org/LDP/abs/html/
         [ ] - Unix Tools & Scripting cs.cornell.edu/courses/cs2043/2014sp/
-    
+
     Git
         [ ] - swcarpentry.github.io/git-novice/
         [ ] - git-scm.com/book/en/v2
         [ ] - documentup.com/skwp/git-workflows-book
         [ ] - eagain.net/articles/git-for-computer-scientists/
-        [ ] - maryrosecook.com/blog/post/git-from-the-inside-out        
+        [ ] - maryrosecook.com/blog/post/git-from-the-inside-out
 
     Programming
         [ ] - Linux System Programming: Talking Directly to the Kernel and C Library
-        [ ] - The Art of UNIX Programming        
-    
+        [ ] - The Art of UNIX Programming
+
     Touch typing
         [ ] - gnu typist
         [ ] - typingclub.com/
@@ -178,7 +178,7 @@ Java
     ? - Effective Java - Recommended by pek as a great intermediate text.
     ? - Core Java Volume 1 and Core Java Volume 2 - Suggested by FreeMemory as some of the best java references available.
     ? - Java Concurrency in Practice - Recommended by MDC as great resource for concurrent programming in Java.
-    
+
 C#
     ? - the yellow book
 
@@ -198,9 +198,8 @@ Math
     ? - github.com/ossu/computer-science#advanced-math
     ? - teachyourselfcs.com/#math
 
-Other   
+Other
     ? - cs.hmc.edu/csforall/#indices-and-tables
-
 -------------------------------------------------------------------------
 
 Rough deadlines
