@@ -121,6 +121,7 @@ Design Patterns
 
 General CS books
     [x] - Code: The Hidden Language of Computer Hardware and Software
+    [x] - But how Do it Know? The Basic Principles of Computers for Everyone
     [ ] - Joel on Software: And on Diverse and Occasionally...
     [ ] - The Mythical Man-Month
     [ ] - Programming Pearls
