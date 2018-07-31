@@ -65,15 +65,6 @@ C plus plus
     [ ] - Modern C++ Design (Andrei Alexandrescu)
     [ ] - C++ Concurrency In Action (Anthony Williams)
 
-Web development
-    - roadmap github.com/kamranahmedse/developer-roadmap#-introduction
-    [ ] - html github.com/denysdovhan/learnyouhtml#readme
-    [ ] - web dev theodinproject.com/courses
-    [ ] - web dev learn.freecodecamp.org/
-    [ ] - javascript github.com/workshopper/javascripting#javascripting
-    [ ] - javascript eloquentjavascript.net/
-    [ ] - Beginning JavaScript 4th Edition 978-0470525937
-
 C language
     [ ] - K&R C
     [ ] - Expert C Programming: Deep C Secrets
@@ -83,6 +74,13 @@ C language
 Lua
     [ ] - Programming In Lua
      - that's it, just read lots of source code now.
+
+Clojure
+    - github.com/matthiasn/Clojure-Resources
+    - clojure-doc.org/
+    [ ] - Clojure for the Brave and True
+    [ ] - Clojure in Action, Amit Rathore, 2011.
+    [ ] - Practical Clojure, L. VanderHart, S. Sierra, 2010.
 
 Lisp(es)
     [ ] - The Little Schemer - Introduction to Scheme and functional programming in general
@@ -95,22 +93,31 @@ Lisp(es)
     - How to Design Programs - An Introduction to Computing and Programming
     - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp - an approach to high quality Lisp programming
 
-Clojure
-    - github.com/matthiasn/Clojure-Resources
-    - clojure-doc.org/
-    [ ] - Clojure for the Brave and True
-    [ ] - Clojure in Action, Amit Rathore, 2011.
-    [ ] - Practical Clojure, L. VanderHart, S. Sierra, 2010.
+Web development
+    - roadmap github.com/kamranahmedse/developer-roadmap#-introduction
+    [ ] - html github.com/denysdovhan/learnyouhtml#readme
+    [ ] - web dev theodinproject.com/courses
+    [ ] - web dev learn.freecodecamp.org/
+    [ ] - javascript github.com/workshopper/javascripting#javascripting
+    [ ] - javascript eloquentjavascript.net/
+    [ ] - Beginning JavaScript 4th Edition 978-0470525937
 
 DS&A
+    Intro
     [ ] - Grokking Algorithms
-    [ ] - interactivepython.org/runestone/static/pythonds/index.html
     [ ] - Data Structures and Algorithms in Python
-    [ ] - Data Structures and Algorithms in C++
-    [ ] - The Algorithm Design Manual (job interview prep)
+    Medium
     [ ] - Sedgewick: Algorithms (4th Edition) (java)
+    [ ] - Data Structures and Algorithms in C++
+    Intermediate
+    [ ] - The Algorithm Design Manual (job interview prep)    
     [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
+    Advanced
     [ ] - The Art of Computer Programming 0-201-03801-3
+
+Design Patterns
+    [ ] - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610
+    ? - sourcemaking.com/design_patterns
 
 General CS books
     [x] - Code: The Hidden Language of Computer Hardware and Software
@@ -125,7 +132,6 @@ General CS books
     [ ] - Code Complete: A Practical Handbook of Software Construction
     [ ] - Clean Code: A Handbook of Agile Software Craftsmanship
     [ ] - The Clean Coder: A Code of Conduct for Professional Programmers
-    [ ] - Design Patterns: Elements of Reusable Object-Oriented Software
     [ ] - The Pragmatic Programmer: From Journeyman to Master
     [ ] - Refactoring: Improving the Design of Existing Code
     [ ] - Working Effectively with Legacy Code
@@ -164,15 +170,9 @@ Unix/Linux/tools/etc
 
     Touch typing
         [ ] - gnu typist
-        [ ] - typingclub.com/
-        [ ] - typing.io/
-        [ ] - speedcoder.net/
+        [ ] - typingclub.com/typing.io/speedcoder.net
 
 -------------------------------scratchpad--------------------------------
-Design Patterns
-    ? - Design Patterns: Elements of Reusable Object-Oriented Software 978-0201633610
-    ? - sourcemaking.com/design_patterns
-
 Java
     ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
     ? - Effective Java - Recommended by pek as a great intermediate text.
@@ -192,6 +192,7 @@ Big data, machine learning and data mining
     ? - machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning/
     ? - analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017/
     ? - viblo.asia/p/beginning-machine-learning-series-roadmap-bJzKmWVXl9N
+    ? - Programming Collective Intelligence by toby segaran
 
 Math
     ? - github.com/ossu/computer-science#core-math
@@ -200,15 +201,18 @@ Math
 
 Other
     ? - cs.hmc.edu/csforall/#indices-and-tables
--------------------------------------------------------------------------
 
-Rough deadlines
-Summer1: 1.10. Python medium, Web Dev, C++ intro, DS&A
+-----------------------------Rough deadlines-----------------------------
+Summer1: C++ intro, DS&A intro, Web Dev, Python medium
 
-Uni 2 s3: Python advanced, Web Dev, C++ medium, Java, DS&A
-Uni 2 s4: Python advanced, C++ intermediate, C#, DS&A, ML/AI/Big data
+Uni 2 s3: Python advanced, C++ medium, DS&A medium, Java, Web Dev
+Uni 2 s4: Python advanced, C++ medium, DS&A medium, C#
+Summer 2: General CS books, Design patters, DS&A Intermediate, C++ intermediate
 
-Summer2: General CS books, Design patters, DS&A, ML/AI/Big data
+Pause1(s5): C++ intermediate, DS&A Intermediate, C, Lua, Clojure
+Pause2(s6): C++ advanced, DS&A advanced, Lisp, ML/AI/Big data
+Summer 3: DS&A advanced, ML/AI/Big data, first projects
 
-Uni 3 s5: C++ intermediate, C, Lisp, ML/AI/Big data
-Uni 3 s6: C++ advanced, Lua, Clojure, Domain specific
+Uni 3 s5: Domain specific, grad prep
+Uni 3 s6: Domain specific, startup?
+Summer 4: $$$.
