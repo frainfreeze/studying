@@ -7,7 +7,6 @@
                   Resource hoarding is procrastination.
 -------------------------------------------------------------------------
 Python
-    - pep8, google style guide
     - Hitch hikers guide to python
     - Python Pocket Reference, 5th Edition
     - docs.python.org/3/index.html
@@ -76,11 +75,9 @@ Lua
      - that's it, just read lots of source code now.
 
 Clojure
-    - github.com/matthiasn/Clojure-Resources
-    - clojure-doc.org/
-    [ ] - Clojure for the Brave and True
+    [ ] - Clojure for the Brave and True (free)
     [ ] - Clojure in Action, Amit Rathore, 2011.
-    [ ] - Practical Clojure, L. VanderHart, S. Sierra, 2010.
+    [ ] - Clojure for Machine Learning by Akhil Wali
 
 Lisp(es)
     [ ] - The Little Schemer - Introduction to Scheme and functional programming in general
@@ -91,7 +88,7 @@ Lisp(es)
     - Practical Common Lisp - A good introduction to Lisp with several examples of practical use.
     - On Lisp - Advanced Topics in Lisp
     - How to Design Programs - An Introduction to Computing and Programming
-    - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp - an approach to high quality Lisp programming
+    - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp
 
 Web development
     - roadmap github.com/kamranahmedse/developer-roadmap#-introduction
@@ -215,5 +212,5 @@ Pause2(s6): C++ advanced, DS&A advanced, Lisp, ML/AI/Big data
 Summer 3: DS&A advanced, ML/AI/Big data, first projects
 
 Uni 3 s5: Domain specific, grad prep
-Uni 3 s6: Domain specific, startup?
-Summer 4: $$$.
+Uni 3 s6: Domain specific, grad, startup?
+Summer 4: ?
