@@ -7,9 +7,9 @@
                   Resource hoarding is procrastination.
 -------------------------------------------------------------------------
 Python
+    - docs.python.org/3/index.html
     - Hitch hikers guide to python
     - Python Pocket Reference, 5th Edition
-    - docs.python.org/3/index.html
 
     Intro
     [x] - Automate the Boring Stuff with Python (free)
@@ -21,18 +21,13 @@ Python
     [x] - dive in python (free)
     [ ] - Learning Python 5th Edition (A comprehensive language foundations tutorial 1640pg, [3.3, 2.7])
     [x] - How to make mistakes in python
+    [ ] - Writing idiomatic python 3
 
     Advanced
     [ ] - programming python (hard, A full-scale applications programming tutorial 1630 pages [3.2])
     [ ] - python cookbook (for experienced Python programmers who want to focus on modern tools and idioms)
     [ ] - fluent python (A great intermediate Python book for those looking for the next step.)
     [ ] - effective python (Also a great intermediate Python book for those looking for the next step.)
-
-    Miscellaneous
-    [ ] - stackoverflow.com/questions/2573135 (Python progression path - From apprentice to guru)
-    [ ] - reddit.com/r/Python/comments/1knw7z (Python interview questions)
-    [ ] - reddit.com/r/Python/comments/7cs8dq (Senior Python Programmer tricks)
-    [ ] - stackoverflow.com/questions/101268  (Hidden features of Python)
 
 C plus plus
     - isocpp core guidelines
@@ -89,6 +84,17 @@ Lisp(es)
     - On Lisp - Advanced Topics in Lisp
     - How to Design Programs - An Introduction to Computing and Programming
     - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp
+
+Java
+    [ ] - Think Java: How to Think Like a Computer Scientist
+    [ ] - Building Java Programs: A Back to Basics Approach 
+    [ ] - Core Java Volume 1&2
+    [ ] - Effective Java
+
+C#
+    [ ] - the yellow book
+    [ ] - Head First C#
+    [ ] - C# 7.0 in a Nutshell: The Definitive Reference
 
 Web development
     - roadmap github.com/kamranahmedse/developer-roadmap#-introduction
@@ -169,48 +175,3 @@ Unix/Linux/tools/etc
     Touch typing
         [ ] - gnu typist
         [ ] - typingclub.com/typing.io/speedcoder.net
-
--------------------------------scratchpad--------------------------------
-Java
-    ? - Head First Java - Recommended as a great introductory text by Patrick Lozzi.
-    ? - Effective Java - Recommended by pek as a great intermediate text.
-    ? - Core Java Volume 1 and Core Java Volume 2 - Suggested by FreeMemory as some of the best java references available.
-    ? - Java Concurrency in Practice - Recommended by MDC as great resource for concurrent programming in Java.
-
-C#
-    ? - the yellow book
-
-Big data, machine learning and data mining
-    ? - aima.cs.berkeley.edu/
-    ? - github.com/norvig/paip-lisp
-    ? - metacademy.org/roadmaps/
-    ? - coursera.org/specializations/data-mining
-    ? - coursera.org/specializations/big-data
-    ? - medium.com/@thisismetis/roadmap-how-to-learn-machine-learning-in-6-months-7c501889b545
-    ? - machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning/
-    ? - analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017/
-    ? - viblo.asia/p/beginning-machine-learning-series-roadmap-bJzKmWVXl9N
-    ? - Programming Collective Intelligence by toby segaran
-
-Math
-    ? - github.com/ossu/computer-science#core-math
-    ? - github.com/ossu/computer-science#advanced-math
-    ? - teachyourselfcs.com/#math
-
-Other
-    ? - cs.hmc.edu/csforall/#indices-and-tables
-
------------------------------Rough deadlines-----------------------------
-Summer1: C++ intro, DS&A intro, Web Dev, Python medium
-
-Uni 2 s3: Python advanced, C++ medium, DS&A medium, Java, Web Dev
-Uni 2 s4: Python advanced, C++ medium, DS&A medium, C#
-Summer 2: General CS books, Design patters, DS&A Intermediate, C++ intermediate
-
-Pause1(s5): C++ intermediate, DS&A Intermediate, C, Lua, Clojure
-Pause2(s6): C++ advanced, DS&A advanced, Lisp, ML/AI/Big data
-Summer 3: DS&A advanced, ML/AI/Big data, first projects
-
-Uni 3 s5: Domain specific, grad prep
-Uni 3 s6: Domain specific, grad, startup?
-Summer 4: ?
