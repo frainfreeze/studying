@@ -45,17 +45,17 @@ C plus plus
     [ ] - udemy advanced c++
     [ ] - c++ primer (covers just about everything in the language)
     [ ] - a tour of c++  (tutorial overview of all of standard C++)
+    
+    Intermediate
     [ ] - Effective Modern C++ (Scott Meyers) (Best practices)
     [ ] - Effective STL (Scott Meyers) (Best practices)
-
-    Intermediate
     [ ] - More Effective C++ (Scott Meyers)
     [ ] - Exceptional C++ (Herb Sutter)
+
+    Advanced    
     [ ] - More Exceptional C++ (Herb Sutter)
     [ ] - Exceptional C++ Style (Herb Sutter)
     [ ] - C++ Coding Standards (Herb Sutter and Andrei Alexandrescu)
-
-    Advanced
     [ ] - Modern C++ Design (Andrei Alexandrescu)
     [ ] - C++ Concurrency In Action (Anthony Williams)
 
@@ -93,7 +93,6 @@ Java
 
 C#
     [ ] - the yellow book
-    [ ] - Head First C#
     [ ] - C# 7.0 in a Nutshell: The Definitive Reference
 
 Web development
@@ -109,12 +108,15 @@ DS&A
     Intro
     [ ] - Grokking Algorithms
     [ ] - Data Structures and Algorithms in Python
+
     Medium
     [ ] - Sedgewick: Algorithms (4th Edition) (java)
     [ ] - Data Structures and Algorithms in C++
+
     Intermediate
     [ ] - The Algorithm Design Manual (job interview prep)    
     [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
+
     Advanced
     [ ] - The Art of Computer Programming 0-201-03801-3
 
@@ -141,7 +143,7 @@ General CS books
     [ ] - Working Effectively with Legacy Code
     [ ] - Head First Software Development by Dan Pilone (days to weeks)
     [ ] - The Practice of Programming by Brian W. Kernighan (quick read)
-    [ ] - Agile Software Development, ... by Robert C. Martin (read carefully, its important)
+    [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
     [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
     [ ] - Patterns of Enterprise Application Architecture
     [ ] - Peopleware: Productive Projects and Teams
