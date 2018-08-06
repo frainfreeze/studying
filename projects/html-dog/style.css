@@ -1,0 +1,172 @@
+/* 
+Calculating Specificity
+
+The actual specificity of a group of nested selectors takes some 
+calculating. You can give every ID selector (“#whatever”) a value 
+of 100, every class selector (“.whatever”) a value of 10 and every 
+HTML selector (“whatever”) a value of 1. When you add them all up, 
+hey presto, you have a specificity value.
+
+    p has a specificity of 1 (1 HTML selector)
+    div p has a specificity of 2 (2 HTML selectors, 1+1)
+    .tree has a specificity of 10 (1 class selector)
+    div p.tree has a specificity of 12 (2 HTML selectors + a class selector, 1+1+10)
+    #baobab has a specificity of 100 (1 id selector)
+    body #content .alternative p has a specificity of 112 (HTML selector + id selector + class selector + HTML selector, 1+100+10+1)
+
+So if all of these examples were used, div p.tree (with a specificity 
+of 12) would win out over div p (with a specificity of 2) and 
+body #content .alternative p would win out over all of them, 
+regardless of the order.
+*/
+@import url(morestyles.css);
+
+@font-face {
+    font-family: "font of all knowledge";
+    src: url(fontofallknowledge.woff);
+}
+
+body {
+    font-family: "font of all knowledge", arial, helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+    background: radial-gradient(#ffc, rgb(75, 75, 45));
+    margin: 20px;
+    padding: 0;
+}
+
+p {
+    line-height: 21px;
+}
+
+li:before {
+    content: "POW! ";
+    background: red;
+    color: #fc0;
+}
+
+blockquote:before {
+    content: open-quote;
+}
+
+blockquote:after {
+    content: close-quote;
+}
+
+h1 {
+    color: #ffc;
+    background-color: #900;
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5em;
+    border-bottom-color: #c00;
+}
+
+h2 {
+    color: white;
+    background-color: #090;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 2px;
+    padding-left: 14px;
+}
+
+h3 {
+    color: #999;
+    font-size: 1.25em;
+}
+
+img {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #ccc;
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+li {
+    color: #900;
+    font-style: italic;
+}
+
+table, th, td {
+    background-color: #ccc;
+    border: 1px solid black;
+}
+
+#top {
+    background-color: #ccc;
+    padding: 20px
+}
+
+.intro {
+    color: red;
+    font-weight: bold;
+}
+
+a:active {
+    color: red;
+}
+
+a:link {
+    transition: color .5s, font-size 2s;
+    color: hsl(36,50%,50%);
+}
+
+a:hover {
+    text-decoration: none;
+    color: hsl(36,100%,50%);
+    background-color: yellow;
+}
+
+input:focus, textarea:focus {
+    background: #eee;
+}
+
+
+#navigation {
+    float: left;
+    width: 200px;
+}
+
+#navigation2 {
+    float: right;
+    width: 200px;
+}
+
+#content {
+    margin: 0 200px;
+}
+
+#footer {
+    clear: both;
+}
+
+.box-shadow {
+    box-shadow: 5px 5px 3px 1px #999
+}
+
+#contact * {
+    display: block;
+}
+
+#genus_examples > li { 
+    border: 1px solid red 
+}
+
+input[type=text] { 
+    width: 200px; 
+}
