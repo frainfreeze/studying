@@ -97,11 +97,8 @@ C#
 
 Web development
     - roadmap github.com/kamranahmedse/developer-roadmap#-introduction
-    [ ] - html github.com/denysdovhan/learnyouhtml#readme
-    [ ] - web dev theodinproject.com/courses
-    [ ] - web dev learn.freecodecamp.org/
-    [ ] - javascript github.com/workshopper/javascripting#javascripting
-    [ ] - javascript eloquentjavascript.net/
+    [ ] - learn.freecodecamp.org | theodinproject.com | htmldog.com
+    [ ] - javascript: eloquentjavascript.net
     [ ] - Beginning JavaScript 4th Edition 978-0470525937
 
 DS&A
@@ -176,4 +173,4 @@ Unix/Linux/tools/etc
 
     Touch typing
         [ ] - gnu typist
-        [ ] - typingclub.com/typing.io/speedcoder.net
+        [ ] - klava.org/ typingclub.com / typing.io / speedcoder.net
