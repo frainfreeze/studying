@@ -1,25 +1,46 @@
+.docs-demo {
+    padding: 4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.col-4 {
+    width: 33.33333333%;
+    flex: none;
+    max-width: 50rem;
+}
+
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 20vh;
+}
+
 .column {
-  padding: .4rem;
+    padding: .4rem;
 }
 
 .col-6 {
-  width: 50%;
+    width: 50%;
 }
 
 .column.col-6 {
-  -ms-flex: none;
-  flex: none;
+    -ms-flex: none;
+    flex: none;
 }
 
 .tabs {
-  display: flex;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -.4rem;
-  margin-right: -.4rem;
-  max-width: 800px;
-  margin: auto;
-  width: 60%;
-  margin-bottom: 45px;
-}  
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -.4rem;
+    margin-right: -.4rem;
+    max-width: 800px;
+    margin: auto;
+    width: 60%;
+    margin-bottom: 45px;
+}
