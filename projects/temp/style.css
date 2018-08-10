@@ -44,3 +44,13 @@
     width: 60%;
     margin-bottom: 45px;
 }
+
+.container-content {
+  max-width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.actions {
+    padding-top: 1rem;
+}
