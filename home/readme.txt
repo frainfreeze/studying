@@ -37,7 +37,7 @@ C plus plus
     Intro
     [x] - beginning c++ tgp
     [x] - mit introduction to c++ (free)
-    [ ] - Udemy c++ tutorial for beginners (free)
+    [x] - Udemy c++ tutorial for beginners (free)
     [x] - Udacity c++ for programmers (free)
 
     Medium
@@ -98,7 +98,7 @@ C#
 Web development
     - roadmap github.com/kamranahmedse/developer-roadmap#-introduction
     [ ] - learn.freecodecamp.org | theodinproject.com | htmldog.com
-    [ ] - javascript: eloquentjavascript.net
+    [ ] - diveintohtml5.it | eloquentjavascript.net
     [ ] - Beginning JavaScript 4th Edition 978-0470525937
 
 DS&A
