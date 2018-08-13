@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
 #git client implementation
 #todo: unittests, refactor
 import os
 import sys
 import zlib
 import hashlib
+import argparse
 
 ### helper functions ###
 def read_file(path):
@@ -38,11 +40,19 @@ def hash_object(data, obj_type, write=True):
     if write:
         path = os.path.join('.git', 'objects', sha1[:2], sha1[2:])
         if not os.path.exists(path):
-            os.makedirs(os.path.dirname(path)), exist_ok=True)
+            os.makedirs(os.path.dirname(path), exist_ok=True)
             write_file(path, zlib.compress(full_data))
     return sha1
 
 if __name__ == '__main__':
-    #NOTE: switch to argparse or similar
-    if sys.argv[1] == 'init':
-        init(sys.argv[2])   
+    parser = argparse.ArgumentParser()
+    sub_parsers = parser.add_subparsers(dest='command', metavar='command')
+    sub_parsers.required = True
+
+    parser.add_argument('pos_arg', type=int,
+                    help='A required integer positional argument')
+    
+
+    args = parser.parse_args()
+    if args.command == 'init':
+        init(args.repo)
