@@ -42,10 +42,10 @@ C plus plus
 
     Medium
     [ ] - Programming - Principles and Practice Using C++
-    [ ] - udemy advanced c++
-    [ ] - c++ primer (covers just about everything in the language)
-    [ ] - a tour of c++  (tutorial overview of all of standard C++)
-    
+    [ ] - A Tour of C++  (tutorial overview of all of standard C++)
+    [ ] - Udemy Advanced C++     
+    [ ] - C++ Primer (covers just about everything in the language)
+   
     Intermediate
     [ ] - Effective Modern C++ (Scott Meyers) (Best practices)
     [ ] - Effective STL (Scott Meyers) (Best practices)
