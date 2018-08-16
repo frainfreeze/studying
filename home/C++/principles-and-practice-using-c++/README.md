@@ -2,7 +2,7 @@
 
 
 - [x] Chapter 0 - Notes to the Reader 1
-- [x] Chapter 1 Computers, People, and Programming 17
+- [x] Chapter 1 Computers, People, and Programming 17 (reread)
 
 ### [Part I The Basics](part1) 41
 - [x] Chapter 2 - Hello, World! 43
@@ -39,3 +39,36 @@
 - [ ] Chapter 27 The C Programming Language 1021
 
 ### Part V Appendices 1071
+
+
+### Notes
+TODO: 
+- copy and answer "review questions"
+- pull out terms
+
+#### Practical debug advice
+Comment your code well. That doesn’t simply mean “Add a lot of com-
+ments.” You don’t say in English what is better said in code. Rather, you
+say in the comments — as clearly and briefl y as you can — what can’t be
+said clearly in code:
+- The name of the program
+- The purpose of the program
+- Who wrote this code and when
+- Version numbers
+- What complicated code fragments are supposed to do
+- What the general design ideas are
+- How the source code is organized
+- What assumptions are made about inputs
+- What parts of the code are still missing and what cases are still not handled
+- Use meaningful names - That doesn’t simply mean “Use long names.”
+- Use a consistent layout of code.
+- Break code into small functions, each expressing a logical action.
+	- Try to avoid functions longer than a page or two; most functions will be much shorter.
+- Avoid complicated code sequences.
+	- Try to avoid nested loops, nested if -statements, complicated condi-
+	  tions, etc. Unfortunately, you sometimes need those, but remember
+	  that complicated code is where bugs can most easily hide.
+- Use library facilities rather than your own code when you can.
+	- A library is likely to be better thought out and better tested than
+	  what you could produce as an alternative while busily solving your
+	  main problem.
