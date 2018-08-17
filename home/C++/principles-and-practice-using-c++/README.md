@@ -8,7 +8,7 @@
 - [x] Chapter 2 - Hello, World! 43
 - [x] Chapter 3 - Objects, Types, and Values 59
 - [x] Chapter 4 - Computation 89
-- [ ] Chapter 5 - Errors 133
+- [x] Chapter 5 - Errors 133
 - [ ] Chapter 6 - Writing a Program 173
 - [ ] Chapter 7 - Completing a Program 221
 - [ ] Chapter 8 - Technicalities: Functions, etc. 255
