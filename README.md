@@ -8,3 +8,4 @@ Repository is divided in two main parts:
 - [/home](home) - stuff I learn and do in my free time that's unrelated to uni.
 - [/university](university) - stuff done at uni and related material
 
+See my [DailyProgramer](https://github.com/frainfreeze/DailyProgrammer#dailyprogramer) and [DailyWebDeveloper](https://github.com/frainfreeze/DailyWebDeveloper) repositories for more. Find list of my learning projects [here](https://github.com/frainfreeze/personal/projectlist.md).
