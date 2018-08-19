@@ -1,7 +1,5 @@
 ## miscellaneous
-Various scripts and snippets.
-
-## License
+Various scripts and snippets. 
 Mostly public domain. If file lacks license please notify me.
 
 ## Contents
@@ -21,9 +19,11 @@ Mostly public domain. If file lacks license please notify me.
 + winConsoleColors.cpp
 + setConsoleColor.cpp
 + clearScreen.cpp
++ hex2dec2hex.cpp
 
 ### html-css-js
 + myGithubRSSfeed.html
++ index.html - spinx/doxygen and gihub pages docs folder
 
 ### bash
 + dual_monitor.sh
