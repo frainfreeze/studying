@@ -1,10 +1,7 @@
----------------------Software Engineering Roadmap------------------------
+--------------------Software Engineering Resources-----------------------
 
-        I am adding and removing stuff __daily__, so to leave only
-        "essential" and most helpful things. Consider this file an
-        draft. While I am not sorry for "wasting" my time on "bad"
-        courses and books, I wont list any of them here.
                   Resource hoarding is procrastination.
+                  
 -------------------------------------------------------------------------
 Python
     - docs.python.org/3/index.html
@@ -174,3 +171,17 @@ Unix/Linux/tools/etc
     Touch typing
         [ ] - gnu typist
         [ ] - klava.org/ typingclub.com / typing.io / speedcoder.net
+
+-----------------------------Rough deadlines-----------------------------
+Summer1: C++ intro, DS&A intro, Web Dev, Python medium
+
+Uni 2 s3: Python advanced, C++ medium, DS&A medium, Java, Web Dev
+Uni 2 s4: Python advanced, C++ medium, DS&A medium, C#
+Summer 2: General CS books, Design patters, DS&A Intermediate, C++ intermediate
+
+Pause1(s5): C++ intermediate, DS&A Intermediate, C, Lua, Clojure
+Pause2(s6): C++ advanced, DS&A advanced, Lisp, ML/AI/Big data
+Summer 3: DS&A advanced, ML/AI/Big data, first projects
+
+Uni 3 s5: Domain specific, grad prep
+Uni 3 s6: Domain specific, grad, startup?
