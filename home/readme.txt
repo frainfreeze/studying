@@ -135,7 +135,7 @@ Databases
 
 Data Structures & Algorithms
     Intro
-    [-] - Grokking Algorithms
+    [x] - Grokking Algorithms
     [-] - Problem Solving with Algorithms and Data Structures using Python
 
     Medium
@@ -226,15 +226,17 @@ Touch typing
 
 
 --------------------- Rough deadlines ---------------------
-Summer1: C++ intro, DS&A intro, Web Dev, Python medium
+Summer1: C++ intro, DS&A intro,  Python medium, Shell/bash, Web Dev/JS
 
-Uni 2 s3: Python advanced, C++ medium, DS&A medium, Java, Web Dev
-Uni 2 s4: Python advanced, C++ medium, DS&A medium, C#
-Summer 2: General CS books, Design patters, DS&A Intermediate, C++ intermediate
+Uni 2 s3: Python advanced, DS&A medium, C++ medium, Java, Web Dev/JS
+Uni 2 s4: Python advanced, DS&A medium, C++ intermediate, C#
 
-Pause1(s5): C++ intermediate, DS&A Intermediate, C, Lua, Clojure
-Pause2(s6): C++ advanced, DS&A advanced, Lisp, ML/AI/Big data
-Summer 3: DS&A advanced, ML/AI/Big data, first projects
+Summer 2: General CS books, Design patters, DS&A medium, C++ intermediate
 
-Uni 3 s5: Domain specific, grad prep
+Pause1(s5): DS&A advanced, C++ intermediate, C, Lua, Clojure
+Pause2(s6): DS&A advanced, C++ advanced, Lisp, ML/AI/BD
+
+Summer 3: DS&A advanced, C++ advanced, ML/AI/BD, first projects
+
+Uni 3 s5: C++ advanced, Domain specific, grad prep
 Uni 3 s6: Domain specific, grad, startup?
