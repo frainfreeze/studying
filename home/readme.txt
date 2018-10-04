@@ -65,7 +65,8 @@ Java
 JavaScript
     [-] - eloquentjavascript.net
     [ ] - The Modern JavaScript Tutorial
-    [ ] - Beginning JavaScript 4th Edition 978-0470525937
+    [ ] - You Don't Know JS (book series)
+    [ ] - JavaScript: The Good Parts
 
 Lua
     [ ] - Programming In Lua
@@ -180,7 +181,8 @@ Compilers/Interpreters
 Web development
     roadmap: github.com/kamranahmedse/developer-roadmap
     [+] - learn.freecodecamp.org | theodinproject.com | htmldog.com
-    [-] - Fundamentals of Web Programming (interactive python)
+    [ ] - HTML & CSS: Design and Build Web Sites
+    [ ] - JavaScript and JQuery: Interactive Front-End Web Development
     [-] - diveintohtml5.it
 
 Other CS books    
