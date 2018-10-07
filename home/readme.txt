@@ -200,11 +200,24 @@ Other CS books
     [ ] - The Clean Coder: A Code of Conduct for Professional Programmers
     [ ] - Head First Software Development by Dan Pilone (days to weeks)
     [ ] - The Practice of Programming by Brian W. Kernighan (quick read)
-    [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
-    [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
-    [ ] - Peopleware: Productive Projects and Teams
     [ ] - Concepts, Techniques, and Models of Computer Programming (SICP ++)
     [ ] - How to Solve It: A New Aspect of Mathematical Method (guide to general problem solving)
+
+Agile/scrum:
+    [ ] - https://en.wikipedia.org/wiki/Agile_software_development
+    [ ] - Scrum and XP from the Trenches (Henrik Kniberg) - For developers who want to do agile
+    [ ] - Agile Product Management with Scrum: Creating Products that Customers Love (Roman Pichler) - For product managers and product owners who want to run agile projects
+    [ ] - Agile Estimating and Planning (Mike Cohn) - For POs and developers who want to get good ad short-, mid- and long-term estimating
+    [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
+    [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
+    
+Teams:
+    [ ] - Team Geek: A Software Developers Guide to working well with others (Brian W. Fitzpatrick and Ben Collins-Sussman) - For coders (or other engineers) who want to work successfully with other engineers
+    [ ] - Managing the unmanageable: Rules, Tools, and Insights for Managing Software People and Teams (Mickey W. Mantle and Ron Lichty) - For lead developers, line managers and others that need to steer software developers as a team
+    [ ] - Difficult Conversation: How To Discuss What Matters Most (Douglas Stone and Bruce Patton) - For people who need to solve conflicts in a straightforward manner
+    [ ] - The Five Dysfunctions of a Team: A Leadership Fable (Patrick Lencioni) - For people who want to fix dysfunctional teams
+    [ ] - Peopleware: Productive Projects and Teams
+
 
 --------------------- Tools/Other ---------------------
 Vim
@@ -228,8 +241,6 @@ Touch typing
 
 
 --------------------- Rough deadlines ---------------------
-Summer1: C++ intro, DS&A intro,  Python medium, Shell/bash, Web Dev/JS
-
 Uni 2 s3: Python advanced, DS&A medium, C++ medium, Java, Web Dev/JS
 Uni 2 s4: Python advanced, DS&A medium, C++ intermediate, C#
 
