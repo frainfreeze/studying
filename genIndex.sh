@@ -45,7 +45,7 @@ for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d| sort`; do
   path=`basename "$filepath"`
   echo "  <li><div>$path</div></li>" >> $OUTPUT
   echo "  <ul>" >> $OUTPUT
-  for i in `find "$filepath" -maxdepth 1 -mindepth 1 -type f| sort`; do
+  for i in `find "$filepath" -maxdepth 1 -mindepth 1 -name \*.html -type f| sort`; do
     file=`basename "$i"`
     echo "    <li><div><a href=\"/DailyWebDeveloper/projects/$path/$file\">$file</a></div></li>" >> $OUTPUT
   done
