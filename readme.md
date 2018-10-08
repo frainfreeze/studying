@@ -1,4 +1,6 @@
-# html pages
+Repository to hold my web dev shenanigans.
+
+## pages
 - [test-video.html](./projects/temp/test-video.html)
 - [playlists.html](./projects/temp/playlists.html)
 - [index.html](./projects/temp/index.html)
