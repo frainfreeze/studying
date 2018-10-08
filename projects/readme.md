@@ -10,8 +10,11 @@ Comments, corrections and suggestions are more than welcome.
 + [Other] - random programming problems
 
 **Projects**
-+ [Sandbox] - junkyard, unfinished projects. New projects reside here before maturing enough to go one dir up. Often no docs or tests
-+ projects mature enough not to be in sandbox but still too young for their own repository. Sparse documentation and tests
++ Projects mature enough not to be in sandbox but still too young for their own repository. Sparse documentation and tests
+
+**Sandbox**
++ junkyard, unfinished projects. New projects reside here before maturing enough to go to project directory. 
+Often no docs or tests.
 
 **Miscellaneous**
 + Collection of scripts and code snippets. See folders readme for details.
