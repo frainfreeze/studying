@@ -6,9 +6,8 @@
 
 ------------------------- Programming languages -------------------------
 C language
-    [ ] - K&R C *
+    [ ] - K&R C
     [ ] - Expert C Programming: Deep C Secrets
-    [ ] - Hacking art of exploitation
 
 Clojure
     [ ] - Clojure for the Brave and True
@@ -27,7 +26,7 @@ C plus plus
     [x] - Udacity c++ for programmers
 
     Medium
-    [-] - Programming - Principles and Practice Using C++ *
+    [-] - Programming - Principles and Practice Using C++
     [-] - A Tour of C++  (tutorial overview of all of standard C++)
     [-] - Udemy Advanced C++     
     [-] - C++ Primer (covers just about everything in the language)
@@ -37,7 +36,6 @@ C plus plus
     [ ] - Effective STL (Scott Meyers) (Best practices)
     [ ] - More Effective C++ (Scott Meyers)
     [ ] - Exceptional C++ (Herb Sutter)
-    [ ] - Elements of Programming *
 
     Advanced    
     [ ] - More Exceptional C++ (Herb Sutter) 
@@ -98,16 +96,12 @@ Python
     [-] - Writing idiomatic python 3
     [ ] - Python Tricks: A Buffet of Awesome Python Features
     [ ] - Flask Web Development: Developing Web Applications with Python
-    [ ] - Test-Driven Development with Python: Obey the Testing Goat: Using Django, Selenium, and JavaScript
     [ ] - Python Testing with pytest
 
-Scheme/Common lisp
+Scheme & Common lisp
     [ ] - The Little Schemer - Introduction to Scheme and functional programming in general
-    [ ] - How to Design Programs, Second Edition (more gentle than sicp)
-    [ ] - Structure and Interpretation of Computer Programs *
     [ ] - Practical Common Lisp - A good introduction to Lisp with several examples of practical use.
-    [ ] - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp
-
+    
 Shell/Bash
     [-] - swcarpentry.github.io/shell-novice/
     [-] - swcarpentry.github.io/shell-extras/
@@ -157,13 +151,19 @@ Distributed Systems
 
 
 --------------------- Topical ---------------------
-Design Patterns
+Design Patterns, Software archihecture, system design. tdd:
+    [ ] - Test-Driven Development with Python: Obey the Testing Goat: Using Django, Selenium, and JavaScript
+    [ ] - Growing Object-Oriented Software, Guided by Tests
+    [ ] - Test Driven Development: By Example
     [ ] - Head First Design Patterns by Eric Freeman (1-2 weeks) (intro)
-    [ ] - Design Patterns: Elements of Reusable Object-Oriented Software (ref like)
+    [ ] - Pattern-Oriented Software Architecture v1, v2
+    [ ] - Design Patterns: Elements of Reusable Object-Oriented Software (use as ref for POSA)
+    [ ] - Domain-Driven Design: Tackling Complexity in the Heart of Software
     [ ] - Patterns of Enterprise Application Architecture
     [ ] - Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions
-    ? - POSA1,2
-    ? - https://www.dofactory.com/net/design-patterns (dot net)
+    [ ] - Clean Architecture: A Craftsman's Guide to Software Structure and Design
+    [ ] - Smalltalk Best Practice Patterns
+    [ ] - How to Design Programs, Second Edition (more gentle than sicp)
 
 System programming
     [ ] - Linux System Programming: Talking Directly to the Kernel and C Library
@@ -185,39 +185,69 @@ Web development
     [ ] - JavaScript and JQuery: Interactive Front-End Web Development
     [-] - diveintohtml5.it
 
-Other CS books    
-    [ ] - Joel on Software: And on Diverse and Occasionally...
-    [ ] - User Interface Design for Programmers by Joel Spolsky (three days)    
-    [ ] - The Mythical Man-Month
-    [ ] - The Pragmatic Programmer: From Journeyman to Master    
-    [ ] - Programming Pearls
-    [ ] - Pragmatic Thinking and Learning
-    [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)
-    [ ] - Refactoring: Improving the Design of Existing Code
-    [ ] - Working Effectively with Legacy Code    
-    [ ] - Code Reading: The Open Source Perspective (2 months for whole)
-    [ ] - Code Complete: A Practical Handbook of Software Construction
-    [ ] - The Clean Coder: A Code of Conduct for Professional Programmers
-    [ ] - Head First Software Development by Dan Pilone (days to weeks)
-    [ ] - The Practice of Programming by Brian W. Kernighan (quick read)
-    [ ] - Concepts, Techniques, and Models of Computer Programming (SICP ++)
-    [ ] - How to Solve It: A New Aspect of Mathematical Method (guide to general problem solving)
-
-Agile/scrum:
+Agile/scrum/lean/team/startup:
     [ ] - https://en.wikipedia.org/wiki/Agile_software_development
     [ ] - Scrum and XP from the Trenches (Henrik Kniberg) - For developers who want to do agile
     [ ] - Agile Product Management with Scrum: Creating Products that Customers Love (Roman Pichler) - For product managers and product owners who want to run agile projects
     [ ] - Agile Estimating and Planning (Mike Cohn) - For POs and developers who want to get good ad short-, mid- and long-term estimating
     [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
     [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
-    
-Teams:
+    [ ] - Implementing Lean Software Development: From Concept to Cash
+    [ ] - Leading Lean Software Development: Results Are not the Point 
+    [ ] - Essential Scrum: A Practical Guide to the Most Popular Agile Process
+    [ ] - User Stories Applied: For Agile Software Development
+    [ ] - Agile Testing: A Practical Guide for Testers and Agile Teams
+    [ ] - The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
+    [ ] - Running Lean: Iterate from Plan A to a Plan That Works (Lean Series)
+    [ ] - The Art of the Start: The Time-Tested, Battle-Hardened Guide for Anyone Starting Anything
     [ ] - Team Geek: A Software Developers Guide to working well with others (Brian W. Fitzpatrick and Ben Collins-Sussman) - For coders (or other engineers) who want to work successfully with other engineers
     [ ] - Managing the unmanageable: Rules, Tools, and Insights for Managing Software People and Teams (Mickey W. Mantle and Ron Lichty) - For lead developers, line managers and others that need to steer software developers as a team
     [ ] - Difficult Conversation: How To Discuss What Matters Most (Douglas Stone and Bruce Patton) - For people who need to solve conflicts in a straightforward manner
     [ ] - The Five Dysfunctions of a Team: A Leadership Fable (Patrick Lencioni) - For people who want to fix dysfunctional teams
     [ ] - Peopleware: Productive Projects and Teams
+    [ ] - The Inmates Are Running the Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity
 
+Classic must reads:
+    [ ] - Code Complete 2: A Practical Handbook of Software Construction
+    [ ] - The Clean Coder: A Code of Conduct for Professional Programmers
+    [ ] - The Mythical Man-Month
+    [ ] - Programming Pearls
+    [ ] - The Pragmatic Programmer: From Journeyman to Master (https://blog.codinghorror.com/a-pragmatic-quick-reference/)
+    [ ] - Structure and Interpretation of Computer Programs
+    [ ] - Working Effectively with Legacy Code    
+    [ ] - Rapid Development: Taming Wild Software Schedules
+    [ ] - Refactoring: Improving the Design of Existing Code
+    [ ] - The Practice of Programming by Brian W. Kernighan (quick read)
+    [ ] - Elements of Programming (math, hard but very rewarding)
+
+Wetware:
+    [ ] - Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman
+    [ ] - Pragmatic Thinking and Learning
+    [ ] - How to Solve It: A New Aspect of Mathematical Method (guide to general problem solving)
+    [ ] - Are Your Lights On?: How to Figure Out What the Problem Really Is 
+
+Design, usability and UI:
+    [ ] - The Design of Everyday Things: Revised and Expanded Edition 
+    [ ] - The Non-Designer's Design Book
+    [ ] - User Interface Design for Programmers by Joel Spolsky (three days) 
+    [ ] - About Face: The Essentials of Interaction Design
+    [ ] - Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability
+    [ ] - https://blog.codinghorror.com/low-fi-usability-testing/
+
+Machine learning etc:
+    [ ] - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp
+
+Other CS books:  
+    [ ] - Joel on Software: And on Diverse and Occasionally...
+    [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)
+    [ ] - Head First Software Development by Dan Pilone (days to weeks)
+    [ ] - Concepts, Techniques, and Models of Computer Programming (SICP ++)
+    [ ] - Regular Expressions Cookbook: Detailed Solutions in Eight Programming Languages
+    [ ] - Release It!: Design and Deploy Production-Ready Software
+    [ ] - Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation
+    [ ] - Foundations of Security: What Every Programmer Needs to Know    
+    [ ] - Hacking art of exploitation
+    [ ] - Applied Cryptography: Protocols, Algorithms, and Source Code in C
 
 --------------------- Tools/Other ---------------------
 Vim
