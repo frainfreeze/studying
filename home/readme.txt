@@ -1,8 +1,71 @@
 -------------------------------------------------------------------------
 
                   Resource hoarding is procrastination.
+                         Read, apply, analyse.
                   
 -------------------------------------------------------------------------
+
+-------------------- Computer Science --------------------
+Programming
+    [ ] - The Practice of Programming by Brian W. Kernighan (quick read)
+    [ ] - Head First Software Development by Dan Pilone (days to weeks)
+    [ ] - How to Design Programs, Second Edition (more gentle than sicp)
+    [ ] - Structure and Interpretation of Computer Programs (hard)
+    [ ] - Concepts, Techniques, and Models of Computer Programming (harder)
+    [ ] - Elements of Programming (math, hard but very rewarding)
+
+Computer Architecture
+    [x] - Code: The Hidden Language of Computer Hardware and Software
+    [x] - But how Do it Know? The Basic Principles of Computers for Everyone
+    [x] - The Elements of Computing Systems
+
+Operating systems
+    [-] - Operating System Concepts 10th ed (the “Dinosaur book”)
+    [-] - Operating Systems: Design and Implementation (Tanenbaum)
+    [ ] - Modern Operating Systems (Tanenbaum)
+    [ ] - Operating Systems: Three Easy Pieces
+    [-] - The Design and Implementation of the FreeBSD Operating System
+
+Databases
+    [ ] - Architecture of a Database System (Hellerstein, Stonebraker, Hamilton)
+    [ ] - Readings in Database Systems (databases Red Book)
+    [ ] - Database Management Systems (R.R.)
+    [ ] - Data and Reality (w kent)
+
+Data Structures & Algorithms
+    Intro
+    [x] - Grokking Algorithms
+    [-] - Problem Solving with Algorithms and Data Structures using Python
+
+    Medium
+    [ ] - Open Data Structures (morin) (c++/java)
+    [ ] - Data Structures and Algorithms in Python (goodrich)    
+    [ ] - Data Structures and Algorithms in C++ (goodrich)  
+    [ ] - The Algorithm Design Manual (job interview prep)  
+
+    Advanced (rigorous books)
+    [ ] - Sedgewick: Algorithms (4th Edition) (java)    
+    [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
+    [ ] - The Art of Computer Programming 0-201-03801-3
+
+Distributed Systems
+    [ ] - Distributed Systems (Tanenbaum, Steen)
+    [ ] - Designing Data-Intensive Applications (Kleppmann)
+    [ ] - http://dsrg.pdos.csail.mit.edu/papers/
+
+Mathematics:
+    [ ] - discrete mathematics www.cs.elte.hu/~lovasz/dmbook.ps
+    [ ] - Mathematics for Computer Science https://courses.csail.mit.edu/6.042/spring17/mcs.pdf (more advanced)
+    [ ] - Introduction to Linear Algebra, Fifth Edition
+    [ ] - Esence of Linear algebra  (3blue2brown)
+
+Compilers/Interpreters
+    [ ] - Let's Build a Compiler, by Jack Crenshaw 
+    [ ] - A Nanopass Framework for Compiler Education
+    [ ] - Language Implementation Patterns (less theory-ey version of dragon book)
+    [ ] - LLVM Tutorial
+    [ ] - Programming Languages: Application and Interpretation
+    [ ] - Compilers: Principles, Techniques & Tools (the dragon book) (skim/cherry-pick!)
 
 ------------------------- Programming languages -------------------------
 C language
@@ -26,7 +89,7 @@ C plus plus
     [x] - Udacity c++ for programmers
 
     Medium
-    [-] - Programming - Principles and Practice Using C++
+    [-] - Programming Principles and Practice Using C++
     [-] - A Tour of C++  (tutorial overview of all of standard C++)
     [-] - Udemy Advanced C++     
     [-] - C++ Primer (covers just about everything in the language)
@@ -67,8 +130,7 @@ JavaScript
     [ ] - JavaScript: The Good Parts
 
 Lua
-    [ ] - Programming In Lua
-     - that's it, just read lots of source code now.
+    [ ] - Programming In Lua (that's it, just read lots of source code now.)
 
 Python
     - Hitch hikers guide to python
@@ -95,8 +157,6 @@ Python
     [x] - How to make mistakes in python
     [-] - Writing idiomatic python 3
     [ ] - Python Tricks: A Buffet of Awesome Python Features
-    [ ] - Flask Web Development: Developing Web Applications with Python
-    [ ] - Python Testing with pytest
 
 Scheme & Common lisp
     [ ] - The Little Schemer - Introduction to Scheme and functional programming in general
@@ -109,52 +169,9 @@ Shell/Bash
     [-] - Unix Tools & Scripting cs.cornell.edu/courses/cs2043/2014sp/
 
 
--------------------- Core software engineeing --------------------
-Computer Architecture
-    [x] - Code: The Hidden Language of Computer Hardware and Software
-    [x] - But how Do it Know? The Basic Principles of Computers for Everyone
-    [x] - The Elements of Computing Systems
-
-Operating systems
-    [-] - Operating System Concepts 10th ed (the “Dinosaur book”)
-    [-] - Operating Systems: Design and Implementation (Tanenbaum)
-    [ ] - Modern Operating Systems (Tanenbaum)
-    [ ] - Operating Systems: Three Easy Pieces
-    [-] - The Design and Implementation of the FreeBSD Operating System
-
-Databases
-    [ ] - Architecture of a Database System (Hellerstein, Stonebraker, Hamilton)
-    [ ] - Readings in Database Systems (databases Red Book)
-    [ ] - Database Management Systems (R.R.)
-    [ ] - Data and Reality (w kent)
-
-Data Structures & Algorithms
-    Intro
-    [x] - Grokking Algorithms
-    [-] - Problem Solving with Algorithms and Data Structures using Python
-
-    Medium
-    [ ] - Open Data Structures (morin) (c++/java)
-    [ ] - Data Structures and Algorithms in Python (goodrich)    
-    [ ] - Data Structures and Algorithms in C++ (goodrich)  
-    [ ] - The Algorithm Design Manual (job interview prep)  
-
-    Advanced (rigorous books)
-    [ ] - Sedgewick: Algorithms (4th Edition) (java)    
-    [ ] - Introduction to algorithms (SMA 5503, 6.046J / 18.410J )
-    [ ] - The Art of Computer Programming 0-201-03801-3
-
-Distributed Systems
-    [ ] - Distributed Systems (Tanenbaum, Steen)
-    [ ] - Designing Data-Intensive Applications (Kleppmann)
-    [ ] - http://dsrg.pdos.csail.mit.edu/papers/
-
-
---------------------- Topical ---------------------
-Design Patterns, Software archihecture, system design. tdd:
-    [ ] - Test-Driven Development with Python: Obey the Testing Goat: Using Django, Selenium, and JavaScript
+--------------------- Software engineering ---------------------
+Design Patterns, Software archihecture, system design:
     [ ] - Growing Object-Oriented Software, Guided by Tests
-    [ ] - Test Driven Development: By Example
     [ ] - Head First Design Patterns by Eric Freeman (1-2 weeks) (intro)
     [ ] - Pattern-Oriented Software Architecture v1, v2
     [ ] - Design Patterns: Elements of Reusable Object-Oriented Software (use as ref for POSA)
@@ -163,68 +180,37 @@ Design Patterns, Software archihecture, system design. tdd:
     [ ] - Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions
     [ ] - Clean Architecture: A Craftsman's Guide to Software Structure and Design
     [ ] - Smalltalk Best Practice Patterns
-    [ ] - How to Design Programs, Second Edition (more gentle than sicp)
+
+Test-Driven Development:
+    [ ] - Test-Driven Development with Python: Obey the Testing Goat: Using Django, Selenium, and JavaScript
+    [ ] - Test Driven Development: By Example
+    [ ] - Python Testing with pytest
 
 System programming
     [ ] - Linux System Programming: Talking Directly to the Kernel and C Library
     [ ] - The Art of UNIX Programming
     [ ] - TCP/IP Sockets in C
 
-Compilers/Interpreters
-    [ ] - Let's Build a Compiler, by Jack Crenshaw 
-    [ ] - A Nanopass Framework for Compiler Education
-    [ ] - Language Implementation Patterns (less theory-ey version of dragon book)
-    [ ] - LLVM Tutorial
-    [ ] - Programming Languages: Application and Interpretation
-    [ ] - Compilers: Principles, Techniques & Tools (the dragon book) (skim/cherry-pick!)
-
 Web development
     roadmap: github.com/kamranahmedse/developer-roadmap
     [+] - learn.freecodecamp.org | theodinproject.com | htmldog.com
-    [ ] - HTML & CSS: Design and Build Web Sites
+    [-] - HTML & CSS: Design and Build Web Sites
     [ ] - JavaScript and JQuery: Interactive Front-End Web Development
     [-] - diveintohtml5.it
+    [-] - Flask Web Development: Developing Web Applications with Python
 
-Agile/scrum/lean/team/startup:
-    [ ] - https://en.wikipedia.org/wiki/Agile_software_development
-    [ ] - Scrum and XP from the Trenches (Henrik Kniberg) - For developers who want to do agile
-    [ ] - Agile Product Management with Scrum: Creating Products that Customers Love (Roman Pichler) - For product managers and product owners who want to run agile projects
-    [ ] - Agile Estimating and Planning (Mike Cohn) - For POs and developers who want to get good ad short-, mid- and long-term estimating
-    [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
-    [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
-    [ ] - Implementing Lean Software Development: From Concept to Cash
-    [ ] - Leading Lean Software Development: Results Are not the Point 
-    [ ] - Essential Scrum: A Practical Guide to the Most Popular Agile Process
-    [ ] - User Stories Applied: For Agile Software Development
-    [ ] - Agile Testing: A Practical Guide for Testers and Agile Teams
-    [ ] - The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
-    [ ] - Running Lean: Iterate from Plan A to a Plan That Works (Lean Series)
-    [ ] - The Art of the Start: The Time-Tested, Battle-Hardened Guide for Anyone Starting Anything
-    [ ] - Team Geek: A Software Developers Guide to working well with others (Brian W. Fitzpatrick and Ben Collins-Sussman) - For coders (or other engineers) who want to work successfully with other engineers
-    [ ] - Managing the unmanageable: Rules, Tools, and Insights for Managing Software People and Teams (Mickey W. Mantle and Ron Lichty) - For lead developers, line managers and others that need to steer software developers as a team
-    [ ] - Difficult Conversation: How To Discuss What Matters Most (Douglas Stone and Bruce Patton) - For people who need to solve conflicts in a straightforward manner
-    [ ] - The Five Dysfunctions of a Team: A Leadership Fable (Patrick Lencioni) - For people who want to fix dysfunctional teams
-    [ ] - Peopleware: Productive Projects and Teams
-    [ ] - The Inmates Are Running the Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity
-
-Classic must reads:
-    [ ] - Code Complete 2: A Practical Handbook of Software Construction
-    [ ] - The Clean Coder: A Code of Conduct for Professional Programmers
-    [ ] - The Mythical Man-Month
-    [ ] - Programming Pearls
-    [ ] - The Pragmatic Programmer: From Journeyman to Master (https://blog.codinghorror.com/a-pragmatic-quick-reference/)
-    [ ] - Structure and Interpretation of Computer Programs
-    [ ] - Working Effectively with Legacy Code    
-    [ ] - Rapid Development: Taming Wild Software Schedules
+Debugging and Refactoring:
     [ ] - Refactoring: Improving the Design of Existing Code
-    [ ] - The Practice of Programming by Brian W. Kernighan (quick read)
-    [ ] - Elements of Programming (math, hard but very rewarding)
+    [ ] - Working Effectively with Legacy Code
+    [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)  
 
-Wetware:
-    [ ] - Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman
-    [ ] - Pragmatic Thinking and Learning
-    [ ] - How to Solve It: A New Aspect of Mathematical Method (guide to general problem solving)
-    [ ] - Are Your Lights On?: How to Figure Out What the Problem Really Is 
+Security:
+    [ ] - Foundations of Security: What Every Programmer Needs to Know    
+    [ ] - Hacking art of exploitation
+    [ ] - Applied Cryptography: Protocols, Algorithms, and Source Code in C
+
+Machine learning etc:
+    [ ] - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp
 
 Design, usability and UI:
     [ ] - The Design of Everyday Things: Revised and Expanded Edition 
@@ -234,22 +220,25 @@ Design, usability and UI:
     [ ] - Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability
     [ ] - https://blog.codinghorror.com/low-fi-usability-testing/
 
-Machine learning etc:
-    [ ] - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp
+Programming interview:
+    [ ] - Cracking the Coding Interview: 189 Programming Questions and Solutions
+
+Classic must reads:
+    [ ] - Code Complete 2: A Practical Handbook of Software Construction
+    [ ] - The Clean Coder: A Code of Conduct for Professional Programmers
+    [ ] - The Mythical Man-Month
+    [ ] - Programming Pearls
+    [ ] - The Pragmatic Programmer: From Journeyman to Master (https://blog.codinghorror.com/a-pragmatic-quick-reference/)
 
 Other CS books:  
     [ ] - Joel on Software: And on Diverse and Occasionally...
-    [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)
-    [ ] - Head First Software Development by Dan Pilone (days to weeks)
-    [ ] - Concepts, Techniques, and Models of Computer Programming (SICP ++)
+    [ ] - The Passionate Programmer
+    [ ] - Rapid Development: Taming Wild Software Schedules
     [ ] - Regular Expressions Cookbook: Detailed Solutions in Eight Programming Languages
     [ ] - Release It!: Design and Deploy Production-Ready Software
     [ ] - Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation
-    [ ] - Foundations of Security: What Every Programmer Needs to Know    
-    [ ] - Hacking art of exploitation
-    [ ] - Applied Cryptography: Protocols, Algorithms, and Source Code in C
 
---------------------- Tools/Other ---------------------
+--------------------- Software tools and related ---------------------
 Vim
     Cheatsheet: vim.rtorr.com
     - vimtutor
@@ -270,16 +259,126 @@ Touch typing
     - klava.org/ typingclub.com / typing.io / speedcoder.net
 
 
---------------------- Rough deadlines ---------------------
-Uni 2 s3: Python advanced, DS&A medium, C++ medium, Java, Web Dev/JS
-Uni 2 s4: Python advanced, DS&A medium, C++ intermediate, C#
+--------------------- humans ---------------------
+Wetware:
+    [ ] - Thinking, Fast and Slow
+    [ ] - Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman
+    [ ] - Pragmatic Thinking and Learning
+    [ ] - How to Solve It: A New Aspect of Mathematical Method (guide to general problem solving)
+    [ ] - Are Your Lights On?: How to Figure Out What the Problem Really Is 
 
-Summer 2: General CS books, Design patters, DS&A medium, C++ intermediate
+Agile/scrum/lean/startup:
+    [ ] - https://en.wikipedia.org/wiki/Agile_software_development
+    [ ] - Scrum and XP from the Trenches (Henrik Kniberg) - For developers who want to do agile
+    [ ] - Agile Product Management with Scrum: Creating Products that Customers Love (Roman Pichler) - For product managers and product owners who want to run agile projects
+    [ ] - Agile Estimating and Planning (Mike Cohn) - For POs and developers who want to get good ad short-, mid- and long-term estimating
+    [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
+    [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
+    [ ] - Implementing Lean Software Development: From Concept to Cash
+    [ ] - Leading Lean Software Development: Results Are not the Point 
+    [ ] - Essential Scrum: A Practical Guide to the Most Popular Agile Process
+    [ ] - User Stories Applied: For Agile Software Development
+    [ ] - Agile Testing: A Practical Guide for Testers and Agile Teams
+    [ ] - The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
+    [ ] - Running Lean: Iterate from Plan A to a Plan That Works (Lean Series)
+    [ ] - The Art of the Start: The Time-Tested, Battle-Hardened Guide for Anyone Starting Anything
 
-Pause1(s5): DS&A advanced, C++ intermediate, C, Lua, Clojure
-Pause2(s6): DS&A advanced, C++ advanced, Lisp, ML/AI/BD
+Teams:
+    [ ] - Team Geek: A Software Developers Guide to working well with others (For engineers who want to work successfully with other engineers)
+    [ ] - Managing the unmanageable: Rules, Tools... (For lead developers, line managers and others that need to steer software developers as a team)
+    [ ] - Difficult Conversation: How To Discuss What Matters Most (solve conflicts in a straightforward manner)
+    [ ] - The Five Dysfunctions of a Team: A Leadership Fable (fix dysfunctional teams)
+    [ ] - Peopleware: Productive Projects and Teams (couple days, how to treat people. Written for managers)
 
-Summer 3: DS&A advanced, C++ advanced, ML/AI/BD, first projects
+Biographies and Stories
+    [x] - Patterns of Software
 
-Uni 3 s5: C++ advanced, Domain specific, grad prep
-Uni 3 s6: Domain specific, grad, startup?
+Unsorted:
+  startup:
+    [ ] - Hackers and Painters: Big Ideas from the Computer Age 1st Edition
+    [ ] - The Leap: A Memoir of Love and Madness in the Internet Gold Rush
+    [ ] - Startup: A Silicon Valley Adventure
+    [ ] - Rules For Revolutionaries: The Capitalist Manifesto for Creating and Marketing New Products and Services
+    [ ] - Growing a Business
+    [ ] - Design for Community 
+    [ ] - Measuring and Managing Performance in Organizations
+    - https://hitenism.com/startup-books/
+    - http://startupstash.com/books/
+
+--------------------- Self improvement ---------------------
+English:
+    [ ] - Essential Grammar in Use, Raymond Murphy
+    [ ] - English Grammar in Use (intermediate), Raymond Murphy
+    [ ] - Advanced Grammar in Use, Martin Hewings. 
+    [ ] - Oxford Advanced Learner's Dictionary
+
+Mathematics:
+    [ ] - ACT math http://virtualnerd.com/act-math/all
+    [ ] - Matematika u 24 lekcije
+    [ ] - Daniel J. Velleman, How to Prove It: A Structured Approach (foundations)
+    [ ] - G. Polya, How to Solve It: A New Aspect of Mathematical Method (problem solving)
+
+Personal:
+    [x] - Meditations - by Marcus Aurelius
+    [x] - The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life
+    [ ] - A Field Guide to Getting Lost 
+    [ ] - All About Love: New Visions 
+
+Time:
+    [x] - Deep work: rules for focused success in a distracted world
+
+Unsorted:
+    [ ] - Gödel, Escher, Bach
+    [ ] - Crucial conversations
+    [ ] - The No Asshole Rule - Sutton
+    [ ] - Leadership & Self Deception - Arbinger Institute
+    [ ] - Drive by Daniel H. Pink
+    [ ] - The One Thing You Need to Know by Marcus Buckingham
+    [ ] - Thinking, Fast and Slow by Daniel Kahneman
+    [ ] - Act Like a Leader, Think Like a Leader by Herminia Ibarra
+    [ ] - How to Win Friends and Influence People by Dale Carnegie
+    [ ] - The Seven Habits of Highly Effective People by Stephen R Covey
+    [ ] - Mindset by Carol Dweck
+    [ ] - Things Fall Apart by Chinua Achebe
+    [ ] - Now, Discover Your Strengths by Marcus Buckingham and Donald O. Clifton
+    [ ] - Good to Great by Jim Collins
+    [ ] - Delivering Happiness: A Path to Profits, Passion, and Purpose
+    [ ] - Rework  by Jason Fried
+    [ ] - Principles: Life and Work
+    [ ] - The Phoenix Project
+    [ ] - 'The 4-Hour Workweek' by Tim Ferriss
+    [ ] - anything you want by Derek S
+    [ ] - Do It Tomorrow and Other Secrets of Time Management
+    [ ] - Getting Things Done: The Art of Stress-Free Productivity
+    [ ] - The Singularity is Near: When Humans Transcend Biology
+    [ ] - The ONE Thing: The Surprisingly Simple Truth Behind Extraordinary Results
+    [ ] - 'So Good They Can't Ignore You' by Cal Newport
+    [ ] - 'The Black Swan' by Nassim Taleb
+    [ ] - 'Lean In' by Sheryl Sandberg
+    [ ] - 'The Alliance' by Reid Hoffman, Ben Casnocha, and Chris Yeh
+    [ ] - 'Give and Take' by Adam Grant
+    [ ] - 'Zero to One' by Peter Thiel
+    [ ] - '#GirlBoss' by Sophia Amoruso
+    [ ] - 'Drive' by Dan Pink
+    [ ] - 'StrengthsFinder 2.0' by Tom Rath
+    [ ] - 'Friend and Foe' by Adam Galinsky and Maurice Schweitzer
+    [ ] - 'The Power of Habit' by Charles Duhigg
+    [ ] - 'Linchpin' by Seth Godin
+    [ ] - 'Unfinished Business' by Anne-Marie Slaughter
+    [ ] - 'Never Eat Alone' by Keith Ferrazzi
+    [ ] - 'Power' by Jeffrey Pfeffer
+    [ ] - 'Mindset' by Carol Dweck
+    [ ] - 'Quiet' by Susan Cain
+    [ ] - 'Predictably Irrational' by Dan Ariely
+    [ ] - 'The Power Broker' by Robert Caro
+    [ ] - '7 Habits of Highly Effective People' by Stephen R. Covey
+    [ ] - 'The Hard Thing About Hard Things' by Ben Horowitz
+    [ ] - 'How Will You Measure Your Life?' by Clayton Christensen
+    [ ] - 'Creativity, Inc.' by Ed Catmull
+    [ ] - 'The Intelligent Investor' by Benjamin Graham
+    [ ] - 'Crossing the Unknown Sea' by David Whyte
+    [ ] - 'Steve Jobs' by Walter Isaacson
+    [ ] - 'Act Like a Leader', Think Like a Leader' by Herminia Ibarra
+    [ ] - 'Choose Yourself' by James Altucher
+    [ ] - 'The Tipping Point' by Malcolm Gladwell
+    [ ] - 'Flow' by Mihaly Csikszentmihalyi
