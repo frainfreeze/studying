@@ -125,9 +125,9 @@ Java
 
 JavaScript
     [-] - eloquentjavascript.net
-    [ ] - The Modern JavaScript Tutorial
-    [ ] - You Don't Know JS (book series)
-    [ ] - JavaScript: The Good Parts
+    [-] - The Modern JavaScript Tutorial
+    [-] - You Don't Know JS (book series)
+    [-] - JavaScript: The Good Parts
 
 Lua
     [ ] - Programming In Lua (that's it, just read lots of source code now.)
@@ -170,21 +170,22 @@ Shell/Bash
 
 
 --------------------- Software engineering ---------------------
+Test-Driven Development:
+    [-] - Test-Driven Development with Python: Obey the Testing Goat: Using Django, Selenium, and JavaScript
+    [ ] - Test Driven Development: By Example
+    [ ] - Python Testing with pytest
+
 Design Patterns, Software archihecture, system design:
     [ ] - Growing Object-Oriented Software, Guided by Tests
+    [ ] - Domain-Driven Design: Tackling Complexity in the Heart of Software
     [ ] - Head First Design Patterns by Eric Freeman (1-2 weeks) (intro)
     [ ] - Pattern-Oriented Software Architecture v1, v2
     [ ] - Design Patterns: Elements of Reusable Object-Oriented Software (use as ref for POSA)
-    [ ] - Domain-Driven Design: Tackling Complexity in the Heart of Software
     [ ] - Patterns of Enterprise Application Architecture
     [ ] - Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions
     [ ] - Clean Architecture: A Craftsman's Guide to Software Structure and Design
     [ ] - Smalltalk Best Practice Patterns
-
-Test-Driven Development:
-    [ ] - Test-Driven Development with Python: Obey the Testing Goat: Using Django, Selenium, and JavaScript
-    [ ] - Test Driven Development: By Example
-    [ ] - Python Testing with pytest
+    [-] - Learning JavaScript Design Patterns
 
 System programming
     [ ] - Linux System Programming: Talking Directly to the Kernel and C Library
@@ -195,7 +196,7 @@ Web development
     roadmap: github.com/kamranahmedse/developer-roadmap
     [+] - learn.freecodecamp.org | theodinproject.com | htmldog.com
     [-] - HTML & CSS: Design and Build Web Sites
-    [ ] - JavaScript and JQuery: Interactive Front-End Web Development
+    [-] - JavaScript and JQuery: Interactive Front-End Web Development
     [-] - diveintohtml5.it
     [-] - Flask Web Development: Developing Web Applications with Python
 
@@ -238,40 +239,31 @@ Other CS books:
     [ ] - Release It!: Design and Deploy Production-Ready Software
     [ ] - Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation
 
---------------------- Software tools and related ---------------------
 Vim
     Cheatsheet: vim.rtorr.com
-    - vimtutor
-    - moolenaar.net/habits.html
-    - yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d
-    - stevelosh.com/blog/2010/09/coming-home-to-vim/
-    - learnvimscriptthehardway.stevelosh.com/
+    [ ] - vimtutor
+    [ ] - moolenaar.net/habits.html
+    [ ] - yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d
+    [ ] - stevelosh.com/blog/2010/09/coming-home-to-vim/
+    [ ] - learnvimscriptthehardway.stevelosh.com/
 
 Git
-    - swcarpentry.github.io/git-novice/
-    - git-scm.com/book/en/v2
-    - documentup.com/skwp/git-workflows-book
-    - eagain.net/articles/git-for-computer-scientists/
-    - maryrosecook.com/blog/post/git-from-the-inside-out
+    [ ] - swcarpentry.github.io/git-novice/
+    [ ] - git-scm.com/book/en/v2
+    [ ] - documentup.com/skwp/git-workflows-book
+    [ ] - eagain.net/articles/git-for-computer-scientists/
+    [ ] - maryrosecook.com/blog/post/git-from-the-inside-out
 
 Touch typing
-    - gnu typist
-    - klava.org/ typingclub.com / typing.io / speedcoder.net
+    [ ] - gnu typist
+    [ ] - klava.org/ typingclub.com / typing.io / speedcoder.net
 
 
 --------------------- humans ---------------------
-Wetware:
-    [ ] - Thinking, Fast and Slow
-    [ ] - Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman
-    [ ] - Pragmatic Thinking and Learning
-    [ ] - How to Solve It: A New Aspect of Mathematical Method (guide to general problem solving)
-    [ ] - Are Your Lights On?: How to Figure Out What the Problem Really Is 
-
 Agile/scrum/lean/startup:
-    [ ] - https://en.wikipedia.org/wiki/Agile_software_development
-    [ ] - Scrum and XP from the Trenches (Henrik Kniberg) - For developers who want to do agile
-    [ ] - Agile Product Management with Scrum: Creating Products that Customers Love (Roman Pichler) - For product managers and product owners who want to run agile projects
-    [ ] - Agile Estimating and Planning (Mike Cohn) - For POs and developers who want to get good ad short-, mid- and long-term estimating
+    [ ] - Scrum and XP from the Trenches (For developers who want to do agile)
+    [ ] - Agile Product Management with Scrum: Creating Products that Customers Love (For product managers and product owners who want to run agile projects)
+    [ ] - Agile Estimating and Planning (For POs and developers who want to get good ad short-mid-long-term estimating)
     [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
     [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
     [ ] - Implementing Lean Software Development: From Concept to Cash
@@ -290,95 +282,146 @@ Teams:
     [ ] - The Five Dysfunctions of a Team: A Leadership Fable (fix dysfunctional teams)
     [ ] - Peopleware: Productive Projects and Teams (couple days, how to treat people. Written for managers)
 
+Building a company:
+    [ ] - The Personal MBA - by Josh Kaufman (overview of everything you need to know)
+    [ ] - Zero to One by Peter Thiel
+    [ ] - The Entrepreneur Roller Coaster - by Darren Hardy (must read)
+    [ ] - The Hard Thing About Hard Things by Ben Horowitz (essential advice on building and running a startup)
+    [ ] - The Art of Profitability - by Adrian Slywotzky (different models of proffitability - profit-sources)
+    [ ] - Start Small, Stay Small - by Rob Walling and Mike Taber (on being micropreneur)
+    [ ] - Good to Great by Jim Collins (managment, how companies transition from being good companies to great companies)
+    [ ] - Rework  by Jason Fried (stop talking and start working)
+    [ ] - anything you want by Derek S (manual for running a business)
+    [ ] - The Leap: A Memoir of Love and Madness in the Internet Gold Rush (e commerce template)
+
+Interpersonal, leadership and managing:
+    [ ] - E-Myth Revisited - by Michael Gerber (personal business view)
+    [ ] - How to Win Friends and Influence People by Dale Carnegie
+    [ ] - Crucial conversations
+    [ ] - The No Asshole Rule: Building a Civilized Workplace and Surviving One That Isn't
+    [ ] - The One Thing You Need to Know by Marcus Buckingham
+    [ ] - Act Like a Leader, Think Like a Leader by Herminia Ibarra
+    [ ] - Drive - by Daniel Pink (what drives people to do the work)
+    [ ] - Influence - by Robert Cialdini (psychology of persuasion)
+    [ ] - Predictably Irrational - by Dan Ariely
+    [ ] - The Ultimate Sales Machine - by Chet Holmes (like e myth, how to turn it into real results)
+    [ ] - Tribes - by Seth Godin (what it takes to organize and mobilize groups of people)
+    [ ] - The 48 Laws of Power by R. Greene (evil book)
+    [ ] - 'Creativity, Inc.' by Ed Catmull ( managerial how-to on fostering creativity, productivity and work/ life balance in the office.)
+
+Investing:
+    [ ] - The Smartest Investment Book You'll Ever Read - by Daniel R. Solin
+    [ ] - The Investor's Manifesto - by William J. Bernstein
+    [ ] - The Innovator's Solution - by Clayton Christensen (on technology change)
+    [ ] - 'The Intelligent Investor' by Benjamin Graham (stocks?, hard book)
+
 Biographies and Stories
     [x] - Patterns of Software
-
-Unsorted:
-  startup:
-    [ ] - Hackers and Painters: Big Ideas from the Computer Age 1st Edition
-    [ ] - The Leap: A Memoir of Love and Madness in the Internet Gold Rush
+    [ ] - The Phoenix Project
     [ ] - Startup: A Silicon Valley Adventure
-    [ ] - Rules For Revolutionaries: The Capitalist Manifesto for Creating and Marketing New Products and Services
-    [ ] - Growing a Business
-    [ ] - Design for Community 
-    [ ] - Measuring and Managing Performance in Organizations
-    - https://hitenism.com/startup-books/
-    - http://startupstash.com/books/
+    [ ] - Delivering Happiness: A Path to Profits, Passion, and Purpose (narrative on Profits; Profits and Passion)
+    [ ] - Hackers and Painters: Big Ideas from the Computer Age (essays on intelligence, entrepreneurship, programming, and questioning norms)
 
 --------------------- Self improvement ---------------------
-English:
+Wetware:
+    [ ] - Are Your Lights On?: How to Figure Out What the Problem Really is (sort, problem solving)
+    [ ] - Thinking, Fast and Slow by Daniel Kahneman (philosophy)
+    [ ] - Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman
+    [ ] - Pragmatic Thinking and Learning
+    [ ] - How to Solve It: A New Aspect of Mathematical Method (guide to general problem solving)
+    [ ] - Are Your Lights On?: How to Figure Out What the Problem Really Is
+    [ ] - Mindfulness in Plain English (mindfulness and meditation)
+    [ ] - A Mind for Numbers - by Barbara Oakley (on learning)
+    [ ] - 5 Elements of Effective Thinking - by Edward B. Burger (short)
+    [ ] - Brain Rules - by John Medina (why our brains work this way, and how to use what we now know to learn or work better)
+
+Time and Productivity:
+    [x] - Deep work: rules for focused success in a distracted world
+    [ ] - Do It Tomorrow and Other Secrets of Time Management
+    [ ] - The Seven Habits of Highly Effective People by Stephen R Covey
+    [ ] - Getting Things Done: The Art of Stress-Free Productivity
+    [ ] - The 4-Hour Workweek by Tim Ferriss
+    [ ] - The ONE Thing: The Surprisingly Simple Truth Behind Extraordinary Results (time management)
+
+English and writing:
+    [ ] - Fluent Forever - by Gabriel Wyner (how to learn any language)
+    [ ] - On Writing Well - by William Zinsser
+    [ ] - The Elements of Style
     [ ] - Essential Grammar in Use, Raymond Murphy
     [ ] - English Grammar in Use (intermediate), Raymond Murphy
     [ ] - Advanced Grammar in Use, Martin Hewings. 
     [ ] - Oxford Advanced Learner's Dictionary
 
 Mathematics:
+    [ ] - Innumeracy - by John Allen Paulos (Why are so many people so mathematically illiterate)
+    [ ] - Daniel J. Velleman, How to Prove It: A Structured Approach (foundations)
+    [ ] - G. Polya, How to Solve It: A New Aspect of Mathematical Method (problem solving)    
     [ ] - ACT math http://virtualnerd.com/act-math/all
     [ ] - Matematika u 24 lekcije
-    [ ] - Daniel J. Velleman, How to Prove It: A Structured Approach (foundations)
-    [ ] - G. Polya, How to Solve It: A New Aspect of Mathematical Method (problem solving)
+
+Psychology:
+    [ ] - Flow by Mihaly Csikszentmihalyi (psychology)
+    [ ] - The Time Paradox - by Philip Zimbardo and John Boyd (psychology)
+    [ ] - Stumbling on Happiness - by Daniel Gilbert (psychology, happines)
+    [ ] - The Happiness Hypothesis - by Jonathan Haidt (psychology, happines)
+    [ ] - Switch - by Chip Heath and Dan Heath (make changes last - both personal and organizational)
+    [ ] - The Tipping Point: How Little Things Can Make a Big Difference 
+
+Philosophy:
+    [ ] - The Black Swan: The Impact of the Highly Improbable (subjects relating to knowledge, aesthetics, as well as ways of life)
+    [ ] - Sum: Forty Tales from the Afterlives - by David Eagleman (fiction, philosophy)
+    [ ] - A Field Guide to Getting Lost (philosophy)
+    [ ] - Gödel, Escher, Bach (philosophy, maths etc)
+    [ ] - A Guide to the Good Life: The Ancient Art of Stoic Joy (stoicism)
+    [ ] - Sapiens - by Yuval Noah Harari (mix of history and philosophy)
+    [ ] - The Courage to Be Disliked - by Ichiro Kishimi and Fumitake Koga (philosophy)
+    [ ] - Happy - by Derren Brown (philosophy)
+    [ ] - The Antidote: Happiness for People Who Can't Stand Positive Thinking (Stoicism, meditation, death)
+    [ ] - Story of Philosophy - by Will Durant (Profiles of some top philosophers)
+    [ ] - Homo Deus - by Yuval Noah Harari ( alternative perspective on life from a historian. Anti-religion, anti-humanism, pro-animal)
+
+Culture:
+    [ ] - Mindwise: How We Understand What Others Think, Believe, Feel, and Want (why tribalism?)
+    [ ] - the bible
+    [ ] - Cows, Pigs, Wars, and Witches - by Marvin Harris (anthropology)
+    [ ] - When Cultures Collide - by Richard D. Lewis (cultural observations)
+    [ ] - Antifragile - by Nassim Nicholas Taleb (health, education, governments, business, and life philosophy)
+    [ ] - The Wisdom of Crowds (on inteligence of groups, huge implications for management, markets, decision-making etc)
+
+Technology:
+    [ ] - What Technology Wants - by Kevin Kelly ( historical and philosophical perspective on technology)
+    [ ] - The Singularity is Near: When Humans Transcend Biology (non-fiction, futurism)
 
 Personal:
+    [x] - Art & Fear: Observations On the Perils (and Rewards) of Artmaking (insights into the creative process)
     [x] - Meditations - by Marcus Aurelius
     [x] - The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life
-    [ ] - A Field Guide to Getting Lost 
-    [ ] - All About Love: New Visions 
+    [ ] - The Paradox of Choice - Why More is Less - by Barry Schwartz (when faced with many options)
+    [ ] - Mindset by Carol Dweck (on growth vs fixed mindset)
+    [ ] - How to Talk to Anyone - by Leil Lowndes (conversational people skills)
+    [ ] - The Compound Effect (self help)
+    [ ] - The War of Art - by Steven Pressfield (on following passion?)
+    [ ] - Do the Work - by Steven Pressfield (doing the work, overcoming resistance to creating)
+    [ ] - Turning Pro - by Steven Pressfield (doing the work)
+    [ ] - Principles: Life and Work (creating results)
+    [ ] - Thinking in Bets - by Annie Duke (healthy skepticism)
+    [ ] - Ego Is the Enemy - by Ryan Holiday (beware of ego)
+    [ ] - Too Soon Old, Too Late Smart: Thirty True Things You Need to Know Now (life lessons from a psychiatrist)
+    [ ] - The Wisdom of No Escape - by Pema Chödrön (sticking to decisions)
+    [ ] - When Things Fall Apart - by Pema Chödrön (facing negative emotions)
+    [ ] - Show Your Work - by Austin Kleon (short, sharing your work online)
+    [ ] - Self Reliance - by Ralph Waldo Emerson (manifesto)
+    [ ] - The Willpower Instinct - by Kelly McGonigal (self-control, willpower)
+    [ ] - Quiet - by Susan Cain (on introverts)
+    [ ] - How to Get Rich - by Felix Dennis (honest thoughts from a filthy rich bastard)
+    [ ] - What Got You Here Won't Get You There (things that brought you where you are, are blocking you from advancing)
+    [ ] - Personal Development for Smart People (broad, different aspects of self-improvement)
 
-Time:
-    [x] - Deep work: rules for focused success in a distracted world
+Relationships:
+    [ ] - The Truth - by Neil Strauss
+    [ ] - All About Love: New Visions (philosophy)
+    [ ] - Getting the Love You Want - by Harville Hendrix 
 
-Unsorted:
-    [ ] - Gödel, Escher, Bach
-    [ ] - Crucial conversations
-    [ ] - The No Asshole Rule - Sutton
-    [ ] - Leadership & Self Deception - Arbinger Institute
-    [ ] - Drive by Daniel H. Pink
-    [ ] - The One Thing You Need to Know by Marcus Buckingham
-    [ ] - Thinking, Fast and Slow by Daniel Kahneman
-    [ ] - Act Like a Leader, Think Like a Leader by Herminia Ibarra
-    [ ] - How to Win Friends and Influence People by Dale Carnegie
-    [ ] - The Seven Habits of Highly Effective People by Stephen R Covey
-    [ ] - Mindset by Carol Dweck
-    [ ] - Things Fall Apart by Chinua Achebe
-    [ ] - Now, Discover Your Strengths by Marcus Buckingham and Donald O. Clifton
-    [ ] - Good to Great by Jim Collins
-    [ ] - Delivering Happiness: A Path to Profits, Passion, and Purpose
-    [ ] - Rework  by Jason Fried
-    [ ] - Principles: Life and Work
-    [ ] - The Phoenix Project
-    [ ] - 'The 4-Hour Workweek' by Tim Ferriss
-    [ ] - anything you want by Derek S
-    [ ] - Do It Tomorrow and Other Secrets of Time Management
-    [ ] - Getting Things Done: The Art of Stress-Free Productivity
-    [ ] - The Singularity is Near: When Humans Transcend Biology
-    [ ] - The ONE Thing: The Surprisingly Simple Truth Behind Extraordinary Results
-    [ ] - 'So Good They Can't Ignore You' by Cal Newport
-    [ ] - 'The Black Swan' by Nassim Taleb
-    [ ] - 'Lean In' by Sheryl Sandberg
-    [ ] - 'The Alliance' by Reid Hoffman, Ben Casnocha, and Chris Yeh
-    [ ] - 'Give and Take' by Adam Grant
-    [ ] - 'Zero to One' by Peter Thiel
-    [ ] - '#GirlBoss' by Sophia Amoruso
-    [ ] - 'Drive' by Dan Pink
-    [ ] - 'StrengthsFinder 2.0' by Tom Rath
-    [ ] - 'Friend and Foe' by Adam Galinsky and Maurice Schweitzer
-    [ ] - 'The Power of Habit' by Charles Duhigg
-    [ ] - 'Linchpin' by Seth Godin
-    [ ] - 'Unfinished Business' by Anne-Marie Slaughter
-    [ ] - 'Never Eat Alone' by Keith Ferrazzi
-    [ ] - 'Power' by Jeffrey Pfeffer
-    [ ] - 'Mindset' by Carol Dweck
-    [ ] - 'Quiet' by Susan Cain
-    [ ] - 'Predictably Irrational' by Dan Ariely
-    [ ] - 'The Power Broker' by Robert Caro
-    [ ] - '7 Habits of Highly Effective People' by Stephen R. Covey
-    [ ] - 'The Hard Thing About Hard Things' by Ben Horowitz
-    [ ] - 'How Will You Measure Your Life?' by Clayton Christensen
-    [ ] - 'Creativity, Inc.' by Ed Catmull
-    [ ] - 'The Intelligent Investor' by Benjamin Graham
-    [ ] - 'Crossing the Unknown Sea' by David Whyte
-    [ ] - 'Steve Jobs' by Walter Isaacson
-    [ ] - 'Act Like a Leader', Think Like a Leader' by Herminia Ibarra
-    [ ] - 'Choose Yourself' by James Altucher
-    [ ] - 'The Tipping Point' by Malcolm Gladwell
-    [ ] - 'Flow' by Mihaly Csikszentmihalyi
+--------------------- Other ---------------------
+Electronics:
+    [ ] - The Art of electronics
