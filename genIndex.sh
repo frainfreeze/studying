@@ -12,5 +12,6 @@ printf "%s" "$style" > $OUTPUT
 echo >>  $OUTPUT
 for i in `find . -name '*.html'`; do
   fname=`basename $i`
-  echo "- [$fname]($i)" >> $OUTPUT
+  dname=`dirname $i`
+  echo "- $dname/[$fname]($i)" >> $OUTPUT
 done
