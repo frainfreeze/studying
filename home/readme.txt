@@ -125,7 +125,6 @@ Java
 
 JavaScript
     [-] - eloquentjavascript.net
-    [-] - The Modern JavaScript Tutorial
     [-] - You Don't Know JS (book series)
     [-] - JavaScript: The Good Parts
 
@@ -195,10 +194,13 @@ System programming
 Web development
     roadmap: github.com/kamranahmedse/developer-roadmap
     [+] - learn.freecodecamp.org | theodinproject.com | htmldog.com
-    [-] - HTML & CSS: Design and Build Web Sites
-    [-] - JavaScript and JQuery: Interactive Front-End Web Development
+    [+] - HTML & CSS: Design and Build Web Sites
     [-] - diveintohtml5.it
     [-] - Flask Web Development: Developing Web Applications with Python
+
+Android and Kotlin:
+    [ ] - Kotlin in Action by D. Jemerov
+    [ ] - Android Programming: The Big Nerd Ranch Guide (3rd Edition)
 
 Debugging and Refactoring:
     [ ] - Refactoring: Improving the Design of Existing Code
@@ -225,7 +227,7 @@ Programming interview:
     [ ] - Cracking the Coding Interview: 189 Programming Questions and Solutions
 
 Classic must reads:
-    [ ] - Code Complete 2: A Practical Handbook of Software Construction
+    [-] - Code Complete 2: A Practical Handbook of Software Construction
     [ ] - The Clean Coder: A Code of Conduct for Professional Programmers
     [ ] - The Mythical Man-Month
     [ ] - Programming Pearls
@@ -273,7 +275,6 @@ Agile/scrum/lean/startup:
     [ ] - Agile Testing: A Practical Guide for Testers and Agile Teams
     [ ] - The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
     [ ] - Running Lean: Iterate from Plan A to a Plan That Works (Lean Series)
-    [ ] - The Art of the Start: The Time-Tested, Battle-Hardened Guide for Anyone Starting Anything
 
 Teams:
     [ ] - Team Geek: A Software Developers Guide to working well with others (For engineers who want to work successfully with other engineers)
@@ -287,6 +288,7 @@ Building a company:
     [ ] - Zero to One by Peter Thiel
     [ ] - The Entrepreneur Roller Coaster - by Darren Hardy (must read)
     [ ] - The Hard Thing About Hard Things by Ben Horowitz (essential advice on building and running a startup)
+    [ ] - The Art of the Start 2.0: The Time-Tested, Battle-Hardened Guide for Anyone Starting Anything (handbook on everything)
     [ ] - The Art of Profitability - by Adrian Slywotzky (different models of proffitability - profit-sources)
     [ ] - Start Small, Stay Small - by Rob Walling and Mike Taber (on being micropreneur)
     [ ] - Good to Great by Jim Collins (managment, how companies transition from being good companies to great companies)
@@ -329,7 +331,6 @@ Wetware:
     [ ] - Apprenticeship Patterns: Guidance for the Aspiring Software Craftsman
     [ ] - Pragmatic Thinking and Learning
     [ ] - How to Solve It: A New Aspect of Mathematical Method (guide to general problem solving)
-    [ ] - Are Your Lights On?: How to Figure Out What the Problem Really Is
     [ ] - Mindfulness in Plain English (mindfulness and meditation)
     [ ] - A Mind for Numbers - by Barbara Oakley (on learning)
     [ ] - 5 Elements of Effective Thinking - by Edward B. Burger (short)
