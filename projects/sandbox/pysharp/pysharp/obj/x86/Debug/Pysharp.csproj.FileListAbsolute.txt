@@ -1,0 +1,5 @@
+/home/frain/git/github/studying/projects/sandbox/pysharp/pysharp/bin/Debug/Pysharp.exe
+/home/frain/git/github/studying/projects/sandbox/pysharp/pysharp/bin/Debug/Pysharp.pdb
+/home/frain/git/github/studying/projects/sandbox/pysharp/pysharp/obj/x86/Debug/Pysharp.csproj.CoreCompileInputs.cache
+/home/frain/git/github/studying/projects/sandbox/pysharp/pysharp/obj/x86/Debug/Pysharp.exe
+/home/frain/git/github/studying/projects/sandbox/pysharp/pysharp/obj/x86/Debug/Pysharp.pdb

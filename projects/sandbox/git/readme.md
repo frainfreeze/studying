@@ -8,3 +8,4 @@ desc.
 - http://eagain.net/articles/git-for-computer-scientists/
 - https://maryrosecook.com/blog/post/git-from-the-inside-out
 - http://aosabook.org/en/git.html
+- http://fabiensanglard.net/git_code_review/index.php
