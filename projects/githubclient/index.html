@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/tf.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/frappe-charts/1.1.0/frappe-charts.min.iife.js'></script>
+
+
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. 
+    Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div role="main" class="application-main ">
+    <div id="js-pjax-container" data-pjax-container="">
+
+      <div class="container-lg clearfix px-3 mt-4">
+        <!-- user card -->
+        <div class="h-card col-3 float-left pr-3" itemscope="" itemtype="http://schema.org/Person">
+          <div id="profile-img"></div>
+          <div class="vcard-names-container py-3 js-sticky js-user-profile-sticky-fields" style="position: static; top: 0px; left: 153px; width: 229px;">
+            <h1 class="vcard-names" id="profile-name"></h1>
+          </div>
+
+          <div class="p-note user-profile-bio js-user-profile-bio mb-3">
+            <div class="d-inline-block mb-3 js-user-profile-bio-contents" id="profile-info">
+              <div id="profile-bio"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- main content-->
+        <div class="col-9 float-left pl-2">
+            <div id="w">
+                <h1>Simple Github API Client</h1>
+                <p>Enter a single Github username below and click the button to display profile info via JSON.</p>
+                <div id="ghapidata" class="clearfix"></div>
+              </div>
+
+          <div class="position-relative">
+            <!-- get user form -->
+            <div class="border-bottom border-gray-dark py-3">
+              <form class="TableObject" id="myForm">
+                <div class="TableObject-item TableObject-item--primary pr-4">
+                  <input type="search"  name="ghusername" id="ghusername" class="form-control width-full js-autosearch-field"
+                    autocomplete="off" value="" aria-label="Find an user…" placeholder="Find an user…">
+                </div>
+                <div>
+                    <input class="btn btn-primary ml-3" type="submit" value="Search" >
+                </div>
+              </form>
+            </div>
+
+            <div id="user-repositories-list">
+              <ul data-filterable-for="your-repos-filter" data-filterable-type="substring" id="the-repos">
+
+                <li class="col-12 d-block width-full py-4 border-bottom public source" itemprop="owns" itemscope=""
+                  itemtype="http://schema.org/Code">
+                  <div id="chart"></div>
+                </li>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
