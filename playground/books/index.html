@@ -63,7 +63,7 @@
             },
             mounted() {
                 axios
-                    .get('http://localhost:8080/DailyWebDeveloper/playground/books/books.json')
+                    .get('https://raw.githubusercontent.com/frainfreeze/DailyWebDeveloper/master/playground/books/books.json')
                     .then(response => {
                         this.books = response.data
                     })
