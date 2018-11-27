@@ -195,7 +195,7 @@ Web development
     roadmap: github.com/kamranahmedse/developer-roadmap
     [+] - learn.freecodecamp.org | theodinproject.com | htmldog.com
     [+] - HTML & CSS: Design and Build Web Sites
-    [-] - diveintohtml5.it
+    [+] - diveintohtml5.it
     [-] - Flask Web Development: Developing Web Applications with Python
 
 Android and Kotlin:
@@ -417,12 +417,4 @@ Personal:
     [ ] - How to Get Rich - by Felix Dennis (honest thoughts from a filthy rich bastard)
     [ ] - What Got You Here Won't Get You There (things that brought you where you are, are blocking you from advancing)
     [ ] - Personal Development for Smart People (broad, different aspects of self-improvement)
-
-Relationships:
-    [ ] - The Truth - by Neil Strauss
-    [ ] - All About Love: New Visions (philosophy)
-    [ ] - Getting the Love You Want - by Harville Hendrix 
-
---------------------- Other ---------------------
-Electronics:
-    [ ] - The Art of electronics
+    [ ] - A Short History of Nearly Everything
