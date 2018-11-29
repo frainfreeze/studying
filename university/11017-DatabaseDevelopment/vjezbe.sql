@@ -3,40 +3,33 @@
 -- kreiranje i prebacivanje na bazu
 CREATE DATABASE RentACar
 GO
-
 USE RentACar
 GO
 
--- kreiranje tablica
--- prvo idu maticne talice (ne sadrze u sebi FK-eve)
-
+-- kreiranje tablica, prvo idu maticne talice (ne sadrze u sebi FK-eve)
 -- Proizvodac
-CREATE TABLE Proizvodjac
-(
+CREATE TABLE Proizvodjac (
 	IDProizvodjac int CONSTRAINT PK_Proizvodjac PRIMARY KEY IDENTITY,
 	Naziv nvarchar(50) NOT NULL
 )
 GO
 
 -- Kategorija
-CREATE TABLE Kategorija
-(
+CREATE TABLE Kategorija (
 	IDKategorija int CONSTRAINT PK_Kategorija PRIMARY KEY IDENTITY,
 	Naziv nvarchar(50) NOT NULL
 )
 GO
 
 -- Status vozila
-CREATE TABLE StatusVozila
-(
+CREATE TABLE StatusVozila (
 	IDStatusVozila int CONSTRAINT PK_StatusVozila PRIMARY KEY IDENTITY,
 	Naziv nvarchar(50) NOT NULL
 )
 GO
 
 -- Klijent
-CREATE TABLE Klijent
-(
+CREATE TABLE Klijent (
 	IDKlijent int CONSTRAINT PK_Klijent PRIMARY KEY IDENTITY,
 	Ime nvarchar(50) NOT NULL,
 	Prezime nvarchar(50) NOT NULL,
@@ -48,15 +41,12 @@ CREATE TABLE Klijent
 )
 GO
 
---------------------------------
--- kreiranje tablica
--- kao drugu stvar kreiramo tablice koje se na njih vezu (sadrze strane kljuceve)
+-- kreiranje tablica, kao drugu stvar kreiramo tablice koje se na njih vezu (sadrze strane kljuceve)
 -- kreiranje ide slijedno - prvo vezne tablice koje se vezu na maticne, zatim tablice 
 -- koje se vezu na prve vezne tablice itd.
 
 -- Model -> veze se na Proizvodaca
-CREATE TABLE Model
-(
+CREATE TABLE Model (
 	IDModel int CONSTRAINT PK_Model PRIMARY KEY IDENTITY,
 	Naziv nvarchar(50) NOT NULL,
 	IDProizvodjac int CONSTRAINT FK_Model_Proizvodjac 
@@ -64,13 +54,9 @@ CREATE TABLE Model
 )
 GO
 
--- slijedece vezne tablice - vezu se na maticne i na vezne
--- tablice napravljene u prethodnoj rundi
-
--- Vozilo -> veze se na Kategorija (maticna tablica) i na Model
--- (vezna tablica 1. runde)
-CREATE TABLE Vozilo
-(
+-- slijedece vezne tablice - vezu se na maticne i na vezne tablice napravljene u prethodnoj rundi
+-- Vozilo -> veze se na Kategorija (maticna tablica) i na Model (vezna tablica 1. runde)
+CREATE TABLE Vozilo (
 	IDVozilo int CONSTRAINT PK_Vozilo PRIMARY KEY IDENTITY,
 	Registracija nvarchar(20) NOT NULL,
 	IDModel int CONSTRAINT FK_Vozilo_Model 
@@ -82,10 +68,8 @@ CREATE TABLE Vozilo
 )
 GO
 
--- Najam -> Veze sa na Status vozila i na Klijent (maticne tablice)
--- te na Vozilo (vezna tablica 2. runde)
-CREATE TABLE Najam
-(
+-- Najam -> Veze sa na Status vozila i na Klijent (maticne tablice) te na Vozilo (vezna tablica 2. runde)
+CREATE TABLE Najam (
 	IDNajam int CONSTRAINT PK_Najam PRIMARY KEY IDENTITY,
 	IDStatusVozila int CONSTRAINT FK_Najam_StatusVozila
 		FOREIGN KEY REFERENCES StatusVozila(IDStatusVozila) NOT NULL,
@@ -112,8 +96,6 @@ StatusVozila: �Pla�eno�, �Preuzeto�, �Vra�eno�
 Najam: upi�ite da je svaki klijent iznajmio po 2 vozila, s podacima po �elji (jednog je vratio, jedan je preuzet)
 */
 
--- Vje�ba 1b.
-
 -- Proizvo�a�i: Opel, Honda, Volkswagen
 INSERT INTO Proizvodjac (Naziv) VALUES ('Opel'), ('Honda'), ('Volkswagen'), ('Fiat')
 GO
@@ -127,34 +109,12 @@ GO
 INSERT INTO Kategorija (Naziv) VALUES ('Benzinski motor'), ('Dizelski motor')
 GO
 
--- Vozila: 
--- Po 1 vozilo svakog modela s benzinskim motorom
+-- Vozila:  Po 1 vozilo svakog modela s benzinskim motorom
 INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
 VALUES ('ZG111A', 1, 1, 25000, 550.00)
 GO
-
 INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
 VALUES ('ZG222A', 2, 1, 35000, 530.00)
-GO
-
-INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
-VALUES ('ZG333A', 3, 1, 15000, 650.00)
-GO
-
-INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
-VALUES ('ZG444A', 4, 1, 25000, 950.00)
-GO
-
-INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
-VALUES ('ZG555A', 5, 1, 125000, 250.00)
-GO
-
-INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
-VALUES ('ZG666A', 6, 1, 75000, 450.00)
-GO
-
-INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
-VALUES ('ZG777A', 7, 1, 5000, 800.00)
 GO
 
 -- Svakog Opela dodati i s dizelskim motorom
@@ -162,35 +122,16 @@ INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodD
 VALUES ('ZG555B', 5, 2, 45000, 200.00)
 GO
 
-INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
-VALUES ('ZG666B', 6, 2, 35000, 400.00)
-GO
-
-INSERT INTO Vozilo (Registracija, IDModel, IDKategorija, Kilometraza, CijenaPodDanu)
-VALUES ('ZG777B', 7, 2, 6000, 750.00)
-GO
-
--- Klijenti: Iva Ivi�, Maja Maji�, Miro Miri�
+-- Klijenti
 INSERT INTO Klijent (Ime, Prezime, EMail, Telefon, Adresa, Grad, Drzava)
 VALUES ('Iva', 'Ivi�', 'iva.ivic@abc.com', null, 'Vrtna 17', 'Vara�din', 'HR')
 GO
 
-INSERT INTO Klijent (Ime, Prezime, EMail, Telefon, Adresa, Grad, Drzava)
-VALUES ('Maja', 'Maji�', 'maja.majic@abc.com', null, 'Sun�ana 17', 'Vara�din', 'HR')
-GO
-
-INSERT INTO Klijent (Ime, Prezime, EMail, Telefon, Adresa, Grad, Drzava)
-VALUES ('Miro', 'Miri�', null, '042/111-222', '�iroka 152', 'Vara�din', 'HR')
-GO
-
-
 -- StatusVozila: �Pla�eno�, �Preuzeto�, �Vra�eno�
 INSERT INTO StatusVozila (Naziv) VALUES ('Pla�eno')
 GO
-
 INSERT INTO StatusVozila (Naziv) VALUES ('Preuzeto')
 GO
-
 INSERT INTO StatusVozila (Naziv) VALUES ('Vra�eno')
 GO
 
@@ -204,35 +145,7 @@ INSERT INTO Najam (IDStatusVozila, IDKlijent, IDVozilo, DatumOd, DatumDo)
 VALUES (2, 1, 4, '20090917', null)
 GO
 
-INSERT INTO Najam (IDStatusVozila, IDKlijent, IDVozilo, DatumOd, DatumDo)
-VALUES (3, 2, 3, '20090901', '20090902')
-GO
-
-INSERT INTO Najam (IDStatusVozila, IDKlijent, IDVozilo, DatumOd, DatumDo)
-VALUES (2, 2, 7, '20090924', null)
-GO
-
-INSERT INTO Najam (IDStatusVozila, IDKlijent, IDVozilo, DatumOd, DatumDo)
-VALUES (3, 3, 6, '20090901', '20090902')
-GO
-
-INSERT INTO Najam (IDStatusVozila, IDKlijent, IDVozilo, DatumOd, DatumDo)
-VALUES (2, 3, 6, '20090929', null)
-GO
-
---------------------------------------------------------------------------
-
 -- Vje�ba 1c.
-/*
-Ispi�ite ID proizvo�a�a i broj njegovih modela, opadaju�e prema broju modela
-Ispi�ite naziv proizvo�a�a i broj njegovih modela, opadaju�e prema broju modela
-Ispi�ite najjeftiniju i najskuplju cijenu iznajmljivanja vozila za 10 dana
-Ispi�ite ukupnu kilometra�u koju su pre�la Opel vozila
-Ispi�ite broj klijenata
-Ispi�ite sve klijente iz Vara�dina koji nemaju definiran e-mail
-Ispi�ite sve najmove kod kojih su vozila vra�ena u pro�lom tjednu
-*/
-
 -- Ispi�ite ID proizvo�a�a i broj njegovih modela, opadaju�e prema broju modela
 SELECT IDProizvodjac, Count(*) AS BrojModela FROM Model 
 GROUP BY IDProizvodjac ORDER BY BrojModela DESC
@@ -244,9 +157,7 @@ INNER JOIN Proizvodjac AS p ON m.IDProizvodjac = p.IDProizvodjac
 GROUP BY p.Naziv ORDER BY BrojModela DESC
 
 -- Ispi�ite najjeftiniju i najskuplju cijenu iznajmljivanja vozila za 10 dana
-SELECT
-	Min(CijenaPodDanu) * 10 AS NajmanjaCijena, 
-	Max(CijenaPodDanu) * 10 AS NajvecaCijena 
+SELECT Min(CijenaPodDanu) * 10 AS NajmanjaCijena, Max(CijenaPodDanu) * 10 AS NajvecaCijena 
 FROM Vozilo
 
 -- Ispi�ite ukupnu kilometra�u koju su pre�la Opel vozila
@@ -257,18 +168,6 @@ SELECT Count(*) FROM Klijent
 
 -- Ispi�ite sve klijente iz Vara�dina koji nemaju definiran e-mail
 SELECT * FROM Klijent WHERE Grad = 'Vara�din' AND EMail IS NULL
-
-
---------------------------------------------------------------------------
-
--- Vje�ba 1d.
-/*
-Ispi�ite registraciju i naziv modela, rastu�e prema nazivu
-Ispi�ite registraciju, naziv modela i naziv proizvo�a�a, rastu�e prema nazivu proizvo�a�a
-Ispi�ite registraciju, naziv modela i naziv kategorije, rastu�e prema nazivu kategorije
-Ispi�ite registraciju, naziv modela, naziv proizvo�a�a i naziv kategorije, rastu�e prema registraciji
-Ispi�ite sve najmove. Za svaki najam ispi�ite: od kada, do kada, naziv statusa, naziv proizvo�a�a, naziv kategorije, ime i prezime klijenta
-*/
 
 -- Ispi�ite registraciju i naziv modela, rastu�e prema nazivu
 SELECT v.Registracija, m.Naziv FROM Vozilo AS v 
@@ -303,21 +202,10 @@ INNER JOIN Model AS m ON v.IDModel = m.IDModel
 INNER JOIN Proizvodjac AS p ON m.IDProizvodjac = p.IDProizvodjac
 INNER JOIN Klijent AS k ON n.IDKlijent = k.IDKlijent
 
-
---------------------------------------------------------------------------
-
--- Vje�ba 1e.
-/*
-Ispi�ite sve proizvo�a�e koji nemaju niti jedan model (spajanjem i podupitom)
-Ispi�ite nazive svih modela i nazive njihovih proizvo�a�a. Ako neki model nema proizvo�a�a, stavite vrijednost "nepoznato".
-Ispi�ite nazive dvaju proizvo�a�a koji imaju najvi�e modela
-*/
-
 -- Ispi�ite sve najmove kod kojih su vozila vra�ena u pro�lom tjednu
 SELECT * FROM Najam WHERE IDStatusVozila = 3 AND DatumDo BETWEEN '20150921' AND '20150927 23:59:59'
 
--- Ispi�ite sve proizvo�a�e koji nemaju niti jedan model (spajanjem i podupitom)
--- ispis spajanjem
+-- Ispi�ite sve proizvo�a�e koji nemaju niti jedan model (spajanjem i podupitom) ispis spajanjem
 SELECT p.*
 FROM Proizvodjac AS p
 LEFT JOIN Model AS m ON p.IDProizvodjac = m.IDProizvodjac
@@ -343,42 +231,29 @@ FROM Proizvodjac AS p
 LEFT JOIN model AS m ON m.IDProizvodjac = p.IDProizvodjac
 GROUP BY p.Naziv
 ORDER BY BrojVozila DESC 
---------------------------------------------------------------------------
-
-
-
+-
 ---------------- Vjezba 2
------------------------------------------------------------------------------------
 -- prebacivanje na bazu AdventureWorksOBP
 USE AdventureWorksOBP
 GO
 
------------------------------------------------------------------------------------
--- Vje�be 1.
-
--- Vje�ba 1.1.
 -- Napravite pogled koji �e dohva�ati sve iz tablice Kupac
 CREATE VIEW p1 
 AS
 SELECT * FROM Kupac
 GO
 
--- Vje�ba 1.1.a)
 -- Iskoristite pogled za dohva�anje svih zapisa
 SELECT * FROM p1 
 GO
 
--- Vje�ba 1.1.b)
 -- Iskoristite pogled za dohva�anje onih osoba �ije ime zapo�inje sa �L� i prezime zavr�ava na �a�
 SELECT * FROM p1 
 WHERE Ime LIKE 'L%' AND Prezime LIKE '%a'
 GO
 
--- Vje�ba 1.1.c)
 -- Iskoristite pogled za ispis svih ID-eva gradova i broja osoba koje �ive u tom gradu, 
--- padaju�e prema broju osoba
--- (pomo�u grupiranja i pomo�u podupita)
--- pomo�u grupiranja
+-- padaju�e prema broju osoba (pomo�u grupiranja i pomo�u podupita) \ pomo�u grupiranja
 SELECT GradID, COUNT(*) AS BrojOsoba 
 FROM p1 
 GROUP BY GradID 
@@ -395,20 +270,13 @@ FROM p1 AS mq
 ORDER BY BrojOsoba DESC
 GO
 
--- Vje�ba 1.1.d)
--- Iskoristite pogled tako da ispi�ete ime i prezime te pokraj svakoga 
--- ispi�ite njegov naziv grada i naziv dr�ave
-SELECT 
-	p1.Ime, 
-	p1.Prezime,
-	g.Naziv as 'Grad',
-	d.Naziv as 'Dr�ava'
+-- Iskoristite pogled tako da ispi�ete ime i prezime te pokraj svakoga  ispi�ite njegov naziv grada i naziv dr�ave
+SELECT p1.Ime, p1.Prezime, g.Naziv as 'Grad', d.Naziv as 'Dr�ava'
 FROM p1
 LEFT JOIN Grad AS g ON p1.GradID = g.IDGrad
 LEFT JOIN Drzava AS d ON g.DrzavaID= d.IDDrzava
 GO
 
--- Vje�ba 1.2)
 -- Promijenite pogled tako da ne uklju�uje stupce Email, Telefon i GradID
 ALTER VIEW p1 
 AS
@@ -418,62 +286,31 @@ GO
 SELECT * FROM p1 
 GO
 
--- Vje�ba 1.2)
--- Uklonite pogled
-DROP VIEW p1
-GO
-
-
------------------------------------------------------------------------------------
--- Vje�be 2.
-
--- Vje�ba 2.1)
 -- Pripremite sljede�e izvje�taje u obliku pogleda:
-
--- Vje�ba 2.1.a)
 -- Ispi�ite nazive svih kupaca, te za svakoga ispi�ite email, grad i naziv dr�ave u kojoj je smje�ten
 -- Tablice: Kupac, Grad, Drzava
 
 CREATE VIEW p2 AS
-SELECT 
-	k.Ime,
-	k.Prezime,
-	k.Email,
-	g.Naziv AS Grad,
-	d.Naziv AS Drzava
+SELECT k.Ime, k.Prezime, k.Email, g.Naziv AS Grad, d.Naziv AS Drzava
 FROM Kupac AS k
 LEFT JOIN Grad AS g ON k.GradID = g.IDGrad
 LEFT JOIN Drzava AS d ON g.DrzavaID = d.IDDrzava
 GO
--- provjera
-SELECT * FROM p2
-GO
 
--- Vje�ba 2.1.b)
 -- Ispi�ite sve dr�ave i za svaku od njih ispi�ite koliko kupaca iz nje postoji
 -- Tablice: Kupac, Grad, Drzava
-
 CREATE VIEW p3 AS
-SELECT 
-	d.Naziv AS Drzava,
-	COUNT(k.IDKupac) AS BrojKupaca
+SELECT d.Naziv AS Drzava, COUNT(k.IDKupac) AS BrojKupaca
 FROM Kupac AS k
 LEFT JOIN Grad AS g ON k.GradID = g.IDGrad
 LEFT JOIN Drzava AS d ON g.DrzavaID = d.IDDrzava
 GROUP BY d.Naziv
 GO
--- provjera
-SELECT * FROM p3
-GO
 
--- Vje�ba 2.1.c)
 -- Ispi�ite nazive svih proizvoda koje je kupilo >300 kupaca
 -- Tablice: Kupac, Racun, Stavka i Proizvod
-
 CREATE VIEW p4 AS
-SELECT 
-	p.Naziv,
-	COUNT(k.IDKupac) AS BrojKupaca
+SELECT p.Naziv, COUNT(k.IDKupac) AS BrojKupaca
 FROM Proizvod AS p
 INNER JOIN Stavka AS s ON s.ProizvodID = p.IDProizvod
 INNER JOIN Racun AS r ON s.RacunID = r.IDRacun
@@ -481,28 +318,17 @@ INNER JOIN Kupac AS k ON r.KupacID = k.IDKupac
 GROUP BY p.Naziv
 HAVING COUNT(k.IDKupac) > 300
 GO
--- provjera
-SELECT * FROM p4
-GO
 
--- Vje�ba 2.1.d)
 -- Ispi�ite nazive i zaradu 5 proizvoda koji se najbolje prodaju
 -- Tablice: Stavka i Proizvod
-
 CREATE VIEW p5 AS
-SELECT TOP 5
-	p.Naziv,
-	SUM(s.UkupnaCijena) AS Zarada
+SELECT TOP 5 p.Naziv, SUM(s.UkupnaCijena) AS Zarada
 FROM Proizvod AS p
 INNER JOIN Stavka AS s ON s.ProizvodID = p.IDProizvod
 GROUP BY p.Naziv
 ORDER BY Zarada DESC
 GO
--- provjera
-SELECT * FROM p5
-GO
 
--- Vje�ba 2.1.e)
 -- Uklonite sve poglede
 DROP VIEW p2
 DROP VIEW p3
@@ -510,191 +336,67 @@ DROP VIEW p4
 DROP VIEW p5
 GO
 
-
------------------------------------------------------------------------------------
-
--- Vje�be 3.
-
--- Vje�ba 3.1)
 -- Napravite pogled koji vra�a imena i prezimena te e-mailove svih kupaca iz Zagreba.
-
 CREATE VIEW p6 AS
-SELECT 
-	k.Ime,
-	k.Prezime,
-	k.Email,
-	g.Naziv AS Grad
+SELECT k.Ime, k.Prezime, k.Email, g.Naziv AS Grad
 FROM Kupac AS k
 INNER JOIN Grad AS g ON k.GradID = g.IDGrad
 WHERE g.Naziv = 'Zagreb'
 GO
--- provjera
-SELECT * FROM p6
-GO
 
--- Vje�ba 3.2)
 -- Promijenite pogled tako da dohva�a i sve kupce iz Splita.
-
 ALTER VIEW p6 AS
-SELECT 
-	k.Ime,
-	k.Prezime,
-	k.Email,
-	g.Naziv AS Grad
+SELECT  k.Ime, k.Prezime, k.Email, g.Naziv AS Grad
 FROM Kupac AS k
 INNER JOIN Grad AS g ON k.GradID = g.IDGrad
 WHERE g.Naziv = 'Zagreb' OR g.Naziv = 'Split'
 GO
--- provjera
-SELECT * FROM p6
-GO
 
--- Vje�ba 3.3)
 -- Koriste�i pogled ispi�ite broj kupaca iz Zagreba i broj kupaca iz Splita.
-
-SELECT 
-	Grad,
-	COUNT(*) AS Broj
+SELECT Grad, COUNT(*) AS Broj
 FROM p6
 GROUP BY Grad
 GO
 
--- Vje�ba 3.4)
--- Uklonite pogled.
-
-DROP VIEW p6
-GO
-
-
 ---------------- Vjezba 3
---------------------------------------------------------------------------
--- Vje�ba 1.
---------------------------------
 -- Napravite pogled koji �e dohva�ati sve stupce i retke iz tablice Kategorija
 CREATE VIEW v1 AS
 SELECT * FROM Kategorija
-GO
---------------------------------
+GO 
 
---------------------------------
--- Vje�ba 1a.
---------------------------------
 -- Ispi�ite nazive kategorija, potkategorija i proizvoda (koristite kreirani pogled)
-SELECT
-	v1.Naziv as 'Kategorija',
-	Potkategorija.Naziv as 'Potkategorija',
-	Proizvod.Naziv as 'Proizvod'
+SELECT v1.Naziv as 'Kategorija', Potkategorija.Naziv as 'Potkategorija', Proizvod.Naziv as 'Proizvod'
 FROM v1
 RIGHT JOIN Potkategorija ON Potkategorija.KategorijaID = v1.IDKategorija
 RIGHT JOIN Proizvod ON Proizvod.PotkategorijaID = Potkategorija.IDPotkategorija
 GO
---------------------------------
 
---------------------------------
--- Vje�ba 1b.
---------------------------------
 -- Pomo�u pogleda umetnite kategoriju naziva �Alarmi�
 INSERT INTO v1 (Naziv) VALUES ('Alarmi')
-GO
---------------------------------
+GO 
 
---------------------------------
--- Vje�ba 1c.
---------------------------------
 -- Pomo�u pogleda promijenite kategoriji �Alarmi� naziv u �Aktivna za�tita�
 UPDATE v1 SET Naziv = 'Aktivna za�tita' WHERE Naziv = 'Alarmi'
 GO
---------------------------------
 
---------------------------------
--- Vje�ba 1d.
---------------------------------
 -- Pomo�u pogleda obri�ite kategoriju �Aktivna za�tita�
 DELETE FROM v1 WHERE Naziv = 'Aktivna za�tita'
 GO
---------------------------------
 
---------------------------------
--- Vje�ba 1e.
---------------------------------
--- Uklonite pogled
-DROP VIEW v1
-GO
---------------------------------
-
---------------------------------------------------------------------------
--- Vje�ba 2.
---------------------------------
 -- Napravite pogled koji �e dohva�ati naziv grada, naziv dr�ave u kojoj se nalazi te sve 
 -- podatke o kupcima koji im pripadaju (tablice Grad, Drzava, Kupac).
 CREATE VIEW v2 AS
-SELECT
-	Drzava.Naziv as 'Dr�ava',
-	Grad.Naziv as 'Grad',
-	Kupac.* 
+SELECT Drzava.Naziv as 'Dr�ava', Grad.Naziv as 'Grad', Kupac.* 
 FROM Kupac
 LEFT JOIN Grad ON Kupac.GradID = Grad.IDGrad
 LEFT JOIN Drzava ON Grad.DrzavaID = Drzava.IDDrzava
 GO
--- provjera
-SELECT * FROM v2
-GO
---------------------------------
 
---------------------------------
--- Vje�ba 2a.
---------------------------------
--- Probajte pomo�u pogleda umetnuti novi grad. �to se dogodilo?
-INSERT INTO v2 (Grad) VALUES ('Bedekov�ina')
-GO
-SELECT * FROM Grad
-GO
-
---------------------------------
-
---------------------------------
--- Vje�ba 2b.
---------------------------------
--- Probajte pomo�u pogleda umetnuti novu dr�avu. �to se dogodilo?
-INSERT INTO v2 (Dr�ava) VALUES ('Uzbekistan')
-GO
-SELECT * FROM Drzava
-GO
---------------------------------
-
---------------------------------
--- Vje�ba 2c.
---------------------------------
--- Probajte pomo�u pogleda umetnuti novog kupca. �to se dogodilo? Mo�ete li vidjeti novododanog kupca kroz pogled? Postoji li on u tablici?
-INSERT INTO v2 (Ime, Prezime) 
-	VALUES ('Pero','Peri�')
-GO
-SELECT * FROM Kupac
-GO
-SELECT * FROM v2
-GO
---------------------------------
-
---------------------------------
--- Vje�ba 2d.
---------------------------------
--- Uklonite pogled
-DROP VIEW v2
-GO
---------------------------------
-
---------------------------------------------------------------------------
--- Vje�ba 3.
---------------------------------
 -- Napravite pogled koji �e dohva�ati sve kreditne kartice koje su tipa Visa ili MasterCard (tablica KreditnaKastica)
 CREATE VIEW v3 AS
 SELECT * FROM KreditnaKartica WHERE Tip IN ('Visa', 'MasterCard')
 GO
---------------------------------
 
---------------------------------
--- Vje�ba 3a i 3b.
---------------------------------
 -- Umetnite zapis o kreditnoj kartici tipa American Express.
 -- Dohvatiti umetnuti redak pomo�u pogleda. �to se dogodilo? Je li redak uspje�no umetnut u tablicu?
 INSERT INTO v3 (Tip, Broj,IstekMjesec, IstekGodina) 
@@ -703,11 +405,6 @@ GO
 SELECT * FROM v3 WHERE Tip = 'American Express'
 GO
 
---------------------------------
-
---------------------------------
--- Vje�ba 3c.
---------------------------------
 -- Promijenite pogled tako da ne dopu�ta umetanje/izmjenu redaka koji ne�e biti vidljivi kroz njega.
 ALTER VIEW v3 AS
 SELECT * FROM KreditnaKartica WHERE Tip IN ('Visa', 'MasterCard')
@@ -716,35 +413,18 @@ GO
 INSERT INTO v3 (Tip, Broj,IstekMjesec, IstekGodina) 
 VALUES ('American Express', '111222333444', 12, 2012)
 GO
---------------------------------
 
---------------------------------
--- Vje�ba 3d.
---------------------------------
 -- Umetnite zapis o kreditnoj kartici tipa MasterCard. �to se dogodilo? Je li redak uspje�no umetnut u tablicu?
 INSERT INTO v3 (Tip, Broj,IstekMjesec, IstekGodina) 
 VALUES ('MasterCard', '111222333444', 12, 2012)
 GO
---------------------------------
 
---------------------------------
--- Vje�ba 3e.
---------------------------------
 -- Promijenite pogled tako da dopu�ta umetanje/izmjenu redaka koji ne�e biti vidljivi kroz njega.
 ALTER VIEW v3 AS
 SELECT * FROM KreditnaKartica WHERE Tip IN ('Visa', 'MasterCard')
 GO
---------------------------------
 
---------------------------------
--- Vje�ba 3f.
---------------------------------
--- Uklonite pogled
-DROP VIEW v3
-GO
---------------------------------
 
--- Vje�be 4.
 /*
 Napravite tablicu Film sa stupcima IDFilm, Naziv, GodinaProizvodnje, TrajanjeMinuta i KratkiOpis. Umetnite koji redak. 
 Napravite pogled koji dohva�a sve iz tablice Film
@@ -799,7 +479,7 @@ DROP VIEW v4
 DROP TABLE Film
 GO
 
--- Vje�be 5.
+
 /*
 Napravite pogled koji dohva�a 10 proizvoda koji su najvi�e prodavani. Stupci koje pogled vra�a neka budu ID i naziv te ukupna koli�ina prodanih proizvoda.
 Pogledajte SELECT upit pogleda kroz su�elje i pomo�u sistemske procedure sp_helptext
@@ -874,12 +554,6 @@ GO
 
 
 ---------------- Vjezba 4
--- prebacivanje na bazu
-USE AdventureWorksOBP
-GO
-
---------------------------------------------------------------------------
--- Vje�be 1.
 DBCC TRACEON(3604)
 DBCC IND('AdventureWorksOBP', 'Drzava', -1)
 -- a. DBCC IND vra�a 2 retka, ali samo jedan od njih ima PageType jednak 1. 
@@ -892,7 +566,6 @@ DBCC PAGE('AdventureWorksOBP', 1, 77, 3) WITH TABLERESULTS
 --    Za 3. redak imamo: "Slot 2 Offset 0x9e Length 53", dakle, njegova duljina je 53 bajta.
 -- d. Reci su poslagani po stupcu IDDrzava, uzlazno od a prema z.
 -- e. Redak ispred Njema�ka je Hrvatska, a iza je Bosna i Hercegovina.
-
 
 -- Vje�be 2.
 DBCC TRACEON(3604)
@@ -912,19 +585,7 @@ DBCC IND('AdventureWorksOBP', 'Kupac', -1)
 
 DBCC PAGE('AdventureWorksOBP', 1, ???, 3) WITH TABLERESULTS
 
-
----------------- Vjezba 5
------------------------------------------------------------------------------------
------------------------------------------------------------------------------------
--- prebacivanje na bazu AdventureWorksOBP
-USE AdventureWorksOBP
-GO
-
------------------------------------------------------------------------------------
--- Optimizacija indeksa
--- Uklonite sve indekse osim klasteriranih s tablica Proizvod i Racun.
--- Postavite SET STATISTICS IO ON
-
+---------------------------------------
 SET STATISTICS IO ON
 
 -- Zadatak 1.
@@ -953,7 +614,6 @@ GO
 
 -- Zadatak 2.
 -- Optimizirajte upit: SELECT IDProizvod, PotkategorijaID FROM Proizvod WHERE PotkategorijaID = 12 
-
 -- a.) Koliko stranica pregled RDBMS?
 SELECT IDProizvod, PotkategorijaID FROM Proizvod WHERE PotkategorijaID = 12
 -- (28 row(s) affected)
@@ -977,7 +637,6 @@ GO
 -- Zadatak 3.
 -- Optimizirajte upit:
 -- SELECT ProductID, Name, ProductSubcategoryID FROM Production.Product WHERE ProductSubcategoryID = 12 
-
 SELECT IDProizvod, Naziv, PotkategorijaID FROM Proizvod WHERE PotkategorijaID = 12
 -- (28 row(s) affected)
 -- Table 'Proizvod'. Scan count 1, logical reads 8, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
@@ -1010,7 +669,6 @@ GO
 -- Zadatak 4.
 -- Optimizirajte upit:
 -- SELECT IDProizvod, Naziv, PotkategorijaID FROM Proizvod WHERE PotkategorijaID = 12 AND Naziv LIKE 'ML%'
-
 SELECT IDProizvod, Naziv, PotkategorijaID FROM Proizvod WHERE PotkategorijaID = 12 AND Naziv LIKE 'ML%'
 -- (8 row(s) affected)
 -- Table 'Proizvod'. Scan count 1, logical reads 8, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
@@ -1029,7 +687,6 @@ GO
 -- Zadatak 5.
 -- Optimizirajte upit:
 -- SELECT Boja, COUNT(*) AS Cnt FROM Proizvod WHERE PotkategorijaID = 12 GROUP BY Boja ORDER BY Cnt DESC
-
 SELECT Boja, COUNT(*) AS Cnt FROM Proizvod WHERE PotkategorijaID = 12 GROUP BY Boja ORDER BY Cnt DESC
 -- (2 row(s) affected)
 -- Table 'Proizvod'. Scan count 1, logical reads 8, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
@@ -1048,7 +705,6 @@ GO
 -- Zadatak 6.
 -- Optimizirajte upit:
 -- SELECT DatumIzdavanja FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59'  
-
 -- a.) Koliko stranica pregled RDBMS?
 SELECT DatumIzdavanja FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59'
 -- (4 row(s) affected)
@@ -1072,7 +728,6 @@ GO
 -- Zadatak 7.
 -- Optimizirajte upit:
 -- SELECT IDRacun, DatumIzdavanja FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59'  
-
 -- a.) Koliko stranica pregled RDBMS?
 SELECT IDRacun, DatumIzdavanja FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59'
 -- (4 row(s) affected)
@@ -1096,7 +751,6 @@ GO
 -- Zadatak 8.
 -- Optimizirajte upit:
 -- SELECT IDRacun, BrojRacuna, DatumIzdavanja FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59'  
-
 SELECT IDRacun, BrojRacuna, DatumIzdavanja FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59' 
 -- (4 row(s) affected)
 -- Table 'Racun'. Scan count 1, logical reads 202, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
@@ -1129,7 +783,6 @@ GO
 -- Zadatak 9.
 -- Optimizirajte upit:
 -- SELECT IDRacun FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59' AND BrojRacuna LIKE 'S%'  
-
 SELECT IDRacun FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59' AND BrojRacuna LIKE 'S%' 
 -- (4 row(s) affected)
 -- Table 'Racun'. Scan count 1, logical reads 202, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
@@ -1149,7 +802,6 @@ GO
 -- Zadatak 10.
 -- Optimizirajte upit:
 -- SELECT KupacID, COUNT(*) AS Cnt  FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59' GROUP BY KupacID ORDER BY Cnt DESC
-
 SELECT KupacID, COUNT(*) AS Cnt  FROM Racun WHERE DatumIzdavanja BETWEEN '20010702' AND '20010702 23:59:59' GROUP BY KupacID ORDER BY Cnt DESC
 -- (4 row(s) affected)
 -- Table 'Racun'. Scan count 1, logical reads 202, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
@@ -1166,24 +818,9 @@ SELECT KupacID, COUNT(*) AS Cnt  FROM Racun WHERE DatumIzdavanja BETWEEN '200107
 DROP INDEX Racun.i1
 GO
 
------------------------------------------------------------------------------------
-
-
-
----------------- Vjezba 6
------------------------------------------------------------------------------------
-/*
-Vje�be se rade na bazi AdventureWorksOBP. 
-*/
-USE AdventureWorksOBP
-GO
------------------------------------------------------------------------------------
--- Zadatak 1.
-/*
-VARIJABLE
+/* VARIJABLE
 Deklarirajte varijable @Ime i @Prezime i dodijelite im neke vrijednosti. 
-Ispi�ite dodijeljene vrijednosti.
-*/
+Ispi�ite dodijeljene vrijednosti. */
 DECLARE @Ime nvarchar(50)
 DECLARE @Prezime nvarchar(50)
 
@@ -1194,13 +831,10 @@ PRINT @Ime
 PRINT @Prezime
 PRINT 'Korisnik: ' + @Ime + ' ' + @Prezime
 GO
------------------------------------------------------------------------------------
--- Zadatak 2.
-/*
-VARIJABLE
+
+/* VARIJABLE
 Deklarirajte varijable @Ime i @Prezime i dodijelite im vrijednosti iz tablice Kupac za IDKupac jednak 8812. 
-Ispi�ite dodijeljene vrijednosti.
-*/
+Ispi�ite dodijeljene vrijednosti. */
 DECLARE @Ime nvarchar(50)
 DECLARE @Prezime nvarchar(50)
 
@@ -1208,13 +842,10 @@ SELECT @Ime = Ime, @Prezime = Prezime FROM Kupac WHERE IDKupac = 8812
 
 PRINT 'Korisnik: ' + @Ime + ' ' + @Prezime
 GO
------------------------------------------------------------------------------------
--- Zadatak 3.
-/*
-VARIJABLE
+
+/* VARIJABLE
 Deklarirajte varijable @Ime i @Prezime i dodijelite im vrijednosti iz tablice Kupac tako da odaberete sve retke iz tablice. 
-Ispi�ite dodijeljene vrijednosti.
-*/
+Ispi�ite dodijeljene vrijednosti. */
 DECLARE @Ime nvarchar(50)
 DECLARE @Prezime nvarchar(50)
 
@@ -1222,16 +853,15 @@ SELECT @Ime = Ime, @Prezime = Prezime FROM Kupac
 
 PRINT 'Korisnik: ' + @Ime + ' ' + @Prezime
 GO
+
 -----------------------------------------------------------------------------------
 SET NOCOUNT ON
 -----------------------------------------------------------------------------------
--- Zadatak 4.
-/*
-IF-ELSE IF-ELSE i SCOPE_IDENTITY()
+
+/* IF-ELSE IF-ELSE i SCOPE_IDENTITY()
 Provjerite broj zapisa u tablici Kupac. 
 Ako ih ima vi�e ili jednako 20000, ispi�ite �Postoji vi�e od 20000 kupaca :)�. 
-Ako ih ima manje, ispi�ite �Jo� nismo dostigli 20000 kupaca :(�
-*/
+Ako ih ima manje, ispi�ite �Jo� nismo dostigli 20000 kupaca :(� */
 DECLARE @Broj int
 SELECT @Broj = COUNT(*) FROM dbo.Kupac
 IF @Broj >= 20000
@@ -1239,24 +869,18 @@ IF @Broj >= 20000
 ELSE
 	PRINT 'Jo� nismo dostigli 20000 kupaca :('
 GO
------------------------------------------------------------------------------------
--- Zadatak 5.
-/*
-IF-ELSE IF-ELSE i SCOPE_IDENTITY()
-Umetnite zapis u tablicu Drzava, generiranu IDENTITY vrijednost dodijelite nekoj varijabli pa je ispi�ite.
-*/
+
+/* IF-ELSE IF-ELSE i SCOPE_IDENTITY()
+Umetnite zapis u tablicu Drzava, generiranu IDENTITY vrijednost dodijelite nekoj varijabli pa je ispi�ite. */
 DECLARE @NoviID int
 INSERT INTO Drzava VALUES ('Gruzija')
 SET @NoviID = SCOPE_IDENTITY()
 PRINT @NoviID
 GO
------------------------------------------------------------------------------------
--- Zadatak 6.
-/*
-IF-ELSE IF-ELSE i SCOPE_IDENTITY()
+
+/* IF-ELSE IF-ELSE i SCOPE_IDENTITY()
 Umetnite zapis u tablicu Drzava i u varijablu spremite generiranu IDENTITY vrijednost. 
-Iskoristite tu vrijednost da biste za tu dr�avu umetnuli dva grada.
-*/
+Iskoristite tu vrijednost da biste za tu dr�avu umetnuli dva grada. */
 DECLARE @IDDrzavaNovi int
 INSERT INTO Drzava VALUES ('Kina')
 select SCOPE_IDENTITY()
@@ -1265,15 +889,12 @@ SET @IDDrzavaNovi = SCOPE_IDENTITY()
 INSERT INTO Grad VALUES ('�angaj', @IDDrzavaNovi)
 INSERT INTO Grad VALUES ('Peking', @IDDrzavaNovi)
 GO
------------------------------------------------------------------------------------
--- Zadatak 7.
-/*
-PROCEDURE BEZ PARAMETARA
+
+/* PROCEDURE BEZ PARAMETARA
 Napi�ite proceduru koja dohva�a sve retke iz tablice Drzava. 
 Pozovite proceduru. 
 Promijenite proceduru tako da vra�a rezultate poredane padaju�e po nazivu dr�ave. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p7
 AS
 SELECT * FROM Drzava
@@ -1292,14 +913,11 @@ GO
 
 DROP PROC p7
 GO
------------------------------------------------------------------------------------
--- Zadatak 8.
-/*
-PROCEDURE BEZ PARAMETARA
+
+/* PROCEDURE BEZ PARAMETARA
 Napi�ite proceduru koja dohva�a prvih 5 redaka iz tablice Racun, prvih 5 redaka iz tablice Stavka i prvih 5 redaka iz tablice Proizvod. 
 Pozovite proceduru. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p8
 AS
 SELECT TOP 5 * FROM Racun
@@ -1312,14 +930,11 @@ GO
 
 DROP PROC p8
 GO
------------------------------------------------------------------------------------
--- Zadatak 9.
-/*
-PROCEDURE S ULAZNIM PARAMETRIMA
+
+/* PROCEDURE S ULAZNIM PARAMETRIMA
 Napi�ite proceduru koja prima @ID proizvoda i vra�a samo taj proizvod iz tablice Proizvod. 
 Pozovite proceduru na oba na�ina. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p9
 	@IDPr int
 AS
@@ -1332,14 +947,11 @@ GO
 
 DROP PROC p9
 GO
------------------------------------------------------------------------------------
--- Zadatak 10.
-/*
-PROCEDURE S ULAZNIM PARAMETRIMA
+
+/* PROCEDURE S ULAZNIM PARAMETRIMA
 Napi�ite proceduru koja prima dvije cijene i vra�a nazive i cijene svih proizvoda �ija je cijena u zadanom rasponu. 
 Pozovite proceduru na oba na�ina. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p10
 	@Cijena1 money,
 	@Cijena2 money
@@ -1354,18 +966,15 @@ GO
 
 DROP PROC p10
 GO
------------------------------------------------------------------------------------
--- Zadatak 11.
-/*
-PROCEDURE S ULAZNIM PARAMETRIMA
+
+/* PROCEDURE S ULAZNIM PARAMETRIMA
 Napi�ite proceduru koja prima naziv dr�ave i naziv grada. 
 Neka procedura umetne grad koji pripada zadanoj dr�avi. 
 Pazite na to postoji li ve� dr�ava upisana u tablicu Drzava ili ne postoji. 
 Ako postoji, nemojte je umetati ponovno. 
 Pozovite proceduru za dr�avu �Japan� i grad �Osaka�. 
 Pozovite proceduru za dr�avu �Japan� i grad �Tokyo� i potvrdite da radi ispravno. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p11
 	@Drzava nvarchar(50),
 	@Grad nvarchar(50)
@@ -1394,15 +1003,12 @@ GO
 
 DROP PROC p11
 GO
------------------------------------------------------------------------------------
--- Zadatak 12.
-/*
-PROCEDURE S IZLAZNIM PARAMETRIMA
+
+/* PROCEDURE S IZLAZNIM PARAMETRIMA
 Napi�ite proceduru koja prima parametre @IDProizvod i @Boja. Parametar @Boja neka bude izlazni parametar. 
 Neka procedura za zadani proizvod vrati njegovu boju pomo�u izlaznog parametra. 
 Pozovite proceduru i ispi�ite vra�enu vrijednost. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p12
 	@IDProizvod int,
 	@Boja nvarchar(15) OUTPUT
@@ -1417,16 +1023,13 @@ GO
 
 DROP PROC p12
 GO
------------------------------------------------------------------------------------
--- Zadatak 13.
-/*
-PROCEDURE S IZLAZNIM PARAMETRIMA
+
+/* PROCEDURE S IZLAZNIM PARAMETRIMA
 Napi�ite proceduru koja prima kriterij po kojemu �ete filtrirati prezimena iz tablice Kupac. 
 Neka procedura pomo�u izlaznog parametra vrati broj zapisa koji zadovoljavaju zadani kriterij. 
 Neka procedura vrati i sve zapise koji zadovoljavaju kriterij. 
 Pozovite proceduru i ispi�ite vra�enu vrijednost. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p13
 	@Filter nvarchar(50),
 	@BrojZapisa int OUTPUT
@@ -1442,13 +1045,10 @@ GO
 
 DROP PROC p13
 GO
------------------------------------------------------------------------------------
--- Zadatak 14.
-/*
-PROCEDURE S IZLAZNIM PARAMETRIMA
+
+/* PROCEDURE S IZLAZNIM PARAMETRIMA
 Napi�ite proceduru koja za zadanog komercijalistu pomo�u izlaznih parametara vra�a njegovo ime 
-i prezime te ukupnu zara�enu koli�inu novaca.
-*/
+i prezime te ukupnu zara�enu koli�inu novaca. */
 CREATE PROC p14
 	@KomercijalistID int,
 	@Ime nvarchar(50) OUTPUT,
@@ -1474,15 +1074,12 @@ GO
 
 DROP PROC p14
 GO
------------------------------------------------------------------------------------
--- Zadatak 15. jedno mogu�e rje�enje (bolje).
-/*
-DODATNI ZADACI
+
+/* DODATNI ZADACI
 Napi�ite proceduru koja ume�e novu kategoriju i kroz izlazni parametar vra�a generiranu IDENTITY vrijednost. 
 Ako ve� postoji kategorija zadanog imena, ne treba je upisivati ponovno i u tom slu�aju kroz izlazni parametar vratite vrijednost -1. 
 Pozovite proceduru i ispi�ite vra�enu vrijednost. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p15
 	@Kategorija nvarchar(50),
 	@ID int OUTPUT
@@ -1497,15 +1094,12 @@ ELSE
 		SET @ID = -1
 	END
 GO
------------------------------------------------------------------------------------
--- Zadatak 15. drugo mogu�e rje�enje (lo�ije).
-/*
-DODATNI ZADACI
+
+/* DODATNI ZADACI
 Napi�ite proceduru koja ume�e novu kategoriju i kroz izlazni parametar vra�a generiranu IDENTITY vrijednost. 
 Ako ve� postoji kategorija zadanog imena, ne treba je upisivati ponovno i u tom slu�aju kroz izlazni parametar vratite vrijednost -1. 
 Pozovite proceduru i ispi�ite vra�enu vrijednost. 
-Uklonite proceduru.
-*/
+Uklonite proceduru. */
 CREATE PROC p15
 	@Kategorija nvarchar(50),
 	@ID int OUTPUT
@@ -1534,14 +1128,11 @@ GO
 
 DROP PROC p15
 GO
------------------------------------------------------------------------------------
--- Zadatak 16.
-/*
-DODATNI ZADACI
+
+/* DODATNI ZADACI
 Napi�ite proceduru koja kroz tri izlazna parametra vra�a najmanju, najve�u i prosje�nu cijenu proizvoda iz tablice Proizvod. 
 Neka procedura vrati i sve proizvode koji imaju cijenu ve�u od 0 i manju od prosje�ne. 
-Pozovite proceduru, ispi�ite vra�ene vrijednosti i uklonite proceduru.
-*/
+Pozovite proceduru, ispi�ite vra�ene vrijednosti i uklonite proceduru. */
 CREATE PROC p16
 	@Najmanja money OUTPUT,
 	@Najveca money OUTPUT,
@@ -1565,15 +1156,12 @@ GO
 
 DROP PROC p16
 GO
------------------------------------------------------------------------------------
--- Zadatak 17.
-/*
-PROCEDURE S RETURN PARAMETRIMA
+
+/* PROCEDURE S RETURN PARAMETRIMA
 Napi�ite proceduru koja prima ime i prezime osobe 
 i vra�a 0 kao RETURN parametar ako osoba postoji u tablici, 
 odnosno 200 ako osoba ne postoji. 
-Pozovite proceduru i ispi�ite RETURN vrijednost. 
-*/
+Pozovite proceduru i ispi�ite RETURN vrijednost.  */
 CREATE PROC p15
 	@Ime nvarchar(50),
 	@Prezime nvarchar(50)
@@ -1591,12 +1179,9 @@ DECLARE @RetVal int
 EXEC @RetVal = p15 'Amy', 'Albertss'
 PRINT @RetVal
 GO
------------------------------------------------------------------------------------
--- Zadatak 18.
-/*
-PROCEDURE S RETURN PARAMETRIMA
-Promijenite proceduru iz prethodnog zadatka tako da bude za�ti�ena.
-*/
+
+/* PROCEDURE S RETURN PARAMETRIMA
+Promijenite proceduru iz prethodnog zadatka tako da bude za�ti�ena. */
 ALTER PROC p15
 	@Ime nvarchar(50),
 	@Prezime nvarchar(50)
@@ -1610,27 +1195,12 @@ IF @BrojOsoba = 0
 ELSE
 	RETURN 0
 GO
------------------------------------------------------------------------------------
--- Zadatak 19.
-/*
-PROCEDURE S RETURN PARAMETRIMA
-Uklonite proceduru.
-*/
-DROP PROC p15
-GO
------------------------------------------------------------------------------------
 
-
----------------- Vjezba 7-8
------------------------------------------------------------------------------------
--- Zadatak 1.
-/*
-ODGO�ENA PROVJERA REFERENCI
+/* ODGO�ENA PROVJERA REFERENCI
 Napravite tablicu Student koja se sastoji od stupaca 
 IDStudent, Ime, Prezime i JMBAG. 
 Napi�ite proceduru koja vra�a ime i prezime 
-iz te tablice i pozovite je.
-*/
+iz te tablice i pozovite je. */
 CREATE TABLE Student
 (
 	IDStudent int PRIMARY KEY IDENTITY,
@@ -1647,28 +1217,22 @@ GO
 
 EXEC p18
 GO
------------------------------------------------------------------------------------
--- Zadatak 2.
-/*
-ODGO�ENA PROVJERA REFERENCI
+
+/* ODGO�ENA PROVJERA REFERENCI
 Promijenite proceduru tako da uz ime i prezime 
 vra�a i datum ro�enja (nepostoje�i stupac!). 
-�to se desilo?
-*/
+�to se desilo? */
 ALTER PROC p18
 AS
 SELECT Ime, Prezime, DatumRodjenja FROM Student
 GO
------------------------------------------------------------------------------------
--- Zadatak 3.
-/*
-ODGO�ENA PROVJERA REFERENCI
+
+/* ODGO�ENA PROVJERA REFERENCI
 Promijenite proceduru tako da vra�a sve zapise 
 iz tablice IzmisljenaTablica. 
 �to se desilo? 
 Pokrenite proceduru. 
-�to se desilo?
-*/
+�to se desilo? */
 ALTER PROC p18
 AS
 SELECT * FROM IzmisljenaTablica
@@ -1676,16 +1240,12 @@ GO
 
 EXEC p18
 GO
------------------------------------------------------------------------------------
--- Zadatak 4.
-/*
-ODGO�ENA PROVJERA REFERENCI
+
+/* ODGO�ENA PROVJERA REFERENCI
 Napravite tablicu IzmisljenaTablica 
 i pokrenite proceduru. 
-�to se desilo?
-*/
-CREATE TABLE IzmisljenaTablica
-(
+�to se desilo? */
+CREATE TABLE IzmisljenaTablica(
 	IDIzmisljenaTablica int PRIMARY KEY IDENTITY,
 	IzmisljeniStupac nvarchar(50)
 )
@@ -1693,18 +1253,14 @@ GO
 
 EXEC p18
 GO
------------------------------------------------------------------------------------
--- Zadatak 5.
-/*
-CRUD OPERACIJE
+
+/* CRUD OPERACIJE
 Svaka operacija posebno.
 Napravite procedure koje rade CRUD operacije 
 na tablici Student tako da svakoj operaciji 
 dodijelite posebnu proceduru. 
 Iskoristite procedure za umetanje, izmjenu, 
-dohva�anje i brisanje zapisa.
-*/
-
+dohva�anje i brisanje zapisa. */
 CREATE PROC InsertStudent
 	@IDStudent int OUTPUT, 
 	@Ime nvarchar(50), 
@@ -1755,16 +1311,13 @@ EXEC DeleteStudent 1
 
 EXEC GetStudent 1
 GO
------------------------------------------------------------------------------------
--- Zadatak 6.
-/*
-CRUD OPERACIJE
+
+/* CRUD OPERACIJE
 INSERT/UPDATE zajedno, ostalo posebno.
 Napravite procedure koje rade CRUD operacije na tablici Student 
 tako da operacije umetanja i izmjene obavite u jednoj proceduri, 
 a druge dvije operacije obavite u posebnim procedurama. 
-Iskoristite procedure za umetanje, izmjenu, dohva�anje i brisanje zapisa.
-*/
+Iskoristite procedure za umetanje, izmjenu, dohva�anje i brisanje zapisa. */
 CREATE PROC MergeStudent
 	@IDStudent int OUTPUT, 
 	@Ime nvarchar(50), 
@@ -1808,16 +1361,13 @@ EXEC DeleteStudent 2
 
 EXEC GetStudent 2
 GO
------------------------------------------------------------------------------------
--- Zadatak 7.
-/*
-CRUD OPERACIJE
+
+/* CRUD OPERACIJE
 UPDATE/INSERT/DELETE zajedno.
 Napravite procedure koje rade CRUD operacije na tablici Student 
 tako da operacije umetanja, izmjene i brisanja obavite u jednoj proceduri, 
 a dohva�anje u drugoj. 
-Iskoristite procedure za umetanje, izmjenu, dohva�anje i brisanje zapisa.
-*/
+Iskoristite procedure za umetanje, izmjenu, dohva�anje i brisanje zapisa. */
 CREATE PROC ChangeStudent
 	@Operacija char(1),
 	@IDStudent int OUTPUT, 
@@ -1859,27 +1409,21 @@ EXEC ChangeStudent 'D', 3, null, null, null
 
 EXEC GetStudent 3
 GO
------------------------------------------------------------------------------------
--- Zadatak 8.
-/*
-PRETVARANJE TIPOVA PODATAKA
+
+/* PRETVARANJE TIPOVA PODATAKA
 Dohvatite brojeve ra�una i datume izdavanja za kupca s ID-em 378.
-Datume izdavanja formatirajte na hrvatski na�in.
-*/
+Datume izdavanja formatirajte na hrvatski na�in. */
 SELECT	
 	BrojRacuna,
 	CONVERT(char(10), DatumIzdavanja, 104) AS DatumIzdavanja
 FROM Racun WHERE KupacID = 378
 GO
------------------------------------------------------------------------------------
--- Zadatak 9.
-/*
-PRETVARANJE TIPOVA PODATAKA
+
+/* PRETVARANJE TIPOVA PODATAKA
 Napi�ite proceduru za umetanje zapisa u tablicu Drzava. 
 Neka procedura kroz izlazni parametar vrati vrijednost primarnog klju�a novog zapisa. 
 Pozovite proceduru i ispi�ite vra�enu vrijednost u formatu: 
-�Umetnuta je dr�ava s ID-em n�, gdje je n vrijednost primarnog klju�a.
-*/
+�Umetnuta je dr�ava s ID-em n�, gdje je n vrijednost primarnog klju�a. */
 CREATE PROC p1
 	@Naziv nvarchar(50),
 	@ID int OUTPUT
@@ -1892,56 +1436,41 @@ DECLARE @n int
 EXEC p1 'Gruzija', @n OUTPUT
 PRINT 'Umetnuta je dr�ava s ID-em ' + CAST(@n AS nvarchar(10))
 GO
------------------------------------------------------------------------------------
--- Zadatak 10.
-/*
-PRETVARANJE TIPOVA PODATAKA
+
+/* PRETVARANJE TIPOVA PODATAKA
 Dohvatite nazive svih proizvoda i uz svaki naziv u zagradi 
 ispi�ite i njegov ID te cijenu, 
-npr. �HL Road Rear Wheel (ID = 828, Cijena = 357.06)�
-*/
-SELECT 
-	Naziv + ' (ID = ' + CAST(IDProizvod AS nvarchar(50)) + ', Cijena = ' + CAST(CijenaBezPDV AS nvarchar(50)) + ')' AS Naziv
+npr. �HL Road Rear Wheel (ID = 828, Cijena = 357.06)� */
+SELECT Naziv + ' (ID = ' + CAST(IDProizvod AS nvarchar(50)) + ', Cijena = ' + CAST(CijenaBezPDV AS nvarchar(50)) + ')' AS Naziv
 FROM dbo.Proizvod
------------------------------------------------------------------------------------
--- Zadatak 11.
-/*
-NAREDBA CASE I WHILE
+
+/* NAREDBA CASE I WHILE
 Dohvatite nazive svih proizvoda i uz svaki naziv ispi�ite i naziv potkategorije. 
-Ako neke potkategorije nema, napi�ite �Nije definirana�.
-*/
-SELECT 
-	p.Naziv,
+Ako neke potkategorije nema, napi�ite �Nije definirana�. */
+SELECT p.Naziv,
 	CASE
 		WHEN pk.Naziv IS NULL THEN 'Nije definirana'
 		ELSE pk.Naziv
 	END AS NazivPotkategorije
 FROM Proizvod AS p
 LEFT JOIN Potkategorija AS pk ON p.PotkategorijaID = pk.IDPotkategorija
------------------------------------------------------------------------------------
--- Zadatak 12.
-/*
-NAREDBA CASE I WHILE
+
+/* NAREDBA CASE I WHILE
 Dohvatite naziv i cijene svih proizvoda. 
 Za cijene koje su ispod 1000, napi�ite �Jeftino�, izme�u 1000 i 2000 
-napi�ite �Prihvatljivo�, za sve ostale napi�ite �Skupo�.
-*/
-SELECT 
-	Naziv,
+napi�ite �Prihvatljivo�, za sve ostale napi�ite �Skupo�. */
+SELECT Naziv,
 	CASE
 		WHEN CijenaBezPDV < 1000 THEN 'Jeftino'
 		WHEN CijenaBezPDV BETWEEN 1000 AND 2000 THEN 'Prihvatljivo'
 		ELSE 'Skupo'
 	END AS Procjena
 FROM Proizvod
-GO
------------------------------------------------------------------------------------
--- Zadatak 13.
-/*
-NAREDBA CASE I WHILE
+GO 
+
+/* NAREDBA CASE I WHILE
 Napravite tablicu Proba sa stupcima IDProba (primarni klju� i IDENTITY) i Vrijednost (int). 
-U stupac Vrijednost unesite vrijednosti izme�u 10.000.000 i 10.015.000.
-*/
+U stupac Vrijednost unesite vrijednosti izme�u 10.000.000 i 10.015.000. */
 CREATE TABLE Proba ( IDProba int PRIMARY KEY IDENTITY, Vrijednost int )
 GO
 
@@ -1953,33 +1482,13 @@ END
 
 SELECT * FROM Proba
 GO
------------------------------------------------------------------------------------
-/*
-Svaka gre�ka u SQL Serveru ima svoju razinu ozbiljnosti
-(engl. severity level):
-	o Razine 1 do 10 predstavljaju informacije
-	o Razine 11 do 16 predstavljaju korisni�ke gre�ke
-		� 11 � tra�eni objekt ne postoji (npr. DROP TABLE NemaMe)
-		� 15 � upit nema ispravnu sintaksu (npr. SELECT * FRMO Student)
-		� 16 � sve ostale korisni�ke gre�ke (npr. PRINT 17/0)
-	o Razine 17 do 19 predstavljaju softverske gre�ke koje zahtijevaju
-		intervenciju administratora
-		� 17 � nema prostora na disku za tra�enu operaciju
-	o Razine 20 do 25 predstavljaju fatalne gre�ke i mogu rezultirati
-		zatvaranjem konekcije
-T-SQL nudi mogu�nost strukturiranog hvatanja gre�aka
-	o Hvataju se gre�ke razine 11 do 19 (1-10 i 20-25 se ne hvataju)
-*/
------------------------------------------------------------------------------------
--- Zadatak 14.
-/*
-STRUKTURIRANO HVATANJE POGRE�AKA
+
+/* STRUKTURIRANO HVATANJE POGRE�AKA
 Napravite proceduru koja prima dva broja i kroz izlazni parametar 
 vra�a prvi broj podijeljen drugim. 
 Ako se desi gre�ka, neka procedura u izlazni parametar upi�e 0 
 i neka ispi�e tekst gre�ke. 
-Pozovite proceduru i ispi�ite rezultat dijeljenja.
-*/
+Pozovite proceduru i ispi�ite rezultat dijeljenja. */
 create PROC pp2
 	@a int,
 	@b int,
@@ -2001,19 +1510,15 @@ PRINT @Rez
 EXEC pp2 32, 0, @Rez OUTPUT
 PRINT @Rez
 GO
------------------------------------------------------------------------------------
--- Zadatak 15.
-/*
-STRUKTURIRANO HVATANJE POGRE�AKA
+
+/* STRUKTURIRANO HVATANJE POGRE�AKA
 Napravite tablicu Zivotinja koja ima stupce IDZivotinja 
 (primarni klju�, ali nije IDENTITY) i Naziv. 
 Napravite proceduru koja prima IDZivotinja i Naziv i ume�e ih u tablicu. 
 Pozovite proceduru dva puta s vrijednostima 20 i "�aplja".
 Implementirajte TRY/CATCH izvan procedure i pozovite je.
-Implementirajte TRY/CATCH unutar procedure i pozovite je.
-*/
-CREATE TABLE Zivotinja 
-(
+Implementirajte TRY/CATCH unutar procedure i pozovite je. */
+CREATE TABLE Zivotinja (
 	IDZivotinja int PRIMARY KEY,
 	Naziv nvarchar(50)
 )
@@ -2058,20 +1563,16 @@ GO
 
 EXEC InsertZivotinja 20, '�aplja'
 GO
------------------------------------------------------------------------------------
--- Zadatak 16.
-/*
-SKALARNE FUNKCIJE
+
+/* SKALARNE FUNKCIJE
 Napi�ite funkciju koja prima ID proizvoda i dohva�a broj prodanih primjeraka. 
 Pozovite funkciju samostalno. 
 Dohvatite nazive i boje svih proizvoda i uz svaki proizvoda 
 ispi�ite koliko primjeraka je prodano. 
 Promijenite funkciju tako da vrati 0 za one proizvode koji nisu prodani 
 niti u jednom primjerku. 
-Uklonite funkciju.
-*/
-create FUNCTION UkupnaKolicina
-(
+Uklonite funkciju. */
+create FUNCTION UkupnaKolicina (
 	@ID int
 )
 RETURNS int
@@ -2094,8 +1595,7 @@ SELECT
 FROM Proizvod
 GO
 
-ALTER FUNCTION UkupnaKolicina
-(
+ALTER FUNCTION UkupnaKolicina (
 	@ID int
 )
 RETURNS int
@@ -2106,29 +1606,22 @@ BEGIN
 	SELECT @Ukupno = Sum(Kolicina) FROM Stavka WHERE ProizvodID = @ID
 
 	RETURN CASE
-				WHEN @Ukupno IS NOT NULL THEN @Ukupno
-				ELSE 0
-			END
+		WHEN @Ukupno IS NOT NULL THEN @Ukupno
+		ELSE 0
+	END
 END
 GO
 
-SELECT
-	Naziv,
-	Boja,
-	dbo.UkupnaKolicina(IDProizvod) AS Prodano
+SELECT Naziv, Boja, dbo.UkupnaKolicina(IDProizvod) AS Prodano
 FROM Proizvod
 GO
------------------------------------------------------------------------------------
--- Zadatak 17.
-/*
-SKALARNE FUNKCIJE
+
+/* SKALARNE FUNKCIJE
 Napi�ite funkciju koja prima string. 
 Ako je broj znakova u stringu manji od 10, neka funkcija vrati ulazni string. 
 Ako ne, neka vrati prvih 7 znakova i iza toga tri to�ke. 
-Ispi�ite nazive svih proizvoda koriste�i napravljenu funkciju.
-*/
-CREATE FUNCTION Skrati
-(
+Ispi�ite nazive svih proizvoda koriste�i napravljenu funkciju. */
+CREATE FUNCTION Skrati (
 	@s nvarchar(max)
 )
 RETURNS nvarchar(10)
@@ -2149,16 +1642,12 @@ SELECT
 	dbo.Skrati(Naziv) AS NazivSkraceni
 FROM Proizvod
 GO
------------------------------------------------------------------------------------
--- Zadatak 18.
-/*
-SKALARNE FUNKCIJE
+
+/* SKALARNE FUNKCIJE
 Napi�ite funkciju koja za zadanog kupca vra�a datum najnovije kupovine. 
 Ispi�ite sve kupce i kraj svakog ispi�ite datum najnovije kupovine. 
-Ako treba, optimizirajte!
-*/
-CREATE FUNCTION GetNajnoviji
-(
+Ako treba, optimizirajte! */
+CREATE FUNCTION GetNajnoviji (
 	@IDKupac int
 )
 RETURNS datetime
@@ -2174,23 +1663,17 @@ BEGIN
 END
 GO
 
-SELECT 
-	*,
-	dbo.GetNajnoviji(IDKupac) AS NajnovijaKupnja
+SELECT  *, dbo.GetNajnoviji(IDKupac) AS NajnovijaKupnja
 FROM Kupac
 
 CREATE NONCLUSTERED INDEX i1 ON dbo.Racun(KupacID) INCLUDE (DatumIzdavanja)
 GO
------------------------------------------------------------------------------------
--- Zadatak 19.
-/*
-JEDNOSTAVNE TABLI�NE FUNKCIJE
+
+/* JEDNOSTAVNE TABLI�NE FUNKCIJE
 Napi�ite jednostavnu tabli�nu funkciju koja vra�a IDKupac, ime i prezime svih osoba �ije prezime zapo�inje sa zadanim stringom. 
 Iskoristite funkciju za dohvat svih osoba �ije prezime zapo�inje sa 'Zhu'. 
-Uz svaku osobu dohvatite i njegove ra�une.
-*/
-CREATE FUNCTION DohvatiOsobe
-(
+Uz svaku osobu dohvatite i njegove ra�une. */
+CREATE FUNCTION DohvatiOsobe (
     @PrezimeLike nvarchar(50)
 )
 RETURNS TABLE
@@ -2207,17 +1690,13 @@ SELECT *
 FROM DohvatiOsobe('Zhu') AS os
 INNER JOIN Racun AS r ON os.IDKupac = r.KupacID
 GO
------------------------------------------------------------------------------------
--- Zadatak 20.
-/*
-JEDNOSTAVNE TABLI�NE FUNKCIJE
+
+/* JEDNOSTAVNE TABLI�NE FUNKCIJE
 Napi�ite jednostavnu tabli�nu funkciju koja prima dva datuma. 
 Neka funkcija vrati broj ra�una, datum izdavanja i ime i prezime kupca za sve ra�une izdane izme�u zadanih datuma. 
 Iskoristite funkciju za dohvat ra�una izme�u 01.06.2004. i 03.06.2004.
-Promijenite funkciju da datum vrati u hrvatskom formatu.
-*/
-CREATE FUNCTION DohvatiRacune
-(
+Promijenite funkciju da datum vrati u hrvatskom formatu. */
+CREATE FUNCTION DohvatiRacune (
     @D1 datetime, 
     @D2 datetime
 )
@@ -2233,8 +1712,7 @@ GO
 SELECT * FROM DohvatiRacune('20040601', '20040603')
 GO
 
-ALTER FUNCTION DohvatiRacune
-(
+ALTER FUNCTION DohvatiRacune (
     @D1 datetime, 
     @D2 datetime
 )
@@ -2249,18 +1727,14 @@ GO
 
 SELECT * FROM DohvatiRacune('20040601', '20040603')
 GO
------------------------------------------------------------------------------------
--- Zadatak 21.
-/*
-SLO�ENE TABLI�NE FUNKCIJE
+
+/* SLO�ENE TABLI�NE FUNKCIJE
 Napi�ite slo�enu tabli�nu funkciju koja se pona�a kao funkcija iz zadatka 2.
 PODSJETNIK na zadatak 2:
 Napi�ite slo�enu  tabli�nu funkciju koja prima dva datuma. 
 Neka funkcija vrati broj ra�una, datum izdavanja i ime i prezime kupca za sve ra�une izdane izme�u zadanih datuma. 
-Iskoristite funkciju za dohvat ra�una izme�u 01.06.2004. i 03.06.2004.
-*/
-CREATE FUNCTION DohvatiRacuneSloz
-(
+Iskoristite funkciju za dohvat ra�una izme�u 01.06.2004. i 03.06.2004. */
+CREATE FUNCTION DohvatiRacuneSloz (
     @D1 datetime, 
     @D2 datetime
 )
@@ -2279,17 +1753,13 @@ GO
 
 SELECT * FROM DohvatiRacuneSloz('20040601', '20040603')
 GO
------------------------------------------------------------------------------------
--- Zadatak 22.
-/*
-SLO�ENE TABLI�NE FUNKCIJE
+
+/* SLO�ENE TABLI�NE FUNKCIJE
 Napi�ite slo�enu tabli�nu funkciju koja prima cijenu. 
 Ako je cijena NULL, vratite nazive i cijene svih proizvoda iz tablice Proizvod. 
 Ako nije, vratite nazive i cijene samo onih proizvoda �ija cijena je ve�a od zadane cijene. 
-Iskoristite funkciju s NULL i s cijenom od 3000.
-*/
-CREATE FUNCTION F4
-(
+Iskoristite funkciju s NULL i s cijenom od 3000. */
+CREATE FUNCTION F4 (
 	@Cijena money
 )
 RETURNS @rez TABLE ( Naziv nvarchar(50), Cijena money )
@@ -2312,12 +1782,10 @@ SELECT * FROM F4(NULL)
 SELECT * FROM F4(3000)
 GO
 
-
 /* Zadatak 23. SLO�ENE TABLI�NE FUNKCIJE
 Napi�ite slo�enu tabli�nu funkciju koja prima jedan datum i koja vra�a tablicu 
 koja se sastoji od jednog stupca i koja sadr�ava sljede�ih 5 datuma. 
-Primjerice, ako je zadan 03.12.2011, funkcija treba vratiti 04.12., 05.12, 06.12, 07.12, 08.12.
-*/
+Primjerice, ako je zadan 03.12.2011, funkcija treba vratiti 04.12., 05.12, 06.12, 07.12, 08.12. */
 CREATE FUNCTION GetDatume
 (
 	@Datum datetime
