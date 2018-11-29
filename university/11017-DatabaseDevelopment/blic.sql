@@ -19,6 +19,8 @@ Pritom su IDKupac, IDGrad i IDDrzava u gornjim porukama stvarni podatci iz baze.
 
 Napraviti jedan primjer poziva procedure koji ce ispisati vrijednost 
 izlaznog parametra procedure. */
+use AdventureWorksOBP
+go
 
 create proc p1
     @ime nvarchar(50), @prezime nvarchar(50), @email nvarchar(50),
@@ -52,7 +54,7 @@ as
         values (@ime, @prezime, @email, @telefon, @idgrad)
         set @idkupac = SCOPE_IDENTITY()
         
-        print 'Novi Kupac(' + cast(@idkupac as nvarchar(50)) + '), novi grad(' + cast(@idgrad as nvarchar(50)) + '), nova drzava(' + cast(@iddrzava as nvarchar(50)) + ').'
+        return 'Novi Kupac(' + cast(@idkupac as nvarchar(50)) + '), novi grad(' + cast(@idgrad as nvarchar(50)) + '), nova drzava(' + cast(@iddrzava as nvarchar(50)) + ').'
     END
     ELSE IF @idkupac is null and @idgrad is null and @iddrzava is not null
     BEGIN
@@ -64,7 +66,7 @@ as
         values (@ime, @prezime, @email, @telefon, @idgrad)
         set @idkupac = SCOPE_IDENTITY()
         
-        print 'Novi Kupac(' + cast(@idkupac as nvarchar(50)) + '), novi grad(' + cast(@idgrad as nvarchar(50)) + '), postojeca drzava(' + cast(@iddrzava as nvarchar(50)) + ').'
+        return 'Novi Kupac(' + cast(@idkupac as nvarchar(50)) + '), novi grad(' + cast(@idgrad as nvarchar(50)) + '), postojeca drzava(' + cast(@iddrzava as nvarchar(50)) + ').'
     END
     ELSE IF @idkupac is null and @idgrad is not null and @iddrzava is not null
     BEGIN
@@ -72,18 +74,18 @@ as
         values (@ime, @prezime, @email, @telefon, @idgrad)
         set @idkupac = SCOPE_IDENTITY()
         
-        print 'Novi Kupac(' + cast(@idkupac as nvarchar(50)) + '), postojeci grad(' + cast(@idgrad as nvarchar(50)) + '), postojeca drzava(' + cast(@iddrzava as nvarchar(50)) + ').'
+        return 'Novi Kupac(' + cast(@idkupac as nvarchar(50)) + '), postojeci grad(' + cast(@idgrad as nvarchar(50)) + '), postojeca drzava(' + cast(@iddrzava as nvarchar(50)) + ').'
     END
     ELSE
         BEGIN
-        print 'Postojeci Kupac(' + cast(@idkupac as nvarchar(50)) + '), postojeci grad(' + cast(@idgrad as nvarchar(50)) + '), postojeca drzava(' + cast(@iddrzava as nvarchar(50)) + ').'
+        return 'Postojeci Kupac(' + cast(@idkupac as nvarchar(50)) + '), postojeci grad(' + cast(@idgrad as nvarchar(50)) + '), postojeca drzava(' + cast(@iddrzava as nvarchar(50)) + ').'
     END
-
+go
 -- Declare a variable to return the results of the function. 
 DECLARE @ret nvarchar(50);   
 
 -- Execute the function while passing a value to the @status parameter
-EXEC @ret = dbo.p1("Ivan", "Ivanovic", "ivan@example.com", "056067253", "zagreb", "hrvatska") 
+EXEC @ret = dbo.p1 "Ivan", "Ivanovic", "ivan@example.com", "056067253", "zagreb", "hrvatska"
 
 -- View the returned value.  The Execute and Select statements must be executed at the same time.  
 SELECT N'Function returned: ' + @ret; 
