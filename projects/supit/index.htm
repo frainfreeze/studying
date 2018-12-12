@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+       __
+      /
+   .-/-.
+   |'-'|    Dobar tek.
+   |   |
+   |   |   .-""""-.
+   \___/  /' .  '. \   \|/\//
+         (`-..:...-')  |`""`|
+          ;-......-;   |    |
+           '------'    \____/
+-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="app">
+            <img class="image" v-for="(image, i) in images" :src="image" @click="onClick(i)">
+            <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+        </div>
+
+        <!--      FORM        -->
+        <form id="contact-form" method="post" action="http://www.fulek.com/VUA/SUPIT/ContactUs" role="form">
+
+            <div class="messages"></div>
+
+            <div class="controls">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_name">Name:</label>
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *"
+                                required="required" data-error="Firstname is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_email">Email</label>
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *"
+                                required="required" data-error="Valid email is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_need">Message importance</label>
+                            <select id="form_need" name="importance" class="form-control" required="required"
+                                data-error="Please specify message importance.">
+                                <option value=""></option>
+                                <option value="2">High</option>
+                                <option value="1">Medium</option>
+                                <option value="0">Low</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="true" name="newsletter" id="defaultCheck1"
+                                required="required" data-error="Please specify whenever to recieve newsletter.">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Recieve newsletter?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_message">Message *</label>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *"
+                                rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted">
+                            <strong>*</strong> These fields are required. Contact form template by
+                            <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--      RES        -->
+    <!-- vue development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- vue production version, optimized for size and speed 
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <!-- bootstrap vue resources -->
+    <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+    <!-- img gallery-->
+    <script src="https://unpkg.com/vue-gallery-slideshow@1.2.10/dist/js/vue-gallery-slideshow.min.js"></script>
+
+    <!-- VUE -->
+    <script>
+        new Vue({
+            el: '#app',
+            components: {
+                VueGallerySlideshow
+            },
+            methods: {
+                onClick(i) {
+                    this.index = i;
+                }
+            },
+            data: {
+                images: [
+                    'https://placekitten.com/801/800',
+                    'https://placekitten.com/802/800',
+                    'https://placekitten.com/803/800',
+                    'https://placekitten.com/804/800',
+                    'https://placekitten.com/805/800',
+                    'https://placekitten.com/806/800',
+                    'https://placekitten.com/807/800',
+                    'https://placekitten.com/808/800',
+                    'https://placekitten.com/809/800',
+                    'https://placekitten.com/810/800',
+                ],
+                index: 0
+            }
+        })
+    </script>
+    <style>
+    .image {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 3px;
+}
+    </style>
+
+</body>
+
+</html>
