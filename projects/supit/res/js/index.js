@@ -25,7 +25,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://www.fulek.com/VUA/SUPIT/GetCategoriesAndFoods')
+            .get('https://www.fulek.com/VUA/SUPIT/GetCategoriesAndFoods')
             .then(response => (this.info = response.data))
     }
 })
