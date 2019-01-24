@@ -1,23 +1,31 @@
-//maps
-var mymap = L.map('mapid').setView([45.806, 15.982], 12);
-
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-    maxZoom: 18,
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    id: 'mapbox.streets'
-}).addTo(mymap);
-
-var marker = L.marker([45.806, 15.982]).addTo(mymap);
-marker.bindPopup("<b>Fenomen</b><br>Augusta senoe, 78").openPopup();
-
-var marker2 = L.marker([45.83, 16.1]).addTo(mymap);
-marker2.bindPopup("<b>Fenomen</b><br>Anke krizmanic, 2");
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+    
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+    
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+    
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+    
+        });
+      });
+    }
+    
+    });
 
 //app
 new Vue({
-    el: '#app',
+    el: '#menu',
     data() {
         return {
             info: null
@@ -26,6 +34,6 @@ new Vue({
     mounted() {
         axios
             .get('https://raw.githubusercontent.com/frainfreeze/DailyWebDeveloper/master/projects/supit/res/GetCategoriesAndFoods.json')
-            .then(response => (this.info = response.data))
+            .then(response => (this.info = response.data));
     }
 })
