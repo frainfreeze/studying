@@ -152,23 +152,19 @@
           </div>
 
           <div class="column">
-            <ul id="example-1">
-              <li v-for="item in info">
-                {{ item.Naziv }}
-                <ul id="example-2">
-                  <li v-for="it in item.Ponuda">
-                    <p v-b-tooltip.hover v-bind:title="it.JeloId">{{ it.Naziv }}, opis: {{it.Opis}}, cijena
-                      {{
-                      it.Cijena }}</p>
-                  </li>
-                </ul>
-              </li>
+            <ul v-for="item in info[active_el-1].Ponuda">
+              <div class="box">
+                <div class="content">
+                  <p>
+                    <strong>{{ item.Naziv }}</strong> <small>jeloId: {{ item.JeloId }}</small>
+                    <br>
+                    <p> Opis: {{ item.Opis }}, Cijena: {{ item.Cijena }} Kn</p>
+                  </p>
+                </div>
+              </div>
             </ul>
           </div>
-
         </div>
-
-
       </div>
     </div>
   </section>
@@ -199,8 +195,8 @@
               <div class="content">
                 <ul>
                   <li>Bana Jelacica, 22</li>
-                  <li>zagreb-chef@gmail.com</li>
-                  <li>@zg-chef</li>
+                  <li>hr-chef@gmail.com</li>
+                  <li>@hr-chef</li>
                 </ul>
               </div>
             </div>
@@ -222,8 +218,9 @@
               </div>
 
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris
+                <li>Victory square, 33</li>
+                <li>uk-chef@gmail.com</li>
+                <li>@uk-chef</li>
               </div>
             </div>
           </div>
@@ -244,8 +241,9 @@
               </div>
 
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris
+                <li>Yau Yat Chuen, 43</li>
+                <li>hg-chef@gmail.com</li>
+                <li>@hg-chef</li>
               </div>
             </div>
           </div>
@@ -266,8 +264,9 @@
               </div>
 
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris
+                <li>Hell's Kitchen, 66</li>
+                <li>us-chef@gmail.com</li>
+                <li>@us-chef</li>
               </div>
             </div>
           </div>
@@ -318,7 +317,7 @@
               <div class="box">
                 <article class="media">
                   <div class="media-left">
-                    <p>1</p>
+                    <p>3</p>
                   </div>
                   <div class="media-content">
                     <div class="content">
