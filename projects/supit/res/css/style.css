@@ -2,6 +2,9 @@
 * Le Chef Restoraunts Custom CSS 
 * Tomislav Kucar 2019
 */
+[v-cloak] > * { display:none; }
+[v-cloak]::before { content: "Loading..."; }
+
 .hero {
   background-image: url(../img/big-rest.jpg);
   background-position: center center;
