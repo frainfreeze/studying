@@ -56,12 +56,22 @@ new Vue({
     el: '#menu',
     data() {
         return {
-            info: null
+            info: null,
+            active_el:1
         }
     },
     mounted() {
         axios
             .get('https://raw.githubusercontent.com/frainfreeze/DailyWebDeveloper/master/projects/supit/res/GetCategoriesAndFoods.json')
             .then(response => (this.info = response.data));
-    }
+    },
+    methods: {
+        myTest: function(){
+            console.log("oi");
+          // some code to filter meals
+        },
+        activate:function(el){
+            this.active_el = el;
+        }
+      }
 })

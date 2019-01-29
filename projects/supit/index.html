@@ -6,18 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Le Chef</title>
 
-  <!--icons -->
-  <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <!--bulma and icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
 
   <!-- vue and axios -->
   <script src="res/js/vue.js"></script>
   <script src="res/js/axios.min.js"></script>
-
-  <!-- buefy -->
-  <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
 </head>
 
 <body class="has-navbar-fixed-top">
@@ -132,26 +127,26 @@
                 Opcenito
               </p>
               <ul class="menu-list">
-                <li><a class="is-active">Preporuka sefa kuhinje</a></li>
-                <li><a>Topla predjela</a></li>
-                <li><a>Kineske juhe</a></li>
+                <li><a @click="activate(1)" :class="{ 'is-active' : active_el == 1 }">Preporuka sefa kuhinje</a></li>
+                <li><a @click="activate(2)" :class="{ 'is-active' : active_el == 2 }">Topla predjela</a></li>
+                <li><a @click="activate(3)" :class="{ 'is-active' : active_el == 3 }">Kineske juhe</a></li>
               </ul>
               <p class="menu-label">
                 Glavna jela
               </p>
               <ul class="menu-list">
-                <li><a>Jela s rezancima</a></li>
-                <li><a>Jela s piletinom</a></li>
-                <li><a>Jela sa povrcem</a></li>
-                <li><a>Jela sa svinjetinom</a></li>
-                <li><a>Jela s junjetinom</a></li>
+                <li><a @click="activate(4)" :class="{ 'is-active' : active_el == 4 }">Jela s rezancima</a></li>
+                <li><a @click="activate(5)" :class="{ 'is-active' : active_el == 5 }">Jela s piletinom</a></li>
+                <li><a @click="activate(6)" :class="{ 'is-active' : active_el == 6 }">Jela sa povrcem</a></li>
+                <li><a @click="activate(7)" :class="{ 'is-active' : active_el == 7 }">Jela sa svinjetinom</a></li>
+                <li><a @click="activate(8)" :class="{ 'is-active' : active_el == 8 }">Jela s junjetinom</a></li>
               </ul>
               <p class="menu-label">
                 Ostalo
               </p>
               <ul class="menu-list">
-                <li><a>Specijaliteti</a></li>
-                <li><a>Pica</a></li>
+                <li><a @click="activate(9)" :class="{ 'is-active' : active_el == 9 }">Specijaliteti</a></li>
+                <li><a @click="activate(10)" :class="{ 'is-active' : active_el == 10 }">Pica</a></li>
               </ul>
             </aside>
           </div>
@@ -418,7 +413,6 @@
   </section>
 
   <link type="text/css" rel="stylesheet" href="res/css/style.css" />
-  <link rel="stylesheet" href="http://marvelapp.github.io/devices.css/assets/devices.min.css" type="text/css">
   <script src="res/js/index.js"></script>
 </body>
 
