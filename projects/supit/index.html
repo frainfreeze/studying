@@ -156,9 +156,11 @@
               <div class="box">
                 <div class="content">
                   <p>
-                    <strong>{{ item.Naziv }}</strong> <small>jeloId: {{ item.JeloId }}</small>
+                    <!-- debug/tooltip -->
+                    <strong v-bind:data-tooltip="'JeloId:' + item.JeloId">{{ item.Naziv }}</strong> <small></small>
                     <br>
                     <p> Opis: {{ item.Opis }}, Cijena: {{ item.Cijena }} Kn</p>
+                    <a class="button is-focused">Dodaj u kosaricu</a>
                   </p>
                 </div>
               </div>
@@ -171,7 +173,7 @@
 
 
   <!--      Locations (Map)        -->
-  <!-- todo: adresses, icons instead of bullets-->
+  <!-- todo: icons instead of bullets-->
   <section class="section" id="map">
     <div class="container">
 
@@ -276,7 +278,7 @@
     </div>
   </section>
 
-  <!--      app        -->
+  <!--     mobile app        -->
   <section class="section" id="app">
     <div class="container">
       <h1 class="centered">App</h1>
@@ -293,7 +295,7 @@
               <div class="box">
                 <article class="media">
                   <div class="media-left">
-                    <p>1</p>
+                    <p>1.</p>
                   </div>
                   <div class="media-content">
                     <div class="content">
@@ -305,7 +307,7 @@
               <div class="box">
                 <article class="media">
                   <div class="media-left">
-                    <p>2</p>
+                    <p>2.</p>
                   </div>
                   <div class="media-content">
                     <div class="content">
@@ -317,7 +319,7 @@
               <div class="box">
                 <article class="media">
                   <div class="media-left">
-                    <p>3</p>
+                    <p>3.</p>
                   </div>
                   <div class="media-content">
                     <div class="content">
@@ -347,7 +349,6 @@
   </section>
 
   <!--      Contact form        -->
-  <!-- todo: check input -->
   <!-- todo: add testemonials under the contact -->
   <section class="section" id="contact">
     <div class="container">
@@ -396,7 +397,7 @@
         <div class="field">
           <label class="label">Message *</label>
           <div class="control">
-            <textarea class="textarea" name="message" placeholder="Message for me *" rows="4" required="required"></textarea>
+            <textarea class="textarea" name="message" placeholder="Your message *" rows="4" required="required"></textarea>
           </div>
         </div>
 
