@@ -10,9 +10,10 @@
   <link rel="stylesheet" href="res/css/bulma.min.css">
   <script defer src="res/js/all.js"></script>
 
-  <!-- vue and axios -->
+  <!-- vue, axios, gallery component -->
   <script src="res/js/vue.js"></script>
   <script src="res/js/axios.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/vue-gallery-slideshow"></script>
 </head>
 
 <body class="has-navbar-fixed-top">
@@ -57,9 +58,7 @@
   </section>
 
 
-
-  <!--      About                  -->
-  <!-- todo: add gallery -->
+  <!--      About       -->
   <section class="section" id="about">
     <div class="container">
       <div class="tile is-ancestor">
@@ -120,7 +119,15 @@
     <h1 class="centered">Menu</h1>
 
     <div class="container" id="menu" v-cloak>
-      <div class="content" >
+      
+      <div class="columns is-centered">
+        <img class="imageX" v-for="(image, i) in images" :src="image" @click="index = i">
+        <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+      </div>
+      
+      <br>
+
+      <div class="content">
         <div class="columns">
           <div class="column is-one-quarter">
             <aside class="menu">

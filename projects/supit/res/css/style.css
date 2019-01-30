@@ -2,9 +2,12 @@
 * Le Chef Restoraunts Custom CSS 
 * Tomislav Kucar 2019
 */
+
+/* app loading screen*/
 [v-cloak] > * { display:none; }
 [v-cloak]::before { content: "Loading..."; }
 
+/* testimonials parllax bacground */
 .hero {
   background-image: url(../img/big-rest.jpg);
   background-position: center center;
@@ -13,6 +16,18 @@
   background-size:  cover;
   background-color: #999;
 }
+
+/* image gallery */
+.imageX {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+}
+
 
 /* 
 * HTML5 Video Text Overlay Flexbox

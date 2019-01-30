@@ -54,10 +54,28 @@ window.smoothScroll = function (target) {
 //app
 new Vue({
     el: '#menu',
+    components: {
+        VueGallerySlideshow
+      },
     data() {
         return {
-            info: null,
-            active_el:1
+            info: null,  // menu info (json)
+            active_el:1, //for side menu
+            //for gallery
+            images: [
+                'res/img/food/1-min.jpg',
+                'res/img/food/2-min.jpg',
+                'res/img/food/3-min.jpg',
+                'res/img/food/4-min.jpg',
+                'res/img/food/5-min.jpg',
+                'res/img/food/6-min.jpg',
+                'res/img/food/7-min.jpg',
+                'res/img/food/8-min.jpg',
+                'res/img/food/9-min.jpg',
+                'res/img/food/10-min.jpg',
+                'res/img/food/11-min.jpg'
+              ],
+              index: null
         }
     },
     mounted() {
@@ -66,10 +84,6 @@ new Vue({
             .then(response => (this.info = response.data));
     },
     methods: {
-        myTest: function(){
-            console.log("oi");
-          // some code to filter meals
-        },
         activate:function(el){
             this.active_el = el;
         }
