@@ -27,11 +27,10 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" onclick="smoothScroll(document.getElementById('banner'))">Chef</a>
-        <a class="navbar-item" onclick="smoothScroll(document.getElementById('about'))">About us</a>
-        <a class="navbar-item" onclick="smoothScroll(document.getElementById('menu'))">Menu</a>
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" onclick="smoothScroll(document.getElementById('menuid'))">Menu</a>
         <a class="navbar-item" onclick="smoothScroll(document.getElementById('map'))">Locations</a>
+        <a class="navbar-item" onclick="smoothScroll(document.getElementById('banner'))"><img src="res/img/chef.png"></a>
         <a class="navbar-item" onclick="smoothScroll(document.getElementById('app'))">App</a>
         <a class="navbar-item" onclick="smoothScroll(document.getElementById('contact'))">Contact</a>
       </div>
@@ -114,17 +113,17 @@
   </section>
 
   <!-- App (menu) -->
-  <section class="section" >
-    
+  <section class="section" id="menuid">
+
     <h1 class="centered">Menu</h1>
 
     <div class="container" id="menu" v-cloak>
-      
+
       <div class="columns is-centered">
         <img class="imageX" v-for="(image, i) in images" :src="image" @click="index = i">
         <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
       </div>
-      
+
       <br>
 
       <div class="content">
