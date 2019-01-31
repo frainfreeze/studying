@@ -71,9 +71,7 @@ new Vue({
                 'res/img/food/6-min.jpg',
                 'res/img/food/7-min.jpg',
                 'res/img/food/8-min.jpg',
-                'res/img/food/9-min.jpg',
-                'res/img/food/10-min.jpg',
-                'res/img/food/11-min.jpg'
+                'res/img/food/9-min.jpg'
               ],
               index: null
         }
