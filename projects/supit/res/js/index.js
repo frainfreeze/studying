@@ -78,7 +78,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('https://raw.githubusercontent.com/frainfreeze/DailyWebDeveloper/master/projects/supit/res/GetCategoriesAndFoods.json')
+            .get('https://pastebin.com/raw/YXPTqtpQ')
             .then(response => (this.info = response.data));
     },
     methods: {
