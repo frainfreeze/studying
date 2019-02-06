@@ -1142,7 +1142,7 @@ select * from Potkategorija
 
 -- I7 - TRANSAKCIJE --
 ----------------------
-/*Napravite tablicu Osoba s IDOsoba (PK i IDENTITY), Ime i Prezime. */
+/* Napravite tablicu Osoba s IDOsoba (PK i IDENTITY), Ime i Prezime. */
 CREATE TABLE Osoba (
     IDOsoba int PRIMARY KEY IDENTITY,
     Ime nvarchar(50),
@@ -1284,30 +1284,13 @@ CREATE PROC p9
 AS
 DELETE FROM Drzava WHERE IDDrzava = @IDDrzava
 GO
--- Transakciju vodite izvan procedure. 
--- Ispiite uspjeh ili neuspjeh. 
+-- Transakciju vodite izvan procedure. Ispiite uspjeh ili neuspjeh. 
 -- Pozovite 3 puta proceduru s vrijednostima parametara jednakim 50, 51 i 52. 
 BEGIN TRY
 	BEGIN TRAN
 		EXEC p9 50
 		EXEC p9 51
 		EXEC p9 52
-	COMMIT TRAN
-	PRINT 'Brisanje uspjeno'
-END TRY
-BEGIN CATCH
-	ROLLBACK TRAN
-	PRINT 'Greka pri brisanju'
-END CATCH
-GO
--- Transakciju vodite izvan procedure. 
--- Ispiite uspjeh ili neuspjeh. 
--- Pozovite 3 puta proceduru s vrijednostima parametara jednakim 50, 51 i 1.
-BEGIN TRY
-	BEGIN TRAN
-		EXEC p9 50
-		EXEC p9 51
-		EXEC p9 1
 	COMMIT TRAN
 	PRINT 'Brisanje uspjeno'
 END TRY
@@ -1439,7 +1422,6 @@ ROLLBACK TRAN
 /*Zadatak 2. IZOLACIJSKI NIVOI (1) - SKRIPTA 1
 Demonstrirajte rjeenje problem prljavog èitanja na tablici Drzava na retku s IDDrzava = 3. 
 Napiite gdje bi se desilo prljavo èitanje i kako ste to sprijeèili. */
--- TRANSAKCIJA 1.
 -- 1. 
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 -- 3.
@@ -1449,7 +1431,6 @@ UPDATE Drzava SET Naziv = 'BIH' WHERE IDDrzava = 3
 -- 7.
 ROLLBACK TRAN
 /* Zadatak 2. IZOLACIJSKI NIVOI (1) - SKRIPTA 2 */
--- TRANSAKCIJA 2.
 -- 2.
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED -- Prljavo èitanje sprjeèavamo postavljanjem bilo kojeg izolacijskog nivoa iznad READ UNCOMMITTED.
 -- 4. 
@@ -1463,7 +1444,6 @@ ROLLBACK TRAN
 /* Zadatak 3. IZOLACIJSKI NIVOI (2) - SKRIPTA 1
 Demonstrirajte problem neponovljivog èitanja na tablici Drzava na retku s IDDrzava = 3. 
 Napiite gdje se desilo neponovljivo èitanje. */
--- TRANSAKCIJA 1.
 -- 1. 
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 -- 3.
@@ -1475,7 +1455,6 @@ SELECT * FROM Drzava WHERE IDDrzava = 3
 -- 9.
 ROLLBACK TRAN
 /* Zadatak 3 IZOLACIJSKI NIVOI (2) - SKRIPTA 2 */
--- TRANSAKCIJA 2.
 -- 2.
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 -- 4. 
@@ -1489,7 +1468,6 @@ COMMIT TRAN
 /*Zadatak 4. IZOLACIJSKI NIVOI (2) - SKRIPTA 1
 Demonstrirajte rjeenje problema neponovljivog èitanja na tablici Drzava na retku s IDDrzava = 3. 
 Napiite gdje bi se desilo neponovljivo èitanje. */
--- TRANSAKCIJA 1.
 -- 1. 
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ -- Neponovljivo èitanje sprjeèavamo postavljanjem bilo kojeg izolacijskog nivoa iznad READ COMMITTED.
 -- 3.
@@ -1501,7 +1479,6 @@ SELECT * FROM Drzava WHERE IDDrzava = 1
 -- 8.
 ROLLBACK TRAN
 /* Zadatak 4. IZOLACIJSKI NIVOI (2) - SKRIPTA 2 */
--- TRANSAKCIJA 2.
 -- 2.
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 -- 4. 
@@ -1514,7 +1491,6 @@ ROLLBACK TRAN
 
 /*Zadatak 5. IZOLACIJSKI NIVOI (2) - SKRIPTA 1 Demonstrirajte problem fantoma na tablici Drzava 
 na recima s nazivima koji zapoèinju s 'H'. Napiite gdje se pojavljuju fantomi. */
--- TRANSAKCIJA 1.
 -- 1. 
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 -- 3.
@@ -1526,7 +1502,6 @@ SELECT * FROM Drzava WHERE Naziv LIKE 'H%' -- vraæa 2 retka, drugi redak je fan
 -- 9.
 ROLLBACK TRAN
 /* Zadatak 5. IZOLACIJSKI NIVOI (2) - SKRIPTA 2 */
--- TRANSAKCIJA 2.
 -- 2.
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 -- 4. 
@@ -1540,7 +1515,6 @@ COMMIT TRAN
 /* Zadatak 6.
 IZOLACIJSKI NIVOI (2) - SKRIPTA 1 Demonstrirajte rjeenje problema fantoma na tablici Drzava 
 na recima s nazivima koji zapoèinju s 'H'. Napiite gdje bi se pojavili fantomi. */
--- TRANSAKCIJA 1.
 -- 1. 
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE -- Fantome sprjeèavamo postavljanjem izolacijskog nivoa na SERIALIZABLE.
 -- 3.
@@ -1552,7 +1526,6 @@ SELECT * FROM Drzava WHERE Naziv LIKE 'H%' -- vraæa 1 redak.
 -- 8.
 ROLLBACK TRAN
 /* Zadatak 6  IZOLACIJSKI NIVOI (2) - SKRIPTA 2 */
--- TRANSAKCIJA 2.
 -- 2.
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 -- 4. 
