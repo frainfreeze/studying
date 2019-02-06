@@ -1,4 +1,4 @@
--- I2: pogledi --
+-- I2 - pogledi --
 -----------------
 -- Iskoristite pogled za dohvaæanje onih osoba èije ime zapoèinje sa L i prezime zavrava na a
 SELECT * FROM p1 
@@ -224,7 +224,7 @@ WITH CHECK OPTION
 GO
 
 
--- i3: rad s diskom --
+-- I3 - rad s diskom --
 ----------------------
 /* DBCC TRACEON(3604) vrijedi za cijelu konekciju
 • DBCC IND će nam vratiti sljedeće bitne podatke:
@@ -456,7 +456,7 @@ DROP INDEX Racun.i1
 GO
 
 
--- i4: varijable i procedure --
+-- I4 - varijable i procedure --
 -------------------------------
 -- Deklarirajte varijable @Ime i @Prezime i dodijelite im vrijednosti iz tablice Kupac za IDKupac jednak 8812. 
 DECLARE @Ime nvarchar(50) DECLARE @Prezime nvarchar(50)
@@ -680,7 +680,7 @@ EXEC ChangeStudent 'D', 3, null, null, null
 EXEC GetStudent 3
 GO
 
--- ISHOD 5 - OKIDACI --
+-- I5 - OKIDACI --
 -----------------------
 -- Izrada log tablice.
 CREATE TABLE Zapisnik (
