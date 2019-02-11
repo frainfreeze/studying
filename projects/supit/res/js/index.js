@@ -47,6 +47,42 @@ window.smoothScroll = function (target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
+//cart
+function formatNumber(n, c, d, t) {
+    var c = isNaN(c = Math.abs(c)) ? 2 : c,
+       d = d === undefined ? '.' : d,
+       t = t === undefined ? ',' : t,
+       s = n < 0 ? '-' : '',
+       i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+       j = (j = i.length) > 3 ? j % 3 : 0;
+    return s + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) + (c ? d + Math.abs(
+       n - i).toFixed(c).slice(2) : '');
+ };
+
+ Vue.filter('formatCurrency', function (value) {
+    return formatNumber(value, 2, '.', ',');
+ });
+
+ Vue.component('shopping-cart', {
+    props: ['items'],
+
+    computed: {
+       Total: function () {
+          var total = 0;
+          this.items.forEach(item => {
+             total += (item.price * item.qty);
+          });
+          return total;
+       }
+    },
+
+    methods: {
+       removeItem(index) {
+          this.items.splice(index, 1)
+       }
+    }
+ })
+
 //app
 new Vue({
     el: '#menu',
@@ -69,7 +105,9 @@ new Vue({
                 'res/img/food/8-min.jpg',
                 'res/img/food/9-min.jpg'
               ],
-              index: null
+              index: null,
+              //cart
+              cartItems: [],
         }
     },
     mounted() {
@@ -80,23 +118,24 @@ new Vue({
     methods: {
         activate:function(el){
             this.active_el = el;
-        }
+        },
+        addToCart(itemToAdd) {
+            var found = false;
+  
+            // Check if the item was already added to cart
+            // If so them add it to the qty field
+            this.cartItems.forEach(item => {
+               if (item.id === itemToAdd.id) {
+                  found = true;
+                  item.qty += itemToAdd.qty;
+               }
+            });
+  
+            if (found === false) {
+               this.cartItems.push(Vue.util.extend({}, itemToAdd));
+            }
+  
+            itemToAdd.qty = 1;
+         }
       }
 })
-const fulek = [
-	{ "Id": 1, "Naziv": "PREPORUKA ŠEFA KUHINJE", "Ponuda": [
-      { "JeloId": 14, "Naziv": "Patka szechuan", "Opis": "hrskava patka, povrće, ljuto", "Cijena": 56 },
-      { "JeloId": 15, "Naziv": "Patka Yaoux", "Opis": "Hrskava patka, umak od češnjaka", "Cijena": 51 }
-    ]
-  },
-  { "Id": 2, "Naziv": "TOPLA PREDJELA", "Ponuda": [
-      { "JeloId": 4, "Naziv": "Proljetna rolada s mesom", "Opis": "mljevena junetina, povrće", "Cijena": 14 },
-      { "JeloId": 16, "Naziv": "Proljetna rolada s povrćem (2 kom)", "Opis": "Prilog", "Cijena": 13 }
-    ]
-  },
-  { "Id": 3, "Naziv": "KINESKE JUHE", "Ponuda": [
-      { "JeloId": 19, "Naziv": "Kineska kiselo ljuta juha", "Opis": "Ljuto", "Cijena": 15 },
-      { "JeloId": 20, "Naziv": "Kineska juha od bambusa i gljiva", "Opis": "Blago", "Cijena": 17 }
-    ]
-  }
-];

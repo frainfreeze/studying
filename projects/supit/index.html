@@ -171,18 +171,58 @@
                     <strong v-bind:data-tooltip="'JeloId:' + item.JeloId">{{ item.Naziv }}</strong> <small></small>
                     <br>
                     <p> Opis: {{ item.Opis }}, Cijena: {{ item.Cijena }} Kn</p>
-                    <a class="button is-focused">Dodaj u kosaricu</a>
+                    <input v-model="item.qty" type="number" class="form-control" placeholder="Qty" min="1" />
+                    <a class="button is-focused" @click="addToCart(item)">Dodaj u kosaricu</a>
                   </p>
                 </div>
               </div>
             </ul>
           </div>
 
+          <!-- <div class="column" v-for="item in items[active_el-1].Ponuda">
+              <h5>{{ item.Naziv }}</h5>
+              <h6>${{ item.Cijena | formatCurrency }}</h6>
+              <p>
+                 <input v-model="item.qty" type="number" class="form-control" placeholder="Qty" min="1" />
+              </p>
+              <button class="button" @click="addToCart(item)">Add to Cart</button>
+              </p>
+           </div> -->
+
         </div>
 
         <div class="is-divider" data-content="CART"></div>
 
-        
+        <div class="columns">
+            <shopping-cart inline-template :items="cartItems">
+               <div>
+                  <table class="table table-cart">
+                     <tr v-for="(item, index) in items">
+                        <td>{{item.Naziv}}</td>
+                        <td style="width:120px">QTY:
+                           <input v-model="item.qty" class="form-control input-qty" type="number">
+                        </td>
+                        <td>Note.</td>
+                        <td class="text-right">${{item.Cijena | formatCurrency}}</td>
+                        <td>
+                           <button class="button is-small is-white" @click="removeItem(index)"><span class="far fa-trash-alt"></span></button>
+                        </td>
+                     </tr>
+                     <tr v-show="items.length === 0">
+                        <td>Cart is empty</td>
+                     </tr>
+                     <tr v-show="items.length > 0">
+                        <td></td>
+                        <td></td>
+                        <td>Cart Total</td>
+                        <td>${{Total | formatCurrency}}</td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </div>
+               <!-- /.container -->
+            </shopping-cart>
+         </div>
 
       </div>
     </div>
