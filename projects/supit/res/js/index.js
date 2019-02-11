@@ -119,7 +119,7 @@ new Vue({
             this.cartItems.forEach(item => {
                if (item.JeloId === itemToAdd.JeloId) {
                   found = true;
-                  item.qty += itemToAdd.qty;
+                  item.qty += parseInt(itemToAdd.qty);
                }
             });
   
