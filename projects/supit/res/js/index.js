@@ -112,7 +112,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('https://raw.githubusercontent.com/frainfreeze/DailyWebDeveloper/2755def18ba94b6e04d582896e5ec8941f7a1ae0/projects/supit/res/GetCategoriesAndFoods.json?token=AIW08Y0zKfPO6rSlQYowliOHnw3PMxGyks5cap21wA%3D%3D')
+            .get('https://raw.githubusercontent.com/frainfreeze/DailyWebDeveloper/master/projects/supit/res/GetCategoriesAndFoods.json?token=AIW08dQdojuCHNxF9tucPrjH3eRSNd2Mks5caszGwA%3D%3D')
             .then(response => (this.info = response.data));
     },
     methods: {
