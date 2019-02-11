@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
-
+<!--
+       __
+      /
+   .-/-.
+   |'-'|    Dobar tek.
+   |   |
+   |   |   .-""""-.
+   \___/  /' .  '. \   \|/\//
+         (`-..:...-')  |`""`|
+          ;-......-;   |    |
+           '------'    \____/
+-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Le Chef</title>
 
-  <!--bulma and icons -->
+  <!--bulma and extensions -->
   <link rel="stylesheet" href="res/css/bulma.min.css">
-  <script defer src="res/js/all.js"></script>
-
-  <!-- bulma extensions -->
-  <script src='https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/js/bulma-extensions.min.js'></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/css/bulma-extensions.min.css">
+  <script src='res/js/bulma-extensions.min.js'></script>
+  <link rel="stylesheet" href="res/css/bulma-extensions.min.css">
 
   <!-- vue, axios, gallery component -->
-  <script type="text/javascript" src="res/js/vue.js"></script>
+  <!--<script type="text/javascript" src="res/js/vue.js"></script> dev version-->
+  <script src="res/js/vue.min.js"></script>
   <script type="text/javascript" src="res/js/axios.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/vue-gallery-slideshow"></script>
+  <script type="text/javascript" src="res/js/vue-gallery-slideshow.min.js"></script>
 </head>
 
 <body class="has-navbar-fixed-top">
@@ -48,8 +57,8 @@
   <section id="banner">
     <div class="video-container">
       <video autoplay loop muted>
-        <source src="res/img/grill.webm" type="video/webm">
         <source src="res/img/grill.mp4" type="video/mp4">
+        <source src="res/img/grill.webm" type="video/webm">
         Your browser does not support the video tag.
       </video>
       <div class="overlay-desc">
@@ -167,8 +176,8 @@
               <div class="box">
                 <div class="content">
                   <p>
-                    <!-- debug/tooltip -->
-                    <strong v-bind:data-tooltip="'JeloId:' + item.JeloId">{{ item.Naziv }}</strong> <small></small>
+                    <!-- debug/tooltip <strong v-bind:data-tooltip="'JeloId:' + item.JeloId">{{ item.Naziv }}</strong>-->
+                    <strong>{{ item.Naziv }}</strong>
                     <br>
                     <p> Opis: {{ item.Opis }}, Cijena: {{ item.Cijena }} Kn</p>
                     <input v-model="item.qty" type="number" class="form-control" placeholder="Qty" min="1" />
@@ -178,59 +187,72 @@
               </div>
             </ul>
           </div>
-
-          <!-- <div class="column" v-for="item in items[active_el-1].Ponuda">
-              <h5>{{ item.Naziv }}</h5>
-              <h6>${{ item.Cijena | formatCurrency }}</h6>
-              <p>
-                 <input v-model="item.qty" type="number" class="form-control" placeholder="Qty" min="1" />
-              </p>
-              <button class="button" @click="addToCart(item)">Add to Cart</button>
-              </p>
-           </div> -->
-
         </div>
 
         <div class="is-divider" data-content="CART"></div>
 
         <div class="columns">
+          <div class="column"></div>
+          <div class="column is-three-fifths">
             <shopping-cart inline-template :items="cartItems">
-               <div>
-                  <table class="table table-cart">
-                     <tr v-for="(item, index) in items">
-                        <td>{{item.Naziv}}</td>
-                        <td style="width:120px">QTY:
-                           <input v-model="item.qty" class="form-control input-qty" type="number">
-                        </td>
-                        <td>Note.</td>
-                        <td class="text-right">${{item.Cijena | formatCurrency}}</td>
-                        <td>
-                           <button class="button is-small is-white" @click="removeItem(index)"><span class="far fa-trash-alt"></span></button>
-                        </td>
-                     </tr>
-                     <tr v-show="items.length === 0">
-                        <td>Cart is empty</td>
-                     </tr>
-                     <tr v-show="items.length > 0">
-                        <td></td>
-                        <td></td>
-                        <td>Cart Total</td>
-                        <td>${{Total | formatCurrency}}</td>
-                        <td></td>
-                     </tr>
-                  </table>
-               </div>
-               <!-- /.container -->
-            </shopping-cart>
-         </div>
+              <div>
+                <table class="table is-hoverable">
+                  <tr v-for="(item, ix) in items">
+                    <td>{{item.Naziv}}</td>
+                    <td style="width:120px">QTY:
+                      <input v-model="item.qty" class="form-control input-qty" type="number">
+                    </td>
+                    <td data-tooltip="order note">Note.</td>
+                    <td class="text-right">{{item.Cijena }} Kn</td>
+                    <td>
+                      <button class="button is-small is-white" @click="removeItem(ix)"><span class="far fa-trash-alt"></span></button>
+                    </td>
+                  </tr>
+                  <tr v-show="items.length === 0">
+                    <td>Cart is empty</td>
+                  </tr>
+                  <tr v-show="items.length > 0">
+                    <td></td>
+                    <td></td>
+                    <td>Cart Total</td>
+                    <td>{{Total}} Kn</td>
+                    <td><button class="button is-primary is-small modal-button" @click="isShowModal = true">Order now</button></td>
+                  </tr>
+                </table>
 
+                <!-- modal -->
+                <div class="modal" v-bind:class="{ 'is-active': isShowModal }">
+                  <div class="modal-background" v-on:click="isShowModal = false"></div>
+                  <div class="modal-card">
+                    <header class="modal-card-head">
+                      <p class="modal-card-title">Checkout</p>
+                      <button class="delete" aria-label="close" v-on:click="isShowModal = false"></button>
+                    </header>
+                    <section class="modal-card-body">
+                      <p>We accept: <i class="fab fa-cc-stripe"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>
+                        <i class='fab fa-cc-amex'></i> <i class='fab fa-cc-discover'></i></p>
+                      <h3>Total: {{Total}} Kn</h3>
+                      <p> --payment processor-- </p>
+                    </section>
+                    <footer class="modal-card-foot">
+                      <button class="button" v-on:click="isShowModal = false">Cancel</button>
+                      <button class="button" title="Disabled button" disabled>Buy</button>
+                    </footer>
+                  </div>
+                </div>
+            </shopping-cart>
+          </div>
+        </div>
+        <div class="column"></div>
       </div>
+
+    </div>
+
     </div>
   </section>
 
 
   <!--      Locations (Map)        -->
-  <!-- todo: icons instead of bullets-->
   <section class="section" id="map">
     <div class="container">
 
@@ -544,14 +566,16 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Le Chef Restoraunts</strong> by Tomislav Kucar, 2019. 
+        <strong>Le Chef Restoraunts</strong> by Tomislav Kucar, 2019.
       </p>
       <button class="button is-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Back To Top</button>
     </div>
   </footer>
 
+  <!-- aditional css, custom js, fontawesome -->
   <link type="text/css" rel="stylesheet" href="res/css/style.css" />
   <script src="res/js/index.js"></script>
+  <script defer src="res/js/all.js"></script>
 </body>
 
 </html>

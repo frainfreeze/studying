@@ -1,3 +1,5 @@
+'use strict';
+
 // navbar burger toggle
 document.addEventListener('DOMContentLoaded', () => {
     // Get all "navbar-burger" elements
@@ -48,29 +50,18 @@ window.smoothScroll = function (target) {
 }
 
 //cart
-function formatNumber(n, c, d, t) {
-    var c = isNaN(c = Math.abs(c)) ? 2 : c,
-       d = d === undefined ? '.' : d,
-       t = t === undefined ? ',' : t,
-       s = n < 0 ? '-' : '',
-       i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
-       j = (j = i.length) > 3 ? j % 3 : 0;
-    return s + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) + (c ? d + Math.abs(
-       n - i).toFixed(c).slice(2) : '');
- };
-
- Vue.filter('formatCurrency', function (value) {
-    return formatNumber(value, 2, '.', ',');
- });
-
  Vue.component('shopping-cart', {
     props: ['items'],
-
+    data() {
+        return {
+            isShowModal: false
+        }
+    },
     computed: {
        Total: function () {
           var total = 0;
           this.items.forEach(item => {
-             total += (item.price * item.qty);
+             total += (item.Cijena * item.qty);
           });
           return total;
        }
@@ -108,6 +99,7 @@ new Vue({
               index: null,
               //cart
               cartItems: [],
+              isShowModal: false
         }
     },
     mounted() {
@@ -125,7 +117,7 @@ new Vue({
             // Check if the item was already added to cart
             // If so them add it to the qty field
             this.cartItems.forEach(item => {
-               if (item.id === itemToAdd.id) {
+               if (item.JeloId === itemToAdd.JeloId) {
                   found = true;
                   item.qty += itemToAdd.qty;
                }

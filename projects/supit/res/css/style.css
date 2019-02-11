@@ -28,6 +28,11 @@
   border: 1px solid lightgray;
 }
 
+/* cart */
+.input-qty {
+  width: 60px;
+  float: right
+}
 
 /* 
 * HTML5 Video Text Overlay Flexbox
