@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="res/css/bulma.min.css">
   <script defer src="res/js/all.js"></script>
 
+  <!-- bulma extensions -->
+  <script src='https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/js/bulma-extensions.min.js'></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/css/bulma-extensions.min.css">
+
   <!-- vue, axios, gallery component -->
   <script type="text/javascript" src="res/js/vue.js"></script>
   <script type="text/javascript" src="res/js/axios.min.js"></script>
@@ -126,6 +130,7 @@
 
       <div class="content">
         <div class="columns">
+          <!--side menu-->
           <div class="column is-one-quarter">
             <aside class="menu">
               <p class="menu-label">
@@ -156,6 +161,7 @@
             </aside>
           </div>
 
+          <!--list-->
           <div class="column">
             <ul v-for="item in info[active_el-1].Ponuda">
               <div class="box">
@@ -171,7 +177,13 @@
               </div>
             </ul>
           </div>
+
         </div>
+
+        <div class="is-divider" data-content="CART"></div>
+
+        
+
       </div>
     </div>
   </section>
