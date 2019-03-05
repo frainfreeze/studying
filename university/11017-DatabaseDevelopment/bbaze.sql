@@ -765,7 +765,7 @@ where KomercijalistID = 284
 order by DatumIzdavanja
 
 -- Primjer agregatnih funkcija
-select 
+select
 	*,
 	SUM(s.Kolicina) over ()
 from Racun as r

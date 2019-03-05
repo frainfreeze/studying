@@ -108,7 +108,7 @@ C plus plus
     [ ] - C++ Concurrency In Action (Anthony Williams)
 
 C#/.NET
-    [ ] - The yellow book
+    [-] - The yellow book
     [ ] - C# in Depth
     [ ] - C# 7.0 in a Nutshell: The Definitive Reference
 
@@ -117,16 +117,15 @@ Haskell
     [ ] - Beginning Haskell: A Project-Based Approach
 
 Java
-    [ ] - Welcome to Java for Python Programmers (interactive python)
-    [ ] - Think Java: How to Think Like a Computer Scientist
-    [ ] - Building Java Programs: A Back to Basics Approach 
+    [-] - Welcome to Java for Python Programmers (interactive python)
+    [-] - Think Java: How to Think Like a Computer Scientist
     [ ] - Core Java Volume 1&2
     [ ] - Effective Java
 
 JavaScript
-    [-] - eloquentjavascript.net
-    [-] - You Don't Know JS (book series)
-    [-] - JavaScript: The Good Parts
+    [x] - eloquentjavascript.net
+    [x] - You Don't Know JS (book series)
+    [x] - JavaScript: The Good Parts
 
 Lua
     [ ] - Programming In Lua (that's it, just read lots of source code now.)
@@ -397,7 +396,7 @@ Personal:
     [x] - Art & Fear: Observations On the Perils (and Rewards) of Artmaking (insights into the creative process)
     [x] - Meditations - by Marcus Aurelius
     [x] - The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life
-    [ ] - The Paradox of Choice - Why More is Less - by Barry Schwartz (when faced with many options)
+    [x] - The Paradox of Choice - Why More is Less - by Barry Schwartz (when faced with many options)
     [ ] - Mindset by Carol Dweck (on growth vs fixed mindset)
     [ ] - How to Talk to Anyone - by Leil Lowndes (conversational people skills)
     [ ] - The Compound Effect (self help)
