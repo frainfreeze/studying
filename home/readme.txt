@@ -185,6 +185,11 @@ Design Patterns, Software archihecture, system design:
     [ ] - Smalltalk Best Practice Patterns
     [-] - Learning JavaScript Design Patterns
 
+Debugging and Refactoring:
+    [ ] - Refactoring: Improving the Design of Existing Code
+    [ ] - Working Effectively with Legacy Code
+    [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)  
+
 System programming
     [ ] - Linux System Programming: Talking Directly to the Kernel and C Library
     [ ] - The Art of UNIX Programming
@@ -193,11 +198,6 @@ System programming
 Android and Kotlin:
     [ ] - Kotlin in Action by D. Jemerov
     [ ] - Android Programming: The Big Nerd Ranch Guide (3rd Edition)
-
-Debugging and Refactoring:
-    [ ] - Refactoring: Improving the Design of Existing Code
-    [ ] - Working Effectively with Legacy Code
-    [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)  
 
 Programming interview:
     [ ] - Cracking the Coding Interview: 189 Programming Questions and Solutions
@@ -267,7 +267,11 @@ Project Management:
     [ ] - Leading Lean Software Development: Results Are not the Point 
 
 DevOps:
-    [ ] - ?
+    [ ] - The Phoenix Project (must read on devops)
+    [ ] - The DevOps Handbook (continues on previous one)
+    [ ] - Continuous Delivery bz jez humble
+    [ ] - Securing DevOps - Security in the Cloud
+    [ ] - more https://github.com/chris-short/DevOps-README.md#devops-readmemd
 
 Touch typing
     [ ] - gnu typist
@@ -335,7 +339,6 @@ Investing:
 Biographies and Stories
     [x] - Patterns of Software
     [ ] - The Launch Pad: Inside Y Combinator, Silicon Valley's Most Exclusive School for Startups 
-    [ ] - The Phoenix Project
     [ ] - Startup: A Silicon Valley Adventure
     [ ] - Delivering Happiness: A Path to Profits, Passion, and Purpose (narrative on Profits; Profits and Passion)
     [ ] - Hackers and Painters: Big Ideas from the Computer Age (essays on intelligence, entrepreneurship, programming, and questioning norms)
@@ -457,10 +460,10 @@ Stage 3:
     - computer science
     - bios and stories, investing when we have $ for investing
     - before 2025
-    
+
 +----------------------------+ +----------------------------+ +----------------------------+           
 |    + personal roadmap +    | |      + tech roadmap +      | |    + business roadmap +    |           
-|                            | |                            | |                            |           
++----------------------------+ +----------------------------+ +----------------------------+            
 |   Wetware                  | |   Web Development          | |   Building a company       |           
 |   Time and Productivity    | |    - javascript            | |   Leadership/mgmt          |           
 |   English and writing      | |                            | |   Teams                    |           
@@ -481,6 +484,22 @@ Stage 3:
 |                            | |     - Databases            | |                            |           
 |                            | |     - Distributed sys      | |                            |           
 |                            | |     - math                 | |                            |           
-|                            | |     - compilers            | |                            |           
-|                            | |                            | |                            |           
+|                            | |     - compilers            | |                            |                     
 +----------------------------+ +----------------------------+ +----------------------------+    
+
+modules backend:
+- java & gui
+- c# & gui 
+
+modules soft.eng.:
+- design and usability 
+- android 
+- security 
+- big data
+- misc langs
+- sys programming
+- prog. interview
+
+modules dev ops:
+- vim & touchtyping
+- shell/bash & git
