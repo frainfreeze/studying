@@ -190,13 +190,6 @@ System programming
     [ ] - The Art of UNIX Programming
     [ ] - TCP/IP Sockets in C
 
-Web development
-    roadmap: github.com/kamranahmedse/developer-roadmap
-    [+] - learn.freecodecamp.org | theodinproject.com | htmldog.com
-    [+] - HTML & CSS: Design and Build Web Sites
-    [+] - diveintohtml5.it
-    [-] - Flask Web Development: Developing Web Applications with Python
-
 Android and Kotlin:
     [ ] - Kotlin in Action by D. Jemerov
     [ ] - Android Programming: The Big Nerd Ranch Guide (3rd Edition)
@@ -205,22 +198,6 @@ Debugging and Refactoring:
     [ ] - Refactoring: Improving the Design of Existing Code
     [ ] - Working Effectively with Legacy Code
     [ ] - Debugging: The 9 Indispensable Rules ... (2 weeks)  
-
-Security:
-    [ ] - Foundations of Security: What Every Programmer Needs to Know    
-    [ ] - Hacking art of exploitation
-    [ ] - Applied Cryptography: Protocols, Algorithms, and Source Code in C
-
-Machine learning etc:
-    [ ] - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp
-
-Design, usability and UI:
-    [ ] - The Design of Everyday Things: Revised and Expanded Edition 
-    [ ] - The Non-Designer's Design Book
-    [ ] - User Interface Design for Programmers by Joel Spolsky (three days) 
-    [ ] - About Face: The Essentials of Interaction Design
-    [ ] - Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability
-    [ ] - https://blog.codinghorror.com/low-fi-usability-testing/
 
 Programming interview:
     [ ] - Cracking the Coding Interview: 189 Programming Questions and Solutions
@@ -232,13 +209,69 @@ Classic must reads:
     [ ] - Programming Pearls
     [ ] - The Pragmatic Programmer: From Journeyman to Master (https://blog.codinghorror.com/a-pragmatic-quick-reference/)
 
-Other CS books:  
+Other important CS books:  
     [ ] - Joel on Software: And on Diverse and Occasionally...
     [ ] - The Passionate Programmer
     [ ] - Rapid Development: Taming Wild Software Schedules
     [ ] - Regular Expressions Cookbook: Detailed Solutions in Eight Programming Languages
     [ ] - Release It!: Design and Deploy Production-Ready Software
     [ ] - Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation
+
+--------------------- Other ---------------------
+Web development
+    roadmap: github.com/kamranahmedse/developer-roadmap
+    [+] - learn.freecodecamp.org | theodinproject.com | htmldog.com
+    [+] - HTML & CSS: Design and Build Web Sites
+    [+] - diveintohtml5.it
+    [-] - Flask Web Development: Developing Web Applications with Python
+
+Security:
+    [ ] - Foundations of Security: What Every Programmer Needs to Know    
+    [ ] - Hacking art of exploitation
+    [ ] - Applied Cryptography: Protocols, Algorithms, and Source Code in C
+    [ ] - https://www.abatchy.com/2017/03/how-to-prepare-for-pwkoscp-noob.html ?
+    [ ] - https://sundowndev.github.io/hacker-roadmap/ ?
+    [ ] - Practical Malware Analysis ?
+
+Big data, machine learning and data mining:
+    [ ] - Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp (github.com/norvig/paip-lisp)
+    [ ] - metacademy.org/roadmaps/ ?
+    [ ] - coursera.org/specializations/data-mining ?
+    [ ] - coursera.org/specializations/big-data ?
+    [ ] - Artificial Intelligence: A Modern Approach ? (aima.cs.berkeley.edu/)
+    [ ] - machinelearningmastery.com/machine-learning-roadmap-your-self-study-guide-to-machine-learning ?
+    [ ] - analyticsvidhya.com/blog/2017/01/the-most-comprehensive-data-science-learning-plan-for-2017 ?
+
+Design, usability and UI:
+    [ ] - The Design of Everyday Things: Revised and Expanded Edition 
+    [ ] - The Non-Designer's Design Book
+    [ ] - User Interface Design for Programmers by Joel Spolsky (three days) 
+    [ ] - About Face: The Essentials of Interaction Design
+    [ ] - Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability
+    [ ] - https://blog.codinghorror.com/low-fi-usability-testing/
+
+Project Management:
+    [ ] - Making Things Happen: Mastering Project Management 
+    [ ] - The Goal
+    [ ] - https://www.toptal.com/project-managers/agile/project-management-blueprint-part-1-agile-scrum-kanban-lean
+    [ ] - https://www.toptal.com/project-managers/agile/project-management-blueprint-part-2-agile-waterfall-hybrid
+    [ ] - The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
+    [ ] - Running Lean: Iterate from Plan A to a Plan That Works (pair with lean startup)
+    [ ] - Essential Scrum: A Practical Guide to the Most Popular Agile Process
+    [ ] - Scrum and XP from the Trenches (For developers who want to do agile, how to actually implement scrum)
+    [ ] - Agile Product Management with Scrum: Creating Products that Customers Love (For product managers and product owners who want to run agile projects)
+    [ ] - Agile Estimating and Planning (For POs and developers who want to get good ad short-mid-long-term estimating)
+    [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
+    [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
+    [ ] - Implementing Lean Software Development: From Concept to Cash
+    [ ] - Leading Lean Software Development: Results Are not the Point 
+
+DevOps:
+    [ ] - ?
+
+Touch typing
+    [ ] - gnu typist
+    [ ] - klava.org/ typingclub.com / typing.io / speedcoder.net
 
 Vim
     Cheatsheet: vim.rtorr.com
@@ -255,33 +288,8 @@ Git
     [ ] - eagain.net/articles/git-for-computer-scientists/
     [ ] - maryrosecook.com/blog/post/git-from-the-inside-out
 
-Touch typing
-    [ ] - gnu typist
-    [ ] - klava.org/ typingclub.com / typing.io / speedcoder.net
 
-
---------------------- humans ---------------------
-Agile/scrum/lean/startup:
-    [ ] - Scrum and XP from the Trenches (For developers who want to do agile)
-    [ ] - Agile Product Management with Scrum: Creating Products that Customers Love (For product managers and product owners who want to run agile projects)
-    [ ] - Agile Estimating and Planning (For POs and developers who want to get good ad short-mid-long-term estimating)
-    [ ] - Agile Software Development by Robert C. Martin (read carefully, its important)
-    [ ] - Clean Code: A Handbook of Agile Software Craftsmanship (companion to previos one)
-    [ ] - Implementing Lean Software Development: From Concept to Cash
-    [ ] - Leading Lean Software Development: Results Are not the Point 
-    [ ] - Essential Scrum: A Practical Guide to the Most Popular Agile Process
-    [ ] - User Stories Applied: For Agile Software Development
-    [ ] - Agile Testing: A Practical Guide for Testers and Agile Teams
-    [ ] - The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
-    [ ] - Running Lean: Iterate from Plan A to a Plan That Works (Lean Series)
-
-Teams:
-    [ ] - Team Geek: A Software Developers Guide to working well with others (For engineers who want to work successfully with other engineers)
-    [ ] - Managing the unmanageable: Rules, Tools... (For lead developers, line managers and others that need to steer software developers as a team)
-    [ ] - Difficult Conversation: How To Discuss What Matters Most (solve conflicts in a straightforward manner)
-    [ ] - The Five Dysfunctions of a Team: A Leadership Fable (fix dysfunctional teams)
-    [ ] - Peopleware: Productive Projects and Teams (couple days, how to treat people. Written for managers)
-
+--------------------- enterpreneurship ---------------------
 Building a company:
     [ ] - The Personal MBA - by Josh Kaufman (overview of everything you need to know)
     [ ] - Zero to One by Peter Thiel
@@ -294,6 +302,7 @@ Building a company:
     [ ] - Rework  by Jason Fried (stop talking and start working)
     [ ] - anything you want by Derek S (manual for running a business)
     [ ] - The Leap: A Memoir of Love and Madness in the Internet Gold Rush (e commerce template)
+    [ ] - The 7 Day Startup: You Don't Learn Until You Launch
 
 Interpersonal, leadership and managing:
     [ ] - E-Myth Revisited - by Michael Gerber (personal business view)
@@ -310,6 +319,13 @@ Interpersonal, leadership and managing:
     [ ] - The 48 Laws of Power by R. Greene (evil book)
     [ ] - 'Creativity, Inc.' by Ed Catmull ( managerial how-to on fostering creativity, productivity and work/ life balance in the office.)
 
+Teams:
+    [ ] - Team Geek: A Software Developers Guide to working well with others (For engineers who want to work successfully with other engineers)
+    [ ] - Managing the unmanageable: Rules, Tools... (For lead developers, line managers and others that need to steer software developers as a team)
+    [ ] - Difficult Conversation: How To Discuss What Matters Most (solve conflicts in a straightforward manner)
+    [ ] - The Five Dysfunctions of a Team: A Leadership Fable (fix dysfunctional teams)
+    [ ] - Peopleware: Productive Projects and Teams (couple days, how to treat people. Written for managers)
+
 Investing:
     [ ] - The Smartest Investment Book You'll Ever Read - by Daniel R. Solin
     [ ] - The Investor's Manifesto - by William J. Bernstein
@@ -318,6 +334,7 @@ Investing:
 
 Biographies and Stories
     [x] - Patterns of Software
+    [ ] - The Launch Pad: Inside Y Combinator, Silicon Valley's Most Exclusive School for Startups 
     [ ] - The Phoenix Project
     [ ] - Startup: A Silicon Valley Adventure
     [ ] - Delivering Happiness: A Path to Profits, Passion, and Purpose (narrative on Profits; Profits and Passion)
@@ -398,6 +415,9 @@ Personal:
     [x] - The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life
     [x] - The Paradox of Choice - Why More is Less - by Barry Schwartz (when faced with many options)
     [ ] - Mindset by Carol Dweck (on growth vs fixed mindset)
+    [ ] - Mastery by Robert Greene
+    [ ] - The Millionaire Fastlane: Crack the Code to Wealth and Live Rich for a Lifetime! 
+    [ ] - How to Get Rich - by Felix Dennis (honest thoughts from a filthy rich bastard)
     [ ] - How to Talk to Anyone - by Leil Lowndes (conversational people skills)
     [ ] - The Compound Effect (self help)
     [ ] - The War of Art - by Steven Pressfield (on following passion?)
@@ -413,7 +433,54 @@ Personal:
     [ ] - Self Reliance - by Ralph Waldo Emerson (manifesto)
     [ ] - The Willpower Instinct - by Kelly McGonigal (self-control, willpower)
     [ ] - Quiet - by Susan Cain (on introverts)
-    [ ] - How to Get Rich - by Felix Dennis (honest thoughts from a filthy rich bastard)
     [ ] - What Got You Here Won't Get You There (things that brought you where you are, are blocking you from advancing)
     [ ] - Personal Development for Smart People (broad, different aspects of self-improvement)
     [ ] - A Short History of Nearly Everything
+
+
+--------------------- Progression table and deadlines ---------------------
+Stage 1:
+    - first third of personal roadmap
+    - web and software engineering (half?)
+    - university s3, s4
+    - deadline: 29.9.2018 
+
+Stage 2:
+    - second third of personal roadmap
+    - finish software engineering
+    - first third of business roadmap
+    - university s5, s6
+    - deadline: last day of s6
+
+Stage 3:
+    - final part of personal roadmap
+    - computer science
+    - bios and stories, investing when we have $ for investing
+    - before 2025
+    
++----------------------------+ +----------------------------+ +----------------------------+           
+|    + personal roadmap +    | |      + tech roadmap +      | |    + business roadmap +    |           
+|                            | |                            | |                            |           
+|   Wetware                  | |   Web Development          | |   Building a company       |           
+|   Time and Productivity    | |    - javascript            | |   Leadership/mgmt          |           
+|   English and writing      | |                            | |   Teams                    |           
+|   Psychology               | |   Software engineering     | |                            |           
+|   Personal                 | |    - programming langs     | |   Bios and stories         |           
+|                            | |    - software eng.         | |                            |           
+|   Philosophy               | |    - security              | |   Investing                |           
+|   Culture                  | |    - big data etc          | |                            |           
+|   Technology               | |    - design etc            | |                            |           
+|                            | |    - project managment     | |                            |           
+|   Mathematics              | |    - dev ops               | |                            |           
+|   Statistics               | |    - programing (compsci)  | |                            |           
+|   Electrical engineering   | |    - DS&A (compsci)        | |                            |           
+|                            | |    - misc                  | |                            |           
+|                            | |                            | |                            |           
+|                            | |    Computer science        | |                            |           
+|                            | |     - Operating systems    | |                            |           
+|                            | |     - Databases            | |                            |           
+|                            | |     - Distributed sys      | |                            |           
+|                            | |     - math                 | |                            |           
+|                            | |     - compilers            | |                            |           
+|                            | |                            | |                            |           
++----------------------------+ +----------------------------+ +----------------------------+    
