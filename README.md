@@ -9,4 +9,4 @@ Repository is divided in three main parts:
 - [/projects](projects) - various smaller projects and scripts
 - [/university](university) - stuff done at uni and related material
 
-I also do web dev [DailyWebDeveloper](https://github.com/frainfreeze/DailyWebDeveloper). Find list of my learning projects [here](https://github.com/frainfreeze/personal/projectlist.md).
+Find my study roadmap here [frainfreeze/roadmap](https://github.com/frainfreeze/DailyWebDeveloper). Find list of my learning projects [here](https://github.com/frainfreeze/personal/projectlist.md).
