@@ -8,6 +8,19 @@
 	<name>Java DB app</name>
 	<description>Learning project</description>
 
+    <developers>
+    	<developer>
+      		<id>tk</id>
+      		<name>Tomislav Kucar</name>
+      		<email>tomislav.kucar@racunarstvo.hr</email>
+      		<roles>
+        		<role>architect</role>
+        		<role>developer</role>
+      		</roles>
+	      	<timezone>Europe/Zagreb</timezone>
+    	</developer>
+  	</developers>
+
 	<dependencies>
 		<!-- database -->
 		<dependency>
@@ -37,5 +50,59 @@
 	       <artifactId>slf4j-log4j12</artifactId>
 	       <version>1.7.5</version>
 	   </dependency>
-	</dependencies>
+	</dependencies>	
+
+	<reporting>
+		<plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-resources-plugin</artifactId>
+	            <version>2.6</version>
+	        </plugin>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-project-info-reports-plugin</artifactId>
+	            <version>2.7</version>
+	            <configuration>
+			        <outputDirectory>docs-tmp</outputDirectory>
+			    </configuration>
+	        </plugin>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-clean-plugin</artifactId>
+	            <version>2.5</version>
+	            <configuration>
+	                <filesets>
+	                    <fileset>
+	                        <directory>src/main/generated-groovy-stubs</directory>
+	                    </fileset>
+	                </filesets>
+	            </configuration>
+	        </plugin>
+		</plugins>        
+	</reporting>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- This plug-in copies resources from target/site to docs/ so Github can render it -->
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.7</version>
+					<configuration>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<!-- Resources copied by resources plug-in. Note that mvn site needs to run before mvn install to
+		make sure the website code exists inside target/site folder -->
+		<resources>
+			<resource>
+				<directory>${project.build.directory}/site/</directory>
+				<targetPath>${basedir}/docs/</targetPath>
+			</resource>
+		</resources>
+	</build>
+
 </project>
+
