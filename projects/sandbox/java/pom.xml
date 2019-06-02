@@ -50,6 +50,14 @@
 	       <artifactId>slf4j-log4j12</artifactId>
 	       <version>1.7.5</version>
 	   </dependency>
+	   
+	   <!-- testing -->
+	   <dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>4.12</version>
+    		<scope>test</scope>
+		</dependency>
 	</dependencies>	
 
 	<reporting>
@@ -101,7 +109,22 @@
 				<directory>${project.build.directory}/site/</directory>
 				<targetPath>${basedir}/docs/</targetPath>
 			</resource>
+			
+	        <resource>
+	            <directory>src/main/resources</directory>
+	        </resource>			
 		</resources>
+		<!-- Maven is based on the Convention over Configuration pardigm? so you shouldn't configure things which are the defaults. -->
+		<directory>target</directory>
+	    <outputDirectory>target/classes</outputDirectory>
+	    <testOutputDirectory>target/test-classes</testOutputDirectory>
+	    <sourceDirectory>src/main/java</sourceDirectory>
+	    <testSourceDirectory>src/test/java</testSourceDirectory>
+	    <testResources>
+	        <testResource>
+	            <directory>src/test/resources</directory>
+	        </testResource>
+	    </testResources>
 	</build>
 
 </project>
