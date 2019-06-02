@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,18 +9,18 @@
 	<name>Java DB app</name>
 	<description>Learning project</description>
 
-    <developers>
-    	<developer>
-      		<id>tk</id>
-      		<name>Tomislav Kucar</name>
-      		<email>tomislav.kucar@racunarstvo.hr</email>
-      		<roles>
-        		<role>architect</role>
-        		<role>developer</role>
-      		</roles>
-	      	<timezone>Europe/Zagreb</timezone>
-    	</developer>
-  	</developers>
+	<developers>
+		<developer>
+			<id>tk</id>
+			<name>Tomislav Kucar</name>
+			<email>tomislav.kucar@racunarstvo.hr</email>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Zagreb</timezone>
+		</developer>
+	</developers>
 
 	<dependencies>
 		<!-- database -->
@@ -34,98 +35,41 @@
 			<version>2.6.0</version>
 		</dependency>
 		<dependency>
-		    <groupId>com.googlecode.flyway</groupId>
-		    <artifactId>flyway-core</artifactId>
-		    <version>2.3.1</version>
+			<groupId>com.googlecode.flyway</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>2.3.1</version>
 		</dependency>
-	
-		<!-- logging -->	
-	   <dependency>
-	       <groupId>org.slf4j</groupId>
-	       <artifactId>slf4j-api</artifactId>
-	       <version>1.7.5</version>
-	   </dependency>
-	   <dependency>
-	       <groupId>org.slf4j</groupId>
-	       <artifactId>slf4j-log4j12</artifactId>
-	       <version>1.7.5</version>
-	   </dependency>
-	   
-	   <!-- testing -->
-	   <dependency>
-    		<groupId>junit</groupId>
-    		<artifactId>junit</artifactId>
-    		<version>4.12</version>
-    		<scope>test</scope>
+
+		<!-- logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
 		</dependency>
-	</dependencies>	
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+
+		<!-- testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 	<reporting>
 		<plugins>
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-resources-plugin</artifactId>
-	            <version>2.6</version>
-	        </plugin>
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-project-info-reports-plugin</artifactId>
-	            <version>2.7</version>
-	            <configuration>
-			        <outputDirectory>docs-tmp</outputDirectory>
-			    </configuration>
-	        </plugin>
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-clean-plugin</artifactId>
-	            <version>2.5</version>
-	            <configuration>
-	                <filesets>
-	                    <fileset>
-	                        <directory>src/main/generated-groovy-stubs</directory>
-	                    </fileset>
-	                </filesets>
-	            </configuration>
-	        </plugin>
-		</plugins>        
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
+		</plugins>
 	</reporting>
-
-	<build>
-		<pluginManagement>
-			<plugins>
-				<!-- This plug-in copies resources from target/site to docs/ so Github can render it -->
-				<plugin>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.7</version>
-					<configuration>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-		<!-- Resources copied by resources plug-in. Note that mvn site needs to run before mvn install to
-		make sure the website code exists inside target/site folder -->
-		<resources>
-			<resource>
-				<directory>${project.build.directory}/site/</directory>
-				<targetPath>${basedir}/docs/</targetPath>
-			</resource>
-			
-	        <resource>
-	            <directory>src/main/resources</directory>
-	        </resource>			
-		</resources>
-		<!-- Maven is based on the Convention over Configuration pardigm? so you shouldn't configure things which are the defaults. -->
-		<directory>target</directory>
-	    <outputDirectory>target/classes</outputDirectory>
-	    <testOutputDirectory>target/test-classes</testOutputDirectory>
-	    <sourceDirectory>src/main/java</sourceDirectory>
-	    <testSourceDirectory>src/test/java</testSourceDirectory>
-	    <testResources>
-	        <testResource>
-	            <directory>src/test/resources</directory>
-	        </testResource>
-	    </testResources>
-	</build>
 
 </project>
 
