@@ -1,0 +1,73 @@
+= Mathematics
+:Date:      2017-2019
+:Author:    Tomislav Kucar
+:sectnums:                                            
+:toc:                                              
+:toclevels: 3                                                
+:toc-title: Contents
+:imagesdir: images
+:icons: font
+
+
+== Preface
+
+https://en.wikipedia.org/wiki/Areas_of_mathematics[Areas of mathematics]
+
+
+http://asciimath.org/#gettingStarted[Interactive renderer]
+
+Raw formula: `sum_(i=1)^n i^3=((n(n+1))/2)^2`
+
+.Asciimath rendering test
+[asciimath]
+++++
+sum_(i=1)^n i^3=((n(n+1))/2)^2
+++++
+
+
+== Applied mathematics
+=== Probability and statistics
+
+=== Computational sciences
+==== Numerical analysis
+Many problems in mathematics cannot in general be solved exactly. 
+Numerical analysis is the study of iterative methods and algorithms for 
+approximately solving problems to a specified error bound. Includes 
+numerical differentiation, numerical integration and numerical methods; 
+c.f. scientific computing.
+
+==== Computer algebra
+This area is also called symbolic computation or algebraic computation. 
+It deals with exact computation, for example with integers of arbitrary 
+size, polynomials or elements of finite fields. It includes also the 
+computation with non numeric mathematical objects like polynomial 
+ideals or series.
+
+=== Physical sciences
+Mechanics, Mechanics of structures, Mechanics of deformable solids,
+Fluid mechanics, Particle mechanics
+
+=== Other applied mathematics
+
+* Operations research (OR), also known as operational research, 
+provides optimal or near-optimal solutions to complex problems. OR uses 
+mathematical modeling, statistical analysis, and mathematical 
+optimization.
+* Mathematical programming (or mathematical optimization) minimizes (or 
+maximizes) a real-valued function over a domain that is often specified 
+by constraints on the variables. Mathematical programming studies these 
+problems and develops iterative methods and algorithms for their 
+solution.
+
+
+== Pure mathematics
+=== Foundations
+=== Number Theory
+=== Algebra
+=== Combinatorics
+=== Geometry and topology
+=== Analysis
+
+== Appendix
+=== Map of mathematics
+image::map.png[]
