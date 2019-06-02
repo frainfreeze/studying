@@ -26,7 +26,44 @@ sum_(i=1)^n i^3=((n(n+1))/2)^2
 
 
 == Applied mathematics
-=== Probability and statistics
+=== Introductory Business Statistics
+Introductory Business Statistics is designed to meet the scope and sequence 
+requirements of the one-semester statistics course for business, economics, and 
+related majors. Core statistical concepts and skills have been augmented with 
+practical business examples, scenarios, and exercises. The result is a meaningful 
+understanding of the discipline which will serve students in their business 
+careers and real-world experiences.
+
+==== Sampling and data
+Since you will undoubtedly be given statistical information at some point in your life, you need to know some techniques
+for analyzing the information thoughtfully. Think about buying a house or managing a budget. Think about your chosen
+profession. The fields of economics, business, psychology, education, biology, law, computer science, police science, and
+early childhood development require at least one course in statistics.
+
+Included in this chapter are the basic ideas and words of probability and statistics. You will soon understand that statistics
+and probability work together. You will also learn how data are gathered and what "good" data can be distinguished from
+"bad."
+
+===== Definitions of Statistics, Probability, and Key Terms
+The science of statistics deals with the collection, analysis, interpretation, 
+and presentation of data. We see and use data in our everyday lives.
+
+Organizing and summarizing data is called descriptive statistics. Two ways to 
+summarize data are by graphing and by using numbers (for example, finding an average). 
+After you have studied probability and probability distributions, you will use 
+formal methods for drawing conclusions from "good" data. The formal methods are called
+inferential statistics. Statistical inference uses probability to determine how confident
+we can be that our conclusions are correct.
+
+====== Probability
+Probability is a mathematical tool used to study randomness.
+
+====== Key Terms
+In statistics, we generally want to study a population.
+
+===== Data, Sampling, and Variation in Data and Sampling
+Data may come from a population or from a sample.
+
 
 === Computational sciences
 ==== Numerical analysis
