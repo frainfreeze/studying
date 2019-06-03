@@ -61,4 +61,14 @@ public class DbHelper {
 		flyway.setDataSource(ds);
 		flyway.migrate();
 	}
+
+	public void registerShutdownHook() {
+		//could be done using finalizers but the are discouraged
+		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+			@Override
+			public void run() {
+				close();
+			}
+		}, "DbHelper-thread")); //thread names have to be unique!
+	}
 }
