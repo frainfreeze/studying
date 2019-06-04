@@ -1,4 +1,7 @@
 # FAQ
+Q: How do i build project<br/>
+A: run `mvn clean install`
+
 Q: How do i build documentation<br/>
 A: run `mvn site:site`
 

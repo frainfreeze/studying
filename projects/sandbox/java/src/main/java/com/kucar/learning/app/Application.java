@@ -145,7 +145,7 @@ public class Application extends JFrame {
 
   private void delete() {
     if (selected != null) {
-      if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Delete " + selected.getName() + "?", "Delete", JOptionPane.YES_NO_OPTION)) {
+      if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Delete" + selected.getName() + "?", "Delete", JOptionPane.YES_NO_OPTION)) {
         try {
           selected.delete();
         } catch (final SQLException e) {
@@ -207,6 +207,8 @@ public class Application extends JFrame {
     final JMenuBar menuBar = new JMenuBar();
     setJMenuBar(menuBar);
 
+    //TODO: add file menu option
+    
     final JMenu editMenu = menuBar.add(new JMenu("Edit"));
     editMenu.add(refreshAction);
     editMenu.addSeparator();

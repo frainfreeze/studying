@@ -6,6 +6,8 @@ import javax.swing.SwingUtilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+//TODO: better exception handling
+
 public class Main {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 	
