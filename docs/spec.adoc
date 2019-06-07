@@ -1,0 +1,3 @@
+== Project specification
+
+link:docs/specification.pdf[> PDF <]
