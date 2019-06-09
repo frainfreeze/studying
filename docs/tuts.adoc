@@ -22,3 +22,6 @@
 
 .Databases
 * https://www.youtube.com/watch?v=OdDkFPO_nto&list=PLGLfVvz_LVvRX6xK1oi0reKci6ignjdSa&index=25[SQL server]
+
+.Other
+* https://www.c-sharpcorner.com/UploadFile/1e050f/creating-and-using-dll-class-library-in-C-Sharp/[Creating and Using DLL (Class Library) in C#]
