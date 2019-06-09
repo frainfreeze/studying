@@ -6,4 +6,6 @@ Covers C#, OOP, .NET, WinForms, WPF, API consuming
 
 include::docs/spec.adoc[]
 
+include::docs/faq.adoc[]
+
 include::docs/tuts.adoc[]
