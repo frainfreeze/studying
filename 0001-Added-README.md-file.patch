@@ -1,0 +1,40 @@
+From 33c53064cef7f114a497dd2a15f3a6efc7e3c413 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tomislav=20Ku=C4=87ar?= <tkucar@racunarstvo.hr>
+Date: Wed, 15 May 2019 15:54:03 +0000
+Subject: [PATCH 1/2] Added README.md file
+
+---
+ README.md | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 README.md
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..0ca446a
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,20 @@
++# Introduction 
++TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
++
++# Getting Started
++TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
++1.	Installation process
++2.	Software dependencies
++3.	Latest releases
++4.	API references
++
++# Build and Test
++TODO: Describe and show how to build your code and run the tests. 
++
++# Contribute
++TODO: Explain how other users and developers can contribute to make your code better. 
++
++If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
++- [ASP.NET Core](https://github.com/aspnet/Home)
++- [Visual Studio Code](https://github.com/Microsoft/vscode)
++- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+\ No newline at end of file
+-- 
+2.21.0.windows.1
+
