@@ -16,7 +16,7 @@ namespace Admin
         protected void ValidateUser(object sender, EventArgs e)
         {
             int userId = 0;
-            string constr = ConfigurationManager.ConnectionStrings["LoginDB"].ConnectionString;
+            string constr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("Validate_User"))

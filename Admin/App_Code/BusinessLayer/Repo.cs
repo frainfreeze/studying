@@ -12,7 +12,7 @@ namespace Admin.App_Code.BusinessLayer
     public class Repo
     {
         public DataSet ds { get; set; }
-        private string cs = ConfigurationManager.ConnectionStrings["LoginDB"].ConnectionString;
+        private string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
 
         public Repo()
         {
