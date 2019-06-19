@@ -109,6 +109,25 @@ CREATE TABLE [dbo].[Meal](
 )
 GO
 
+--combinations
+CREATE TABLE [dbo].[CombinationHelper](
+	IDCombinationHelper int CONSTRAINT PK_CombinationHelper PRIMARY KEY IDENTITY,
+	[IDMealName] int CONSTRAINT FK_CombinationHelper_MealName FOREIGN KEY REFERENCES MealName(IDMealName) NULL,
+	[PercentFat] int not null,
+	[PercentCarb] int not null,
+	[PercentProtein] int not null
+)
+GO
+CREATE TABLE [dbo].[Combination](
+	IDCombination int CONSTRAINT PK_Combination PRIMARY KEY IDENTITY,
+	[NumMeals] int not null,
+	[DateCreated] date,
+	[ValidUntil] date,
+	[IDCombinationHelper] int CONSTRAINT FK_Combination_CombinationHelper FOREIGN KEY REFERENCES CombinationHelper(IDCombinationHelper) NULL
+)
+GO
+
+
 --------------------------------- procedures ---------------------------------
 
 CREATE PROCEDURE [dbo].[Insert_User]
@@ -190,6 +209,15 @@ END
 GO
 
 
+CREATE PROCEDURE GetBuiltinTables
+AS
+BEGIN
+	SELECT * FROM Gender
+	SELECT * FROM DiabetesType
+	SELECT * FROM ActivityLevel
+END
+GO
+
 --------------------------------- populate tables ---------------------------------
 -- fill user related tables
 INSERT INTO [ActivityLevel] (
@@ -221,8 +249,21 @@ INSERT INTO [User] (
 )
 VALUES
 	('admin', '12345', 'admin@diabpro.com', '','','1/1/2001','','',3,1,1),
-	('tom123', '12345', 'tom@diabpro.com', 'Tomislav','Kucar','9/29/1998','75.1','193',2,1,2),
-	('johnny', 'pwd', 'john@gmail.com', 'John','Smith','1/1/1996','82','189',1,2,1)
+	('tom123', '12345', 'tom@tom.com', 'Tomislav','Kucar','3/1/1998','75.1','193',2,1,2),
+	('johnny', 'pwd', 'john@gmail.com', 'John','Smith','1/1/1996','82','189',1,2,1),
+	('tom', '12345', 'tom@tom.com', 'Tomislav','Kucar','1/1/1998','75.1','193',2,1,2),
+	('tom12', '12345', 'tom@tom.com', 'Tomislav','Kucar','2/1/1998','75.1','193',2,1,2),
+	('tom1234', '12345', 'tom@tom.com', 'Tomislav','Kucar','4/1/1998','75.1','193',2,1,2),
+	('tom12345', '12345', 'tom@tom.com', 'Tomislav','Kucar','5/29/1998','75.1','193',2,1,2),
+	('kelj0x0f', '12345', 'kk@diabpro.com', 'Keljo','keglevich','9/21/1998','75.1','193',2,1,1),
+	('kelj0x03', '12345', 'kk@diabpro.com', 'Keljo','keglevich','9/22/1998','75.1','193',2,1,1),
+	('kelj0x02', '12345', 'kk@diabpro.com', 'Keljo','keglevich','9/23/1998','75.1','193',2,1,1),
+	('kelj0x01', '12345', 'kk@diabpro.com', 'Keljo','keglevich','9/24/1998','75.1','193',2,1,1),
+	('kelj0x00', '12345', 'kk@diabpro.com', 'Keljo','keglevich','9/25/1998','75.1','193',2,1,1),
+	('grgaalinecvarak1', '12345', 'rr@diabpro.com', 'Grga','NotCvarak','1/1/1998','75.1','193',2,1,2),
+	('grgaalinecvarak2', '12345', 'rr@diabpro.com', 'Grga','NotCvarak','1/1/1998','75.1','193',2,1,2),
+	('grgaalinecvarak3', '12345', 'rr@diabpro.com', 'Grga','NotCvarak','1/1/1998','75.1','193',2,1,2),
+	('grgaalinecvarak4', '12345', 'rr@diabpro.com', 'Grga','NotCvarak','1/1/1998','75.1','193',2,1,2)
 GO
 
 -- enable admin account

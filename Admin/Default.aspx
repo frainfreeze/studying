@@ -4,28 +4,46 @@
 
     <div class="jumbotron">
         <h1>DiabPro Admin Dashboard</h1>
-        <p class="lead">Users</p>
         <p class="lead">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IDUser" DataSourceID="UsersSource" AllowPaging="True" AllowSorting="True">
-                <Columns>
-                    <asp:BoundField DataField="IDUser" HeaderText="IDUser" InsertVisible="False" ReadOnly="True" SortExpression="IDUser" />
-                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                    <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname" />
-                    <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
-                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                    <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
-                    <asp:BoundField DataField="Weight" HeaderText="Weight" SortExpression="Weight" />
-                    <asp:BoundField DataField="Height" HeaderText="Height" SortExpression="Height" />
-                    <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-                    <asp:BoundField DataField="Tip Dijabetesa" HeaderText="Tip Dijabetesa" SortExpression="Tip Dijabetesa" />
-                    <asp:BoundField DataField="Raz.Fiz. aktivnosti" HeaderText="Raz.Fiz. aktivnosti" SortExpression="Raz.Fiz. aktivnosti" />
-                </Columns>
-            </asp:GridView>
-            <asp:SqlDataSource ID="UsersSource" runat="server" ConnectionString="<%$ ConnectionStrings:UsersSourceConn %>" SelectCommand="GetUsersForCSV" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+            Language:&nbsp;
+            <asp:RadioButton ID="RadioButton1" runat="server" Text="HR" />
+            <asp:RadioButton ID="RadioButton2" runat="server" Text="ENG" />
         </p>
-        <p class="lead">
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Download users as CSV file" />
-&nbsp;</p>
     </div>
-   
+
+    <div class="container">
+        <p class="lead">
+            Built in tables:
+        </p>
+        <div class="row">
+            <div class="col-md-4">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IDGender" DataSourceID="ds1">
+                    <Columns>
+                        <asp:BoundField DataField="IDGender" HeaderText="IDGender" InsertVisible="False" ReadOnly="True" SortExpression="IDGender" />
+                        <asp:BoundField DataField="Desc" HeaderText="Desc" SortExpression="Desc" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="ds1" runat="server" ConnectionString="<%$ ConnectionStrings:db %>" SelectCommand="SELECT * FROM Gender ORDER BY IDGender ASC"></asp:SqlDataSource>
+            </div>
+            <div class="col-md-4">
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="IDDiabetesType" DataSourceID="ds2">
+                    <Columns>
+                        <asp:BoundField DataField="IDDiabetesType" HeaderText="IDDiabetesType" InsertVisible="False" ReadOnly="True" SortExpression="IDDiabetesType" />
+                        <asp:BoundField DataField="Desc" HeaderText="Desc" SortExpression="Desc" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="ds2" runat="server" ConnectionString="<%$ ConnectionStrings:db %>" SelectCommand="SELECT * FROM DiabetesType ORDER BY IDDiabetesType ASC"></asp:SqlDataSource>
+            </div>
+            <div class="col-md-4">
+                <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="IDActivityLevel" DataSourceID="ds3">
+                    <Columns>
+                        <asp:BoundField DataField="IDActivityLevel" HeaderText="IDActivityLevel" InsertVisible="False" ReadOnly="True" SortExpression="IDActivityLevel  " />
+                        <asp:BoundField DataField="Desc" HeaderText="Desc" SortExpression="Desc" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="ds3" runat="server" ConnectionString="<%$ ConnectionStrings:db %>" SelectCommand="SELECT * FROM ActivityLevel ORDER BY IDActivityLevel ASC"></asp:SqlDataSource>
+            </div>
+        </div>
+    </div>
+
 </asp:Content>

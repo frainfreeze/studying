@@ -14,7 +14,34 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <style type="text/css">
+        body
+        {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+        table
+        {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+        table th
+        {
+            background-color: #B8DBFD;
+            color: #333;
+            font-weight: bold;
+        }
+        table th, table td
+        {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        table, table table td
+        {
+            border: 0px solid #ccc;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -50,9 +77,11 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Users</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/Users">Users</a></li>
+                        <li><a runat="server" href="~/Groceries">Groceries</a></li>
+                        <li><a runat="server" href="~/Meals">Meals</a></li>
+                        <li><a runat="server" href="~/Units">Units</a></li>
+                        <li><a runat="server" href="~/Combinations">Combinations</a></li>
                         <li><asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
                     </ul>
                 </div>
@@ -69,4 +98,28 @@
 
     </form>
 </body>
+<!--The jQuery BlockUI Plugin has been applied to the dvGrid HTML DIV. When the ASP.Net 
+    AJAX UpdatePanel makes a request, the HTML DIV is blocked and an animation is displayed.
+    When the request is completed, the HTML DIV is unblocked and the animation is hidden. -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.blockUI.js"></script>
+<script type="text/javascript">
+    $(function () {
+        BlockUI("dvGrid");
+        $.blockUI.defaults.css = {};
+    });
+    function BlockUI(elementID) {
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_beginRequest(function () {
+            $("#" + elementID).block({ message: '<div align = "center">' + '<img src="Content/loadingAnim.gif"/></div>',
+                css: {},
+                overlayCSS: { backgroundColor: '#000000', opacity: 0.6, border: '3px solid #63B2EB' }
+            });
+        });
+        prm.add_endRequest(function () {
+            $("#" + elementID).unblock();
+        });
+    };
+</script>
+
 </html>
