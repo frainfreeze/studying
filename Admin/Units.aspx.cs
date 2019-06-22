@@ -77,9 +77,6 @@ namespace Admin
         {
             GridViewRow row = GridView1.Rows[e.RowIndex];
             int IDUnit = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
-            //string unit = (row.FindControl("Desc") as TextBox).Text;
-            //string enabled = (row.FindControl("Enabled") as TextBox).Text;
-
             string desc = (row.FindControl("txtDesc") as TextBox).Text;
             string enb = (row.FindControl("txtEnabled") as TextBox).Text;
 
