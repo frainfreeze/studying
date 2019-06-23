@@ -218,6 +218,17 @@ BEGIN
 END
 GO
 
+
+CREATE PROCEDURE GetGroceries
+AS
+BEGIN
+	SELECT g.[IDGrocery] as [IDGrocery], g.[Name] as [Name], g.[kJ] as [kJ], g.[kcal] as [kcal], gt.[Desc] as [Grocery Type], u.[Desc] as [Unit], g.[Quantity] as [Quantity], g.[Enabled] as [Enabled]
+	FROM [Grocery] as g
+	inner join [GroceryType] as gt on g.IDGroceryType = gt.IDGroceryType
+	inner join [Unit] as u on g.IDUnit = u.IDUnit
+END
+GO
+
 --------------------------------- populate tables ---------------------------------
 -- fill user related tables
 INSERT INTO [ActivityLevel] (

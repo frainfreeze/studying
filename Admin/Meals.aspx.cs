@@ -107,7 +107,7 @@ namespace Admin
         protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int IDMealName = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
-            string query = "DELETE FROM MealName WHERE IDMealName=@IDMealName";
+            string query = "UPDATE [dbo].[MealName] SET [Enabled] = 0 WHERE [IDMealName] = @IDMealName";
             string constr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {

@@ -28,7 +28,7 @@ namespace Admin
         private void BindGrid()
         {
             string constr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
-            string query = "SELECT * FROM Unit";
+            string query = "exec GetGroceries"; //
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlDataAdapter sda = new SqlDataAdapter(query, con))
@@ -45,18 +45,36 @@ namespace Admin
 
         protected void Insert(object sender, EventArgs e)
         {
-            string desc = txtDesc.Text;
-            string enabled = txtEnabled.Text;
-            txtDesc.Text = "";
+            string name = txtName.Text;
+            string kj = txtKJ.Text;
+            string kcal = txtKcal.Text;
+            string GroceryType = txtGroceryType.Text;
+            string Unit = txtUnit.Text;
+            string Quantity = txtQuantity.Text;
+            string Enabled = txtEnabled.Text;
+            txtName.Text = "";
+            txtKJ.Text = "";
+            txtKcal.Text = "";
+            txtGroceryType.Text = "";
+            txtUnit.Text = "";
+            txtQuantity.Text = "";
             txtEnabled.Text = "";
-            string query = "INSERT INTO Unit VALUES(@Desc, @Enabled)";
+
+            string query = "INSERT INTO Grocery VALUES(@Name, @kJ, @kcal, @IDGroceryType, @IDUnit, @Quantity, @Enabled)";
             string constr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand(query))
                 {
-                    cmd.Parameters.AddWithValue("@Desc", desc);
-                    cmd.Parameters.AddWithValue("@Enabled", enabled);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@kJ", kj);
+                    cmd.Parameters.AddWithValue("@kcal", kcal);
+
+                    cmd.Parameters.AddWithValue("@IDGroceryType", GroceryType);
+                    cmd.Parameters.AddWithValue("@IDUnit", Unit);
+                    cmd.Parameters.AddWithValue("@Quantity", Quantity);
+                    cmd.Parameters.AddWithValue("@Enabled", Enabled);
+
                     cmd.Connection = con;
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -107,13 +125,13 @@ namespace Admin
         protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int IDUnit = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
-            string query = "DELETE FROM Unit WHERE IDUnit=@IDUnit";
+            string query = "UPDATE [dbo].[Grocery] SET [Enabled] = 0 WHERE IDGrocery=@IDGrocery";
             string constr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand(query))
                 {
-                    cmd.Parameters.AddWithValue("@IDUnit", IDUnit);
+                    cmd.Parameters.AddWithValue("@IDGrocery", IDUnit);
                     cmd.Connection = con;
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -128,7 +146,7 @@ namespace Admin
         {
             if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex != GridView1.EditIndex)
             {
-                (e.Row.Cells[2].Controls[2] as LinkButton).Attributes["onclick"] = "return confirm('Do you want to delete this row?');";
+                (e.Row.Cells[7].Controls[2] as LinkButton).Attributes["onclick"] = "return confirm('Do you want to delete this row?');";
             }
 
         }

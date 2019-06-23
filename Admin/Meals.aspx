@@ -7,7 +7,7 @@
                     DataKeyNames="IDMealName,Desc,Enabled"
                     OnRowDataBound="OnRowDataBound"
                     OnRowEditing="OnRowEditing" OnRowCancelingEdit="OnRowCancelingEdit"
-                    PageSize="3" AllowPaging="true" OnPageIndexChanging="OnPaging"
+                    PageSize="10" AllowPaging="true" OnPageIndexChanging="OnPaging"
                     OnRowUpdating="OnRowUpdating" OnRowDeleting="OnRowDeleting"
                     EmptyDataText="No records has been added." Width="450">
                     <Columns>
@@ -34,7 +34,7 @@
 
                 <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse">
                     <tr>
-                        <td style="width: 150px">New Unit:<br />
+                        <td style="width: 150px">New Meal:<br />
                             <asp:TextBox ID="txtDesc" runat="server" Width="140" />
                         </td>
                         <td style="width: 150px">Enabled (yes 1, no 0):<br />

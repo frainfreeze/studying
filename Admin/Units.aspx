@@ -10,7 +10,7 @@
                     DataKeyNames="IDUnit,Desc,Enabled"
                     OnRowDataBound="OnRowDataBound"
                     OnRowEditing="OnRowEditing" OnRowCancelingEdit="OnRowCancelingEdit"
-                    PageSize="3" AllowPaging="true" OnPageIndexChanging="OnPaging"
+                    PageSize="10" AllowPaging="true" OnPageIndexChanging="OnPaging"
                     OnRowUpdating="OnRowUpdating" OnRowDeleting="OnRowDeleting"
                     EmptyDataText="No records has been added." Width="450">
                     <Columns>

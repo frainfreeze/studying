@@ -108,7 +108,8 @@ namespace Admin
         protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int IDUnit = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
-            string query = "DELETE FROM Unit WHERE IDUnit=@IDUnit";
+            //string query = "DELETE FROM Unit WHERE IDUnit=@IDUnit";
+            string query = "UPDATE [dbo].[Unit] SET [Enabled] = 0 WHERE [IDUnit] = @IDUnit";
             string constr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {
