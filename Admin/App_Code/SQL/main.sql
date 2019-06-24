@@ -110,22 +110,24 @@ CREATE TABLE [dbo].[Meal](
 GO
 
 --combinations
-CREATE TABLE [dbo].[CombinationHelper](
-	IDCombinationHelper int CONSTRAINT PK_CombinationHelper PRIMARY KEY IDENTITY,
-	[IDMealName] int CONSTRAINT FK_CombinationHelper_MealName FOREIGN KEY REFERENCES MealName(IDMealName) NULL,
-	[PercentFat] int not null,
-	[PercentCarb] int not null,
-	[PercentProtein] int not null
-)
-GO
 CREATE TABLE [dbo].[Combination](
 	IDCombination int CONSTRAINT PK_Combination PRIMARY KEY IDENTITY,
 	[NumMeals] int not null,
 	[DateCreated] date,
 	[ValidUntil] date,
-	[IDCombinationHelper] int CONSTRAINT FK_Combination_CombinationHelper FOREIGN KEY REFERENCES CombinationHelper(IDCombinationHelper) NULL
 )
 GO
+CREATE TABLE [dbo].[CombinationHelper](
+	IDCombinationHelper int CONSTRAINT PK_CombinationHelper PRIMARY KEY IDENTITY,
+	[IDMealName] int CONSTRAINT FK_CombinationHelper_MealName FOREIGN KEY REFERENCES MealName(IDMealName) NULL,
+	[PercentFat] int not null,
+	[PercentCarb] int not null,
+	[PercentProtein] int not null,
+	[Total] int not null,
+	[IDCombination] int CONSTRAINT FK_CombinationHelper_Combination FOREIGN KEY REFERENCES Combination(IDCombination) NULL
+)
+GO
+
 
 
 --------------------------------- procedures ---------------------------------
@@ -229,6 +231,17 @@ BEGIN
 END
 GO
 
+
+CREATE PROCEDURE GetCombination
+	@IDCombination int
+AS
+BEGIN
+select m.[Desc] as MealName, c.PercentCarb as Carbs, c.PercentFat as Fat, c.PercentProtein as Protein, c.Total from CombinationHelper as c
+join MealName as m on c.IDMealName=m.IDMealName
+where IDCombination = @IDCombination
+END
+GO
+
 --------------------------------- populate tables ---------------------------------
 -- fill user related tables
 INSERT INTO [ActivityLevel] (
@@ -315,7 +328,6 @@ GO
 
 
 -- groceries
-
 INSERT INTO [Grocery]([Name],[kJ],[kcal],[IDGroceryType],[IDUnit],[Quantity],[Enabled]) VALUES ('Mlijeko',167,40,1,1,100,1);
 INSERT INTO [Grocery]([Name],[kJ],[kcal],[IDGroceryType],[IDUnit],[Quantity],[Enabled]) VALUES ('Jogurt',360,40,1,1,100,1);
 INSERT INTO [Grocery]([Name],[kJ],[kcal],[IDGroceryType],[IDUnit],[Quantity],[Enabled]) VALUES ('Kiselo vrhnje',800,192,3,1,100,1);
@@ -443,3 +455,24 @@ INSERT INTO [Grocery]([Name],[kJ],[kcal],[IDGroceryType],[IDUnit],[Quantity],[En
 INSERT INTO [Grocery]([Name],[kJ],[kcal],[IDGroceryType],[IDUnit],[Quantity],[Enabled]) VALUES ('Piškoti',1635,393,1,1,100,1);
 INSERT INTO [Grocery]([Name],[kJ],[kcal],[IDGroceryType],[IDUnit],[Quantity],[Enabled]) VALUES ('Plazma keks',1810,440,1,1,100,1);
 INSERT INTO [Grocery]([Name],[kJ],[kcal],[IDGroceryType],[IDUnit],[Quantity],[Enabled]) VALUES ('Puding u prahu',1600,380,1,1,100,1);
+GO
+
+--combinations
+--- v1
+insert into Combination values(3,'1/1/2002','1/1/2021')
+go
+
+insert into CombinationHelper values(1,25,25,50,25,1)
+insert into CombinationHelper values(2,25,25,50,50,1)
+insert into CombinationHelper values(3,25,25,50,25,1)
+GO
+
+--- v2
+insert into Combination values(4,'1/1/2002','1/1/2022')
+go
+
+insert into CombinationHelper values(1,25,25,50,25,2)
+insert into CombinationHelper values(2,25,25,50,25,2)
+insert into CombinationHelper values(3,25,25,50,25,2)
+insert into CombinationHelper values(3,25,25,50,25,2)
+GO

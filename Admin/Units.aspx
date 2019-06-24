@@ -35,7 +35,7 @@
                     </Columns>
                 </asp:GridView>
 
-                <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse">
+                <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 450px">
                     <tr>
                         <td style="width: 150px">New Unit:<br />
                             <asp:TextBox ID="txtDesc" runat="server" Width="140" />

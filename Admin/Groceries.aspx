@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Groceries.aspx.cs" Inherits="Admin.Groceries" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="dvGrid" style="padding: 10px; width: 450px">
+    <div id="dvGrid" style="padding: 10px">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
@@ -9,7 +9,7 @@
                     OnRowEditing="OnRowEditing" OnRowCancelingEdit="OnRowCancelingEdit"
                     PageSize="10" AllowPaging="true" OnPageIndexChanging="OnPaging"
                     OnRowUpdating="OnRowUpdating" OnRowDeleting="OnRowDeleting"
-                    EmptyDataText="No records has been added." Width="450">
+                    EmptyDataText="No records has been added.">
                     <Columns>
                         <asp:TemplateField HeaderText="Name" ItemStyle-Width="150">
                             <ItemTemplate>
