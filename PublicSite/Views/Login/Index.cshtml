@@ -6,3 +6,16 @@
 
 <h2>Login</h2>
 
+@model PublicSite.Models.LoginModel
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.Username)
+    @Html.ValidationMessageFor(model => model.Username)
+
+    @Html.TextBoxFor(model => model.Password)
+    @Html.ValidationMessageFor(model => model.Password)
+
+    <button type="submit">Login</button>
+    @*<input type="button" value="Create" onclick="location.href='@Url.Action("Login", "Login")'" />*@
+}

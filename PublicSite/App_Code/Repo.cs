@@ -16,7 +16,7 @@ namespace PublicSite.App_Code
         public Repo()
         {
         }
-
+        
         public int ValidateUser(object usr, object pwd)
         {
             int userId = 0;
@@ -29,7 +29,16 @@ namespace PublicSite.App_Code
                     cmd.Parameters.AddWithValue("@Password", pwd);
                     cmd.Connection = con;
                     con.Open();
-                    userId = Convert.ToInt32(cmd.ExecuteScalar());
+                    try
+                    {
+                        userId = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                    catch (Exception)
+                    {
+                        System.Diagnostics.Debug.WriteLine("empty textboxes");
+                        userId = -1;
+                    }
+
                     con.Close();
                 }
                 return userId;

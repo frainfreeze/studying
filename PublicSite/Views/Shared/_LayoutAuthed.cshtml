@@ -22,7 +22,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Pregled jelovnika", "Index", "Browse")</li>
                     <li>@Html.ActionLink("Generiranje jelovnika", "Index", "Gen")</li>
-                    <li>Logout</li>
+                    <li><a href="@Url.Action("Logoff", "Login")">Logoff</a></li>
                 </ul>
             </div>
         </div>
