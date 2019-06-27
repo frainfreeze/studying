@@ -10,12 +10,17 @@
 
 @using (Html.BeginForm("Login", "Login", FormMethod.Post))
 {
-    @Html.TextBoxFor(model => model.Username)
-    @Html.ValidationMessageFor(model => model.Username)
-
-    @Html.TextBoxFor(model => model.Password)
-    @Html.ValidationMessageFor(model => model.Password)
-
-    <button type="submit">Login</button>
-    @*<input type="button" value="Create" onclick="location.href='@Url.Action("Login", "Login")'" />*@
+    <p>
+        @Html.TextBoxFor(model => model.Username)
+        @Html.ValidationMessageFor(model => model.Username)
+    </p>
+    <p>
+        @Html.PasswordFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+    </p>
+    <p>
+        <button type="submit">Login</button>
+    </p>
 }
+
+@*<input type="button" value="Create" onclick="location.href='@Url.Action("Login", "Login")'" />*@
