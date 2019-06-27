@@ -18,11 +18,6 @@ namespace Admin.App_Code.BusinessLayer
         {
         }
 
-        public void DbOps()
-        {
-
-        }
-
         public String UsersForCSV()
         {
             var dt = new DataTable();
