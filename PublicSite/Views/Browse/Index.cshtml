@@ -1,8 +1,33 @@
-﻿
+﻿@using WebMatrix.Data
+@using System.Data.SqlClient
 @{
     ViewBag.Title = "Browse";
     Layout = "~/Views/Shared/_LayoutAuthed.cshtml";
 }
 
-<h2>Browse</h2>
+@functions{
+    public IEnumerable<dynamic> GetData(string s)
+    {
+        Database db = Database.Open("db");
+        string query = "exec GetMenu " + s;
+        return db.Query(query);
+    }
+}
 
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+
+<h2>Pregled jelovnika</h2>
+
+@{
+    WebGrid grid = new WebGrid(GetData("'10/1/2019'"));
+}
+
+<div id="grid">
+    @grid.GetHtml(
+        tableStyle: "table"
+    )
+</div>

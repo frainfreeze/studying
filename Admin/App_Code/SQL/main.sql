@@ -242,6 +242,21 @@ where IDCombination = @IDCombination
 END
 GO
 
+CREATE PROCEDURE GetMenu
+	@date1 date
+AS
+BEGIN
+select mn.[Desc], g.[Name], g.kcal, g.kJ, u.[Desc], g.Quantity 
+from Meal as m inner join MealName as mn on m.IDMealName=mn.IDMealName 
+inner join Grocery as g on m.IDGrocery=g.IDGrocery 
+inner join Unit as u on g.IDUnit=u.IDUnit 
+where m.IDMenu = (
+	select IDMenu from Menu 
+	where Created=@date1
+	)
+END
+GO
+
 --------------------------------- populate tables ---------------------------------
 -- fill user related tables
 INSERT INTO [ActivityLevel] (
@@ -476,3 +491,12 @@ insert into CombinationHelper values(2,25,25,50,25,2)
 insert into CombinationHelper values(3,25,25,50,25,2)
 insert into CombinationHelper values(3,25,25,50,25,2)
 GO
+
+--- test user menu
+--created, mealcount, iduser, enabled
+insert into Menu values ('10/1/2019',3,4,1)
+--idmenu, idmealname, idgrocery, enabled
+insert into Meal values (1,2,46,1)
+insert into Meal values (1,3,10,1)
+insert into Meal values (1,4,65,1)
+go
