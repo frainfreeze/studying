@@ -6,8 +6,40 @@
 
 @model PublicSite.Models.GenModel
 
-<h2>Confirm</h2>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
 
-<p>Num Meals: @Model.NumMeals</p>
+<h2>Potvrda</h2>
 
-@Model.test
+<p>Broj jela: @Model.NumMeals</p>
+<p>Vazi od: @DateTime.Now</p>
+<p>Vazi do: /</p>
+
+<table border="1" cellpadding="5" class="table">
+    <thead>
+        <tr>
+            @foreach (System.Data.DataColumn col in Model.dt.Columns)
+            {
+                <th>@col.Caption</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (System.Data.DataRow row in Model.dt.Rows)
+        {
+            <tr>
+                @foreach (var cell in row.ItemArray)
+                {
+                    <td>@cell.ToString()</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<input type="button" value="Spremi" onclick="location.href='@Url.Action("Index", "Browse")'" />
+<input type="button" value="Odustani" onclick="location.href='@Url.Action("Index", "Gen")'" />

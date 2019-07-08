@@ -147,7 +147,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\MenuGen.cs" />
+    <Compile Include="App_Code\MenuGen.cs" />
     <Compile Include="App_Code\Repo.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />

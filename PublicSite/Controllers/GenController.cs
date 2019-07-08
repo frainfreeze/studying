@@ -1,7 +1,9 @@
-﻿using PublicSite.Models;
+﻿using PublicSite.App_Code;
+using PublicSite.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -67,7 +69,8 @@ namespace PublicSite.Controllers
             }
             else
             {
-                //magic
+                MenuGen menuGen = new MenuGen();
+                gen.dt = menuGen.Generate(Convert.ToInt16(gen.NumMeals));
                 return View(gen);
             }
         }
