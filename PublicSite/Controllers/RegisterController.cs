@@ -85,19 +85,38 @@ namespace PublicSite.Controllers
 
             System.Diagnostics.Debug.WriteLine("got status: " + status);
 
+            
+
             switch (status)
             {
                 case -3:
                     //error
+                    TempData["message"] = "Something went wrong.";
+                    return RedirectToAction("Error", "Register");
                 case -2:
-                    //email exists
+                    TempData["message"] = "Email exists.";
+                    return RedirectToAction("Error", "Register");
                 case -1:
-                    //username exists
-                    return RedirectToAction("Index", "Register");
+                    TempData["message"] = "Username exists.";
+                    return RedirectToAction("Error", "Register");
 
                 default: //got user id
                     return RedirectToAction("Index", "Login");
             }
         }
+
+        // GET: Register
+        [HttpGet]
+        public ActionResult Error()
+        {
+            if (Request.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Browse");
+            } else
+            {
+                return View();
+            }
+        }
+
     }
 }

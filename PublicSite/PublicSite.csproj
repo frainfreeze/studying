@@ -159,6 +159,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Browse.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,6 +206,8 @@
     <Content Include="Views\Gen\Index.cshtml" />
     <Content Include="Views\Browse\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAuthed.cshtml" />
+    <Content Include="Views\Register\Error.cshtml" />
+    <Content Include="Views\Browse\Browse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

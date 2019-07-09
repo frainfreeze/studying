@@ -1,33 +1,30 @@
-﻿@using WebMatrix.Data
-@using System.Data.SqlClient
-@{
+﻿@{
     ViewBag.Title = "Browse";
     Layout = "~/Views/Shared/_LayoutAuthed.cshtml";
 }
 
-@functions{
-    public IEnumerable<dynamic> GetData(string s)
+<h2>Browse</h2>
+
+@model PublicSite.Models.BrowseViewModel
+
+<body>
+    @using (Html.BeginForm("GetDate", "Browse"))
     {
-        Database db = Database.Open("db");
-        string query = "exec GetMenu " + s;
-        return db.Query(query);
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>Register</legend>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Dates)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("Dates", Model.DatesM, "Please select one")
+            </div>
+
+            <p>
+                <input type="submit" value="Fetch" />
+            </p>
+        </fieldset>
     }
-}
-
-<style>
-    table, th, td {
-        border: 1px solid black;
-    }
-</style>
-
-<h2>Pregled jelovnika</h2>
-
-@{
-    WebGrid grid = new WebGrid(GetData("'10/1/2019'"));
-}
-
-<div id="grid">
-    @grid.GetHtml(
-        tableStyle: "table"
-    )
-</div>
+</body>
+</html>

@@ -242,6 +242,7 @@ where IDCombination = @IDCombination
 END
 GO
 
+--fetches menu for given date, todo: require user id to fetch menus for correct user
 CREATE PROCEDURE GetMenu
 	@date1 date
 AS
@@ -500,3 +501,15 @@ insert into Meal values (1,2,46,1)
 insert into Meal values (1,3,10,1)
 insert into Meal values (1,4,65,1)
 go
+
+--- test user menu2
+--created, mealcount, iduser, enabled
+insert into Menu values ('5/5/2019',4,4,1)
+--idmenu, idmealname, idgrocery, enabled
+insert into Meal values (2,2,46,1)
+insert into Meal values (2,3,10,1)
+insert into Meal values (2,4,65,1)
+insert into Meal values (2,4,65,1)
+go
+
+select (Convert(nvarchar(50), Created)) from menu
