@@ -79,7 +79,9 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
-
+        <p>
+            <asp:Button ID="Button2" runat="server" Text="Add new combination" />
+        </p>
     </div>
     
 </asp:Content>

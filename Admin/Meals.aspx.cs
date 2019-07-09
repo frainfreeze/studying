@@ -17,7 +17,7 @@ namespace Admin
         {
             if (!this.Page.User.Identity.IsAuthenticated)
             {
-                FormsAuthentication.RedirectToLoginPage();
+                Response.Redirect("Login.aspx");
             }
             if (!this.IsPostBack)
             {

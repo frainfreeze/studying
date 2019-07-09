@@ -17,7 +17,8 @@ namespace Admin
         {
             if (!this.Page.User.Identity.IsAuthenticated)
             {
-                FormsAuthentication.RedirectToLoginPage();
+                //FormsAuthentication.RedirectToLoginPage();
+                Response.Redirect("Login.aspx");
             }
             if (!this.IsPostBack)
             {
@@ -28,6 +29,12 @@ namespace Admin
         int NumMeals;
         string constr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
 
+        protected void ResetText()
+        {
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+        }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
             //get meal count for grid
@@ -35,10 +42,29 @@ namespace Admin
             {
                 using (SqlCommand cmd = new SqlCommand("select IDCombination from Combination where NumMeals = @mealcount", con))
                 {
-                    cmd.Parameters.AddWithValue("@mealcount", int.Parse(TextBox1.Text));
+                    try
+                    {
+                        cmd.Parameters.AddWithValue("@mealcount", int.Parse(TextBox1.Text));
+                    }
+                    catch (Exception)
+                    {
+                        ResetText();
+                        this.BindGrid();
+                        return;
+                    }
                     con.Open();
 
-                    NumMeals = (int)cmd.ExecuteScalar();
+                    try
+                    {
+                        NumMeals = (int)cmd.ExecuteScalar();
+                    }
+                    catch (Exception)
+                    {
+                        ResetText();
+                        this.BindGrid();
+                        return;
+                    }
+                    
 
                     if (con.State == System.Data.ConnectionState.Open)
                         con.Close();
