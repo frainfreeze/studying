@@ -27,18 +27,18 @@ namespace PublicSite.App_Code
 
             //SELECT[Desc] FROM Unit
 
-            string querystr = "select IDUSer from [User] where Username='" + Session["UserName"] + "'";
-            string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
-            using (var conn = new SqlConnection(cs))
-            using (var cmd = conn.CreateCommand())
-            {
-                conn.Open();
-                cmd.CommandText = querystr;
-                Session["UserID"] = cmd.ExecuteScalar();
-            }
+            //string querystr = "select IDUSer from [User] where Username='" + Session["UserName"] + "'";
+            //string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+            //using (var conn = new SqlConnection(cs))
+            //using (var cmd = conn.CreateCommand())
+            //{
+            //    conn.Open();
+            //    cmd.CommandText = querystr;
+            //    Session["UserID"] = cmd.ExecuteScalar();
+            //}
 
             ////////// datatable content
-            dt.Rows.Add("1", 500);
+            //dt.Rows.Add("1", 500);
             return dt;
         }
     }
