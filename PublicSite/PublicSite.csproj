@@ -147,6 +147,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\MenuGen.cs" />
     <Compile Include="App_Code\Repo.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -160,6 +161,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Browse.cs" />
+    <Compile Include="Models\Gen.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,6 +210,7 @@
     <Content Include="Views\Shared\_LayoutAuthed.cshtml" />
     <Content Include="Views\Register\Error.cshtml" />
     <Content Include="Views\Browse\Browse.cshtml" />
+    <Content Include="Views\Gen\Confirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

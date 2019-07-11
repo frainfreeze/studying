@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +18,17 @@ namespace PublicSite.Controllers
         {
             if (ModelState.IsValid)
             {
+                Session["UserName"] = model.Username; //no...
+                string querystr = "select IDUSer from [User] where Username='" + Session["UserName"] + "'";
+                string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+                using (var conn = new SqlConnection(cs))
+                using (var cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.CommandText = querystr;
+                    Session["UserID"] = cmd.ExecuteScalar();
+                }
+                
                 string UserName = model.Username;
                 string Password = model.Password;
                 Repo repo = new Repo();

@@ -506,10 +506,8 @@ go
 --created, mealcount, iduser, enabled
 insert into Menu values ('5/5/2019',4,4,1)
 --idmenu, idmealname, idgrocery, enabled
-insert into Meal values (2,2,46,1)
-insert into Meal values (2,3,10,1)
-insert into Meal values (2,4,65,1)
+insert into Meal values (2,1,46,1)
+insert into Meal values (2,2,10,1)
+insert into Meal values (2,3,65,1)
 insert into Meal values (2,4,65,1)
 go
-
-select (Convert(nvarchar(50), Created)) from menu

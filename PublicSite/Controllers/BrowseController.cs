@@ -32,27 +32,32 @@ namespace PublicSite.Controllers
 
                 string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
 
+                string querystr = "select Convert(date, m.Created) from menu as m inner join [User] as u on m.IDUSer=u.IDUser where u.IDUser='" + Session["UserID"] + "'";
+                System.Diagnostics.Debug.WriteLine(querystr);
                 using (SqlConnection c = new SqlConnection(cs))
                 {
                     if (c.State == ConnectionState.Closed)
                         c.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("select Convert(date, Created) from menu", c))
+                    using (SqlCommand cmd = new SqlCommand(querystr, c))
                     {
                         using (SqlDataReader rdr = cmd.ExecuteReader())
                         {
                             while (rdr.Read())
                             {
+                                string tmp = Convert.ToString(rdr.GetDateTime(0)); //as string ?? String.Empty;
                                 list.Add(new SelectListItem
                                 {
-                                    Text = rdr.GetString(0),
-                                    Value = rdr.GetString(0)
+                                    Text = tmp,
+                                    Value = tmp
                                 });
                             }
                         }
                     }
                 }
-                
+
+                model.DatesM = list;
+
                 return View(model);
             }
         }

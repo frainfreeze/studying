@@ -1,9 +1,7 @@
 ﻿@{
-    ViewBag.Title = "Browse";
+    ViewBag.Title = "Pregled jelovnika";
     Layout = "~/Views/Shared/_LayoutAuthed.cshtml";
 }
-
-<h2>Browse</h2>
 
 @model PublicSite.Models.BrowseViewModel
 
@@ -12,7 +10,7 @@
     {
         @Html.ValidationSummary(true)
         <fieldset>
-            <legend>Register</legend>
+            <legend>Pregled jelovnika</legend>
 
             <div class="editor-label">
                 @Html.LabelFor(model => model.Dates)

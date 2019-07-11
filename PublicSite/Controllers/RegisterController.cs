@@ -76,7 +76,8 @@ namespace PublicSite.Controllers
                     catch (Exception e)
                     {
                         System.Diagnostics.Debug.WriteLine("db exception while inserting user " + e.ToString());
-                        status = -3;
+                        TempData["message"] = "Something went wrong. " + e.ToString();
+                        return RedirectToAction("Error", "Register");
                     }
 
                     con.Close();
@@ -89,10 +90,6 @@ namespace PublicSite.Controllers
 
             switch (status)
             {
-                case -3:
-                    //error
-                    TempData["message"] = "Something went wrong.";
-                    return RedirectToAction("Error", "Register");
                 case -2:
                     TempData["message"] = "Email exists.";
                     return RedirectToAction("Error", "Register");

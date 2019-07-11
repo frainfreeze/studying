@@ -1,8 +1,29 @@
-﻿
-@{
-    ViewBag.Title = "Gen";
+﻿@{
+    ViewBag.Title = "Generiranje jelovnika";
     Layout = "~/Views/Shared/_LayoutAuthed.cshtml";
 }
 
-<h2>Gen</h2>
+@model PublicSite.Models.GenModel
 
+<body>
+    @using (Html.BeginForm("Confirm", "Gen"))
+    {
+        @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Generiranje jelovnika</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumMeals)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumMeals)
+            @Html.ValidationMessageFor(model => model.NumMeals)
+        </div>
+
+        <p>
+            <input type="submit" value="Fetch" />
+        </p>
+    </fieldset>
+    }
+</body>
+</html>
