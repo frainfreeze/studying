@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{AAEA5A61-68D9-4664-B6CF-096CC3D602ED}</ProjectGuid>
+    <ProjectGuid>{E372B343-B788-4A41-84C4-637D6587F348}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PublicSite.Tests</RootNamespace>
@@ -87,6 +87,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.2.7\lib\net45\WebMatrix.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,7 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PublicSite\PublicSite.csproj">
-      <Project>{23C80D3C-8890-443D-A651-ED7DF868A6CC}</Project>
+      <Project>{264EE3F0-E6B6-4268-86FC-BF1CAB255AA7}</Project>
       <Name>PublicSite</Name>
     </ProjectReference>
   </ItemGroup>
