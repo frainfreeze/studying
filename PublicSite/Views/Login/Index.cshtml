@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@model PublicSite.Models.LoginModel
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    <p>
+        @Html.TextBoxFor(model => model.Username)
+        @Html.ValidationMessageFor(model => model.Username)
+    </p>
+    <p>
+        @Html.PasswordFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+    </p>
+    <p>
+        <button type="submit">Login</button>
+    </p>
+}
+
+@*<input type="button" value="Create" onclick="location.href='@Url.Action("Login", "Login")'" />*@
