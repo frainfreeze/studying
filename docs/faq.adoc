@@ -1,0 +1,5 @@
+== F.A.Q.
+
+[%hardbreaks]
+Q. How do i use class library in a project?
+A. Expand project in solution explorer, right click on `references`, add new ref

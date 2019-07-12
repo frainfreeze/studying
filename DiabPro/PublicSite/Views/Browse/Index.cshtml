@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Pregled jelovnika";
+    Layout = "~/Views/Shared/_LayoutAuthed.cshtml";
+}
+
+@model PublicSite.Models.BrowseViewModel
+
+<body>
+    @using (Html.BeginForm("GetDate", "Browse"))
+    {
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>Pregled jelovnika</legend>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Dates)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("Dates", Model.DatesM, "Please select one")
+            </div>
+
+            <p>
+                <input type="submit" value="Fetch" />
+            </p>
+        </fieldset>
+    }
+</body>
+</html>

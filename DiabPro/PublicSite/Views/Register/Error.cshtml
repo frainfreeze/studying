@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+}
+
+<h2>Error</h2>
+
+<p>
+@TempData["message"];
+</p>
+
+<input type="button" value="Retry" onclick="@("window.location.href='" + @Url.Action("Index", "Register") + "'");" />
