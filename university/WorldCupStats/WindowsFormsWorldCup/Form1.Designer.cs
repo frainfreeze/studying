@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsWorldCup
+﻿using System.Windows.Forms;
+
+namespace WindowsFormsWorldCup
 {
     partial class MainForm
     {

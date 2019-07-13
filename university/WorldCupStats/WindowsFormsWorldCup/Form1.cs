@@ -266,7 +266,11 @@ namespace WindowsFormsWorldCup
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Config.SaveDataToFile(team, lng);
+            if (MessageBox.Show("Are you sure you want to close?", "Exit", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                Config.SaveDataToFile(team, lng);
+                e.Cancel = true;
+            }
         }
 
         /* Drag n drop favorite players events */

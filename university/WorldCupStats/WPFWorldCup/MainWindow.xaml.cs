@@ -1,28 +1,14 @@
 ﻿using DataLayer;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WPFWorldCup
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public string lng;
@@ -36,7 +22,6 @@ namespace WPFWorldCup
         public string windowsState = "";
         public List<string> teams = new List<string>();
         
-        /*forms*/
         public ChooseLanguage chooseLanguageForm;
         public Initialsettings initialSettingsForm;
         public TeamChooser teamChooser;
@@ -45,15 +30,13 @@ namespace WPFWorldCup
         public Loading1 loading1 = new Loading1();
         public TeamInfo teaminfo;
         public AdditionalPlayerinfo additionalPlayerinfo = new AdditionalPlayerinfo();
-        public MainWindow()
-        {
+
+        public MainWindow() {
             InitializeComponent();
             run();
-
         }
 
-        public async void run()
-        {
+        public async void run() {
             Hide();
                
             chooseLanguageForm = new ChooseLanguage(this);
@@ -62,37 +45,31 @@ namespace WPFWorldCup
             enemyTeamChooser = new EnemyTeamChooser(this);
             teaminfo = new TeamInfo(this);
 
-            //put loading
-            try
-            {
-                //[0] language
-                //[1] name 
-                //[2] fav players(split with,)
+            try {
                 List<string> config = Config.ReadConfigFile();
                 lng = config[0];
                 favTeamName = config[1];
                 fifa_id = await HttpClient.GetCountryCode(favTeamName);
 
-                if (lng == "ENG") { await changeLanguageToENG(); }
-                else { await changeLanguageToCRO(); }
+                if (lng == "ENG")
+                    await changeLanguageToENG();
+                else
+                    await changeLanguageToCRO();
+
                 chooseLanguageForm.first = false;
                 await CreateTeam(favTeamName);
                 await teaminfo.SetUp();
                 await fillEnemyTeamChooser(team);
-            }
-            catch (FileNotFoundException)
-            {
+            } catch (FileNotFoundException) {
                 chooseLanguageForm.Show();
             }
         }
 
-        public async void ShowMain()
-        {
+        public async void ShowMain() {
             Show();
         }
 
-        public async Task changeLanguageToENG()
-        {
+        public async Task changeLanguageToENG() {
             initialSettingsForm.btn_fullscreen.Content = "Fullscreen";
             initialSettingsForm.btn_notFullscreen.Content = "Normal";
             enemyTeamChooser.lbl_chooseEnemyTeam.Content = "Choose enemy team";
@@ -115,8 +92,7 @@ namespace WPFWorldCup
             btn_applyFavoriteTeam.Content = "Change";
         }
 
-        public async Task changeLanguageToCRO()
-        {
+        public async Task changeLanguageToCRO() {
             initialSettingsForm.btn_fullscreen.Content = "Puni zaslon";
             initialSettingsForm.btn_notFullscreen.Content = "Normalni prozor";
             enemyTeamChooser.lbl_chooseEnemyTeam.Content = "Odaberite protivnicki tim";
@@ -140,20 +116,16 @@ namespace WPFWorldCup
         }
 
 
-        public async void fillComboBox()
-        {
-            foreach (var i in teams)
-            {
+        public async void fillComboBox() {
+            foreach (var i in teams) {
                 cb_teams.Items.Add(i);
             }
             cb_teams.SelectedItem = favTeamName;
         }
 
-        private async void Btn_applyFavoriteTeam_Click(object sender, RoutedEventArgs e)
-        {
+        private async void Btn_applyFavoriteTeam_Click(object sender, RoutedEventArgs e) {
             await ShowLoading();
             fifa_id = await HttpClient.GetCountryCode(cb_teams.Text);
-
             favTeamName = cb_teams.Text;
             await CreateTeam(favTeamName);
             Thread.Sleep(1000);
@@ -163,20 +135,14 @@ namespace WPFWorldCup
         }
 
 
-        /* Team methods */
-        public async Task fillEnemyTeamChooser(Team t)
-        {
+        public async Task fillEnemyTeamChooser(Team t) {
             enemyTeamChooser.cb_enemyTeamChooser.Items.Clear();
             string n="";
-            foreach (var m in t.matches)
-            {    
-                if (m.Home_team == t.teamName)
-                {
+            foreach (var m in t.matches) {    
+                if (m.Home_team == t.teamName) {
                     enemyTeamChooser.cb_enemyTeamChooser.Items.Add(m.Away_team);
                     n = m.Away_team;
-                }
-                else
-                {
+                } else {
                     enemyTeamChooser.cb_enemyTeamChooser.Items.Add(m.Home_team);
                 }
             }
@@ -184,30 +150,25 @@ namespace WPFWorldCup
             showChooseEnemyTeam();
         }
 
-        public async void showTeamChooser()
-        {
+        public async void showTeamChooser() {
             teamChooser.Show();
         }
 
-        public async void showChooseEnemyTeam()
-        {
+        public async void showChooseEnemyTeam() {
             enemyTeamChooser.Show();
         }
 
-        public async Task CreateTeam(string teamName)
-        {
+        public async Task CreateTeam(string teamName) {
             team = new Team(teamName, fifa_id);
             await team.SetUp();
             await SetHomeTeamLabels(team);
         }
 
-        public async Task CreateEnemyTeam(string teamName)
-        {
+        public async Task CreateEnemyTeam(string teamName) {
             awayTeam = new Team(teamName, enemyFifa_id);
             await awayTeam.SetUp();
             await SetAwayTeamLabels(awayTeam);
             await SetMatchLabels();
-
             await ShowLoading1();
             Thread.Sleep(500);
             await HideLoading1();
@@ -216,36 +177,32 @@ namespace WPFWorldCup
             Show();
         }
 
-        public async Task SetHomeTeamLabels(Team homeTeam)
-        {
+        public async Task SetHomeTeamLabels(Team homeTeam) {
             await showHomeTeamField();
             int defender = 0;
             int midfielder = 0;
             int forward = 0;
             List<Player> firstElevenWithMoreInfo = new List<Player>();
-            foreach (var p in homeTeam.firsteleven)
-            {
+
+            foreach (var p in homeTeam.firsteleven) {
                 firstElevenWithMoreInfo.Add(homeTeam.players[p]);
-                switch (homeTeam.players[p].position)
-                {
+                switch (homeTeam.players[p].position) {
                     case "Defender": defender++; break;
                     case "Midfield": midfielder++; break;
                     case "Forward": forward++; break;
                 }
             }
+
             int defCounter = 0;
             int midCounter = 0;
             int forCounter = 0;
-            foreach (var i in firstElevenWithMoreInfo)
-            {
-                switch (i.position)
-                {
+
+            foreach (var i in firstElevenWithMoreInfo) {
+                switch (i.position) {
                     case "Defender":
-                        switch (defender)
-                        {
+                        switch (defender) {
                             case 3:
-                                switch (defCounter++)
-                                {
+                                switch (defCounter++) {
                                     case 0: lbl_defenderHome4.Content = i.name; break;
                                     case 1: lbl_defenderHome1.Content = i.name; break;
                                     case 2: lbl_defenderHome2.Content = i.name; break;
@@ -258,8 +215,7 @@ namespace WPFWorldCup
                                 box_homeMidfield5.Visibility = Visibility.Hidden;
                                 break;
                             case 4:
-                                switch (defCounter++)
-                                {
+                                switch (defCounter++) {
                                     case 0: lbl_defenderHome0.Content = i.name; break;
                                     case 1: lbl_defenderHome1.Content = i.name; break;
                                     case 2: lbl_defenderHome2.Content = i.name; break;
@@ -271,8 +227,7 @@ namespace WPFWorldCup
                                 box_homeMidfield5.Visibility = Visibility.Hidden;
                                 break;
                             case 5:
-                                switch (defCounter++)
-                                {
+                                switch (defCounter++) {
                                     case 0: lbl_defenderHome0.Content = i.name; break;
                                     case 1: lbl_defenderHome1.Content = i.name; break;
                                     case 2: lbl_defenderHome2.Content = i.name; break;
@@ -283,10 +238,9 @@ namespace WPFWorldCup
                         }
                         break;
                     case "Midfield":
-                        switch (midfielder)
-                        {
+                        switch (midfielder) {
                             case 2:
-                                switch (midCounter++){
+                                switch (midCounter++) {
                                     case 0: lbl_midfieldHome1.Content = i.name; break;
                                     case 1: lbl_midfieldHome2.Content = i.name; break;}
                                     lbl_midfieldHome0.Visibility = Visibility.Hidden;
@@ -299,7 +253,7 @@ namespace WPFWorldCup
                                     box_homeMidfield5.Visibility = Visibility.Hidden;
                                 break;
                             case 3:
-                                switch (midCounter++){
+                                switch (midCounter++) {
                                     case 0: lbl_midfieldHome4.Content = i.name; break;
                                     case 1: lbl_midfieldHome1.Content = i.name; break;
                                     case 2: lbl_midfieldHome2.Content = i.name; break;}
@@ -311,8 +265,7 @@ namespace WPFWorldCup
                                 box_homeMidfield5.Visibility = Visibility.Hidden;
                                 break;
                             case 4:
-                                switch (midCounter++)
-                                {
+                                switch (midCounter++) {
                                     case 0: lbl_midfieldHome0.Content = i.name; break;
                                     case 1: lbl_midfieldHome1.Content = i.name; break;
                                     case 2: lbl_midfieldHome2.Content = i.name; break;
@@ -324,7 +277,7 @@ namespace WPFWorldCup
                                 box_homeMidfield5.Visibility = Visibility.Hidden;
                                 break;
                             case 5:
-                                switch (midCounter++){
+                                switch (midCounter++) {
                                     case 0: lbl_midfieldHome0.Content = i.name; break;
                                     case 1: lbl_midfieldHome1.Content = i.name; break;
                                     case 2: lbl_midfieldHome2.Content = i.name; break;
@@ -334,8 +287,7 @@ namespace WPFWorldCup
                                 box_homeMidfield5.Visibility = Visibility.Hidden;
                                 break;
                             case 6:
-                                switch (midCounter++)
-                                {
+                                switch (midCounter++) {
                                     case 0: lbl_midfieldHome0.Content = i.name; break;
                                     case 1: lbl_midfieldHome1.Content = i.name; break;
                                     case 2: lbl_midfieldHome2.Content = i.name; break;
@@ -347,8 +299,7 @@ namespace WPFWorldCup
                         }
                         break;
                     case "Forward":
-                        switch (forward)
-                        {
+                        switch (forward) {
                             case 1:
                                 lbl_forwardHome0.Content = i.name;
                                 lbl_forwardHome1.Visibility = Visibility.Hidden;
@@ -359,7 +310,7 @@ namespace WPFWorldCup
                                 box_homeForward3.Visibility = Visibility.Hidden;
                                 break;
                             case 2:
-                                switch (forCounter++){
+                                switch (forCounter++) {
                                     case 0: lbl_forwardHome2.Content = i.name; break;
                                     case 1: lbl_forwardHome1.Content = i.name; break;}
                                 lbl_forwardHome0.Visibility = Visibility.Hidden;
@@ -368,7 +319,7 @@ namespace WPFWorldCup
                                 box_homeForward3.Visibility = Visibility.Hidden;
                                 break;
                             case 3:
-                                switch (forCounter++){
+                                switch (forCounter++) {
                                     case 0: lbl_forwardHome0.Content = i.name; break;
                                     case 1: lbl_forwardHome1.Content = i.name; break;
                                     case 2: lbl_forwardHome2.Content = i.name; break;}
@@ -376,7 +327,7 @@ namespace WPFWorldCup
                                 box_homeForward3.Visibility = Visibility.Hidden;
                                 break;
                             case 4:
-                                switch (forCounter++){
+                                switch (forCounter++) {
                                     case 0: lbl_forwardHome0.Content = i.name; break;
                                     case 1: lbl_forwardHome1.Content = i.name; break;
                                     case 2: lbl_forwardHome2.Content = i.name; break;
@@ -384,42 +335,39 @@ namespace WPFWorldCup
                                 break;
                         }
                         break;
-                    case "Goalie": lbl_goalieHome.Content = i.name; break;
+                    case "Goalie":
+                        lbl_goalieHome.Content = i.name;
+                        break;
                 }
             }
         }
 
-        public async Task SetAwayTeamLabels(Team awayTeam)
-        {
+        public async Task SetAwayTeamLabels(Team awayTeam) {
             await showAwayTeamField();
             int defender = 0;
             int midfielder = 0;
             int forward = 0;
             List<Player> firstElevenWithMoreInfo = new List<Player>();
 
-            foreach (var p in awayTeam.firsteleven)
-            {
+            foreach (var p in awayTeam.firsteleven) {
                 firstElevenWithMoreInfo.Add(awayTeam.players[p]);
-                switch (awayTeam.players[p].position)
-                {
+                switch (awayTeam.players[p].position) {
                     case "Defender": defender++; break;
                     case "Midfield": midfielder++; break;
                     case "Forward": forward++; break;
                 }
             }
+
             int defCounter = 0;
             int midCounter = 0;
             int forCounter = 0;
-            foreach (var i in firstElevenWithMoreInfo)
-            {
-                switch (i.position)
-                {
+
+            foreach (var i in firstElevenWithMoreInfo) {
+                switch (i.position) {
                     case "Defender":
-                        switch (defender)
-                        {
+                        switch (defender) {
                             case 3:
-                                switch (defCounter++)
-                                {
+                                switch (defCounter++) {
                                     case 0: lbl_defenderAway4.Content = i.name; break;
                                     case 1: lbl_defenderAway1.Content = i.name; break;
                                     case 2: lbl_defenderAway2.Content = i.name; break;
@@ -560,16 +508,14 @@ namespace WPFWorldCup
             }
         }
 
-        public async Task SetMatchLabels()
-        {
+        public async Task SetMatchLabels() {
             match = HttpClient.GetMatch(team, awayTeam.teamName);
-            if (match.Home_team == team.teamName){
+            if (match.Home_team == team.teamName) {
                 lbl_homeTeam.Content = match.Home_team;
                 lbl_homeTeamScore.Content = match.Score.Split(':')[0];
                 lbl_awayTeam.Content = match.Away_team;
                 lbl_awayTeamScore.Content = match.Score.Split(':')[1];
-            }
-            else{
+            } else {
                 lbl_homeTeam.Content = match.Away_team;
                 lbl_homeTeamScore.Content = match.Score.Split(':')[1];
                 lbl_awayTeam.Content = match.Home_team;
@@ -577,8 +523,7 @@ namespace WPFWorldCup
             }
         }
 
-        private async Task showAwayTeamField()
-        {
+        private async Task showAwayTeamField() {
             /*labels forward*/
             lbl_forwardAway0.Visibility = Visibility.Visible;
             lbl_forwardAway1.Visibility = Visibility.Visible;
@@ -613,8 +558,7 @@ namespace WPFWorldCup
             box_awayDefender4.Visibility = Visibility.Visible;
         }
 
-        private async Task showHomeTeamField()
-        {
+        private async Task showHomeTeamField() {
             /*labels forward*/
             lbl_forwardHome0.Visibility = Visibility.Visible;
             lbl_forwardHome1.Visibility = Visibility.Visible;
@@ -650,72 +594,60 @@ namespace WPFWorldCup
         }
         
 
-        /* Loading methods */
-        public async Task ShowLoading()
-        {
+
+        public async Task ShowLoading() {
             loading1.Show();
         }
-        public async Task HideLoading()
-        {
+
+        public async Task HideLoading() {
             loading1.Hide();
         }
 
-        public async Task ShowLoading1()
-        {
+        public async Task ShowLoading1() {
             loading0.Show();
             
         }
-        public async Task HideLoading1()
-        {
+
+        public async Task HideLoading1() {
             loading0.Hide();
         }
 
 
-        /* https://stackoverflow.com/a/7153739 */
-        /* ================================== */
-        public static List<T> GetLogicalChildCollection<T>(object parent) where T : DependencyObject
-        {
+
+        public static List<T> GetLogicalChildCollection<T>(object parent) where T : DependencyObject {
             List<T> logicalCollection = new List<T>();
             GetLogicalChildCollection(parent as DependencyObject, logicalCollection);
             return logicalCollection;
         }
-        private static void GetLogicalChildCollection<T>(DependencyObject parent, List<T> logicalCollection) where T : DependencyObject
-        {
+
+        private static void GetLogicalChildCollection<T>(DependencyObject parent, List<T> logicalCollection) where T : DependencyObject {
             IEnumerable children = LogicalTreeHelper.GetChildren(parent);
-            foreach (object child in children)
-            {
-                if (child is DependencyObject)
-                {
+            foreach (object child in children) {
+                if (child is DependencyObject) {
                     DependencyObject depChild = child as DependencyObject;
-                    if (child is T)
-                    {
+                    if (child is T) {
                         logicalCollection.Add(child as T);
                     }
+
                     GetLogicalChildCollection(depChild, logicalCollection);
                 }
             }
         }
-        /* ================================== */
 
-        /* hanlde on player click */
-        private async Task showMorePlayerInfo(string name,string h)
-        {
+
+        private async Task showMorePlayerInfo(string name,string h) {
             await ShowLoading();
             Player p = new Player();
-            try
-            {
-                foreach (Match m in (h == "home" ? team.matches : awayTeam.matches))
-                {
-                    if (m.Id == match.Id)
-                    {
+
+            try {
+                foreach (Match m in (h == "home" ? team.matches : awayTeam.matches)) {
+                    if (m.Id == match.Id) {
                         p.cards = m.players[name].cards;
                         p.name = m.players[name].name;
                         p.goals = m.players[name].goals;
                     }
                 }
-            }
-            catch (KeyNotFoundException)
-            {
+            } catch (KeyNotFoundException) {
                 p = new Player{goals = 0,cards=0,name=name };
             }
 
@@ -730,10 +662,8 @@ namespace WPFWorldCup
             await HideLoading();
 
             additionalPlayerinfo.Show();
-
         }
 
-        /*eh..tnx python <3*/
         private async void Box_homeGoalie_MouseDown(object sender, MouseButtonEventArgs e) { await showMorePlayerInfo((string)lbl_goalieHome.Content,"home"); }
         private async void Box_homeDefender0_MouseDown(object sender, MouseButtonEventArgs e) { await showMorePlayerInfo((string)lbl_defenderHome0.Content,"home"); }
         private async void Box_homeDefender1_MouseDown(object sender, MouseButtonEventArgs e) { await showMorePlayerInfo((string)lbl_defenderHome1.Content,"home"); }
@@ -767,22 +697,21 @@ namespace WPFWorldCup
         private async void Box_awayForward2_MouseDown(object sender, MouseButtonEventArgs e) { await showMorePlayerInfo((string)lbl_forwardAway2.Content,"away"); }
         private async void Box_awayForward3_MouseDown(object sender, MouseButtonEventArgs e) { await showMorePlayerInfo((string)lbl_forwardAway3.Content,"away"); }
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e) {
             if(Width < 880){Width = 880;}
             if(Height < 677){ Height = 677; }
         }
 
-        private void Lbl_changeLanguage_Click(object sender, RoutedEventArgs e)
-        {
+        private void Lbl_changeLanguage_Click(object sender, RoutedEventArgs e) {
             chooseLanguageForm.Show();
             chooseLanguageForm.BringIntoView();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
             Config.SaveDataToFile(team, lng);
-            e.Cancel = false;
+            e.Cancel = MessageBox.Show("Are you sure?", "Exit", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.No;
+            Application.Current.Shutdown();
         }
     }
 }
