@@ -49,6 +49,7 @@
             this.Visitors = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Home_team = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Away_team = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_substitues)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_StartingElevenYellowCardsGoals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_matches)).BeginInit();
@@ -57,7 +58,7 @@
             // lbl_substitutes
             // 
             this.lbl_substitutes.AutoSize = true;
-            this.lbl_substitutes.Location = new System.Drawing.Point(118, 291);
+            this.lbl_substitutes.Location = new System.Drawing.Point(533, 9);
             this.lbl_substitutes.Name = "lbl_substitutes";
             this.lbl_substitutes.Size = new System.Drawing.Size(59, 13);
             this.lbl_substitutes.TabIndex = 11;
@@ -66,7 +67,7 @@
             // lbl_firstEleven
             // 
             this.lbl_firstEleven.AutoSize = true;
-            this.lbl_firstEleven.Location = new System.Drawing.Point(115, 9);
+            this.lbl_firstEleven.Location = new System.Drawing.Point(163, 9);
             this.lbl_firstEleven.Name = "lbl_firstEleven";
             this.lbl_firstEleven.Size = new System.Drawing.Size(62, 13);
             this.lbl_firstEleven.TabIndex = 10;
@@ -84,11 +85,11 @@
             this._playerName,
             this._Cards,
             this._Goals});
-            this.dgv_substitues.Location = new System.Drawing.Point(-3, 307);
+            this.dgv_substitues.Location = new System.Drawing.Point(383, 25);
             this.dgv_substitues.Name = "dgv_substitues";
             this.dgv_substitues.ReadOnly = true;
             this.dgv_substitues.RowHeadersVisible = false;
-            this.dgv_substitues.Size = new System.Drawing.Size(311, 284);
+            this.dgv_substitues.Size = new System.Drawing.Size(343, 263);
             this.dgv_substitues.TabIndex = 9;
             // 
             // _Pic
@@ -145,11 +146,11 @@
             this.playerName,
             this.Cards,
             this.Goals});
-            this.dgv_StartingElevenYellowCardsGoals.Location = new System.Drawing.Point(-3, 25);
+            this.dgv_StartingElevenYellowCardsGoals.Location = new System.Drawing.Point(22, 25);
             this.dgv_StartingElevenYellowCardsGoals.Name = "dgv_StartingElevenYellowCardsGoals";
             this.dgv_StartingElevenYellowCardsGoals.ReadOnly = true;
             this.dgv_StartingElevenYellowCardsGoals.RowHeadersVisible = false;
-            this.dgv_StartingElevenYellowCardsGoals.Size = new System.Drawing.Size(311, 263);
+            this.dgv_StartingElevenYellowCardsGoals.Size = new System.Drawing.Size(347, 263);
             this.dgv_StartingElevenYellowCardsGoals.TabIndex = 8;
             // 
             // Pic
@@ -204,11 +205,11 @@
             this.Visitors,
             this.Home_team,
             this.Away_team});
-            this.dgv_matches.Location = new System.Drawing.Point(380, 69);
+            this.dgv_matches.Location = new System.Drawing.Point(22, 327);
             this.dgv_matches.Name = "dgv_matches";
             this.dgv_matches.ReadOnly = true;
             this.dgv_matches.RowHeadersVisible = false;
-            this.dgv_matches.Size = new System.Drawing.Size(503, 357);
+            this.dgv_matches.Size = new System.Drawing.Size(704, 187);
             this.dgv_matches.TabIndex = 12;
             // 
             // Location
@@ -239,11 +240,21 @@
             this.Away_team.ReadOnly = true;
             this.Away_team.Width = 120;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(356, 311);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Visitors";
+            // 
             // RangLists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 591);
+            this.ClientSize = new System.Drawing.Size(738, 531);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_matches);
             this.Controls.Add(this.lbl_substitutes);
             this.Controls.Add(this.lbl_firstEleven);
@@ -284,5 +295,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Visitors;
         private System.Windows.Forms.DataGridViewTextBoxColumn Home_team;
         private System.Windows.Forms.DataGridViewTextBoxColumn Away_team;
+        public System.Windows.Forms.Label label1;
     }
 }
