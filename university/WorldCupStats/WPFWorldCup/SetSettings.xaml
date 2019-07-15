@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFWorldCup"
         mc:Ignorable="d"
-        Title="Initialsettings" Height="147.158" Width="504.395">
+        Title="Screen size" Height="147.158" Width="504.395">
     <Grid Margin="1,-2,2,3" RenderTransformOrigin="0.5,0.5">
         <Grid.RowDefinitions>
             <RowDefinition Height="75*"/>

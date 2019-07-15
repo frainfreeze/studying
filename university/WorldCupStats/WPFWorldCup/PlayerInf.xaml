@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFWorldCup"
         mc:Ignorable="d"
-        Title="AdditionalPlayerinfo" Height="253" Width="289" Closing="Window_Closing">
+        Title="Player Info" Height="239.745" Width="240.014" Closing="Window_Closing">
     <Grid>
-        <Label x:Name="lbl_playerName" Content="Name" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label x:Name="lbl_playerName" Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="22"/>
         <Label x:Name="lbl_goals" Content="Goals" HorizontalAlignment="Left" Margin="85,58,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_shirtNumber" Content="Shirt Number" HorizontalAlignment="Left" Margin="58,86,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_shirtNumber" Content="Shirt Number" HorizontalAlignment="Left" Margin="43,89,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_position" Content="Position" HorizontalAlignment="Left" Margin="74,114,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_cards" Content="Cards" HorizontalAlignment="Left" Margin="85,142,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_captain" Content="Captain(C-yes,X-no)" HorizontalAlignment="Left" Margin="19,170,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label x:Name="lbl_captain" Content="Captain(C-yes,X-no)" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="123"/>
         <Label x:Name="lbl_goalsV" Content="Goals" HorizontalAlignment="Left" Margin="137,58,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_shirtNumberV" Content="Shirt Number" HorizontalAlignment="Left" Margin="137,86,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_shirtNumberV" Content="Shirt Number" HorizontalAlignment="Left" Margin="138,89,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_positionV" Content="Position" HorizontalAlignment="Left" Margin="137,114,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_cardsV" Content="Cards" HorizontalAlignment="Left" Margin="137,142,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_captainV" Content="Captain" HorizontalAlignment="Left" Margin="138,170,0,0" VerticalAlignment="Top"/>

@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFWorldCup"
         mc:Ignorable="d"
-        Title="ChooseLanguage" Height="250" Width="650" Closing="Window_Closing">
+        Title="Welcome" Height="152.055" Width="351.308" Closing="Window_Closing">
     <Grid Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lbl_chooseLanguage" Content="Choose language/Odaberite jezik" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" FontSize="18" Height="32" Width="272"/>
-        <Button x:Name="btn_languageENG" Content="ENG" HorizontalAlignment="Left" Margin="140,90,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="Btn_languageENG_Click"/>
-        <Button x:Name="btn_languageCRO" Content="CRO" HorizontalAlignment="Left" Margin="395,90,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="Btn_languageCRO_Click"/>
+        <Label x:Name="lbl_chooseLanguage" Content="Choose language/Odaberite jezik" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" FontSize="18" Height="44" Width="326"/>
+        <Button x:Name="btn_languageENG" Content="ENG" HorizontalAlignment="Left" Margin="32,59,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="Btn_languageENG_Click"/>
+        <Button x:Name="btn_languageCRO" Content="CRO" HorizontalAlignment="Left" Margin="177,59,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="Btn_languageCRO_Click"/>
 
     </Grid>
 </Window>

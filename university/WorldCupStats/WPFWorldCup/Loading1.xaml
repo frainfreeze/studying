@@ -273,14 +273,14 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid>
-        <Rectangle x:Name="rectangle4" Fill="#FF1E1E85" HorizontalAlignment="Left" Height="100" Margin="200,350,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
-        <Rectangle x:Name="rectangle" Fill="#FF1E1E85" HorizontalAlignment="Left" Height="100" Margin="200,50,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
-        <Rectangle x:Name="rectangle2" Fill="#FF1E1E85" HorizontalAlignment="Left" Height="100" Margin="350,200,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
-        <Rectangle x:Name="rectangle6" Fill="#FF1E1E85" HorizontalAlignment="Left" Height="100" Margin="50,200,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
-        <Rectangle x:Name="rectangle1" Fill="#FF1E1E85" HorizontalAlignment="Left" Height="100" Margin="305,95,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
-        <Rectangle x:Name="rectangle3" Fill="#FF1E1E85" HorizontalAlignment="Left" Height="100" Margin="305,305,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
-        <Rectangle x:Name="rectangle5" Fill="#FF1E1E85" HorizontalAlignment="Left" Height="100" Margin="95,305,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
-        <Rectangle x:Name="rectangle7" Fill="#FF1E1E85" HorizontalAlignment="Left" Height="100" Margin="95,95,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
+        <Rectangle x:Name="rectangle4" Fill="#C70039" HorizontalAlignment="Left" Height="100" Margin="200,350,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
+        <Rectangle x:Name="rectangle" Fill="#C70039" HorizontalAlignment="Left" Height="100" Margin="200,50,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
+        <Rectangle x:Name="rectangle2" Fill="#C70039" HorizontalAlignment="Left" Height="100" Margin="350,200,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
+        <Rectangle x:Name="rectangle6" Fill="#C70039" HorizontalAlignment="Left" Height="100" Margin="50,200,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
+        <Rectangle x:Name="rectangle1" Fill="#C70039" HorizontalAlignment="Left" Height="100" Margin="305,95,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
+        <Rectangle x:Name="rectangle3" Fill="#C70039" HorizontalAlignment="Left" Height="100" Margin="305,305,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
+        <Rectangle x:Name="rectangle5" Fill="#C70039" HorizontalAlignment="Left" Height="100" Margin="95,305,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
+        <Rectangle x:Name="rectangle7" Fill="#C70039" HorizontalAlignment="Left" Height="100" Margin="95,95,0,0" VerticalAlignment="Top" Width="100" RadiusX="100" RadiusY="100"/>
 
     </Grid>
 </Window>

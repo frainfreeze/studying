@@ -58,11 +58,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AdditionalPlayerinfo.xaml.cs">
-      <DependentUpon>AdditionalPlayerinfo.xaml</DependentUpon>
+    <Compile Include="PlayerInf.xaml.cs">
+      <DependentUpon>PlayerInf.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EnemyTeamChooser.xaml.cs">
-      <DependentUpon>EnemyTeamChooser.xaml</DependentUpon>
+    <Compile Include="EnemyTeamPick.xaml.cs">
+      <DependentUpon>EnemyTeamPick.xaml</DependentUpon>
     </Compile>
     <Compile Include="Loading0.xaml.cs">
       <DependentUpon>Loading0.xaml</DependentUpon>
@@ -80,25 +80,25 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TeamChooser.xaml.cs">
-      <DependentUpon>TeamChooser.xaml</DependentUpon>
+    <Compile Include="TeamPick.xaml.cs">
+      <DependentUpon>TeamPick.xaml</DependentUpon>
     </Compile>
     <Compile Include="TeamInfo.xaml.cs">
       <DependentUpon>TeamInfo.xaml</DependentUpon>
     </Compile>
-    <Page Include="AdditionalPlayerinfo.xaml">
+    <Page Include="PlayerInf.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ChooseLanguage.xaml">
+    <Page Include="LangPick.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EnemyTeamChooser.xaml">
+    <Page Include="EnemyTeamPick.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Initialsettings.xaml">
+    <Page Include="SetSettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,17 +118,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ChooseLanguage.xaml.cs">
-      <DependentUpon>ChooseLanguage.xaml</DependentUpon>
+    <Compile Include="LangPick.xaml.cs">
+      <DependentUpon>LangPick.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Initialsettings.xaml.cs">
-      <DependentUpon>Initialsettings.xaml</DependentUpon>
+    <Compile Include="SetSettings.xaml.cs">
+      <DependentUpon>SetSettings.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TeamChooser.xaml">
+    <Page Include="TeamPick.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
