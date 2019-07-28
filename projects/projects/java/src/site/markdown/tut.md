@@ -1,5 +1,9 @@
 # Tutorials
 
+## Misc
+
+To rebuild documentation run `mvn clean site`
+
 ## Documentation
 
 - https://softwareriot.wordpress.com/2017/09/06/better-site-documentation-with-maven-part-i-the-fluido-skin/
