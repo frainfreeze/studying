@@ -334,10 +334,12 @@ public class Main {
                 @Override
                 public void run() {
                     MessageDialog.showMessageDialog(gui, "Outpatient managment module reports", "No reports.", MessageDialogButton.OK);
+                    //TODO: generate pdf, add plots using http://javaplot.panayotis.com/index.html
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
-
             // </editor-fold>
+
+
             // Close off with an empty row then a button to close the window
             godPanel.addComponent(
                     new Button("Exit", new Runnable() {
