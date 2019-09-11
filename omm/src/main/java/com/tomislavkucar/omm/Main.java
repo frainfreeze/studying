@@ -9,74 +9,181 @@ package com.tomislavkucar.omm;
  *
  * @author frain
  */
+import com.googlecode.lanterna.Symbols;
+import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
+import com.googlecode.lanterna.TextCharacter;
 import com.googlecode.lanterna.TextColor;
+import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.gui2.BasicWindow;
+import com.googlecode.lanterna.gui2.Borders;
 import com.googlecode.lanterna.gui2.Button;
 import com.googlecode.lanterna.gui2.ComboBox;
 import com.googlecode.lanterna.gui2.DefaultWindowManager;
+import com.googlecode.lanterna.gui2.Direction;
 import com.googlecode.lanterna.gui2.EmptySpace;
 import com.googlecode.lanterna.gui2.GridLayout;
 import com.googlecode.lanterna.gui2.Label;
+import com.googlecode.lanterna.gui2.LinearLayout;
 import com.googlecode.lanterna.gui2.MultiWindowTextGUI;
 import com.googlecode.lanterna.gui2.Panel;
+import com.googlecode.lanterna.gui2.Separator;
 import com.googlecode.lanterna.gui2.TextBox;
+import com.googlecode.lanterna.gui2.Window;
+import com.googlecode.lanterna.gui2.WindowBasedTextGUI;
+import com.googlecode.lanterna.gui2.dialogs.MessageDialog;
+import com.googlecode.lanterna.gui2.dialogs.MessageDialogButton;
+import com.googlecode.lanterna.input.KeyStroke;
+import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.screen.TerminalScreen;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.TimeZone;
 import java.util.regex.Pattern;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
         // Setup terminal and screen layers
         Terminal terminal = new DefaultTerminalFactory().createTerminal();
-        Screen screen = new TerminalScreen(terminal);
-        screen.startScreen();
+        Screen screen = null;
 
-        // Create panel to hold components
-        Panel panel = new Panel();
-        panel.setLayoutManager(new GridLayout(2));
+        try {
+            screen = new TerminalScreen(terminal);
+            screen.startScreen();
 
-        final Label lblOutput = new Label("h");
+            BasicWindow window = new BasicWindow("Outpatient Managment Module");
 
-        panel.addComponent(new Label("Num 1"));
-        final TextBox txtNum1 = new TextBox().setValidationPattern(Pattern.compile("[0-9]*")).addTo(panel);
+            MultiWindowTextGUI gui = new MultiWindowTextGUI(screen, 
+                    new DefaultWindowManager(), new EmptySpace(TextColor.ANSI.BLUE));
 
-        panel.addComponent(new Label("Num 2"));
-        final TextBox txtNum2 = new TextBox().setValidationPattern(Pattern.compile("[0-9]*")).addTo(panel);
+            // Create god panel to hold main panel and exit button, vertical
+            Panel godPanel = new Panel();
+            godPanel.setLayoutManager(new LinearLayout(Direction.VERTICAL));
 
-        panel.addComponent(new Label("Operation"));
-        final ComboBox<String> operations = new ComboBox<String>();
-        operations.addItem("Add");
-        operations.addItem("Subtract");
-        panel.addComponent(operations);
+            //main panel to hold subpanels with options, horizontal
+            Panel mainPanel = new Panel();
+            mainPanel.setLayoutManager(new LinearLayout(Direction.HORIZONTAL));
+            godPanel.addComponent(mainPanel);
 
-        panel.addComponent(new EmptySpace(new TerminalSize(0, 0)));
-        new Button("Calculate!", new Runnable() {
-            @Override
-            public void run() {
-                int num1 = Integer.parseInt(txtNum1.getText());
-                int num2 = Integer.parseInt(txtNum2.getText());
-                if(operations.getSelectedIndex() == 0) {
-                    lblOutput.setText(Integer.toString(num1 + num2));
-                } else if(operations.getSelectedIndex() == 1) {
-                    lblOutput.setText(Integer.toString(num1 - num2));
+      
+            /////////////////
+            // Reception executive
+            Panel leftPanel = new Panel();
+            mainPanel.addComponent(leftPanel.withBorder(Borders.singleLine("Reception Executive")));
+            
+            leftPanel.addComponent(new Button("Mini reg form", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "This is a message box", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+
+            leftPanel.addComponent(new Button("Comprehensive reg form", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "This is a message box", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+
+            leftPanel.addComponent(new Button("Appointments", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "This is a message box", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+
+            /////////////////
+            // Patient managment
+            Panel middlePanel = new Panel();
+            mainPanel.addComponent(middlePanel.withBorder(Borders.singleLine("Patient Managment")));
+            
+            middlePanel.addComponent(new Button("Access records", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "This is a message box", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+
+            middlePanel.addComponent(new Button("Diagnosis notes", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "This is a message box", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+
+            middlePanel.addComponent(new Button("Appointments", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "This is a message box", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+
+            /////////////////
+            // Sysytem
+            Panel rightPanel = new Panel();
+            mainPanel.addComponent(rightPanel.withBorder(Borders.singleLine("System")));
+            
+            rightPanel.addComponent(new Button("Medical personel", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "This is a message box", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+
+            rightPanel.addComponent(new Button("Reports", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "This is a message box", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+
+            rightPanel.addComponent(new Button("Help", new Runnable() {
+                @Override
+                public void run() {
+                    MessageDialog.showMessageDialog(gui, "MessageBox", "Help file", MessageDialogButton.OK);
+                }
+            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
+            
+            ////
+            // Close off with an empty row and a separator, then a button to close the window
+            godPanel.addComponent(
+                    new EmptySpace()
+                            .setLayoutData(
+                                    GridLayout.createHorizontallyFilledLayoutData(2)));
+            godPanel.addComponent(
+                    new Button("Exit", new Runnable() {
+                        @Override
+                        public void run() {
+                            window.close();
+                        }
+                    }).setLayoutData(
+                            GridLayout.createHorizontallyEndAlignedLayoutData(2)));
+
+            
+            
+            /*We now have the content panel fully populated with components. A common mistake is to forget to attach it to
+            the window, so let's make sure to do that.*/
+            window.setComponent(godPanel);
+
+            // start gui
+            gui.addWindowAndWait(window);
+     
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (screen != null) {
+                try {
+                    screen.stopScreen();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
-        }).addTo(panel);
 
-        panel.addComponent(new EmptySpace(new TerminalSize(0, 0)));
-        panel.addComponent(lblOutput);
-
-        // Create window to hold the panel
-        BasicWindow window = new BasicWindow();
-        window.setComponent(panel);
-
-        // Create gui and start gui
-        MultiWindowTextGUI gui = new MultiWindowTextGUI(screen, new DefaultWindowManager(), new EmptySpace(TextColor.ANSI.BLUE));
-        gui.addWindowAndWait(window);
-    }
-}
+        }
