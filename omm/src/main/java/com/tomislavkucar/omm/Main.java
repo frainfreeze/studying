@@ -1,6 +1,5 @@
 package com.tomislavkucar.omm;
 
-import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.gui2.BasicWindow;
 import com.googlecode.lanterna.gui2.Borders;
@@ -15,15 +14,15 @@ import com.googlecode.lanterna.gui2.LinearLayout;
 import com.googlecode.lanterna.gui2.MultiWindowTextGUI;
 import com.googlecode.lanterna.gui2.Panel;
 import com.googlecode.lanterna.gui2.TextBox;
-import com.googlecode.lanterna.gui2.WindowBasedTextGUI;
 import com.googlecode.lanterna.gui2.dialogs.MessageDialog;
 import com.googlecode.lanterna.gui2.dialogs.MessageDialogButton;
-import com.googlecode.lanterna.gui2.dialogs.TextInputDialogBuilder;
 import com.googlecode.lanterna.gui2.table.Table;
 import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.screen.TerminalScreen;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -34,11 +33,6 @@ import java.util.List;
 import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Pattern;
-import org.supercsv.cellprocessor.FmtBool;
-import org.supercsv.cellprocessor.FmtDate;
-import org.supercsv.cellprocessor.Optional;
-import org.supercsv.cellprocessor.constraint.LMinMax;
 import org.supercsv.cellprocessor.constraint.NotNull;
 import org.supercsv.cellprocessor.constraint.UniqueHashCode;
 import org.supercsv.cellprocessor.ift.CellProcessor;
@@ -51,10 +45,10 @@ import org.supercsv.prefs.CsvPreference;
 public class Main {
 
     public static String CSV_PATIENTS = "target/patients.csv";
+    public static String CSV_STAFF = "target/staff.csv";
 
-    private static CellProcessor[] getProcessors() {
+    private static CellProcessor[] patientsProcessor() {
         final CellProcessor[] processors = new CellProcessor[]{
-            new UniqueHashCode(), // Outpatient ID (OPID): (must be unique)
             new NotNull(), // txtName
             new NotNull(), // txtMiddleName
             new NotNull(), // txtSurname
@@ -65,6 +59,7 @@ public class Main {
             new NotNull(), // txtNum2
             new NotNull(), // txtKinName
             new NotNull(), // txtKinRel
+            new UniqueHashCode() // Outpatient ID (OPID): (must be unique)
         //todo - extend with full form
         };
 
@@ -72,14 +67,13 @@ public class Main {
     }
 
     private static void writeWithCsvListWriter(List<Object> data) throws Exception {
-        try (ICsvListWriter listWriter = new CsvListWriter(new FileWriter(CSV_PATIENTS),
+        try (ICsvListWriter listWriter = new CsvListWriter(new FileWriter(CSV_PATIENTS, true),
                 CsvPreference.STANDARD_PREFERENCE)) {
 
-            final CellProcessor[] processors = getProcessors();
-            final String[] header = new String[]{"OPID", "txtName", "txtMiddleName", "txtSurname",
-                "sex", "txtDob", "txtStmt", "txtNum1", "txtNum2", "txtKinName", "txtKinRel"};
-
-            listWriter.writeHeader(header);
+            final CellProcessor[] processors = patientsProcessor();
+            /*final String[] header = new String[]{"txtName", "txtMiddleName", "txtSurname",
+                "sex", "txtDob", "txtStmt", "txtNum1", "txtNum2", "txtKinName", "txtKinRel", "OPID"};
+            listWriter.writeHeader(header);*/
             listWriter.write(data, processors);
         }
     }
@@ -91,7 +85,7 @@ public class Main {
             listReader = new CsvListReader(new FileReader(CSV_PATIENTS), CsvPreference.STANDARD_PREFERENCE);
 
             listReader.getHeader(true); // skip the header (can't be used with CsvListReader)
-            final CellProcessor[] processors = getProcessors();
+            final CellProcessor[] processors = patientsProcessor();
 
             List<Object> customerList;
             while ((customerList = listReader.read(processors)) != null) {
@@ -134,8 +128,6 @@ public class Main {
             // mainpanel subpanels
             Panel leftPanel = new Panel();
             mainPanel.addComponent(leftPanel.withBorder(Borders.singleLine("Reception Executive")));
-            Panel middlePanel = new Panel();
-            mainPanel.addComponent(middlePanel.withBorder(Borders.singleLine("Patient Managment")));
             Panel rightPanel = new Panel();
             mainPanel.addComponent(rightPanel.withBorder(Borders.singleLine("System")));
 
@@ -186,11 +178,10 @@ public class Main {
                     //todo: use bean
 
                     String sex = (gender.getSelectedIndex() == 0) ? "Male" : "Female";
-                    List<Object> data = Arrays.asList(new Object[]{UUID.randomUUID().toString(), txtName.getText(), txtMiddleName.getText(), txtSurname.getText(), sex, txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText()});
+                    List<Object> data = Arrays.asList(new Object[]{txtName.getText(), txtMiddleName.getText(), txtSurname.getText(), sex, txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString()});
                     try {
                         writeWithCsvListWriter(data);
-                        miniFormWindow.close();
-                        //save to file
+                        miniFormWindow.close();// TODO: clear textboxes
                     } catch (Exception ex) {
                         MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -198,9 +189,7 @@ public class Main {
                 }
             }).addTo(miniFormPanel);
 
-            miniFormWindow.setComponent(miniFormPanel);
-
-            leftPanel.addComponent(new Button("Mini reg form", new Runnable() {
+            leftPanel.addComponent(new Button("Minimal form", new Runnable() {
                 @Override
                 public void run() {
                     miniFormWindow.setComponent(miniFormPanel);
@@ -208,16 +197,14 @@ public class Main {
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
-            
             // Comprehensive reg form
-            leftPanel.addComponent(new Button("Comprehensive reg form", new Runnable() {
+            leftPanel.addComponent(new Button("Comprehensive form", new Runnable() {
                 @Override
                 public void run() {
                     MessageDialog.showMessageDialog(gui, "MessageBox", "Implement me.", MessageDialogButton.OK);
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
-            
             // Appointments
             leftPanel.addComponent(new Button("Appointments", new Runnable() {
                 @Override
@@ -227,105 +214,138 @@ public class Main {
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
             // </editor-fold>
-            
-            // <editor-fold defaultstate="collapsed" desc="Patient managment">
+            // <editor-fold defaultstate="collapsed" desc="System">
             // Access records
-            BasicWindow accessWindow = new BasicWindow();
-            Panel accessPanel = new Panel();
+            rightPanel.addComponent(new Button("Access records", new Runnable() {
+                @Override
+                public void run() {
+                    BasicWindow accessWindow = new BasicWindow();
+                    Panel accessPanel = new Panel();
+                    accessPanel.setLayoutManager(new LinearLayout(Direction.VERTICAL));
 
-            Table<String> table = new Table<String>("OPID", "txtName", "txtMiddleName", "txtSurname",
-                    "sex", "txtDob", "txtStmt", "txtNum1", "txtNum2", "txtKinName", "txtKinRel");
+                    Table<String> table = new Table<String>("Name", "Middle Name", "Surname",
+                            "Sex", "DOB", "Statement", "Num1", "Num2", "Kin Name", "Kin Rel", "OPID");
 
-            ICsvListReader listReader = null;
-            try {
-                listReader = new CsvListReader(new FileReader(CSV_PATIENTS), CsvPreference.STANDARD_PREFERENCE);
-                listReader.getHeader(true); // skip the header (can't be used with CsvListReader)
-                final CellProcessor[] processors = getProcessors();
-
-                List<Object> customerList;
-                while ((customerList = listReader.read(processors)) != null) {
-                    table.getTableModel().addRow(customerList.toString());
-                }
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-            } finally {
-                if (listReader != null) {
                     try {
-                        listReader.close();
-                    } catch (IOException ex) {
+                        File csvFile = new File(CSV_PATIENTS);
+                        if (csvFile.isFile()) {
+                            String row = null;
+                            BufferedReader csvReader;
+                            try {
+                                csvReader = new BufferedReader(new FileReader(CSV_PATIENTS));
+                                csvReader.readLine();
+                                while ((row = csvReader.readLine()) != null) {
+                                    table.getTableModel().addRow(row.split(","));
+                                }
+                                csvReader.close();
+                            } catch (FileNotFoundException ex) {
+                                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (IOException ex) {
+                                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+
+                        table.setSelectAction(new Runnable() {
+                            @Override
+                            public void run() {
+                                List<String> data = table.getTableModel().getRow(table.getSelectedRow());
+                                System.out.println(data.get(data.size() - 1));
+                            }
+                        });
+                        accessPanel.addComponent(table);
+                        new Button("Close", accessWindow::close).addTo(accessPanel);
+                        accessWindow.setComponent(accessPanel);
+                        gui.addWindowAndWait(accessWindow);
+                    } catch (Exception ex) {
+
+                        MessageDialog.showMessageDialog(gui, "Error!", ex.getMessage(), MessageDialogButton.OK);
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-            }
-            accessPanel.addComponent(table);
-            accessWindow.setComponent(accessPanel);
-            
-            middlePanel.addComponent(new Button("Access records", new Runnable() {
-                @Override
-                public void run() {
-                    //new Button("Cancel", accessWindow::close).addTo(accessPanel);
-                    gui.addWindowAndWait(accessWindow);
-                }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
-            
-            // ?
-            middlePanel.addComponent(new Button("Diagnosis notes", new Runnable() {
-                @Override
-                public void run() {
-                    MessageDialog.showMessageDialog(gui, "MessageBox", "Implement me.", MessageDialogButton.OK);
-                }
-            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
-
-            
-            // ?
-            middlePanel.addComponent(new Button("Appointments", new Runnable() {
-                @Override
-                public void run() {
-                    MessageDialog.showMessageDialog(gui, "MessageBox", "Implement me.", MessageDialogButton.OK);
-                }
-            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
-            // </editor-fold>
-            
-            // <editor-fold defaultstate="collapsed" desc="System">
+            // Medical personel
             rightPanel.addComponent(new Button("Medical personel", new Runnable() {
                 @Override
                 public void run() {
-                    MessageDialog.showMessageDialog(gui, "MessageBox", "Implement me.", MessageDialogButton.OK);
+                    BasicWindow workersWindow = new BasicWindow();
+                    Panel workersPanel = new Panel();
+                    workersPanel.setLayoutManager(new LinearLayout(Direction.VERTICAL));
+
+                    Table<String> table = new Table<String>("Name", "Surname", "Work type", "Available", "Email", "Phone", "UUID");
+
+                    try {
+                        File csvFile = new File(CSV_STAFF);
+                        if (csvFile.isFile()) {
+                            String row = null;
+                            BufferedReader csvReader;
+                            try {
+                                csvReader = new BufferedReader(new FileReader(CSV_STAFF));
+                                csvReader.readLine();
+                                while ((row = csvReader.readLine()) != null) {
+                                    table.getTableModel().addRow(row.split(","));
+                                }
+                                csvReader.close();
+                            } catch (FileNotFoundException ex) {
+                                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (IOException ex) {
+                                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+
+                        table.setSelectAction(new Runnable() {
+                            @Override
+                            public void run() {
+                                List<String> data = table.getTableModel().getRow(table.getSelectedRow());
+                                System.out.println(data.get(data.size() - 1));
+                            }
+                        });
+                        workersPanel.addComponent(table);
+
+                        new Button("Close", workersWindow::close).addTo(workersPanel);
+                        
+                        new Button("Add new...", new Runnable() {
+                            @Override
+                            public void run() {
+                                //spawn modal
+                                List<Object> data = Arrays.asList(new Object[]{"Ivo","Ivic","Consultant","Yes","ivic@virgo.com","091828283",UUID.randomUUID().toString()}); // = Arrays.asList(new Object[]{txtModalName.getText(), txtSurname.getText(), ..., UUID.randomUUID().toString()});
+                                try {
+                                    writeWithCsvListWriter(data);
+                                    workersWindow.close();// TODO: clear textboxes
+                                } catch (Exception ex) {
+                                    MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
+                                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                        }).addTo(workersPanel);
+
+                        workersWindow.setComponent(workersPanel);
+                        gui.addWindowAndWait(workersWindow);
+                    } catch (Exception ex) {
+
+                        MessageDialog.showMessageDialog(gui, "Error!", ex.getMessage(), MessageDialogButton.OK);
+                        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
+            //reports
             rightPanel.addComponent(new Button("Reports", new Runnable() {
                 @Override
                 public void run() {
-                    MessageDialog.showMessageDialog(gui, "MessageBox", "Implement me.", MessageDialogButton.OK);
+                    MessageDialog.showMessageDialog(gui, "Outpatient managment module reports", "No reports.", MessageDialogButton.OK);
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
-            rightPanel.addComponent(new Button("Help", new Runnable() {
-                @Override
-                public void run() {
-                    MessageDialog.showMessageDialog(gui, "Help file", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", MessageDialogButton.OK);
-                }
-            }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
             // </editor-fold>
-            
-            
             // Close off with an empty row then a button to close the window
-            godPanel.addComponent(
-                    new EmptySpace()
-                            .setLayoutData(
-                                    GridLayout.createHorizontallyFilledLayoutData(2)));
             godPanel.addComponent(
                     new Button("Exit", new Runnable() {
                         @Override
                         public void run() {
                             window.close();
                         }
-                    }).setLayoutData(
-                            GridLayout.createHorizontallyEndAlignedLayoutData(2)));
+                    }).setLayoutData(GridLayout.createHorizontallyFilledLayoutData(2)));
 
             /*We now have the content panel fully populated with components. A common mistake is to forget to attach it to
             the window, so let's make sure to do that.*/
