@@ -36,9 +36,7 @@ import java.util.logging.Logger;
 import org.supercsv.cellprocessor.constraint.NotNull;
 import org.supercsv.cellprocessor.constraint.UniqueHashCode;
 import org.supercsv.cellprocessor.ift.CellProcessor;
-import org.supercsv.io.CsvListReader;
 import org.supercsv.io.CsvListWriter;
-import org.supercsv.io.ICsvListReader;
 import org.supercsv.io.ICsvListWriter;
 import org.supercsv.prefs.CsvPreference;
 
@@ -47,7 +45,7 @@ public class Main {
     public static String CSV_PATIENTS = "target/patients.csv";
     public static String CSV_STAFF = "target/staff.csv";
 
-    private static CellProcessor[] patientsProcessor() {
+    private static CellProcessor[] patientsMiniFormProcessor() {
         final CellProcessor[] processors = new CellProcessor[]{
             new NotNull(), // txtName
             new NotNull(), // txtMiddleName
@@ -62,44 +60,31 @@ public class Main {
             new UniqueHashCode() // Outpatient ID (OPID): (must be unique)
         //todo - extend with full form
         };
-
         return processors;
     }
 
-    private static void writeWithCsvListWriter(List<Object> data) throws Exception {
-        try (ICsvListWriter listWriter = new CsvListWriter(new FileWriter(CSV_PATIENTS, true),
+    private static CellProcessor[] personelProcessor() {
+        final CellProcessor[] processors = new CellProcessor[]{
+            new NotNull(), // txtName
+            new NotNull(), // txtSurname
+            new NotNull(), // worktype
+            new NotNull(), // available
+            new NotNull(), // email
+            new NotNull(), // phone
+            new NotNull() // uuid
+        };
+        return processors;
+    }
+    
+    private static void writeWithCsvListWriter(List<Object> data, CellProcessor[] processor, String db) throws Exception {
+        try (ICsvListWriter listWriter = new CsvListWriter(new FileWriter(db, true),
                 CsvPreference.STANDARD_PREFERENCE)) {
-
-            final CellProcessor[] processors = patientsProcessor();
             /*final String[] header = new String[]{"txtName", "txtMiddleName", "txtSurname",
                 "sex", "txtDob", "txtStmt", "txtNum1", "txtNum2", "txtKinName", "txtKinRel", "OPID"};
             listWriter.writeHeader(header);*/
-            listWriter.write(data, processors);
+            
+            listWriter.write(data, processor);
         }
-    }
-
-    private static List<Object> getPatientFromCSV(String UUID) throws Exception {
-
-        ICsvListReader listReader = null;
-        try {
-            listReader = new CsvListReader(new FileReader(CSV_PATIENTS), CsvPreference.STANDARD_PREFERENCE);
-
-            listReader.getHeader(true); // skip the header (can't be used with CsvListReader)
-            final CellProcessor[] processors = patientsProcessor();
-
-            List<Object> customerList;
-            while ((customerList = listReader.read(processors)) != null) {
-                if (customerList.contains(UUID)) {
-                    return customerList;
-                }
-            }
-
-        } finally {
-            if (listReader != null) {
-                listReader.close();
-            }
-        }
-        return null;
     }
 
     public static void main(String[] args) throws IOException {
@@ -180,7 +165,7 @@ public class Main {
                     String sex = (gender.getSelectedIndex() == 0) ? "Male" : "Female";
                     List<Object> data = Arrays.asList(new Object[]{txtName.getText(), txtMiddleName.getText(), txtSurname.getText(), sex, txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString()});
                     try {
-                        writeWithCsvListWriter(data);
+                        writeWithCsvListWriter(data, patientsMiniFormProcessor(), CSV_PATIENTS);
                         miniFormWindow.close();// TODO: clear textboxes
                     } catch (Exception ex) {
                         MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
@@ -249,7 +234,7 @@ public class Main {
                             @Override
                             public void run() {
                                 List<String> data = table.getTableModel().getRow(table.getSelectedRow());
-                                System.out.println(data.get(data.size() - 1));
+                                MessageDialog.showMessageDialog(gui, "UUID", data.get(data.size() - 1), MessageDialogButton.OK);
                             }
                         });
                         accessPanel.addComponent(table);
@@ -297,7 +282,7 @@ public class Main {
                             @Override
                             public void run() {
                                 List<String> data = table.getTableModel().getRow(table.getSelectedRow());
-                                System.out.println(data.get(data.size() - 1));
+                                MessageDialog.showMessageDialog(gui, "UUID", data.get(data.size() - 1), MessageDialogButton.OK);
                             }
                         });
                         workersPanel.addComponent(table);
@@ -310,7 +295,7 @@ public class Main {
                                 //spawn modal
                                 List<Object> data = Arrays.asList(new Object[]{"Ivo","Ivic","Consultant","Yes","ivic@virgo.com","091828283",UUID.randomUUID().toString()}); // = Arrays.asList(new Object[]{txtModalName.getText(), txtSurname.getText(), ..., UUID.randomUUID().toString()});
                                 try {
-                                    writeWithCsvListWriter(data);
+                                    writeWithCsvListWriter(data, personelProcessor(), CSV_STAFF);
                                     workersWindow.close();// TODO: clear textboxes
                                 } catch (Exception ex) {
                                     MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
@@ -322,7 +307,6 @@ public class Main {
                         workersWindow.setComponent(workersPanel);
                         gui.addWindowAndWait(workersWindow);
                     } catch (Exception ex) {
-
                         MessageDialog.showMessageDialog(gui, "Error!", ex.getMessage(), MessageDialogButton.OK);
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -333,7 +317,7 @@ public class Main {
             rightPanel.addComponent(new Button("Reports", new Runnable() {
                 @Override
                 public void run() {
-                    MessageDialog.showMessageDialog(gui, "Outpatient managment module reports", "No reports.", MessageDialogButton.OK);
+                    MessageDialog.showMessageDialog(gui, "Outpatient managment module reports", "For reports use the GUI app.", MessageDialogButton.OK);
                     //TODO: generate pdf, add plots using http://javaplot.panayotis.com/index.html
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
