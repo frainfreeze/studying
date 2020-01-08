@@ -1,16 +1,50 @@
 package com.tomislavkucar.omm;
 
 import java.awt.Component;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class MiniForm extends javax.swing.JFrame {
+public class PatientRecords extends javax.swing.JFrame {
 
     private MainForm mf = null;
-    
-    public MiniForm(MainForm m) {
+
+    public PatientRecords(MainForm m) {
         initComponents();
         mf = m;
+
+        Table<String> table = new Table<String>("Name", "Middle Name", "Surname",
+                "Sex", "DOB", "Statement", "Num1", "Num2", "Kin Name", "Kin Rel", "OPID");
+
+        try {
+            File csvFile = new File(Config.PATIENTS);
+            if (csvFile.isFile()) {
+                String row = null;
+                BufferedReader csvReader;
+                try {
+                    csvReader = new BufferedReader(new FileReader(Config.PATIENTS));
+                    csvReader.readLine();
+                    while ((row = csvReader.readLine()) != null) {
+                        table.getTableModel().addRow(row.split(","));
+                    }
+                    csvReader.close();
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
+            CSVReader reader = new CSVReader(new FileReader("yourfile.csv"));
+            List myEntries = reader.readAll();
+            JTable table = new JTable(myEntries.toArray());
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex, "Error fetching patients", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     /**
@@ -22,87 +56,43 @@ public class MiniForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Cancel = new javax.swing.JButton();
-        submit = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        name = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Cancel.setText("Cancel");
-        Cancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CancelActionPerformed(evt);
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        });
-
-        submit.setText("Submit");
-        submit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("First name");
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Cancel)
-                        .addGap(115, 115, 115)
-                        .addComponent(submit))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(289, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 359, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cancel)
-                    .addComponent(submit))
-                .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelActionPerformed
-        this.setVisible(false);
-        mf.setVisible(true);
-        mf.toFront();
-    }//GEN-LAST:event_CancelActionPerformed
-
-    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-        for(Component c: getContentPane().getComponents()){
-            if(c instanceof JTextField){
-                if(((JTextField)c).getText().isEmpty()){
-                    JOptionPane.showMessageDialog(null,"Please fill all fields!","Error submiting form",JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-            }
-        }
-    }//GEN-LAST:event_submitActionPerformed
-
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Cancel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField name;
-    private javax.swing.JButton submit;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

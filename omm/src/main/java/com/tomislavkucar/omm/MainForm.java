@@ -132,9 +132,6 @@ public class MainForm extends javax.swing.JFrame {
         MiniForm f = new MiniForm(this);
         f.setLocationRelativeTo(null);
         this.setVisible(false);
-        
-        //db
-        
         f.setVisible(true);
         f.toFront();
     }//GEN-LAST:event_miniFormActionPerformed
@@ -148,7 +145,11 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_appointmentsActionPerformed
 
     private void accessRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accessRecordsActionPerformed
-        JOptionPane.showMessageDialog(null,"Implement me" ,"TODO",JOptionPane.WARNING_MESSAGE);
+        PatientRecords f = new PatientRecords(this);
+        f.setLocationRelativeTo(null);
+        this.setVisible(false);
+        f.setVisible(true);
+        f.toFront();
     }//GEN-LAST:event_accessRecordsActionPerformed
 
     private void medicalPersonelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicalPersonelActionPerformed

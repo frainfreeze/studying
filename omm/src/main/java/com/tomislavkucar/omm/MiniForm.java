@@ -1,13 +1,18 @@
 package com.tomislavkucar.omm;
 
 import java.awt.Component;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class MiniForm extends javax.swing.JFrame {
 
     private MainForm mf = null;
-    
+
     public MiniForm(MainForm m) {
         initComponents();
         mf = m;
@@ -25,7 +30,25 @@ public class MiniForm extends javax.swing.JFrame {
         Cancel = new javax.swing.JButton();
         submit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        name = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtMiddleName = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtSurname = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        sex = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        txtDob = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtStmt = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtNum1 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        txtNum2 = new javax.swing.JTextField();
+        txtKinName = new javax.swing.JTextField();
+        txtKinRel = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,22 +68,79 @@ public class MiniForm extends javax.swing.JFrame {
 
         jLabel1.setText("First name");
 
+        txtName.setForeground(new java.awt.Color(204, 204, 204));
+        txtName.setText("John");
+
+        jLabel2.setText("Middle name");
+
+        txtMiddleName.setForeground(new java.awt.Color(204, 204, 204));
+        txtMiddleName.setText("Doe");
+
+        jLabel3.setText("Last name");
+
+        txtSurname.setForeground(new java.awt.Color(204, 204, 204));
+        txtSurname.setText("Smith");
+
+        jLabel4.setText("Sex");
+
+        sex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
+
+        jLabel5.setText("DOB (dd/mm/yyyy)");
+
+        jLabel6.setText("Brief complaint or statement");
+
+        jLabel7.setText("Contact Phone 1");
+
+        jLabel8.setText("Contact Phone 2");
+
+        jLabel9.setText("Next of Kin (full name)");
+
+        jLabel10.setText("Kins relation with patient");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(88, 88, 88)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtNum1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtStmt)
+                                    .addComponent(txtDob)
+                                    .addComponent(txtName)
+                                    .addComponent(txtMiddleName)
+                                    .addComponent(txtSurname)
+                                    .addComponent(sex, javax.swing.GroupLayout.Alignment.TRAILING, 0, 150, Short.MAX_VALUE))
+                                .addGap(9, 9, 9))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtKinRel, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtKinName)
+                                        .addComponent(txtNum2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
+                                .addContainerGap())))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Cancel)
-                        .addGap(115, 115, 115)
-                        .addComponent(submit))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(289, Short.MAX_VALUE))
+                        .addComponent(submit)
+                        .addGap(18, 18, 18))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -68,12 +148,48 @@ public class MiniForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 359, Short.MAX_VALUE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cancel)
-                    .addComponent(submit))
-                .addContainerGap())
+                    .addComponent(jLabel2)
+                    .addComponent(txtMiddleName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtSurname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(sex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtDob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txtStmt, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtKinName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(txtKinRel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(submit)
+                    .addComponent(Cancel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -86,13 +202,24 @@ public class MiniForm extends javax.swing.JFrame {
     }//GEN-LAST:event_CancelActionPerformed
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-        for(Component c: getContentPane().getComponents()){
-            if(c instanceof JTextField){
-                if(((JTextField)c).getText().isEmpty()){
-                    JOptionPane.showMessageDialog(null,"Please fill all fields!","Error submiting form",JOptionPane.ERROR_MESSAGE);
+        for (Component c : getContentPane().getComponents()) {
+            if (c instanceof JTextField) {
+                if (((JTextField) c).getText().isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Please fill all fields!", "Error submiting form", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
             }
+        }
+        List<Object> data = Arrays.asList(new Object[]{txtName.getText(), txtMiddleName.getText(), txtMiddleName.getText(), sex.getItemAt(sex.getSelectedIndex()), txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString()});
+        try {
+            DatabaseHandler.writeWithCsvListWriter(data, Processors.patientsMiniFormProcessor(), Config.PATIENTS);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex, "Error submiting form", JOptionPane.ERROR_MESSAGE);
+            Logger.getLogger(MiniForm.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            this.setVisible(false);
+            mf.setVisible(true);
+            mf.toFront();
         }
     }//GEN-LAST:event_submitActionPerformed
 
@@ -102,7 +229,25 @@ public class MiniForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cancel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField name;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JComboBox<String> sex;
     private javax.swing.JButton submit;
+    private javax.swing.JTextField txtDob;
+    private javax.swing.JTextField txtKinName;
+    private javax.swing.JTextField txtKinRel;
+    private javax.swing.JTextField txtMiddleName;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtNum1;
+    private javax.swing.JTextField txtNum2;
+    private javax.swing.JTextField txtStmt;
+    private javax.swing.JTextField txtSurname;
     // End of variables declaration//GEN-END:variables
 }

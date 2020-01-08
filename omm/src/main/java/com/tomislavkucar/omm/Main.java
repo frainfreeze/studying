@@ -124,7 +124,7 @@ public class Main {
                         miniFormWindow.close();
                     } catch (Exception ex) {
                         MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
-                        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                        //Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }).addTo(miniFormPanel);
