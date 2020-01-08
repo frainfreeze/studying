@@ -40,53 +40,7 @@ import org.supercsv.io.CsvListWriter;
 import org.supercsv.io.ICsvListWriter;
 import org.supercsv.prefs.CsvPreference;
 
-public class Main {
-
-    public static String CSV_PATIENTS = "target/patients.csv";
-    public static String CSV_STAFF = "target/staff.csv";
-
-    private static CellProcessor[] patientsMiniFormProcessor() {
-        final CellProcessor[] processors = new CellProcessor[]{
-            new NotNull(), // txtName
-            new NotNull(), // txtMiddleName
-            new NotNull(), // txtSurname
-            new NotNull(), // sex
-            new NotNull(), //FmtDate("dd/MM/yyyy"), // txtDob
-            new NotNull(), // txtStmt
-            new NotNull(), // txtNum1
-            new NotNull(), // txtNum2
-            new NotNull(), // txtKinName
-            new NotNull(), // txtKinRel
-            new UniqueHashCode() // Outpatient ID (OPID): (must be unique)
-        //todo - extend with full form
-        };
-        return processors;
-    }
-
-    private static CellProcessor[] personelProcessor() {
-        final CellProcessor[] processors = new CellProcessor[]{
-            new NotNull(), // txtName
-            new NotNull(), // txtSurname
-            new NotNull(), // worktype
-            new NotNull(), // available
-            new NotNull(), // email
-            new NotNull(), // phone
-            new NotNull() // uuid
-        };
-        return processors;
-    }
-    
-    private static void writeWithCsvListWriter(List<Object> data, CellProcessor[] processor, String db) throws Exception {
-        try (ICsvListWriter listWriter = new CsvListWriter(new FileWriter(db, true),
-                CsvPreference.STANDARD_PREFERENCE)) {
-            /*final String[] header = new String[]{"txtName", "txtMiddleName", "txtSurname",
-                "sex", "txtDob", "txtStmt", "txtNum1", "txtNum2", "txtKinName", "txtKinRel", "OPID"};
-            listWriter.writeHeader(header);*/
-            
-            listWriter.write(data, processor);
-        }
-    }
-
+public class Main { 
     public static void main(String[] args) throws IOException {
         // Setup terminal and screen layers
         Terminal terminal = new DefaultTerminalFactory().createTerminal();
@@ -165,7 +119,7 @@ public class Main {
                     String sex = (gender.getSelectedIndex() == 0) ? "Male" : "Female";
                     List<Object> data = Arrays.asList(new Object[]{txtName.getText(), txtMiddleName.getText(), txtSurname.getText(), sex, txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString()});
                     try {
-                        writeWithCsvListWriter(data, patientsMiniFormProcessor(), CSV_PATIENTS);
+                        DatabaseHandler.writeWithCsvListWriter(data, Processors.patientsMiniFormProcessor(), Config.PATIENTS);
                         miniFormWindow.close();// TODO: clear textboxes
                     } catch (Exception ex) {
                         MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
@@ -212,12 +166,12 @@ public class Main {
                             "Sex", "DOB", "Statement", "Num1", "Num2", "Kin Name", "Kin Rel", "OPID");
 
                     try {
-                        File csvFile = new File(CSV_PATIENTS);
+                        File csvFile = new File(Config.PATIENTS);
                         if (csvFile.isFile()) {
                             String row = null;
                             BufferedReader csvReader;
                             try {
-                                csvReader = new BufferedReader(new FileReader(CSV_PATIENTS));
+                                csvReader = new BufferedReader(new FileReader(Config.PATIENTS));
                                 csvReader.readLine();
                                 while ((row = csvReader.readLine()) != null) {
                                     table.getTableModel().addRow(row.split(","));
@@ -260,12 +214,12 @@ public class Main {
                     Table<String> table = new Table<String>("Name", "Surname", "Work type", "Available", "Email", "Phone", "UUID");
 
                     try {
-                        File csvFile = new File(CSV_STAFF);
+                        File csvFile = new File(Config.STAFF);
                         if (csvFile.isFile()) {
                             String row = null;
                             BufferedReader csvReader;
                             try {
-                                csvReader = new BufferedReader(new FileReader(CSV_STAFF));
+                                csvReader = new BufferedReader(new FileReader(Config.STAFF));
                                 csvReader.readLine();
                                 while ((row = csvReader.readLine()) != null) {
                                     table.getTableModel().addRow(row.split(","));
@@ -295,7 +249,7 @@ public class Main {
                                 //spawn modal
                                 List<Object> data = Arrays.asList(new Object[]{"Ivo","Ivic","Consultant","Yes","ivic@virgo.com","091828283",UUID.randomUUID().toString()}); // = Arrays.asList(new Object[]{txtModalName.getText(), txtSurname.getText(), ..., UUID.randomUUID().toString()});
                                 try {
-                                    writeWithCsvListWriter(data, personelProcessor(), CSV_STAFF);
+                                    DatabaseHandler.writeWithCsvListWriter(data, Processors.personelProcessor(), Config.STAFF);
                                     workersWindow.close();// TODO: clear textboxes
                                 } catch (Exception ex) {
                                     MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
