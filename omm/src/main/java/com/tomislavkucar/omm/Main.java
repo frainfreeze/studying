@@ -120,7 +120,8 @@ public class Main {
                     List<Object> data = Arrays.asList(new Object[]{txtName.getText(), txtMiddleName.getText(), txtSurname.getText(), sex, txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString()});
                     try {
                         DatabaseHandler.writeWithCsvListWriter(data, Processors.patientsMiniFormProcessor(), Config.PATIENTS);
-                        miniFormWindow.close();// TODO: clear textboxes
+                        txtName.setText("");txtMiddleName.setText("");txtSurname.setText("");txtDob.setText("");txtStmt.setText("");txtNum1.setText("");txtNum2.setText("");txtKinName.setText("");txtKinRel.setText("");
+                        miniFormWindow.close();
                     } catch (Exception ex) {
                         MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
