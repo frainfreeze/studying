@@ -1,12 +1,23 @@
 package com.tomislavkucar.omm;
 
+import java.awt.Dimension;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.TableModel;
 
-public class MainForm extends javax.swing.JFrame {  
+public class MainForm extends javax.swing.JFrame {
+
     /**
      * Creates new form mainForm
      */
@@ -137,32 +148,50 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_miniFormActionPerformed
 
     private void comprehensiveFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprehensiveFormActionPerformed
-        JOptionPane.showMessageDialog(null,"Implement me" ,"TODO",JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Implement me", "TODO", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_comprehensiveFormActionPerformed
 
     private void appointmentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_appointmentsActionPerformed
-        JOptionPane.showMessageDialog(null,"Implement me" ,"TODO",JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Implement me", "TODO", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_appointmentsActionPerformed
 
     private void accessRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accessRecordsActionPerformed
-        PatientRecords f = new PatientRecords(this);
-        f.setLocationRelativeTo(null);
-        this.setVisible(false);
-        f.setVisible(true);
-        f.toFront();
+        PatientBean patient = new PatientBean();
+        List<PatientBean> patients = new ArrayList<>();
+        try {
+            patients = DatabaseHandler.readWithCsvBeanReader(patient, Processors.patientsMiniFormProcessor(), Config.PATIENTS);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex, "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        TableModel tableModel = TableModelCreator.createTableModel(PatientBean.class, patients);
+        JTable table = new JTable(tableModel);
+        table.setPreferredScrollableViewportSize(new Dimension(900,400));
+        
+        JScrollPane pane = new JScrollPane(table);
+        
+        final JDialog frame = new JDialog(this, "Patient records", true);
+        frame.getContentPane().add(pane);
+        frame.pack();
+        frame.setVisible(true);
     }//GEN-LAST:event_accessRecordsActionPerformed
 
     private void medicalPersonelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicalPersonelActionPerformed
-        JOptionPane.showMessageDialog(null,"Implement me" ,"TODO",JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Implement me", "TODO", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_medicalPersonelActionPerformed
 
     private void reportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportsActionPerformed
-        JOptionPane.showMessageDialog(null,"Implement me" ,"TODO",JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Implement me", "TODO", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_reportsActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private static JFrame createFrame(String title) {
+        JFrame frame = new JFrame(title);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(new Dimension(600, 300));
+        return frame;
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -8,6 +8,7 @@ package com.tomislavkucar.omm;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,13 +36,14 @@ public class DatabaseHandler {
 
     static List readWithCsvBeanReader(Object bean, CellProcessor[] processor, String db) throws Exception {
 
-        List lst = null;
+        List<Object> lst = new ArrayList<>();
         try (ICsvBeanReader beanReader = new CsvBeanReader(new FileReader(db), CsvPreference.STANDARD_PREFERENCE)) {
             // the header elements are used to map the values to the bean (names must match)
             final String[] header = beanReader.getHeader(true);
             
             while ((bean = beanReader.read(bean.getClass(), header, processor)) != null) {
                 System.out.println(bean.toString());
+                lst.add(bean);
             }
         return lst;
         }
