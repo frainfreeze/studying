@@ -33,26 +33,17 @@ public class DatabaseHandler {
         }
     }
 
-    private static List readWithCsvBeanReader(CellProcessor[] processor, String db) throws Exception {
+    static List readWithCsvBeanReader(Object bean, CellProcessor[] processor, String db) throws Exception {
 
-        List lst;
-        ICsvBeanReader beanReader = null;
-        try {
-            beanReader = new CsvBeanReader(new FileReader(db), CsvPreference.STANDARD_PREFERENCE);
-
+        List lst = null;
+        try (ICsvBeanReader beanReader = new CsvBeanReader(new FileReader(db), CsvPreference.STANDARD_PREFERENCE)) {
             // the header elements are used to map the values to the bean (names must match)
             final String[] header = beanReader.getHeader(true);
-
-            PatientBean patient;
-            while ((patient = beanReader.read(PatientBean.class, header, processor)) != null) {
-                System.out.println(String.format("lineNo=%s, rowNo=%s, customer=%s", beanReader.getLineNumber(),
-                        beanReader.getRowNumber(), patient));
+            
+            while ((bean = beanReader.read(bean.getClass(), header, processor)) != null) {
+                System.out.println(bean.toString());
             }
-
-        } finally {
-            if (beanReader != null) {
-                beanReader.close();
-            }
+        return lst;
         }
     }
 }

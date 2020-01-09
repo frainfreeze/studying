@@ -20,7 +20,7 @@ public class Processors {
         new NotNull(), // txtMiddleName
         new NotNull(), // txtSurname
         new NotNull(), // sex
-        new NotNull(), //FmtDate("dd/MM/yyyy"), // txtDob
+        new NotNull(), // FmtDate("dd/MM/yyyy"), // txtDob
         new NotNull(), // txtStmt
         new NotNull(), // txtNum1
         new NotNull(), // txtNum2

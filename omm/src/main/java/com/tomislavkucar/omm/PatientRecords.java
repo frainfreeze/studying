@@ -7,7 +7,9 @@ import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.TableModel;
 
 public class PatientRecords extends javax.swing.JFrame {
 
@@ -17,31 +19,13 @@ public class PatientRecords extends javax.swing.JFrame {
         initComponents();
         mf = m;
 
-        Table<String> table = new Table<String>("Name", "Middle Name", "Surname",
-                "Sex", "DOB", "Statement", "Num1", "Num2", "Kin Name", "Kin Rel", "OPID");
+        //Table<String> table = new Table<String>("Name", "Middle Name", "Surname", "Sex", "DOB", "Statement", "Num1", "Num2", "Kin Name", "Kin Rel", "OPID");
 
         try {
-            File csvFile = new File(Config.PATIENTS);
-            if (csvFile.isFile()) {
-                String row = null;
-                BufferedReader csvReader;
-                try {
-                    csvReader = new BufferedReader(new FileReader(Config.PATIENTS));
-                    csvReader.readLine();
-                    while ((row = csvReader.readLine()) != null) {
-                        table.getTableModel().addRow(row.split(","));
-                    }
-                    csvReader.close();
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-
-            CSVReader reader = new CSVReader(new FileReader("yourfile.csv"));
-            List myEntries = reader.readAll();
-            JTable table = new JTable(myEntries.toArray());
+            PatientBean patient = new PatientBean();
+            List patients = DatabaseHandler.readWithCsvBeanReader(patient, Processors.patientsMiniFormProcessor(), Config.PATIENTS);
+            TableModel tableModel = TableModelCreator.createTableModel(PatientBean.class, patients);
+            table = new JTable(tableModel);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex, "Error fetching patients", JOptionPane.ERROR_MESSAGE);
         }
@@ -57,11 +41,11 @@ public class PatientRecords extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -72,17 +56,17 @@ public class PatientRecords extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(table);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
         );
 
         pack();
@@ -93,6 +77,6 @@ public class PatientRecords extends javax.swing.JFrame {
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }

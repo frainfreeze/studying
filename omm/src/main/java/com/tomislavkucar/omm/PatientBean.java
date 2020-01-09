@@ -91,6 +91,14 @@ public class PatientBean {
         this.kinRel = kinRel;
     }
 
+    public String getOpid() {
+        return opid;
+    }
+
+    public void setOpid(String opid) {
+        this.opid = opid;
+    }
+
     private String firstName;
     private String middleName;
     private String lastName;
@@ -105,12 +113,14 @@ public class PatientBean {
     private String kinName;
     private String kinRel;
 
+    private String opid;
+
     public PatientBean() {
     }
 
     @Override
     public String toString() {
-        return "PatientBean{" + "firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName + ", DOB=" + DOB + ", sex=" + sex + ", statement=" + statement + ", num1=" + num1 + ", num2=" + num2 + ", kinName=" + kinName + ", kinRel=" + kinRel + '}';
+        return "PatientBean{" + "firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName + ", DOB=" + DOB + ", sex=" + sex + ", statement=" + statement + ", num1=" + num1 + ", num2=" + num2 + ", kinName=" + kinName + ", kinRel=" + kinRel + ", opid=" + opid + '}';
     }
 
     public PatientBean(final String firstName, final String middleName, final String lastName, final String DOB, final String sex, final String statement, final String num1, final String num2, final String kinName, final String kinRel) {
