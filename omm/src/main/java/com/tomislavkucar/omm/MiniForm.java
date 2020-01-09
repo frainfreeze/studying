@@ -167,9 +167,9 @@ public class MiniForm extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
@@ -203,12 +203,14 @@ public class MiniForm extends javax.swing.JFrame {
                 }
             }
         }
-        List<Object> data = Arrays.asList(new Object[]{txtName.getText(), txtMiddleName.getText(), txtMiddleName.getText(), sex.getItemAt(sex.getSelectedIndex()), txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString()});
+        //List<Object> data = Arrays.asList(new Object[]{txtName.getText(), txtMiddleName.getText(), txtMiddleName.getText(), sex.getItemAt(sex.getSelectedIndex()), txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString()});
+        PatientBean data = new PatientBean(txtName.getText(), txtMiddleName.getText(), txtMiddleName.getText(), sex.getItemAt(sex.getSelectedIndex()), txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString());
         try {
-            DatabaseHandler.writeWithCsvListWriter(data, Processors.patientsMiniFormProcessor(), Config.PATIENTS);
+            //DatabaseHandler.writeWithCsvListWriter(data, Processors.patientsMiniFormProcessor(), Config.PATIENTS);
+            PatientBean bean = new PatientBean();
+            DatabaseHandler.writeWithCsvBeanWriter(Processors.patientsMiniFormProcessor(), data, Config.patientHeader, Config.PATIENTS);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex, "Error submiting form", JOptionPane.ERROR_MESSAGE);
-            Logger.getLogger(MiniForm.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             this.setVisible(false);
             mf.setVisible(true);

@@ -123,7 +123,7 @@ public class PatientBean {
         return "PatientBean{" + "firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName + ", DOB=" + DOB + ", sex=" + sex + ", statement=" + statement + ", num1=" + num1 + ", num2=" + num2 + ", kinName=" + kinName + ", kinRel=" + kinRel + ", opid=" + opid + '}';
     }
 
-    public PatientBean(final String firstName, final String middleName, final String lastName, final String DOB, final String sex, final String statement, final String num1, final String num2, final String kinName, final String kinRel) {
+    public PatientBean(String firstName, String middleName, String lastName, String DOB, String sex, String statement, String num1, String num2, String kinName, String kinRel, String opid) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -134,5 +134,8 @@ public class PatientBean {
         this.num2 = num2;
         this.kinName = kinName;
         this.kinRel = kinRel;
+        this.opid = opid;
     }
+
+
 }
