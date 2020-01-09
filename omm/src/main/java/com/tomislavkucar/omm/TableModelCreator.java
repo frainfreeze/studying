@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tomislavkucar.omm;
 
 import java.beans.BeanInfo;
@@ -14,10 +9,6 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
 
-/**
- *
- * @author frain
- */
 public class TableModelCreator {
 
     public static <T> TableModel createTableModel(Class<T> beanClass, List<T> list) {

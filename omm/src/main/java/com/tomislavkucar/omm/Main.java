@@ -42,7 +42,6 @@ import org.supercsv.prefs.CsvPreference;
 
 public class Main { 
     public static void main(String[] args) throws IOException {
-        // Setup terminal and screen layers
         Terminal terminal = new DefaultTerminalFactory().createTerminal();
         Screen screen = null;
 
@@ -55,23 +54,19 @@ public class Main {
             MultiWindowTextGUI gui = new MultiWindowTextGUI(screen,
                     new DefaultWindowManager(), new EmptySpace(TextColor.ANSI.BLUE));
 
-            // Create god panel to hold main panel and exit button, vertical
             Panel godPanel = new Panel();
             godPanel.setLayoutManager(new LinearLayout(Direction.VERTICAL));
 
-            //main panel to hold subpanels with options, horizontal
             Panel mainPanel = new Panel();
             mainPanel.setLayoutManager(new LinearLayout(Direction.HORIZONTAL));
             godPanel.addComponent(mainPanel);
 
-            // mainpanel subpanels
             Panel leftPanel = new Panel();
             mainPanel.addComponent(leftPanel.withBorder(Borders.singleLine("Reception Executive")));
             Panel rightPanel = new Panel();
             mainPanel.addComponent(rightPanel.withBorder(Borders.singleLine("System")));
 
             // <editor-fold defaultstate="collapsed" desc="Reception executive">
-            // Mini reg form
             BasicWindow miniFormWindow = new BasicWindow();
             Panel miniFormPanel = new Panel();
             miniFormPanel.setLayoutManager(new GridLayout(2));
@@ -139,7 +134,6 @@ public class Main {
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
-            // Comprehensive reg form
             leftPanel.addComponent(new Button("Comprehensive form", new Runnable() {
                 @Override
                 public void run() {
@@ -147,7 +141,6 @@ public class Main {
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
-            // Appointments
             leftPanel.addComponent(new Button("Appointments", new Runnable() {
                 @Override
                 public void run() {
@@ -157,7 +150,6 @@ public class Main {
 
             // </editor-fold>
             // <editor-fold defaultstate="collapsed" desc="System">
-            // Access records
             rightPanel.addComponent(new Button("Access records", new Runnable() {
                 @Override
                 public void run() {
@@ -206,7 +198,6 @@ public class Main {
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
-            // Medical personel
             rightPanel.addComponent(new Button("Medical personel", new Runnable() {
                 @Override
                 public void run() {
@@ -249,11 +240,10 @@ public class Main {
                         new Button("Add new...", new Runnable() {
                             @Override
                             public void run() {
-                                //spawn modal
                                 List<Object> data = Arrays.asList(new Object[]{"Ivo","Ivic","Consultant","Yes","ivic@virgo.com","091828283",UUID.randomUUID().toString()}); // = Arrays.asList(new Object[]{txtModalName.getText(), txtSurname.getText(), ..., UUID.randomUUID().toString()});
                                 try {
                                     DatabaseHandler.writeWithCsvListWriter(data, Processors.personelProcessor(), Config.STAFF);
-                                    workersWindow.close();// TODO: clear textboxes
+                                    workersWindow.close();
                                 } catch (Exception ex) {
                                     MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
                                     Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -270,18 +260,14 @@ public class Main {
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
 
-            //reports
             rightPanel.addComponent(new Button("Reports", new Runnable() {
                 @Override
                 public void run() {
                     MessageDialog.showMessageDialog(gui, "Outpatient managment module reports", "For reports use the GUI app.", MessageDialogButton.OK);
-                    //TODO: generate pdf, add plots using http://javaplot.panayotis.com/index.html
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
             // </editor-fold>
 
-
-            // Close off with an empty row then a button to close the window
             godPanel.addComponent(
                     new Button("Exit", new Runnable() {
                         @Override
@@ -290,11 +276,8 @@ public class Main {
                         }
                     }).setLayoutData(GridLayout.createHorizontallyFilledLayoutData(2)));
 
-            /*We now have the content panel fully populated with components. A common mistake is to forget to attach it to
-            the window, so let's make sure to do that.*/
-            window.setComponent(godPanel);
 
-            // start gui
+            window.setComponent(godPanel);
             gui.addWindowAndWait(window);
 
         } catch (IOException e) {

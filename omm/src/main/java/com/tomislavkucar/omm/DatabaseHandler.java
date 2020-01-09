@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tomislavkucar.omm;
 
 import java.io.FileReader;
@@ -20,10 +15,6 @@ import org.supercsv.io.ICsvBeanWriter;
 import org.supercsv.io.ICsvListWriter;
 import org.supercsv.prefs.CsvPreference;
 
-/**
- *
- * @author frain
- */
 public class DatabaseHandler {
 
     static void writeWithCsvListWriter(List<Object> data, CellProcessor[] processor, String db) throws Exception {

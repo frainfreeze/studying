@@ -163,7 +163,7 @@ public class MainForm extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex, "Error", JOptionPane.WARNING_MESSAGE);
         }
-        
+        //https://www.codejava.net/java-se/swing/editable-jtable-example
         TableModel tableModel = TableModelCreator.createTableModel(PatientBean.class, patients);
         JTable table = new JTable(tableModel);
         table.setPreferredScrollableViewportSize(new Dimension(900,400));
