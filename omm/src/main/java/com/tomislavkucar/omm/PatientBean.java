@@ -5,6 +5,8 @@
  */
 package com.tomislavkucar.omm;
 
+import java.lang.reflect.Field;
+
 /**
  *
  * @author frain
@@ -137,5 +139,23 @@ public class PatientBean {
         this.opid = opid;
     }
 
-
+    /**
+    * Tests for empty fields
+    *
+    * @return True if there are empty fields, otherwise false
+    */
+    public boolean checkEmpty(){
+        if ("".equals(firstName)) return true;
+        if ("".equals(middleName)) return true;
+        if ("".equals(lastName)) return true;
+        if ("".equals(DOB)) return true;
+        if ("".equals(sex)) return true;
+        if ("".equals(statement)) return true;
+        if ("".equals(num1)) return true;
+        if ("".equals(num2)) return true;
+        if ("".equals(kinName)) return true;
+        if ("".equals(kinRel)) return true;
+        if ("".equals(opid)) return true;
+        return false;        
+    }
 }

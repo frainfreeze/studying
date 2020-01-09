@@ -114,17 +114,19 @@ public class Main {
             new Button("Submit", new Runnable() {
                 @Override
                 public void run() {
-                    //todo: use bean
-
                     String sex = (gender.getSelectedIndex() == 0) ? "Male" : "Female";
-                    List<Object> data = Arrays.asList(new Object[]{txtName.getText(), txtMiddleName.getText(), txtSurname.getText(), sex, txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString()});
+                    PatientBean data = new PatientBean(txtName.getText(), txtMiddleName.getText(), txtMiddleName.getText(), sex, txtDob.getText(), txtStmt.getText(), txtNum1.getText(), txtNum2.getText(), txtKinName.getText(), txtKinRel.getText(), UUID.randomUUID().toString());
                     try {
-                        DatabaseHandler.writeWithCsvListWriter(data, Processors.patientsMiniFormProcessor(), Config.PATIENTS);
+                        if (data.checkEmpty()) {
+                            MessageDialog.showMessageDialog(gui, "Error saving data", "Please fill all fields.", MessageDialogButton.OK); 
+                            return;
+                        }
+                        DatabaseHandler.writeWithCsvBeanWriter(Processors.patientsMiniFormProcessor(), data, Config.patientHeader, Config.PATIENTS);
                         txtName.setText("");txtMiddleName.setText("");txtSurname.setText("");txtDob.setText("");txtStmt.setText("");txtNum1.setText("");txtNum2.setText("");txtKinName.setText("");txtKinRel.setText("");
                         miniFormWindow.close();
+                        
                     } catch (Exception ex) {
                         MessageDialog.showMessageDialog(gui, "Error saving data", "Please check your inputs and try again.", MessageDialogButton.OK);
-                        //Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }).addTo(miniFormPanel);
