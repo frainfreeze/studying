@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>simple</title>
+    <script src="https://unpkg.com/vue@2.1.8/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="ui main text container">
+        <h1 class="ui header">Books I've read</h1>
+        <p>
+            Tiny summary but detailed notes for each. Use the ISBN number to find it from your local library or
+            anywhere
+            else.
+            This page will constantly update as I read more, so bookmark it if you want to check back in a few months.
+        </p>
+        <p>
+            Tags: Autobiography, Ethics & Morality, Philosophy, Productivity, Psychology, Self-help, Software,
+            Stoicism,
+            Time management
+        </p>
+        <p>
+            Check out my <a href="./bookshelf.html">bookshelf</a>.
+        </p>
+
+        <br> <br> <br>
+
+        <div id="app">
+            <div v-for="book in books">
+                <h2>{{book.title}}</h2>
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <p>ISBN: {{book.info.ISBN}}</p>
+                        <p>Date published: {{book.info.datePublished}}</p>
+                        <p>Date read: {{book.info.dateRead}}</p>
+                        <p>Rating: {{book.info.rating}}/10</p>
+                    </div>
+                    <div class="ten wide column">
+                        <h3>Description:</h3>
+                        <p>{{book.description}}</p>
+                    </div>
+                </div>
+
+                <h3>Notes:</h3>
+                <p>{{book.notes}}</p>
+                <br> <br> <br>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    books: null,
+                    loading: true,
+                    errored: false
+                }
+            },
+            mounted() {
+                axios
+                    .get('https://raw.githubusercontent.com/frainfreeze/DailyWebDeveloper/master/playground/books/books.json')
+                    .then(response => {
+                        this.books = response.data
+                    })
+                    .catch(error => {
+                        console.log(error)
+                        this.errored = true
+                    })
+                    .finally(() => this.loading = false)
+            }
+        })
+    </script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
+
+</body>
+
+</html>

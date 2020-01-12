@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>VueJS 2 Simple Shopping cart</title>
+
+   <!--bulma and icons -->
+   <link rel="stylesheet" href="res/css/bulma.min.css">
+   <script defer src="res/js/all.js"></script>
+   <style>
+      .container{
+        padding:20px;
+        max-width:600px;
+      }
+
+      .input-qty {
+        width: 60px;
+        float: right
+      }
+
+      .table-cart > tr > td {
+        vertical-align: middle !important;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="app" class="container">
+      <div class="container">
+         <div class="columns">
+            <div class="column" v-for="item in items[active_el-1].Ponuda">
+               <h5>{{ item.Naziv }}</h5>
+               <h6>${{ item.Cijena | formatCurrency }}</h6>
+               <p>
+                  <input v-model="item.qty" type="number" class="form-control" placeholder="Qty" min="1" />
+                  <!-- <input v-model="message" placeholder="edit me"> -->
+               </p>
+               <button class="button" @click="addToCart(item)">Add to Cart</button>
+               </p>
+            </div>
+         </div>
+
+
+         <div class="is-divider" data-content="CART"></div>
+
+         <div class="columns">
+            <shopping-cart inline-template :items="cartItems">
+               <div>
+                  <table class="table table-cart">
+                     <tr v-for="(item, index) in items">
+                        <td>{{item.Naziv}}</td>
+                        <td style="width:120px">QTY:
+                           <input v-model="item.qty" class="form-control input-qty" type="number">
+                        </td>
+                        <td>Note.</td>
+                        <td class="text-right">${{item.Cijena | formatCurrency}}</td>
+                        <td>
+                           <button class="button is-small is-white" @click="removeItem(index)"><span class="far fa-trash-alt"></span></button>
+                        </td>
+                     </tr>
+                     <tr v-show="items.length === 0">
+                        <td>Cart is empty</td>
+                     </tr>
+                     <tr v-show="items.length > 0">
+                        <td></td>
+                        <td></td>
+                        <td>Cart Total</td>
+                        <td>${{Total | formatCurrency}}</td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </div>
+               <!-- /.container -->
+            </shopping-cart>
+         </div>
+      </div>
+   </div>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+   <script src='https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/js/bulma-extensions.min.js'></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/css/bulma-extensions.min.css">
+   <script>
+      const products = [
+         {
+            id: 1,
+            title: 'Macbook Pro',
+            price: 2500.00,
+            qty: 1,
+            image: 'http://lorempixel.com/150/150/'
+         },
+         {
+            id: 2,
+            title: 'Asus Gaming',
+            price: 1000.00,
+            qty: 1,
+            image: 'http://lorempixel.com/150/150/'
+         },
+         {
+            id: 3,
+            title: 'Amazon Kindle',
+            price: 150.00,
+            qty: 1,
+            image: 'http://lorempixel.com/150/150/'
+         },
+         {
+            id: 4,
+            title: 'Another Product',
+            price: 10,
+            qty: 1,
+            image: 'http://lorempixel.com/150/150/'
+         },
+      ];
+
+      const fulek = [
+      {
+         "Id": 1,
+         "Naziv": "PREPORUKA ŠEFA KUHINJE",
+         "Ponuda": [{
+            "JeloId": 3,
+            "Naziv": "Patka szechuan",
+            "Opis": "hrskava patka, povrće, ljuto",
+            "Cijena": 56,
+            qty: 1
+         }, {
+            "JeloId": 10,
+            "Naziv": "Junetina i brokula",
+            "Opis": "Junetina, brokula, mrkva, luk, ljuto",
+            "Cijena": 47
+         }]
+      },{
+         "Id": 2,
+         "Naziv": "JELA SA POVRĆEM",
+         "Ponuda": [{
+            "JeloId": 34,
+            "Naziv": "Veggie wok + riža",
+            "Opis": "povrće u wok-u",
+            "Cijena": 32
+         }]
+      }, {
+         "Id": 3,
+         "Naziv": "JELA SA SVINJETINOM",
+         "Ponuda": [{
+            "JeloId": 35,
+            "Naziv": "Svinjetina Szechuan + riža",
+            "Opis": "svinjetina, povrće, ljuto",
+            "Cijena": 43
+         }, {
+            "JeloId": 36,
+            "Naziv": "Gonbao svinjetina + riža",
+            "Opis": "svinjetina, povrće, kikiriki, ljuto",
+            "Cijena": 44
+         }, {
+            "JeloId": 37,
+            "Naziv": "Svinjetina s bambusom i gljivama + riža",
+            "Opis": "svinjetina, bambus, kineske shitake gljive",
+            "Cijena": 47
+         }]
+      }];
+
+      function formatNumber(n, c, d, t) {
+         var c = isNaN(c = Math.abs(c)) ? 2 : c,
+            d = d === undefined ? '.' : d,
+            t = t === undefined ? ',' : t,
+            s = n < 0 ? '-' : '',
+            i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+            j = (j = i.length) > 3 ? j % 3 : 0;
+         return s + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) + (c ? d + Math.abs(
+            n - i).toFixed(c).slice(2) : '');
+      };
+
+      Vue.filter('formatCurrency', function (value) {
+         return formatNumber(value, 2, '.', ',');
+      });
+
+      Vue.component('shopping-cart', {
+         props: ['items'],
+
+         computed: {
+            Total: function () {
+               var total = 0;
+               this.items.forEach(item => {
+                  total += (item.price * item.qty);
+               });
+               return total;
+            }
+         },
+
+         methods: {
+            removeItem(index) {
+               this.items.splice(index, 1)
+            }
+         }
+      })
+
+      const vm = new Vue({
+         el: '#app',
+
+         data: {
+            cartItems: [],
+            items: fulek,
+            active_el:1
+         },
+
+         methods: {
+            addToCart(itemToAdd) {
+               var found = false;
+
+               // Check if the item was already added to cart
+               // If so them add it to the qty field
+               this.cartItems.forEach(item => {
+                  if (item.id === itemToAdd.id) {
+                     found = true;
+                     item.qty += itemToAdd.qty;
+                  }
+               });
+
+               if (found === false) {
+                  this.cartItems.push(Vue.util.extend({}, itemToAdd));
+               }
+
+               itemToAdd.qty = 1;
+            }
+         }
+      })
+   </script>
+</body>
+
+</html>

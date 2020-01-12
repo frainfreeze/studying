@@ -1,0 +1,168 @@
+/* 
+* Le Chef Restoraunts Custom CSS 
+* Tomislav Kucar 2019
+*/
+
+/* app loading screen*/
+[v-cloak] > * { display:none; }
+[v-cloak]::before { content: "Loading..."; }
+
+/* testimonials parllax bacground */
+.hero {
+  background-image: url(../img/big-rest.jpg);
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #999;
+}
+
+/* image gallery */
+.imageX {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+}
+
+
+/* 
+* HTML5 Video Text Overlay Flexbox
+* Nicholas M. Smith
+*/
+.video-container {
+    position: relative;
+}
+
+video {
+    height: auto;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.overlay-desc {
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-desc>h1 {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+/**
+ * Tooltips.css by Chris Bracco
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  /* Hide the tooltip content by default */
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Position tooltip above the element */
+  [data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  
+  /* Triangle hack to make tooltip look like a speech bubble */
+  [data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+  }
+  
+  /* Show tooltip content on hover */
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+
+ 
+/*
+* tf.css v0.3  ! using only typography and utilities !
+* Copyright 2018, Tomislav Kucar
+* Free to use under the MIT license.
+* http://github.com/frainfreeze/tf-css
+*/
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 200; 
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 { font-size: 3.6rem; }
+h2 { font-size: 3.0rem; }
+h3 { font-size: 2.4rem; }
+h4 { font-size: 1.8rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1rem; }
+
+p, a { font-family: 'Raleway', sans-serif; }
+a { color: dodgerblue }
+
+.subtle { font-size: 1.2rem; color: #999; letter-spacing: normal; }
+
+/* Utilities */
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 20vh;
+}
