@@ -263,7 +263,13 @@ public class Main {
             rightPanel.addComponent(new Button("Reports", new Runnable() {
                 @Override
                 public void run() {
-                    MessageDialog.showMessageDialog(gui, "Outpatient managment module reports", "For reports use the GUI app.", MessageDialogButton.OK);
+                            Report r = new Report();
+                    try {
+                        String s = r.GenerateReport();
+                        MessageDialog.showMessageDialog(gui, "Outpatient managment module reports", "Report saved as " + s, MessageDialogButton.OK);
+                    } catch (IOException ex) {
+                        MessageDialog.showMessageDialog(gui, "Outpatient managment module reports", "Error generating report.", MessageDialogButton.OK);
+                    }
                 }
             }).setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER, GridLayout.Alignment.CENTER)));
             // </editor-fold>

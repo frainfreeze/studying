@@ -3,6 +3,7 @@ package com.tomislavkucar.omm;
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -148,11 +149,11 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_miniFormActionPerformed
 
     private void comprehensiveFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprehensiveFormActionPerformed
-        JOptionPane.showMessageDialog(null, "Implement me", "TODO", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Comprehensive form", "to-do", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_comprehensiveFormActionPerformed
 
     private void appointmentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_appointmentsActionPerformed
-        JOptionPane.showMessageDialog(null, "Implement me", "TODO", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Not in the project scope", "", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_appointmentsActionPerformed
 
     private void accessRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accessRecordsActionPerformed
@@ -166,10 +167,10 @@ public class MainForm extends javax.swing.JFrame {
         //https://www.codejava.net/java-se/swing/editable-jtable-example
         TableModel tableModel = TableModelCreator.createTableModel(PatientBean.class, patients);
         JTable table = new JTable(tableModel);
-        table.setPreferredScrollableViewportSize(new Dimension(900,400));
-        
+        table.setPreferredScrollableViewportSize(new Dimension(900, 400));
+
         JScrollPane pane = new JScrollPane(table);
-        
+
         final JDialog frame = new JDialog(this, "Patient records", true);
         frame.getContentPane().add(pane);
         frame.pack();
@@ -177,20 +178,18 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_accessRecordsActionPerformed
 
     private void medicalPersonelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicalPersonelActionPerformed
-        JOptionPane.showMessageDialog(null, "Implement me", "TODO", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null, "To access medical personel use the console app", "", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_medicalPersonelActionPerformed
 
     private void reportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportsActionPerformed
-        JOptionPane.showMessageDialog(null, "Implement me", "TODO", JOptionPane.WARNING_MESSAGE);
+        Report r = new Report();
+        try {
+            String s = r.GenerateReport();
+            JOptionPane.showMessageDialog(null, "Saved report as " + s, "", JOptionPane.INFORMATION_MESSAGE);
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Error generating report!", "Error", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_reportsActionPerformed
-
-    private static JFrame createFrame(String title) {
-        JFrame frame = new JFrame(title);
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(new Dimension(600, 300));
-        return frame;
-    }
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -220,12 +219,10 @@ public class MainForm extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                MainForm f = new MainForm();
-                f.setLocationRelativeTo(null);
-                f.setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            MainForm f = new MainForm();
+            f.setLocationRelativeTo(null);
+            f.setVisible(true);
         });
     }
 

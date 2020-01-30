@@ -68,18 +68,11 @@ public class MiniForm extends javax.swing.JFrame {
 
         jLabel1.setText("First name");
 
-        txtName.setForeground(new java.awt.Color(204, 204, 204));
-        txtName.setText("John");
+        txtName.setToolTipText("");
 
         jLabel2.setText("Middle name");
 
-        txtMiddleName.setForeground(new java.awt.Color(204, 204, 204));
-        txtMiddleName.setText("Doe");
-
         jLabel3.setText("Last name");
-
-        txtSurname.setForeground(new java.awt.Color(204, 204, 204));
-        txtSurname.setText("Smith");
 
         jLabel4.setText("Sex");
 
