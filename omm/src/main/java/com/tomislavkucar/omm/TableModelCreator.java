@@ -1,8 +1,10 @@
 package com.tomislavkucar.omm;
 
 import java.beans.BeanInfo;
+import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,14 +56,14 @@ public class TableModelCreator {
                 public Object getValueAt(int rowIndex, int columnIndex) {
                     try {
                         return getters.get(columnIndex).invoke(list.get(rowIndex));
-                    } catch (Exception e) {
+                    } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
                         throw new RuntimeException(e);
                     }
                 }
             };
             return model;
 
-        } catch (Exception e) {
+        } catch (IntrospectionException e) {
             throw new RuntimeException(e);
         }
     }

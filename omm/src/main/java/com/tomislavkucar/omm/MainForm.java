@@ -184,8 +184,8 @@ public class MainForm extends javax.swing.JFrame {
     private void reportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportsActionPerformed
         Report r = new Report();
         try {
-            String s = r.GenerateReport();
-            JOptionPane.showMessageDialog(null, "Saved report as " + s, "", JOptionPane.INFORMATION_MESSAGE);
+            r.GenerateReport();
+            JOptionPane.showMessageDialog(null, "Saved report as " + Config.reportName, "", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "Error generating report!", "Error", JOptionPane.WARNING_MESSAGE);
         }

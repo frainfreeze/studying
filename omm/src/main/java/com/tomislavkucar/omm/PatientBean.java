@@ -1,7 +1,5 @@
 package com.tomislavkucar.omm;
 
-import java.lang.reflect.Field;
-
 public class PatientBean {
 
     public String getFirstName() {

@@ -24,7 +24,7 @@ public class DatabaseHandler {
     }
 
     static void writeWithCsvBeanWriter(CellProcessor[] processor, Object data, String[] header, String db) throws Exception {
-        try (ICsvBeanWriter beanWriter = new CsvBeanWriter(new FileWriter(db, true), CsvPreference.STANDARD_PREFERENCE)) {
+        try ( ICsvBeanWriter beanWriter = new CsvBeanWriter(new FileWriter(db, true), CsvPreference.STANDARD_PREFERENCE)) {
             if (Files.size(Paths.get(db)) == 0) {
                 beanWriter.writeHeader(header);
             }
@@ -34,7 +34,7 @@ public class DatabaseHandler {
 
     static List readWithCsvBeanReader(Object bean, CellProcessor[] processor, String db) throws Exception {
         List<Object> lst = new ArrayList<>();
-        try (ICsvBeanReader beanReader = new CsvBeanReader(new FileReader(db), CsvPreference.STANDARD_PREFERENCE)) {
+        try ( ICsvBeanReader beanReader = new CsvBeanReader(new FileReader(db), CsvPreference.STANDARD_PREFERENCE)) {
             final String[] header = beanReader.getHeader(true);
             while ((bean = beanReader.read(bean.getClass(), header, processor)) != null) {
                 lst.add(bean);

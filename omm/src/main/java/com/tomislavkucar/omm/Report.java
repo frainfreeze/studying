@@ -87,7 +87,7 @@ public class Report {
         return chart;
     }
 
-    public String GenerateReport() throws IOException {
+    public void GenerateReport() throws IOException {
         var dataset = new DefaultCategoryDataset();
         dataset.setValue(46, "Patients", "Gregory House");
         dataset.setValue(38, "Patients", " Lisa Cuddy");
@@ -124,7 +124,6 @@ public class Report {
 
         
         // Create a document and add a page to it
-        String docName = "report.pdf";
         PDDocument document = new PDDocument();
         PDPage page = new PDPage();
         document.addPage(page);
@@ -152,13 +151,11 @@ public class Report {
         contentStream.close();
 
         // Save the results and ensure that the document is properly closed:
-        document.save(docName);
+        document.save(Config.reportName);
         document.close();
 
         //remove imgs
         barChart.delete();
         lineChart.delete();
-        
-        return docName;
     }
 }
