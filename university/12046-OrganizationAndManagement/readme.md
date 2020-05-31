@@ -1,11 +1,173 @@
 # I4
-preduvjeti i modeli donošenja odluka 
-tehnike generiranja alternativnih rješenja
-tehnike donošenja odluke i odlucivanja
-tehnike evaluacije i selekcije alternativa
-Hellriegel i Slocumova klasifikacija odluka
-programirane i neprogramirane odluke
-uvijeti u kojima se donosi odluka
+
+Dva bitna aspekta u definiraju odlucivanja:
+1. **procesni aspekt** - odluivanje se definira kao proces identifikacije 
+problema i mogucnosti njihova rjesavanja.
+2. **aspekt stanja** - odlucvanje se definira kao cin izbora jedne od nekoliko 
+potencijalnih mogucnosti.
+
+Odlucivanje je kreativni proces koji se ostvaruje racionalno uz 3 pretpostavke:
+1. postoji jasno razumijevanje alternativnih pravaca putem kojih se mogu ostvariti
+postavljeni ciljevi uz postojece prilike i ogranicenja
+2. postoje informacije i sposobnosti donositelja odluka za analizu i evaluaciju
+alternativa u okviru postavljenih ciljeva
+3. postoji zelja donositelja odluka za iznalazenje najbolje alternativne solucije
+koja mora biti efikasna za ostvarenje postavljenih ciljeva
+
+
+Razine menadžmenta i odlučivanje
+
+![](mgmt-levels.png)
+
+
+Odluke i tipovi odluka
+
+![](decisions.png)
+
+
+Odluka je rezultat procesa odlucivanja. Drucker razlikuje 3 vrste odluka:
+1. strateske
+2. takticke
+3. rutinske
+
+Druckerova podjela odluka suglasna je konceptu razina planiranja, što
+znači da se na strateškoj razini planiranja donose strateške, na 
+taktičkoj taktičke, a na operativnoj razini rutinske odluke.
+
+
+Hellriegel i Slocum razlikuju
+1. rutisnke
+2. adaptivne
+3. inovativne odluke
+
+Hellriegelova i Slocumova podjela odluka više je orijentirana
+karakteru problema s aspekta stupnja spoznaje; što je problem više
+poznat, odluka će imati rutinski karakter, dok će nizak stupanj
+spoznaje problema zahtijevati inovativne odluke.
+
+Postoji i klasifikacija koja odluke svrstava u:
+1. programirane - odnose se na poznate probleme s unaprijed odredenim 
+nacinom rjesavanja (rutinske)
+2. neprogramirane - odnose se na nepoznate probleme, a u krajnjem slucaju
+nije ni poznat nacin njihovog rjesavanja (inovativne)
+
+
+Tradicionalni i moderni nacini upravljanja programiranim i ne programiranim odlukama
+
+![](decision-making.png)
+
+
+Hellriegel i Slocum smatraju da postoje 4 preduvjeta donošenju odluka:
+1. postojanje nesklada izmedu stanja i cilja
+2. svijest donositelja odluka o znacenju tog nesklada
+3. motiviranost donositelja odluka da djeluje na taj nesklad
+4. raspolaanje donositelja odluka adekvatnim resursim akojima bi mogao 
+djelovati na uklanjanje tog nesklada
+
+
+Uvjete u kojima treba djelovati moze karakterizirati:
+1. sigurnost - pretpostavka da se tocno mogu predvijeti rezultati svake
+od alternativa za rjesenje problema (rutinske odluke)
+2. rizik - tip odlucivanja u uvijetima gdje rezulati nisu sigurni,
+vec su poznate vjerojatnosi za razlicite rezultate (strateske odluke)
+3. nesigurnost - tip odlucivanja koji se zbiva u uvijetima nedostatka
+adekvatnih informacija
+
+
+Dva najvaznija modela donosneja odluka:
+1. klasicni model - normativni, govori kako treba donositi odluke, pomaze u racionalnosti
+2. administrativni model - ako se zaista donose odluke
+
+![](models.png)
+
+
+
+Tri karakteristicne faze u procesu donosenja odluke:
+1. generiranje alternativnih rjesenja (izrazivanje mogucnosti ostvarivanja postavljenih ciljeva)
+2. evaluiranje alternativnih rjesenja (evaluacija generiranih alternativa s aspekta doprinosa ostvarenju postavljenih ciljeva)
+3. selekcija alternativnog rjesenja (selekcija prikladne alternative)
+
+
+Tehnike generiranje alternativnih rjesenja:
+* brainstorming (generiranje sto veceg broja rjesenja)
+* morfoloska analiza (rascljanjivanje problema, generiranje parcijalnih rjesenja, analiza i izbor rjesenja)
+* sinektika (generiranje jednog rjesenja koje ukljucuje razlicite ekspertize)
+
+Evaluiranje alternativnih rjesenja
+1. alternative odredene kvantitativnim faktorima - provodi se na temelju
+mjerljivih numerickih izraza
+2. alternative odredene kvalitativnim faktorima - radi se o nemjerljivim
+atributivnim izrazima
+
+Metode evaluacije
+1. marginalna analiza - analiziraju se odnosi ukupnih, prosjecnih i 
+granicnih velicina (korisnost dobara, prihodi i troskovi poduzeca itd) kako 
+bi se doslo do optimalnog obujma prozivodnje, optimalne razine cijena, 
+optimalnih pridoda i troskova itd.
+2. cost-effectivnes analiza - unaprijedenje marginalne analize na podrucjima
+na kojima treba ocjenjivati prihvatljivost neke alternative i s aspekta 
+kvantitativnih faktora, nastoji pronaci najbolji omjer izmedu troskova i koristi. trazi optimalno rjesenje za ostvarenje postavljenog cilja
+
+Tri vrste alternativnog rjesenja prema Ackoffu
+1. zadovoljavajuce - nekvantitativne, subjektivne metode
+2. optimalno - sistematsko istrazivanje alternativnih rjesenja znanstvenim
+promatranjem i kvantitativnim mjerenjem
+3. idealno - kombinirane nekvantitativne i kvantitativne metode
+
+
+Tri najcesca oblika grupnog odlucivanja:
+1. interaktivne grupe - grupa ljudi donosi odluku (tim, odjel, odbor)
+2. nominalne grupe - clanovi grupe individualno generiraju ideje, slijedi prezentacija i nadopuna te evaluacija
+3. delfi grupe - sofisticirana tehnika za rjesavanje slozenih i nestrukturiranih problema, provodi se kroz upitnike
+
+
+Tehnike donošenja odluka sa stajališta Hellriegela i S. Locuma
+
+![](decision-teh.png)
+
+Za donosenje rutinskih odluka (poznati i dobro definirani problemi) koriste se:
+* pravila i standardne procedure
+* umjetna inteligencija
+
+Za donosenje adaptivnih odluka (umjereno neodredeni problemi i alternativna rjesenja) koriste se:
+* analiza kriticne tocke
+* matrica isplativnosti
+
+Za donosenje inovativnih odluka (neobicni i neodredeni problemi) koriste se:
+* tehnika stabla odlucivanja
+* Osborneov model kreativnosti
+
+
+Analiza točke pokrića (break even point analysis) pokazuje odnose izmedu
+obujma proizvodnje, prihoda, troskova i profita za poduzece ili
+proizvodnu liniju. Cilj je utvrditi ondose izmedu troskova i profita.
+Upotrebljava se u projiciranju profita, kontroli troskova, odredivanju 
+cijena te kao pomoc menadzmentu u odabiru alternativnih rjesenja.
+
+![](break-even-point.png)
+
+
+Matrica plaćanja/isplativosti (pay-off matrix) je tehnika odlucivanja koja 
+se primarno koristi u slucaju rizika. To je nacin prikaza poslijedica
+izbora neke alternative (odluke) ovisno o situaciji. Poslijedice odlucivanja
+se izrazavaju u ulaganjima, dobiti, troskovima i sl.
+
+
+Stablo odlučivanja je posebna tehnika donosenja odluka koja se temelji na
+odnosima izmedu strategije i stanja. Rabi se za kompleksnne probleme 
+financiranja, marketinga, izgradnje tvornice, uvodenje novih proizovda itd.
+
+![](decision-tree.png)
+
+
+Osborneov model kreativnosti oznacuje posebnu tehniku koja se rabi u procesu
+donosenja inovativnih odluka. Sastoji se od tri osnovne faze:
+1. istrazivanje problema - definiranje problema, prikupljanje podataka i provodenje analize kako bi se otkrili svi bitni aspekti problema
+2. otkrivanje ideja - prikupljanje ideja
+3. trazenje rjesenja - odabir najbolje ideje, adaptacija iste na konkretne uvijete te implementacija rjesenja
+
+![](osborne-model.png)
+
 
 
 ## Zadatak
