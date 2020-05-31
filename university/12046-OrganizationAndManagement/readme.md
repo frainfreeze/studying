@@ -1,4 +1,4 @@
-# I4
+# I4 - Odlučivanje
 
 Dva bitna aspekta u definiraju odlucivanja:
 1. **procesni aspekt** - odluivanje se definira kao proces identifikacije 
