@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang="en">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Red Rivers - electronics supplier</title>
-</head>
-
-<body>
+<t:wrapper>
     <div class="container">
         <header class="blog-header py-3">
             <div class="row flex-nowrap justify-content-between align-items-center">
@@ -21,8 +14,8 @@
                 <div class="col-4 d-flex justify-content-end align-items-center">
                     <a class="text-muted" href="#" aria-label="Search">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
-                            viewBox="0 0 24 24" focusable="false">
+                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+                             viewBox="0 0 24 24" focusable="false">
                             <title>Search</title>
                             <circle cx="10.5" cy="10.5" r="7.5" />
                             <path d="M21 21l-5.2-5.2" />
@@ -47,23 +40,23 @@
                 <div class="col-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-                            role="tab" aria-controls="v-pills-home" aria-selected="true" @click="activate(1)">Category</a>
+                           role="tab" aria-controls="v-pills-home" aria-selected="true" @click="activate(1)">Category</a>
                         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-                            role="tab" aria-controls="v-pills-profile" aria-selected="false"
-                            @click="activate(2)">Category</a>
+                           role="tab" aria-controls="v-pills-profile" aria-selected="false"
+                           @click="activate(2)">Category</a>
                         <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-                            role="tab" aria-controls="v-pills-messages" aria-selected="false"
-                            @click="activate(3)">Category</a>
+                           role="tab" aria-controls="v-pills-messages" aria-selected="false"
+                           @click="activate(3)">Category</a>
                         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-                            role="tab" aria-controls="v-pills-settings" aria-selected="false"
-                            @click="activate(4)">Category</a>
+                           role="tab" aria-controls="v-pills-settings" aria-selected="false"
+                           @click="activate(4)">Category</a>
                     </div>
                 </div>
 
                 <div class="col-9">
                     <div class="tab-content" id="v-pills-tabContent" v-for="item in info[active_el-1].list">
                         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                            aria-labelledby="v-pills-home-tab">
+                             aria-labelledby="v-pills-home-tab">
                             <div class="media">
                                 <!--<img src="..." class="mr-3" alt="...">-->
                                 <div class="media-body">
@@ -110,7 +103,7 @@
                                         <td>Cart Total</td>
                                         <td>{{Total}} Kn</td>
                                         <td><button class="button is-primary is-small modal-button"
-                                                @click="clearCart()">Clear cart</button><button
+                                                    @click="clearCart()">Clear cart</button><button
                                                 class="button is-primary is-small modal-button"
                                                 @click="isShowModal = true">Order now</button></td>
                                     </tr>
@@ -123,7 +116,7 @@
                                         <header class="modal-card-head">
                                             <p class="modal-card-title">Checkout</p>
                                             <button class="delete" aria-label="close"
-                                                v-on:click="isShowModal = false"></button>
+                                                    v-on:click="isShowModal = false"></button>
                                         </header>
                                         <section class="modal-card-body">
                                             <p>We accept: <i class="fab fa-cc-stripe"></i> <i
@@ -207,7 +200,7 @@
                     <nav class="blog-pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
                         <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1"
-                            aria-disabled="true">Newer</a>
+                           aria-disabled="true">Newer</a>
                     </nav>
 
                 </div><!-- /.blog-main -->
@@ -245,37 +238,4 @@
 
         </main><!-- /.container -->
     </div>
-    <footer class="blog-footer">
-        <p>Copyright 2020, Red Rivers
-        <p>
-            <a href="#">Back to top</a>
-        </p>
-    </footer>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- vue, axios -->
-    <script src="res/js/vue.min.js"></script>
-    <script type="text/javascript" src="res/js/axios.min.js"></script>
-
-    <!-- additional css, custom js -->
-    <link type="text/css" rel="stylesheet" href="res/css/style.css" />
-    <script src="res/js/index.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-
-    <!-- bootstrap css (js) -->
-    <link type="text/css" rel="stylesheet" href="res/css/bootstrap-custom.css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+</t:wrapper>
