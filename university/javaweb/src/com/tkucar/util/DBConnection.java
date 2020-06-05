@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    public Connection checkUser() {
+    public Connection getConn() {
 
         try {
 //            Connection con;

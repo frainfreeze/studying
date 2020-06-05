@@ -1,6 +1,8 @@
 package com.tkucar.service;
 
 import com.tkucar.util.DBConnection;
+import com.tkucar.util.DBHelper;
+import com.tkucar.util.DBLogger;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -17,11 +19,13 @@ import java.sql.SQLException;
 public class UserLogin extends HttpServlet {
     DBConnection dBConnection;
     Connection con;
+    DBLogger logger = new DBLogger();
+    DBHelper dbhelper = new DBHelper();
 
     @Override
     public void init() {
         dBConnection = new DBConnection();
-        con = dBConnection.checkUser();
+        con = dBConnection.getConn();
     }
 
     @Override
@@ -35,9 +39,11 @@ public class UserLogin extends HttpServlet {
 
         try {
             if (checkUser(con, email, pass)) {
+                logger.accessLog(dbhelper.getUserId(email), (String)request.getRemoteAddr(), "User logged in successfully");
                 RequestDispatcher rs = request.getRequestDispatcher("Welcome");
                 rs.forward(request, response);
             } else {
+                logger.accessLog("1", (String)request.getRemoteAddr(), "Failed login. Email: " + email + " Password: " + pass);
                 out.println("Username or Password incorrect");
                 RequestDispatcher rs = request.getRequestDispatcher("login.jsp");
                 rs.include(request, response);
@@ -53,6 +59,7 @@ public class UserLogin extends HttpServlet {
         ps.setString(1, email);
         ps.setString(2, pass);
         ResultSet rs = ps.executeQuery();
+        con.close();
         return rs.next();
     }
 }

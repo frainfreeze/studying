@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 public class DBLogger {
-    DBConnection dBConnection;
-    Connection con;
+    DBConnection dBConnection = new DBConnection();
+    Connection con = dBConnection.getConn();
 
     public void accessLog(String user_id, String ip, String txt) {
         try {
@@ -17,6 +17,7 @@ public class DBLogger {
             ps.setString(3, txt);
 
             int i = ps.executeUpdate();
+            con.close();
         } catch (Exception e2) {
             e2.printStackTrace();
         }

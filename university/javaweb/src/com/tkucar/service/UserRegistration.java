@@ -16,13 +16,13 @@ import java.sql.PreparedStatement;
 public class UserRegistration extends HttpServlet {
     DBConnection dBConnection;
     Connection con;
-    DBLogger logger;
-    DBHelper dbelper;
+    DBLogger logger = new DBLogger();
+    DBHelper dbhelper = new DBHelper();
 
     @Override
     public void init() {
         dBConnection = new DBConnection();
-        con = dBConnection.checkUser();
+        con = dBConnection.getConn();
     }
 
     @Override
@@ -51,8 +51,9 @@ public class UserRegistration extends HttpServlet {
             int i = ps.executeUpdate();
             if (i > 0) {
                 out.print("You are successfully registered...");
-                //logger.accessLog(dbelper.getUserId(email), (String)request.getRemoteAddr(), "User successfully registered.");
+                logger.accessLog(dbhelper.getUserId(email), (String)request.getRemoteAddr(), "User successfully registered.");
             }
+            con.close();
         } catch (Exception e2) {
             e2.printStackTrace();
         }

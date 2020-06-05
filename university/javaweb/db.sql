@@ -31,6 +31,7 @@ CREATE TABLE access_log (
   FOREIGN KEY (user_id) REFERENCES user (id)
 );
 
+insert into user (email,pwd,full_name,user_address,postcode,city,phone) values ('None','None','None','None','None','None','None');
 insert into user (email,pwd,full_name,user_address,postcode,city,phone) values ('tom@tom.com','tomtoms','','','','','');
 insert into purchase (user_id, item, purchase_type) values (1,'palacinka','pouzece');
 insert into access_log (user_id, ip, txt) values (1, '198.168.8.1', 'test log');
