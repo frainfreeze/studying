@@ -65,7 +65,7 @@
             box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
         }
 
-        @media (max-width: 767.98px) {
+        @media (max-width: 768px) {
             .sidebar {
                 top: 5rem;
             }
@@ -174,7 +174,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/orders.jsp">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/admin/orders.jsp">
                                 <span data-feather="file"></span>
                                 Orders
                             </a>

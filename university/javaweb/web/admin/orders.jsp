@@ -55,7 +55,7 @@
             box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
         }
 
-        @media (max-width: 767.98px) {
+        @media (max-width: 768px) {
             .sidebar {
                 top: 5rem;
             }
@@ -158,7 +158,7 @@
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/admin.jsp">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/admin/admin.jsp">
                                 <span data-feather="home"></span>
                                 Access log
                             </a>
@@ -196,7 +196,6 @@
                                 DBConnection dBConnection = new DBConnection();
                                 Connection con = dBConnection.getConn();
                                 Statement st = con.createStatement();
-                                String email = (String)request.getSession().getAttribute("email");
                                 PreparedStatement pstmt = con.prepareStatement(
                                         "select u.email as email, p.purchase_date as date, p.purchase_type as type, i.item as item, i.amount as amount from purchase as p " +
                                                 "    inner join item as i " +

@@ -15,7 +15,7 @@
 
 <footer class="blog-footer">
     <p>Copyright 2020, Red Rivers
-        <a class="text-muted" href="app/admin.jsp" aria-label="Search">
+        <a class="text-muted" href="${pageContext.request.contextPath}/admin/admin.jsp" aria-label="Search">
             <span class="oi oi-account-login"></span>
         </a>
     <p>
@@ -28,17 +28,17 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <!-- vue, axios -->
-<script src="res/js/vue.min.js"></script>
-<script type="text/javascript" src="res/js/axios.min.js"></script>
+<script src="${pageContext.request.contextPath}/res/js/vue.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/js/axios.min.js"></script>
 
 <!-- additional css, custom js -->
-<link type="text/css" rel="stylesheet" href="res/css/style.css"/>
-<script src="res/js/index.js"></script>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css"/>
+<script src="${pageContext.request.contextPath}/res/js/index.js"></script>
 <link type="text/css" rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
 
 <!-- bootstrap css (js) -->
-<link type="text/css" rel="stylesheet" href="res/css/bootstrap-custom.css"/>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/res/css/bootstrap-custom.css"/>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

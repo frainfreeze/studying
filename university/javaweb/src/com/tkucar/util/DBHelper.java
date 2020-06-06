@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBHelper {
-    DBConnection dBConnection = new DBConnection();
-    Connection con = dBConnection.getConn();
+    final DBConnection dBConnection = new DBConnection();
+    final Connection con = dBConnection.getConn();
 
     public String getUserId(String email) throws SQLException {
         PreparedStatement ps = con.prepareStatement

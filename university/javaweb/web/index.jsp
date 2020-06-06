@@ -1,3 +1,4 @@
+<%--suppress HtmlUnknownAttribute --%>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
@@ -6,7 +7,7 @@
         <header class="blog-header py-3">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4 pt-1">
-                    <a class="text-muted" href="/login.jsp">Login</a>
+                    <a class="text-muted" href="${pageContext.request.contextPath}/login.jsp">Login</a>
                 </div>
                 <div class="col-4 text-center">
                     <a class="blog-header-logo text-dark" href="#">Red Rivers</a>
@@ -30,16 +31,16 @@
 
                 <div class="col-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
                            role="tab" aria-controls="v-pills-home" aria-selected="true"
                            @click="activate(1)">Power</a>
-                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
                            role="tab" aria-controls="v-pills-profile" aria-selected="false"
                            @click="activate(2)">Processors & Controllers</a>
-                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
                            role="tab" aria-controls="v-pills-messages" aria-selected="false"
                            @click="activate(3)">Tools</a>
-                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
                            role="tab" aria-controls="v-pills-settings" aria-selected="false"
                            @click="activate(4)">Miscellaneous</a>
                     </div>
@@ -74,6 +75,7 @@
                 <div class="columns">
                     <div class="column"></div>
                     <div class="column is-three-fifths">
+<%--suppress HtmlUnknownTag --%>
                         <shopping-cart inline-template :items="cartItems">
                             <div>
                                 <table class="table is-hoverable">
@@ -100,7 +102,7 @@
                                             <button class="button is-primary is-small modal-button"
                                                     @click="clearCart()">Clear cart
                                             </button>
-                                            <a href="/app/checkout.jsp" class="btn btn-light btn-sm" role="button">Order
+                                            <a href="${pageContext.request.contextPath}/app/checkout.jsp" class="btn btn-light btn-sm" role="button">Order
                                                 now</a>
                                         </td>
                                     </tr>

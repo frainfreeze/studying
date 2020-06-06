@@ -4,7 +4,6 @@ import com.tkucar.util.DBConnection;
 import com.tkucar.util.DBHelper;
 import com.tkucar.util.DBLogger;
 import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -17,8 +16,8 @@ import java.sql.PreparedStatement;
 public class UserRegistration extends HttpServlet {
     DBConnection dBConnection;
     Connection con;
-    DBLogger logger = new DBLogger();
-    DBHelper dbhelper = new DBHelper();
+    final DBLogger logger = new DBLogger();
+    final DBHelper dbhelper = new DBHelper();
 
     @Override
     public void init() {
@@ -28,7 +27,7 @@ public class UserRegistration extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws IOException {
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
@@ -55,7 +54,7 @@ public class UserRegistration extends HttpServlet {
                 request.getSession().setAttribute("loggedInUser", email);
                 RequestDispatcher rs = request.getRequestDispatcher("user.jsp");
                 rs.forward(request, response);
-                logger.accessLog(dbhelper.getUserId(email), (String)request.getRemoteAddr(), "User successfully registered.");
+                logger.accessLog(dbhelper.getUserId(email), request.getRemoteAddr(), "User successfully registered.");
             }
             con.close();
         } catch (Exception e2) {

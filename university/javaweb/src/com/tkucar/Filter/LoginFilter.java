@@ -1,9 +1,7 @@
 package com.tkucar.Filter;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
-import com.tkucar.util.DBHelper;
 import com.tkucar.util.DBLogger;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
@@ -18,11 +16,10 @@ import jakarta.servlet.http.HttpSession;
 
 @WebFilter("/app/*")
 public class LoginFilter implements Filter {
-    DBLogger logger = new DBLogger();
-    DBHelper dbhelper = new DBHelper();
+    final DBLogger logger = new DBLogger();
 
     @Override
-    public void init(FilterConfig config) throws ServletException {
+    public void init(FilterConfig config) {
         // If you have any <init-param> in web.xml, then you could get them
         // here by config.getInitParameter("name") and assign it as field.
     }
@@ -34,7 +31,7 @@ public class LoginFilter implements Filter {
         HttpSession session = request.getSession(false);
 
         if (session == null || session.getAttribute("email") == null) {
-            logger.accessLog("1", (String)request.getRemoteAddr(), "No logged-in user found, redirecting to login page.");
+            logger.accessLog("1", request.getRemoteAddr(), "No logged-in user found, redirecting to login page.");
             response.sendRedirect(request.getContextPath() + "/login.jsp"); // No logged-in user found, so redirect to login page.
         } else {
             chain.doFilter(req, res); // Logged-in user found, so just continue request.

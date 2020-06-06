@@ -53,7 +53,6 @@ select u.email, p.purchase_date, p.purchase_type, i.item, i.amount from purchase
         on i.purchase_id = p.id
     inner join user as u
         on p.user_id = u.id;
-    where u.email = "tom@tom.com";
 
 .print \nAll orders for user tom@tom.com:
 select u.email, p.purchase_date, p.purchase_type, sum(i.total) from purchase as p 

@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-    String url = "jdbc:sqlite:/home/frain/git/studying/university/javaweb/redrivers.db";
+    final String url = "jdbc:sqlite:/home/frain/git/studying/university/javaweb/redrivers.db";
 
     public Connection getConn() {
 
@@ -17,7 +17,7 @@ public class DBConnection {
 //            //creating connection with the database
 //            con=DriverManager.getConnection
 //                    ("jdbc:mysql://localhost:3306/user","root","");
-            Connection conn = null;
+            Connection conn;
             Class.forName("org.sqlite.JDBC");
             // create a connection to the database
             conn = DriverManager.getConnection(url);
