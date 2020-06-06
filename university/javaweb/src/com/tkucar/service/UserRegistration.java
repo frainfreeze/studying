@@ -3,6 +3,7 @@ package com.tkucar.service;
 import com.tkucar.util.DBConnection;
 import com.tkucar.util.DBHelper;
 import com.tkucar.util.DBLogger;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -51,6 +52,9 @@ public class UserRegistration extends HttpServlet {
             int i = ps.executeUpdate();
             if (i > 0) {
                 out.print("You are successfully registered...");
+                request.getSession().setAttribute("loggedInUser", email);
+                RequestDispatcher rs = request.getRequestDispatcher("user.jsp");
+                rs.forward(request, response);
                 logger.accessLog(dbhelper.getUserId(email), (String)request.getRemoteAddr(), "User successfully registered.");
             }
             con.close();

@@ -8,6 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -36,11 +37,18 @@ public class UserLogin extends HttpServlet {
 
         String email = request.getParameter("email");
         String pass = request.getParameter("password");
+        HttpSession session = request.getSession(true);
 
         try {
             if (checkUser(con, email, pass)) {
                 logger.accessLog(dbhelper.getUserId(email), (String)request.getRemoteAddr(), "User logged in successfully");
-                RequestDispatcher rs = request.getRequestDispatcher("Welcome");
+                if (email == "tom@tom.com") {
+                    session.setAttribute("admin", email);
+                    System.out.println("Admin here!");
+                }
+                System.out.println(email);
+                session.setAttribute("email", email);
+                RequestDispatcher rs = request.getRequestDispatcher("user.jsp");
                 rs.forward(request, response);
             } else {
                 logger.accessLog("1", (String)request.getRemoteAddr(), "Failed login. Email: " + email + " Password: " + pass);
@@ -59,7 +67,7 @@ public class UserLogin extends HttpServlet {
         ps.setString(1, email);
         ps.setString(2, pass);
         ResultSet rs = ps.executeQuery();
-        con.close();
-        return rs.next();
+        Boolean nxt = rs.next();
+        return nxt;
     }
 }

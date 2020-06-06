@@ -12,15 +12,6 @@
                     <a class="blog-header-logo text-dark" href="#">Red Rivers</a>
                 </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
-                    <a class="text-muted" href="#" aria-label="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
-                             viewBox="0 0 24 24" focusable="false">
-                            <title>Search</title>
-                            <circle cx="10.5" cy="10.5" r="7.5" />
-                            <path d="M21 21l-5.2-5.2" />
-                        </svg>
-                    </a>
                     <a class="btn btn-sm btn-outline-secondary" href="register.jsp">Sign up</a>
                 </div>
             </div>
@@ -40,23 +31,24 @@
                 <div class="col-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-                           role="tab" aria-controls="v-pills-home" aria-selected="true" @click="activate(1)">Category</a>
+                            role="tab" aria-controls="v-pills-home" aria-selected="true"
+                            @click="activate(1)">Category</a>
                         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-                           role="tab" aria-controls="v-pills-profile" aria-selected="false"
-                           @click="activate(2)">Category</a>
+                            role="tab" aria-controls="v-pills-profile" aria-selected="false"
+                            @click="activate(2)">Category</a>
                         <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-                           role="tab" aria-controls="v-pills-messages" aria-selected="false"
-                           @click="activate(3)">Category</a>
+                            role="tab" aria-controls="v-pills-messages" aria-selected="false"
+                            @click="activate(3)">Category</a>
                         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-                           role="tab" aria-controls="v-pills-settings" aria-selected="false"
-                           @click="activate(4)">Category</a>
+                            role="tab" aria-controls="v-pills-settings" aria-selected="false"
+                            @click="activate(4)">Category</a>
                     </div>
                 </div>
 
                 <div class="col-9">
                     <div class="tab-content" id="v-pills-tabContent" v-for="item in info[active_el-1].list">
                         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                             aria-labelledby="v-pills-home-tab">
+                            aria-labelledby="v-pills-home-tab">
                             <div class="media">
                                 <!--<img src="..." class="mr-3" alt="...">-->
                                 <div class="media-body">
@@ -64,10 +56,12 @@
                                     Opis: {{ item.Opis }}, Cijena: {{ item.Cijena }} Kn
                                     <div class="form-group row">
                                         <div class="col-10">
-                                            <input v-model="item.qty" class="form-control" type="number" min="1" placeholder="Qty">
+                                            <input v-model="item.qty" class="form-control" type="number" min="1"
+                                                placeholder="Qty">
                                         </div>
                                     </div>
-                                    <a type="button" class="btn btn-light btn-sm" @click="addToCart(item)" id="addToCart">Add to cart</a>
+                                    <a type="button" class="btn btn-light btn-sm" @click="addToCart(item)"
+                                        id="addToCart">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +97,7 @@
                                         <td>Cart Total</td>
                                         <td>{{Total}} Kn</td>
                                         <td><button class="button is-primary is-small modal-button"
-                                                    @click="clearCart()">Clear cart</button><button
+                                                @click="clearCart()">Clear cart</button><button
                                                 class="button is-primary is-small modal-button"
                                                 @click="isShowModal = true">Order now</button></td>
                                     </tr>
@@ -116,7 +110,7 @@
                                         <header class="modal-card-head">
                                             <p class="modal-card-title">Checkout</p>
                                             <button class="delete" aria-label="close"
-                                                    v-on:click="isShowModal = false"></button>
+                                                v-on:click="isShowModal = false"></button>
                                         </header>
                                         <section class="modal-card-body">
                                             <p>We accept: <i class="fab fa-cc-stripe"></i> <i
@@ -200,7 +194,7 @@
                     <nav class="blog-pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
                         <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1"
-                           aria-disabled="true">Newer</a>
+                            aria-disabled="true">Newer</a>
                     </nav>
 
                 </div><!-- /.blog-main -->

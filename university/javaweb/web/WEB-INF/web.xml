@@ -12,10 +12,6 @@
         <servlet-name>UserLogin</servlet-name>
         <servlet-class>com.tkucar.service.UserLogin</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>Welcome</servlet-name>
-        <servlet-class>com.tkucar.service.Welcome</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>UserRegistration</servlet-name>
         <url-pattern>/UserRegistration</url-pattern>
@@ -24,13 +20,4 @@
         <servlet-name>UserLogin</servlet-name>
         <url-pattern>/UserLogin</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Welcome</servlet-name>
-        <url-pattern>/Welcome</url-pattern>
-    </servlet-mapping>
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
 </web-app>
