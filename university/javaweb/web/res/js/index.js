@@ -11,7 +11,7 @@ Vue.component('shopping-cart', {
         Total: function () {
             var total = 0;
             this.items.forEach(item => {
-                total += (item.Cijena * item.qty);
+                total += (item.Price * item.qty);
             });
             return total;
         }
@@ -52,7 +52,7 @@ new Vue({
             // Check if the item was already added to cart
             // If so them add it to the qty field
             this.cartItems.forEach(item => {
-                if (item.JeloId === itemToAdd.JeloId) {
+                if (item.ItemId === itemToAdd.ItemId) {
                     found = true;
                     item.qty += parseInt(itemToAdd.qty);
                 }

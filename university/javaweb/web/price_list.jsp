@@ -2,174 +2,92 @@
 
 [{
     "Id": 1,
-    "Naziv": "PREPORUKA ŠEFA KUHINJE",
     "list": [{
-        "JeloId": 3,
-        "Naziv": "Patka szechuan",
-        "Opis": "hrskava patka, povrće, ljuto",
-        "Cijena": 56,
+        "ItemId": 1,
+        "Item": "Benchtop Power supply E36232A/900/PLG",
+        "Desc": "Benchtop Power Supplies DC Pwr Sply 60V 10A UK and EU Pwr Cord",
+        "Price": 1400,
         "qty": 1
     }, {
-        "JeloId": 10,
-        "Naziv": "Junetina i brokula",
-        "Opis": "Junetina, brokula, mrkva, luk, ljuto",
-        "Cijena": 47,
+        "ItemId": 2,
+        "Item": "AC/DC Power Module TPS4000-24",
+        "Desc": "AC/DC Power Modules 350-528VACin 3 phase 24Vout 170A 4080W",
+        "Price": 1800,
         "qty": 1
-    }, {
-        "JeloId": 11,
-        "Naziv": "Piletina s indijskim oraščićima",
-        "Opis": "Piletina, crvena paprika, luk, ljuto",
-        "Cijena": 44,
+    },{
+        "ItemId": 3,
+        "Item": "Linear Voltage Regulator UMW78L05",
+        "Desc": "UMW(Youtai Semiconductor Co., Ltd.) Fixed 30V 5V 100mA SOT-89 Linear Voltage Regulators RoHS",
+        "Price": 1,
         "qty": 1
-    }, {
-        "JeloId": 12,
-        "Naziv": "Piletina s curry-em",
-        "Opis": "Piletina, luk, curry, blago",
-        "Cijena": 42,
-        "qty": 1
-    }, {
-        "JeloId": 13,
-        "Naziv": "Patka u slatko kiselom umaku",
-        "Opis": "Patka, paprika, riža, luk, ljuto",
-        "Cijena": 51,
-        "qty": 1
-    }, {
-        "JeloId": 14,
-        "Naziv": "Patka szechuan",
-        "Opis": "hrskava patka, povrće, ljuto",
-        "Cijena": 56,
-        "qty": 1
-    }, {
-        "JeloId": 15,
-        "Naziv": "Patka Yaoux",
-        "Opis": "Hrskava patka, umak od češnjaka",
-        "Cijena": 51,
+    },{
+        "ItemId": 4,
+        "Item": "Battery pack LR6XWA/BF2 ",
+        "Desc": "AA 3V Alkaline Manganese Dioxide Battery Pack",
+        "Price": 2,
         "qty": 1
     }]
 }, {
     "Id": 2,
-    "Naziv": "TOPLA PREDJELA",
     "list": [{
-        "JeloId": 4,
-        "Naziv": "Proljetna rolada s mesom",
-        "Opis": "mljevena junetina, povrće",
-        "Cijena": 14,
+        "ItemId": 5,
+        "Item": "ATMEGA8-16PU",
+        "Desc": "ATMEL microchip, SOP-14_150mil, 20MHz",
+        "Price": 2,
         "qty": 1
     }, {
-        "JeloId": 16,
-        "Naziv": "Proljetna rolada s povrćem (2 kom)",
-        "Opis": "Prilog",
-        "Cijena": 13,
+        "ItemId": 6,
+        "Item": "ATTINY44A-SSUR",
+        "Desc": "ATMEL microchip, DIP-32, 20MHz",
+        "Price": 13,
         "qty": 1
     }, {
-        "JeloId": 17,
-        "Naziv": "Proljetna rolada s mesom (2 kom)",
-        "Opis": "Mljevena junetina, povrće",
-        "Cijena": 14,
+        "ItemId": 7,
+        "Item": "ATXMEGA128A3U-AU",
+        "Desc": "Microchip tech 10Mhz",
+        "Price": 2,
         "qty": 1
     }, {
-        "JeloId": 18,
-        "Naziv": "Čips od jastoga",
-        "Opis": "Čips, slatko kiseli umak",
-        "Cijena": 16,
+        "ItemId": 8,
+        "Item": "SC93F5003X20U",
+        "Desc": "SOC(Shenzhen SinOne Microelectronics) sop-8, 32bit, 24MHz",
+        "Price": 1,
         "qty": 1
     }]
 }, {
     "Id": 3,
-    "Naziv": "KINESKE JUHE",
     "list": [{
-        "JeloId": 19,
-        "Naziv": "Kineska kiselo ljuta juha",
-        "Opis": "Ljuto",
-        "Cijena": 15,
+        "ItemId": 9,
+        "Item": "Soldering station DeWall",
+        "Desc": "200 W with basic accessories",
+        "Price": 150,
         "qty": 1
     }, {
-        "JeloId": 20,
-        "Naziv": "Kineska juha od bambusa i gljiva",
-        "Opis": "Blago",
-        "Cijena": 17,
+        "ItemId": 10,
+        "Item": "Tool set",
+        "Desc": "20 component electronics tool set",
+        "Price": 200,
         "qty": 1
     }]
 }, {
     "Id": 4,
-    "Naziv": "JELA SA REZANCIMA",
     "list": [{
-        "JeloId": 21,
-        "Naziv": "Rezanci s povrćem",
-        "Opis": "Povrće, jaja",
-        "Cijena": 34,
+        "ItemId": 11,
+        "Item": "Wire",
+        "Desc": "0.5mm, 10 meters",
+        "Price": 5,
         "qty": 1
     }, {
-        "JeloId": 22,
-        "Naziv": "Rezanci s piletinom i povrćem",
-        "Opis": "Piletina, povrće",
-        "Cijena": 35,
+        "ItemId": 12,
+        "Item": "U connector",
+        "Desc": "1000 pcs, up to 240V, 12A",
+        "Price": 35,
         "qty": 1
     }, {
-        "JeloId": 23,
-        "Naziv": "Rezanci 3 vrste mesa i povrćem",
-        "Opis": "piletina, svinjetina, junetina, povrće",
-        "Cijena": 38,
-        "qty": 1
-    }, {
-        "JeloId": 24,
-        "Naziv": "Rezanci Szechuan",
-        "Opis": "piletina, povrće, ljuto",
-        "Cijena": 46,
-        "qty": 1
-    }, {
-        "JeloId": 25,
-        "Naziv": "Rezanci Gonbao",
-        "Opis": "piletina, povrće, kikiriki, ljuto",
-        "Cijena": 47,
-        "qty": 1
-    }, {
-        "JeloId": 26,
-        "Naziv": "Rezanci piletina, bambus i gljive",
-        "Opis": "piletina, bambus,kineske shitake gljive",
-        "Cijena": 50,
-        "qty": 1
-    }, {
-        "JeloId": 27,
-        "Naziv": "Rezanci 8 blaga",
-        "Opis": "piletina, svinjetina, junetina, kozice, povrće, ljuto",
-        "Cijena": 51,
-        "qty": 1
-    }, {
-        "JeloId": 28,
-        "Naziv": "Rezanci mongolsko meso",
-        "Opis": "junetina, poriluk, đumbir",
-        "Cijena": 52,
-        "qty": 1
-    }, {
-        "JeloId": 29,
-        "Naziv": "Rezanci s piletinom u slatko kiselom umaku",
-        "Opis": "piletina u kineskom tijestu, prelivena s kiselim umakom",
-        "Cijena": 46,
-        "qty": 1
-    }, {
-        "JeloId": 48,
-        "Naziv": "Rezanci s patkom Yaoux",
-        "Opis": "hrskava patka, umak od češnjaka",
-        "Cijena": 56,
-        "qty": 1
-    }, {
-        "JeloId": 49,
-        "Naziv": "Rezanci lignje Yaoux (pržene)",
-        "Opis": "pržene lignje, umak od češnjaka",
-        "Cijena": 46,
-        "qty": 1
-    }, {
-        "JeloId": 50,
-        "Naziv": "Rezanci s patkom u slatko kiselom umaku",
-        "Opis": "Blago",
-        "Cijena": 56,
-        "qty": 1
-    }, {
-        "JeloId": 51,
-        "Naziv": "Rezanci s piletinom i indijskim orašćićima",
-        "Opis": "Velika porcija",
-        "Cijena": 49,
+        "ItemId": 13,
+        "Item": "Resistor pack",
+        "Desc": "20 types, 2000 pcs",
+        "Price": 100,
         "qty": 1
     }]
 }]
