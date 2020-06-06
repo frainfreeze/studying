@@ -1,3 +1,10 @@
+<%
+    if(session.getAttribute("admin")==null || session.getAttribute("admin").equals(false))
+    {
+        response.sendRedirect("index.jsp");
+    }
+%>
+
 <!DOCTYPE html>
 <html>
 
@@ -167,7 +174,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/app/orders.jsp">
+                            <a class="nav-link" href="/admin/orders.jsp">
                                 <span data-feather="file"></span>
                                 Orders
                             </a>

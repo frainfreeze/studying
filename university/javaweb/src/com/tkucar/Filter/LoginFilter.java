@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebFilter("/user.jsp")
+@WebFilter("/app/*")
 public class LoginFilter implements Filter {
     DBLogger logger = new DBLogger();
     DBHelper dbhelper = new DBHelper();

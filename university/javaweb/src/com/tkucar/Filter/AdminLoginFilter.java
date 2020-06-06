@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebFilter("/app/*")
+@WebFilter("/admin/*")
 public class AdminLoginFilter implements Filter {
     DBLogger logger = new DBLogger();
     DBHelper dbhelper = new DBHelper();

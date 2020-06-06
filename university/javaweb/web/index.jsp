@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:wrapper>
@@ -31,37 +31,37 @@
                 <div class="col-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-                            role="tab" aria-controls="v-pills-home" aria-selected="true"
-                            @click="activate(1)">Category</a>
+                           role="tab" aria-controls="v-pills-home" aria-selected="true"
+                           @click="activate(1)">Power</a>
                         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-                            role="tab" aria-controls="v-pills-profile" aria-selected="false"
-                            @click="activate(2)">Category</a>
+                           role="tab" aria-controls="v-pills-profile" aria-selected="false"
+                           @click="activate(2)">Processors & Controllers</a>
                         <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-                            role="tab" aria-controls="v-pills-messages" aria-selected="false"
-                            @click="activate(3)">Category</a>
+                           role="tab" aria-controls="v-pills-messages" aria-selected="false"
+                           @click="activate(3)">Tools</a>
                         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-                            role="tab" aria-controls="v-pills-settings" aria-selected="false"
-                            @click="activate(4)">Category</a>
+                           role="tab" aria-controls="v-pills-settings" aria-selected="false"
+                           @click="activate(4)">Miscellaneous</a>
                     </div>
                 </div>
 
                 <div class="col-9">
                     <div class="tab-content" id="v-pills-tabContent" v-for="item in info[active_el-1].list">
                         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                            aria-labelledby="v-pills-home-tab">
+                             aria-labelledby="v-pills-home-tab">
                             <div class="media">
                                 <!--<img src="..." class="mr-3" alt="...">-->
                                 <div class="media-body">
-                                    <h5 class="mt-0">{{ item.Naziv }}</h5>
-                                    Opis: {{ item.Opis }}, Cijena: {{ item.Cijena }} Kn
+                                    <h5 class="mt-0">{{ item.Item }}</h5>
+                                    <p>Description: {{ item.Desc }}, Price: {{ item.Price }} Eur</p>
                                     <div class="form-group row">
                                         <div class="col-10">
                                             <input v-model="item.qty" class="form-control" type="number" min="1"
-                                                placeholder="Qty">
+                                                   placeholder="Qty">
                                         </div>
                                     </div>
                                     <a type="button" class="btn btn-light btn-sm" @click="addToCart(item)"
-                                        id="addToCart">Add to cart</a>
+                                       id="addToCart">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -78,12 +78,12 @@
                             <div>
                                 <table class="table is-hoverable">
                                     <tr v-for="(item, ix) in items">
-                                        <td>{{item.Naziv}}</td>
+                                        <td>{{item.Item}}</td>
                                         <td style="width:120px">QTY:
                                             <input v-model="item.qty" class="form-control input-qty" type="number">
                                         </td>
                                         <td data-tooltip="order note">Note.</td>
-                                        <td class="text-right">{{item.Cijena }} Kn</td>
+                                        <td class="text-right">{{item.Price }} Eur</td>
                                         <td>
                                             <button class="oi oi-trash" @click="removeItem(ix)"></button>
                                         </td>
@@ -96,35 +96,15 @@
                                         <td></td>
                                         <td>Cart Total</td>
                                         <td>{{Total}} Kn</td>
-                                        <td><button class="button is-primary is-small modal-button"
-                                                @click="clearCart()">Clear cart</button><button
-                                                class="button is-primary is-small modal-button"
-                                                @click="isShowModal = true">Order now</button></td>
+                                        <td>
+                                            <button class="button is-primary is-small modal-button"
+                                                    @click="clearCart()">Clear cart
+                                            </button>
+                                            <a href="/app/checkout.jsp" class="btn btn-light btn-sm" role="button">Order
+                                                now</a>
+                                        </td>
                                     </tr>
                                 </table>
-
-                                <!-- modal -->
-                                <div class="modal" v-bind:class="{ 'is-active': isShowModal }">
-                                    <div class="modal-background" v-on:click="isShowModal = false"></div>
-                                    <div class="modal-card">
-                                        <header class="modal-card-head">
-                                            <p class="modal-card-title">Checkout</p>
-                                            <button class="delete" aria-label="close"
-                                                v-on:click="isShowModal = false"></button>
-                                        </header>
-                                        <section class="modal-card-body">
-                                            <p>We accept: <i class="fab fa-cc-stripe"></i> <i
-                                                    class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>
-                                                <i class='fab fa-cc-amex'></i> <i class='fab fa-cc-discover'></i></p>
-                                            <h3>Total: {{Total}} Kn</h3>
-                                            <p> --payment processor-- </p>
-                                        </section>
-                                        <footer class="modal-card-foot">
-                                            <button class="button" v-on:click="isShowModal = false">Cancel</button>
-                                            <button class="button" title="Disabled button" disabled>Buy</button>
-                                        </footer>
-                                    </div>
-                                </div>
                             </div>
                         </shopping-cart>
                     </div>
@@ -133,10 +113,6 @@
             </div>
 
             <br><br>
-
-
-
-
 
 
             <!-- newsletter -->
@@ -194,7 +170,7 @@
                     <nav class="blog-pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
                         <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1"
-                            aria-disabled="true">Newer</a>
+                           aria-disabled="true">Newer</a>
                     </nav>
 
                 </div><!-- /.blog-main -->

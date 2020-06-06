@@ -4,10 +4,7 @@
 <head>
     <title>Admin dashboard</title>
     <%@page import="com.tkucar.util.DBConnection" %>
-    <%@ page import="java.sql.Connection" %>
-    <%@ page import="java.sql.ResultSet" %>
-    <%@ page import="java.sql.SQLException" %>
-    <%@ page import="java.sql.Statement" %>
+    <%@ page import="java.sql.*" %>
     <script type="text/javascript" charset="utf8"
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -161,7 +158,7 @@
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="/app/admin.jsp">
+                            <a class="nav-link" href="/admin/admin.jsp">
                                 <span data-feather="home"></span>
                                 Access log
                             </a>
@@ -185,43 +182,51 @@
                 <div class="table-responsive">
                     <table id="table_id" class="display table table-striped table-sm">
                         <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>User email</th>
-                                <th>Datetime</th>
-                                <th>IP</th>
-                                <th>Log</th>
-                            </tr>
+                        <tr>
+                            <th>User email</th>
+                            <th>Datetime</th>
+                            <th>Type of purchase</th>
+                            <th>Item</th>
+                            <th>Amount</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            <%
-                        try {
-                            DBConnection dBConnection = new DBConnection();
-                            Connection con = dBConnection.getConn();
-                            Statement st = con.createStatement();
-                            ResultSet rs = st.executeQuery("select a.id as id, u.email as email, a.created as cr, a.ip as ip, a.txt as txt from access_log as a inner join user as u on a.user_id = u.id");
-                            while (rs.next()) {
-                    %>
-                            <tr>
-                                <td><%=rs.getString("id") %>
-                                </td>
-                                <td><%=rs.getString("email") %>
-                                </td>
-                                <td><%=rs.getString("cr") %>
-                                </td>
-                                <td><%=rs.getString("ip") %>
-                                </td>
-                                <td><%=rs.getString("txt") %>
-                                </td>
-                            </tr>
-                            <%
+                        <%
+                            try {
+                                DBConnection dBConnection = new DBConnection();
+                                Connection con = dBConnection.getConn();
+                                Statement st = con.createStatement();
+                                String email = (String)request.getSession().getAttribute("email");
+                                PreparedStatement pstmt = con.prepareStatement(
+                                        "select u.email as email, p.purchase_date as date, p.purchase_type as type, i.item as item, i.amount as amount from purchase as p " +
+                                                "    inner join item as i " +
+                                                "        on i.purchase_id = p.id" +
+                                                "    inner join user as u" +
+                                                "        on p.user_id = u.id"
+                                );
+                                ResultSet rs = pstmt.executeQuery();
+                                while (rs.next()) {
+                        %>
+                        <tr>
+                            <td><%=rs.getString("email") %>
+                            </td>
+                            <td><%=rs.getString("date") %>
+                            </td>
+                            <td><%=rs.getString("type") %>
+                            </td>
+                            <td><%=rs.getString("item") %>
+                            </td>
+                            <td><%=rs.getString("amount") %>
+                            </td>
+                        </tr>
+                        <%
+                                }
+                                st.close();
+                                con.close();
+                            } catch (SQLException throwables) {
+                                throwables.printStackTrace();
                             }
-                            st.close();
-                            con.close();
-                        } catch (SQLException throwables) {
-                            throwables.printStackTrace();
-                        }
-                    %>
+                        %>
                         </tbody>
                     </table>
                 </div>

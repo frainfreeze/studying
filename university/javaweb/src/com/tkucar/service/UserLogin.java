@@ -24,12 +24,6 @@ public class UserLogin extends HttpServlet {
     DBHelper dbhelper = new DBHelper();
 
     @Override
-    public void init() {
-        dBConnection = new DBConnection();
-        con = dBConnection.getConn();
-    }
-
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -40,15 +34,21 @@ public class UserLogin extends HttpServlet {
         HttpSession session = request.getSession(true);
 
         try {
+            dBConnection = new DBConnection();
+            con = dBConnection.getConn();
+
             if (checkUser(con, email, pass)) {
                 logger.accessLog(dbhelper.getUserId(email), (String)request.getRemoteAddr(), "User logged in successfully");
                 if (email == "tom@tom.com") {
-                    session.setAttribute("admin", email);
+                    session.setAttribute("admin", true);
                     System.out.println("Admin here!");
                 }
                 System.out.println(email);
                 session.setAttribute("email", email);
-                RequestDispatcher rs = request.getRequestDispatcher("user.jsp");
+                session.setAttribute("authenticated", true);
+                session.setAttribute("admin", true);
+
+                RequestDispatcher rs = request.getRequestDispatcher("/app/user.jsp");
                 rs.forward(request, response);
             } else {
                 logger.accessLog("1", (String)request.getRemoteAddr(), "Failed login. Email: " + email + " Password: " + pass);

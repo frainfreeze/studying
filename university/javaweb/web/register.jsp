@@ -1,5 +1,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%
+    if(session.getAttribute("authenticated")!=null && session.getAttribute("authenticated").equals(true))
+    {
+        response.sendRedirect("index.jsp");
+    }
+%>
 
 <t:wrapper>
     <form class="form-signin" action="UserRegistration" method="post">

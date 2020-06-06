@@ -17,7 +17,6 @@ public class DBLogger {
             ps.setString(3, txt);
 
             int i = ps.executeUpdate();
-            con.close();
         } catch (Exception e2) {
             e2.printStackTrace();
         }
