@@ -29,7 +29,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 
         <div style="text-align: center">
-            <a href="register.jsp">Registered? Login Now</a>
+            <a href="${pageContext.request.contextPath}/login.jsp">Registered? Login Now</a>
         </div>
         <style>
             .form-signin {

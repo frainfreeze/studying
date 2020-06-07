@@ -31,7 +31,7 @@
     </form>
 
     <div style="text-align: center">
-        <a href="login.jsp">No account? Sign up Now</a>
+        <a href="${pageContext.request.contextPath}/register.jsp">No account? Sign up Now</a>
     </div>
     <style>
         .form-signin {

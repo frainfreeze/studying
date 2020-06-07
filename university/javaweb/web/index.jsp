@@ -13,7 +13,7 @@
                     <a class="blog-header-logo text-dark" href="#">Red Rivers</a>
                 </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
-                    <a class="btn btn-sm btn-outline-secondary" href="register.jsp">Sign up</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="${pageContext.request.contextPath}/register.jsp">Sign up</a>
                 </div>
             </div>
         </header>
