@@ -39,7 +39,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://localhost:8080/price_list.jsp')
+            .get('price_list.jsp')
             .then(response => (this.info = response.data));
     },
     methods: {

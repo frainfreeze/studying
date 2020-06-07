@@ -28,8 +28,8 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <!-- vue, axios -->
-<script src="${pageContext.request.contextPath}/res/js/vue.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/res/js/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.2"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 
 <!-- additional css, custom js -->
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css"/>
