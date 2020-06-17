@@ -24,6 +24,9 @@ public class UserLogin extends HttpServlet {
     final DBLogger logger = new DBLogger();
     final DBHelper dbhelper = new DBHelper();
 
+    public UserLogin() throws SQLException {
+    }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -47,11 +50,20 @@ public class UserLogin extends HttpServlet {
                 System.out.println(email);
                 session.setAttribute("email", email);
                 session.setAttribute("authenticated", true);
-                session.setAttribute("admin", true);
 
-                RequestDispatcher rs = request.getRequestDispatcher("/app/user.jsp");
+                logger.accessLog(dbhelper.getUserId(email), request.getRemoteAddr(), "User successfully logged in. Email: " + email);
+
+                RequestDispatcher rs = null;
+                String comeback = request.getParameter("comeback");
+                System.out.println(comeback);
+                if( comeback == null ) {
+                    rs = request.getRequestDispatcher("index.jsp");
+                } else {
+                    rs = request.getRequestDispatcher("/app/checkout.jsp");
+                }
                 rs.forward(request, response);
-            } else {
+
+        } else {
                 logger.accessLog("1", request.getRemoteAddr(), "Failed login. Email: " + email + " Password: " + pass);
                 out.println("Username or Password incorrect");
                 RequestDispatcher rs = request.getRequestDispatcher("login.jsp");
@@ -64,7 +76,7 @@ public class UserLogin extends HttpServlet {
 
     public boolean checkUser(Connection con, String email, String pass) throws SQLException {
         PreparedStatement ps = con.prepareStatement
-                ("select * from user where email=? and pwd=?");
+                ("select * from usr where email=? and pwd=?");
         ps.setString(1, email);
         ps.setString(2, pass);
         ResultSet rs = ps.executeQuery();

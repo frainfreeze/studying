@@ -1,19 +1,19 @@
-<%--suppress HtmlUnknownAttribute --%>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
-
+<%--suppress HtmlUnknownAttribute --%>
 <t:wrapper>
     <div class="container">
         <header class="blog-header py-3">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4 pt-1">
-                    <a class="text-muted" href="${pageContext.request.contextPath}/login.jsp">Login</a>
+                    <a class="text-muted" href="${pageContext.request.contextPath}/app/user.jsp">User page</a>
                 </div>
                 <div class="col-4 text-center">
                     <a class="blog-header-logo text-dark" href="#">Red Rivers</a>
                 </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
-                    <a class="btn btn-sm btn-outline-secondary" href="${pageContext.request.contextPath}/register.jsp">Sign up</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="${pageContext.request.contextPath}/register.jsp">Sign
+                        up</a>
                 </div>
             </div>
         </header>
@@ -75,7 +75,7 @@
                 <div class="columns">
                     <div class="column"></div>
                     <div class="column is-three-fifths">
-<%--suppress HtmlUnknownTag --%>
+                            <%--suppress HtmlUnknownTag --%>
                         <shopping-cart inline-template :items="cartItems">
                             <div>
                                 <table class="table is-hoverable">
@@ -102,8 +102,14 @@
                                             <button class="button is-primary is-small modal-button"
                                                     @click="clearCart()">Clear cart
                                             </button>
-                                            <a href="${pageContext.request.contextPath}/app/checkout.jsp" class="btn btn-light btn-sm" role="button">Order
+
+<%--                                            <% if (session.getAttribute("authenticated") == null) { %>--%>
+                                            <a href="${pageContext.request.contextPath}/app/checkout.jsp?comeback=app/checkout.jsp"
+                                               class="btn btn-light btn-sm" role="button">Order
                                                 now</a>
+<%--                                            <% } else {%>--%>
+<%--                                            <p> other content </p>--%>
+<%--                                            <% } %>--%>
                                         </td>
                                     </tr>
                                 </table>

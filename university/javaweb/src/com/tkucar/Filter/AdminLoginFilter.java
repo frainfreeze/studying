@@ -8,10 +8,14 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebFilter("/admin/*")
 public class AdminLoginFilter implements Filter {
     final DBLogger logger = new DBLogger();
+
+    public AdminLoginFilter() throws SQLException {
+    }
 
     @Override
     public void init(FilterConfig config) {
@@ -25,7 +29,7 @@ public class AdminLoginFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) res;
         HttpSession session = request.getSession(false);
 
-        if (session == null || session.getAttribute("admin") == null) {
+        if (session == null && session.getAttribute("admin") == null) {
             logger.accessLog("1", request.getRemoteAddr(), "No logged-in user found, redirecting to login page.");
             response.sendRedirect(request.getContextPath() + "/login.jsp"); // No logged-in user found, so redirect to login page.
         } else {

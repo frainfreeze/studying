@@ -38,15 +38,21 @@ new Vue({
         }
     },
     mounted() {
-        axios
-            .get('price_list.jsp')
-            .then(response => (this.info = response.data));
+        axios.get('price_list.jsp').then(response => (this.info = response.data));
+        console.log('start');
+        var retrievedObject = localStorage.getItem('cart');
+        if (JSON.parse(retrievedObject) != null)
+            this.cartItems = JSON.parse(retrievedObject);
     },
     methods: {
-        activate:function(el){
+        activate: function (el) {
             this.active_el = el;
         },
         addToCart(itemToAdd) {
+            var retrievedObject = localStorage.getItem('cart');
+            if (JSON.parse(retrievedObject) != null)
+                this.cartItems = JSON.parse(retrievedObject);
+
             var found = false;
 
             // Check if the item was already added to cart
@@ -63,9 +69,12 @@ new Vue({
             }
 
             itemToAdd.qty = 1;
+            localStorage.clear();
+            localStorage.setItem('cart', JSON.stringify(this.cartItems));
         },
         clearCart() {
             this.cartItems = [];
+            localStorage.removeItem('cart');
         }
     }
 })

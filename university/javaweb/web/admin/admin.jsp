@@ -157,7 +157,7 @@
         </button>
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Sign out</a>
+                <a class="nav-link" href="../logout.jsp">Sign out</a>
             </li>
         </ul>
     </nav>
@@ -206,7 +206,7 @@
                             DBConnection dBConnection = new DBConnection();
                             Connection con = dBConnection.getConn();
                             Statement st = con.createStatement();
-                            ResultSet rs = st.executeQuery("select a.id as id, u.email as email, a.created as cr, a.ip as ip, a.txt as txt from access_log as a inner join user as u on a.user_id = u.id");
+                            ResultSet rs = st.executeQuery("select a.id as id, u.email as email, a.created as cr, a.ip as ip, a.txt as txt from access_log as a inner join usr as u on a.user_id = u.id");
                             while (rs.next()) {
                     %>
                             <tr>

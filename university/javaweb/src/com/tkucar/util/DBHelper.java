@@ -6,15 +6,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBHelper {
-    final DBConnection dBConnection = new DBConnection();
-    final Connection con = dBConnection.getConn();
+    public DBHelper() throws SQLException {
+    }
 
     public String getUserId(String email) throws SQLException {
+        DBConnection dBConnection = new DBConnection();
+        Connection con = dBConnection.getConn();
         PreparedStatement ps = con.prepareStatement
-                ("select id from user where email=?");
+                ("select id from usr where email=?");
         ps.setString(1, email);
         ResultSet rs = ps.executeQuery();
-        String id = rs.getString("id");
+        String id = "";
+        if (rs.next())
+            id = rs.getString("id");
         con.close();
         return id;
     }

@@ -147,7 +147,7 @@
         </button>
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Sign out</a>
+                <a class="nav-link" href="../logout.jsp">Sign out</a>
             </li>
         </ul>
     </nav>
@@ -200,7 +200,7 @@
                                         "select u.email as email, p.purchase_date as date, p.purchase_type as type, i.item as item, i.amount as amount from purchase as p " +
                                                 "    inner join item as i " +
                                                 "        on i.purchase_id = p.id" +
-                                                "    inner join user as u" +
+                                                "    inner join usr as u" +
                                                 "        on p.user_id = u.id"
                                 );
                                 ResultSet rs = pstmt.executeQuery();

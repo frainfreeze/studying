@@ -20,4 +20,13 @@
         <servlet-name>UserLogin</servlet-name>
         <url-pattern>/UserLogin</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FinishCheckout</servlet-name>
+        <servlet-class>com.tkucar.service.FinishCheckout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FinishCheckout</servlet-name>
+        <url-pattern>/FinishCheckout</url-pattern>
+    </servlet-mapping>
 </web-app>

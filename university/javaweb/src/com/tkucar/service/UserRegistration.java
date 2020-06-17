@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class UserRegistration extends HttpServlet {
     DBConnection dBConnection;
@@ -19,10 +20,17 @@ public class UserRegistration extends HttpServlet {
     final DBLogger logger = new DBLogger();
     final DBHelper dbhelper = new DBHelper();
 
+    public UserRegistration() throws SQLException {
+    }
+
     @Override
     public void init() {
         dBConnection = new DBConnection();
-        con = dBConnection.getConn();
+        try {
+            con = dBConnection.getConn();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     @Override
@@ -41,7 +49,7 @@ public class UserRegistration extends HttpServlet {
         try {
 
             PreparedStatement ps = con.prepareStatement(
-                    "insert into user (email,pwd) values(?,?)");
+                    "insert into usr (email,pwd) values(?,?)");
 
 
             ps.setString(1, email);
@@ -52,7 +60,7 @@ public class UserRegistration extends HttpServlet {
             if (i > 0) {
                 out.print("You are successfully registered...");
                 request.getSession().setAttribute("loggedInUser", email);
-                RequestDispatcher rs = request.getRequestDispatcher("user.jsp");
+                RequestDispatcher rs = request.getRequestDispatcher("app/user.jsp");
                 rs.forward(request, response);
                 logger.accessLog(dbhelper.getUserId(email), request.getRemoteAddr(), "User successfully registered.");
             }
