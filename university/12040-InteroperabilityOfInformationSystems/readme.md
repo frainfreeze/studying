@@ -11,13 +11,17 @@
   - sudionici u komunikaciji u potpunosti razumiju funkcioniranje druge strane, 
   implementacija moze biti razlicita
 3. Nacrtati trokut upravljanja interoperabilnošću. (2 boda)
+
 ![](res/triangle.png)
+
 4. Što uključuje struktura HROI-a? (2 boda)
   - struktura HROI-a ukljucuje dokumente vlade rh, sustav upravljanja, 
   organizacije i podrske provedbe, biblioteku strateskih i provedbenih dokumenata 
   interoperatibilnosti, zajednicke resurse i potporne usluge podrske provedbi te provedbene 
   mjere
+
 5. Nacrtajte scenarij interakcije europskih javnih usluga. (2 boda)
+
 ![](res/EIF.png)
 
 
