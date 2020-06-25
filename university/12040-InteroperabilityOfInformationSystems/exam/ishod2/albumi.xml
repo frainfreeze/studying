@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<album>
+  <izvodac>
+    <naziv>Tu mao</naziv>
+    <drzava>Kanada</drzava>
+    <popularnost>SREDNJA</popularnost>
+  </izvodac>
+  <pjesma>
+    <naziv>Oi 'murica</naziv>
+    <trajanje>243</trajanje>
+    <zanr>POP</zanr>
+  </pjesma>
+  <izdavacka_kuca>Can Records</izdavacka_kuca>
+</album>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="drzavaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rusija"></xs:enumeration>
+      <xs:enumeration value="Kanada"></xs:enumeration>
+      <xs:enumeration value="Brazil"></xs:enumeration>
+      <xs:enumeration value="Island"></xs:enumeration>
+      <xs:enumeration value="Monako"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="popularnostType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NISKA"></xs:enumeration>
+      <xs:enumeration value="SREDNJA"></xs:enumeration>
+      <xs:enumeration value="VISOKA"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="izvodacType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="naziv" type="xs:string"/>
+      <xs:element name="drzava" type="drzavaType"></xs:element>
+      <xs:element name="popularnost" type="popularnostType"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="zanrType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="POP"></xs:enumeration>
+      <xs:enumeration value="METAL"></xs:enumeration>
+      <xs:enumeration value="KLASICNA"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="pjesmaType">
+    <xs:sequence minOccurs="1">
+      <xs:element name="naziv" type="xs:string"/>
+      <xs:element name="trajanje" type="xs:integer"></xs:element>
+      <xs:element name="zanr" type="zanrType"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:simpleType name="izkucaType">
+    <xs:element name="izdavacka_kuca" type="xs:string"/>
+  </xs:simpleType>
+
+  <xs:element name="album">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="izvodac" type="izvodacType"></xs:element>
+        <xs:element name="pjesma" type="pjesmaType"></xs:element>
+        <xs:element name="izdavacka_kuca" type="izkucaType"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>
