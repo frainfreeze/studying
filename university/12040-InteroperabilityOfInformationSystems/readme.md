@@ -225,17 +225,51 @@ dobiva ispis naziva predmeta i broj sati potrebnih za učenje.
 
 ## I6
 1. Navedite barem pet ciljeva normizacije. (3 boda)
+  - osiguravanje prikladnosti
+  - ogranicavanje raznolikosti
+  - povecanje razine sigurnosti
+  - poboljsanje proizvodne ucinkovitosti
+  - ocuvanje zdravlja i zivota ljudi i zivotinja
+  - zastita okolisa
 2. Objasnite fazu javne rasprave kod donošenja norme u RH. (2 boda)
+  - u fazi javne rasprave nacrt hrvatske norme daje se na javnu raspravu i 
+  davanje primjedaba u roku od 2 mjeseca. ukoliko ima tehnickih primjedbi, tekst 
+  se vraca u HZN/TO-u na razmatranje nakon cega se proces ponavlja
 3. Što je to ebXML? (2 boda)
+  - ebXML ili e-business CML je skup specifikacija elektronickog poslovanja
+  koristenjem jezika xml
 4. Skicirajte tehnološku arhitekturu e-Računa. (3 boda)
-5. Objasnite strukturu UTF-8 kao vrste kodiranja. (2 boda)
 
+![](res/e-bill.png)
+
+5. Objasnite strukturu UTF-8 kao vrste kodiranja. (2 boda)
+  - UTF-8 je vrsta kodiranja znakova varijabilne dužine od 1, 2, 3 ili 4 bajta
+  - 1 bajt je prvih 128 znakova sukladno normi ASCII (backcompatiblity)
+  - slijedecih 1920 znakova trebaju 2 bajta za eknoding (gotovo cjeli latin-script alfabet)
+  - 3 bajta su potrebna za enkodiranje ostatka osnovne visejezicne ravnine (znakovi za
+  gotovo sve moderne jezike i za veliki broj brojeva i simbola)
+  - 4 bajta su potrebna za ostale ravnine poput rjedih CJK znakova, 
+  matematickih simbola i emoji-a
+
+Dodatno:
+1. Faze donosenja norme u RH
 
 ## I7
 1. Nabrojite barem pet zahtjeva nad sigurnošću. (2 boda)
+  - povjerljivost
+  - posjedovanje ili kontrola
+  - integritet
+  - autenticnost
+  - dostupnost
+  - korisnost
 2. Navedite osnovne razlike između kriptografskih algoritama s
 asimetričnim i simetričnim ključem. (2 boda)
+  - kriptografski algoritmi sa simetricnim kljucem koriste isti kljuc za kriptiranje i 
+  dekriptiranje, dok kriptografski algoritmi sa asimetricnim kljucem koriste par ili 
+  parove javnih i tajnih kljuceva
 3. Što je to kvalificirani certifikat? (2 boda)
+  - kvalificirani certifikat je elektronicka potvrda kojom davatelj usluga izdavanja 
+  kvalificiranih certifikata potvrduje napredni eleketronicki potpis
 4. Za koji od navedenih modela kriptoanalitičkih napada vrijedi da se koristi
 napad grubom silom koji ne koristi sve moguće ključeve, već isprobava
 samo određeni skup ključeva? (2 boda)
@@ -246,3 +280,4 @@ samo određeni skup ključeva? (2 boda)
   * Napad odabranim izvornim tekstom
   * Napad odabranim kriptiranim tekstom
 5. Što je to SAML? (2 boda)
+  - norma za razmjenu autentikacijskih i autorizacijskih podataka između sigurnosnih domena
