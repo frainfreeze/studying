@@ -1,6 +1,6 @@
 Tomislav Kucar, 3RP2
 Ishod 1
-- /
+- Grgec je na faksu/
 
 
 Ishod 2: zadatak
@@ -19,7 +19,7 @@ Ishod 4
 - SOAP poruke mozemo slati na bezbroj nacina no najcesce ih saljemo HTTP-om.
 - U elementima binding i service
 - U elementu opis "description"
-
+(defintion - naziv usluge, types - tipovi podataka, message - poruke, portype(interface), binding - nacin izvedbe usluge, service - adresa usluge)
 
 Ishod 5: zadatak
 
@@ -35,21 +35,13 @@ Ishod 6
     - odobbravanje konacnog nacrta hrvatske norme
     - norma se objavljuje
 - U hrvatskoj imamo sustav velikih placanja za medubankovne transakcije te nacionalni klirinski sustav za izvodenje malih i masivnih placanja
+postoje i target2-hr i euroNKS za transakcije sepa kreditnim transferima u eurima
 - Znakovi u unicode notaciji se oznacavaju sa prefiskom U+ nakon cega slijedi hex kod za znak koji zelimo. Unicode se proporucuje i koristi bilo gdje gje imamo tekst, ali najvise za web.
 
 
 Ishod 7
 - Sigurnost kriptografksi algoritama sa simetricnim i asimetricnim kljucem ovisi o duzini kljuca i sigurnoj pohrani kljuca. Kod simetricnih algoritama je takoder bitan nacin razmjene kljuca.
 - Kad zelimo generirati elektronicki potpis moramo generirati sazetak poruke i onda ga kriptirati svojim privatnim kljucem, dok kod generiranja omotnice moramo generirati kljuc i njime enkriptirati poruku, nakon cega kriptiramo taj kljuc javnim kljucem primatelja i naposljetku saljemo kljuc i poruku zajedno. (npr PGP)
-- Kod napada kriptiranim tekstom napadac poznaje samo kriptirani tekst
+- Kod napada kriptiranim tekstom napadac poznaje samo kriptirani tekst, mozemo deducirati text ili cak key pomocu kripto i frequency analysis
 - DoS (denial of service) je tip napada u kojem racunalo "napada" drugo racunalo ili sustav slanjem poplave tcp i ili udp paketa. DDoS napada je verzija DoS napada u kojoj vise napadaca (racunala) napada jedno racunalo ili sustav, distribuirani napad. Od DDoS-a se ne mozemo u potpunosti zastiti no mozemo ga mitigirati pomocu rate-limitinga, load balancingom ili koristenjem servisa poput cloudflare.
 - SAML se temelji na XML jeziku i shemama te se moze osloniti na HTTP, SOAP, TLS/SSL protokole. Primjer koristenja je autentifikacija i autorizacija izmedu dvije sigurnosne domene kako bi prenjeli podatke.
-
-
-
-
-
-
-
-
-
