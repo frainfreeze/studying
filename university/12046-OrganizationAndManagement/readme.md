@@ -114,6 +114,10 @@ Tri vrste alternativnog rjesenja prema Ackoffu
 promatranjem i kvantitativnim mjerenjem
 3. idealno - kombinirane nekvantitativne i kvantitativne metode
 
+Selekcija alternativnog rjesenja
+1. iskustvom
+2. eksperimentom
+3. istrazivanje i analiza (najefikasnija tehnika)
 
 Tri najcesca oblika grupnog odlucivanja:
 1. interaktivne grupe - grupa ljudi donosi odluku (tim, odjel, odbor)
@@ -170,6 +174,7 @@ donosenja inovativnih odluka. Sastoji se od tri osnovne faze:
 
 
 
+
 ## Zadatak
 Ana je voditelj poslovnice jedne velike banke. Poslovnica se nalazi u jednom malom mjestu s oko 4.000
 stanovnika, uglavnom starije životne dobi koji su navikli dolaziti u poslovnicu i minimalno koriste
@@ -221,8 +226,5 @@ složenije odluke od onih koje su predmet svakodnevnog poslovanja i vođenja pos
 6. Radi li se o programiranoj ili neprogramiranoj odluci? Obrazložite odgovor navodeći činjenice iz primjera. (2 boda)
   * Ovdje se radi o neprogramiranoj odluci. Iako je pitanje povećanja zadovoljstva zaposlenika i klijenata relativno poznati problem, ipak se mora osmisliti novi način rješavanja tog problema, što znači da je odluka neprogramirana.
 7. U kojim uvjetima se donosi odluka (sigurnost, rizik ili neizvjesnost)? Obrazložite svoj odgovor i potkrijepite ga navodima iz primjera.
-  * ?
 8. Koje biste tehnike koristili u fazi evaluacije alternativa? Koje u fazi selekcije alternativa?
-  * ?
 9. Može se postaviti konkretno pitanje da li je bolja jedna ili druga tehnika odlučivanja... i sl.
-  * ?
