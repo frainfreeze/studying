@@ -17,12 +17,12 @@ koja mora biti efikasna za ostvarenje postavljenih ciljeva
 
 Razine menadžmenta i odlučivanje
 
-![](mgmt-levels.png)
+![](res/mgmt-levels.png)
 
 
 Odluke i tipovi odluka
 
-![](decisions.png)
+![](res/decisions.png)
 
 
 Odluka je rezultat procesa odlucivanja. Drucker razlikuje 3 vrste odluka:
@@ -54,7 +54,7 @@ nije ni poznat nacin njihovog rjesavanja (inovativne)
 
 Tradicionalni i moderni nacini upravljanja programiranim i ne programiranim odlukama
 
-![](decision-making.png)
+![](res/decision-making.png)
 
 
 Hellriegel i Slocum smatraju da postoje 4 preduvjeta donošenju odluka:
@@ -78,7 +78,7 @@ Dva najvaznija modela donosneja odluka:
 1. klasicni model - normativni, govori kako treba donositi odluke, pomaze u racionalnosti
 2. administrativni model - ako se zaista donose odluke
 
-![](models.png)
+![](res/models.png)
 
 
 
@@ -127,7 +127,7 @@ Tri najcesca oblika grupnog odlucivanja:
 
 Tehnike donošenja odluka sa stajališta Hellriegela i S. Locuma
 
-![](decision-teh.png)
+![](res/decision-teh.png)
 
 Za donosenje rutinskih odluka (poznati i dobro definirani problemi) koriste se:
 * pravila i standardne procedure
@@ -148,7 +148,7 @@ proizvodnu liniju. Cilj je utvrditi ondose izmedu troskova i profita.
 Upotrebljava se u projiciranju profita, kontroli troskova, odredivanju 
 cijena te kao pomoc menadzmentu u odabiru alternativnih rjesenja.
 
-![](break-even-point.png)
+![](res/break-even-point.png)
 
 
 Matrica plaćanja/isplativosti (pay-off matrix) je tehnika odlucivanja koja 
@@ -161,7 +161,7 @@ Stablo odlučivanja je posebna tehnika donosenja odluka koja se temelji na
 odnosima izmedu strategije i stanja. Rabi se za kompleksnne probleme 
 financiranja, marketinga, izgradnje tvornice, uvodenje novih proizovda itd.
 
-![](decision-tree.png)
+![](res/decision-tree.png)
 
 
 Osborneov model kreativnosti oznacuje posebnu tehniku koja se rabi u procesu
@@ -170,7 +170,7 @@ donosenja inovativnih odluka. Sastoji se od tri osnovne faze:
 2. otkrivanje ideja - prikupljanje ideja
 3. trazenje rjesenja - odabir najbolje ideje, adaptacija iste na konkretne uvijete te implementacija rjesenja
 
-![](osborne-model.png)
+![](res/osborne-model.png)
 
 
 
