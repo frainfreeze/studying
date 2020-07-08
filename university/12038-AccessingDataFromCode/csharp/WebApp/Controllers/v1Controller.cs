@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace WebApp.Controllers
 {
-    public class v1Controller : ApiController
+    public class v1Controller : System.Web.Http.ApiController
     {
         [HttpGet]
         public HttpResponseMessage vozac(int? id, string ime, string prezime, string broj_mobitela, string broj_vozacke)

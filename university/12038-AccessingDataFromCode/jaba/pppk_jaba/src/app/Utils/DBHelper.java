@@ -5,9 +5,6 @@ import app.Models.Ruta;
 import app.Models.Vozac;
 import app.Models.Vozilo;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -21,63 +18,19 @@ public class DBHelper {
     private static DBHelper instance = null;
     private static Connection connection = null;
 
-    private DBHelper(String url) throws ClassNotFoundException{
-        Class.forName(url);
+    private DBHelper() throws ClassNotFoundException{
+        Class.forName(DBHelper.DEFAULT_JAVA_CLASS);
     }
 
     public static DBHelper getInstance(){
         if(instance == null){
             try {
-                instance = new DBHelper(DEFAULT_JAVA_CLASS);
+                instance = new DBHelper();
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(DBHelper.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return instance;
-    }
-
-    public void ExecuteScript(String path){
-        System.out.println("Executing script " + path);
-        OpenConnection();
-        String content = "";
-        try {
-            content = new String(Files.readAllBytes(Paths.get(path)));
-        }catch (IOException ex) {
-            Logger.getLogger(DBHelper.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        for(String query : content.split(";")){
-            ExecuteUpdate(query);
-        }
-        CloseConnection();
-        System.out.println("Done");
-    }
-
-    public void ExecuteUpdate(String query){
-        Statement statement = null;
-        try {
-            OpenConnection();
-            statement = connection.createStatement();
-            statement.executeUpdate(query);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }finally{
-            CloseConnection();
-        }
-    }
-
-    public ResultSet ExecuteQuery(String query){
-        Statement statement = null;
-        ResultSet rs = null;
-        try {
-            OpenConnection();
-            statement = connection.createStatement();
-            rs = statement.executeQuery(query);
-        } catch (SQLException ex) {
-            System.out.println("Error while executing query.");
-        }finally{
-            CloseConnection();
-            return rs;
-        }
     }
 
     private void OpenConnection(){
@@ -101,8 +54,7 @@ public class DBHelper {
 
 
     public void InsertVozac(Vozac v){
-        CallableStatement cstmt = null;
-        ResultSet rs = null;
+        CallableStatement cstmt;
         try{
             OpenConnection();
             cstmt = connection.prepareCall("{call insert_vozac(?,?,?,?)}");
@@ -119,7 +71,7 @@ public class DBHelper {
     }
 
     public void InsertVozilo(Vozilo v){
-        CallableStatement cstmt = null;
+        CallableStatement cstmt;
         try{
             OpenConnection();
             cstmt = connection.prepareCall("{call insert_vozilo(?,?,?,?,?)}");
@@ -137,7 +89,7 @@ public class DBHelper {
     }
 
     public void InsertRuta(Ruta r) {
-        CallableStatement cstmt = null;
+        CallableStatement cstmt;
         try{
             OpenConnection();
             cstmt = connection.prepareCall("{call insert_ruta(?,?,?,?,?,?,?)}");
@@ -158,9 +110,9 @@ public class DBHelper {
     }
 
     public ArrayList<Ruta> SelectRute(int putni_nalog_id) {
-        ArrayList<Ruta> l = new ArrayList<Ruta>();
-        ResultSet rs = null;
-        Statement statement = null;
+        ArrayList<Ruta> l = new ArrayList<>();
+        ResultSet rs;
+        Statement statement;
         try {
             OpenConnection();
             statement = connection.createStatement();

@@ -12,7 +12,7 @@ import java.io.IOException;
 public class CSVHelper {
     private static final DBHelper db = DBHelper.getInstance();
     public int importVozila(String filename){
-        String line = "";
+        String line;
         String cvsSplitBy = ",";
         int broj = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -37,7 +37,7 @@ public class CSVHelper {
     }
     
     public int importVozaci(String filename){
-        String line = "";
+        String line;
         String cvsSplitBy = ",";
         int broj = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {

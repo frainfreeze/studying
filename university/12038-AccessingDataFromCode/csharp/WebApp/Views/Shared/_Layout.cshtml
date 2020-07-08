@@ -35,18 +35,18 @@
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        Database operations
+                        Baza podataka
                     </a>
 
                     <div class="navbar-dropdown">
                         <a class="navbar-item" onclick="window.location.href= '@Url.Action("BackupDb","Home")'">
-                            Backup db
+                            Napravi kopiju
                         </a>
                         <a class="navbar-item" onclick="window.location.href= '@Url.Action("NukeDb","Home")'">
-                            Clear db
+                            Ocisti bazu
                         </a>
                         <a class="navbar-item" onclick="window.location.href= '@Url.Action("RestoreDb","Home")'">
-                            Restore db
+                            Vrati bazu iz kopije
                         </a>
                     </div>
                 </div>
@@ -55,11 +55,8 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-primary">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a class="button is-light">
-                                Log in
+                            <a class="button is-light" onclick="window.location.href= '@Url.Action("Index", "Home")'">
+                                Odjavi se
                             </a>
                         </div>
                     </div>

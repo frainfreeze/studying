@@ -17,14 +17,6 @@
         <prosjecna_brzina>90.200000</prosjecna_brzina>
     </ruta>
     <ruta id="5">
-        <x_koordinata_a>50.123456</x_koordinata_a>
-        <y_koordinata_a>50.123456</y_koordinata_a>
-        <x_koordinata_b>70.123456</x_koordinata_b>
-        <y_koordinata_b>60.123456</y_koordinata_b>
-        <km_izmedu_a_b>10.200000</km_izmedu_a_b>
-        <prosjecna_brzina>63.200000</prosjecna_brzina>
-    </ruta>
-    <ruta id="7">
         <x_koordinata_a>10.444444</x_koordinata_a>
         <y_koordinata_a>20.444444</y_koordinata_a>
         <x_koordinata_b>90.111111</x_koordinata_b>

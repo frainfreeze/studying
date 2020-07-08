@@ -70,4 +70,18 @@
     <broj_mobitela>+385917273222</broj_mobitela>
     <broj_vozacke>87654321</broj_vozacke>
   </Table>
+  <Table>
+    <id>11</id>
+    <ime>Osoba1</ime>
+    <prezime>Prezimeosobe1</prezime>
+    <broj_mobitela>+385954846152</broj_mobitela>
+    <broj_vozacke>12345678</broj_vozacke>
+  </Table>
+  <Table>
+    <id>12</id>
+    <ime>Osoba2</ime>
+    <prezime>Prezimeosobe2</prezime>
+    <broj_mobitela>+385917273222</broj_mobitela>
+    <broj_vozacke>87654321</broj_vozacke>
+  </Table>
 </vozac>

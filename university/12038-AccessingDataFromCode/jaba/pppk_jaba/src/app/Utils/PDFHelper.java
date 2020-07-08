@@ -13,12 +13,10 @@ import javax.persistence.ParameterMode;
 import javax.persistence.StoredProcedureQuery;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.sql.SQLException;
 
 public class PDFHelper {
-    private static final DBHelper db = DBHelper.getInstance();
 
-    public void generatePutniNalogPdf(int id, String path, String fname) throws SQLException {
+    public void generatePutniNalogPdf(int id, String path, String fname) {
         Configuration cfg = createHibernateConfiguration();
         try (SessionFactory sessionFactory = cfg.buildSessionFactory();
              Session session = sessionFactory.openSession()) {

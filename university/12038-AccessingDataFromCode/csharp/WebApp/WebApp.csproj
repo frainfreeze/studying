@@ -137,6 +137,7 @@
     <Compile Include="Controllers\v1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PutniNaloziController.cs" />
+    <Compile Include="Controllers\ServisiController.cs" />
     <Compile Include="Controllers\VozaciController.cs" />
     <Compile Include="Controllers\VozilaController.cs" />
     <Compile Include="CustomValidators\BrojMobitelaValidator.cs" />
