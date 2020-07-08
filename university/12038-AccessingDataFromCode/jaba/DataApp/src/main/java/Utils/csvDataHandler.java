@@ -1,7 +1,6 @@
 
-package datahandlers;
+package Utils;
 
-import db.dbHandler;
 import models.Vozac;
 import models.Vozilo;
 
@@ -11,7 +10,7 @@ import java.io.IOException;
 
 
 public class csvDataHandler {
-    private static dbHandler db = dbHandler.getInstance();
+    private static DbHelper db = DbHelper.getInstance();
     public int importVozila(String filename){
         String line = "";
         String cvsSplitBy = ",";

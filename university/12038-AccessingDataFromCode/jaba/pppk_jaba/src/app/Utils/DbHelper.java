@@ -1,46 +1,41 @@
+package app.Utils;
 
-package db;
 
-import java.io.File;
+import app.Models.Ruta;
+import app.Models.Vozac;
+import app.Models.Vozilo;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import models.Ruta;
-import models.Vozac;
-import models.Vozilo;
 
 
-public class dbHandler {
+public class DbHelper {
     private static final String DEFAULT_JAVA_CLASS = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     private final String PROJECT_DIRECTORY = System.getProperty("user.dir");
     private static final String URL_FORMAT = "jdbc:sqlserver://DESKTOP-RTVO6TF\\SQLEXPRESS;databaseName=PPPK_DATABASE;user=tom;password=SQL";
-    private static dbHandler instance = null;
+    private static DbHelper instance = null;
     private static Connection connection = null;
-    
-    private dbHandler(String url) throws ClassNotFoundException{
+
+    private DbHelper(String url) throws ClassNotFoundException{
         Class.forName(url);
     }
-    
-    public static dbHandler getInstance(){
+
+    public static DbHelper getInstance(){
         if(instance == null){
             try {
-                instance = new dbHandler(DEFAULT_JAVA_CLASS);
+                instance = new DbHelper(DEFAULT_JAVA_CLASS);
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(dbHandler.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return instance;
     }
-    
+
     public void ExecuteScript(String path){
         System.out.println("Executing script " + path);
         OpenConnection();
@@ -48,7 +43,7 @@ public class dbHandler {
         try {
             content = new String(Files.readAllBytes(Paths.get(path)));
         }catch (IOException ex) {
-            Logger.getLogger(dbHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, ex);
         }
         for(String query : content.split(";")){
             ExecuteUpdate(query);
@@ -56,7 +51,7 @@ public class dbHandler {
         CloseConnection();
         System.out.println("Done");
     }
-    
+
     public void ExecuteUpdate(String query){
         Statement statement = null;
         try {
@@ -84,27 +79,27 @@ public class dbHandler {
             return rs;
         }
     }
-    
+
     private void OpenConnection(){
         try {
             connection = DriverManager.getConnection(URL_FORMAT);
         } catch (SQLException e) {
             CloseConnection();
-            Logger.getLogger(dbHandler.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, e);
         }
-        
+
     }
-    
+
     private void CloseConnection(){
         try{
             connection.close();
-        }catch(SQLException e){ 
-            Logger.getLogger(dbHandler.class.getName()).log(Level.SEVERE, null, e);
+        }catch(SQLException e){
+            Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, e);
         }
 
-    } 
-    
-    
+    }
+
+
     public void InsertVozac(Vozac v){
         CallableStatement cstmt = null;
         ResultSet rs = null;
@@ -122,7 +117,7 @@ public class dbHandler {
             CloseConnection();
         }
     }
-    
+
     public void InsertVozilo(Vozilo v){
         CallableStatement cstmt = null;
         try{
@@ -159,7 +154,7 @@ public class dbHandler {
         }finally{
             CloseConnection();
         }
-        
+
     }
 
     public ArrayList<Ruta> SelectRute(int putni_nalog_id) {
@@ -184,7 +179,7 @@ public class dbHandler {
                 l.add(r);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(dbHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             CloseConnection();
         }

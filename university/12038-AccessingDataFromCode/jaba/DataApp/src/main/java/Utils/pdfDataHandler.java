@@ -1,5 +1,5 @@
 
-package datahandlers;
+package Utils;
 
 
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -82,7 +82,7 @@ public class pdfDataHandler {
         Configuration cfg = new Configuration()
                 .setProperty("hibernate.connection.driver_class", "com.microsoft.sqlserver.jdbc.SQLServerDriver")
                 .setProperty("hibernate.connection.url", url)
-                .setProperty("hibernate.connection.username", "sa")
+                .setProperty("hibernate.connection.username", "tom")
                 .setProperty("hibernate.connection.password", "SQL")
                 .setProperty("hibernate.connection.autocommit", "true")
                 .setProperty("hibernate.show_sql", "false");

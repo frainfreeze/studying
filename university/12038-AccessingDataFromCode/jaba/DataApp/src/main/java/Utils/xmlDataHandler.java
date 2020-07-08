@@ -1,7 +1,6 @@
 
-package datahandlers;
+package Utils;
 
-import db.dbHandler;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,7 +18,7 @@ import org.w3c.dom.NodeList;
 
 
 public class xmlDataHandler {
-    private static dbHandler db = dbHandler.getInstance();
+    private static DbHelper db = DbHelper.getInstance();
 
     public int exportRute(int putni_nalog_id,String path, String fname) {
         List<Ruta> l = db.SelectRute(putni_nalog_id);

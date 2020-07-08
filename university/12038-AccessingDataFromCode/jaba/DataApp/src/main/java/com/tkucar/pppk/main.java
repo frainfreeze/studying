@@ -1,17 +1,16 @@
 package com.tkucar.pppk;
 
-import db.dbHandler;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import Utils.DbHelper;
+
 import java.sql.SQLException;
-import com.microsoft.sqlserver.jdbc.SQLServerDriver;
-import datahandlers.csvDataHandler;
-import datahandlers.pdfDataHandler;
-import datahandlers.xmlDataHandler;
+
+import Utils.csvDataHandler;
+import Utils.pdfDataHandler;
+import Utils.xmlDataHandler;
 import java.nio.file.Paths;
 
 public class main {
-    public static dbHandler dh = dbHandler.getInstance();
+    public static DbHelper dh = DbHelper.getInstance();
     public static final String DATA_DIRECTORY_PATH = Paths.get(System.getProperty("user.dir"),"DATA").toString();
     public static void main(String[] args) throws SQLException {
         // vozila/vozaci from CSV to database 
