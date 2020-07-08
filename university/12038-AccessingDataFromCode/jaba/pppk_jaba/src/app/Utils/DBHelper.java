@@ -14,23 +14,23 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class DbHelper {
+public class DBHelper {
     private static final String DEFAULT_JAVA_CLASS = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     private final String PROJECT_DIRECTORY = System.getProperty("user.dir");
     private static final String URL_FORMAT = "jdbc:sqlserver://DESKTOP-RTVO6TF\\SQLEXPRESS;databaseName=PPPK_DATABASE;user=tom;password=SQL";
-    private static DbHelper instance = null;
+    private static DBHelper instance = null;
     private static Connection connection = null;
 
-    private DbHelper(String url) throws ClassNotFoundException{
+    private DBHelper(String url) throws ClassNotFoundException{
         Class.forName(url);
     }
 
-    public static DbHelper getInstance(){
+    public static DBHelper getInstance(){
         if(instance == null){
             try {
-                instance = new DbHelper(DEFAULT_JAVA_CLASS);
+                instance = new DBHelper(DEFAULT_JAVA_CLASS);
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DBHelper.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return instance;
@@ -43,7 +43,7 @@ public class DbHelper {
         try {
             content = new String(Files.readAllBytes(Paths.get(path)));
         }catch (IOException ex) {
-            Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBHelper.class.getName()).log(Level.SEVERE, null, ex);
         }
         for(String query : content.split(";")){
             ExecuteUpdate(query);
@@ -73,7 +73,7 @@ public class DbHelper {
             statement = connection.createStatement();
             rs = statement.executeQuery(query);
         } catch (SQLException ex) {
-            System.out.println("Why you do this?");
+            System.out.println("Error while executing query.");
         }finally{
             CloseConnection();
             return rs;
@@ -85,7 +85,7 @@ public class DbHelper {
             connection = DriverManager.getConnection(URL_FORMAT);
         } catch (SQLException e) {
             CloseConnection();
-            Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(DBHelper.class.getName()).log(Level.SEVERE, null, e);
         }
 
     }
@@ -94,7 +94,7 @@ public class DbHelper {
         try{
             connection.close();
         }catch(SQLException e){
-            Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(DBHelper.class.getName()).log(Level.SEVERE, null, e);
         }
 
     }
@@ -179,7 +179,7 @@ public class DbHelper {
                 l.add(r);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(DbHelper.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBHelper.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             CloseConnection();
         }

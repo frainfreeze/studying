@@ -18,8 +18,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class xmlDataHandler {
-    private static DbHelper db = DbHelper.getInstance();
+public class XMLHelper {
+    private static final DBHelper db = DBHelper.getInstance();
 
     public int exportRute(int putni_nalog_id,String path, String fname) {
         List<Ruta> l = db.SelectRute(putni_nalog_id);
@@ -52,7 +52,7 @@ public class xmlDataHandler {
             fWriter.append("</putni_nalog>\n");
             fWriter.close();
         } catch (IOException ex) {
-            Logger.getLogger(app.Utils.xmlDataHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, null, ex);
         }
         return n;
     }

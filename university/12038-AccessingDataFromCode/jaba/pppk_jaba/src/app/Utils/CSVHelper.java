@@ -9,8 +9,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class csvDataHandler {
-    private static DbHelper db = DbHelper.getInstance();
+public class CSVHelper {
+    private static final DBHelper db = DBHelper.getInstance();
     public int importVozila(String filename){
         String line = "";
         String cvsSplitBy = ",";

@@ -1,7 +1,7 @@
 package app.Models;
 
 
-public class PN_for_pdf {
+public class PutniNalog {
     private String datum_izrade;
     private String datum_pocetka;
     private String datum_zavrsetka;
@@ -11,7 +11,7 @@ public class PN_for_pdf {
     private String marka;
     private String godina_proizvodnje;
 
-    public PN_for_pdf(String datum_izrade, String datum_pocetka, String datum_zavrsetka, String status, String ime, String prezime, String marka, String godina_proizvodnje) {
+    public PutniNalog(String datum_izrade, String datum_pocetka, String datum_zavrsetka, String status, String ime, String prezime, String marka, String godina_proizvodnje) {
         this.datum_izrade = datum_izrade;
         this.datum_pocetka = datum_pocetka;
         this.datum_zavrsetka = datum_zavrsetka;
