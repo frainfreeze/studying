@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace WebApp.HELPERS
+namespace WebApp.Utils
 {
     public static class DatabaseHandler
     {
@@ -179,7 +179,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static int insertPutniNalog(DateTime datum_pocetka, DateTime datum_zavrsetka, int vozac_id, int vozilo_id)
         {
-            if (!Validators.validID(vozac_id) || !Validators.validID(vozilo_id))
+            if (!Validator.ValidateID(vozac_id) || !Validator.ValidateID(vozilo_id))
             { return 0; }
 
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -211,7 +211,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static bool deletePutniNalog(int id)
         {
-            if (!Validators.validID(id)) { return false; }
+            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -232,7 +232,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static PutniNalogVM getPutniNalog(int id)
         {
-            if (!Validators.validID(id)) { return null; }
+            if (!Validator.ValidateID(id)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -292,7 +292,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static int deleteRute(int id)
         {
-            if (!Validators.validID(id)) { return 0; }
+            if (!Validator.ValidateID(id)) { return 0; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -314,7 +314,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static bool deleteRuta(int id)
         {
-            if (!Validators.validID(id)) { return false; }
+            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -343,10 +343,10 @@ namespace WebApp.HELPERS
         public static bool updateVozilo(int id, string marka, int tip_vozila_id, decimal pocetni_km, decimal trenutni_km, int godina_proizvodnje)
         {
             if (
-                !Validators.validID(id) ||
-                !Validators.validGodina(godina_proizvodnje) ||
-                !Validators.validKilometar(pocetni_km) ||
-                !Validators.validKilometar(trenutni_km))
+                !Validator.ValidateID(id) ||
+                !Validator.ValidateYear(godina_proizvodnje) ||
+                !Validator.ValidateDistance(pocetni_km) ||
+                !Validator.ValidateDistance(trenutni_km))
             { return false; }
 
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -376,7 +376,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static bool deleteVozilo(int id)
         {
-            if (!Validators.validID(id)) { return false; }
+            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -403,9 +403,9 @@ namespace WebApp.HELPERS
         public static int insertVozilo(string marka, int? tip_vozila_id, decimal trenutni_km, decimal pocetni_km, int godina_proizvodnje)
         {
             if (
-                !Validators.validGodina(godina_proizvodnje) ||
-                !Validators.validKilometar(pocetni_km) ||
-                !Validators.validKilometar(trenutni_km))
+                !Validator.ValidateYear(godina_proizvodnje) ||
+                !Validator.ValidateDistance(pocetni_km) ||
+                !Validator.ValidateDistance(trenutni_km))
             { return 0; }
 
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -439,7 +439,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static int insertServis(string naziv_servisa, DateTime datum, decimal cijena, string info, int vozilo_id)
         {
-            if (!Validators.validGodina(datum.Year))
+            if (!Validator.ValidateYear(datum.Year))
             { return 0; }
 
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -475,8 +475,8 @@ namespace WebApp.HELPERS
         /// </returns>
         public static bool updateServis(int id, string naziv_servisa, DateTime datum, decimal cijena, string info)
         {
-            if (!Validators.validID(id) ||
-                !Validators.validGodina(datum.Year))
+            if (!Validator.ValidateID(id) ||
+                !Validator.ValidateYear(datum.Year))
             { return false; }
 
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -505,7 +505,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static bool deleteServis(int? id)
         {
-            if (!Validators.validID(id)) { return false; }
+            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -532,9 +532,9 @@ namespace WebApp.HELPERS
         public static bool updateVozac(int id, string ime, string prezime, string broj_mobitela, string broj_vozacke)
         {
             if (
-                !Validators.validID(id) ||
-                !Validators.validBrojMobitela(broj_mobitela) ||
-                !Validators.validBrojVozacke(broj_vozacke))
+                !Validator.ValidateID(id) ||
+                !Validator.ValidatePhoneNum(broj_mobitela) ||
+                !Validator.ValidateVozackaID(broj_vozacke))
             { return false; }
 
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -563,7 +563,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static bool deleteVozac(int id)
         {
-            if (!Validators.validID(id)) { return false; }
+            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -589,8 +589,8 @@ namespace WebApp.HELPERS
         public static int insertVozac(string ime, string prezime, string broj_mobitela, string broj_vozacke)
         {
             if (
-                !Validators.validBrojMobitela(broj_mobitela) ||
-                !Validators.validBrojVozacke(broj_vozacke))
+                !Validator.ValidatePhoneNum(broj_mobitela) ||
+                !Validator.ValidateVozackaID(broj_vozacke))
             { return 0; }
 
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -620,7 +620,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static vozac getVozac(int ID)
         {
-            if (!Validators.validID(ID)) { return null; }
+            if (!Validator.ValidateID(ID)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -705,7 +705,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static vozilo getVozilo(int ID)
         {
-            if (!Validators.validID(ID)) { return null; }
+            if (!Validator.ValidateID(ID)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -789,7 +789,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static List<servi> getServisi(int ID)
         {
-            if (!Validators.validID(ID)) { return null; }
+            if (!Validator.ValidateID(ID)) { return null; }
             List<servi> filler = new List<servi>();
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
@@ -837,7 +837,7 @@ namespace WebApp.HELPERS
         /// </returns>
         public static tip_vozila getTipVozila(int ID)
         {
-            if (!Validators.validID(ID)) { return null; }
+            if (!Validator.ValidateID(ID)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();

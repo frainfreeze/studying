@@ -1,4 +1,4 @@
-﻿using WebApp.HELPERS;
+﻿using WebApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace WebApp.Controllers
         [HttpGet]
         public HttpResponseMessage vozac(int? id, string ime, string prezime, string broj_mobitela, string broj_vozacke)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.updateVozac((int)id, ime, prezime, broj_mobitela, broj_vozacke);
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
@@ -31,7 +31,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public HttpResponseMessage vozac(int? id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.deleteVozac((int)id);
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
@@ -45,7 +45,7 @@ namespace WebApp.Controllers
         [HttpGet]
         public HttpResponseMessage vozilo(int? id, string marka, int tipovi_vozila, decimal pocetni_km, decimal trenutni_km, int godina_proizvodnje)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.updateVozilo((int)id, marka, tipovi_vozila, pocetni_km, trenutni_km, godina_proizvodnje);
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
@@ -62,7 +62,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public HttpResponseMessage vozilo(int? id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.deleteVozilo((int)id);
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
@@ -86,7 +86,7 @@ namespace WebApp.Controllers
         [HttpGet]
         public HttpResponseMessage servis(int id, string mjesto, DateTime datum, decimal cijena, string info, int vozilo_id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.updateServis(id, mjesto, datum, cijena, info);
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
@@ -100,7 +100,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public HttpResponseMessage servis(int? id, int vozilo_id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.deleteServis(id);
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
@@ -114,7 +114,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public HttpResponseMessage putniNalog(int? id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.deletePutniNalog((int)id);
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
@@ -128,7 +128,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public HttpResponseMessage obrisiRutu(int? id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.deleteRuta((int)id);
                 return Request.CreateResponse(HttpStatusCode.OK);
@@ -139,7 +139,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public HttpResponseMessage obrisiRute(int? id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 DatabaseHandler.deleteRute((int)id);
                 return Request.CreateResponse(HttpStatusCode.OK);

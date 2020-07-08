@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PPPK_DATABASEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PPPK_DATABASEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="kupnja_goriva">
           <Key>
             <PropertyRef Name="id" />
@@ -230,6 +230,68 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="clean_database" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="disable_id_insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="dohvati_putni_nalog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dohvati_sve_putne_naloge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="enable_id_insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="insert_dummy_data" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="insert_putni_nalog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vozac_id" Type="int" Mode="In" />
+          <Parameter Name="vozilo_id" Type="int" Mode="In" />
+          <Parameter Name="status_id" Type="int" Mode="In" />
+          <Parameter Name="datum_pocetka" Type="date" Mode="In" />
+          <Parameter Name="datum_zavrsetka" Type="date" Mode="In" />
+        </Function>
+        <Function Name="insert_ruta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="putni_nalog_id" Type="int" Mode="In" />
+          <Parameter Name="x_koordinata_a" Type="decimal" Mode="In" />
+          <Parameter Name="y_koordinata_a" Type="decimal" Mode="In" />
+          <Parameter Name="x_koordinata_b" Type="decimal" Mode="In" />
+          <Parameter Name="y_koordinata_b" Type="decimal" Mode="In" />
+          <Parameter Name="km_izmedu_a_b" Type="decimal" Mode="In" />
+          <Parameter Name="prosjecna_brzina" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="insert_servis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="naziv_servisa" Type="nvarchar" Mode="In" />
+          <Parameter Name="datum" Type="datetime" Mode="In" />
+          <Parameter Name="vozilo_id" Type="int" Mode="In" />
+          <Parameter Name="info" Type="nvarchar" Mode="In" />
+          <Parameter Name="cijena" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="insert_vozac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ime" Type="nvarchar" Mode="In" />
+          <Parameter Name="prezime" Type="nvarchar" Mode="In" />
+          <Parameter Name="broj_mobitela" Type="nvarchar" Mode="In" />
+          <Parameter Name="broj_vozacke" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="insert_vozilo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="marka" Type="nvarchar" Mode="In" />
+          <Parameter Name="tip_vozila_id" Type="int" Mode="In" />
+          <Parameter Name="pocetni_km" Type="decimal" Mode="In" />
+          <Parameter Name="trenutni_km" Type="decimal" Mode="In" />
+          <Parameter Name="godina_proizvodnje" Type="int" Mode="In" />
+        </Function>
+        <Function Name="obrisi_putni_nalog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="obrisi_rute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="obrisi_rutu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="obrisi_servis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="obrisi_vozaca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="obrisi_vozilo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="PPPK_DATABASEModelStoreContainer">
           <EntitySet Name="kupnja_goriva" EntityType="Self.kupnja_goriva" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mjesto" EntityType="Self.mjesto" Schema="dbo" store:Type="Tables" />
@@ -283,8 +345,7 @@
             <End Role="zauzece_vozilo" EntitySet="zauzece_vozilo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PPPK_DATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -340,7 +401,7 @@
           <Property Name="prosjecna_brzina" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <NavigationProperty Name="putni_nalog" Relationship="Self.FK__putni_nalog__ruta" FromRole="ruta" ToRole="putni_nalog" />
         </EntityType>
-        <EntityType Name="servi">
+        <EntityType Name="servis">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -487,7 +548,7 @@
         </Association>
         <Association Name="FK__vozilo__servis">
           <End Role="vozilo" Type="Self.vozilo" Multiplicity="0..1" />
-          <End Role="servis" Type="Self.servi" Multiplicity="*" />
+          <End Role="servis" Type="PPPK_DATABASEModel.servis" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vozilo">
               <PropertyRef Name="id" />
@@ -538,7 +599,7 @@
           <EntitySet Name="mjestoes" EntityType="Self.mjesto" />
           <EntitySet Name="putni_nalog" EntityType="Self.putni_nalog" />
           <EntitySet Name="rutas" EntityType="Self.ruta" />
-          <EntitySet Name="servis" EntityType="Self.servi" />
+          <EntitySet Name="servis1" EntityType="PPPK_DATABASEModel.servis" />
           <EntitySet Name="status" EntityType="Self.status" />
           <EntitySet Name="tip_vozila" EntityType="Self.tip_vozila" />
           <EntitySet Name="vozacs" EntityType="Self.vozac" />
@@ -571,7 +632,7 @@
           </AssociationSet>
           <AssociationSet Name="FK__vozilo__servis" Association="Self.FK__vozilo__servis">
             <End Role="vozilo" EntitySet="voziloes" />
-            <End Role="servis" EntitySet="servis" />
+            <End Role="servis" EntitySet="servis1" />
           </AssociationSet>
           <AssociationSet Name="FK__tip_vozila__vozilo" Association="Self.FK__tip_vozila__vozilo">
             <End Role="tip_vozila" EntitySet="tip_vozila" />
@@ -585,7 +646,99 @@
             <End Role="vozilo" EntitySet="voziloes" />
             <End Role="zauzece_vozilo" EntitySet="zauzece_vozilo" />
           </AssociationSet>
+          <FunctionImport Name="clean_database" />
+          <FunctionImport Name="disable_id_insert" />
+          <FunctionImport Name="dohvati_putni_nalog" ReturnType="Collection(PPPK_DATABASEModel.dohvati_putni_nalog_Result)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dohvati_sve_putne_naloge" ReturnType="Collection(PPPK_DATABASEModel.dohvati_sve_putne_naloge_Result)" />
+          <FunctionImport Name="enable_id_insert" />
+          <FunctionImport Name="insert_dummy_data" />
+          <FunctionImport Name="insert_putni_nalog" ReturnType="Collection(Decimal)">
+            <Parameter Name="vozac_id" Mode="In" Type="Int32" />
+            <Parameter Name="vozilo_id" Mode="In" Type="Int32" />
+            <Parameter Name="status_id" Mode="In" Type="Int32" />
+            <Parameter Name="datum_pocetka" Mode="In" Type="DateTime" />
+            <Parameter Name="datum_zavrsetka" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="insert_ruta">
+            <Parameter Name="putni_nalog_id" Mode="In" Type="Int32" />
+            <Parameter Name="x_koordinata_a" Mode="In" Type="Decimal" />
+            <Parameter Name="y_koordinata_a" Mode="In" Type="Decimal" />
+            <Parameter Name="x_koordinata_b" Mode="In" Type="Decimal" />
+            <Parameter Name="y_koordinata_b" Mode="In" Type="Decimal" />
+            <Parameter Name="km_izmedu_a_b" Mode="In" Type="Decimal" />
+            <Parameter Name="prosjecna_brzina" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="insert_servis" ReturnType="Collection(Decimal)">
+            <Parameter Name="naziv_servisa" Mode="In" Type="String" />
+            <Parameter Name="datum" Mode="In" Type="DateTime" />
+            <Parameter Name="vozilo_id" Mode="In" Type="Int32" />
+            <Parameter Name="info" Mode="In" Type="String" />
+            <Parameter Name="cijena" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="insert_vozac" ReturnType="Collection(Decimal)">
+            <Parameter Name="ime" Mode="In" Type="String" />
+            <Parameter Name="prezime" Mode="In" Type="String" />
+            <Parameter Name="broj_mobitela" Mode="In" Type="String" />
+            <Parameter Name="broj_vozacke" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="insert_vozilo" ReturnType="Collection(Decimal)">
+            <Parameter Name="marka" Mode="In" Type="String" />
+            <Parameter Name="tip_vozila_id" Mode="In" Type="Int32" />
+            <Parameter Name="pocetni_km" Mode="In" Type="Decimal" />
+            <Parameter Name="trenutni_km" Mode="In" Type="Decimal" />
+            <Parameter Name="godina_proizvodnje" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="obrisi_putni_nalog" ReturnType="Collection(Int32)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="obrisi_rute">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="obrisi_rutu" ReturnType="Collection(Int32)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="obrisi_servis" ReturnType="Collection(Int32)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="obrisi_vozaca" ReturnType="Collection(Int32)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="obrisi_vozilo" ReturnType="Collection(Int32)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="dohvati_putni_nalog_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="vozac_id" Nullable="true" />
+          <Property Type="Int32" Name="vozilo_id" Nullable="true" />
+          <Property Type="Int32" Name="status_id" Nullable="true" />
+          <Property Type="DateTime" Name="datum_izrade" Nullable="false" />
+          <Property Type="DateTime" Name="datum_pocetka" Nullable="false" />
+          <Property Type="DateTime" Name="datum_zavrsetka" Nullable="false" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="32" />
+          <Property Type="String" Name="ime" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="prezime" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="marka" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="godina_proizvodnje" Nullable="true" />
+          <Property Type="String" Name="tip" Nullable="true" MaxLength="32" />
+        </ComplexType>
+        <ComplexType Name="dohvati_sve_putne_naloge_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="vozac_id" Nullable="true" />
+          <Property Type="Int32" Name="vozilo_id" Nullable="true" />
+          <Property Type="Int32" Name="status_id" Nullable="true" />
+          <Property Type="DateTime" Name="datum_izrade" Nullable="false" />
+          <Property Type="DateTime" Name="datum_pocetka" Nullable="false" />
+          <Property Type="DateTime" Name="datum_zavrsetka" Nullable="false" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="32" />
+          <Property Type="String" Name="ime" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="prezime" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="marka" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="godina_proizvodnje" Nullable="true" />
+          <Property Type="String" Name="tip" Nullable="true" MaxLength="32" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -639,8 +792,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="servis">
-            <EntityTypeMapping TypeName="PPPK_DATABASEModel.servi">
+          <EntitySetMapping Name="servis1">
+            <EntityTypeMapping TypeName="PPPK_DATABASEModel.servis">
               <MappingFragment StoreEntitySet="servis">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="vozilo_id" ColumnName="vozilo_id" />
@@ -708,6 +861,59 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="clean_database" FunctionName="PPPK_DATABASEModel.Store.clean_database" />
+          <FunctionImportMapping FunctionImportName="disable_id_insert" FunctionName="PPPK_DATABASEModel.Store.disable_id_insert" />
+          <FunctionImportMapping FunctionImportName="dohvati_putni_nalog" FunctionName="PPPK_DATABASEModel.Store.dohvati_putni_nalog">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPPK_DATABASEModel.dohvati_putni_nalog_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="vozac_id" ColumnName="vozac_id" />
+                <ScalarProperty Name="vozilo_id" ColumnName="vozilo_id" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="datum_izrade" ColumnName="datum_izrade" />
+                <ScalarProperty Name="datum_pocetka" ColumnName="datum_pocetka" />
+                <ScalarProperty Name="datum_zavrsetka" ColumnName="datum_zavrsetka" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="marka" ColumnName="marka" />
+                <ScalarProperty Name="godina_proizvodnje" ColumnName="godina_proizvodnje" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="dohvati_sve_putne_naloge" FunctionName="PPPK_DATABASEModel.Store.dohvati_sve_putne_naloge">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPPK_DATABASEModel.dohvati_sve_putne_naloge_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="vozac_id" ColumnName="vozac_id" />
+                <ScalarProperty Name="vozilo_id" ColumnName="vozilo_id" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="datum_izrade" ColumnName="datum_izrade" />
+                <ScalarProperty Name="datum_pocetka" ColumnName="datum_pocetka" />
+                <ScalarProperty Name="datum_zavrsetka" ColumnName="datum_zavrsetka" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="marka" ColumnName="marka" />
+                <ScalarProperty Name="godina_proizvodnje" ColumnName="godina_proizvodnje" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="enable_id_insert" FunctionName="PPPK_DATABASEModel.Store.enable_id_insert" />
+          <FunctionImportMapping FunctionImportName="insert_dummy_data" FunctionName="PPPK_DATABASEModel.Store.insert_dummy_data" />
+          <FunctionImportMapping FunctionImportName="insert_putni_nalog" FunctionName="PPPK_DATABASEModel.Store.insert_putni_nalog" />
+          <FunctionImportMapping FunctionImportName="insert_ruta" FunctionName="PPPK_DATABASEModel.Store.insert_ruta" />
+          <FunctionImportMapping FunctionImportName="insert_servis" FunctionName="PPPK_DATABASEModel.Store.insert_servis" />
+          <FunctionImportMapping FunctionImportName="insert_vozac" FunctionName="PPPK_DATABASEModel.Store.insert_vozac" />
+          <FunctionImportMapping FunctionImportName="insert_vozilo" FunctionName="PPPK_DATABASEModel.Store.insert_vozilo" />
+          <FunctionImportMapping FunctionImportName="obrisi_putni_nalog" FunctionName="PPPK_DATABASEModel.Store.obrisi_putni_nalog" />
+          <FunctionImportMapping FunctionImportName="obrisi_rute" FunctionName="PPPK_DATABASEModel.Store.obrisi_rute" />
+          <FunctionImportMapping FunctionImportName="obrisi_rutu" FunctionName="PPPK_DATABASEModel.Store.obrisi_rutu" />
+          <FunctionImportMapping FunctionImportName="obrisi_servis" FunctionName="PPPK_DATABASEModel.Store.obrisi_servis" />
+          <FunctionImportMapping FunctionImportName="obrisi_vozaca" FunctionName="PPPK_DATABASEModel.Store.obrisi_vozaca" />
+          <FunctionImportMapping FunctionImportName="obrisi_vozilo" FunctionName="PPPK_DATABASEModel.Store.obrisi_vozilo" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

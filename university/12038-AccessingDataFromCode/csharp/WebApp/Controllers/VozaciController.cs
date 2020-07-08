@@ -1,4 +1,4 @@
-﻿using WebApp.HELPERS;
+﻿using WebApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace WebApp.Controllers
 
         public ActionResult Vozac(int? id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 return View((object)DatabaseHandler.getVozac((int)id));
             }

@@ -1,4 +1,4 @@
-﻿using WebApp.HELPERS;
+﻿using WebApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace WebApp.Controllers
 
         public ActionResult PutniNalog(int? id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 return View((object)DatabaseHandler.getPutniNalog((int)id));
             }

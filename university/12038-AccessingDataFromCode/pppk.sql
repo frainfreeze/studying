@@ -1,4 +1,6 @@
 ﻿use [master]
+IF EXISTS(select * from sys.databases where name='PPPK_DATABASE')
+DROP DATABASE [PPPK_DATABASE]
 go
 
 create database [PPPK_DATABASE]

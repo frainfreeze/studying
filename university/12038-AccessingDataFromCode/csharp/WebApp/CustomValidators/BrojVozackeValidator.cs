@@ -1,4 +1,4 @@
-﻿using WebApp.HELPERS;
+﻿using WebApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,6 +10,6 @@ namespace WebApp.CustomValidators
     public class BrojVozackeValidator : ValidationAttribute
     {
         public override bool IsValid(object value)
-            => (value != null && Validators.validBrojVozacke(value.ToString())) ? true : false;
+            => (value != null && Utils.Validator.ValidateVozackaID(value.ToString())) ? true : false;
     }
 }

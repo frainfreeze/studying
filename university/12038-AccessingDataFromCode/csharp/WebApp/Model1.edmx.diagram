@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="PPPK_DATABASEModel.mjesto" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PPPK_DATABASEModel.putni_nalog" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="PPPK_DATABASEModel.ruta" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PPPK_DATABASEModel.servi" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PPPK_DATABASEModel.servis" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="PPPK_DATABASEModel.status" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PPPK_DATABASEModel.tip_vozila" Width="1.5" PointX="1.5" PointY="10.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PPPK_DATABASEModel.vozac" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />

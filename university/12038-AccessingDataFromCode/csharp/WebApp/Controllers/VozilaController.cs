@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebApp.HELPERS;
+using WebApp.Utils;
 
 namespace WebApp.Controllers
 {
@@ -28,7 +28,7 @@ namespace WebApp.Controllers
 
         public ActionResult Vozilo(int? id)
         {
-            if (Validators.validID(id))
+            if (Validator.ValidateID(id))
             {
                 VoziloVM vsm = new VoziloVM
                 {

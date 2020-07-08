@@ -1,4 +1,4 @@
-﻿using WebApp.HELPERS;
+﻿using WebApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,6 +10,6 @@ namespace WebApp.CustomValidators
     public class KilometriValidator : ValidationAttribute
     {
         public override bool IsValid(object value)
-            => (value != null && Validators.validKilometar(Convert.ToDecimal(value))) ? true : false;
+            => (value != null && Utils.Validator.ValidateDistance(Convert.ToDecimal(value))) ? true : false;
     }
 }
