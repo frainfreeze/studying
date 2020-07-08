@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" onclick="window.location.href= '@Url.Action("Index", "Home")'">
+                    <img src="~/Content/logo.png">
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <a class="navbar-item" onclick="window.location.href= '@Url.Action("Index","Vozaci")'">
+                    Vozaci
+                </a>
+                <a class="navbar-item" onclick="window.location.href= '@Url.Action("Index","Vozila")'">
+                    Vozila
+                </a>
+                <a class="navbar-item" onclick="window.location.href= '@Url.Action("Index","PutniNalozi")'">
+                    Putni nalozi
+                </a>
+                <a class="navbar-item" onclick="window.location.href= '@Url.Action("Index","Servisi")'">
+                    Servisi
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Database operations
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" onclick="window.location.href= '@Url.Action("BackupDb","Home")'">
+                            Backup db
+                        </a>
+                        <a class="navbar-item" onclick="window.location.href= '@Url.Action("NukeDb","Home")'">
+                            Clear db
+                        </a>
+                        <a class="navbar-item" onclick="window.location.href= '@Url.Action("RestoreDb","Home")'">
+                            Restore db
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light">
+                                Log in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Tomislav Kucar</p>
+        </footer>
+    </div>
+</body>
+</html>

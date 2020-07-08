@@ -1,0 +1,11 @@
+﻿@model PPPK_Web.Models.PutniNalogVM
+@if (Model == null)
+{
+    Response.Redirect(Url.Action("Index", "PutniNalozi"));
+}
+
+<h2>U izradi</h2>
+<h3>ID PN: @Model.putni_nalog.id</h3>
+<div>
+    @Html.ActionLink("Nazad na listu", "Index")
+</div>
