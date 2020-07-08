@@ -8,11 +8,11 @@
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
           --> 
             <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://DESKTOP-RTVO6TF\\SQLEXPRESS;databaseName=PPPK_DATABASE" />
-            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.user" value="tom" />
             <property name="javax.persistence.jdbc.password" value="SQL" />
 
             <!-- dialect depends on underlying database, must be set correctly -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2008Dialect" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2012Dialect" />
             <property name="hibernate.show_sql" value="true" />
             <!-- 
                  hibernate.hbm2ddl.auto: update, create, create-drop, verify 

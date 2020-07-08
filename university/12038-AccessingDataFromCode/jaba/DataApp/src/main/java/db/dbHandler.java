@@ -22,7 +22,7 @@ import models.Vozilo;
 public class dbHandler {
     private static final String DEFAULT_JAVA_CLASS = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     private final String PROJECT_DIRECTORY = System.getProperty("user.dir");
-    private static final String URL_FORMAT = "jdbc:sqlserver://DESKTOP-RTVO6TF\\SQLEXPRESS;databaseName=PPPK_DATABASE;integratedSecurity=true";
+    private static final String URL_FORMAT = "jdbc:sqlserver://DESKTOP-RTVO6TF\\SQLEXPRESS;databaseName=PPPK_DATABASE;user=tom;password=SQL";
     private static dbHandler instance = null;
     private static Connection connection = null;
     
