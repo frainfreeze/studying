@@ -1,0 +1,42 @@
+﻿@using WebApp.Models
+@model List<PutniNalogVM>
+<div class="center">
+    <h2>Putni nalozi</h2>
+    <br />
+    <table id="table_id" class="display table">
+        <thead>
+            <tr>
+                <th>Vozac</th>
+                <th>Vozilo</th>
+                <th>Status</th>
+                <th>Datum izrade</th>
+                <th>Uredi</th>
+                <th>Obrisi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (PutniNalogVM pn in @Model)
+            {
+                <tr>
+                    <td>@pn.vozac.ime @pn.vozac.prezime</td>
+                    <td>@pn.vozilo.marka @pn.tip (@pn.vozilo.godina_proizvodnje)</td>
+                    <td>@pn.status</td>
+                    <td>@pn.putni_nalog.datum_izrade</td>
+                    <td><div onclick="window.location.href= '@Url.Action("PutniNalog", "PutniNalozi", new { id = pn.putni_nalog.id })'" class="button is-small is-success">Uredi</div></td>
+                    <td>
+                        <form name="f" method="post" action="/api/v1/putniNalog/@pn.putni_nalog.id">
+                            <button type="submit" class="button is-danger is-small">Obrisi</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <div onclick="window.location.href= '@Url.Action("DodajNalog", "PutniNalozi")'" class="button is-small is-fullwidth is-primary">Dodaj novi putni nalog</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#table_id').DataTable();
+    });
+</script>
