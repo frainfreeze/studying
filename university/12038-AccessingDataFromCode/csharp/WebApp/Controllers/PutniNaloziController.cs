@@ -23,8 +23,8 @@ namespace WebApp.Controllers
         [HttpGet]
         public ActionResult DodajNalog()
         {
-            ViewBag.vozila = Other.getVozilaList();
-            ViewBag.vozaci = Other.getVozaciList();
+            ViewBag.vozila = ViewBagHelper.getVozilaList();
+            ViewBag.vozaci = ViewBagHelper.getVozaciList();
             return View();
         }
 

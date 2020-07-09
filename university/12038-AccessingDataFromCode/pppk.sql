@@ -135,8 +135,7 @@ as
                     )
 		        delete from [dbo].[putni_nalog] where vozac_id=@id
                 delete from [dbo].[vozac] where id=@id
-				RAISERROR('Vozac obrisan') WITH NOWAIT
-            commit tran
+			commit tran
         end try
         begin catch
             if @@TRANCOUNT > 0
@@ -389,6 +388,10 @@ as
     delete from [dbo].[tip_vozila]
     delete from [dbo].[vozac]
     exec sp_MSforeachtable 'DBCC CHECKIDENT ([?], reseed, 0)'
+	SET NOCOUNT ON 
+	DECLARE @time VARCHAR(16)
+	SET @time = CONVERT(VARCHAR(16),GETDATE(),114)
+	RAISERROR( 'Cleaned database at %s', 2, 1, @time) WITH NOWAIT
 go
 
 exec [dbo].[insert_dummy_data]

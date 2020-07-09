@@ -95,18 +95,6 @@ else
     </div>
 
     <script>
-        // modal stuff
-        document.getElementById("myBtn").onclick = function () { modal.style.display = "block"; };
-        document.getElementsByClassName("close")[0].onclick = closeModal;
-        window.onclick = function (event) {
-            if (event.target == document.getElementById("myModal")) {
-                closeModal();
-            }
-        }
-        function closeModal() {
-            modal.style.display = "none";
-        }
-        //////////////////
         function edit() {
             if (document.getElementById('check').readOnly) {
                 document.getElementById('check').readOnly = false;

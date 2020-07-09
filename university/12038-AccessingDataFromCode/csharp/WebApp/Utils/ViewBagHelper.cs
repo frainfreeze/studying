@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace WebApp.Utils
 {
-    public static class Other
+    public static class ViewBagHelper
     {
         public static List<SelectListItem> getTipoviVozilaList()
         {

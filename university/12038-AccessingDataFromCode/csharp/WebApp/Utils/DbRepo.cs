@@ -5,20 +5,36 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
-using System.Web;
+using System.Threading.Tasks;
 
 namespace WebApp.Utils
 {
-    public static class DatabaseHandler
+    public class DatabaseHandler
     {
         public static string CONNECTION_STRING = System.Configuration.ConfigurationManager.ConnectionStrings["PPPK_DATABASE"].ConnectionString;
-        public static string DATA_DIR = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../DATA");
+        public static string DATA_DIR = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../backup");
         private static List<string> TABLE_NAMES = new List<string> {
             "tip_vozila","mjesto","status","vozac","vozilo","putni_nalog","zauzece_vozilo","zauzece_vozac","servis","kupnja_goriva","ruta" };
 
+        public static void InfoMessageHandler(object mySender, SqlInfoMessageEventArgs myEvent)
+        {
+            System.Diagnostics.Debug.WriteLine("InfoMsg:\n" + myEvent.Errors[0]);
+        }
+
+        public static SqlConnection CreateConnection()
+        {
+            SqlConnection c = new SqlConnection(CONNECTION_STRING);
+            c.InfoMessage += new SqlInfoMessageEventHandler(InfoMessageHandler);
+            c.FireInfoMessageEventOnUserErrors = true;
+            return c;
+        }
+
         public static void NukeDb()
         {
-            using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
+            System.Diagnostics.Debug.WriteLine("InfoMsg:\n");
+            System.Diagnostics.Debug.WriteLine("This will be displayed in output window");
+            SqlConnection c = CreateConnection();
+            using (c)
             {
                 c.Open();
                 using (SqlCommand a = new SqlCommand("clean_database", c))

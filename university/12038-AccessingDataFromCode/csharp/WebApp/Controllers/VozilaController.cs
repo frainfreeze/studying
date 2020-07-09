@@ -34,14 +34,14 @@ namespace WebApp.Controllers
                 vozilo = DatabaseHandler.getVozilo(Convert.ToInt16(id)),
                 tip_vozila = DatabaseHandler.getTipVozila(Convert.ToInt16(id))
             };
-            ViewBag.tipovi_vozila = Other.getTipoviVozilaList();
+            ViewBag.tipovi_vozila = ViewBagHelper.getTipoviVozilaList();
             return View((object)vsm);
         }
 
         [HttpGet]
         public ActionResult DodajVozilo()
         {
-            ViewBag.tipovi_vozila = Other.getTipoviVozilaList();
+            ViewBag.tipovi_vozila = ViewBagHelper.getTipoviVozilaList();
             return View();
         }
 
@@ -55,7 +55,7 @@ namespace WebApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.tipovi_vozila = Other.getTipoviVozilaList();
+            ViewBag.tipovi_vozila = ViewBagHelper.getTipoviVozilaList();
             return View();
         }
 
