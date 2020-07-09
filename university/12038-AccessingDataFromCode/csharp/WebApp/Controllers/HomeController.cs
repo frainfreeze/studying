@@ -23,7 +23,7 @@ namespace WebApp.Controllers
 
         public ActionResult NukeDb()
         {
-            DatabaseHandler.NukeDb();
+            DatabaseHandler.ClearDb();
             return RedirectToAction("Index");
         }
 

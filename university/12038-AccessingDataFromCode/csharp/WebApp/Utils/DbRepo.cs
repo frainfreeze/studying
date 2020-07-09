@@ -29,7 +29,7 @@ namespace WebApp.Utils
             return c;
         }
 
-        public static void NukeDb()
+        public static void ClearDb()
         {
             System.Diagnostics.Debug.WriteLine("InfoMsg:\n");
             System.Diagnostics.Debug.WriteLine("This will be displayed in output window");
