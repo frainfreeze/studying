@@ -1,3 +1,5 @@
+# Priprema za ispit
+
 ## I1
 1. Navedite barem četiri vanjskih čimbenika interoperabilnosti. (2 boda)
   - Vanski cimbenici su razlog postojanja organizacije

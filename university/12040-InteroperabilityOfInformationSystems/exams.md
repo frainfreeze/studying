@@ -1,7 +1,16 @@
-Tomislav Kucar, 3RP2
-Ishod 1
-- Grgec je na faksu/
+# Prvi rok
+![](exam/prvi_rok/1.png)
 
+![](exam/prvi_rok/2.png)
+
+![](exam/prvi_rok/3.png)
+
+![](exam/prvi_rok/4.png)
+
+Tomislav Kucar, 3RP2
+
+Ishod 1
+???
 
 Ishod 2: zadatak
 
@@ -45,3 +54,28 @@ Ishod 7
 - Kod napada kriptiranim tekstom napadac poznaje samo kriptirani tekst, mozemo deducirati text ili cak key pomocu kripto i frequency analysis
 - DoS (denial of service) je tip napada u kojem racunalo "napada" drugo racunalo ili sustav slanjem poplave tcp i ili udp paketa. DDoS napada je verzija DoS napada u kojoj vise napadaca (racunala) napada jedno racunalo ili sustav, distribuirani napad. Od DDoS-a se ne mozemo u potpunosti zastiti no mozemo ga mitigirati pomocu rate-limitinga, load balancingom ili koristenjem servisa poput cloudflare.
 - SAML se temelji na XML jeziku i shemama te se moze osloniti na HTTP, SOAP, TLS/SSL protokole. Primjer koristenja je autentifikacija i autorizacija izmedu dvije sigurnosne domene kako bi prenjeli podatke.
+
+
+
+# Drugi rok
+
+![](exam/drugi_rok/1.png)
+
+![](exam/drugi_rok/2.png)
+
+![](exam/drugi_rok/3.png)
+
+![](exam/drugi_rok/4.png)
+
+
+<!-- # Treci rok
+
+![](exam/treci_rok/1.png)
+
+![](exam/treci_rok/2.png)
+
+![](exam/treci_rok/3.png)
+
+![](exam/treci_rok/4.png)
+
+odgovori here. -->

@@ -325,19 +325,19 @@ go
 create proc [dbo].[insert_dummy_data]
 as
     insert into [dbo].[tip_vozila]
-    values ('Karavan'),('Kabriolet'),('Limuzina'),('Hecbek'), ('Kupe'), ('Monovolumen'), ('Dzip')
+    values ('Sedan'),('Convertible'),('Limo'), ('Coupe'), ('Minivan'), ('Jeep')
     insert into [dbo].[mjesto]
     values ('Zagreb'),('Bjelovar'),('Split'),('Karlovac'),('Dubrovnik'),('Rijeka'),('Zadar'),('Vukovar')
     insert into [dbo].[status]
     values ('Traje'),('Zavrsio')
     insert into [dbo].[vozac]
     values 
-    ('Pero','Peric','+385912345678','12345678'),
-    ('Ivo','Ivic','+385912345678', '87654321')
+    ('Marica','Krampotic','+385912345678','12345678'),
+    ('Dzon','Slow','+385912345678', '87654321')
     insert into [dbo].[vozilo]
     values
-    (2,'Ferrari Enzo',2012,10000.25,10010.10),
-    (4,'Golf 7',2010,143215.1,153215.2)
+    (4,'Mazda RX-7',1979,123000,151000),
+    (1,'Toyota Camry',2018,1435,15215)
     insert into [dbo].[putni_nalog]
     values
     (1,1,2,'1/10/2020','1/10/2020','1/11/2020'),
@@ -360,7 +360,7 @@ as
     (2,'12/13/2019')
     insert into [dbo].[servis]
     values
-    (2,'12/14/2019','Tokic',500.00,'Zamjena diskova')
+    (1,'12/14/2019','Tokic',500.00,'Zamjena bos pumpe')
     insert into [dbo].[kupnja_goriva]
     values
     (1,1,9.81,20.00,'1/10/2020'),
