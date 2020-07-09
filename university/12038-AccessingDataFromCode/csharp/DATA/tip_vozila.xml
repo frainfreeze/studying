@@ -2,30 +2,26 @@
 <tip_vozila>
   <Table>
     <id>1</id>
-    <tip>Karavan</tip>
+    <tip>Sedan</tip>
   </Table>
   <Table>
     <id>2</id>
-    <tip>Kabriolet</tip>
+    <tip>Convertible</tip>
   </Table>
   <Table>
     <id>3</id>
-    <tip>Limuzina</tip>
+    <tip>Limo</tip>
   </Table>
   <Table>
     <id>4</id>
-    <tip>Hecbek</tip>
+    <tip>Coupe</tip>
   </Table>
   <Table>
     <id>5</id>
-    <tip>Kupe</tip>
+    <tip>Minivan</tip>
   </Table>
   <Table>
     <id>6</id>
-    <tip>Monovolumen</tip>
-  </Table>
-  <Table>
-    <id>7</id>
-    <tip>Dzip</tip>
+    <tip>Jeep</tip>
   </Table>
 </tip_vozila>

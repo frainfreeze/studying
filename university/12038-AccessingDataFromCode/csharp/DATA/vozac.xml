@@ -2,86 +2,16 @@
 <vozac>
   <Table>
     <id>1</id>
-    <ime>Pero</ime>
-    <prezime>Peric</prezime>
+    <ime>Marica</ime>
+    <prezime>Krampotic</prezime>
     <broj_mobitela>+385912345678</broj_mobitela>
     <broj_vozacke>12345678</broj_vozacke>
   </Table>
   <Table>
     <id>2</id>
-    <ime>Ivo</ime>
-    <prezime>Ivic</prezime>
+    <ime>Dzon</ime>
+    <prezime>Slow</prezime>
     <broj_mobitela>+385912345678</broj_mobitela>
-    <broj_vozacke>87654321</broj_vozacke>
-  </Table>
-  <Table>
-    <id>3</id>
-    <ime>"Piletina1"</ime>
-    <prezime>"Ispod saca1"</prezime>
-    <broj_mobitela> "+382928182739"</broj_mobitela>
-    <broj_vozacke> "12345622"</broj_vozacke>
-  </Table>
-  <Table>
-    <id>4</id>
-    <ime>"Piletina2"</ime>
-    <prezime>"Ispod saca2"</prezime>
-    <broj_mobitela> "+382928182739"</broj_mobitela>
-    <broj_vozacke> "12345622"</broj_vozacke>
-  </Table>
-  <Table>
-    <id>5</id>
-    <ime>"Piletina3"</ime>
-    <prezime>"Ispod saca3"</prezime>
-    <broj_mobitela> "+382928182739"</broj_mobitela>
-    <broj_vozacke> "12345622"</broj_vozacke>
-  </Table>
-  <Table>
-    <id>6</id>
-    <ime>"Piletina4"</ime>
-    <prezime>"Ispod saca4"</prezime>
-    <broj_mobitela> "+382928182739"</broj_mobitela>
-    <broj_vozacke> "12345622"</broj_vozacke>
-  </Table>
-  <Table>
-    <id>7</id>
-    <ime>"Osoba1"</ime>
-    <prezime>"Prezimeosobe1"</prezime>
-    <broj_mobitela> "+385954846152"</broj_mobitela>
-    <broj_vozacke> "12345678"</broj_vozacke>
-  </Table>
-  <Table>
-    <id>8</id>
-    <ime>"Osoba2"</ime>
-    <prezime>"Prezimeosobe2"</prezime>
-    <broj_mobitela> "+385917273222"</broj_mobitela>
-    <broj_vozacke> "87654321"</broj_vozacke>
-  </Table>
-  <Table>
-    <id>9</id>
-    <ime>Osoba1</ime>
-    <prezime>Prezimeosobe1</prezime>
-    <broj_mobitela>+385954846152</broj_mobitela>
-    <broj_vozacke>12345678</broj_vozacke>
-  </Table>
-  <Table>
-    <id>10</id>
-    <ime>Osoba2</ime>
-    <prezime>Prezimeosobe2</prezime>
-    <broj_mobitela>+385917273222</broj_mobitela>
-    <broj_vozacke>87654321</broj_vozacke>
-  </Table>
-  <Table>
-    <id>11</id>
-    <ime>Osoba1</ime>
-    <prezime>Prezimeosobe1</prezime>
-    <broj_mobitela>+385954846152</broj_mobitela>
-    <broj_vozacke>12345678</broj_vozacke>
-  </Table>
-  <Table>
-    <id>12</id>
-    <ime>Osoba2</ime>
-    <prezime>Prezimeosobe2</prezime>
-    <broj_mobitela>+385917273222</broj_mobitela>
     <broj_vozacke>87654321</broj_vozacke>
   </Table>
 </vozac>

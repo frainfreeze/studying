@@ -114,12 +114,12 @@
     <Content Include="Global.asax" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>model.edmx</DependentUpon>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>model.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
@@ -139,10 +139,6 @@
     <Compile Include="Controllers\PutniNaloziController.cs" />
     <Compile Include="Controllers\VozaciController.cs" />
     <Compile Include="Controllers\VozilaController.cs" />
-    <Compile Include="CustomValidators\BrojMobitelaValidator.cs" />
-    <Compile Include="CustomValidators\BrojVozackeValidator.cs" />
-    <Compile Include="CustomValidators\GodinaProizvodnjeValidator.cs" />
-    <Compile Include="CustomValidators\KilometriValidator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -165,10 +161,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
+    <Compile Include="model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DatumNaloga.cs" />
     <Compile Include="Models\PutniNalog.cs" />
@@ -204,12 +200,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="model.edmx.diagram">
+      <DependentUpon>model.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />

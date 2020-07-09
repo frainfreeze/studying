@@ -135,6 +135,7 @@ as
                     )
 		        delete from [dbo].[putni_nalog] where vozac_id=@id
                 delete from [dbo].[vozac] where id=@id
+				RAISERROR('Vozac obrisan') WITH NOWAIT
             commit tran
         end try
         begin catch

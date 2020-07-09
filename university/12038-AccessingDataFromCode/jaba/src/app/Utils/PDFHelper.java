@@ -71,6 +71,7 @@ public class PDFHelper {
                 }
 
                 doc.save(Paths.get(path, fname).toString());
+                System.out.println(Paths.get(path, fname).toString());
             } catch (IOException e) {
                 e.printStackTrace();
             }
