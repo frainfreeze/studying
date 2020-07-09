@@ -108,13 +108,6 @@ namespace WebApp.Utils
             }
         }
 
-
-        /// <summary>
-        /// Vraca sve putne naloge zapakirane u listu PutniNalogVM-a
-        /// </summary>
-        /// /// <returns>
-        /// List<PutniNalogVM>
-        /// </returns>
         public static List<PutniNalog> getAllPutniNalozi()
         {
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -167,21 +160,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Ubacuje novi putni nalog
-        /// </summary>
-        /// <param name="datum_pocetka">Datum pocetka putnog naloga</param>
-        /// <param name="datum_zavrsetka">Datum zavrsetka putnog naloga</param>
-        /// <param name="vozac_id">ID vozaca</param>
-        /// <param name="vozilo_id">ID vozila</param>
-        /// /// <returns>
-        /// ID insertanog pn ili 0
-        /// </returns>
         public static int insertPutniNalog(DateTime datum_pocetka, DateTime datum_zavrsetka, int vozac_id, int vozilo_id)
         {
-            if (!Validator.ValidateID(vozac_id) || !Validator.ValidateID(vozilo_id))
-            { return 0; }
-
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -202,16 +182,8 @@ namespace WebApp.Utils
 
         }
 
-        /// <summary>
-        /// Brise putni nalog
-        /// </summary>
-        /// <param name="id">Putni nalog ID </param>
-        /// /// <returns>
-        /// True ako je obrisan, false inace
-        /// </returns>
         public static bool deletePutniNalog(int id)
         {
-            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -224,15 +196,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Vraca putne nalog zapakirane u PutniNalogVM
-        /// </summary>
-        /// /// <returns>
-        /// PutniNalogVM
-        /// </returns>
         public static PutniNalog getPutniNalog(int id)
         {
-            if (!Validator.ValidateID(id)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -283,16 +248,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Brise sve rute putnog naloga
-        /// </summary>
-        /// <param name="id">Putni nalog ID </param>
-        /// /// <returns>
-        /// Broj obrisanih redova
-        /// </returns>
         public static int deleteRute(int id)
         {
-            if (!Validator.ValidateID(id)) { return 0; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -305,16 +262,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Brise rutu
-        /// </summary>
-        /// <param name="id">Ruta ID</param>
-        /// /// <returns>
-        /// True ako je obrisan, false inace
-        /// </returns>
         public static bool deleteRuta(int id)
         {
-            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -327,28 +276,8 @@ namespace WebApp.Utils
             }
         }
 
-
-        /// <summary>
-        /// Updatea vozaca
-        /// </summary>
-        /// <param name="ID">Vozilo ID</param>
-        /// <param name="marka">Marka vozila</param>
-        /// <param name="tip_vozila_id">ID tip vozila</param>
-        /// <param name="pocetni_km">Pocetni km vozila</param>
-        /// <param name="trenutni_km">Trenutni km vozila</param>
-        /// <param name="godina_proizvodnje">Godina proizvodnje vozila</param>
-        /// /// <returns>
-        /// true ako je update uspio, false inace
-        /// </returns>
         public static bool updateVozilo(int id, string marka, int tip_vozila_id, decimal pocetni_km, decimal trenutni_km, int godina_proizvodnje)
         {
-            if (
-                !Validator.ValidateID(id) ||
-                !Validator.ValidateYear(godina_proizvodnje) ||
-                !Validator.ValidateDistance(pocetni_km) ||
-                !Validator.ValidateDistance(trenutni_km))
-            { return false; }
-
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -367,16 +296,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Brise vozilo
-        /// </summary>
-        /// <param name="id">Vozilo id</param>
-        /// /// <returns>
-        /// True ako je obrisan, false inace
-        /// </returns>
         public static bool deleteVozilo(int id)
         {
-            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -389,25 +310,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Inserta vozilo
-        /// </summary>
-        /// <param name="marka">Marka vozila</param>
-        /// <param name="tip_vozila_id">ID tip vozila</param>
-        /// <param name="pocetni_km">Pocetni km vozila</param>
-        /// <param name="trenutni_km">Trenutni km vozila</param>
-        /// <param name="godina_proizvodnje">Godina proizvodnje vozila</param>
-        /// /// <returns>
-        /// ID insertanog vozila, 0 ako faila
-        /// </returns>
         public static int insertVozilo(string marka, int? tip_vozila_id, decimal trenutni_km, decimal pocetni_km, int godina_proizvodnje)
         {
-            if (
-                !Validator.ValidateYear(godina_proizvodnje) ||
-                !Validator.ValidateDistance(pocetni_km) ||
-                !Validator.ValidateDistance(trenutni_km))
-            { return 0; }
-
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -427,21 +331,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Inserta servis
-        /// </summary>
-        /// <param name="naziv_servisa">Naziv servisa</param>
-        /// <param name="datum">Datum obavljanja servisa</param>
-        /// <param name="cijena">Cijena servisa</param>
-        /// <param name="info">Dodatne informacije o serisu</param>
-        /// /// <returns>
-        /// ID insertanog servisa, 0 ako faila
-        /// </returns>
         public static int insertServis(string naziv_servisa, DateTime datum, decimal cijena, string info, int vozilo_id)
         {
-            if (!Validator.ValidateYear(datum.Year))
-            { return 0; }
-
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -461,24 +352,8 @@ namespace WebApp.Utils
             }
         }
 
-
-        /// <summary>
-        /// Updatea servis
-        /// </summary>
-        /// <param name="id">Servis ID</param>
-        /// <param name="naziv_servisa">Naziv servisa</param>
-        /// <param name="datum">Datum obavljanja servisa</param>
-        /// <param name="cijena">Cijena servisa</param>
-        /// <param name="info">Dodatne informacije o serisu</param>
-        /// /// <returns>
-        /// true ako je update uspio, false inace
-        /// </returns>
         public static bool updateServis(int id, string naziv_servisa, DateTime datum, decimal cijena, string info)
         {
-            if (!Validator.ValidateID(id) ||
-                !Validator.ValidateYear(datum.Year))
-            { return false; }
-
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -496,16 +371,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Brise servis
-        /// </summary>
-        /// <param name="id">Servis id</param>
-        /// /// <returns>
-        /// True ako je obrisan, false inace
-        /// </returns>
         public static bool deleteServis(int? id)
         {
-            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -518,25 +385,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Updatea vozaca
-        /// </summary>
-        /// <param name="ID">Vozac ID</param>
-        /// <param name="ime">Ime vozaca</param>
-        /// <param name="prezime">Prezime vozaca</param>
-        /// <param name="broj_mobitela">Broj mobitela</param>
-        /// <param name="broj_vozacke">Broj vozacke</param>
-        /// /// <returns>
-        /// true ako je update uspio, false inace
-        /// </returns>
         public static bool updateVozac(int id, string ime, string prezime, string broj_mobitela, string broj_vozacke)
         {
-            if (
-                !Validator.ValidateID(id) ||
-                !Validator.ValidatePhoneNum(broj_mobitela) ||
-                !Validator.ValidateVozackaID(broj_vozacke))
-            { return false; }
-
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -554,16 +404,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Brise vozaca
-        /// </summary>
-        /// <param name="id">Vozac id</param>
-        /// /// <returns>
-        /// True ako je obrisan, false inace
-        /// </returns>
         public static bool deleteVozac(int id)
         {
-            if (!Validator.ValidateID(id)) { return false; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -576,23 +418,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Inserta vozaca
-        /// </summary>
-        /// <param name="ime">Ime vozaca</param>
-        /// <param name="prezime">Prezime vozaca</param>
-        /// <param name="broj_mobitela">Broj mobitela</param>
-        /// <param name="broj_vozacke">Broj vozacke</param>
-        /// /// <returns>
-        /// ID insertanog vozaca, 0 ako nije insertao
-        /// </returns>
         public static int insertVozac(string ime, string prezime, string broj_mobitela, string broj_vozacke)
         {
-            if (
-                !Validator.ValidatePhoneNum(broj_mobitela) ||
-                !Validator.ValidateVozackaID(broj_vozacke))
-            { return 0; }
-
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -611,16 +438,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Dohvaca vozac
-        /// </summary>
-        /// <param name="ID">Vozac ID</param>
-        /// /// <returns>
-        /// vozac or null
-        /// </returns>
         public static vozac getVozac(int ID)
         {
-            if (!Validator.ValidateID(ID)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -654,13 +473,6 @@ namespace WebApp.Utils
             }
         }
 
-
-        /// <summary>
-        /// Dohvaca sve vozace
-        /// </summary>
-        /// /// <returns>
-        /// List<vozac> or null
-        /// </returns>
         public static List<vozac> getAllVozaci()
         {
             List<vozac> filler = new List<vozac>();
@@ -696,16 +508,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Dohvaca vozilo
-        /// </summary>
-        /// <param name="ID">Vozilo ID</param>
-        /// /// <returns>
-        /// vozilo or null
-        /// </returns>
         public static vozilo getVozilo(int ID)
         {
-            if (!Validator.ValidateID(ID)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -740,11 +544,6 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Dohvaca sva vozila
-        /// /// <returns>
-        /// List<vozilo> or null
-        /// </returns>
         public static List<vozilo> getAllVozila()
         {
             List<vozilo> filler = new List<vozilo>();
@@ -780,16 +579,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Dohvaca sve servise napravljene na vozilu
-        /// </summary>
-        /// <param int="ID">Vozilo ID</param>
-        /// /// <returns>
-        /// List<servi> or null
-        /// </returns>
         public static List<servi> getServisi(int ID)
         {
-            if (!Validator.ValidateID(ID)) { return null; }
             List<servi> filler = new List<servi>();
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
@@ -828,16 +619,8 @@ namespace WebApp.Utils
             }
         }
 
-        /// <summary>
-        /// Dohvaca tip vozila
-        /// </summary>
-        /// <param int="ID">Tip vozila ID</param>
-        /// /// <returns>
-        /// <c>tip_vozila</c> ili null
-        /// </returns>
         public static tip_vozila getTipVozila(int ID)
         {
-            if (!Validator.ValidateID(ID)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
                 c.Open();
@@ -868,13 +651,6 @@ namespace WebApp.Utils
             }
         }
 
-
-        /// <summary>
-        /// Dohvaca sve tipove vozila
-        /// </summary>
-        /// /// <returns>
-        /// List<tip_vozila> ili null
-        /// </returns>
         public static List<tip_vozila> getAllTipVozila()
         {
             List<tip_vozila> filler = new List<tip_vozila>();

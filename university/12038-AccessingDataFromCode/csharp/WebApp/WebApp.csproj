@@ -144,7 +144,6 @@
     </Compile>
     <Compile Include="Utils\DbRepo.cs" />
     <Compile Include="Utils\Other.cs" />
-    <Compile Include="Utils\Validator.cs" />
     <Compile Include="kupnja_goriva.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

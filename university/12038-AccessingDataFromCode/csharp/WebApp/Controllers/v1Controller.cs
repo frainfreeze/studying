@@ -14,69 +14,48 @@ namespace WebApp.Controllers
         [HttpGet]
         public HttpResponseMessage vozac(int? id, string ime, string prezime, string broj_mobitela, string broj_vozacke)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.updateVozac((int)id, ime, prezime, broj_mobitela, broj_vozacke);
-                var response = Request.CreateResponse(HttpStatusCode.Moved);
-                string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + $"/Vozaci/Vozac/{id}";
-                response.Headers.Location = new Uri(fullyQualifiedUrl);
-                return response;
-            }
-            else
-            {
-                return null;
-            }
+            DatabaseHandler.updateVozac((int)id, ime, prezime, broj_mobitela, broj_vozacke);
+            var response = Request.CreateResponse(HttpStatusCode.Moved);
+            string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + $"/Vozaci/Vozac/{id}";
+            response.Headers.Location = new Uri(fullyQualifiedUrl);
+            return response;
+
         }
 
         [HttpPost]
         public HttpResponseMessage vozac(int? id)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.deleteVozac((int)id);
-                var response = Request.CreateResponse(HttpStatusCode.Moved);
-                string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + "/Vozaci";
-                response.Headers.Location = new Uri(fullyQualifiedUrl);
-                return response;
-            }
-            else{ return null; }
+            DatabaseHandler.deleteVozac((int)id);
+            var response = Request.CreateResponse(HttpStatusCode.Moved);
+            string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + "/Vozaci";
+            response.Headers.Location = new Uri(fullyQualifiedUrl);
+            return response;
         }
 
         [HttpGet]
         public HttpResponseMessage vozilo(int? id, string marka, int tipovi_vozila, decimal pocetni_km, decimal trenutni_km, int godina_proizvodnje)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.updateVozilo((int)id, marka, tipovi_vozila, pocetni_km, trenutni_km, godina_proizvodnje);
-                var response = Request.CreateResponse(HttpStatusCode.Moved);
-                string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + $"/Vozila/Vozilo/{id}";
-                response.Headers.Location = new Uri(fullyQualifiedUrl);
-                return response;
-            }
-            else
-            {
-                return null;
-            }
+            DatabaseHandler.updateVozilo((int)id, marka, tipovi_vozila, pocetni_km, trenutni_km, godina_proizvodnje);
+            var response = Request.CreateResponse(HttpStatusCode.Moved);
+            string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + $"/Vozila/Vozilo/{id}";
+            response.Headers.Location = new Uri(fullyQualifiedUrl);
+            return response;
         }
 
         [HttpPost]
         public HttpResponseMessage vozilo(int? id)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.deleteVozilo((int)id);
-                var response = Request.CreateResponse(HttpStatusCode.Moved);
-                string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + "/Vozila";
-                response.Headers.Location = new Uri(fullyQualifiedUrl);
-                return response;
-            }
-            else { return null; }
+            DatabaseHandler.deleteVozilo((int)id);
+            var response = Request.CreateResponse(HttpStatusCode.Moved);
+            string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + "/Vozila";
+            response.Headers.Location = new Uri(fullyQualifiedUrl);
+            return response;
         }
 
         [HttpGet]
         public HttpResponseMessage servis(string mjesto, DateTime datum, decimal cijena, string info, int vozilo_id)
         {
-            DatabaseHandler.insertServis(mjesto, datum, cijena, info,vozilo_id);
+            DatabaseHandler.insertServis(mjesto, datum, cijena, info, vozilo_id);
             var response = Request.CreateResponse(HttpStatusCode.Moved);
             string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + "/Vozila/";
             response.Headers.Location = new Uri(fullyQualifiedUrl);
@@ -86,67 +65,45 @@ namespace WebApp.Controllers
         [HttpGet]
         public HttpResponseMessage servis(int id, string mjesto, DateTime datum, decimal cijena, string info, int vozilo_id)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.updateServis(id, mjesto, datum, cijena, info);
-                var response = Request.CreateResponse(HttpStatusCode.Moved);
-                string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + $"/Vozila/Vozilo/{vozilo_id}";
-                response.Headers.Location = new Uri(fullyQualifiedUrl);
-                return response;
-            }
-            else { return null; }
+            DatabaseHandler.updateServis(id, mjesto, datum, cijena, info);
+            var response = Request.CreateResponse(HttpStatusCode.Moved);
+            string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + $"/Vozila/Vozilo/{vozilo_id}";
+            response.Headers.Location = new Uri(fullyQualifiedUrl);
+            return response;
         }
 
         [HttpPost]
         public HttpResponseMessage servis(int? id, int vozilo_id)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.deleteServis(id);
-                var response = Request.CreateResponse(HttpStatusCode.Moved);
-                string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + $"/Vozila/Vozilo/{vozilo_id}";
-                response.Headers.Location = new Uri(fullyQualifiedUrl);
-                return response;
-            }
-            else { return null; }
+            DatabaseHandler.deleteServis(id);
+            var response = Request.CreateResponse(HttpStatusCode.Moved);
+            string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + $"/Vozila/Vozilo/{vozilo_id}";
+            response.Headers.Location = new Uri(fullyQualifiedUrl);
+            return response;
         }
 
         [HttpPost]
         public HttpResponseMessage putniNalog(int? id)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.deletePutniNalog((int)id);
-                var response = Request.CreateResponse(HttpStatusCode.Moved);
-                string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + "/PutniNalozi";
-                response.Headers.Location = new Uri(fullyQualifiedUrl);
-                return response;
-            }
-            else { return null; }
+            DatabaseHandler.deletePutniNalog((int)id);
+            var response = Request.CreateResponse(HttpStatusCode.Moved);
+            string fullyQualifiedUrl = Request.RequestUri.GetLeftPart(UriPartial.Authority) + "/PutniNalozi";
+            response.Headers.Location = new Uri(fullyQualifiedUrl);
+            return response;
         }
 
         [HttpPost]
         public HttpResponseMessage obrisiRutu(int? id)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.deleteRuta((int)id);
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
-            else { return Request.CreateResponse(HttpStatusCode.BadRequest); }
+            DatabaseHandler.deleteRuta((int)id);
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
 
         [HttpPost]
         public HttpResponseMessage obrisiRute(int? id)
         {
-            if (Validator.ValidateID(id))
-            {
-                DatabaseHandler.deleteRute((int)id);
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
-            else { return Request.CreateResponse(HttpStatusCode.BadRequest); }
+            DatabaseHandler.deleteRute((int)id);
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
-
-
     }
 }

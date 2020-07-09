@@ -36,8 +36,6 @@ namespace WebApp.Utils
                 });
             }
             return items;
-
-
         }
 
         public static List<SelectListItem> getVozaciList()

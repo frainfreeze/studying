@@ -17,14 +17,7 @@ namespace WebApp.Controllers
 
         public ActionResult Vozac(int? id)
         {
-            if (Validator.ValidateID(id))
-            {
-                return View((object)DatabaseHandler.getVozac((int)id));
-            }
-            else
-            {
-                return View((object)null);
-            }
+            return View((object)DatabaseHandler.getVozac((int)id));
         }
 
         [HttpGet]

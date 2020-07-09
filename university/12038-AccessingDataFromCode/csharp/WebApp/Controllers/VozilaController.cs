@@ -14,7 +14,7 @@ namespace WebApp.Controllers
         public ActionResult Index()
         {
             List<Vozilo> vvl = new List<Vozilo>();
-            foreach(vozilo v in DatabaseHandler.getAllVozila())
+            foreach (vozilo v in DatabaseHandler.getAllVozila())
             {
                 vvl.Add(new Vozilo
                 {
@@ -28,21 +28,14 @@ namespace WebApp.Controllers
 
         public ActionResult Vozilo(int? id)
         {
-            if (Validator.ValidateID(id))
+            Vozilo vsm = new Vozilo
             {
-                Vozilo vsm = new Vozilo
-                {
-                    servisi = DatabaseHandler.getServisi(Convert.ToInt16(id)),
-                    vozilo = DatabaseHandler.getVozilo(Convert.ToInt16(id)),
-                    tip_vozila = DatabaseHandler.getTipVozila(Convert.ToInt16(id))
-                };
-                ViewBag.tipovi_vozila = Other.getTipoviVozilaList();
-                return View((object)vsm);
-            }
-            else
-            {
-                return View((object)null);
-            }
+                servisi = DatabaseHandler.getServisi(Convert.ToInt16(id)),
+                vozilo = DatabaseHandler.getVozilo(Convert.ToInt16(id)),
+                tip_vozila = DatabaseHandler.getTipVozila(Convert.ToInt16(id))
+            };
+            ViewBag.tipovi_vozila = Other.getTipoviVozilaList();
+            return View((object)vsm);
         }
 
         [HttpGet]
@@ -64,7 +57,6 @@ namespace WebApp.Controllers
 
             ViewBag.tipovi_vozila = Other.getTipoviVozilaList();
             return View();
-
         }
 
     }

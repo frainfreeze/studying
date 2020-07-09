@@ -17,14 +17,7 @@ namespace WebApp.Controllers
 
         public ActionResult PutniNalog(int? id)
         {
-            if (Validator.ValidateID(id))
-            {
-                return View((object)DatabaseHandler.getPutniNalog((int)id));
-            }
-            else
-            {
-                return View((object)null);
-            }
+            return View((object)DatabaseHandler.getPutniNalog((int)id));
         }
 
         [HttpGet]
@@ -39,7 +32,7 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DodajNalog(DateTime datum_pocetka, DateTime datum_zavrsetka, string vozaci, string vozila)
         {
-            DatabaseHandler.insertPutniNalog(datum_pocetka,datum_zavrsetka,Convert.ToInt16(vozaci), Convert.ToInt16(vozila));
+            DatabaseHandler.insertPutniNalog(datum_pocetka, datum_zavrsetka, Convert.ToInt16(vozaci), Convert.ToInt16(vozila));
             return RedirectToAction("Index");
         }
     }
