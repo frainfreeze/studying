@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace WebApp.Models
 {
-    public class DodajNalogVM
+    public class DatumNaloga
     {
         public DateTime datum { get; set; }
         public DateTime datum_pocetka { get; set; }

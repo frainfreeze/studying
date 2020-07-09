@@ -13,10 +13,10 @@ namespace WebApp.Controllers
         // GET: Vozila
         public ActionResult Index()
         {
-            List<VozilaVM> vvl = new List<VozilaVM>();
+            List<Vozilo> vvl = new List<Vozilo>();
             foreach(vozilo v in DatabaseHandler.getAllVozila())
             {
-                vvl.Add(new VozilaVM
+                vvl.Add(new Vozilo
                 {
                     tip_vozila = DatabaseHandler.getTipVozila((int)v.tip_vozila_id),
                     vozilo = v
@@ -30,7 +30,7 @@ namespace WebApp.Controllers
         {
             if (Validator.ValidateID(id))
             {
-                VoziloVM vsm = new VoziloVM
+                Vozilo vsm = new Vozilo
                 {
                     servisi = DatabaseHandler.getServisi(Convert.ToInt16(id)),
                     vozilo = DatabaseHandler.getVozilo(Convert.ToInt16(id)),

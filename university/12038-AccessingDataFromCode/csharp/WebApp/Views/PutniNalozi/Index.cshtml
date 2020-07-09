@@ -1,5 +1,6 @@
 ﻿@using WebApp.Models
-@model List<PutniNalogVM>
+@model List<PutniNalog>
+
 <div class="center">
     <h2>Putni nalozi</h2>
         <br />
@@ -15,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (PutniNalogVM pn in @Model)
+            @foreach (PutniNalog pn in @Model)
             {
                 <tr>
                     <td>@pn.vozac.ime @pn.vozac.prezime</td>

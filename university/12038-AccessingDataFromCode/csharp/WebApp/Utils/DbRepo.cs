@@ -115,7 +115,7 @@ namespace WebApp.Utils
         /// /// <returns>
         /// List<PutniNalogVM>
         /// </returns>
-        public static List<PutniNalogVM> getAllPutniNalozi()
+        public static List<PutniNalog> getAllPutniNalozi()
         {
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
             {
@@ -124,12 +124,12 @@ namespace WebApp.Utils
                 {
                     DataTable t = new DataTable();
                     a.Fill(t);
-                    List<PutniNalogVM> lpn = new List<PutniNalogVM>();
+                    List<PutniNalog> lpn = new List<PutniNalog>();
                     if (t.Rows.Count > 0)
                     {
                         foreach (DataRow dr in t.Rows)
                         {
-                            PutniNalogVM pn = new PutniNalogVM
+                            PutniNalog pn = new PutniNalog
                             {
                                 putni_nalog = new putni_nalog
                                 {
@@ -230,7 +230,7 @@ namespace WebApp.Utils
         /// /// <returns>
         /// PutniNalogVM
         /// </returns>
-        public static PutniNalogVM getPutniNalog(int id)
+        public static PutniNalog getPutniNalog(int id)
         {
             if (!Validator.ValidateID(id)) { return null; }
             using (SqlConnection c = new SqlConnection(CONNECTION_STRING))
@@ -248,7 +248,7 @@ namespace WebApp.Utils
                     a.Fill(t);
                     if (t.Rows.Count > 0)
                     {
-                        PutniNalogVM pn = new PutniNalogVM
+                        PutniNalog pn = new PutniNalog
                         {
                             putni_nalog = new putni_nalog
                             {

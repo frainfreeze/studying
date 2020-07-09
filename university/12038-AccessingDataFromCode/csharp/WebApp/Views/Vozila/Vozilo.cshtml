@@ -1,58 +1,4 @@
-﻿@model WebApp.Models.PutniNalogVM
-
-@{
-    ViewBag.Title = "Vozilo";
-}
-
-<style>
-    .center {
-        margin: auto;
-        width: 50%;
-        padding-top: 5%;
-        text-align: center;
-    }
-    ul {
-        list-style: none
-    }
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-    /* Modal Content */
-    .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-    /* The Close Button */
-    .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-</style>
-
-<div onclick="window.location.href= '@Url.Action("Index", "Vozila")'" class="btn btn-primary">Natrag na popis vozila</div>
+﻿@model WebApp.Models.Vozilo
 @if (Model == null)
 {
     <h2>ID nije poslan u url-u</h2>
@@ -76,14 +22,15 @@ else
                     <li>Tip vozila: <fieldset id="inp2" disabled>@Html.DropDownList("tipovi_vozila", "--Tip vozila--")</fieldset></li>
                 </ul>
                 <input hidden="hidden" id="check" readonly />
-                <div id="bt" onclick="edit()" class="btn btn-primary">Uredi</div>
-                <div id="bt_send" onclick="document.forms['voz'].submit();" class="btn btn-success" hidden>Spremi</div>
+                <div id="bt" onclick="edit()" class="button is-small is-primary">Uredi</div>
+                <div id="bt_send" onclick="document.forms['voz'].submit();" class="button is-small is-primary" hidden>Spremi</div>
             </form>
         </div>
 
         @if (Model.servisi != null)
         {
-            <h4>Servisi:</h4>
+            <br />
+            <h4 class="is-size-3">Servisi:</h4>
             foreach (servi s in Model.servisi)
             {
                 <div class="row">
@@ -108,15 +55,13 @@ else
                         </form>
                     </div>
                     <div class="col-2 text-center align-self-center">
-                        <div onclick="editServisi(this.id)" id="servis_@(s.id)" class="btn btn-success">
-                            Uredi
-                        </div>
+                        <div onclick="editServisi(this.id)" id="servis_@(s.id)" class="button is-small is-primary">Uredi</div>
+                        <div id="ser_@(s.id)" onclick="document.forms['ser_@(s.id)'].submit();" class="button is-small is-primary" hidden>Spremi</div>
                         <input hidden="hidden" id="check_@(s.id)" readonly />
                         <form method="post" action="/api/v1/servis/@(s.id)" name="obrisi_@(s.id)">
                             <input hidden name="vozilo_id" value="@(Model.vozilo.id)" />
-                            <div id="ser_obrisi_@(s.id)" onclick="document.forms['obrisi_@(s.id)'].submit();" class="btn btn-danger">Obrisi</div>
+                            <div id="ser_obrisi_@(s.id)" onclick="document.forms['obrisi_@(s.id)'].submit();" class="button is-small is-primary">Obrisi</div>
                         </form>
-                        <div id="ser_@(s.id)" onclick="document.forms['ser_@(s.id)'].submit();" class="btn btn-success" hidden>Spremi</div>
                     </div>
                 </div>
             }
@@ -126,39 +71,32 @@ else
             <h4> Na ovom vozilu nisu radeni servisi</h4>
         }
 
-        <div id="myBtn" class="btn btn-primary">Dodaj servis</div>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <form method="get" action="/api/v1/servis/">
-                    <div class="row">
-                        <div class="col">
-                            Mjesto: <input type="text" name="mjesto">
-                        </div>
-                        <div class="col">
-                            Datum: <input type="date" name="datum">
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col">
-                            Cijena: <input type="number" name="cijena">
-                        </div>
-                        <div class="col">
-                            Dodatan info: <input type="text" name="info">
-                        </div>
-                    </div>
-                    <input hidden name="vozilo_id" value="@(Model.vozilo.id)" />
-                    <button type="submit" onclick="closeModal()">Dodaj</button>
-                </form>
+        <br />
+        <h4 class="is-size-3">Dodaj servis:</h4>
+        <form method="get" action="/api/v1/servis/">
+            <div class="row">
+                <div class="col">
+                    Mjesto: <input type="text" name="mjesto">
+                </div>
+                <div class="col">
+                    Datum: <input type="date" name="datum">
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    Cijena: <input type="number" name="cijena">
+                </div>
+                <div class="col">
+                    Dodatan info: <input type="text" name="info">
+                </div>
             </div>
-        </div>
+            <input hidden name="vozilo_id" value="@(Model.vozilo.id)" />
+            <button type="submit" onclick="closeModal()" class="button is-small is-primary">Dodaj servis</button>
+        </form>
     </div>
-
 
     <script>
         // modal stuff
-        document.getElementById("myBtn").onclick = function () {modal.style.display = "block";};
+        document.getElementById("myBtn").onclick = function () { modal.style.display = "block"; };
         document.getElementsByClassName("close")[0].onclick = closeModal;
         window.onclick = function (event) {
             if (event.target == document.getElementById("myModal")) {
@@ -221,3 +159,5 @@ else
         };
     </script>
 }
+<hr style="border-top: 3px solid #bbb;">
+<div onclick="window.location.href= '@Url.Action("Index", "Vozila")'" class="button is-small is-primary">Natrag na popis vozila</div>
