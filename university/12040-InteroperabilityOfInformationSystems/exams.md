@@ -68,7 +68,7 @@ Ishod 7
 ![](exam/drugi_rok/4.png)
 
 
-<!-- # Treci rok
+# Treci rok
 
 ![](exam/treci_rok/1.png)
 
@@ -78,4 +78,8 @@ Ishod 7
 
 ![](exam/treci_rok/4.png)
 
-odgovori here. -->
+![](exam/treci_rok/5.png)
+
+![](exam/treci_rok/6.png)
+
+![](exam/treci_rok/7.png)
