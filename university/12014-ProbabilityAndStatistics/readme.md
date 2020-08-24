@@ -1,15 +1,19 @@
 ## Prvi i drugi rok
 
 ### I2
-1. (3) Tri strijelca gadaju s vjerojatnoscu od 0.2, 0.4, 0.6. a) meta je pogodena, b) tocno je jedan 
+1. Tri strijelca gadaju metu po jedanput, nezavisno jedan od drugoga. Vjerojatnost pogotka 
+prvog strijelca je 0.2 a drugog 0.3. Kolika je vjerojatnost pogotka treceg strijelca ako je poznato
+da ce meta biti pogodena jednaka 0.664?
+
+2. (3) Tri strijelca gadaju s vjerojatnoscu od 0.2, 0.4, 0.6. a) meta je pogodena, b) tocno je jedan 
 pogodio metu, c) najvise je jedan pogodio metu
 
-2. (3) A i B su nezavisni dogadaji, P(A) = 1/6, P(A∪B) = 3/5. Vjerojatnost dogadaja B?
+3. (3) A i B su nezavisni dogadaji, P(A) = 1/6, P(A∪B) = 3/5. Vjerojatnost dogadaja B?
 
-3. (4) Bacamo 6 kocaka. A = { pale su 2 jedinice i 2 dvojke }, B = { svi brojevi su manji od 4 }. 
+4. (4) Bacamo 6 kocaka. A = { pale su 2 jedinice i 2 dvojke }, B = { svi brojevi su manji od 4 }. 
 Odredi uvjetne vjerojatnosti P(A|B) i P(B|A)
 
-4. (4) Student odgovara na pitanja. Ima 4 odgovora od kojih tri tocna i jedan netocan. Vjerojatnost
+5. (4) Student odgovara na pitanja. Ima 4 odgovora od kojih tri tocna i jedan netocan. Vjerojatnost
 da zna odgovor je 0.8, a da ne zna odnosno pogada na srecu 0.2. a) vjerojatnost da tocno odgovori,
 b) ako je tocno odgovorio kolika je vjerojatnost da odgovor nije pogodio na srecu?
 
