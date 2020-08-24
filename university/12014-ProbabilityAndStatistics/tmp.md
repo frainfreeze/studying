@@ -1,6 +1,4 @@
-## Prvi i drugi rok
-
-### I2
+### Vjerojatnost i uvijetna vjerojatnost
 1. Tri strijelca gadaju metu po jedanput, nezavisno jedan od drugoga. Vjerojatnost pogotka 
 prvog strijelca je 0.2 a drugog 0.3. Kolika je vjerojatnost pogotka treceg strijelca ako je poznato
 da ce meta biti pogodena jednaka 0.664?
@@ -18,7 +16,7 @@ da zna odgovor je 0.8, a da ne zna odnosno pogada na srecu 0.2. a) vjerojatnost 
 b) ako je tocno odgovorio kolika je vjerojatnost da odgovor nije pogodio na srecu?
 
 
-### I3
+### Diskretne slucajne varijable
 1. Strijelac pogada metu s vjerojatnoscu od 0.8 
 a) vjerojatnost da ce u 8 pokusaja pogoditi tocno 4 puta,
 b) vjerojatnost da ce u 8 pokusaja pogoditi barem 2 puta
@@ -48,7 +46,7 @@ Izracunaj vjerojatnost dogadaja x, { -5 < x < -2 }
 Neka je Z = 2X + Y i W = X + 2Y. Izracunaj vjerojatnost dogadaja P(Z>W)
 
 
-### I3
+### Diskretne slucajne varijable
 
 <img src="https://latex.codecogs.com/png.latex?\newline&space;\text{1.&space;&space;Odjednom&space;bacamo&space;10&space;kocaka.&space;Vjerojatnost&space;dogadaja&space;A&space;i&space;B&space;ako&space;je:&space;}&space;\newline&space;\indent&space;\text{A&space;=&space;\{&space;sestica&space;se&space;pojavila&space;tocno&space;5&space;puta&space;\},&space;}&space;\newline&space;\indent&space;\text{B&space;=&space;\{&space;paran&space;broj&space;se&space;pojavio&space;barem&space;3&space;puta&space;\}}&space;\newline&space;\newline&space;\text{2.&space;&space;Nezavisne&space;slucajne&space;varijable&space;}&space;X_{1}&space;\text{&space;i&space;}&space;X_{2}&space;\text{&space;imaju&space;zadane&space;razdiobe}&space;\newline&space;\indent&space;\indent&space;X_{1},X_{2}&space;\sim&space;\begin{pmatrix}&space;0&space;&&space;1&space;&&space;2\\&space;\frac{1}{6}&space;&&space;\frac{1}{3}&space;&&space;\frac{1}{2}&space;\end{pmatrix}&space;\newline&space;\newline&space;\indent\text{a)&space;ocekivanje&space;slucajne&space;varijable&space;}&space;Y&space;=&space;1&space;&plus;&space;2X_{1}X_{2}&space;\newline&space;\indent\text{a)&space;disperzija&space;slucajne&space;varijable&space;}&space;Z&space;=&space;1&space;-&space;2X_{1}&space;&plus;&space;3X_{2}&space;\newline&space;\newline&space;\text{3.&space;&space;Mjerenja&space;su&space;pokazala&space;da&space;tvar&space;ispusta&space;za&space;7.5&space;sekundi&space;u&space;prosjeku&space;3.87&space;}&space;\alpha&space;\text{&space;cestica.&space;}&space;\newline&space;\indent\text{a)&space;vjerojatnost&space;da&space;u&space;toku&space;jedne&space;sekunde&space;tvar&space;ispusti&space;barem&space;jednu&space;}&space;\alpha&space;\text{&space;cesticu}&space;\newline&space;\indent\text{b)&space;vjerojatnost&space;da&space;u&space;toku&space;jedne&space;sekunde&space;tvar&space;ispusti&space;najvise&space;dvije&space;}&space;\alpha&space;\text{&space;cestice}&space;\newline" title="\newline \text{1. Odjednom bacamo 10 kocaka. Vjerojatnost dogadaja A i B ako je: } \newline \indent \text{A = \{ sestica se pojavila tocno 5 puta \}, } \newline \indent \text{B = \{ paran broj se pojavio barem 3 puta \}} \newline \newline \text{2. Nezavisne slucajne varijable } X_{1} \text{ i } X_{2} \text{ imaju zadane razdiobe} \newline \indent \indent X_{1},X_{2} \sim \begin{pmatrix} 0 & 1 & 2\\ \frac{1}{6} & \frac{1}{3} & \frac{1}{2} \end{pmatrix} \newline \newline \indent\text{a) ocekivanje slucajne varijable } Y = 1 + 2X_{1}X_{2} \newline \indent\text{a) disperzija slucajne varijable } Z = 1 - 2X_{1} + 3X_{2} \newline \newline \text{3. Mjerenja su pokazala da tvar ispusta za 7.5 sekundi u prosjeku 3.87 } \alpha \text{ cestica. } \newline \indent\text{a) vjerojatnost da u toku jedne sekunde tvar ispusti barem jednu } \alpha \text{ cesticu} \newline \indent\text{b) vjerojatnost da u toku jedne sekunde tvar ispusti najvise dvije } \alpha \text{ cestice} \newline" />
 
