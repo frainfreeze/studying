@@ -83,3 +83,14 @@ Ishod 7
 ![](exam/treci_rok/6.png)
 
 ![](exam/treci_rok/7.png)
+
+
+# Cetvrti rok
+
+![](exam/cetvrti_rok/1.png)
+
+![](exam/cetvrti_rok/2.png)
+
+![](exam/cetvrti_rok/3.png)
+
+![](exam/cetvrti_rok/4.png)
