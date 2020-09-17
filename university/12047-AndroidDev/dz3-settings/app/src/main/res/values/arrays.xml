@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="locations_entries">
+        <item>Europa</item>
+        <item>Azija</item>
+        <item>Afrika</item>
+        <item>Australija</item>
+        <item>Sjeverna Amerika</item>
+        <item>Juzna Amerika</item>
+    </string-array>
+
+    <string-array name="locations_values">
+        <item>Europa</item>
+        <item>Azija</item>
+        <item>Afrika</item>
+        <item>Australija</item>
+        <item>Sjeverna Amerika</item>
+        <item>Juzna Amerika</item>
+    </string-array>
+</resources>

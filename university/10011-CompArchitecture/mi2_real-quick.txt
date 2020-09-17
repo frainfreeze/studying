@@ -1,0 +1,56 @@
+i6 real quick:
+- hijearhijske razine memorije: registri, cache (PM- prirucna memorija), GM - glavna memorija, sekundarna memorija
+- priručna memorija moze biti izvedena kao: memorija za I&D (instructions and data), za I,  za D
+- osnovne znacajke memorije: kapacitet, jedinica prijenosa, mjesto komponente, perfomansa
+- performansa se izrazava vremenima pristupa, ciklusa i brzinom prijenosa podataka
+- hijearhija memorije: registri->cache (PM) -> GM ----> HDD -> CD -> mag vrpca (1. 3 izravni, 2. 3 sekvencijalni pristup)
+- shematski prikaz dviju razina PM:   CPU <-prijenos rijeci-> PM  <-prijenos bloka-> GM
+- PM se sastoji od: memorije za pohranu podataka i značaka, sklopova, priručnih blokova
+- riječ u priručnoj memoriji: čitanje - GM ne sudjeluje, pisanje - podatak se upisuje i u PM i u GM
+- riječ nije u priručnoj memoriji: čitanje - GM-blok>PM-rijec>CPU, pisanje - izravno u GM
+- virtualna memorija po razinama: glavna i sekundarna
+- fizicka memorija su fizicke memorijske lokacije sa instrukcijama i podatcima, tj memorija spojena na sabicnicu racunala
+- virtualni adresni prostor je skup virtualnih adresa koje ne moraju referencirati stvarnu fizicku lokaciju
+
+i7 real quick:
+- U/I U koristimo zbog raznolikosti perf. uredaja, nadogradnja i prosirivanje novim uredajima neovisno o procesoru/memoriji
+- U/I U koristimo za medupohranjivanje i formatiranje podataka, otkrivanje i ispravljanje pogresaka
+- U/I U se sastoji od host i device portova (pristupna vrata racunalu/perifernom uredaju)
+- Host port: sklopovi za prihvat i dekodiranje U/I naredbi CPU-a, registara, prekidnih sklopova
+- U/I U funkcije: komunikacija sa CPU, upravljanje tokom, medupohranjivanje i formatiranje podataka, otkrivanje i ispravljanje pogresaka
+- izmjena podataka izmedu uredaja i CPU/ram: programirani, prekidni i direktni pristup memoriji
+- programirani U/I: upravljanjem procesora (ocitavanje statusa perifernog uredaja, naredve za izvodenje U/I operacije, prijenos podataka)
+- tipovi programiranog U/I prijenosa su uvijetni i bezuvjetni prijenos
+- postupak prekidnog prijenosa: interrupt>CPU intack>prekidni program>funck. za povratak iz prekida
+- vektorski prekid: uredaj se intentificira 8bit kodom koji sluzi za odredivanje pocetne adrese prekidnog programa
+- postupak vektroskog prekida: interupt>CPU intack > perf. uredaj vraca svoj vektorski broj na sabirnicu>procesor magic et cetera
+- DMA prijenos podataka: kradom ciklusa, u snopu, kombinirano
+- U snopu: DMA koristi cjelu sabirnicu pri cemu je CPU zaustavljen, velika brzina prijenosa
+- Kradom ciklusa: DMA upravljac koristi sabirnicu dok je procesor zauzet internim operacijama
+
+i8 real quick
+- magnetska diskovna memorija: elektronicki podsustav i fizicke komponente
+- elektronicki podsustav sastoji se od upravljacke jedinice diska, memorije te sklopova za RW, upravljanje rucicama i el. motorom
+- dinamicki parametri diskovne jedinice odnose se na vrijeme pristupa podatcima tijekom operacija citanja/pisana (RW)
+- vrijeme pristupa odreduje se operacijama pozicioniranja glave, pristupu zeljenom sektoru na stazi i prijenosom bloka podataka
+- vrijeme potrebno da se zelejni sektor rotacijom nade pod glavom je rotacijska latencija, ona ovisi o brzini vrtnje ploce diska
+- organizacija podataka na disku    ( cylinder ( track ( cluster (sector))))
+- sektor: 512B podataka (544 kodirano), 10 bajtova zaflaclje, adresna znacka, polja zastite ECC i CRC
+- RAID polje: vise HDD-ova koji se prema vanjskoj logici ponasaju kao jedna cjelina
+- RAID polje moze raditi softwareski i hardwareski
+- Znacajke: OS vidi diskove kao jednu logicku jedinicu, podatci rasporedeni na fizicke jedinice, zastitni kod jamci oporavak podataka
+- RAID 0:  nema zalihosti, velika brzina mala sigurnost, podatci rasporedeni na sve diskove, velicina memorije=br.disk*min disk
+- RAID 1:  100% zalihost, velika brzina citanja, siguran, veca cijena, isti podatci na svim diskovima
+
+i9 real quick
+- simbolicki prikaz instrukcijske protocne strukture(IPS) RISC procesora: |  IF | ID-OF | EX | ME | WB | 
+- organizacija superskalarnog procesora: segment za istodobno pribavljanje 3 instrukcije i 3 nezavisne IPS
+- oblici paralelizma: raspolozivi (u programima) i iskoristeni (u izvodenju programa)
+- raspolozivi: na razini instrukcija, petlji, procedura, programa
+- iskoristeni: na razini instrukcija, dretvi i procesa, programa
+- viseprocesorski sustav: 2 ili vise slicnih/istih procesora, zajednicka unutarnja mem. komunikacija preko djeljene mem.
+- karakteristike: svi CPUi djele iste U/I uredaje, pod kontrolom istog OSa, centralna upravljacka jedinica
+- graficki procesor je visedretveni procesor s velikim brojem jezgri, namjenjen vizualnom procesiranju
+- obiljezja: velika procesorska moc, visok stupanj paralelizma
+- Deforce 8800: 128 tokovnih procesora (SP), svaki SP je višedretveni procesor koji podržava 96 istodobnih dretvi, 
+  SP su organizirani u 16 tokovnih multiprocesora SM grupiranih u 8 nezavisnih procesorskih jedinica

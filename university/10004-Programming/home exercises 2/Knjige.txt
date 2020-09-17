@@ -1,0 +1,15 @@
+
+Knjiga 1.:
+	Naslov: Koko i duhovi
+	Autor: Ivan Kusan
+	Kolicina: 10
+
+Knjiga 2.:
+	Naslov: Star Wars: A New Hope
+	Autor: George Lucas
+	Kolicina: 554
+
+Knjiga 3.:
+	Naslov: Star Wars: Return of the Jedi
+	Autor: James Kahn
+	Kolicina: 970

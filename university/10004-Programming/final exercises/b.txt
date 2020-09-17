@@ -1,0 +1,3 @@
+test ulica,1,10000
+draga,3,51522
+baska,23,51523
