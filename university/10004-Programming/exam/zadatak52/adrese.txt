@@ -1,3 +1,0 @@
-Vinogradska,3,51523
-Ilica,1,10000
-Draga baska,33,51522

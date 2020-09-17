@@ -1,9 +1,0 @@
-﻿@model WebApp.Models.PutniNalog
-@if (Model == null)
-{
-    Response.Redirect(Url.Action("Index", "PutniNalozi"));
-}
-<h3>ID: @Model.putni_nalog.id</h3>
-
-<br />
-<div onclick="window.location.href= '@Url.Action("Index","PutniNalozi")'" class="button is-small is-primary">Natrag na popis putnh naloga</div>
