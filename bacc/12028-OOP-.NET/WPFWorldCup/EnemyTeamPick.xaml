@@ -1,0 +1,15 @@
+﻿<Window x:Class="WPFWorldCup.EnemyTeamChooser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFWorldCup"
+        mc:Ignorable="d"
+        Title="Pick enemy team" Height="88.246" Width="536.879">
+    <Grid>
+        <ComboBox x:Name="cb_enemyTeamChooser" HorizontalAlignment="Left" Margin="234,13,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="btn_chooseEnemyTeam" Content="Button" HorizontalAlignment="Left" Margin="419,15,0,0" VerticalAlignment="Top" Width="75" Click="Btn_chooseEnemyTeam_Click"/>
+        <Label x:Name="lbl_chooseEnemyTeam" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-1.935,0.549"/>
+
+    </Grid>
+</Window>

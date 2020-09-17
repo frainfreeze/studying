@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Zadatak01</string>
+    <string name="write">Write</string>
+    <string name="number_of_checked">Number of checked:</string>
+    <string name="none_checked">None checked</string>
+    <string name="all_checked">All checked</string>
+</resources>

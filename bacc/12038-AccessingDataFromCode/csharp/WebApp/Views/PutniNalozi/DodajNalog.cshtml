@@ -1,0 +1,25 @@
+﻿@model WebApp.Models.DatumNaloga
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div>
+    <h2 class="is-size-3">Dodaj putni nalog</h2>
+    <form method="post" action="@(Url.Action("DodajNalog", "PutniNalozi"))" name="f">
+        <p>Datum pocetka</p>
+        <input name="datum_pocetka" type="date" min="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
+        <p>Datum zavrsetka</p>
+        <input name="datum_zavrsetka" type="date" min="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
+        <p>Vozac:</p>
+        @Html.DropDownList("vozaci")
+        <p>Vozilo:</p>
+        @Html.DropDownList("vozila")
+        <br />
+        <br />
+        <input type="submit" value="Napravi" class="button is-small is-primary" />
+    </form>
+</div>
+<br />
+<div onclick="window.location.href= '@Url.Action("Index", "PutniNalozi")'"  class="button is-small is-primary">Nazad na listu putnih naloga</div>
+}

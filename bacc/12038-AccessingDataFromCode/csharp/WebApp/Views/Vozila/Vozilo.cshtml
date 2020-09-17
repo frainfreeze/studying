@@ -1,0 +1,151 @@
+﻿@model WebApp.Models.Vozilo
+@if (Model == null)
+{
+    <h2>ID nije poslan u url-u</h2>
+}
+else if (Model.vozilo == null)
+{
+    <h2>Ne postoji vozilo s tim ID-em</h2>
+}
+else
+{
+
+    <div class="center">
+        <div class="center">
+            <h2>Vozilo ID: @Model.vozilo.id  </h2>
+            <form action="/api/v1/vozilo/@Model.vozilo.id" method="get" name="voz">
+                <ul>
+                    <li>Marka: <input class="inp" readonly value="@Model.vozilo.marka" name="marka"></li>
+                    <li>Godina proizvodnje: <input class="inp" readonly value="@Model.vozilo.godina_proizvodnje" name="godina_proizvodnje"></li>
+                    <li>Pocetni km: <input class="inp" readonly value="@Model.vozilo.pocetni_km" name="pocetni_km"></li>
+                    <li>Trenutni km: <input class="inp" readonly value="@Model.vozilo.trenutni_km" name="trenutni_km"></li>
+                    <li>Tip vozila: <fieldset id="inp2" disabled>@Html.DropDownList("tipovi_vozila", "--Tip vozila--")</fieldset></li>
+                </ul>
+                <input hidden="hidden" id="check" readonly />
+                <div id="bt" onclick="edit()" class="button is-small is-primary">Uredi</div>
+                <div id="bt_send" onclick="document.forms['voz'].submit();" class="button is-small is-primary" hidden>Spremi</div>
+            </form>
+        </div>
+
+        @if (Model.servisi != null)
+        {
+            <br />
+            <h4 class="is-size-3">Servisi:</h4>
+            foreach (servi s in Model.servisi)
+            {
+                <div class="row">
+                    <div class="col-10">
+                        <form method="get" action="/api/v1/servis/@s.id" name="ser_@(s.id)">
+                            <div class="row">
+                                <div class="col">
+                                    Mjesto: <input class="servis_@(s.id)" readonly value="@s.naziv_servisa" name="mjesto">
+                                </div>
+                                <div class="col">
+                                    Datum: <input class="servis_@(s.id)" readonly value="@s.datum_servisa" name="datum">
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col">
+                                    Cijena: <input class="servis_@(s.id)" readonly value="@s.cijena" name="cijena">
+                                </div>
+                                <div class="col">
+                                    Dodatan info: <input class="servis_@(s.id)" readonly value="@s.info" name="info">
+                                </div>
+                            </div>
+                            <input hidden name="vozilo_id" value="@(Model.vozilo.id)" />
+                        </form>
+                    </div>
+                    <div class="col-2 text-center align-self-center">
+                        <div onclick="editServisi(this.id)" id="servis_@(s.id)" class="button is-small is-primary">Uredi</div>
+                        <div id="ser_@(s.id)" onclick="document.forms['ser_@(s.id)'].submit();" class="button is-small is-primary" hidden>Spremi</div>
+                        <input hidden="hidden" id="check_@(s.id)" readonly />
+                        <form method="post" action="/api/v1/servis/@(s.id)" name="obrisi_@(s.id)">
+                            <input hidden name="vozilo_id" value="@(Model.vozilo.id)" />
+                            <div id="ser_obrisi_@(s.id)" onclick="document.forms['obrisi_@(s.id)'].submit();" class="button is-small is-primary">Obrisi</div>
+                        </form>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <h4> Na ovom vozilu nisu radeni servisi</h4>
+        }
+
+        <br />
+        <h4 class="is-size-3">Dodaj servis:</h4>
+        <form method="get" action="/api/v1/servis/">
+            <div class="row">
+                <div class="col">
+                    Mjesto: <input type="text" name="mjesto">
+                </div>
+                <div class="col">
+                    Datum: <input type="date" name="datum">
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    Cijena: <input type="number" name="cijena">
+                </div>
+                <div class="col">
+                    Dodatan info: <input type="text" name="info">
+                </div>
+            </div>
+            <input hidden name="vozilo_id" value="@(Model.vozilo.id)" />
+            <button type="submit" onclick="closeModal()" class="button is-small is-primary">Dodaj servis</button>
+        </form>
+    </div>
+
+    <script>
+        function edit() {
+            if (document.getElementById('check').readOnly) {
+                document.getElementById('check').readOnly = false;
+                document.getElementById('bt_send').hidden = false;
+                Array.from(document.getElementsByClassName('inp'))
+                    .forEach(function (e) {
+                        e.readOnly = false
+                        e.style.border = "1px dotted green"
+                    });
+                document.getElementById("inp2").disabled = false;
+            } else {
+                document.getElementById('check').readOnly = true;
+                document.getElementById('bt_send').hidden = true;
+                Array.from(document.getElementsByClassName('inp'))
+                    .forEach(function (e) {
+                        e.readOnly = true
+                        e.style.border = "1px solid red"
+                    });
+                document.getElementById("inp2").disabled = true;
+            }
+        };
+        function editServisi(divID) {
+            let id = divID.slice(7);
+            let checkID = "check_" + id;
+            let servID = "ser_" + id;
+            let urediID = "servis_" + id;
+            let obrisiID = "ser_obrisi_" + id;
+            if (document.getElementById(checkID).readOnly) {
+                document.getElementById(checkID).readOnly = false;
+                document.getElementById(servID).hidden = false;
+                document.getElementById(urediID).hidden = true;
+                document.getElementById(obrisiID).hidden = true;
+                Array.from(document.getElementsByClassName("servis_" + id))
+                    .forEach(function (e) {
+                        e.readOnly = false
+                        e.style.border = "1px dotted green"
+                    });
+            } else {
+                document.getElementById(checkID).readOnly = true;
+                document.getElementById(servID).hidden = true;
+                document.getElementById(obrisiID).hidden = true;
+                document.getElementById(urediID).hidden = false;
+                document.getElementById()
+                Array.from(document.getElementsByClassName("servis_" + id))
+                    .forEach(function (e) {
+                        e.readOnly = true
+                        e.style.border = "1px solid red"
+                    });
+            }
+        };
+    </script>
+}
+<hr style="border-top: 3px solid #bbb;">
+<div onclick="window.location.href= '@Url.Action("Index", "Vozila")'" class="button is-small is-primary">Natrag na popis vozila</div>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">dz3</string>
+    <string name="action_settings">Uredi postavke</string>
+    <string name="action_refresh">refresh</string>
+    <string name="no_data_string">Vase ime je nepoznato. Nepoznatog ste spola i Vasa lokacija je nepoznata.</string>
+    <string name="title_activity_settings">Postavke</string>
+    <string name="gender_title">Spol</string>
+    <string name="location_title">Lokacija</string>
+    <string name="name_title">Ime</string>
+    <string name="obrisi_postavke">Obrisi postavke</string>
+</resources>
