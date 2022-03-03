@@ -84,7 +84,6 @@ void delete(struct node** head, struct node* target) {
     if (*head == target)
         *head = target->next;
 
-    
     // if target is not last node point the prev of next element to prev element
     if (target->next != NULL)
         target->next->prev = target-> prev;
@@ -96,7 +95,22 @@ void delete(struct node** head, struct node* target) {
     free(target);
 }
 
+int find(struct node* head, int data) {
+    struct node *ptr = head;
+    int counter = -1;
+    
+    while (ptr != NULL) {
+        if (ptr->data == data)
+            return counter;
+        ptr = ptr->next;
+        counter++;
+    }
+
+    return counter;
+}
+
 int main() {
+    // create three nodes and head element
     struct node *head;
     struct node *one = NULL;
     struct node *two = NULL;
@@ -119,8 +133,10 @@ int main() {
     three->next = NULL;
     three->prev = two;
 
+    // assign first element to head node
     head = one;
 
+    // test functions
     printList(head);
     
     insertFront(&head, 0);
@@ -131,5 +147,8 @@ int main() {
     delete(&head, head->next->next->next);
     delete(&head, head->next->next->next->next);
     printList(head);
+
+    int pos = find(head, 2);
+    printf("Found number 2 on position: %d.\n", pos+1);
     return 0;
 }
