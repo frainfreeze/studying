@@ -1,0 +1,28 @@
+// Lox example program, 2022-03-04
+
+class Mammal {
+    isWarmBlooded() {
+        return True;
+    }
+}
+
+
+class Cat < Mammal {
+    init(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    meow() {
+        print "Meow.";
+    }
+
+    describe() {
+        print this.name + " is ";
+        print this.age;
+    }
+}
+
+var deafo = Cat("Deafolini", 5);
+deafo.meow();
+deafo.describe();
