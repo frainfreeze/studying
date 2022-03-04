@@ -2,7 +2,7 @@
 
 class Mammal {
     isWarmBlooded() {
-        return True;
+        return true;
     }
 }
 
@@ -26,3 +26,7 @@ class Cat < Mammal {
 var deafo = Cat("Deafolini", 5);
 deafo.meow();
 deafo.describe();
+
+if (deafo.isWarmBlooded()) {
+    print deafo.name + " is warm blooded.";
+}
