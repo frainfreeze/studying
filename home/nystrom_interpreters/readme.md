@@ -25,8 +25,16 @@ https://en.wikipedia.org/wiki/Loop_unrolling
 D. Ritchie's "declaration reflects use", p122 of K&R2
 https://www.cs.cornell.edu/courses/cs6120/2019fa/blog/unified-theory-gc
 https://www.cs.cmu.edu/~crary/819-f09/Landin66.pdf (The Next 700 Programming Languages)
+https://en.wikipedia.org/wiki/Chomsky_hierarchy
+Maximal munch
+https://www.reddit.com/r/compsci/comments/kkzn3r/the_lexical_grammars_of_python_and_haskell_are/
 
+### Other books
 
+1. https://interpreterbook.com + [extra chapter](https://interpreterbook.com/lost)
+2. https://compilerbook.com
+3. crenshaw compiler
+4. the dragon book
 
 
 
