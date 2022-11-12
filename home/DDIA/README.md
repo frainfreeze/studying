@@ -1,6 +1,11 @@
 # Designing Data-Intensive Applications
 ## The Big Ideas Behind Reliable, Scalable, and Maintainable Systems
 
+
+## Part I: Foundations of Data Systems
+
+----
+
 Three concerns that are important in most software systems:
 - Reliability: The system should continue to work correctly (performing the correct 
   function at the desired level of performance) even in the face of adversity (hardware 
@@ -10,6 +15,8 @@ Three concerns that are important in most software systems:
 - Maintainability: Over time, many different people will work on the system (engineering 
   and operations, both maintaining current behavior and adapting the system to new use
   cases), and they should all be able to work on it productively.
+
+## Ch. 1: Reliable, Scalable, and Maintainable Applications
 
 A data-intensive application is typically built from standard building blocks that 
 provide commonly needed functionality. For example, many applications need to:
@@ -22,7 +29,7 @@ provide commonly needed functionality. For example, many applications need to:
 ![figure 1-1](https://i.imgur.com/OCm54FT.png)
 
 
-## Reliability
+### Reliability
 A fault is usually defined as one component of the system deviating from its spec, 
 whereas a failure is when the system as a whole stops providing the required service 
 to the user. It is impossible to reduce the probability of a fault to zero; therefore 
@@ -67,7 +74,7 @@ operational cost (e.g., for a service with a very narrow profit margin) — but 
 should be very conscious of when we are cutting corners (tech debt). Idea is to serve
 the business needs if software is being developed for profit.
 
-## Scalability
+### Scalability
 Sscalability means considering questions like “If the system grows in a particular way,
 what are our options for coping with the growth?” and “How can we add computing
 resources to handle the additional load?”
@@ -132,7 +139,7 @@ time when generating load artificially in order to test the scalability of a sys
 
 
 
-### Percentiles in practice
+#### Percentiles in practice
 
 ![figure 1-5](https://i.imgur.com/N3PS83w.png)
 
@@ -157,3 +164,54 @@ or **HdrHistogram**.
 Beware that averaging percentiles, e.g., to reduce the time resolution or to combine data from 
 several machines, is mathematically meaningless — the right way of aggregating response time data 
 is to add the histograms.
+
+
+### Maintainability
+
+- Operability: Making Life Easy for Operations
+- Simplicity: Minimize (accidental) Complexity, use abstraction
+- Evolvability: Making Change Easy, Agile, TDD
+
+
+## Ch. 2: Data Models and Query Languages
+
+A conceptual (abstract) model is a representation of a system. It consists of concepts used to help 
+people know, understand, or simulate a subject the model represents. In contrast, physical models are 
+physical objects, such as a toy model that may be assembled and made to work like the object it represents. 
+
+A data model is an abstract model that organizes elements of data and standardizes how they relate to one 
+another and to the properties of real-world entities. For instance, a data model may specify that the data 
+element representing a car be composed of a number of other elements which, in turn, represent the color and 
+size of the car and define its owner.
+
+A data model instance may be one of three kinds according to ANSI in 1975:
+    - Conceptual data model: describes the semantics of a domain, being the scope of the model. For example, it may be a model of the interest area of an organization or industry. This consists of entity classes, representing kinds of things of significance in the domain, and relationship assertions about associations between pairs of entity classes. A conceptual schema specifies the kinds of facts or propositions that can be expressed using the model. In that sense, it defines the allowed expressions in an artificial 'language' with a scope that is limited by the scope of the model.
+    - Logical data model: describes the semantics, as represented by a particular data manipulation technology. This consists of descriptions of tables and columns, object oriented classes, and XML tags, among other things.
+    - Physical data model: describes the physical means by which data are stored. This is concerned with partitions, CPUs, tablespaces, and the like.
+
+### Relational Model Versus Document Model
+
+Polyglot persistence is a term that refers to using multiple data storage technologies for varying 
+data storage needs across an application or within smaller components of an application. Such varying 
+data storage needs could arise in both the cases, i.e. an enterprise with multiple applications or singular 
+components of an application needing to store data differently. 
+
+
+
+### Query Languages for Data
+
+
+### Graph-Like Data Models
+A graph consists of two kinds of objects: vertices (also known as nodes or entities) and
+edges (also known as relationships or arcs). Many kinds of data can be modeled as a
+graph. Typical examples include:
+- Social graphs: Vertices are people, and edges indicate which people know each other.
+- The web graph: Vertices are web pages, and edges indicate HTML links to other pages.
+- Road or rail networks: Vertices are junctions, and edges represent the roads or railway lines between them.
+
+Well-known algorithms can operate on these graphs: for example, car navigation systems search 
+for the shortest path between two points in a road network, and PageRank can be used on the web 
+graph to determine the popularity of a web page and thus its ranking in search results.
+
+![figure 2-5](https://i.imgur.com/QiXoP64.png)
+
