@@ -330,7 +330,30 @@ data storage needs across an application or within smaller components of an appl
 data storage needs could arise in both the cases, i.e. an enterprise with multiple applications or singular 
 components of an application needing to store data differently. 
 
+Linked in profile page can be excellently presented as JSON.
 
+![Figure 2-2. One-to-many relationships forming a tree structure.](https://i.imgur.com/XXmJaZ1.png)
+
+Even if the initial version of an application fits well in a join-free document model, 
+data has a tendency of becoming more interconnected as features are added to applications. 
+If the database itself does not support joins, you have to emulate a join in application code by making 
+multiple queries to the database. 
+
+![Figure 2-4. Extending résumés with many-to-many relationships.](https://i.imgur.com/CllChxP.png)
+
+
+Key insight of the relational model was this: you only need to build a query optimizer once, 
+and then all applications that use the database can benefit from it. If you don’t have a query 
+optimizer, it’s easier to hand code the access paths for a particular query than to 
+write a general-purpose optimizer—but the general-purpose solution wins in the long run.
+
+If the data in your application has a document-like structure (i.e., a tree of one-to-many 
+relationships, where typically the entire tree is loaded at once), then it’s probably a good idea to 
+use a document model. The relational technique of shredding—splitting a document-like structure 
+into multiple tables can lead to cumbersome schemas and unnecessarily complicated application code.
+
+- schema-on-read: the  structure  of  the  data  is  implicit,  and  only  interpreted  when  the data is read
+- schema-on-write: the traditional approach of relational databases, schema is explicit and the database ensures all written data conforms to it
 
 ### Query Languages for Data
 
